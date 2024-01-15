@@ -1,0 +1,40 @@
+<div class="store-details" data-store-id="${store.ID}">
+    <div class="row no-gutters flex-column flex-md-row">
+        <div class="col-12 col-md-9">
+            <div class="store-name h6">${store.name}</div>
+            <address>
+                ${store.address1},
+                <isif condition="${store.address2}">
+                    ${store.address2},
+                </isif>
+                <isif condition="${store.city}">
+                    ${store.city},
+                </isif>
+                <isif condition="${store.stateCode}">
+                    ${store.stateCode}
+                </isif>
+                ${store.postalCode}
+
+                <p>
+                    <isif condition="${store.phone}">
+                        <span><a class="storelocator-phone font-weight-bold" href="tel:${store.phone}" title="Phone number">${store.phone}</a></span>
+                    </isif>
+                </p>
+            </address>
+        </div>
+        <div class="col-12 col-md-3 text-md-right">
+            <div class="">
+                <a class="store-map" target='_blank' href="https://maps.google.com/?daddr=${store.latitude},${store.longitude}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.getdirections', 'storeLocator', null))}" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.getdirections', 'storeLocator', null))}">
+                    ${Resource.msg('storelocator.getdirections', 'storeLocator', null)}
+                </a>
+            </div>
+        </div>
+    </div> <!-- /.row -->
+    <div class="row no-gutters">
+        <div class="col-12 text-right">
+            <div class="store-logo tsc pull-right">
+                <img src="${store.custom.logoImage}" alt="${Resource.msg('tsc.logo.alt', 'storeLocator', null)}" />
+            </div>
+        </div>
+    </div>
+</div>

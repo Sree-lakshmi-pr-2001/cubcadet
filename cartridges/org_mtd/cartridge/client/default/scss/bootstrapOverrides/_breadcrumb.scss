@@ -1,0 +1,31 @@
+.breadcrumb {
+    background-color: $breadcrumb-bg;
+}
+
+.breadcrumb-item {
+    font-size: $label-xs;
+    font-weight: $font-weight-regular;
+    text-decoration: $link-decoration;
+
+    a {
+        font-size: $label-xs;
+        font-weight: $font-weight-regular;
+        color: $breadcrumb-before-color;
+    }
+
+    // The separator between breadcrumbs (by default, a forward-slash: "/")
+    + .breadcrumb-item::before {
+        font-weight: $font-weight-regular;
+        color: $breadcrumb-before-color;
+    }
+
+    &.active,
+    &:last-child {
+        font-weight: $font-weight-bold;
+
+        a {
+            font-weight: $font-weight-bold;
+            color: $breadcrumb-active-color;
+        }
+    }
+}

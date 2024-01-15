@@ -1,0 +1,44 @@
+.breadcrumb {
+    background-color: $breadcrumb-bg;
+}
+
+.breadcrumb-item {
+    font-size: $label-xs;
+    font-weight: $font-weight-regular;
+    text-decoration: $link-decoration;
+
+    a {
+        font-size: $label-xs;
+        font-weight: $font-weight-regular;
+        color: $breadcrumb-before-color;
+        text-decoration: $link-decoration;
+    }
+
+    // The separator between breadcrumbs (by default, a forward-slash: "/")
+    + .breadcrumb-item::before {
+        font-weight: $font-weight-regular;
+        color: $breadcrumb-before-color;
+        padding-right: rem(3px);
+    }
+
+    &.active,
+    &:last-child {
+        a {
+            font-weight: $font-weight-regular;
+            color: $breadcrumb-active-color;
+            text-decoration: $link-decoration;
+        }
+    }
+}
+
+.container,
+.container-fluid {
+    ol.breadcrumb {
+        border-bottom: none;
+        padding: rem(12px) 0;
+        margin: 0;
+        @include media-breakpoint-up(md) {
+            padding: rem(15px) 0;
+        }
+    }
+}

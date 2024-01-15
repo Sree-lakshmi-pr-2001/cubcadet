@@ -1,0 +1,44 @@
+{
+  "currencyCode": "USD",
+  "itemDetails": [
+    {  
+      "itemShipToAddressID": "test001",
+      "itemNumber": "00270",
+      "itemQuantity": 1,
+      "itemSequenceNumber": 1,
+      "itemBasePrice": 100.00,
+      "itemSellingPrice": 100.00,
+      "itemDiscountAmount": 0.00,
+      "itemTotalAmount": 100.00
+    },
+    {  
+      "itemShipToAddressID": "test001",
+      "itemNumber": "OEM-190-100",
+      "itemQuantity": 1,
+      "itemSequenceNumber": 2,
+      "itemBasePrice": 125.00,
+      "itemSellingPrice": 125.00,
+      "itemDiscountAmount": 0.00,
+      "itemTotalAmount": 125.00
+    }
+  ],
+  "shipToAddress": [{
+    "addressID": "test001",
+    "address1": "5411 Leavitt Rd",
+    "city": "Amherst",
+    "countryCode": "US",
+    "postalCode": "44001",
+    "stateProvinceCode": "OH"
+  }],
+  "specialCharges": [
+    {
+      "specialChargeAmount": -22.50,
+      "specialChargeCode": "743"
+    },
+    {
+      "specialChargeAmount": 10.00,
+      "specialChargeCode": "FRT"
+    }
+  ],
+  "systemName": "sfcc"
+}

@@ -1,0 +1,21 @@
+<isset name="fitsOnModel" value="${pdict.CurrentHttpParameterMap.fitsOnModel.value}" scope="page" />
+
+<isloop items="${pdict.productSearch.productIds}" var="product" status="loopstate">
+    <div class="col-6 col-sm-4" data-index="${(loopstate.count + (pdict.productSearch.pageNumber * pdict.productSearch.pageSize) - 1).toFixed()}">
+        <isobject object="${product.productSearchHit}" view="searchhit">
+            <isif condition="${pdict.productSearch.category}">
+                <isif condition="${fitsOnModel}">
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true, 'compare', pdict.compareEnabled, 'fitsOnModel', fitsOnModel)}" />
+                <iselse/>
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true, 'compare', pdict.compareEnabled)}" />
+                </isif>
+            <iselse/>
+                <isif condition="${fitsOnModel}">
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true, 'q', pdict.productSearch.searchKeywords, 'fitsOnModel', fitsOnModel)}" />
+                <iselse/>
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true, 'q', pdict.productSearch.searchKeywords)}" />
+                </isif>
+            </isif>
+        </isobject>
+    </div>
+</isloop>

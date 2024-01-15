@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Category">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="fitsOnModelEnable">
+                <display-name xml:lang="x-default">Part Fitment Model Enable</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="customAttributes">
+                <display-name xml:lang="x-default">Custom</display-name>
+                <attribute attribute-id="fitsOnModelEnable" />
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="enableModelFilterOnSearchPage">
+                <display-name xml:lang="x-default">Enable Model Filter On Search Page</display-name>
+                <description xml:lang="x-default"></description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="useEWWithAutoshipInventory">
+                <display-name xml:lang="x-default">Use EW With Autoship Inventory</display-name>
+                <description xml:lang="x-default">When having a dealer fulfillment this flag indicates if EW should use the normal flow of checking only Autoship inventory or not.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="enableModelFilterOnSearchPage"/>
+            </attribute-group>
+            <attribute-group group-id="Extended Warranty">
+                <display-name xml:lang="x-default">Extended Warranty</display-name>
+                <attribute attribute-id="useEWWithAutoshipInventory"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

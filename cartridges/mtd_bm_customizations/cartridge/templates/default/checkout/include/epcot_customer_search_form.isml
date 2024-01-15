@@ -1,0 +1,215 @@
+<form class="existingAddressForm" id="customer-search" autocomplete="off">
+    <div class="col-md-12">
+        <h3>Search for Existing Address</h3>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" name="firstName">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" name="lastName">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" name="address">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" name="city">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" name="email">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="state">State:</label>
+            <input type="text" class="form-control" id="state" name="state">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="zipCode">Zip / Postal Code:</label>
+            <input type="text" class="form-control" id="zipCode" name="zipCode">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 mt-3">
+            <label for="countryCode">Country (not editable):</label>
+                <input type="text" class="form-control" name="countryCode" id="countryCode" value="${pdict.countryCode}" readonly />
+            </div>
+        </div>
+        <iscomment> <div class="col-1 d-flex align-items-center justify-content-center">
+            <button type="button" id="customer-search-clear-btn" class="btn btn-primary clear-button">clear</button>
+        </div>
+        <div class="col-1 d-flex align-items-center justify-content-center">
+            <button type="button" id="customer-search-btn" class="btn btn-primary customer-search-button">search</button>
+        </div>
+        <div class="col-2 customers-search-msg d-flex align-items-center justify-content-center">
+            <div class="error"></div>
+            <div class="loader" style="display: none"></div>
+        </div> </iscomment>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <button type="button" id="customer-search-clear-btn" class="btn btn-primary btn-lg clear-button">Clear</button>
+            <button type="button" id="customer-search-btn" class="btn btn-primary btn-lg customer-search-button">Search</button>
+        </div>
+        <div class="col-10 customers-search-msg">
+            <div class="error"></div>
+            <div class="loader" style="display: none"></div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="customer-search-modal" tabindex="-1" aria-labelledby="customer-search-modal-Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Customer Lookup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container customer-info overflow-auto">
+                    <div class="row">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-3">
+                            <strong>Name</strong>
+                        </div>
+                        <div class="col-2">
+                            <strong>Phone</strong>
+                        </div>
+                        <div class="col-3">
+                            <strong>Email</strong>
+                        </div>
+                        <div class="col-3">
+                            <strong>Address</strong>
+                        </div>
+                    </div>
+                    <div id="loader"></div>
+                        <div class="list">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="customer-detail-template">
+    <div class="row customer-detail p-2">
+        <div class="col-1">
+            <button type="button" class="btn btn-primary">select</button>
+            <div class="hidden-values">
+            <input
+                type="hidden"
+                id="ship-firstName"
+                name="ship-firstName"
+                value="test"
+            />
+            <input
+                type="hidden"
+                id="ship-lastName"
+                name="ship-lastName"
+                value=""
+            />
+            <input
+                type="hidden"
+                id="ship-address1"
+                name="ship-address1"
+                value=""
+            />
+            <input type="hidden" id="ship-address2" name="ship-address2" value="" />
+            <input type="hidden" id="ship-city" name="ship-city" value="" />
+            <input type="hidden" id="ship-state" name="ship-state" value="" />
+            <input
+                type="hidden"
+                id="ship-zipCode"
+                name="ship-zipCode"
+                value=""
+            />
+            <input
+                type="hidden"
+                id="ship-phone"
+                name="ship-phone"
+                value=""
+            />
+            </div>
+            <div class="hidden-values">
+            <input
+                type="hidden"
+                id="bill-firstName"
+                name="bill-firstName"
+                value=""
+            />
+            <input
+                type="hidden"
+                id="bill-lastName"
+                name="bill-lastName"
+                value=""
+            />
+            <input
+                type="hidden"
+                id="bill-address1"
+                name="bill-address1"
+                value=""
+            />
+            <input type="hidden" id="bill-address2" name="bill-address2" value="" />
+            <input type="hidden" id="bill-city" name="bill-city" value="" />
+            <input type="hidden" id="bill-state" name="bill-state" value="" />
+            <input
+                type="hidden"
+                id="bill-zipCode"
+                name="bill-zipCode"
+                value=""
+            />
+            <input
+                type="hidden"
+                id="bill-phone"
+                name="bill-phone"
+                value=""
+            />
+            <input
+                type="hidden"
+                id="bill-email"
+                name="bill-email"
+                value=""
+            />
+            </div>
+        </div>
+        <div class="col-3 name"></div>
+        <div class="col-2 phone"></div>
+        <div class="col-3 email"></div>
+        <div class="col-3">
+            <div class="address"></div>
+            <div class="street-city-zip"></div>
+        </div>
+    </div>
+</template>

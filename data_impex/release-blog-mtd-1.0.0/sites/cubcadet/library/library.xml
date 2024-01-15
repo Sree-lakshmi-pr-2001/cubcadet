@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="blog">
+        <display-name xml:lang="x-default">Help Center</display-name>
+        <description xml:lang="x-default">Description: Main blog folder</description>
+        <online-flag>true</online-flag>
+        <template>rendering/folder/blogLanding</template>
+        <parent>root</parent>
+        <page-attributes/>
+        <attribute-groups>
+            <attribute-group group-id="Blog">
+                <display-name xml:lang="x-default">Blog</display-name>
+                <attribute attribute-id="postedDate" system="false"/>
+                <attribute attribute-id="tags" system="false"/>
+                <attribute attribute-id="author" system="false"/>
+                <attribute attribute-id="productType" system="false"/>
+                <attribute attribute-id="relatedProducts" system="false"/>
+                <attribute attribute-id="image" system="false"/>
+                <attribute attribute-id="video" system="false"/>
+                <attribute attribute-id="relatedContent" system="false"/>
+                <attribute attribute-id="blogArticleTemplate" system="false"/>
+                <attribute attribute-id="tools" system="false"/>
+                <attribute attribute-id="time" system="false"/>
+                <attribute attribute-id="difficulty" system="false"/>
+            </attribute-group>
+        </attribute-groups>
+        <refinement-definitions>
+            <refinement-definition type="folder" bucket-type="none">
+                <display-name xml:lang="x-default">Popular Topics</display-name>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="tags" system="false">
+                <display-name xml:lang="x-default">Products</display-name>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+        </refinement-definitions>
+    </folder>
+
+    <folder folder-id="gardening-blog">
+        <display-name xml:lang="x-default">How-to</display-name>
+        <description xml:lang="x-default">Gardening category folder for blog articles</description>
+        <online-flag>true</online-flag>
+        <parent>blog</parent>
+        <page-attributes>
+            <page-title xml:lang="x-default">How-to</page-title>
+            <page-description xml:lang="x-default">Fpo sub head here for SEO</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="image">images/blog/category-folder/KnowledgeCenter_Gardening.jpg</custom-attribute>
+        </custom-attributes>
+    </folder>
+
+    <content content-id="howto-template1-example">
+        <display-name xml:lang="x-default">How to Change the Air Filter on a Zero-Turn Lawn Mower Lorem Ipsum dol Solar Amit.</display-name>
+        <description xml:lang="x-default">It is recommended that your engine air filter be cleaned or replaced every 50 operating hours.&#13;            In dry, dusty conditions this should be done more frequently. The video and instructions below will guide you through the process&#13;            to clean or replace your air filter. Depending on your model, the instructions in this video may vary slightly.&#13;            Always be sure to check your operator's manual for detailed instructions.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">How to Change the Air Filter on a Zero-Turn Lawn Mower | Cub Cadet®</page-title>
+            <page-description xml:lang="x-default">How to Change the Air Filter on a Zero-Turn Lawn Mower</page-description>
+            <page-url xml:lang="x-default">howto-template1-example</page-url>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-1.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-1.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-1.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-1.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;		&lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;/span&gt;&#13;        &lt;h6 class=&quot;blog-post_step-sub-head &quot;&gt;Subhead goes here for skimability&lt;/h6&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Prepare your Ultima zero-turn mower for maintenance. Place your mower on a flat, level surface. Turn the mower off and make sure the engine is cool. Remove the ignition key, disconnect the spark plug ignition wire, and engage the parking brake. This helps ensure the machine doesn't start accidentally and cause you or those around you harm.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-2.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-2.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-2.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-2.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;		&lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Clean the engine of dirt and debris.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;			&lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-3.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-3.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-3.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-3.png?$staticlink$&quot;&gt;&#13;		&lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;		&lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Remove the air filter cover. Release the cover lock handles.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-4.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-4.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-4.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-4.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;4&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Remove the air filter.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-5.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-5.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-5.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-5.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;5&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Check and clean the air filter. Remove the foam pre filter. Use a flashlight to check for rips or damage to the air filter. Clean the paper element filter by tapping gently to remove dust. If the element is very dirty or damaged, replace it with a new one.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-6.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-6.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-6.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-6.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;6&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Wash the foam pre filter. Use mild detergent and warm water to wash the foam pre filter and allow it to dry completely. Note: Never use gasoline or low flash-point solvents for cleaning the air filter elements.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-7.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-7.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-7.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-7.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;7&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Place the dry pre filter back onto the air filter.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;        &lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-8.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-8.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-8.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-8.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;8&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Reinstall the air filter.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-9.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-9.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-9.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-9.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;9&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Secure the air filter cover and lock handles.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;blog-post_step&quot;&gt;&#13;	&lt;span class=&quot;blog-post_step-image blog-post-slider&quot;&gt;&#13;		&lt;picture&gt;&#13;            &lt;source media=&quot;(max-width: 575px)&quot; srcset=&quot;Knowledge%20Center/step-10.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 576px) and (max-width: 991px)&quot; srcset=&quot;Knowledge%20Center/step-10.png?$staticlink$&quot;&gt;&#13;            &lt;source media=&quot;(min-width: 992px)&quot; srcset=&quot;Knowledge%20Center/step-10.png?$staticlink$&quot;&gt;&#13;            &lt;img src=&quot;null&quot; srcset=&quot;Knowledge%20Center/step-10.png?$staticlink$&quot;&gt;&#13;        &lt;/picture&gt;&#13;	&lt;/span&gt;&#13;    &lt;div class=&quot;blog-post_step-description&quot;&gt;&#13;        &lt;span class=&quot;blog-post_step-number circle&quot;&gt;&lt;span&gt;10&lt;/span&gt;&lt;/span&gt;&#13;        &lt;div class=&quot;blog-post_step-text&quot;&gt;Reconnect the spark plug ignition wires.&lt;/div&gt;&#13;    &lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;col blog-post-completion&quot;&gt;&#13;    &lt;h4&gt;In Summary&lt;/h4&gt;&#13;    Use our parts finder to locate and order any replacement parts you may need for maintenance. Refer to your owner's manual for additional maintenance information.&#13;&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="blogArticleTemplate">howto-template</custom-attribute>
+            <custom-attribute attribute-id="tools">
+                <value>tool 1</value>
+                <value>tool 2</value>
+                <value>tool 3</value>
+                <value>tool 4</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="time">10-15 min</custom-attribute>
+            <custom-attribute attribute-id="difficulty">Easy</custom-attribute>
+            <custom-attribute attribute-id="tags">
+                <value>water</value>
+                <value>conserving water</value>
+                <value>aerating</value>
+                <value>dethatcher</value>
+                <value>grass</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="author" xml:lang="x-default">Cub Cadet</custom-attribute>
+            <custom-attribute attribute-id="image">images/knowledge-center/article-hero/CnsrvWater_1100x572.jpg</custom-attribute>
+            <custom-attribute attribute-id="video">BaRSF2I7__o</custom-attribute>
+            <custom-attribute attribute-id="relatedContent">
+                <value>knowledge-tb-year-round-lawn-care-tips</value>
+                <value>knowledge-tb-winter-lawn-care</value>
+                <value>knowledge-tb-zero-turn-mower-maintenance-schedule-and-tips</value>
+            </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="general-lawn-care-blog"/>
+        </folder-links>
+        <sitemap-included-flag>1</sitemap-included-flag>
+        <sitemap-changefrequency>hourly</sitemap-changefrequency>
+    </content>
+    <content content-id="blog-subfolder-title">
+        <display-name xml:lang="x-default">Blog Subfolder - Title</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;link rel=”canonical”
+                href=”https://www.cubcadet.com/en_US/knowledge-center/?showMore=true” /&gt;&#13;&lt;h2 class=&quot;subfolder-title&quot;&gt;Browse
+                by Category&lt;/h2&gt;
+            </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="page-includes"/>
+        </folder-links>
+    </content>
+</library>

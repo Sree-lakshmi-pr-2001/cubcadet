@@ -1,0 +1,386 @@
+//
+// Base styles
+//
+
+.card {
+    margin-bottom: 1em;
+    border: 0;
+
+    .list-group {
+        margin-left: -($card-spacer-x);
+        margin-right: -($card-spacer-x);
+    }
+
+    .accordion-default & {
+        border: none;
+        border-bottom: $card-border-width solid $card-border-color;
+        border-radius: none;
+        margin-bottom: 0;
+
+        .card-header {
+            padding: $accordion-spacer-y $accordion-spacer-x;
+            border-bottom: $card-border-width solid $card-border-color;
+            border-top: none;
+            background-color: $white;
+
+            &:first-child {
+                border-radius: 0;
+                border-bottom: none;
+            }
+
+            .btn {
+                padding: $accordion-btn-y $accordion-btn-x;
+
+                &.btn-link {
+                    @include accordion-title;
+
+                    width: 100%;
+                    text-align: left;
+
+                    &::after {
+                        content: "";
+                        float: right;
+                        width: 20px;
+                        height: 23px;
+                        margin: 0;
+                        background: $svg-accordion-close no-repeat center center;
+                    }
+
+                    &.collapsed {
+                        &::after {
+                            background: $svg-accordion-open no-repeat center center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-img-top {
+            margin-bottom: rem(20px);
+        }
+
+        .card-body {
+            padding: $accordion-spacer-x;
+            margin-left: $accordion-paragraph-margin;
+            margin-bottom: rem(25px);
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: rem(55px);
+            }
+        }
+    }
+
+    .plb-accordion .card-deck:last-child & {
+        .card-body {
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .plb-accordion & {
+        @include media-breakpoint-up(md) {
+            border: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            &:first-of-type {
+                border-top: $card-border-width solid $card-border-color;
+            }
+        }
+
+        .card-header {
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+
+        .card-text {
+            line-height: rem(20px);
+
+            @include media-breakpoint-up(md) {
+                line-height: rem(24px);
+            }
+        }
+    }
+
+    .pdp-specs-accordion & {
+        background: $white;
+        border: $card-border-width solid $card-border-color;
+        overflow-wrap: normal;
+
+        @include media-breakpoint-up(md) {
+            border: 0;
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 0;
+        }
+
+        .card-header {
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+
+            .btn {
+                padding: $accordion-btn-y $accordion-btn-y $accordion-btn-y rem(50px);
+
+                &:not(.collapsed) {
+                    border-bottom: $card-border-width solid $card-border-color;
+                }
+
+                &.specs {
+                    @include icon($svg-specs, left, 30px, before);
+
+                    &::before {
+                        left: 10px;
+                    }
+                }
+
+                &.manuals {
+                    @include icon($svg-manual, left, 30px, before);
+
+                    &::before {
+                        left: 10px;
+                    }
+                }
+
+                &.maintenance {
+                    @include icon($svg-maintenance, left, 30px, before);
+
+                    &::before {
+                        left: 10px;
+                    }
+                }
+
+                &.fits-model {
+                    @include icon($svg-fits-model, left, 30px, before);
+
+                    &::before {
+                        left: 10px;
+                    }
+                }
+
+                &.pledge {
+                    @include icon($svg-pledge, left, 30px, before);
+
+                    &::before {
+                        left: 10px;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0 rem(15px);
+            margin: 0;
+
+            &.asset-body {
+                padding: rem(15px);
+
+                @include media-breakpoint-up(md) {
+                    padding: rem(26px);
+                }
+
+                .attribute-name {
+                    padding-top: 0;
+                    margin-bottom: rem(15px);
+                    border-top: 0;
+                    font-size: rem(18px);
+
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 0;
+                        font-size: $h4-font-size;
+                    }
+                }
+            }
+
+            > .row:not(:last-of-type) {
+                @include media-breakpoint-up(md) {
+                    border-bottom: $card-border-width solid $card-border-color;
+                }
+            }
+
+            > .row:first-of-type {
+                .attribute-name {
+                    @include media-breakpoint-down(md) {
+                        border-top: 0;
+                    }
+                }
+            }
+        }
+
+        .spec-col,
+        .content {
+            @include media-breakpoint-up(md) {
+                padding: 0 rem(30px);
+            }
+        }
+
+        .spec-col {
+            @include media-breakpoint-up(md) {
+                border-right: $card-border-width solid $card-border-color;
+            }
+        }
+
+        .attribute-name {
+            padding: rem(15px) 0;
+            margin: 0;
+            border-top: $card-border-width solid $card-border-color;
+            border-bottom: $card-border-width solid $card-border-color;
+
+            @include media-breakpoint-up(md) {
+                border: 0;
+                padding: rem(25px) 0;
+            }
+        }
+
+        .attribute-values {
+            line-height: rem(20px);
+
+            > span {
+                display: block;
+                font-weight: $font-weight-bold;
+
+                // inline tooltip div
+                + div,
+                .spec-tooltips {
+                    display: inline;
+                }
+            }
+        }
+
+        .content {
+            margin: $card-spacer-y 0;
+
+            @include media-breakpoint-up(md) {
+                margin: rem(25px) 0;
+            }
+
+            > ul {
+                padding-left: 0;
+                list-style: none;
+
+                > li {
+                    margin-bottom: rem(15px);
+                }
+            }
+        }
+
+        .manuals-container {
+            .manual-table {
+                width: 100%;
+                padding-bottom: rem(15px);
+
+                @include media-breakpoint-up(md) {
+                    border-bottom: $border;
+                }
+            }
+
+            .header-row,
+            .data-row {
+                &.no-gutters {
+                    > div {
+                        padding-right: rem(15px);
+
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .header-row {
+                margin-bottom: rem(5px);
+                border-bottom: $border;
+            }
+
+            .data-row {
+                padding: rem(5px) 0;
+            }
+
+            .description {
+                word-break: break-all;
+            }
+
+            .manual-download {
+                @include media-breakpoint-up(md) {
+                    text-align: right;
+                }
+
+                .manual-download-link {
+                    font-weight: $font-weight-bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+// Card deck
+
+.card-deck {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+        flex-flow: row wrap;
+        margin-right: -$card-deck-margin;
+        margin-left: -$card-deck-margin;
+
+        .card {
+            display: flex;
+            // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+            flex: 1 0 0;
+            flex-direction: column;
+            margin-right: $card-deck-margin;
+            margin-bottom: 0; // Override the default
+            margin-left: $card-deck-margin;
+        }
+    }
+}
+
+.card-body {
+    padding: $card-spacer-y $card-spacer-x;
+}
+
+.card-header {
+    background-color: $white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 0;
+    }
+
+    > a {
+        text-decoration: $link-decoration;
+        font-size: $link-font-size;
+        font-weight: $font-weight-bold;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: $link-decoration-alt;
+        }
+    }
+}
+
+.card-title {
+    @extend .h6;
+
+    margin-bottom: rem(30px);
+}
+
+.card-footer {
+    background-color: $gray-100;
+}
+
+.card-link {
+    color: $primary;
+    @include hover {
+        text-decoration: none;
+    }
+}

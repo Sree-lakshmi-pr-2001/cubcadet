@@ -1,0 +1,195 @@
+.about-us {
+    .btn {
+        background-color: $button-green;
+        border-color: $button-green;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .btn.btn-primary:active {
+        background-color: $button-green;
+        border-color: $button-green;
+    }
+
+    .content {
+        &.group {
+            .image {
+                height: 450px;
+                width: 100%;
+                background-position: top center;
+                background-size: cover;
+            }
+        }
+
+        &.one {
+            padding-top: 50px;
+
+            .col-12 {
+                padding: 0;
+            }
+
+            .img-1,
+            .img-2,
+            .img-3 {
+                padding-bottom: 25px;
+            }
+
+            .image {
+                box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 25px;
+
+                .img-text {
+                    span {
+                        font-weight: 300;
+                    }
+
+                    font-size: 35px;
+                    color: #fff;
+                    padding-top: 50px;
+                    padding-bottom: 100px;
+                }
+            }
+
+            .image:hover {
+                box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0);
+            }
+        }
+
+        &.two {
+            padding-top: 50px;
+            width: 80%;
+        }
+
+        &.three {
+            padding-top: 50px;
+
+            .text-1 {
+                font-weight: bold;
+            }
+
+            .msg {
+                text-align: center;
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+        }
+
+        &.four {
+            padding-top: 50px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .msg {
+                height: 165px;
+                background-color: $button-grey;
+                color: #fff;
+                font-size: 35px;
+                text-align: center;
+
+                .quote {
+                    margin: auto;
+                    width: 100%;
+                }
+
+                .name {
+                    margin: auto;
+                    width: 100%;
+                    text-align: right;
+                    font-size: 25px;
+                }
+
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &.five {
+            padding-top: 50px;
+
+            .msg {
+                font-size: 35px;
+                color: $button-grey;
+                padding: 50px 0;
+            }
+
+            .content {
+                background-color: #e6e7e8;
+            }
+
+            .image {
+                height: 150px;
+            }
+
+            .img-text {
+                height: 450px;
+                background-color: #e6e7e8;
+
+                .lt {
+                    font-size: 25px;
+                    color: $button-grey;
+                    padding: 10px 0 20px;
+                }
+
+                .rb {
+                    text-align: left;
+                    font-size: 16px;
+                    color: $button-grey;
+                    padding: 0 30px;
+                    height: 60%;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .content {
+            &.one {
+                .img-1 {
+                    padding-right: 20px;
+                    padding-bottom: 0;
+                }
+
+                .img-2 {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 0;
+                }
+
+                .img-3 {
+                    padding-left: 20px;
+                    padding-bottom: 0;
+                }
+            }
+
+            &.five {
+                width: 80%;
+
+                .img-text {
+                    height: 550px;
+
+                    .rb {
+                        height: 75%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .content {
+            &.five {
+                .img-text {
+                    height: 450px;
+
+                    .rb {
+                        height: 60%;
+                    }
+                }
+            }
+        }
+    }
+}

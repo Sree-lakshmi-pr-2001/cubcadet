@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shipping xmlns="http://www.demandware.com/xml/impex/shipping/2007-03-31">
+    <shipping-method method-id="ground" default="false">
+        <display-name xml:lang="x-default">Ground</display-name>
+        <online-flag>true</online-flag>
+        <base-method>standard</base-method>
+        <price-table>
+            <amount order-value="0.01">4.99</amount>
+            <amount order-value="75">21.98</amount>
+            <amount order-value="100">24.98</amount>
+            <amount order-value="200">54.98</amount>
+        </price-table>
+        <excluded-products>
+            <included-products>
+                <condition-group>
+                    <attribute-condition operator="equals" attribute-id="ltl-shipment-required">
+                        <attribute-value>true</attribute-value>
+                    </attribute-condition>
+                </condition-group>
+            </included-products>
+        </excluded-products>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">3 - 5 business days</custom-attribute>
+            <custom-attribute attribute-id="isDealerFulfillment">false</custom-attribute>
+            <custom-attribute attribute-id="mixedCart">false</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">FRT</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="LTL-standard-mix" default="false">
+        <display-name xml:lang="x-default">LTL Standard</display-name>
+        <online-flag>true</online-flag>
+        <price-table>
+            <amount order-value="0.01">29</amount>
+            <amount order-value="500">49</amount>
+            <amount order-value="1000">79</amount>
+            <amount order-value="2000">99</amount>
+        </price-table>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">5 - 7 business days</custom-attribute>
+            <custom-attribute attribute-id="mixedCart">true</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">FRT</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="dealer-delivery" default="false">
+        <display-name xml:lang="x-default">Dealer Delivery</display-name>
+        <online-flag>true</online-flag>
+        <price-table>
+            <amount order-value="0">29</amount>
+            <amount order-value="500">69</amount>
+            <amount order-value="1000">99</amount>
+            <amount order-value="2000">119</amount>
+        </price-table>
+        <custom-attributes>
+            <custom-attribute attribute-id="isDealerFulfillment">true</custom-attribute>
+            <custom-attribute attribute-id="mixedCart">false</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">DFD</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="dealer-pickup" default="false">
+        <display-name xml:lang="x-default">Dealer Pickup</display-name>
+        <online-flag>true</online-flag>
+        <tax-class-id>default</tax-class-id>
+        <price-table>
+            <amount order-value="0">0</amount>
+        </price-table>
+        <custom-attributes>
+            <custom-attribute attribute-id="isDealerFulfillment">true</custom-attribute>
+            <custom-attribute attribute-id="mixedCart">false</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">DFD</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="next-business-day" default="false">
+        <display-name xml:lang="x-default">Next Business Day</display-name>
+        <online-flag>true</online-flag>
+        <base-method>standard</base-method>
+        <price-table>
+            <amount order-value="0.01">16.99</amount>
+            <amount order-value="75">33.98</amount>
+            <amount order-value="100">36.98</amount>
+            <amount order-value="200">66.98</amount>
+        </price-table>
+        <excluded-products>
+            <included-products>
+                <condition-group>
+                    <attribute-condition operator="equals" attribute-id="ltl-shipment-required">
+                        <attribute-value>true</attribute-value>
+                    </attribute-condition>
+                </condition-group>
+            </included-products>
+        </excluded-products>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">1 business day</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">FRT</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="second-business-day" default="false">
+        <display-name xml:lang="x-default">Second Business Day</display-name>
+        <online-flag>true</online-flag>
+        <base-method>standard</base-method>
+        <price-table>
+            <amount order-value="0.01">10.99</amount>
+            <amount order-value="75">27.98</amount>
+            <amount order-value="100">30.98</amount>
+            <amount order-value="200">60.98</amount>
+        </price-table>
+        <excluded-products>
+            <included-products>
+                <condition-group>
+                    <attribute-condition operator="equals" attribute-id="ltl-shipment-required">
+                        <attribute-value>true</attribute-value>
+                    </attribute-condition>
+                </condition-group>
+            </included-products>
+        </excluded-products>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">2 business days</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">FRT</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="LTL-standard" default="false">
+        <display-name xml:lang="x-default">LTL Standard</display-name>
+        <description xml:lang="x-default">Heavyweight Items &amp; Large Packages</description>
+        <online-flag>true</online-flag>
+        <price-table>
+            <amount order-value="0.01">29</amount>
+            <amount order-value="500">69</amount>
+            <amount order-value="1000">99</amount>
+            <amount order-value="2000">119</amount>
+        </price-table>
+        <excluded-products>
+            <included-products>
+                <condition-group>
+                    <attribute-condition operator="equals" attribute-id="ltl-shipment-required">
+                        <attribute-value>false</attribute-value>
+                    </attribute-condition>
+                </condition-group>
+            </included-products>
+        </excluded-products>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">5 - 7 business days</custom-attribute>
+            <custom-attribute attribute-id="isDealerFulfillment">false</custom-attribute>
+            <custom-attribute attribute-id="mixedCart">false</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">FRT</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="standard" default="true">
+        <display-name xml:lang="x-default">Standard</display-name>
+        <online-flag>true</online-flag>
+        <price-table>
+            <amount order-value="0.01">4.99</amount>
+            <amount order-value="15">7.49</amount>
+            <amount order-value="30">8.99</amount>
+            <amount order-value="50">0</amount>
+        </price-table>
+        <product-cost-groups>
+            <product-cost-group>
+                <products>
+                    <included-products>
+                        <condition-group>
+                            <attribute-condition operator="equals" attribute-id="free-ship">
+                                <attribute-value>true</attribute-value>
+                            </attribute-condition>
+                        </condition-group>
+                    </included-products>
+                </products>
+                <cost-per-item>
+                    <surcharge>0.00</surcharge>
+                </cost-per-item>
+            </product-cost-group>
+        </product-cost-groups>
+        <excluded-products>
+            <included-products>
+                <condition-group>
+                    <attribute-condition operator="equals" attribute-id="ltl-shipment-required">
+                        <attribute-value>true</attribute-value>
+                    </attribute-condition>
+                </condition-group>
+            </included-products>
+        </excluded-products>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">5 - 7 business days</custom-attribute>
+            <custom-attribute attribute-id="isDealerFulfillment">false</custom-attribute>
+            <custom-attribute attribute-id="mixedCart">false</custom-attribute>
+            <custom-attribute attribute-id="specialChargeCode">FRT</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+</shipping>

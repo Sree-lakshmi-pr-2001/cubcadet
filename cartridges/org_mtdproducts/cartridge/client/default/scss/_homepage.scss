@@ -1,0 +1,199 @@
+@import "carousel";
+
+.homepage {
+    .nav-item {
+        &.dropdown {
+            .nav-link {
+                color: $button-grey;
+            }
+        }
+    }
+
+    .hero-vid {
+        position: relative;
+        background-color: $button-grey;
+        min-height: 25rem;
+        width: 100%;
+        overflow: hidden;
+
+        video {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -10;
+        }
+    }
+
+    .hero-msg {
+        background-color: #fff;
+
+        .content {
+            width: 85%;
+        }
+
+        h1 {
+            margin: 50px 0;
+            font-size: 25px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+        }
+
+        p {
+            width: 95%;
+            padding-bottom: 25px;
+            margin: auto;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.56;
+            letter-spacing: normal;
+        }
+    }
+
+    .content {
+        &.group {
+            .main.row {
+                background-color: #e6e7e8;
+            }
+
+            .msg {
+                width: 85%;
+                margin: 15px 0;
+
+                h3 {
+                    font-weight: bold;
+                    font-size: 25px;
+
+                    span {
+                        font-weight: 300;
+                    }
+                }
+
+                p {
+                    padding: 25px 0;
+                    font-size: 16px;
+                }
+
+                .btn {
+                    background-color: $button-green;
+                    border-color: $button-green;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+
+            .image {
+                height: 500px;
+                width: 100%;
+                background-position: top center;
+                background-size: cover;
+            }
+
+            .our.responsibility {
+                color: white;
+                width: 85%;
+                background: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+
+                h3 {
+                    font-weight: bold;
+                    font-size: 25px;
+
+                    span {
+                        font-weight: 300;
+                    }
+                }
+
+                p {
+                    padding: 10px 0;
+                    font-size: 16px;
+                    height: auto;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.88;
+                    letter-spacing: normal;
+                    text-align: left;
+                }
+
+                a {
+                    color: white;
+                    border-color: white;
+                    border: 4px solid;
+                    background-color: unset;
+                }
+            }
+
+            .brand.msg {
+                font-size: 18px;
+                font-weight: 300;
+                margin: 20px 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .carousel {
+        margin: 50px 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        .hero-vid {
+            background-image: unset !important;
+
+            video {
+                z-index: 0;
+            }
+        }
+
+        .hero-msg {
+            p {
+                width: 60%;
+            }
+
+            .content {
+                width: 50%;
+            }
+        }
+
+        .content {
+            &.group {
+                .our.responsibility {
+                    width: 45%;
+                }
+            }
+        }
+
+        .content {
+            &.group {
+                .image {
+                    height: 350px;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .content {
+            &.group {
+                .our.responsibility {
+                    width: 45%;
+                }
+            }
+        }
+
+        .content {
+            &.group {
+                .msg {
+                    width: 85%;
+                }
+            }
+        }
+    }
+}

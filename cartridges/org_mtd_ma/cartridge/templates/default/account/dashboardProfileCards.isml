@@ -1,0 +1,20 @@
+<div class="row justify-content-center account-dashboard">
+    <div class="col-md-6">
+        <!---Profile--->
+        <isinclude template="account/profileCard"/>
+
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+            <!---Password--->
+            <isinclude template="account/passwordCard"/>
+        </isif>
+
+        <!---Address Book--->
+        <isinclude template="account/addressBookCard"/>
+    </div>
+    <div class="col-md-6">
+        <!---Order History--->
+        <isinclude template="account/order/orderHistoryCard" />
+        <!---Payment--->
+        <isinclude template="account/paymentCard"/>
+    </div>
+</div>

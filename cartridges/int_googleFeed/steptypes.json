@@ -1,0 +1,102 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.GenerateGoogleProductFeed",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Generate Google Feed",
+                "module": "int_googleFeed/cartridge/scripts/google/GenerateGoogleProductFeed.js",
+                "function": "run",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type-id": "custom.UploadGoogleProductFeed",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Upload Generate Google Feed to sftp",
+                "module": "int_googleFeed/cartridge/scripts/google/GenerateGoogleProductFeed.js",
+                "function": "upload",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type-id": "custom.ArchiveGoogleProductFeed",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Archive Google Feed",
+                "module": "int_googleFeed/cartridge/scripts/google/GenerateGoogleProductFeed.js",
+                "function": "archive",
+                "status-codes": {
+                   "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type-id": "custom.CleanupGoogleProductFeed",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Cleanup working folder",
+                "module": "int_googleFeed/cartridge/scripts/google/GenerateGoogleProductFeed.js",
+                "function": "cleanup",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            }
+        ]
+}
+}

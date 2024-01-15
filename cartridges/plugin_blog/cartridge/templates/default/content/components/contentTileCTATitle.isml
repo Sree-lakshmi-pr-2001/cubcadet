@@ -1,0 +1,11 @@
+<div class="content-tile-title body-l font-semibold">
+    <isif condition="${asset.url !== null}"> 
+        <a class="content-tile-title-link" href="${asset.url}">
+            <isprint value="${asset.name}"/>
+        </a>
+    <iselse/>
+    <a class="content-tile-title-link" href="${URLUtils.url('Page-Show', 'cid', asset.ID)}">
+            <isprint value="${asset.name}"/>
+        </a>
+    </isif>
+</div>

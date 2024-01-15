@@ -1,0 +1,9 @@
+<!--- TEMPLATENAME: carbError.isml --->
+<div id="carbContent">
+    <div id="dialogTitle" class="hidden"><isprint value="${pdict.title}" encoding="off"/></div>
+    <div><isprint value="${pdict.assetText}" encoding="off"/></div>
+
+    <a href="${URLUtils.url('Cart-Show')}">
+        ${pdict.ctaText}
+    </a>
+</div>

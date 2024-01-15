@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="commercial-handheld-products" configuration-id="Commercial Blowers Carousel Slot" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Air-powered Efficiency&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-commercial-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="commercial-zero-turn-mowers" configuration-id="Commercial Recommendation Carousel" default="true" assigned-to-site="true">
+        <description>rzt commercial accessories &amp; attachments</description>
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="59B30021150"/>
+                <product product-id="59A30046150"/>
+                <product product-id="59A30051150"/>
+                <product product-id="19B70045100"/>
+                <product product-id="59B30037150"/>
+                <product product-id="59A30047150"/>
+                <product product-id="19A70039100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="commercial-stand-on-zero-turns" configuration-id="Commercial Recommendation Carousel" assigned-to-site="true">
+        <description>stand-on commercial accessories &amp; attachments</description>
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="59B30021150"/>
+                <product product-id="19A70039100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="commercial-walk-behind-mowers" configuration-id="Commercial Walks Carousel Slot" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Cut Hills Down to Size&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-commercial-walks"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-and-garden-equipment" configuration-id="Content Card Group" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="26B-FFH5710"/>
+                <product product-id="24A-67M4710"/>
+                <product product-id="24BG55M1710"/>
+                <product product-id="25B-262J710"/>
+                <product product-id="21A-62M8710"/>
+                <product product-id="21B-34M8710"/>
+                <product product-id="41ADZ27C912"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="Content Card Group" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="33AA27JD710"/>
+                <product product-id="17AIEAC5010"/>
+                <product product-id="12ABB2MW710"/>
+                <product product-id="22BSBDAE710"/>
+                <product product-id="13A6A1CT056"/>
+                <product product-id="12ACW62R710"/>
+                <product product-id="14A-3JM-010"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="Content-Card-Group" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="content-card-group-more"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="electric-riding-lawn-mowers" configuration-id="Electric Feature Cards" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-feature-cards-electric-riders"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="electric-riding-lawn-mowers" configuration-id="Electric Top Carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-top-carousel-electric-riders"/>
+                <content-asset content-id="plb-top-carousel-electric-riders-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="lawn-and-garden-tractors" configuration-id="Featured card slot - Lawn and Garden Tractors" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-lawn-garden-tractors"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="snow-blowers" configuration-id="Featured card slot - Snow Blowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-snow-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="chipper-shredders" configuration-id="Featured card slot -Chippers Shredders" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-chippers-shredders"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="leaf-blowers" configuration-id="Featured card slot -Leaf Blowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-lawn-leaf-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="log-splitters" configuration-id="Featured card slot -Log splitters" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-log-splitters"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="pressure-washers" configuration-id="Featured card slot -Pressure Washers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-pressure-washers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="robotic-mowers" configuration-id="Featured card slot -Robotic Mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-featured-cards-robotic"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="robotic-mowers" configuration-id="Featured card slot -Robotic Mowers-" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-featured-cards-robotic"/>
+                <content-asset content-id="robotic-mowers-map"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="self-propelled-mowers" configuration-id="Featured card slot -Self-Propelled Mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-self-propelled-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="garden-tillers" configuration-id="Featured card slot -Tillers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-tillers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="trimmers" configuration-id="Featured card slot -Trimmers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-trimmers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="walk-behind-mowers" configuration-id="Featured card slot -Walk-Behind Mowers" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-walk-behind-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="wide-area-mowers" configuration-id="Featured card slot -Wide-Area Mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-wide-area-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="header-banner-m" context="global" configuration-id="Header Banner - Test" default="true" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <schedule>
+            <start-date>2019-09-29T00:00:00.000Z</start-date>
+            <end-date>2019-10-21T00:00:00.000Z</end-date>
+        </schedule>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;style type="text/css"&gt;.promo-header {
+
+padding-top: 0.75rem !important;
+padding-bottom: 0.75rem !important;
+
+}
+&lt;/style&gt;
+&lt;div class="font-weight-bold bg-secondary text-black promo-header" id="promo-header"&gt;$100 OFF Select Snow Blowers. &lt;a href="$url('Search-Show','cgid','snow-blowers')$"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="Homepage Hero Banners" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <schedule>
+            <start-date>2019-09-29T00:00:00.000Z</start-date>
+            <end-date>2019-10-20T23:45:00.000Z</end-date>
+        </schedule>
+        <content>
+            <content-assets>
+                <content-asset content-id="100-off-snow-blowers"/>
+                <content-asset content-id="hero-home-mydealerdirect"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Snow  Customers"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-1" context="global" configuration-id="Implementation-sample-category-cards-home" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="category-card-group-cub-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="infinicut" configuration-id="Infinicut - Feature Cards" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-feature-cards-infinicut"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="infinicut" configuration-id="Infinicut-feature-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-feature-banner-infinicut"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="infinicut" configuration-id="Infinicut-hero-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-infinicut"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="infinicut" configuration-id="Infinicut-plb-lifestyle-features-grid" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-infinicut"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="turf-applications" configuration-id="Infinicut-pll-lifestyle-features-grid" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-applications"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="golf-and-turf-equipment" configuration-id="Infinicut-pll-lifestyle-features-grid" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-applications"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="infiniset" configuration-id="Infiniset-plb-lifestyle-features-grid" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-infiniset"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="lawn-and-garden-tractors" configuration-id="Lawn and Garden Tractor Carousel Slot" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Unleash the potential of your yard.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-img-lawn-garden-tractors-1"/>
+                <content-asset content-id="plb-carousel-img-lawn-garden-tractors-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="My Dealer Direct Home Page Content" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="MyDealeDirect Promo Asset" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-home-promo-mydealerdirect"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:40:34" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: Home-main-m&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-1" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:46:48" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-1&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:48:09" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-2&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:49:53" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-3&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:51:04" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-4&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="New Slot Configuration - 2019-04-28 16:52:29" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="content-card-group-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:41:06" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-2&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:42:01" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:42:36" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-4&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:51:46" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-4&lt;/h6&gt;
+&lt;p&gt; Product Line Landing Uses same template as Category Landing &lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 20:04:23" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 21:02:27" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="product-recommendations-m" context="global" configuration-id="New Slot Configuration - 2019-05-08 11:17:51" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-05-14 07:41:39" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-2&lt;/h6&gt;
+&lt;p&gt; Product Line Landing Uses same template as Category Landing &lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-05-14 07:42:07" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;p&gt; Product Line Landing Uses same template as Category Landing &lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="New Slot Configuration - 2019-06-04 13:26:23" assigned-to-site="false">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero5"/>
+                <content-asset content-id="hero6"/>
+                <content-asset content-id="hero7"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="New Slot Configuration - 2019-06-04 13:41:27" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets/>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-06-06 15:13:53" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-riders"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-06-07 08:40:58" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 class="h1"&gt;Featured&amp;nbsp;Riding Lawn Mowers&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="13AOA1CS010"/>
+                <product product-id="17RIEACI010"/>
+                <product product-id="13APA1CT010"/>
+                <product product-id="17AIEAC5010"/>
+                <product product-id="13AQA1CZ010"/>
+                <product product-id="13AQA2CA010"/>
+                <product product-id="14AQA3CA010"/>
+                <product product-id="14AQA3CQ010"/>
+                <product product-id="13A9A1CN010"/>
+                <product product-id="13B9A1CS010"/>
+                <product product-id="17RREACS010"/>
+                <product product-id="17RREACA010"/>
+            </products>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="New Slot Configuration - 2019-06-10 14:02:45" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="New Slot Configuration - 2019-06-10 14:05:31" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="zero-turn-mowers" configuration-id="New Slot Configuration - 2019-06-11 08:46:59" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-feature-cards-zero-turns"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="zero-turn-mowers" configuration-id="New Slot Configuration - 2019-06-11 09:38:30" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Bring your lawn to life.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-rzt"/>
+                <content-asset content-id="plb-carousel-youtube-ultima"/>
+                <content-asset content-id="plb-carousel-img-zero-turns"/>
+                <content-asset content-id="plb-carousel-img-zero-turns-1"/>
+                <content-asset content-id="plb-carousel-img-zero-turns-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="commercial-equipment" configuration-id="New Slot Configuration - 2019-06-19 15:44:26" default="true" assigned-to-site="true">
+        <description>commercial landing slot 3</description>
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 class="h1"&gt;Featured Commercial Equipment&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="53TIHMUY050"/>
+                <product product-id="24A-667A010"/>
+                <product product-id="53TWEFJF050"/>
+                <product product-id="55RI6HNS050"/>
+                <product product-id="24AE687F010"/>
+                <product product-id="55RI6HNV050"/>
+                <product product-id="53RIHJTK050"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="commercial-zero-turn-mowers" configuration-id="New Slot Configuration - 2019-06-20 10:41:39" default="true" assigned-to-site="true">
+        <description>first slot on the product line browse page-commercial rzts</description>
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-commercial-carousel-financing"/>
+                <content-asset content-id="plb-hero-commercial-rzt-1"/>
+                <content-asset content-id="reviews-pro-carousel"/>
+                <content-asset content-id="plb-top-carousel-com-rzts"/>
+                <content-asset content-id="plb-top-carousel-com-rzts_1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="commercial-zero-turn-mowers" configuration-id="New Slot Configuration - 2019-06-20 11:11:01" default="true" assigned-to-site="true">
+        <description>second slot on the commercial rzts product line browse</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-feature-cards-commercial-rzts"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="commercial-zero-turn-mowers" configuration-id="New Slot Configuration - 2019-06-20 11:46:43" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-grid-header-commercial"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="commercial-zero-turn-mowers" configuration-id="New Slot Configuration - 2019-06-20 14:19:07" default="true" assigned-to-site="true">
+        <description>bottom carousel of commercial plb</description>
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Get more out of every day.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-proz-series"/>
+                <content-asset content-id="plb-carousel-img-commercial-rzt"/>
+                <content-asset content-id="plb-carousel-img-commercial-rzt_1"/>
+                <content-asset content-id="plb-carousel-img-commercial-rzt_2"/>
+                <content-asset content-id="plb-carousel-img-commercial-rzt_3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="utility-vehicles-" configuration-id="New Slot Configuration - 2019-06-20 14:22:36" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;A Challenger for every challenge.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-challenger"/>
+                <content-asset content-id="plb-carousel-img-utv"/>
+                <content-asset content-id="plb-carousel-img-utv-1"/>
+                <content-asset content-id="plb-carousel-img-utv-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="store-locator-banner" context="global" configuration-id="New Slot Configuration - 2019-07-18 14:44:07" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="store-locator-message"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="commercial-equipment" configuration-id="New Slot Configuration - 2019-09-27 14:03:15" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="utility-vehicles-" configuration-id="PLB Slot - UTV Header" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-grid-header-utv"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="golf-and-turf-equipment" configuration-id="PLL-STP-Carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-stp-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="turf-applications" configuration-id="PLL-STP-Carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-stp-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="pressure-washers" configuration-id="Pressure Washers Carousel Slot" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-pressure-washers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="chipper-shredders" configuration-id="Product Line Grid Header - Chipper Shredders" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-chippershredders"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="commercial-handheld-products" configuration-id="Product Line Grid Header - Commercial Blower" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-commercial-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="commercial-walk-behind-mowers" configuration-id="Product Line Grid Header - Commercial Walks" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-commercial-walks"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="lawn-and-garden-tractors" configuration-id="Product Line Grid Header - Lawn Tractors" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-lawn-garden-tractors"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="leaf-blowers" configuration-id="Product Line Grid Header - Leaf Blowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-leaf-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="log-splitters" configuration-id="Product Line Grid Header - Log Splitters" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-log-splitters"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="pressure-washers" configuration-id="Product Line Grid Header - Pressure Washers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-pressure-washers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="self-propelled-mowers" configuration-id="Product Line Grid Header - Self-Propelled Mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-self-propelled-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="snow-blowers" configuration-id="Product Line Grid Header - Snow Blowers" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-snow-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="garden-tillers" configuration-id="Product Line Grid Header - Tillers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-tillers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="trimmers" configuration-id="Product Line Grid Header - Trimmers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-trimmers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="walk-behind-mowers" configuration-id="Product Line Grid Header - Walk-Behind Mower" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-walk-behind-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="wide-area-mowers" configuration-id="Product Line Grid Header - Wide Area Mower" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-wide-area-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="riding-lawn-mowers-view-all" configuration-id="Product Line Grid Header -All Riding Mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-view-all-riding-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-cleanup" configuration-id="Product Line Group - Lawn Clean-up" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-lawncare"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="tree-care" configuration-id="Product Line Group - Tree Care" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-treecare"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="push-mowers" configuration-id="Product Line Group - Walk-behind mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-walks"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="rg3" configuration-id="RG3-plb-lifestyle-features-grid" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-RG3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="zero-turn-mowers" configuration-id="Recommendation Carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','riding-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="19A70041100"/>
+                <product product-id="19A70060OEM"/>
+                <product product-id="19A70054100"/>
+                <product product-id="19A70062100"/>
+                <product product-id="19A70055100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="riding-lawn-mowers-view-all" configuration-id="Recommendation Carousel" assigned-to-site="false">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','riding-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="19A30031100"/>
+                <product product-id="19A70041100"/>
+                <product product-id="19B40026100"/>
+                <product product-id="19A30037100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="commercial-handheld-products" configuration-id="Recommendation Carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="24A-667A010"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="trimmers" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="41BJLE-C902"/>
+                <product product-id="41AJPS-C902"/>
+                <product product-id="41AJCB-C902"/>
+                <product product-id="41BJGC-C902"/>
+                <product product-id="41AJBC-C902"/>
+                <product product-id="41AJBR-C902"/>
+                <product product-id="41AJTB-C902"/>
+                <product product-id="41BJAH-C902"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="commercial-walk-behind-mowers" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="59A50004150"/>
+                <product product-id="59A50009150"/>
+                <product product-id="59A50007150"/>
+                <product product-id="59A50005150"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="garden-tillers" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="742-0305A-0637"/>
+                <product product-id="OEM-290-253"/>
+                <product product-id="642-0004-0637"/>
+                <product product-id="642-0005-0637"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="wide-area-mowers" configuration-id="Recommendation Carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','push-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="19A20003OEM"/>
+                <product product-id="19A20001100"/>
+                <product product-id="490-100-C099"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="walk-behind-mowers" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','push-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="731-08945"/>
+                <product product-id="942-0741-X"/>
+                <product product-id="490-100-0056"/>
+                <product product-id="490-290-0012"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="self-propelled-mowers" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','push-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="731-08945"/>
+                <product product-id="942-0741-X"/>
+                <product product-id="490-100-0056"/>
+                <product product-id="490-290-0012"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="robotic-mowers" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="FR-MRK7030A"/>
+                <product product-id="FR-MRK0076A"/>
+                <product product-id="FR-MRK6101A"/>
+                <product product-id="FR-MRK7101A"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="utility-vehicles-" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','utility-vehicle-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="39A70058100"/>
+                <product product-id="39A70108100"/>
+                <product product-id="39A70095100"/>
+                <product product-id="39A70125100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="pressure-washers" configuration-id="Recommendation Carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="26B-AJM1710"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="log-splitters" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="24BF552B710"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="leaf-blowers" configuration-id="Recommendation Carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="41BS4BVG912"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="chipper-shredders" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="OEM-290-005"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="snow-blowers" configuration-id="Recommendation Carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','snow-blower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="753-08629"/>
+                <product product-id="490-241-0032"/>
+                <product product-id="490-290-0010"/>
+                <product product-id="OEM-390-679"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="lawn-and-garden-tractors" configuration-id="Recommendation Carousel" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','riding-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="19A30031100"/>
+                <product product-id="19A70041100"/>
+                <product product-id="19B40026100"/>
+                <product product-id="19A30037100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="electric-riding-lawn-mowers" configuration-id="Recommendation carousel" default="true" assigned-to-site="true">
+        <description>Attachments/Accessories</description>
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 id="accessories"&gt;Attachments &amp; Accessories&lt;/h2&gt;&lt;a class="btn btn-text" href="$url('Search-Show','cgid','riding-mower-accessories')$"&gt;View all&lt;/a&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="19A30030100"/>
+                <product product-id="19B40026100"/>
+                <product product-id="19A30021100"/>
+                <product product-id="19A30014OEM"/>
+                <product product-id="19B30029100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-cleanup" configuration-id="Recommended Products - Featured Lawn Clean-Up Tools" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 class="h1"&gt;Feature Lawn Cleanup Tools&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="41ADZ27C912"/>
+                <product product-id="41BS4BVG912"/>
+                <product product-id="25B-55SD710"/>
+                <product product-id="26B-AJM1710"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="tree-care" configuration-id="Recommended Products - Featured Tree Care Tools" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2 class="h1"&gt;Feature Tree Care Tools&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="24BF552B710"/>
+                <product product-id="24A-41M4710"/>
+                <product product-id="24A-07MP710"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="zero-turn-mowers" configuration-id="Residential RZT Carousel" default="true" assigned-to-site="true">
+        <description>plb carousel</description>
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="reviews-ultima-carousel"/>
+                <content-asset content-id="plb-top-carousel-rzts"/>
+                <content-asset content-id="plb-top-carousel-rzts-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="robotic-mowers" configuration-id="Robotics Carousel Slot" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Get Your Weekends Back&lt;/h2&gt;
+&lt;p&gt;Cutting edge results with Zero effort with the XR3&lt;/p&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-carousel-img-robotic-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="robotic-mowers" configuration-id="Robotics Carousel Slot-" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Get Your Weekends Back&lt;/h2&gt;
+&lt;p&gt;Cutting edge results with Zero effort with the XR3&lt;/p&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-carousel-img-robotic-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="zero-turn-mowers" configuration-id="Sample Gallery Carousel" assigned-to-site="true">
+        <description>Sample of the Gallery Carousel</description>
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;
+&lt;p&gt;We’ve perfected the lap bar zero turn, pioneered the advancement of steering wheel controlled mowers, and now we’re redefining the landscape again – with the all-new Ultima Series. Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus dignissim.&lt;/p&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-img-sample"/>
+                <content-asset content-id="plb-carousel-youtube-sample"/>
+                <content-asset content-id="plb-carousel-vimeo-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="self-propelled-mowers" configuration-id="Self-Propelled Mowers Carousel Slot" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-self-propelled-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="electric-riding-lawn-mowers" configuration-id="Shop &amp; Compare" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-grid-header-electric"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="snow-blowers" configuration-id="Snow Blower Carousel Slot" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Snow won't slow you down.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-Xseries-snow-blowers"/>
+                <content-asset content-id="plb-carousel-img-snow-blowers-1"/>
+                <content-asset content-id="plb-carousel-img-snow-blowers-2"/>
+                <content-asset content-id="plb-carousel-img-snow-blowers-3"/>
+                <content-asset content-id="plb-carousel-img-snow-blowers-4"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="Special Offers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="special-offers-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-and-garden-equipment" configuration-id="Subcategory Card Group - Lawn &amp; Garden" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="subcategory-card-group-lawngarden"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-mowers" configuration-id="Subcategory Card Group - Mowers" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="trimmers" configuration-id="Trimmers Carousel Slot" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Precise performance.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-img-trimmers-1"/>
+                <content-asset content-id="plb-carousel-img-trimmers-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="tru-edge" configuration-id="TruEdge-plb-lifestyle-features-grid" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-TruEdge"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="utility-vehicles-" configuration-id="UTVs - Feature Cards" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-feature-cards-utvs"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="utility-vehicles-" configuration-id="UTVs-Hero" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-utv-1"/>
+                <content-asset content-id="plb-hero-utv-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="Unlocking Possible Video Hero" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-hero-unlockingpossible"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="walk-behind-mowers" configuration-id="Walk-Behind Mowers Carousel Slot" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-walk-behind-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="electric-riding-lawn-mowers" configuration-id="bottom carousel-electric" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Super-charged cuts.&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-electric-riding-mowers"/>
+                <content-asset content-id="plb-carousel-img-electric-riders"/>
+                <content-asset content-id="plb-carousel-img-electric-riders-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="zero-turn-mowers" configuration-id="default heading - 2019-06-10 13:13:31" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-grid-header-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="zero-turn-mowers" configuration-id="feature cards - 2019-06-10 13:14:42" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-features-cards-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="commercial-handheld-products" configuration-id="hero-carousel-commercial-blowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-commercial-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="commercial-walk-behind-mowers" configuration-id="hero-carousel-commercial-walks" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-commercial-carousel-financing"/>
+                <content-asset content-id="plb-hero-commercial-walks"/>
+                <content-asset content-id="pll-commercial-carousel-fleet"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-top-banner" context="global" configuration-id="implementation sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="cart-top-banner-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="infinicut" configuration-id="infinicut-hero-carousel-bottom" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-infinicut-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="commercial-handheld-products" configuration-id="plb feature cards - commercial blowers" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-commercial-blowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="commercial-walk-behind-mowers" configuration-id="plb feature cards - commercial walks" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-featured-cards-commercial-walks"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="lawn-and-garden-tractors" configuration-id="plb-Lawn and Garden Tractors - hero" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-lawngarden-tractors-1"/>
+                <content-asset content-id="reviews-tractors-carousel"/>
+                <content-asset content-id="plb-hero-lawngarden-tractors-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="riding-lawn-mowers-view-all" configuration-id="plb-all-riding-mowers-hero-carousel" assigned-to-site="false">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-mowers-carousel-1"/>
+                <content-asset content-id="pll-mowers-carousel-2"/>
+                <content-asset content-id="pll-mowers-carousel-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="rg3" configuration-id="plb-carousel-youtube-rg3" assigned-to-site="false">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-rg3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="infiniset" configuration-id="plb-carousel-youtube-tm-system" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-tm-system"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="tru-edge" configuration-id="plb-carousel-youtube-truedge" default="true" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-youtube-truedge"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="chipper-shredders" configuration-id="plb-chipper-shredders-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-chippershredders-1"/>
+                <content-asset content-id="plb-hero-chippershredders-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="infiniset" configuration-id="plb-feature-cards-infiniset" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-feature-cards-infiniset"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="rg3" configuration-id="plb-feature-cards-rg3" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-feature-cards-rg3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="tru-edge" configuration-id="plb-feature-cards-truedge" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-feature-cards-truedge"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="baseball" configuration-id="plb-hero-baseball-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-baseball-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="commercial-stand-on-zero-turns" configuration-id="plb-hero-commercial-stand-on" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-commercial-stand-on-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="Golf" configuration-id="plb-hero-golf-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-golf-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="infiniset" configuration-id="plb-hero-infiniset" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-infiniset"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="infiniset" configuration-id="plb-hero-infiniset-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-infiniset-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="rg3" configuration-id="plb-hero-rg3" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-rg3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="rg3" configuration-id="plb-hero-rg3-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-rg3-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="Soccer" configuration-id="plb-hero-soccer-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-soccer-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="Tennis" configuration-id="plb-hero-tennis-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-tennis-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="garden-tillers" configuration-id="plb-hero-tillers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-tillers-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="tru-edge" configuration-id="plb-hero-truedge" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-truedge"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="tru-edge" configuration-id="plb-hero-truedge-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-truedge-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="leaf-blowers" configuration-id="plb-leaf-blowers-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-leaf-blowers-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="log-splitters" configuration-id="plb-log-splitters-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-log-splitters-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="pressure-washers" configuration-id="plb-pressure-washers-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-pressure-washer-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="self-propelled-mowers" configuration-id="plb-self-propelled-mowers-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-self-propelled-mowers-1"/>
+                <content-asset content-id="plb-hero-self-propelled-mowers-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="snow-blowers" configuration-id="plb-snow blowers - hero" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-snowblower-1"/>
+                <content-asset content-id="reviews-snow-carousel"/>
+                <content-asset content-id="plb-hero-snowblower-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="baseball" configuration-id="plb-stp-baseball-carousel-1" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-stp-baseball-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="Golf" configuration-id="plb-stp-golf-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-stp-golf-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="Soccer" configuration-id="plb-stp-soccer-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-stp-soccer-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="Tennis" configuration-id="plb-stp-tennis-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-stp-tennis-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="Golf" configuration-id="plb-testimonials-golf" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-testimonials-golf"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="turf-applications" configuration-id="plb-testimonials-golf" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-testimonials-golf"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="rg3" configuration-id="plb-testimonials-golf" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-testimonials-golf"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="trimmers" configuration-id="plb-trimmers-hero" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-trimmers-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="walk-behind-mowers" configuration-id="plb-walk-behind-mowers-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-walk-behind-mowers-1"/>
+                <content-asset content-id="10-off-walks"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="wide-area-mowers" configuration-id="plb-wide-area-mowers-hero" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-hero-wide-area-mowers-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="golf-and-turf-equipment" configuration-id="pll-hero-STP-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-hero-STP-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="turf-applications" configuration-id="pll-hero-STP-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-hero-STP-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="lawn-cleanup" configuration-id="pll-hero-carousel-Lawn Clean Up" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-lawncleanup-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="tree-care" configuration-id="pll-hero-carousel-Tree Care" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-treecare-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="commercial-equipment" configuration-id="pll-hero-carousel-commercial-equipment" default="true" assigned-to-site="true">
+        <description>first slot for commercial landing</description>
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-commercial-carousel-financing"/>
+                <content-asset content-id="pll-commercial-carousel"/>
+                <content-asset content-id="pll-commercial-carousel-fleet"/>
+                <content-asset content-id="reviews-pro-carousel"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="riding-lawn-mowers" configuration-id="pll-hero-carousel-riders" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-riders-carousel-1"/>
+                <content-asset content-id="reviews-tractors-carousel"/>
+                <content-asset content-id="pll-riders-carousel-2"/>
+                <content-asset content-id="pll-riders-carousel-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="push-mowers" configuration-id="pll-hero-carousel-walk-behind-mowers" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-walkbehind-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="turf-products" configuration-id="pll-hero-products-banner" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-hero-STP-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="lawn-and-garden-equipment" configuration-id="pll-lawngarden-hero-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-lawngarden-carousel-1"/>
+                <content-asset content-id="pll-lawngarden-carousel-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="lawn-mowers" configuration-id="pll-mowers-hero-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-mowers-carousel-1"/>
+                <content-asset content-id="pll-mowers-carousel-2"/>
+                <content-asset content-id="pll-mowers-carousel-3"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="turf-products" configuration-id="pll-product-line-group-STP" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-STP-products"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="baseball" configuration-id="pll-product-line-group-STP-baseball" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-STP-baseball"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="Golf" configuration-id="pll-product-line-group-STP-golf" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-STP-golf"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="golf-and-turf-equipment" configuration-id="pll-product-line-group-STP-products" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-STP-products"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="Soccer" configuration-id="pll-product-line-group-STP-soccer" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-STP-soccer"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="Tennis" configuration-id="pll-product-line-group-STP-tennis" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-STP-tennis"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="robotic-mowers" configuration-id="pll-robotic-hero" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-hero-robotic-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="robotic-mowers" configuration-id="pll-robotic-hero-image" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-hero-robotic-mowers"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="turf-products" configuration-id="pll-stp-carousel" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-stp-carousel-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="commercial-equipment" configuration-id="ppl-commercial-category-lineup" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-commercial-explore-lineup-copy-w-standon"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="product slider" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;p&gt;extra code&lt;/p&gt;
+
+&lt;h2&gt;Heading Here&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="00001"/>
+                <product product-id="00002406"/>
+                <product product-id="00003"/>
+                <product product-id="690-900-0041"/>
+                <product product-id="690-900-0038"/>
+                <product product-id="690-900-0010"/>
+            </products>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="commercial-stand-on-zero-turns" configuration-id="product-line-browse-feature-cards-commercial-stand-on" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-feature-cards-commercial-stand-on"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="snow-blowers" configuration-id="promo slot" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <schedule>
+            <start-date>2019-09-29T00:00:00.000Z</start-date>
+            <end-date>2019-10-21T00:00:00.000Z</end-date>
+        </schedule>
+        <content>
+            <content-assets>
+                <content-asset content-id="100-off-snow-blowers-v2"/>
+                <content-asset content-id="plb-hero-snowblower-1"/>
+                <content-asset content-id="reviews-snow-carousel"/>
+                <content-asset content-id="plb-hero-snowblower-2"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="promo slot" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <schedule>
+            <start-date>2019-09-29T00:00:00.000Z</start-date>
+            <end-date>2019-10-21T00:00:00.000Z</end-date>
+        </schedule>
+        <content>
+            <products>
+                <product product-id="31AH5GVO710"/>
+                <product product-id="31AH8EVS710"/>
+                <product product-id="31AH5DVA710"/>
+                <product product-id="31AM5CVR710"/>
+                <product product-id="33ABA7CS710"/>
+                <product product-id="33AA27JD710"/>
+                <product product-id="17RREACS010"/>
+                <product product-id="53TIHMUY050"/>
+                <product product-id="13BPA1CS010"/>
+            </products>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="sample-product-slider" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="33ABA7CS710"/>
+                <product product-id="33AA27JD710"/>
+                <product product-id="17RREACS010"/>
+                <product product-id="53TIHMUY050"/>
+                <product product-id="13BPA1CS010"/>
+                <product product-id="12ABB2MW710"/>
+                <product product-id="19B40026100"/>
+                <product product-id="19A30030100"/>
+                <product product-id="53TWEFJA050"/>
+            </products>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-recommendations-m" context="global" configuration-id="sample-product-slider" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;You Might Also Like&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="19A40038100"/>
+                <product product-id="19A30030100"/>
+                <product product-id="19A30031100"/>
+                <product product-id="19A30037100"/>
+                <product product-id="19C70020100"/>
+                <product product-id="19A30014OEM"/>
+                <product product-id="19A40024100"/>
+                <product product-id="19A70043100"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

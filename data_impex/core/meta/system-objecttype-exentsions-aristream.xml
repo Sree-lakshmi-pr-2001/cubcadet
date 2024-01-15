@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+   <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="ariAppKey">
+                <display-name xml:lang="x-default">ARI PartStream App Key</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>555qPs25Mt463866f2mt</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ariBrandCode">
+                <display-name xml:lang="x-default">ARI PartStream Brand Code</display-name>
+                <description xml:lang="x-default">Brand Code value for PartStream context/search, if not defined per product.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>MTF2</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ariEnabled">
+                <display-name xml:lang="x-default">ARI PartStream Enabled</display-name>
+                <description xml:lang="x-default">Toggle the feature on the site.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ariJSURL">
+                <display-name xml:lang="x-default">ARI PartStream JS URL</display-name>
+                <description xml:lang="x-default">Endpoint for ARI PartStream</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://servicesstg.arinet.com/PartStream/</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="ARIPartStream">
+                <display-name xml:lang="x-default">ARI PartStream Diagrams</display-name>
+                <attribute attribute-id="ariEnabled"/>
+                <attribute attribute-id="ariJSURL"/>
+                <attribute attribute-id="ariAppKey"/>
+                <attribute attribute-id="ariBrandCode"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

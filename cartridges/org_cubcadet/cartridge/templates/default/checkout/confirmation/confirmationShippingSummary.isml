@@ -1,0 +1,117 @@
+<!--- Shipping Address --->
+<isloop var="shippingModel" items="${pdict.order.shipping}" status="shippingLoop">
+    <isset name="currentShippingMethodId" value="${shippingModel.selectedShippingMethod ? shippingModel.selectedShippingMethod.ID : ''}" scope="page"/>
+    <isset name="isHidden" value="${currentShippingMethodId != '' && (currentShippingMethodId === dealerPickupMethodId || dealerDeliveryMethodId)}" scope="page" />
+
+    <isset name="isDealerPickup" value="${currentShippingMethodId != '' && currentShippingMethodId == dealerPickupMethodId}" scope="page" />
+    <isset name="isDealerDelivery" value="${currentShippingMethodId != '' && currentShippingMethodId == dealerDeliveryMethodId}" scope="page" />
+    <isset name="isDropShip" value="${currentShippingMethodId != '' && currentShippingMethodId != dealerDeliveryMethodId && currentShippingMethodId != dealerPickupMethodId}" scope="page" />
+
+    <isif condition="${shippingLoop.first}">
+        <div class="single-shipping" data-shipment-summary="${shippingModel.UUID}">
+            <div class="row shipping-summary-row">
+
+                <isif condition="${isDealerPickup}">
+                    <div class="shipping-summary-col col-6 shipping-dealer-info-block">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <!-- Dealer info -->
+                                <div>
+                                    <div class="summary-section-label">
+                                        ${Resource.msg('heading.checkout.shipping.dealerpickup2', 'checkout', null)}
+                                    </div>
+                                    <div class="dealer-info-name summary-section-sublabel">
+                                        <isif condition="${'dealerInfo' in pdict && pdict.dealerInfo && pdict.dealerInfo.dealerAddress}">
+                                            ${pdict.dealerInfo.dealerAddress.companyName}
+                                        </isif>
+                                    </div>
+                                    <div class="summary-section-report">
+                                        <div class="address1">
+                                            <isif condition="${'dealerInfo' in pdict && pdict.dealerInfo && pdict.dealerInfo.dealerAddress}">
+                                                ${pdict.dealerInfo.dealerAddress.address1}
+                                            </isif>
+                                        </div>
+                                        <span class="city">
+                                            <isif condition="${'dealerInfo' in pdict && pdict.dealerInfo && pdict.dealerInfo.dealerAddress}">
+                                                ${pdict.dealerInfo.dealerAddress.city}
+                                            </isif>
+                                        </span>
+                                        <span class="stateCode">
+                                            <isif condition="${'dealerInfo' in pdict && pdict.dealerInfo && pdict.dealerInfo.dealerAddress}">
+                                                ${pdict.dealerInfo.dealerAddress.state}
+                                            </isif>
+                                        </span>
+                                        <span class="postalCode">
+                                            <isif condition="${'dealerInfo' in pdict && pdict.dealerInfo && pdict.dealerInfo.dealerAddress}">
+                                                ${pdict.dealerInfo.dealerAddress.postalCode}
+                                            </isif>
+                                        </span>
+                                        <div class="dealer-info-phone">
+                                            <isif condition="${'dealerInfo' in pdict && pdict.dealerInfo && pdict.dealerInfo.dealerAddress}">
+                                                ${pdict.dealerInfo.dealerAddress.phone}
+                                            </isif>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+                    </div>
+                </isif>
+
+                <isif condition="${pdict.afterMarketOnly !== true && (isDealerDelivery || isDropShip)}">
+                    <div class="shipping-summary-col col-6">
+                        <div class="summary-section-label">
+                            ${Resource.msg('heading.checkout.shipping.address.dealer', 'checkout', null)}
+                        </div>
+                        <isif condition="${shippingModel.shippingAddress !== null}">
+                            <isset name="address" value="${shippingModel.shippingAddress}" scope="page"/>
+                        <iselse>
+                            <isset name="address" value="{}" scope="page"/>
+                        </isif>
+                        <div class="summary-details shipping">
+                            <isinclude template="checkout/confirmation/confirmationAddressShippingSummary" />
+                            <div class="shipping-phone hidden">
+                                <isif condition="${pdict.formattedShippingPhone}">
+                                    ${pdict.formattedShippingPhone}
+                                <iselse>
+                                    ${shippingModel.shippingAddress && shippingModel.shippingAddress.phone ? shippingModel.shippingAddress.phone : ''}
+                                </isif>
+                            </div>
+                        </div>
+                    </div>
+                </isif>
+
+                <isif condition="${isDealerDelivery || isDropShip}">
+                    <!-- Order contact info -->
+                    <div class="shipping-summary-col col-6 shipping-contact-information-block">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <div class="shipping-contact-info-block">
+                                    <div class="summary-section-label">
+                                        ${Resource.msg('heading.checkout.shipping.contactinfo', 'checkout', null)}
+                                    </div>
+                                    <div class="summary-section-report">
+                                        <div class="order-email-info">
+                                            ${pdict.order.orderEmail || ''}
+                                        </div>
+                                        <div class="shipping-phone">
+                                            <isif condition="${pdict.formattedShippingPhone}">
+                                                ${pdict.formattedShippingPhone}
+                                            <iselse>
+                                                ${shippingModel.shippingAddress && shippingModel.shippingAddress.phone ? shippingModel.shippingAddress.phone : ''}
+                                            </isif>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+                    </div>
+                </isif>
+
+            </div> <!-- /.row -->
+        </div>
+    </isif>
+</isloop>
+<p class="summary-section-label shipping-addr-label multi-shipping">
+    ${Resource.msg('order.summery.section.text', 'order', null)}
+</p>

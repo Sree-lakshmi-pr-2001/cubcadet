@@ -1,0 +1,65 @@
+<div class="row minicart-bonus-product <isif condition=${!miniCart}>no-gutters</isif>">
+    <div class="item-image <isif condition=${miniCart}>col-4<iselse> col-6</isif>">
+        <img class="product-image"
+            src="${nestedLineItem.images['mini-line-item'][0].url}"
+            alt="${nestedLineItem.images['mini-line-item'][0].alt}"
+            title="${nestedLineItem.images['mini-line-item'][0].title}">
+    </div>
+    <div class="product-line-item-details <isif condition=${miniCart}>col-8<iselse> col-6</isif>">
+        <div class="line-item-header">
+            <div class="line-item-name">
+                <span>${nestedLineItem.productName}</span>
+            </div>
+            <isif condition="${nestedLineItem.extendedName}">
+                <p class="extended-name">${nestedLineItem.extendedName}</p>
+            </isif>
+        </div>
+        <isif condition="${!miniCart}">
+            <p class="item-number"><strong>${Resource.msg('label.itemnumber', 'cart', null)}:</strong> ${lineItem.id}</p>
+        </isif>
+
+        <div class="item-attributes d-flex <isif condition=${miniCart}>flex-row<iselse> flex-column</isif> no-gutters">
+            <isloop items="${nestedLineItem.variationAttributes}" var="attribute">
+                <p class="line-item-attributes">${attribute.displayName}: ${attribute.displayValue}</p>
+            </isloop>
+
+            <div class="item-options">
+                <isloop items="${nestedLineItem.options}" var="option">
+                    <div class="line-item-option">${option}</div>
+                </isloop>
+            </div>
+
+            <iscomment> Removed: item price</iscomment>
+            <!--- quantity --->
+
+            <div class="line-item-quantity <isif condition="${miniCart}">col-6</isif>">
+                <p class="line-item-pricing-info <isif condition="${!miniCart}">row no-gutters</isif>">
+                    <isif condition="${miniCart}">
+                        <span class="line-item-total-text qty-card-quantity-label sr-only sr-only-focusable">
+                            ${Resource.msg('field.selectquantity','cart',null)}
+                        </span>
+                    <iselse>
+                        <span class="line-item-total-text qty-card-quantity-label font-bold col-5">
+                            ${Resource.msg('label.qty','cart',null)}:
+                        </span>
+                    </isif>
+                    <span class="pricing qty-card-quantity-count <isif condition="${!miniCart}">col-7</isif>"><isprint value="${nestedLineItem.quantity}" formatter="##" /></span>
+                </p>
+            </div>
+            <!--- line item total price --->
+            <div class="line-item-total-price justify-content-end <isif condition="${miniCart}">col-6<iselse>row no-gutters</isif>">
+                <p class="line-item-pricing-info <isif condition="${!miniCart}">col-5</isif>">
+                    <span class="line-item-total-text line-item-total-price-label <isif condition="${miniCart}">sr-only sr-only-focusable</isif>">
+                        ${Resource.msg('label.total.price','cart',null)}:
+                    </span>
+                </p>
+                <div class="item-total-${nestedLineItem.UUID} price <isif condition="${!miniCart}">col-7</isif>">
+                    <div class="pricing line-item-total-price-amount item-total-${nestedLineItem.UUID}">
+                        ${nestedLineItem.priceTotal.price}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

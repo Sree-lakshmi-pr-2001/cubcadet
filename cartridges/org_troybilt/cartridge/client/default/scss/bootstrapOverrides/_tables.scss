@@ -1,0 +1,16 @@
+.table {
+    thead th {
+        padding: $table-cell-padding;
+        font-size: $table-th-font-size;
+        border-top: none;
+        border-bottom: $table-border-width solid $table-th-border-color;
+    }
+
+    @include media-breakpoint-down(sm) {
+        th,
+        td,
+        thead th {
+            padding: $table-cell-padding-sm;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<isif condition="${(product.isWholeGood || product.isAccessory) && pdict.bvDisplay && pdict.bvDisplay.rating && pdict.bvDisplay.rating.enabled}">
+	<isif condition="${pdict.bvDisplay.rating.type.equals('native')}">
+	    <isinclude template="bv/display/rr/inlineratings" />
+	  
+	<iselseif condition="${pdict.bvDisplay.rating.type.equals('hosted')}">
+	    <isinclude template="bv/display/rr/inlineratings-hosted" />
+	
+	</isif>
+	
+</isif>

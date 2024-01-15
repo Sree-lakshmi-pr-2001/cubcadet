@@ -1,0 +1,169 @@
+<isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+    <isinclude template="reporting/reportingUrls" />
+</isif>
+<isinclude template="components/modules" />
+<isset name="isDynosite" value="${pdict.CurrentHttpParameterMap.fitsOnModel.submitted}" scope="page" />
+<isset name="willFitsOnModel" value="${pdict.willFitsOnModel}" scope="page" />
+
+<isif condition="${pdict.shouldIncludeInlineSchema}">
+    <isinclude template="/components/schema" />
+</isif>
+
+<isif condition="${!isDynosite}">
+    <div class="search-banner">
+        <h1 class="header cat-page-title container">
+            <isif condition="${pdict.productSearch.isCategorySearch || willFitsOnModel && pdict.productSearch.category}">
+                ${pdict.productSearch.category.name}
+            <iselse>
+                ${Resource.msg('label.header.banner', 'search', null)}
+            </isif>
+        </h1>
+
+        <iscomment>
+            mobile and desktop category banners are taken from category attributes.
+            If only one image is provided, use that in all viewports.
+            if no image, the space collapses
+        </iscomment>
+        <isset name="mobileImageUrl" value="${!empty(pdict.productSearch.mobileBannerImageUrl) ? pdict.productSearch.mobileBannerImageUrl : ''}" scope="page"/>
+        <isset name="desktopImageUrl" value="${!empty(pdict.productSearch.bannerImageUrl) ? pdict.productSearch.bannerImageUrl : ''}" scope="page"/>
+        <isif condition="${empty(mobileImageUrl) && !empty(desktopImageUrl)}">
+            <isset name="mobileImageUrl" value="${desktopImageUrl}" scope="page"/>
+        <iselseif condition="${!empty(mobileImageUrl) && empty(desktopImageUrl)}">
+            <isset name="desktopImageUrl" value="${mobileImageUrl}" scope="page"/>
+        </isif>
+        <isif condition="${!empty(mobileImageUrl)}">
+            <picture>
+               <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source media="(min-width: 768px)" srcset="${desktopImageUrl}">
+                <source media="(max-width: 767px)" srcset="${mobileImageUrl}">
+                <!--[if IE 9]></video><![endif]-->
+                <img srcset="${mobileImageUrl}" alt="${pdict.productSearch.category.name}">
+            </picture>
+        </isif>
+
+        <iscomment>
+            Custom SEO text attribute on the category
+        </iscomment>
+        <isif condition="${!empty(pdict.productSearch.seoText)}">
+            <div class="seo-text container">
+                <isprint value="${pdict.productSearch.seoText}" encoding="off"/>
+            </div>
+        </isif>
+    </div>
+</isif>
+
+<div class="container search-results" data-dynosite="${isDynosite}" <isif condition="${isDynosite}">data-dynosite-model="${pdict.CurrentHttpParameterMap.fitsOnModel.value}"</isif>>
+    <div class="row search-nav <isif condition="${pdict.productSearch.isCategorySearch || pdict.partfinderquery}">border-0</isif>">
+        <isif condition="${!pdict.productSearch.isCategorySearch && !pdict.partfinderquery && !isDynosite}">
+            <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs nav-fill" role="tablist">
+
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active product-search" href="#product-search-results" data-toggle="tab" role="tab" aria-expanded="true">
+                            ${Resource.msg('tab.nav.search.productsresults', 'search', null)}
+                        </a>
+                    </li>
+                    <isif condition="${pdict.contentSearch.contents.length > 0}">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link content-search" href="#content-search-results-pane" data-toggle="tab" role="tab" aria-expanded="false"
+                                data-url="${URLUtils.url('Search-Content', 'q', pdict.productSearch.searchKeywords, 'startingPage', 0)}">
+                                ${Resource.msg('tab.nav.search.artclesresults', 'search', null)}
+                            </a>
+                        </li>
+                    </isif>
+                </ul>
+            </div>
+        </isif>
+    </div>
+    <div class="row">
+        <div class="tab-content col-12">
+            <div class="tab-pane active" id="product-search-results" role="tabpanel" aria-expanded="true">
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <div class="row grid-header">
+                        <isif condition="${isDynosite}">
+                            <div class="col-12 col-md-3">
+                                <isif condition="${!willFitsOnModel && !pdict.productSearch.apiProductSearch.category.custom.fitsOnModelEnable}">
+                                    <h4 class="attribute-name">${Resource.msg('search.dyno.parts', 'search', null)}</h4>
+                                </isif>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <isif condition="${!willFitsOnModel && !pdict.productSearch.apiProductSearch.category.custom.fitsOnModelEnable}">
+                                    <isinclude template="search/dynoTextSearchInput" />
+                                </isif>
+                            </div>
+                            <div class="result-count text-center col-12 col-sm-4 col-md-9 d-none d-md-flex align-items-center justify-content-end pr-md-0 order-sm-2">
+                                <span class="item-count">
+                                    <isif condition="${pdict.productSearch.productIds.length > 0}">
+                                        ${Resource.msgf('label.items', 'search', null, pdict.productSearch.count, pdict.productSearch.count > 1 ? 's' : '')}
+                                    </isif>
+                                </span>
+                            </div>
+                        <iselse>
+                            <div class="result-count text-right col-12 col-md-9 col-sm-4 order-sm-2 d-none d-md-flex align-items-center justify-content-end pr-md-0">
+                                <isinclude template="search/resultsCount" />
+                            </div>
+                        </isif>
+
+                        <div class="col-12 d-md-none">
+                            <isinclude template="search/components/partFitmentPLP"/>
+                        </div>
+
+                        <div class="col-6 col-md-3 order-3">
+                            <isinclude template="search/sortOrderMenu" />
+                        </div>
+
+                        <div class="col-6 text-right d-md-none order-1">
+                            <button type="button" class="btn btn-primary filter-results col-12">
+                                ${Resource.msg('button.filter', 'search', null)}
+                                <i><issvg icon="filter-icon" image="true" altText="" /></i>
+                            </button>
+                        </div>
+                    </div>
+                <iselse>
+                    <div class="row grid-header justify-content-center">
+                        <div class="result-count col">
+                            <isinclude template="search/resultsCount" />
+                        </div>
+                    </div>
+                </isif>
+
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <!--- Refinement bar --->
+                    <div class="row">
+                        <div class="refinement-bar col-md-3">
+                            <isinclude template="search/components/partFitmentPLP"/>
+                            <isinclude url="${pdict.refineurl}"/>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="container">
+                                <!--- Selected filters bar --->
+                                <div class="row filter-bar d-md-none">
+                                    <isinclude template="search/filterBar" />
+                                </div>
+                                <isset name="monetateObject" value="${require('*/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+                                <isif condition="${monetateObject.getMonetateEnabled()}">
+                                    <iscomment>Monetate JS code</iscomment>
+                                    <script type="text/javascript">
+                                       monetateData.addProducts = [];
+                                    </script>
+                                </isif>
+                                <!--- Product Grid --->
+                                <div class="row product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+                                    <isinclude template="search/productGrid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </isif>
+            </div>
+            <!--- Content Grid --->
+            <div class="tab-pane container" id="content-search-results-pane" role="tabpanel" aria-expanded="false">
+                <div id="content-search-results" class="row content-grid-header justify-content-center"></div>
+            </div>
+
+        </div>
+    </div>
+    <isinclude template="search/components/willFitModal"/>
+</div>
+<ismonetatetrackpage pagename="index" />

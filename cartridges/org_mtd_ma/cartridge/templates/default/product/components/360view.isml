@@ -1,0 +1,25 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/lib/magic360/magic360.js');
+    assets.addCss('/lib/magic360/magic360.css');
+</isscript>
+<isset name="animationImages" value="${product.images360['360-view']}" scope="page" />
+<iscomment> Setting custom pathlist since image names follow standard 1, 2, 3 instead of 01, 02, 03 (magic360 default) </iscomment>
+<isset name="animationImagesPathList" value="${'images:'}" scope="page" />
+<isloop items="${animationImages}" var="image" status="loopStatus">
+    <isset name="animationImagesPathList" value="${animationImagesPathList + " " + image.url}" scope="page" />
+</isloop>
+<isset name="animationImagesPathList" value="${animationImagesPathList + ";"}" scope="page" />
+<iscomment>
+    360view images are used for magic360 animation
+    https://www.magictoolbox.com/magic360/integration/
+    data-options.images pulls in a list of all images to use in the animation
+</iscomment>
+<div class="slide">
+    <span class="slide-link zoom-disabled rotate-img">
+        <a class="Magic360" id="m360-${product.id}" data-options="mousewheel-step: 0; columns:24;${animationImagesPathList}">
+            <img src="${product.images360['360-view'][0].url}" class="slide-img"
+                alt="${product.images360['360-view'][0].alt}" />
+        </a>
+    </span>
+</div>

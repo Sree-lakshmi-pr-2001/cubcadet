@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site xmlns="http://www.demandware.com/xml/impex/site/2007-04-30" site-id="mtdproductsca">
+    <name>MTD Products CA</name>
+    <currency>CAD</currency>
+    <taxation>net</taxation>
+    <custom-cartridges>site_mtdproducts:org_mtdproducts:app_lyonscg_mfra:app_corrections:int_googletags:app_storefront_base:bc_job_components:int_marketing_cloud:int_handlerframework:app_demo:app_test</custom-cartridges>
+    <storefront-status>online</storefront-status>
+</site>
+

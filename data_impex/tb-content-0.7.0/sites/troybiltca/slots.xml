@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="cat-landing-5" context="category" context-id="riding-lawn-mowers" configuration-id="SEO Content Slot" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;p&gt;Text Here&lt;/p&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="pl-browse-6" context="category" context-id="lawn-and-garden-tractors" configuration-id="SEO Content" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;p&gt;Text Here&lt;/p&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="blog-landing-lastest-content" context="folder" context-id="blog" configuration-id="Recent Posts" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetPostsGrid.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="test-blog-article"/>
+                <content-asset content-id="knowledge-snow-thrower-maintenance-schedule-and-tips"/>
+                <content-asset content-id="knowledge-snow-thrower-operation-tips"/>
+                <content-asset content-id="knowledge-snow-thrower-safety-tips"/>
+                <content-asset content-id="knowledge-zero-turn-operation-tips"/>
+                <content-asset content-id="test-blog-article-no-image"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+</slot-configurations>

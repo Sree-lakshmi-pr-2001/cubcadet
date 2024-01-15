@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+  <type-extension type-id="OrganizationPreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="countryLocales">
+                <display-name xml:lang="x-default">Country Locales</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Locale">
+                <display-name xml:lang="x-default">Locale</display-name>
+                <attribute attribute-id="countryLocales"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Category">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="layoutType">
+                <display-name xml:lang="x-default">Category Layout Type</display-name>
+                <description xml:lang="x-default">Main Navigation Category Layout</description>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Tertiary Category - Menu Tiles</display>
+                        <value>layout1</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Sub Category - Menu Tiles</display>
+                        <value>layout2</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="menuCardText">
+                <display-name xml:lang="x-default">Menu Card Text</display-name>
+                <description xml:lang="x-default">Category Description text on Menu Card</description>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="menuCardLinkText">
+                <display-name xml:lang="x-default">Menu Card Link Text</display-name>
+                <description xml:lang="x-default">Call to Action text on Menu Card (Shop Now, Learn More)</description>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="menuCardSVG">
+                <display-name xml:lang="x-default">Menu Card SVG ID</display-name>
+                <description xml:lang="x-default">Menu Card SVG ID for Services + Parts image - IDs can be found in styleguide</description>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="promoAsset">
+                <display-name xml:lang="x-default">Promo Asset</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="disableBreadcrumbs">
+                <display-name xml:lang="x-default">Disable Breadcrumbs</display-name>
+                <type>boolean</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="customAttributes">
+                <display-name xml:lang="x-default">Custom</display-name>
+                <attribute attribute-id="sizeChartID"/>
+                <attribute attribute-id="showInMenu"/>
+                <attribute attribute-id="enableCompare"/>
+                <attribute attribute-id="alternativeUrl"/>
+                <attribute attribute-id="slotBannerImageMobile"/>
+                <attribute attribute-id="slotBannerImage"/>
+                <attribute attribute-id="seoText"/>
+                <attribute attribute-id="layoutType"/>
+                <attribute attribute-id="menuCardText"/>
+                <attribute attribute-id="menuCardLinkText"/>
+                <attribute attribute-id="menuCardSVG"/>
+                <attribute attribute-id="promoAsset"/>
+                <attribute attribute-id="disableBreadcrumbs"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+<type-extension type-id="Product">
+        <custom-attribute-definitions>
+
+            <attribute-definition attribute-id="content-maintenance-schedule">
+                <display-name xml:lang="x-default">Maintenance Schedule Content Asset ID</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="pdp-content">
+                <display-name xml:lang="x-default">PDP Content Asset Slider</display-name>
+                <description xml:lang="x-default">Set of Content Asset IDs to display on the PDP; if more than 1, they will be shown in a slider.</description>
+                <type>set-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="pdp-features">
+                <display-name xml:lang="x-default">PDP Features Card Slider</display-name>
+                <description xml:lang="x-default">Set of Content Asset IDs representing the Features Cards to display. Minimum of 3 features recommended. More than 3 will be shown in a slider in large viewports; Mobile always uses a slider with one card per slide.</description>
+                <type>set-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="youtubeVideoID">
+                <display-name xml:lang="x-default">YouTube Video URL</display-name>
+                <description xml:lang="x-default">YouTube video URLs for use on the PDP video thumbnail.</description>
+                <type>set-of-string</type>
+                <localizable-flag>true</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="vimeoVideoID">
+                <display-name xml:lang="x-default">Vimeo Video URL</display-name>
+                <description xml:lang="x-default">Vimeo video URLs for use on the PDP video thumbnail.</description>
+                <type>set-of-string</type>
+                <localizable-flag>true</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="productBadge">
+                <display-name xml:lang="x-default">Product Badge</display-name>
+                <description xml:lang="x-default">Product Badge to show on product tile and PDP.</description>
+                <type>enum-of-string</type>
+                <localizable-flag>true</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Electric</display>
+                        <value>badge-electric</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Coming soon</display>
+                        <value>badge-coming-soon</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">New</display>
+                        <value>badge-new</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Dealer exclusive</display>
+                        <value>badge-dealer-exclusive</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Top Rated (image)</display>
+                        <value>badge-top-rated</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Best Buy (image)</display>
+                        <value>badge-best-buy</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Free Shipping</display>
+                        <value>badge-free-shipping</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">10% Off</display>
+                        <value>badge-10-percent-off</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">$100 Off</display>
+                        <value>badge-100-usd-off</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Intellipower (image)</display>
+                        <value>badge-intellipower</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="productName2">
+                <display-name xml:lang="x-default">Product Name 2</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="edealer-eligible">
+                <display-name xml:lang="x-default">edealer-eligible</display-name>
+                <type>boolean</type>
+                <site-specific-flag>true</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="product-type">
+                <display-name xml:lang="x-default">Product Type</display-name>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>true</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Parts</display>
+                        <value>PARTS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Whole Good</display>
+                        <value>WholeGood</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Accessory</display>
+                        <value>ACCESSORY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Extended Warranty</display>
+                        <value>ExtendedWarranty</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="cub-buyable">
+                <display-name xml:lang="x-default">CUB_BUYABLE</display-name>
+                <type>boolean</type>
+                <site-specific-flag>true</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="requestADemo">
+                <display-name xml:lang="x-default">Request a Demo</display-name>
+                <description xml:lang="x-default">Displays "Request a Demo" button</description>
+                <type>boolean</type>
+                <site-specific-flag>true</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="assembly-link">
+                <display-name xml:lang="x-default">Assembly Link</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+
+        <group-definitions>
+            <attribute-group group-id="cub-content">
+                <display-name xml:lang="x-default">PDP Content Configuration</display-name>
+                <attribute attribute-id="pdp-features"/>
+                <attribute attribute-id="pdp-content"/>
+                <attribute attribute-id="youtubeVideoID"/>
+                <attribute attribute-id="vimeoVideoID"/>
+                <attribute attribute-id="content-maintenance-schedule"/>
+            </attribute-group>
+            <attribute-group group-id="MTD">
+                <display-name xml:lang="x-default">MTD</display-name>
+                <attribute attribute-id="productName2"/>
+                <attribute attribute-id="product-type"/>
+                <attribute attribute-id="model-number"/>
+                <attribute attribute-id="features"/>
+                <attribute attribute-id="ltl-shipment-required"/>
+                <attribute attribute-id="image360"/>
+                <attribute attribute-id="dealer-required"/>
+                <attribute attribute-id="productBadge"/>
+                <attribute attribute-id="edealer-eligible"/>
+                <attribute attribute-id="mtd-cannot-ship-to-dealer"/>
+                <attribute attribute-id="edealer-product-type"/>
+                <attribute attribute-id="where-to-buy"/>
+                <attribute attribute-id="locator-product-category"/>
+                <attribute attribute-id="carb-compliant-item-number"/>
+                <attribute attribute-id="cub-buyable"/>
+                <attribute attribute-id="requestADemo"/>
+                <attribute attribute-id="assembly-link"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="ProductLineItem">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="mtdQtyAvailable">
+                <display-name xml:lang="x-default">MTD Quantity Available</display-name>
+                <description xml:lang="x-default">Available qty from DF API</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="emailSignup">
+                <display-name xml:lang="x-default">Email Sign up</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+</metadata>

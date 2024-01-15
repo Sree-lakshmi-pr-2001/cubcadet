@@ -1,0 +1,92 @@
+<isdecorate template="common/layout/epcot">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/manageRoles.js');
+</isscript>
+
+    <div id="roles">
+        <h1>Roles Maintenance</h1>
+        <table id="pagination" width="100%" class='customDataTable'>
+            <thead>
+                <tr class="rolesHeader">
+                    <td><b>Role Code</b></td>
+                    <td><b>Role Description</b></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <isloop iterator="${pdict.sfccRoles.roles}" alias="role">
+                    <tr class="roleRow">
+                        <td id="roleCode" class="roleCode">${role.code}</td>
+                        <td id="roleDescription" class="roleDescription">${role.description}</td>
+                        <td><button class='btn btn-primary checkout-button editButton' type='button' id='${role.id}'>Edit</button>
+                        </td>
+                    </tr>
+                </isloop>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="roleModal" tabindex="-1" aria-labelledby="roleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Role</h5>
+                    <iscomment> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> </iscomment>
+                </div>
+                <div class="modal-body">
+                    <div id="editRolesContainer">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="closeButton"><button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button></div>
+                    <div class="submitButton"><button id="insertRole" class="btn product-search btn-primary"
+                            type="button">Submit</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>
+
+<template id="user-roles-template">
+    <h1>Roles Maintenance</h1>
+    <table class='table center'>
+        <thead>
+            <tr class="rolesHeader">
+                <td><b>Role Code</b></td>
+                <td><b>Role Description</b></td>
+                <td></td>
+            </tr>
+        </thead>
+    </table>
+</template>
+
+<template id="user-roles-results-template">
+    <tr class="roleRow">
+        <td class="roleCode"></td>
+        <td class="roleDescription"></td>
+        <td><button class='btn btn-primary checkout-button editButton' type='button' id='temp'>Edit</button></td>
+    </tr>
+</template>
+
+<template id="modal-edit-template">
+    
+        <table class="table center" width="100%">
+            <thead><tr>
+                <td span="col"><b>Role Code</b></td>
+                <td span="col"><b>Role Description</b></td>
+            </tr></thead><tbody>
+            <tr>
+                <iscomment> <td class="editRoleCode" id="editRoleCode">Role Code Should Be Here</td> </iscomment>
+                <td><label for="editRoleDescription" class='col-sm-12 col-form-label editRoleCode' id='editRoleCode'>Role Code Should Be Here</label></td>
+                <td><input type="text" class="editRoleDescription form-control" id="editRoleDescription" value="" maxlength="50"
+                        size="25" /></td>
+            </tr>
+            </tbody>
+        </table>
+    
+</template>
+
+<script>
+        document.getElementById('pageName').value = 'ManageRoles';
+</script>

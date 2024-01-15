@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="mtdproducts-sales-catalog">
+    <header>
+        <image-settings>
+            <internal-location base-path="/"/>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>medium</view-type>
+                <view-type>small</view-type>
+                <view-type>swatch</view-type>
+            </view-types>
+            <alt-pattern>${productname}</alt-pattern>
+            <title-pattern>${productname}</title-pattern>
+        </image-settings>
+    </header>
+
+    <category category-id="root">
+        <display-name xml:lang="x-default">Mtdproducts Head Menu Catalog</display-name>
+        <description xml:lang="x-default">Storefront catalog (category navigation, category assignment, recommendations) for MTD Products Corporate US site</description>
+        <online-flag>true</online-flag>
+        <template/>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="about-us">
+        <display-name xml:lang="x-default">About</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>1.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="layoutType">layout1</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="contact">
+        <display-name xml:lang="x-default">Contact</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="history">
+        <display-name xml:lang="x-default">History</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="leadership">
+        <display-name xml:lang="x-default">Who We Are</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="locations">
+        <display-name xml:lang="x-default">Locations</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="suppliers">
+        <display-name xml:lang="x-default">Suppliers</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="brands">
+        <display-name xml:lang="x-default">Brand</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>2.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="cub-cadet">
+        <display-name xml:lang="x-default">Cub Cadet</display-name>
+        <description xml:lang="x-default">brand category for cubcadet</description>
+        <online-flag>true</online-flag>
+        <parent>brands</parent>
+        <template/>
+        <page-attributes/>
+    </category>
+
+    <category category-id="parts-services">
+        <display-name xml:lang="x-default">Parts &amp; Services</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>3.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="alternativeUrl">https://www.mtdparts.com/</custom-attribute>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="customer-support">
+        <display-name xml:lang="x-default">Customer Support</display-name>
+        <online-flag>true</online-flag>
+        <parent>parts-services</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="responsibility">
+        <display-name xml:lang="x-default">Responsibility</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>4.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="layoutType">layout2</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="community">
+        <display-name xml:lang="x-default">Community</display-name>
+        <online-flag>true</online-flag>
+        <parent>responsibility</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="sustainability">
+        <display-name xml:lang="x-default">Sustainability</display-name>
+        <online-flag>true</online-flag>
+        <parent>responsibility</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="product-safety">
+        <display-name xml:lang="x-default">Product Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>6.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-battery">
+        <display-name xml:lang="x-default">Battery Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-fire">
+        <display-name xml:lang="x-default">Fire Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-handheld">
+        <display-name xml:lang="x-default">Handheld Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-kids">
+        <display-name xml:lang="x-default">Kids and Mowers Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-riding-mowers">
+        <display-name xml:lang="x-default">Riding Mowers Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-snow-blowers">
+        <display-name xml:lang="x-default">Snow Blower Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="safety-walk-behind">
+        <display-name xml:lang="x-default">Walk Behind Mowers Safety</display-name>
+        <online-flag>true</online-flag>
+        <parent>product-safety</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="careers">
+        <display-name xml:lang="x-default">Careers</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>7.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="openings">
+        <display-name xml:lang="x-default">Job Openings</display-name>
+        <description xml:lang="x-default">Full Time&#13;
+Co-ops</description>
+        <online-flag>true</online-flag>
+        <parent>careers</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="news">
+        <display-name xml:lang="x-default">News</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>8.0</position>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="archive-news">
+        <display-name xml:lang="x-default">Archive News</display-name>
+        <description xml:lang="x-default">faux category for Archive News</description>
+        <online-flag>true</online-flag>
+        <parent>news</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="brand_details_page">
+        <display-name xml:lang="x-default">Brand Detail Pages</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes/>
+    </category>
+
+    <category category-id="bolens-brand">
+        <display-name xml:lang="x-default">Bolens Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="columbia-brand">
+        <display-name xml:lang="x-default">Columbia Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="cub-brand">
+        <display-name xml:lang="x-default">Cub Cadet Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="mtd-parts-brand">
+        <display-name xml:lang="x-default">MTD Parts Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="remington-brand">
+        <display-name xml:lang="x-default">Remington Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="robomow-brand">
+        <display-name xml:lang="x-default">Robomow Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="rover-brand">
+        <display-name xml:lang="x-default">Rover Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="troybilt-brand">
+        <display-name xml:lang="x-default">Troy-Bilt Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="wolf-garten-brand">
+        <display-name xml:lang="x-default">Wolf Garten Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="yard-machine-brand">
+        <display-name xml:lang="x-default">Yard Machine Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="yardman-brand">
+        <display-name xml:lang="x-default">Yardman Brand Detail Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>brand_details_page</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="content-pages">
+        <display-name xml:lang="x-default">Content Pages</display-name>
+        <description xml:lang="x-default">used for static content pages, like privacy policy, ca policy ect...</description>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <template/>
+        <page-attributes/>
+    </category>
+
+    <category category-id="ca-policy">
+        <display-name xml:lang="x-default">CA Supply Chains Act</display-name>
+        <online-flag>true</online-flag>
+        <parent>content-pages</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="privacy-policy">
+        <display-name xml:lang="x-default">privacy policy page</display-name>
+        <online-flag>true</online-flag>
+        <parent>content-pages</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="product-recalls">
+        <display-name xml:lang="x-default">Product Recall Page</display-name>
+        <description xml:lang="x-default">Page to list product recalls</description>
+        <online-flag>true</online-flag>
+        <parent>content-pages</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="product-recalls-archive">
+        <display-name xml:lang="x-default">Product Recall Archive Page</display-name>
+        <online-flag>true</online-flag>
+        <parent>content-pages</parent>
+        <template>rendering/category/catContentOnlyLanding</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="disableBreadcrumbs">false</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+        </custom-attributes>
+    </category>
+
+</catalog>

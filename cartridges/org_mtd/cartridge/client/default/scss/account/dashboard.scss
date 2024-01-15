@@ -1,0 +1,83 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+@import "../utilities/functions";
+@import "../utilities/layout";
+
+.card-header {
+    h4 {
+        width: 85%;
+        margin: 0;
+
+        @include media-breakpoint-only(xs) {
+            font-size: $font-size-base;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+        }
+    }
+}
+
+.card-footer {
+    > a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card-make-default-link {
+    margin-top: 1rem;
+}
+
+.dashboard-cards-block-title {
+    font-weight: bold;
+}
+
+.dashboard-order-card-status {
+    text-transform: capitalize;
+}
+
+.dashboard-order-card-image {
+    width: 7rem;
+}
+
+.account-landing-ordercard {
+    padding: 0;
+    height: 1rem;
+    margin-left: 1.25rem;
+    border-bottom: 0 none;
+    margin-top: 1rem;
+
+    h4 {
+        font-size: 1.2rem;
+    }
+}
+
+.order-history-card {
+    .card-info-group {
+        h5 {
+            @include media-breakpoint-only(xs) {
+                font-size: $font-size-sm;
+            }
+        }
+
+        p {
+            margin-bottom: rem(5px);
+        }
+    }
+}
+
+div.order-number {
+    padding-top: 0.2rem;
+}
+
+.dashboard-cards-block-title {
+    margin-bottom: 1em;
+}

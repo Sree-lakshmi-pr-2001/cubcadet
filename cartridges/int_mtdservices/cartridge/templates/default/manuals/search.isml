@@ -1,0 +1,85 @@
+<!--- TEMPLATENAME: search.isml --->
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/content.css');
+        assets.addJs('/js/manuals.js');
+        var bannerImg = dw.content.ContentMgr.getContent('manuals-banner');
+    </isscript>
+    <isinclude template="/components/modules"/>
+    <div id="manuals-search" <isif condition="${empty(bannerImg.custom.body) || !bannerImg.online}">class="container"</isif>>
+        <iscomment>
+            content asset inserts a style tag to bring in a configurable image
+        </iscomment>
+        <isif condition="${!empty(bannerImg.custom.body) && bannerImg.online}">
+            <isprint value="${bannerImg.custom.body}" encoding="off" />
+            <div class="content-banner mb-2">
+                <div class="hero main-banner">
+                    <div class="hero-text hero-text-left">
+                        <h1 class="display-1">${pdict.mainContent.name}</h1>
+                    </div>
+                </div>
+            </div>
+            <iselse>
+            <div class="hero content-page-image">
+                <h1 class="page-title">${pdict.mainContent.name}</h1>
+            </div>
+        </isif>
+       <div class="content-asset-container container">
+          <!-- dwMarker="content" dwContentID="${pdict.mainContent.UUID}" -->
+          <isprint value="${pdict.mainContent.body}" encoding="off" />
+          <!-- END_dwmarker -->
+       </div>
+       <div class="manuals-search-form container">
+            <div class="row">
+                <div class="justify-content-left col-lg-4">
+                    <form action="${pdict.actionUrl}" class="manuals-form" method="POST" name="${pdict.manualsForm.htmlName}">
+                        <div class="form-group <isif condition="${!!pdict.manualsForm.modelnumber.mandatory === true}">required</isif>">
+                            <label class="form-control-label" for="manuals-form-model-number">
+                                <isprint value="${pdict.manualsForm.modelnumber.label}" encoding="htmlcontent" />
+                            </label>
+                            <iscomment> img tooltip managed in BM </iscomment>
+                            <span class="manuals-tooltip">
+                                <iscontentasset aid="manuals-search-model-number"/>
+                            </span>
+                            <input
+                                type="text"
+                                id="manuals-form-model-number"
+                                class="form-control"
+                                <isprint value=${pdict.manualsForm.modelnumber.attributes} encoding="off" />>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <iscomment>@TODO Remove it until MTD figure out how to filter manuals by serial number</iscomment>
+                        <div class="form-group <isif condition="${!!pdict.manualsForm.serialnumber.mandatory === true}">required</isif>">
+                            <label class="form-control-label" for="manuals-form-serial-number">
+                                <isprint value="${pdict.manualsForm.serialnumber.label}" encoding="htmlcontent" />
+                            </label>
+                            <iscomment> img tooltip managed in BM </iscomment>
+                            <span class="manuals-tooltip">
+                                <iscontentasset aid="manuals-search-serial-number"/>
+                            </span>
+                            <input
+                                type="text"
+                                id="manuals-form-serial-number"
+                                class="form-control"
+                                <isprint value=${pdict.manualsForm.serialnumber.attributes} encoding="off" />>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-block btn-primary">${Resource.msg('button.text.findmanual', 'manuals', null)}</button>
+                    </form>
+                </div>
+            </div>
+       </div>
+       <div class="dont-know-model container">
+            <h4>${pdict.dontKnowContent.name}</h4>
+            <div>
+                <!-- dwMarker="content" dwContentID="${pdict.dontKnowContent.UUID}" -->
+                <isprint value="${pdict.dontKnowContent.body}" encoding="off" />
+                <!-- END_dwmarker -->
+            </div>
+       </div>
+    </div>
+    <ismonetatetrackpage pagename="Operator Manuals" />
+</isdecorate>

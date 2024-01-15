@@ -1,0 +1,18 @@
+<div class="modal fade file-browser-modal" id="file-browser-modal" tabindex="-1" role="dialog" aria-labelledby="file-browser-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="file-browser-label"></h5>
+            </div>
+            <div class="modal-body">
+                <iscomment> bringing in one of 3 possible asset dialogs used in BM; this one allows site library use</iscomment>
+                <iframe id="file-browser"
+                data-library="${dw.content.ContentMgr.getSiteLibrary().getUUID()}"
+                class="iframe"
+                title="file browser"
+                src="${URLUtils.https('ViewContentImages-Dispatch', 'SelectLibrary', true, 'LibraryUUID', dw.content.ContentMgr.getSiteLibrary().getUUID())}"
+                width="780"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

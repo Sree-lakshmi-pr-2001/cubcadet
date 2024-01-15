@@ -1,0 +1,32 @@
+<body>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center" style="background:#e0e0e0;padding:50px 0;">
+            <center>
+                <table  style="background:#ffffff;border:1px solid #999999;width:680px;">
+                    <tr>
+                        <td style="font-size:12px;font-family:arial;padding:20px 10px;vertical-align:top;">
+
+                            <p style="font-family:georgia;font-size:20px;">${Resource.msg('global.storename','common',null)}</p>
+
+                            <p>${Resource.msg('contactus.name','email',null)} <isprint value="${pdict.firstName}"/> <isprint value="${pdict.lastName}"/></p>
+
+                            <p>${Resource.msg('contactus.email','email',null)} <isprint value="${pdict.email}"/></p>
+
+                            <p>${Resource.msg('contactus.myquestion','email',null)}<isprint value="${pdict.subject}"/></p>
+                            
+                            <p>${Resource.msg('contactus.comment','email',null)}
+                                <isif condition="${pdict.comment}">
+                                    <isprint value="${pdict.comment}"/>
+                                </isif>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </td>
+    </tr>
+</table>
+
+</body>

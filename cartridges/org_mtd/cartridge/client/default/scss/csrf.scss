@@ -1,0 +1,17 @@
+@import "variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "./utilities/simple-hero";
+
+.sorry-hero {
+    @include simple-hero;
+}
+
+.error-message {
+    margin-bottom: 3.125rem;
+}
+
+.error-page-content {
+    margin-top: 3.125rem;
+    margin-bottom: 6.25em;
+}

@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: includes.isml --->
+<link href="${URLUtils.staticURL('/css/bootstrap.min.css')}" type="text/css" rel="stylesheet"/>
+<link href="${URLUtils.staticURL('/css/tdd.css')}" type="text/css" rel="stylesheet"/>
+<script src="${URLUtils.staticURL('/js/jquery-1.11.2.min.js')}" type="text/javascript"></script>
+<script src="${URLUtils.staticURL('/js/bootstrap.min.js')}" type="text/javascript"></script>
+<script src="${URLUtils.staticURL('/js/tdd.js')}" type="text/javascript"></script>

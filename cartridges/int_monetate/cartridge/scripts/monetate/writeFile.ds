@@ -1,0 +1,182 @@
+'use strict';
+
+var dwio = require('dw/io'),
+	dwutil = require('dw/util'),
+	dwsystem = require('dw/system');
+var EXPORT_FOLDER_PATH = dwio.File.SEPARATOR + "src" + dwio.File.SEPARATOR + "monetate" + dwio.File.SEPARATOR;
+var EXPORT_FILE_PREFIX = "product_feed_";
+var TMP_FILE_NAME = "monetate_products.";
+var logger = require('dw/system/Logger').getLogger('monetate', 'Monetate');
+
+var Writer = function(){
+	var monetateObject = require('./libMonetate'),
+        feedType,
+		tmpFile = null,
+		tmpFileWriter = null,
+		config = {
+            useVariation : dwsystem.Site.getCurrent().getCustomPreferenceValue("monetateVariationInFeed"),
+            productImage : dwsystem.Site.getCurrent().getCustomPreferenceValue("monetateImageProductSelector") || "large",
+            searchImage : dwsystem.Site.getCurrent().getCustomPreferenceValue("monetateImageSearchSelector") || "medium",
+            endCapImage : dwsystem.Site.getCurrent().getCustomPreferenceValue("monetateImageEndCapSelector") || "small"
+        };
+	
+	return {
+		/**
+		 * Creates new temporary file which will contain all products data
+         *
+         * @param feedType : string 'xml' or 'csv', will be used as the temp file extension.
+		 */
+		initTempFile: function(feedType){
+			logger.debug("Creating temp file...");
+            this.feedType = feedType;
+			tmpFile = new dwio.File (dwio.File.TEMP + dwio.File.SEPARATOR + TMP_FILE_NAME + this.feedType);
+			if (tmpFile.exists()){
+				tmpFile.remove();
+				logger.debug("Previous temp file removed");
+				tmpFile.createNewFile();
+			}
+			tmpFileWriter = new dwio.FileWriter(tmpFile, "UTF-8");
+			logger.debug("Temp file '" + TMP_FILE_NAME + this.feedType + "' created");
+
+            return {
+                file: tmpFile,
+                writer: tmpFileWriter
+            }
+		},
+		/**
+		 * Append product data to the temp file
+		 *
+		 * @param product : dw.catalog.Product
+		 */
+		writeProductToTempFile: function(product){
+			if (!empty(tmpFile) && !empty(tmpFileWriter)){
+				var xmlString = require('./processProducts').createProductXML(product, config);
+				if (!empty(xmlString)){
+					tmpFileWriter.writeLine(xmlString);
+				}
+			}
+		},
+		/**
+		 * Ends writing process to the temp file
+		 */
+		closeTempFile: function(){
+			tmpFileWriter.flush();
+			tmpFileWriter.close();
+			logger.debug("Temp file '" + TMP_FILE_NAME + this.feedType + "' filled");
+		},
+		/**
+		 * Ends writing process to the temp file
+		 */
+		removeTempFile: function(){
+			if (!empty(tmpFile) && tmpFile.exists()){
+				tmpFileWriter = null;
+				tmpFile.remove();
+				logger.debug("Temp file removed");
+				tmpFile = null;
+			}
+		},
+		/**
+		 * Copy data from the temp file to product feed file
+		 */
+		copyDataFromTempFile: function(xmlStreamWriter){
+			var tmpFileReader = new dwio.FileReader(tmpFile, "UTF-8");
+			logger.debug("Start copy products data from the temp file to the product feed file"); 
+			try {
+				while (tmpFileReader.ready() && (item = tmpFileReader.readN(30000))) {
+					xmlStreamWriter.writeRaw(item);
+				}
+			} catch(e) {
+				logger.error("Monetate - writeFile.ds - method 'copyDataFromTempFile': Error - " + e);
+			} finally {
+				tmpFileReader.close();
+				logger.debug("Copying products data to the product feed file completed");
+		    }
+		},
+        generateCSVFeed: function () {
+            var monetateFolder = new dwio.File (dwio.File.IMPEX + EXPORT_FOLDER_PATH);
+            monetateFolder.mkdirs();
+
+            var calendarFormat = dwutil.StringUtils.formatCalendar(dwsystem.Site.calendar, "yyyy_MM_dd_HH_mm"),
+                exportFile = new dwio.File (dwio.File.IMPEX + EXPORT_FOLDER_PATH + EXPORT_FILE_PREFIX + calendarFormat + ".csv"),
+		    	gzipFile = new dwio.File(dwio.File.IMPEX + EXPORT_FOLDER_PATH + EXPORT_FILE_PREFIX + calendarFormat + ".csv.gz");
+
+            logger.debug("Product feed file '" + exportFile.getFullPath() + "' created");
+
+            // copy from temp to export
+            tmpFile.copyTo(exportFile);
+            this.removeTempFile();
+
+            // gzip
+            exportFile.gzip(gzipFile);
+			logger.debug("Product feed file zipped to '" + gzipFile.getFullPath() + "' file");
+			return gzipFile;
+
+        },
+		/**
+		 *	Generate Monetate feed based on products from the temp file
+		 *
+		 */
+		generateXMLFeed: function(){
+			var monetateFolder = new dwio.File (dwio.File.IMPEX + EXPORT_FOLDER_PATH);
+		
+			/*
+			*	Create monetate folder in IMPEX
+			*/
+			monetateFolder.mkdirs();
+			
+			var calendarFormat = dwutil.StringUtils.formatCalendar(dwsystem.Site.calendar, "yyyy_MM_dd_HH_mm"),
+				exportFile = new dwio.File (dwio.File.IMPEX + EXPORT_FOLDER_PATH + EXPORT_FILE_PREFIX + calendarFormat + ".xml"),
+		    	gzipFile = new dwio.File(dwio.File.IMPEX + EXPORT_FOLDER_PATH + EXPORT_FILE_PREFIX + calendarFormat + ".xml.gz"),
+				fileWriter = new dwio.FileWriter(exportFile, "UTF-8"),
+				xsw = new dwio.XMLStreamWriter(fileWriter);
+				
+			logger.debug("Product feed file '" + exportFile.getFullPath() + "' created");
+			/*
+			*	Starting writing XML document and write start element node(<catalog>)
+			*/
+			xsw.writeStartDocument("utf-8", "1.0");
+			xsw.writeStartElement("catalog");
+			
+			/*
+			*	Write element - <version>5</version>
+			*/
+			monetateObject.writeXMLElement(xsw, "version", 5);
+			
+			/*
+			 * Copy all products data from the temp file
+			 */
+			this.copyDataFromTempFile(xsw);
+			this.removeTempFile();
+			
+			/*
+			*	Write end element node </catalog> and finish write to XML document
+			*/
+			xsw.writeEndElement();
+			xsw.writeEndDocument();
+			
+			/*
+			*	Close XMLStreamWriter and FileWriter
+			*/
+			xsw.close();
+			fileWriter.close();
+			
+			/**
+			*	Create gzip file and send to Monetate SFTP
+			*/
+			exportFile.gzip(gzipFile);
+			logger.debug("Product feed file zipped to '" + gzipFile.getFullPath() + "' file");
+			return gzipFile;
+		}
+	}
+}
+
+var instance = null;
+
+function getInstance(){
+	if (!instance){
+		instance = new Writer();
+	}
+	return instance;
+}
+
+module.exports = getInstance();

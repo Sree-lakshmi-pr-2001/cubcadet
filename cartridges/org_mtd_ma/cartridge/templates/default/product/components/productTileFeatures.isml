@@ -1,0 +1,10 @@
+<isif condition="${product.productAttributeType && product.productAttributeType.toLowerCase() !== 'parts'}">
+
+    <div class="tile-attributes">
+        <ul>
+            <isloop items="${product.clpFeatures}" var="feature" end="2">
+                <li>${feature}</li>
+            </isloop>
+        </ul>
+    </div>
+</isif>

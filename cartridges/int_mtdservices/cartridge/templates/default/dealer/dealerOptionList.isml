@@ -1,0 +1,30 @@
+<!--- TEMPLATENAME: dealerOptionList.isml --->
+<isset name="isSelectedOptionInVisibleSection" value="${false}" scope="page" />
+<isloop items=${dealerList} var="dealer" status="status">
+    <isif condition="${status.index == 0}">
+        <div class="visible-options row">
+    <iselseif condition="${status.index == numberOfVisibleOptions}">
+        <div class="invisible-options row <isif condition="${isSelectedOptionInVisibleSection}">hidden</isif>">
+    </isif>
+    <isif condition="${status.index < numberOfVisibleOptions && dealerSelectedOption == dealer.dealerId}">
+         <isset name="isSelectedOptionInVisibleSection" value="${true}" scope="page" />
+    </isif>
+
+    <isinclude template="dealer/dealerOption" />
+
+    <isif condition="${status.index == numberOfVisibleOptions - 1 || status.last}">
+        </div>
+        <isif condition="${status.last && status.index > numberOfVisibleOptions - 1}">
+            <a class="show-more-less btn btn-outline-secondary"
+                href="javascript:void(0)"
+                data-more-txt="${Resource.msg('see.more.locations', 'dealer', null)}"
+                data-less-txt="${Resource.msg('see.less.locations', 'dealer', null)}">
+                <isif condition="${isSelectedOptionInVisibleSection}">
+                    ${Resource.msg('see.more.locations', 'dealer', null)}
+                <iselse>
+                    ${Resource.msg('see.less.locations', 'dealer', null)}
+                </isif>
+            </a>
+        </isif>
+    </isif>
+</isloop>

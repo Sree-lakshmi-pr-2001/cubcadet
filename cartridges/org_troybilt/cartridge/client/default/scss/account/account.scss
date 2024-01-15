@@ -1,0 +1,168 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "../components/formFields";
+@import "~org/utilities/nth_of_type";
+
+.btn-account {
+    min-width: 180px;
+    padding: rem(11.5px) rem(25px);
+    white-space: nowrap;
+}
+
+.account-page {
+    h2 {
+        margin-bottom: rem(39px);
+    }
+}
+
+.account-dashboard {
+    .card-footer > a {
+        text-decoration: underline;
+    }
+
+    .card-info-group {
+        p {
+            margin-bottom: 0;
+        }
+
+        div:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .order-history-control,
+    .order-history {
+        h4 {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .dashboard-order-card-image {
+        width: 7rem;
+        padding-right: 1rem;
+    }
+
+    .dashboard-order-card-footer-value {
+        margin-top: rem(22px);
+    }
+}
+
+.account-dashboard,
+.account-card,
+.account-order-history-card {
+    .card-body {
+        dl {
+            margin-bottom: 0;
+
+            dt,
+            dd {
+                display: inline;
+            }
+
+            dt {
+                text-transform: capitalize;
+            }
+
+            @include last() {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.account-page-header {
+    overflow: hidden;
+    padding-bottom: rem(7px);
+    margin-bottom: rem(32px);
+
+    h5 {
+        display: inline;
+        margin-bottom: 0;
+    }
+
+    a {
+        padding-top: rem(7px);
+    }
+}
+
+.card.account-card {
+    border: $border;
+    padding-right: rem(16px);
+    padding-left: rem(10px);
+
+    .card-header,
+    .card-body {
+        padding: 0;
+    }
+
+    .card-header {
+        border-bottom: none;
+    }
+
+    .card-body {
+        padding-top: rem(4px);
+
+        a,
+        button {
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    .address-heading {
+        max-width: 85%;
+    }
+
+    @include media-breakpoint-up(md) {
+        height: 100%;
+        padding-right: rem(20px);
+        padding-left: rem(13px);
+    }
+}
+
+.account-order-history-card {
+    margin-bottom: rem(15px);
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(30px);
+    }
+
+    .card-header {
+        padding: rem(15px);
+        border: $border;
+
+        > h5 {
+            @include media-breakpoint-down(sm) {
+                font-size: rem(18px);
+            }
+        }
+
+        > a {
+            text-decoration: underline;
+            line-height: rem(18px);
+        }
+    }
+
+    .card-body {
+        padding: rem(15px);
+        border: $border;
+        border-top: 0;
+
+        @include media-breakpoint-up(md) {
+            padding-top: rem(40px);
+        }
+
+        img {
+            margin-bottom: rem(75px);
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: rem(90px);
+            }
+        }
+    }
+
+    .dashboard-order-card-footer-value {
+        margin-top: rem(22px);
+    }
+}

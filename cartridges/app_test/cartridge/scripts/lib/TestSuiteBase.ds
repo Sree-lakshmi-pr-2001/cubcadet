@@ -1,0 +1,128 @@
+importPackage(dw.system);
+importPackage(dw.util);
+
+module.exports = {
+		"tests": [],
+		"run": function (testToRun) {
+			var totalElapsed = 0,
+				startTime = null,
+				endTime = null,
+				errorMessage = null,
+				test = null,
+				elapsed = null,
+				testRegex = null;
+
+			for (var testIndex = 0; testIndex < this.tests.length; testIndex++) {
+				test = this.tests[testIndex];
+
+				if ((testToRun >= 0) && (testToRun !== testIndex)) {
+					test.ignore = true;
+				};
+
+				startTime = new Date();
+				
+				try {
+					if (test.ignore || test.skip) {
+						test.passed = false;
+						continue;
+					};
+					
+					try {
+						if (this.testSetup) {
+							this.testSetup();
+						};
+						
+						if (test.before) {
+							test.before();
+						}
+						
+						if (test.beforeEach) {
+							test.beforeEach();
+						}
+
+						test.run();
+						
+					} finally {
+						if (test.afterEach) {
+							test.afterEach();
+						}
+						
+						if (test.after) {
+							test.after();
+						}
+						
+						if (this.testTearDown) {
+							this.testTearDown();
+						};
+					};
+
+					if ((typeof test.expectedError !== "undefined") && test.expectedError) {
+                        test.passed = false;
+                        test.exception = { message: "Exception was expected but it wasn't thrown. Expected error: " + test.expectedError};
+                    }
+                    else {
+                        test.passed = true;
+                    }
+				} catch (e) {
+					errorMessage = StringUtils.rtrim(e.message);
+					if ((typeof test.expectedError != "undefined") && test.expectedError) {
+						if (typeof test.expectedError == "string") {
+							test.passed = (errorMessage === test.expectedError);
+							if (!test.passed) {
+								e.message += StringUtils.format("\nExpected message: [{0}] but it was [{1}]", test.expectedError, errorMessage);
+							};
+						} else if (test.expectedError.toString()[0] === "/") {
+							testRegex = test.expectedError;
+							if (testRegex.test(errorMessage)) {
+								test.passed = true;
+							} else {
+								test.passed = false;
+								e.message += StringUtils.format("\nRegex test failed - Error message: [{0}] regex: [{1}]", errorMessage, test.expectedError);
+							};
+						} else {
+							test.passed = true;
+						};
+					} else {
+						test.passed = false;
+					};
+					if (!test.passed) {
+						test.exception = e;
+					};
+				} finally {
+					endTime = new Date();
+					elapsed = (endTime.getTime() - startTime.getTime()) / 1000;
+					test.elapsed = elapsed.toFixed(3);
+					totalElapsed += elapsed;
+				};
+			};			
+			
+			this.tests = this.tests.filter(function(test) {
+				return !test.ignore;
+			}).map(function(test) {
+				var t = {
+					"passed": test.passed, 
+					"elapsed": test.elapsed,
+					"skipped": test.skip,
+					"name": test.name,
+					"category": test.category
+				};				
+				
+				if (!test.passed && test.exception) {
+					t.exception = test.exception;
+				};					
+				return t;
+			});			
+			
+			this.totalElapsed = totalElapsed.toFixed(3);
+			
+			this.passed = this.tests.filter(function(test) {
+				return test.passed;
+			}).length === this.tests.length;
+			
+			this.failures = this.tests.filter(function(test) {
+                return !test.passed;
+            }).length;
+			
+			return this;
+		}		
+	};

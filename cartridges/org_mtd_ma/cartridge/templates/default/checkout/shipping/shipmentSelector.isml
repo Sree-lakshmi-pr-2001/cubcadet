@@ -1,0 +1,21 @@
+<isset name="uuid" value="${dw.util.UUIDUtils.createUUID()}" scope="page">
+<isset name="elementID" value="${'shipmentSelector-' + uuid}" scope="page">
+<div class="form-group">
+    <label class="form-control-label" for="${elementID}">
+        ${Resource.msg('heading.ship.to.address', 'checkout', null)}
+    </label>
+    <div class="select-wrapper">
+        <select name="shipmentSelector" id="${elementID}" class="addressSelector form-control custom-select"
+                data-create-shipment-url="${URLUtils.https('CheckoutAddressServices-CreateNewAddress')}"
+        >
+            <isinclude template="checkout/shipping/shipmentSelectorOptions" />
+        </select>
+        <span class="selector"></span>
+    </div>
+
+    <div class="invalid-feedback"></div>
+    <div class="row no-gutters">
+        <a href="javascript:void(0)" class="col-6 col-md-3 btn-show-details normal">${Resource.msg('action.update.address', 'checkout', null)}</a>
+        <a href="javascript:void(0)" class="col-6 col-md-3 btn-add-new normal">${Resource.msg('action.add.new', 'checkout', null)}</a>
+    </div>
+</div>

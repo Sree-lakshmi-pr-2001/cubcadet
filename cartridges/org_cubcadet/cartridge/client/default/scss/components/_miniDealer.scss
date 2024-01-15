@@ -1,0 +1,539 @@
+@import "bootstrap/scss/mixins/breakpoints";
+
+////////////////////////////////////////////
+//
+// Selected Dealer Section
+//
+////////////////////////////////////////////
+
+.refine-selected-dealer {
+    h6 {
+        font-size: $h6-font-size;
+    }
+
+    .dealer {
+        display: flex;
+    }
+
+    .dealer-logo-wrap {
+        flex: 0 0 50px;
+        padding-top: rem(5px);
+        padding-right: rem(5px);
+    }
+
+    .dealer-logo {
+        max-width: 100%;
+    }
+
+    .dealer-info-wrap {
+        flex: 1 1 auto;
+    }
+
+    .dealer-name {
+        font-size: rem(18px);
+        font-weight: $font-weight-bold;
+    }
+
+    .dealer-address {
+        font-size: rem(16px);
+    }
+
+    .dealer-change,
+    .dealer-find {
+        font-size: rem(14px);
+    }
+
+    .btn-link {
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+// PLP specific
+.refine-selected-dealer.plp-region {
+    margin-bottom: 20px;
+
+    .dealer-change {
+        font-size: rem(16px);
+        color: $endeavour;
+    }
+
+    .change-delivery-zipcode {
+        display: flex;
+
+        .dealer-logo-wrap {
+            flex: 0 0 56px;
+            padding-top: 0;
+
+            .zipcode-marker {
+                height: 25px;
+                padding-left: 15px;
+            }
+        }
+
+        .zipcode-title {
+            font-size: 18px;
+        }
+
+        .dealer-find {
+            font-size: 16px;
+            color: $endeavour;
+        }
+
+        .zipcode-number {
+            font-weight: bold;
+        }
+    }
+}
+
+// PDP specific
+.refine-selected-dealer.pdp-region {
+    &.no-selected-dealer {
+        padding-bottom: 30px;
+    }
+
+    .dealer-change {
+        font-size: rem(16px);
+        color: $endeavour;
+    }
+
+    .change-delivery-zipcode {
+        display: flex;
+
+        .dealer-logo-wrap {
+            flex: 0 0 56px;
+            padding-top: 0;
+
+            .zipcode-marker {
+                height: 25px;
+                padding-left: 15px;
+            }
+        }
+
+        .zipcode-title {
+            font-size: 18px;
+        }
+
+        .dealer-find {
+            font-size: 16px;
+            color: $endeavour;
+        }
+
+        .zipcode-number {
+            font-weight: bold;
+        }
+    }
+}
+
+// Cart specific
+.refine-selected-dealer.cart-region {
+    background-color: $gray-100;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    .dealer-name {
+        font-size: rem(16px);
+    }
+
+    .dealer-address {
+        font-weight: $font-weight-bold;
+    }
+
+    .btn {
+        @include media-breakpoint-up(md) {
+            margin-top: -9%;
+            float: right;
+        }
+    }
+}
+
+////////////////////////////////////////////
+//
+// Dealer Product Tile Buttons
+//
+////////////////////////////////////////////
+
+.dealer-tile-area {
+    padding: 0 15px;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(sm) {
+        padding: 0 35px;
+    }
+
+    .text-red {
+        color: $danger;
+    }
+
+    .dealer-tile-area__msg,
+    .dealer-tile-area__link,
+    .btn,
+    .btn-link {
+        margin-bottom: 22px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .dealer-tile-area__msg,
+    .dealer-tile-area__link {
+        font-size: rem(16px);
+        font-weight: $font-weight-bold;
+    }
+
+    .dealer-tile-area__msg {
+        &--delivery-icon,
+        &--ship-to-home,
+        &--pickup-icon {
+            position: relative;
+            padding-left: 40px;
+            text-align: left;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                width: 30px;
+                height: 20px;
+                margin-right: 4px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                vertical-align: top;
+            }
+        }
+
+        &--delivery-icon {
+            &::before {
+                background-image: $svg-icon-dealer-delivery-black;
+                transform: rotateY(180deg);
+                top: 3px;
+            }
+        }
+
+        &--pickup-icon {
+            &::before {
+                background-image: $svg-icon-in-store-pickup-black;
+            }
+        }
+
+        &--ship-to-home {
+            &::before {
+                background-image: $svg-icon-ship-to-home-black;
+            }
+        }
+    }
+
+    .btn,
+    .btn-link {
+        display: block;
+        width: 100%;
+    }
+
+    .btn-link {
+        font-size: rem(16px);
+        line-height: rem(20px);
+        font-weight: $font-weight-bold;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .btn {
+        @include media-breakpoint-down(xs) {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+////////////////////////////////////////////
+//
+// Dealer Where to Buy Section
+//
+////////////////////////////////////////////
+
+.where-to-buy-wrap {
+    &--pdp-sticky {
+        .where-to-buy {
+            .where-to-buy__availability,
+            .where-to-buy__options {
+                @include media-breakpoint-down(xs) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &--pdp-static {
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+
+        .where-to-buy {
+            .where-to-buy__buttons {
+                display: none;
+            }
+        }
+    }
+}
+
+.where-to-buy {
+    .where-to-buy__availability {
+        margin-bottom: 10px;
+    }
+
+    .where-to-buy__availability__item {
+        display: none;
+
+        &.selected {
+            display: block;
+        }
+    }
+
+    .where-to-buy__availability__title,
+    .where-to-buy__availability__time,
+    .where-to-buy__availability__unavailable-msg {
+        font-size: rem(18px);
+        font-weight: $font-weight-bold;
+    }
+
+    .where-to-buy__availability__dealer-find {
+        font-size: rem(16px);
+        font-weight: 500;
+    }
+
+    .where-to-buy__availability__more__info {
+        font-size: rem(16px);
+        font-style: italic;
+    }
+
+    .where-to-buy__availability__more__link {
+        font-size: rem(16px);
+        font-weight: 500;
+    }
+
+    .where-to-buy__options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+
+    .where-to-buy__option {
+        position: relative;
+        flex: 0 0 calc(33.33333% - 8px);
+        max-width: calc(33.33333% - 8px);
+        min-height: 124px;
+        padding: 15px 10px 7px;
+        border: 2px solid $accent-2;
+        text-align: center;
+        word-break: break-word;
+        cursor: pointer;
+
+        &--dealer-delivery {
+            .where-to-buy__option__icon {
+                background-image: $svg-icon-dealer-delivery-black;
+            }
+
+            &.selected {
+                .where-to-buy__option__icon {
+                    background-image: $svg-icon-dealer-delivery-yellow;
+                }
+            }
+
+            &.disabled {
+                .where-to-buy__option__icon {
+                    background-image: $svg-icon-dealer-delivery-grey;
+                }
+            }
+        }
+
+        &--in-store-pickup {
+            .where-to-buy__option__icon {
+                background-image: $svg-icon-in-store-pickup-black;
+            }
+
+            &.selected {
+                .where-to-buy__option__icon {
+                    background-image: $svg-icon-in-store-pickup-yellow;
+                }
+            }
+
+            &.disabled {
+                .where-to-buy__option__icon {
+                    background-image: $svg-icon-in-store-pickup-grey;
+                }
+            }
+        }
+
+        &--ship-to-home {
+            .where-to-buy__option__icon {
+                background-image: $svg-icon-ship-to-home-black;
+            }
+
+            &.selected {
+                .where-to-buy__option__icon {
+                    background-image: $svg-icon-ship-to-home-yellow;
+                }
+            }
+
+            &.disabled {
+                .where-to-buy__option__icon {
+                    background-image: $svg-icon-ship-to-home-grey;
+                }
+            }
+        }
+
+        &.disabled {
+            cursor: default;
+
+            .where-to-buy__option__title,
+            .where-to-buy__option__cost {
+                color: $gray-300;
+            }
+
+            .where-to-buy__option__subtitle__available,
+            .where-to-buy__option__cost {
+                display: none;
+            }
+        }
+
+        &:not(.disabled) {
+            .where-to-buy__option__subtitle__unavailable {
+                display: none;
+            }
+        }
+
+        &.selected {
+            border: 2px solid $secondary;
+            cursor: default;
+
+            .where-to-buy__option__badge {
+                display: block;
+            }
+        }
+    }
+
+    .where-to-buy__option__icon-wrap {
+        margin-bottom: 5px;
+    }
+
+    .where-to-buy__option__icon {
+        display: inline-block;
+        width: 100%;
+        height: 32px;
+        max-width: 100%;
+        max-height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .where-to-buy__option__title {
+        font-size: rem(14px);
+        font-weight: $font-weight-bold;
+    }
+
+    .where-to-buy__option__subtitle {
+        font-size: rem(10px);
+        font-weight: 500;
+        color: $dusty-gray;
+    }
+
+    .where-to-buy__option__subtitle__available {
+        .content-asset {
+            display: inline;
+            text-transform: capitalize;
+        }
+    }
+
+    .where-to-buy__option__cost {
+        font-size: rem(14px);
+        font-weight: $font-weight-bold;
+    }
+
+    .where-to-buy__option__badge {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: rem(38px) rem(38px) 0 0;
+            border-color: $black transparent transparent transparent;
+        }
+    }
+
+    .where-to-buy__option__badge__icon {
+        position: relative;
+        display: block;
+        width: rem(25px);
+        height: rem(25px);
+        background: $trans $svg-icon-check-mark-yellow center no-repeat;
+        background-size: rem(20px);
+    }
+
+    .where-to-buy__button {
+        width: 100%;
+
+        + .btn.where-to-buy__button {
+            margin-top: 10px;
+        }
+    }
+
+    .btn-link {
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+// Cart page specific
+.where-to-buy--cart-page {
+    margin-top: 10px;
+
+    @include media-breakpoint-up(md) {
+        margin-left: 15px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-left: 0;
+    }
+
+    .where-to-buy__options {
+        justify-content: flex-start;
+        margin: 0 -8px;
+    }
+
+    .where-to-buy__option {
+        flex: 0 1 124px;
+        max-width: 124px;
+        margin: 0 8px;
+    }
+}
+
+.loader {
+    .placeholder-1 {
+        background: #d9d9d9;
+        height: 20px;
+        margin: 10px;
+    }
+
+    .placeholder-2 {
+        background: #d9d9d9;
+        height: 40px;
+        margin: 10px;
+    }
+}

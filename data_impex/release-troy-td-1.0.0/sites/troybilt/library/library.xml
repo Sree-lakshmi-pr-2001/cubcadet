@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="error-page-financing-application">
+        <display-name xml:lang="x-default">Error Page Financing Application</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;An Error has occurred. Please, try again later&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-standard">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP Standard</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Standard Revolving Financing with &lt;strong&gt;{apr}%&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See details&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-deferred">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    &lt;strong&gt;{monthlypayment}/mo&lt;/strong&gt; No interest if paid in full within &lt;strong&gt;{termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See details&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-apr">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    &lt;strong&gt;${monthlypayment}/mo&lt;/strong&gt; | &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt; | &lt;strong&gt;{termlength}Mo&lt;/strong&gt; with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See details&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-standard">
+        <display-name xml:lang="x-default">TD Estimated Payment Cart Standard</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Work Now, Pay Later&lt;/h3&gt;&#13;
+&lt;div&gt;&#13;
+Your Order is eligible for Troy-Bilt Financing.&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    Standard Revolving Financing with &lt;strong&gt;{apr}%&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance btn btn-outline-secondary"&gt;Apply Now&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-deferred">
+        <display-name xml:lang="x-default">TD Estimated Payment Cart Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Work Now, Pay Later&lt;/h3&gt;&#13;
+&lt;div&gt;&#13;
+Your Order is eligible for Troy-Bilt Financing.&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;strong&gt;${monthlypayment}/mo&lt;/strong&gt; No interest if paid in full within &lt;strong&gt;{termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance btn btn-outline-secondary"&gt;Apply Now&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-apr">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Work Now, Pay Later&lt;/h3&gt;&#13;
+&lt;div&gt;&#13;
+Your Order is eligible for Troy-Bilt Financing.&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;strong&gt;${monthlypayment} Per Month, &lt;/strong&gt;&lt;strong&gt;{termlength} months&lt;/strong&gt; &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;sup&gt;3&lt;/sup&gt; &lt;/strong&gt;financing with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance btn btn-outline-secondary"&gt;Apply Now&lt;/a&gt;&#13;
+ &lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-billing-standard">
+        <display-name xml:lang="x-default">TD Estimated Payment Billing Standard</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Your order is eligible for Cub Cadet Financing. Standard Revolving Financing with &lt;strong&gt;{apr}%&lt;/strong&gt;&#13;
+    &lt;span class="td-links"&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance"&gt;Apply Now&lt;/a&gt;&#13;
+        &lt;span class="vertical-divider"&gt; | &lt;/span&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+    &lt;/span&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-billing-deferred">
+        <display-name xml:lang="x-default">TD Estimated Payment Billing Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Your order is eligible for Cub Cadet Financing.&#13;
+    &lt;strong&gt;${monthlypayment}/mo&lt;/strong&gt; No interest if paid in full within &lt;strong&gt;{termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;
+    &lt;span class="td-links"&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance"&gt;Apply Now&lt;/a&gt;&#13;
+        &lt;span class="vertical-divider"&gt; | &lt;/span&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+    &lt;/span&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-billing-apr">
+        <display-name xml:lang="x-default">TD Estimated Payment Billing APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Your order is eligible for Cub Cadet Financing. &#13;
+    &lt;strong&gt;${monthlypayment} Per Month&lt;/strong&gt;, &lt;strong&gt;{termlength} months&lt;/strong&gt; &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt; financing with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}.&lt;/strong&gt;&#13;
+    &lt;span class="td-links"&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance"&gt;Apply Now&lt;/a&gt;&#13;
+        &lt;span class="vertical-divider"&gt; | &lt;/span&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+    &lt;/span&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure">
+        <display-name xml:lang="x-default">TD Plan Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">
+&lt;div&gt;&#13;
+&lt;p style="margin:0in 0in 10pt"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="line-height:115%"&gt;&lt;span style="font-family:Calibri,sans-serif"&gt;&lt;b&gt;&lt;sup&gt;&lt;span style="font-size:10.0pt"&gt;&lt;span style="line-height:115%"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/sup&gt;&lt;/b&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;&lt;span style="line-height:115%"&gt;No Interest if Paid in Full within 6 Months:&lt;/span&gt;&lt;/span&gt;&lt;/b&gt; &lt;span style="font-size:10.0pt"&gt;&lt;span style="line-height:115%"&gt;Minimum purchase $300. To avoid interest, you must pay the full promotional balance before the promotional period ends. If you do not, we will charge interest from the purchase date at the Standard APR. After promotional period ends, the Standard APR also applies to the remaining balance. &lt;/span&gt;&lt;/span&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;&lt;span style="line-height:115%"&gt;Minimum monthly payments required, but they will not pay off the balance&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;b&gt; &lt;/b&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;&lt;span style="line-height:115%"&gt;in time. You must make larger payments to avoid the interest.&lt;/span&gt;&lt;/span&gt;&lt;/b&gt; &lt;span style="font-size:10.0pt"&gt;&lt;span style="line-height:115%"&gt;Advertised monthly payment, if any, is greater than your required minimum monthly payment and excludes taxes, delivery or other charges Prior purchases excluded. Account must be in good standing. Limited time offer. Other finance plans may be available. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Troy-Bilt financing account issued by TD Bank, N.A.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p class="Default" style="margin:0in 0in 0.0001pt"&gt;&lt;span style="font-size:12pt"&gt;&lt;span style="font-family:Calibri,sans-serif"&gt;&lt;span style="color:black"&gt;&lt;b&gt;&lt;sup&gt;&lt;span style="font-size:10.0pt"&gt;2&lt;/span&gt;&lt;/sup&gt;&lt;/b&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;No Interest if Paid in Full within 12 Months:&lt;/span&gt;&lt;/b&gt; &lt;span style="font-size:10.0pt"&gt;Minimum purchase $500. To avoid interest, you must pay the full promotional balance before the promotional period ends. If you do not, we will charge interest from the purchase date at the Standard APR. After promotional period ends, the Standard APR also applies to the remaining balance. &lt;/span&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;Minimum monthly payments required, but they will not pay off the balance&lt;/span&gt;&lt;/b&gt;&lt;b&gt; &lt;/b&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;in time. You must make larger payments to avoid the interest.&lt;/span&gt;&lt;/b&gt; &amp;nbsp;&lt;span style="font-size:10.0pt"&gt;Advertised monthly payment, if any, is greater than your required minimum monthly payment and excludes taxes, delivery or other charges. Prior purchases excluded. Account must be in good standing. Limited time offer. Other finance plans may be available. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Troy-Bilt financing account issued by TD Bank, N.A.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p class="Default" style="margin:0in 0in 0.0001pt"&gt;&lt;span style="font-size:12pt"&gt;&lt;span style="font-family:Calibri,sans-serif"&gt;&lt;span style="color:black"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p style="margin-bottom:.0001pt; margin:0in 0in 10pt"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="line-height:normal"&gt;&lt;span style="text-autospace:none"&gt;&lt;span style="font-family:Calibri,sans-serif"&gt;&lt;b&gt;&lt;sup&gt;&lt;span style="font-size:10.0pt"&gt;3&lt;/span&gt;&lt;/sup&gt;&lt;/b&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;0% APR for 24 Months with Equal Payments:&lt;/span&gt;&lt;/b&gt;&lt;span style="font-size:10.0pt"&gt; Minimum purchase $1,500.&lt;b&gt; There is a promotional fee of $125 for this transaction.&lt;/b&gt; 0% APR from date of&lt;b&gt; &lt;/b&gt;eligible purchase until paid in full. Monthly payment is the purchase&lt;b&gt; &lt;/b&gt;amount divided by the number of months in the offer. Last payment may vary due to rounding. On-time payments will pay off the promotional balance. Advertised monthly payment amount excludes taxes, delivery, or other charges. Other transactions and charges affect total monthly payment amount. Prior purchases excluded. Account must be in good standing. Limited time offer. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Troy-Bilt financing account issued by TD Bank, N.A.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p style="margin-bottom:.0001pt; margin:0in 0in 10pt"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="line-height:normal"&gt;&lt;span style="text-autospace:none"&gt;&lt;span style="font-family:Calibri,sans-serif"&gt;&lt;span style="font-size:7.5pt"&gt;&lt;span style="font-family:Avenir-Book"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p style="margin-bottom:.0001pt; margin:0in 0in 10pt"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="line-height:normal"&gt;&lt;span style="text-autospace:none"&gt;&lt;span style="font-family:Calibri,sans-serif"&gt;&lt;b&gt;&lt;sup&gt;&lt;span style="font-size:10.0pt"&gt;4&lt;/span&gt;&lt;/sup&gt;&lt;/b&gt;&lt;b&gt;&lt;span style="font-size:10.0pt"&gt;Standard Revolving: &lt;/span&gt;&lt;/b&gt;&lt;span style="font-size:10.0pt"&gt;&lt;span style="color:black"&gt;Standard financing terms apply. Interest will be charged on the unpaid purchase balance at the APR for standard purchases. New accounts: Standard Purchase APR 29.99%.&amp;nbsp; Minimum interest charge $1. Existing account holders, see your credit agreement for applicable terms. Offer subject to credit &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:10.0pt"&gt;approval on a Troy-Bilt credit &lt;span style="color:black"&gt;card account. See store associate for more information.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;
+            </custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43438">
+        <display-name xml:lang="x-default">TD Plan 43438 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43438&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43439">
+        <display-name xml:lang="x-default">TD Plan 43439 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43439&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43440">
+        <display-name xml:lang="x-default">TD Plan 43440 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43440&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43441">
+        <display-name xml:lang="x-default">TD Plan 43441 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43441&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-authorization-error">
+        <display-name xml:lang="x-default">TD Authorization Error Message</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-authorization-error&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-account-lookup">
+        <display-name xml:lang="x-default">TD Account Lookup Message Body</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-account-lookup&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-account-lookup-error">
+        <display-name xml:lang="x-default">TD Account Lookup Error Response Message</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-account-lookup-error&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-account-lookup-success">
+        <display-name xml:lang="x-default">TD Account Lookup Success Response Message Body</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-account-lookup-success&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="cart-financing-tooltip">
+        <display-name xml:lang="x-default">Cart Financing Tooltip</display-name>
+        <description xml:lang="x-default">located on the cart page, above the promotional code input.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="cart-financing-msg"&gt;&#13;
+        Your order may be eligible for local &lt;strong&gt;Dealer Delivery or Pickup.&lt;/strong&gt;&#13;
+        &lt;span class="info-icon"&gt;&#13;
+        &lt;span class="icon" data-toggle="tooltip" data-placement="top" title=""&#13;
+        data-original-title="Proceed to Checkout and enter your Zip Code to find a Dealer in your area."&gt;&#13;
+        &lt;/span&gt;&#13;
+        &lt;/span&gt;&#13;
+        &lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="tooltip-content"/>
+        </folder-links>
+    </content>
+
+    <content content-id="financing">
+        <display-name xml:lang="x-default">EXCEPTIONAL FINANCING OFFERS AVAILABLE</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Exceptional Financing Offers Avaialble</page-title>
+            <page-description xml:lang="x-default">Would you like to finance your Cub Cadet lawn mower, commercial lawn care equipment or utility vehicle? Offers with low APR or no interest if paid in full financing available for qualified buyers.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style type="text/css"&gt;.financing-page .container .content-asset-container {&#13;
+width: 100% !important;&#13;
+margin: 0px !important;&#13;
+}&#13;
+&#13;
+.financing-page .content-wrap {&#13;
+width: 100% !important;&#13;
+}&#13;
+&#13;
+.financing-page .finance-header {&#13;
+padding: 25px;&#13;
+font-size: 1.0rem;&#13;
+font-weight: 400;&#13;
+border-bottom: 2px solid #CCCCCC;&#13;
+}&#13;
+.financing-page .white {&#13;
+background-color: #ffffff;&#13;
+border-left: 2px solid #CCCCCC;&#13;
+border-right: 2px solid #CCCCCC;&#13;
+border-bottom: 2px solid #CCCCCC;&#13;
+padding: 25px;&#13;
+}&#13;
+.financing-page .gray {&#13;
+background-color: #EAEAEA;&#13;
+border-bottom: 2px solid #CCCCCC;&#13;
+padding: 25px;&#13;
+}&#13;
+.financing-page p {&#13;
+font-size: 1.0rem;&#13;
+}&#13;
+.financing-page .select-dealers {&#13;
+font-style: italic;&#13;
+text-align: right;&#13;
+}&#13;
+&#13;
+.financing-page .select-dealers &gt; button {&#13;
+margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.financing-page .select-dealers &gt; a {&#13;
+margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.financing-page .row {&#13;
+margin: 0px !important;&#13;
+}&#13;
+&#13;
+.financing-page .card-logo {&#13;
+&#13;
+position: relative;&#13;
+top: -20px;&#13;
+&#13;
+}&#13;
+&#13;
+.financing-page .cart-icon {&#13;
+&#13;
+margin-left: 0.75rem;&#13;
+&#13;
+}&#13;
+&#13;
+.financing-page .utility-vehicle-plans {&#13;
+&#13;
+height: 80px;&#13;
+background-color: #ffc20f;&#13;
+font-weight: 700;&#13;
+font-size: 1.2rem;&#13;
+&#13;
+}&#13;
+&#13;
+.financing-page .commercial-equipment-plans {&#13;
+&#13;
+height: 80px;&#13;
+background-color: #ffc20f;&#13;
+font-weight: 700;&#13;
+font-size: 1.2rem;&#13;
+&#13;
+}&#13;
+&#13;
+.financing-page h3 {&#13;
+&#13;
+padding: 20px;&#13;
+&#13;
+}&#13;
+&#13;
+&#13;
+.financing-page .sheffield-financial {&#13;
+&#13;
+text-align: right;&#13;
+float: right;&#13;
+margin-bottom: 10px;&#13;
+font-style: normal;&#13;
+&#13;
+}&#13;
+&#13;
+.page-title {&#13;
+&#13;
+text-align: center;&#13;
+&#13;
+}&#13;
+&#13;
+.learn-more {&#13;
+&#13;
+font-style: normal;&#13;
+&#13;
+}&#13;
+&#13;
+.financing-page .btn {&#13;
+&#13;
+text-align: right;&#13;
+&#13;
+}&#13;
+&lt;/style&gt;&#13;
+&lt;div class="content-wrap financing-page"&gt;&#13;
+&lt;div class="row" style="background-color:#FFCA15;"&gt;&#13;
+&lt;div class="finance-header col-sm-8"&gt;&#13;
+&lt;p&gt;The strength of Cub Cadet products is enough to convince you to buy. But to help you make the purchase, we're offering incredible financing opportunities.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Choose from the great financing options below, designed to fit your needs, apply and see if you qualify for one of these plans.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;CUB CADET FINANCING IS AVAILABLE AT PARTICIPATING CUB CADET INDEPENDENT DEALERS ONLY. QUALIFYING PRODUCT PURCHASE SUBJECT TO CREDIT APPROVAL. PLEASE SEE YOUR LOCAL DEALER FOR DETAILS. &lt;/strong&gt;&lt;/p&gt;&#13;
+&lt;a class="btn btn-primary" href="https://www.cubcadet.com/en_US/servicelocator?showMap=true&amp;amp;horizontalView=true&amp;amp;isForm=true&amp;amp;rid=dealers"&gt;Find a Dealer&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="card-logo"&gt;&lt;img alt="" class="card-logo hidden-sm-down" src="Financing/cubcadet-card-%401x.png?$staticlink$" title="" /&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;NO INTEREST IF PAID IN FULL WITHIN 6 MONTHS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Interest will be charged from the purchase date if the purchase balance is not paid in full by the end of the promotional period.&lt;/li&gt;&#13;
+    &lt;li&gt;Minimum purchase $300.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our no interest if paid within 6 months plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="zero-interest-6-months-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our no interest if paid within 6 months plan" class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-interest-6-months-learn-more-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;NO INTEREST IF PAID IN FULL WITHIN 12 MONTHS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Interest will be charged from the purchase date if the purchase balance is not paid in full by the end of the promotional period.&lt;/li&gt;&#13;
+    &lt;li&gt;Minimum purchase $500.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our no interest if paid within 12 months plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="zero-interest-6-months-apply"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our no interest if paid within 12 months plan" class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-interest-12-months-learn-more-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% FOR 12 MONTHS [1.23% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $50 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $50 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January, 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&amp;nbsp;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Apply for our 0% interest for 12 months - 1.23% APR plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="zero-percent-24-months-0.64APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 0% interest for 24 months - 0.64% APR plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-percent-24-months-0.64APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% APR FOR 24 MONTHS WITH EQUAL PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $1,500.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our no interest if paid within 24 months plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="zero-interest-24-months-0APR-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our no interest if paid within 24 months plan" class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-interest-24-months-0APR-learn-more-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% FOR 24 MONTHS [1.28% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $1,500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January, 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&amp;nbsp;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Apply for our 0% interest for 24 months - 0.64% APR plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="zero-percent-24-months-0.64APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 0% interest for 24 months - 0.64% APR plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-percent-24-months-0.64APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% APR FOR 36 MONTHS WITH EQUAL PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $3,000.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer valid on Zero Turns only (RZT, Ultima, Z-Force and PRO Z).&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 0% interest for 36 months plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="zero-percent-36-months-0APR-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 0% interest for 36 months plan" class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-percent-36-months-0APR-learn-more-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% FOR 36 MONTHS [0.86% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $3,000; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 1.99% interest for 36 months - 2.43% APR - plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="1.99-percent-36-months-2.43APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% interest for 36 months - 2.43% APR - plan" class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="1.99-percent-36-months-2.43APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;2.99% APR WITH 48 MONTHLY PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $2,000.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 2.99% APR with 48 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="48-months-2.99APR-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 2.99% APR with 48 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="48-months-2.99APR-apply-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;1.99% APR WITH 36 MONTHLY PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $2,000.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 1.99% APR with 36 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="36-months-1.99APR-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% APR with 36 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="36-months-1.99APR-learn-more-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;1.99% FOR 36 MONTHS [2.86% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $2,000; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 1.99% interest - 2.42%APR - with 36 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="1.99-percent-36-months-2.42APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% interest - 2.42%APR - with 36 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="1.99-percent-36-months-2.42APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;2.99% FOR 48 MONTHS [3.66% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $2,000; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 2.99% interest - 3.32%APR - with 48 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="2.99-percent-48-months-3.32APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 2.99% interest - 3.32%APR - with 48 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="2.99-percent-48-months-3.32APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;3.99% APR WITH 60 MONHTLY PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $2,000.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 3.99%APR - with 60 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="60-months-3.99APR-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 3.99%APR - with 60 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="60-months-3.99APR-learn-more-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;3.99% FOR 60 MONTHS [4.53% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $2,500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 3.99% interest - 4.27%APR - with 60 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="3.99-percent-60-months-4.27APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 3.99% interest - 4.27%APR - with 60 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="3.99-percent-60-months-4.27APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;SUB-PRIME PROGRAM: 6.99% FOR 36 MONTHS [7.90% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $1,500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2019&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 6.99% interest - 7.43%APR - with 36 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="6.99-percent-36-months-7.43APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 6.99% interest - 7.43%APR - with 36 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="6.99-percent-36-months-7.43APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&#13;
+&#13;
+&lt;div class="commercial-equipment-plans"&gt;&#13;
+&lt;h3&gt;COMMERCIAL EQUIPMENT PLANS&lt;/h3&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% APR FOR 48 MONTHS WITH EQUAL PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $3,000.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer valid on PRO Z and PRO HW Series only.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 0% interest for 48 months plan. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="zero-percent-48-months-apply-TD"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% interest for 36 months - 2.43% APR - plan" class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-percent-48-months-apply-TD"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% FOR 48 MONTHS [0.65% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $3,000; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer valid on PRO Z 100,500,700,900 and PRO Hydro Walk Series.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&amp;nbsp;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Apply for our 0% interest for 48 months - 0.65% APR plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="zero-percent-48-months-0.65APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 0% interest for 48 months - 0.65% APR plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-percent-48-months-0.65APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&#13;
+&#13;
+&lt;div class="utility-vehicle-plans"&gt;&#13;
+&lt;h3&gt;UTILITY VEHICLE PLANS&lt;/h3&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% APR FOR 24 MONTHS WITH EQUAL PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $5,999.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer only available on new Cub Cadet utility vehicles.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our zero interest with 24 monthly payments plan. For Utility Vehicles Only. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="zero-interest-24-months-apply-TD-UTV"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our zero interest with 24 monthly payments plan. For Utility Vehicles Only." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-interest-24-months-learn-more-TD-UTV"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;0% FOR 24 MONTHS [1.28% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;UTILITY VEHICLE PLAN&lt;/li&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $5,999; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 0% interest - 1.28%APR - with 24 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="zero-percent-24-months-1.28APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 0% interest - 1.28%APR - with 24 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="zero-percent-24-months-1.28APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;2.99% APR WITH 48 MONTHLY PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $3,500.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer only available on new Cub Cadet utility vehicles.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 2.99% APR with 48 monthly payments plan. For Utility Vehicles Only. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="2.99APR-48-months-apply-TD-UTV"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 2.99% APR with 48 monthly payments plan. For Utility Vehicles Only." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="2.99APR-48-months-learn-more-TD-UTV"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;1.99% APR WITH 36 MONTHLY PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $3,500.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer only available on new Cub Cadet utility vehicles.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 1.99% APR with 36 monthly payments plan. For Utility Vehicles Only. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="1.99APR-36-months-apply-TD-UTV"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% APR with 36 monthly payments plan. For Utility Vehicles Only." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="1.99APR-36-months-learn-more-TD-UTV"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;1.99% FOR 36 MONTHS [2.86% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;UTILITY VEHICLE PLAN&lt;/li&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $3,500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 0% interest - 2.42%APR - with 36 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="1.99-percent-36-months-2.42APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% interest - 2.42%APR - with 36 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="1.99-percent-36-months-2.42APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;2.99% FOR 48 MONTHS [3.66% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;UTILITY VEHICLE PLAN&lt;/li&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $3,500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 0% interest - 2.42%APR - with 36 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="1.99-percent-36-months-2.42APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 1.99% interest - 2.42%APR - with 36 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="1.99-percent-36-months-2.42APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;3.99% FOR 60 MONTHS [4.53% APR*]&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;UTILITY VEHICLE PLAN&lt;/li&gt;&#13;
+    &lt;li&gt;Minimum Amount Financed $3,500; Maximum Amount Financed $50,000.&lt;/li&gt;&#13;
+    &lt;li&gt;On a consumer loan, an origination fee of $100 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;On a commercial loan, an origination fee of $150 will be added to the amount financed.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - January 31, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;a aria-label="Apply for our 3.99% interest - 4.27%APR - with 60 monthly payments plan. OPENS IN NEW WINDOW." class="btn btn-secondary sheffield-financial" href="https://www.sheffieldfinancial.com/dealersuite?dealer=cub%20cadet" id="3.99-percent-60-months-4.27APR-apply-Sheffield" target="_blank"&gt;APPLY WITH SHEFFIELD FINANCIAL&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 3.99% interest - 4.27%APR - with 60 monthly payments plan." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="3.99-percent-60-months-4.27APR-learn-more-Sheffield"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;!-- FINANCING OFFER START --&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 white"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;h5&gt;3.99% APR WITH 60 MONTHLY PAYMENTS*&lt;/h5&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4"&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Minimum purchase $3,500.&lt;/li&gt;&#13;
+    &lt;li&gt;There is a promotional fee of $125 for this transaction.&lt;/li&gt;&#13;
+    &lt;li&gt;Offer only available on new Cub Cadet utility vehicles.&lt;/li&gt;&#13;
+    &lt;li&gt;Valid From: November 1, 2019 - February 29, 2020&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-12 col-md-4 select-dealers"&gt;&#13;
+&lt;p class="select-dealers"&gt;Available at participating independent dealers only.&lt;/p&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;button aria-label="Apply for our 3.99% APR with 60 monthly payments plan. For Utility Vehicles Only. OPENS IN NEW WINDOW." class="btn btn-secondary finance-link" data-url="$url('FinancingApplication-GetURL')$" id="3.99APR-60-months-apply-TD-UTV"&gt;APPLY WITH TD BANK&lt;/button&gt;&#13;
+&#13;
+&lt;p&gt;&lt;a aria-label="Learn more about our 3.99% APR with 60 monthly payments plan. For Utility Vehicles Only." class="btn btn-outline-secondary learn-more" href="Financing/CubCadetWebsiteDisclosure.pdf?$staticlink$" id="3.99APR-60-months-learn-more-TD-UTV"&gt;LEARN MORE&lt;/a&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- FINANCING OFFER END --&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content-wrap financing-page"&gt;&#13;
+&lt;div class="row" style="background-color:#FFCA15;"&gt;&#13;
+&lt;div class="finance-header col-sm-8"&gt;&#13;
+&lt;p&gt;Standard revolving* 29.99% APR*&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;*Standard financing terms apply. Interest will be charged on the unpaid purchase balance at the APR for standard purchases. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing account holders, see your credit agreement for applicable terms. Offer subject to credit approval on a Cub Cadet credit card account. See store associate for more information.&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="financing-terms">
+        <display-name xml:lang="x-default">Financing Terms &amp; Conditions</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Cub Cadet Revolving Plan Disclosures Available 03/1/2019 through 06/30/2019.&lt;/h3&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Commercial Cards also available. For offer details about Commercial Cards please contact your local Dealer.&lt;/strong&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Standard revolving*&lt;/strong&gt; 29.99% APR*&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;*Standard financing terms apply. Interest will be charged on the unpaid purchase balance at the APR for standard purchases. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing account holders, see your credit agreement for applicable terms. Offer subject to credit approval on a Cub Cadet credit card account. See store associate for more information.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;No Interest if Paid in Full within 6 Months* &lt;/strong&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Interest will be charged from the purchase date if the purchase balance is not paid in full by the end of the promotional period. Minimum purchase $300.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*No Interest if Paid in Full within 6 Months: &lt;/strong&gt;Minimum purchase $300. To avoid interest, you must pay the full promotional balance before the promotional period ends. If you do not, we will charge interest from the purchase date at the Standard APR. After promotional period ends, the Standard APR also applies to the remaining balance. Minimum monthly payments required, but they will not pay off the balance in time. You must make larger payments to avoid the interest. Prior purchases excluded. Account must be in good standing. Other finance plans may be available. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;No Interest if paid in full within 12 Months*&lt;/strong&gt; Interest will be charged from the purchase date if the purchase balance is not paid in full by the end of the promotional period. Minimum purchase $500.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*No Interest if Paid in Full within 12 Months:&lt;/strong&gt; Minimum purchase $500. To avoid interest, you must pay the full promotional balance before the promotional period ends. If you do not, we will charge interest from the purchase date at the Standard APR. After promotional period ends, the Standard APR also applies to the remaining balance. Minimum monthly payments required, but they will not pay off the balance in time. You must make larger payments to avoid the interest. Prior purchases excluded. Account must be in good standing. Other finance plans may be available. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;0% APR for 24 Months with Equal Payments*&lt;/strong&gt; Minimum purchase $1,500. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*0% APR for 24 Months with Equal Payments:&lt;/strong&gt; Minimum purchase $1,500. There is a promotional fee of $125 for this transaction. 0% APR from date of eligible purchase until paid in full. Monthly payment is the purchase amount divided by the number of months in the offer. Last payment may vary due to rounding. On-time payments will pay off the promotional balance. Other transactions and charges affect total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;0% APR for 36 Months with Equal Payments*&lt;/strong&gt; Minimum purchase $3,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*0% APR for 36 Months with Equal Payments:&lt;/strong&gt; Offer valid on Zero Turns only (RZT, Ultima, Z-Force and Pro-Z). Minimum purchase $3,000. There is a promotional fee of $125 for this transaction. 0% APR from date of eligible purchase until paid in full. Monthly payment is the purchase amount divided by the number of months in the offer. Last payment may vary due to rounding. On-time payments will pay off the promotional balance. Other transactions and charges affect total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;0% APR for 48 Months with Equal Payments*&lt;/strong&gt; Minimum purchase $3,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*0% APR for 48 Months with Equal Payments:&lt;/strong&gt; Offer valid on Pro-Z &amp;amp; HW Series only. Minimum purchase $3,000. There is a promotional fee of $125 for this transaction. 0% APR from date of eligible purchase until paid in full. Monthly payment is the purchase amount divided by the number of months in the offer. Last payment may vary due to rounding. On-time payments will pay off the promotional balance. Other transactions and charges affect total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;1.99% APR with 36 Monthly Payments*&lt;/strong&gt; Minimum purchase $2,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*1.99% APR with 36 Monthly Payments:&lt;/strong&gt; Minimum purchase $2,000. There is a promotional fee of $125 for this transaction. 1.99% APR from date of eligible purchase until paid in full. Monthly payment amount equals the purchase amount and estimated interest for the length of the offer divided by the number of months in the offer. Last payment may vary due to rounding. Ontime payments will pay the offer balance in full. Other transactions and charges affect the total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accountholders, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;2.99% APR with 48 Monthly Payments*&lt;/strong&gt; Minimum purchase $2,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*2.99% APR with 48 Monthly Payments:&lt;/strong&gt; Minimum purchase $2,000. There is a promotional fee of $125 for this transaction. 2.99% APR from date of eligible purchase until paid in full. Monthly payment amount equals the purchase amount and estimated interest for the length of the offer divided by the number of months in the offer. Last payment may vary due to rounding. Ontime payments will pay the offer balance in full. Other transactions and charges affect the total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accountholders, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;3.99% APR with 60 Monthly Payments*&lt;/strong&gt; Minimum purchase $2,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*3.99% APR with 60 Monthly Payments:&lt;/strong&gt; Minimum purchase $2,000. There is a promotional fee of $125 for this transaction. 3.99% APR from date of eligible purchase until paid in full. Monthly payment amount equals the purchase amount and estimated interest for the length of the offer divided by the number of months in the offer. Last payment may vary due to rounding. Ontime payments will pay the offer balance in full. Other transactions and charges affect the total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accountholders, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;&lt;strong&gt;Utility Vehicle Plan Disclosures&lt;/strong&gt;&lt;/h3&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;0% APR for 24 Months with Equal Payments*&lt;/strong&gt; Minimum purchase $5,999. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*0% APR for 24 Months with Equal Payments:&lt;/strong&gt; Offer only available on new Cub Cadet utility vehicles. Minimum purchase $5,999. There is a promotional fee of $125 for this transaction. 0% APR from date of eligible purchase until paid in full. Monthly payment is the purchase amount divided by the number of months in the offer. Last payment may vary due to rounding. On-time payments will pay off the promotional balance. Other transactions and charges affect total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;1.99% APR with 36 Monthly Payments*&lt;/strong&gt; Minimum purchase $3,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*1.99% APR with 36 Monthly Payments:&lt;/strong&gt; Offer only available on new Cub Cadet utility vehicles. Minimum purchase $3,000. There is a promotional fee of $125 for this transaction. 1.99% APR from date of eligible purchase until paid in full. Monthly payment amount equals the purchase amount and estimated interest for the length of the offer divided by the number of months in the offer. Last payment may vary due to rounding. Ontime payments will pay the offer balance in full. Other transactions and charges affect the total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accountholders, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;2.99% APR with 48 Monthly Payments*&lt;/strong&gt; Minimum purchase $3,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*2.99% APR with 48 Monthly Payments: &lt;/strong&gt;Offer only available on new Cub Cadet utility vehicles. Minimum purchase $3,000. There is a promotional fee of $125 for this transaction. 2.99% APR from date of eligible purchase until paid in full. Monthly payment amount equals the purchase amount and estimated interest for the length of the offer divided by the number of months in the offer. Last payment may vary due to rounding. Ontime payments will pay the offer balance in full. Other transactions and charges affect the total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accountholders, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;3.99% APR with 60 Monthly Payments*&lt;/strong&gt; Minimum purchase $3,000. There is a promotional fee of $125 for this transaction.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;*3.99% APR with 60 Monthly Payments:&lt;/strong&gt; Offer only available on new Cub Cadet utility vehicles. Minimum purchase $3,000. There is a promotional fee of $125 for this transaction. 3.99% APR from date of eligible purchase until paid in full. Monthly payment amount equals the purchase amount and estimated interest for the length of the offer divided by the number of months in the offer. Last payment may vary due to rounding. Ontime payments will pay the offer balance in full. Other transactions and charges affect the total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accountholders, see your credit agreement for applicable terms. Subject to credit approval. Cub Cadet financing account issued by TD Bank, N.A.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="hero-financing">
+        <display-name xml:lang="x-default">0% For 24 Months</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+    &lt;div class="container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&#13;
+                &lt;picture&gt;&#13;
+                    &lt;source srcset="images/hero-banners/hero4_desktop.png?$staticlink$" media="(min-width: 1025px)" data-type="desktopimage" /&gt;&#13;
+                    &lt;source srcset="images/hero-banners/hero4_desktop.png?$staticlink$" media="(min-width: 768px)" data-type="tabletimage" /&gt;&#13;
+                    &lt;source srcset="images/hero-banners/mower2_mobile.jpg?$staticlink$" media="(max-width: 767px)" data-type="mobileimage" /&gt;&#13;
+                    &lt;img src="images/hero-banners/mower2_mobile.jpg?$staticlink$" alt="" data-type="defaultimage" class="img-fluid" /&gt;&#13;
+                &lt;/picture&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;!-- text block --&gt;&#13;
+            &lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+                &lt;div class="bg-secondary"&gt;&#13;
+                    &lt;div class="intro-block d-none d-lg-block"&gt;&#13;
+                        &lt;span class="intro1 label-1"&gt;SPECIAL FINANCING: &lt;/span&gt;&#13;
+                        &lt;span class="intro2 label-1 text-dark"&gt;Lawn Mowers&lt;/span&gt;&#13;
+                    &lt;/div&gt;&#13;
+                    &lt;div class="display-1"&gt;0% For 24 Months&lt;/div&gt;&#13;
+                    &lt;div class="p"&gt;The strength of Cub Cadet products is enough to convince you to buy. But to help you make the purchase, we're offering incredible financing opportunities.&lt;/div&gt;&#13;
+                    &lt;div class="copy-block"&gt;&lt;/div&gt;&#13;
+                    &lt;div class="cta-container"&gt;&lt;a data-type="ctatext" role="button" target="_self" href="$url('Page-Show', 'cid', 'td-info')$" class="btn btn-primary"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="sample-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="pll-commercial-carousel-financing">
+        <display-name xml:lang="x-default">Product Line Landing-Commercial Carousel Financing Program</display-name>
+        <description xml:lang="x-default">Commercial landing page carousel. Located in the product line landing folder.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_Landscaper-Trailer_03_desktop_1015x630_v1.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_Landscaper-Trailer_03_mobile_805x540_v1.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_Landscaper-Trailer_03_mobile_805x540_v1.jpg?$staticlink$" /&gt;&lt;img alt="Three men loading commercial lawn mowers on a trailer" class="img-fluid" data-type="defaultimage" src="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_Landscaper-Trailer_03_desktop_1015x630_v1.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+&lt;div class="bg-accent-5"&gt;&#13;
+&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-secondary"&gt;Commercial Equipment&lt;/span&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="display-1 text-light"&gt;Mow now, pay later.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="text-light p"&gt;No Interest until March 1, 2020, No Payment until April 1, 2020; thereafter, 2.99% for 36 Months [2.48% APR*]. An origination fee of $50 will be added to the amount financed. Valid From: August 1, 2019 - January 31, 2020.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;a class="btn btn-secondary" href="$url('Page-Show', 'cid', 'financing')$" target="" title="Learn More" aria-label="Learn More About Financing"&gt;LEARN MORE&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="pll-assets"/>
+        </folder-links>
+    </content>
+</library>

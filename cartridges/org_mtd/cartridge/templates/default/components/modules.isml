@@ -1,0 +1,33 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<iscomment>
+    Insert a content asset into the page
+</iscomment>
+<ismodule template="/components/content/contentAsset"
+    name="contentasset"
+    attribute="aid"
+/>
+
+<iscomment>
+    Render the svg icon HTML based on the given name and other options
+</iscomment>
+<ismodule template="util/svg"
+    name="svg"
+    attribute="icon"
+    attribute="hideUrl"
+    attribute="classes"
+    attribute="image"
+    attribute="altText"
+    attribute="showbackground"
+/>
+
+<iscomment>
+    Insert orderable product recommendation carousel based on recommendation type
+</iscomment>
+<ismodule template="product/components/recommendations"
+    name="productrec"
+    attribute="recommendationType"
+    attribute="title"
+    attribute="subtitle"
+/>
+<isinclude template="monetate/modules" />

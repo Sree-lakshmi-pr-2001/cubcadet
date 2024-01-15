@@ -1,0 +1,264 @@
+.card-group.category-tile-group {
+    padding: 0 rem(15px);
+
+    > .row {
+        width: 100vw;
+    }
+
+    .row .col-12 {
+        margin-bottom: rem(30px);
+
+        @include media-breakpoint-down(sm) {
+            &:last-child {
+                margin-bottom: rem(15px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 0 rem(30px);
+    }
+}
+
+.card.category-card {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 100%; // sync heights
+
+    // hover background image
+    background-position: center;
+    background-size: cover;
+
+    .bg-img {
+        position: absolute;
+    }
+
+    .primary-tile-image {
+        width: 100%;
+    }
+
+    .card-title {
+        @include underline($secondary, center, 50px, 2px);
+        @extend .h3; // override base .card-title h6 styles
+    }
+
+    .card-body {
+        padding: rem(15px);
+        background: $accent-3;
+
+        @include media-breakpoint-up(lg) {
+            padding: rem(20px);
+        }
+    }
+
+    .category-cta {
+        margin-top: rem(15px);
+        min-height: 20px;
+    }
+
+    // hover actions reveals lifestyle image
+    // and removes description
+    @include media-breakpoint-up(lg) {
+        &:hover {
+            .card-body {
+                background-color: $trans;
+            }
+
+            .card-title,
+            .link-primary {
+                color: $white;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .link-primary::after {
+                background-color: $white;
+            }
+
+            .primary-tile-image,
+            .card-text {
+                opacity: 0;
+                animation: fade-in 0.2s linear forwards;
+
+                @keyframes fade-in {
+                    0% { opacity: 1; }
+                    100% { opacity: 0; }
+                }
+            }
+        }
+    }
+}
+
+.card.category-card-dealer {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 100%; // sync heights
+
+    // hover background image
+    background-position: center;
+    background-size: cover;
+
+    @include media-breakpoint-down(md) {
+        border-bottom: 1px solid $black;
+        background-image: none !important;
+    }
+
+    .card-body {
+        padding: rem(15px);
+        background: $accent-3;
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            align-items: center;
+            padding-right: 8px;
+            background: transparent;
+        }
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: rem(20px);
+        }
+    }
+
+    .card-title {
+        @include underline($secondary, center, 50px, 2px);
+        @extend .h3; // override base .card-title h6 styles
+
+        @include media-breakpoint-down(md) {
+            order: 1;
+            padding: 0;
+            margin: 0 10px 0 0;
+            font-size: rem(18px);
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+        }
+
+        &::after {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+
+    .card-text {
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    .bg-img {
+        position: absolute;
+    }
+
+    picture {
+        @include media-breakpoint-down(md) {
+            flex: 0 0 auto;
+            order: 0;
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+        }
+    }
+
+    .primary-tile-image {
+        @include media-breakpoint-up(lg) {
+            width: auto;
+            max-height: 200px;
+        }
+    }
+
+    .category-cta {
+        margin-top: rem(15px);
+        min-height: 20px;
+
+        @include media-breakpoint-down(md) {
+            order: 2;
+            position: relative;
+            height: 18px;
+            width: 16px;
+            margin: 0 0 0 auto;
+            min-height: auto;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+            align-self: flex-end;
+        }
+
+        .btn {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+
+        .icon::after {
+            @include media-breakpoint-down(md) {
+                content: '';
+                position: absolute;
+                right: 0;
+                display: inline-block;
+                height: 18px;
+                width: 18px;
+                background: $svg-arrow-up center center no-repeat;
+                border: 0;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .overlay-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    // hover actions reveals lifestyle image
+    // and removes description
+    @include media-breakpoint-up(lg) {
+        &:hover {
+            .card-body {
+                background-color: $trans;
+            }
+
+            .card-title,
+            .link-primary {
+                color: $white;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .link-primary::after {
+                background-color: $white;
+            }
+
+            .primary-tile-image,
+            .card-text {
+                opacity: 0;
+                animation: fade-in 0.2s linear forwards;
+
+                @keyframes fade-in {
+                    0% { opacity: 1; }
+                    100% { opacity: 0; }
+                }
+            }
+        }
+    }
+}

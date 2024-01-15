@@ -1,0 +1,9 @@
+<!--- TEMPLATENAME: pdplink.isml --->
+<h4 class="attribute-name">
+    ${Resource.msg('label.diagrams', 'product', null)}
+</h4>
+<ul>
+    <li class="attribute-values">
+        <a href="${URLUtils.url('ARI-Show', 'arimn', pdict.product.modelNumber, 'arilangcode', pdict.ariLanguage)}" target="_blank" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('label.diagrams', 'product', null))}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('label.diagrams', 'product', null))}">${Resource.msg('label.diagrams', 'product', null)}</a>
+    </li>
+</ul>

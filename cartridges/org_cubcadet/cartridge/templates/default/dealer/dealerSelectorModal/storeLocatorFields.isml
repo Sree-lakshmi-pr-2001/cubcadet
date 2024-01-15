@@ -1,0 +1,37 @@
+<isset name="viewType" value="${dw.system.Site.getCurrent().getCustomPreferenceValue('mtdDealerFoundTypeView').value}" scope="page" />
+
+<div class="col-12 store-search">
+    <div class="alert alert-danger geocoding-error hidden"><isprint value="${modalViewData.storeSearchAddressErrorMessage}" encoding="off" /></div>
+    <div class="row mb-2 mb-sm-3 pt--md-3">
+        <div class="col-12 col-lg-6">
+            <form action="${URLUtils.url('Dealer-Find')}" class="store-locator" method="get" name="storelocator" novalidate>
+                <div class="d-flex justify-content-xs-between sl-form dealer-selector-search-form-inner">
+                    <div class="form-group required sl-zip dealer-locator">
+                        <label class="form-control-label" for="store-postal-code">${Resource.msg('field.address.zip.postal.code','storeLocator',null)}</label>
+                        <input autofocus required type="text" class="form-control store-postal-code-input" id="store-postal-code" name="address" value="" autocomplete="nofill"/>
+                        <div class="sl-btn dealer-locator">
+                            <button class="btn btn-secondary btn-storelocator-search btn-sm" type="submit">
+                                ${Resource.msg('button.find.stores','storeLocator',null)}
+                            </button>
+                        </div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="nav nav-tabs" role="tablist">
+                <div class="dealer-selector-radio-container">
+                    <input id="listView" class="dealer-selector-radio-input" name="storeviewtype" type="radio" data-target="#contentListView" <isif condition="${viewType === 'listView'}">checked</isif>>
+                    <input class="custom-radio-input" type="radio" tabindex="0"></input>
+                    <label class="dealer-selector-radio-label" for="listView">${Resource.msg('dealer.selectormodal.radiobutton.listview','dealer',null)}</label>
+                </div>
+                <div class="dealer-selector-radio-container">
+                    <input id="mapView" class="dealer-selector-radio-input" name="storeviewtype" type="radio" data-target="#contentMapView" <isif condition="${viewType === 'mapView'}">checked</isif>>
+                    <input class="custom-radio-input" type="radio" tabindex="0"></input>
+                    <label class="dealer-selector-radio-label" for="mapView">${Resource.msg('dealer.selectormodal.radiobutton.mapview','dealer',null)}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

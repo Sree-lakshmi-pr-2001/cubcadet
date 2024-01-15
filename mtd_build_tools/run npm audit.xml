@@ -1,0 +1,44 @@
+<project name="npm-audit" default="npm-audit" basedir="." >
+
+  <!-- This build task exists to allow you to run 'npm audit' locally separate from the 
+       gulp_builder build. It is also included in the builders.xml file for automation. -->
+  <condition property="have-npm-audit" else="false">
+    <and>
+      <available file="${basedir}/../node_modules/audit" type="dir"/>
+    </and>
+  </condition>
+
+  <!-- Using back slash for windows and not using workingCopy variable in the npm audit report
+       filename since workingCopy contains forward slash. Not very important but makes the path 
+       in echo message below look correct in windows. 
+       
+       The npm audit report pathname cannot be in the deploy/working directory as it causes
+       the yazl node module to crash with an "invalid relative path: " error when trying to create 
+       the zip files. -->
+  <condition property="separator" value="\">
+        <os family="windows" />
+  </condition>
+  <condition property="separator" value="/">
+        <os family="unix" />
+  </condition>
+
+    <!-- Check that the npm audit command exists in this install -->
+  <target name="check-npm-audit" unless="${have-npm-audit}">
+        <echo level="info">The npm audit script was not found so this step was skipped.</echo>
+        <echo level="info">Need to upgrade to npm v6.1.0 or higher and run 'npm install audit'.</echo>
+  </target>
+
+  <target name="npm-audit" depends="check-npm-audit" if="${have-npm-audit}">
+    <property name="npm-audit-report-path" value="${basedir}${separator}npm audit report_build_${buildVersion}.txt" />
+        <exec executable="cmd" osfamily="windows" failonerror="false">
+            <arg value="/c"/>
+            <arg value='npm audit > "${npm-audit-report-path}" &amp; type "${npm-audit-report-path}"'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="false">
+            <arg value="-c"/>
+            <arg value='npm audit > "${npm-audit-report-path}" | cat "${npm-audit-report-path}"'/>
+        </exec>
+        <echo>npm audit report can be found at ${npm-audit-report-path}</echo>
+  </target>
+
+</project>

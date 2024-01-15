@@ -1,0 +1,114 @@
+
+<iscontent type="text/html" charset="UTF-8" />
+
+<isinclude template="contentAccelerator/components/header" />
+
+<iscomment>
+    Dashboard allows the user to open an existing asset, make a copy of an asset or create a new asset
+    @TODO: Ideas: thumbs of recently used to click, pull all presets to click for loaded template
+</iscomment>
+
+<iscomment> Actions - Modify, Duplicate, Create
+    <div>
+        <h1>${Resource.msg('dashboard.heading', 'content_accelerator', null)}</h1>
+    </div>
+</iscomment>
+
+<div id="dashboard">
+    <iscomment> Set Locale </iscomment>
+    <div class="row">
+        <div class="col">
+            <div class="locale-picker">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="mr-2">${Resource.msg('dashboard.label.locale', 'content_accelerator', null)}</label>
+                        <select class="form-control locale-selection">
+                            <isprint value="${pdict.localeOptions}" encoding="off" />
+                        </select>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row">
+
+            <div class="col">
+                <div class="create-new-section">
+                    <h3>${Resource.msg('dashboard.create.heading', 'content_accelerator', null)}</h3>
+                    <iscomment>
+                        // removing block option until ready
+                        <a id="create-asset" class="btn btn-primary" href="${URLUtils.url('ContentAccelerator-Create')}">${Resource.msg('dashboard.button.create', 'content_accelerator', null)}</a>
+
+                    <h4>Preset Options:</h4></iscomment>
+                    <iscomment>display selectable list</iscomment>
+                    <div id="preset-options" class="row mb-3">
+                        <isif condition="${pdict.presets}">
+                            <isloop items="${pdict.presets}" var="preset">
+                                <div id="${preset.cid}" class="col-2">
+                                    <a href="${URLUtils.https('ContentAccelerator-LoadContentAsset', 'contentAssetID', preset.cid, 'locale', pdict.selectedLocale)}" class="mr-2 text-info">
+                                        <div class="fa ${preset.buttonIcon} gjs-block gjs-one-bg" title="${preset.buttonLabel}" draggable="false"><div class="gjs-block-label">${preset.buttonLabel}</div></div>
+                                    </a>
+                                </div>
+                            </isloop>
+                        </isif>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col">
+                <div class="open-content-section">
+                    <h3>${Resource.msg('dashboard.modify.heading', 'content_accelerator', null)}</h3>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#asset-browser-modal">${Resource.msg('dashboard.button.choose', 'content_accelerator', null)}</button>
+                </div>
+            </div>
+        </div>
+
+        <iscomment> 5 most recenlty modified assets </iscomment>
+        <div class="row">
+            <div class="col-12">
+                <div id="recent-assets">
+                    <h4>${Resource.msg('dashboard.recent.heading', 'content_accelerator', null)}</h4>
+                    <table class="recent-assets-list">
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Modified Date</th>
+                            <th>Options</th>
+                        </thead>
+                        <tbody>
+                            <isloop var="asset" items="${pdict.recentAssets}" status="loopstate">
+                                <tr>
+                                    <td>${asset.ID}</td>
+                                    <td><isprint value="${asset.name}" /></td>
+                                    <td><isprint value="${asset.lastModified}" formatter="MM/dd/yyyy hh:mm aaa" /></td>
+                                    <td>
+                                        <a href="${URLUtils.https('ContentAccelerator-LoadContentAsset', 'contentAssetID', asset.ID, 'locale', pdict.selectedLocale)}" class="mr-2 text-info">
+                                            ${Resource.msg('dashboard.button.edit', 'content_accelerator', null)}
+                                        </a>
+                                        |
+                                        <a href="${URLUtils.https('ContentAccelerator-CopyContentAsset', 'contentAssetID', asset.ID, 'locale', pdict.selectedLocale)}" class="ml-2 text-info">
+                                            ${Resource.msg('dashboard.button.copy', 'content_accelerator', null)}
+                                        </a>
+                                    </td>
+                                </tr>
+                            </isloop>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<isinclude template="contentAccelerator/components/footer" />
+
+<iscomment> page scripts </iscomment>
+<script src="${pdict.caJS}"></script>

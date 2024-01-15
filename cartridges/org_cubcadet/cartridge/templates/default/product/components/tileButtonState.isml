@@ -1,0 +1,317 @@
+<!--- TEMPLATENAME: tileButtonState.isml --->
+<isscript>
+    var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');
+    var bsHelper = require('org_mtd_ma/cartridge/scripts/utils/ButtonStateHelper');
+    var currentProduct;
+    if (typeof product !== 'undefined') {
+        currentProduct = product;
+    } else if (typeof pdict.product !== 'undefined') {
+        currentProduct = pdict.product;
+    }
+    var buttonStates = bsHelper.getStates(currentProduct.id);
+    var dealerDeliveryCost = buttonStates.dealerDeliveryCost;
+    // Get Content Assets
+    var dealerDeliveryTime = dw.content.ContentMgr.getContent(buttonStates.dealerDeliveryTime);
+    var pickUpTime = dw.content.ContentMgr.getContent(buttonStates.pickUpTime);
+    var shiptoHomeTime = dw.content.ContentMgr.getContent(buttonStates.shiptoHomeTime);
+    var shiptoHomeCost = buttonStates.shiptoHomeCost;
+
+    var availableShippingMethod = '';
+    var isDealerDeliveryPreferred = false;
+    var isStorePickupPreferred = false;
+    var isShiptoHomePreferred = false;
+
+    if (buttonStates && buttonStates.dealerDelivery) {
+        availableShippingMethod = 'dealer-delivery';
+        isDealerDeliveryPreferred = true;
+    } else if (buttonStates && buttonStates.pickUp) {
+        availableShippingMethod = 'dealer-pickup';
+        isStorePickupPreferred = true;
+    } else if (buttonStates && buttonStates.shipToHome) {
+        availableShippingMethod = 'standard';
+        isShiptoHomePreferred = true
+    }
+</isscript>
+<!-- scenarioID = ${buttonStates.scenarioID}-->
+<isset name="hideAvailabilityAndPrice" value="${false}" scope="page" />
+<isset name="hideWholeSection" value="${false}" scope="page" />
+<isif condition="${currentProduct.raw.custom['edealer-product-type'].value === 'AUTO_WG' || currentProduct.raw.custom['edealer-product-type'].value === 'PT_ACC'}">
+    <isset name="hideAvailabilityAndPrice" value="${true}" scope="page" />
+    <isset name="hideWholeSection" value="${true}" scope="page" />
+</isif>
+
+<div class="where-to-buy where-to-buy--pdp" data-product-id="${currentProduct.id}" data-available-shipping-method="${availableShippingMethod}">
+    <div class="where-to-buy__availability ${hideWholeSection ? 'd-none' : ''} ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+        <div class="row no-gutters">
+            <div class="col-auto mr-1">
+                <span class="where-to-buy__availability__title">
+                    ${Resource.msg('dealer.wheretobuy.availability', 'dealer', null)}:
+                </span>
+            </div>
+            <div class="col">
+                <iscomment>Unavailable message</iscomment>
+                <isif condition="${!buttonStates.cubBuyableProduct}">
+                    <div class="where-to-buy__availability__item selected">
+                        <isif condition="${buttonStates.dealerIsSelected}">
+                            <div class="where-to-buy__availability__unavailable-msg">
+                                ${Resource.msg('dealer.wheretobuy.theSelectedDealerCanNotSellThisItem', 'dealer', null)}
+                            </div>
+                        <iselse>
+                            <div class="where-to-buy__availability__unavailable-msg">
+                                ${Resource.msg('dealer.wheretobuy.thisItemIsTemporarilyUnavailable', 'dealer', null)}
+                            </div>
+                        </isif>
+                        <isif condition="${!isQuickView}">
+                            <button type="button" class="btn-link where-to-buy__availability__dealer-find" data-toggle="modal" data-target="#dealerSelectorModal">
+                                ${Resource.msg('dealer.tagline.checkanotherdealerinventory.msg', 'dealer', null)}
+                            </button>
+                        </isif>
+                    </div>
+                </isif>
+
+                <iscomment>Dealer Delivery</iscomment>
+                <div class="where-to-buy__availability__item ${isDealerDeliveryPreferred ? 'selected' : ''}"
+                     data-for-shipping-method="dealer-delivery"
+                >
+                    <span class="where-to-buy__availability__time">
+                        ${Resource.msg('dealer.wheretobuy.DeliveryIn', 'dealer', null)}
+                        <isprint value="${dealerDeliveryTime.custom.body}" encoding="off" />
+                    </span>
+                    <isif condition="${buttonStates.findDelivery && !isQuickView}">
+                        <button type="button" class="btn-link where-to-buy__availability__dealer-find" data-toggle="modal" data-target="#dealerSelectorModal" data-event-type="findDeliveryOption">
+                            ${Resource.msg('dealer.tagline.finddeliveryoptions.msg', 'dealer', null)}
+                        </button>
+                    </isif>
+                </div>
+                <iscomment>Store Pickup</iscomment>
+                <div class="where-to-buy__availability__item ${isStorePickupPreferred ? 'selected' : ''}"
+                     data-for-shipping-method="dealer-pickup"
+                >
+                    <span class="where-to-buy__availability__time">
+                        ${Resource.msg('dealer.wheretobuy.pickUpIn', 'dealer', null)}
+                        <isprint value="${pickUpTime.custom.body}" encoding="off" />
+                    </span>
+                    <isif condition="${buttonStates.findDelivery && !isQuickView}">
+                        <button type="button" class="btn-link where-to-buy__availability__dealer-find" data-toggle="modal" data-target="#dealerSelectorModal" data-event-type="findDeliveryOption">
+                            ${Resource.msg('dealer.tagline.finddeliveryoptions.msg', 'dealer', null)}
+                        </button>
+                    </isif>
+                </div>
+                <iscomment>Ship to Home</iscomment>
+                <div class="where-to-buy__availability__item ${isShiptoHomePreferred ? 'selected' : ''}"
+                     data-for-shipping-method="standard"
+                >
+                    <span class="where-to-buy__availability__time">
+                        ${Resource.msg('dealer.wheretobuy.shipToHomeIn', 'dealer', null)}
+                        <isprint value="${shiptoHomeTime.custom.body}" encoding="off" />
+                    </span>
+                    <isif condition="${buttonStates.seeDetailsLink}">
+                        <div class="where-to-buy__availability__more">
+                            <span class="where-to-buy__availability__more__info">
+                                ${Resource.msg('dealer.wheretobuy.noteSomeAssemblyRequired', 'dealer', null)}
+                            </span>
+                            <a class="where-to-buy__availability__more__link" data-toggle="modal" data-target="#seeDetailsModal" href="#">
+                                ${Resource.msg('dealer.wheretobuy.seeDetails', 'dealer', null)}
+                            </a>
+                        </div>
+                    </isif>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="where-to-buy__options" id="deliveryMethods">
+        <div id="dealer-delivery"
+             class="where-to-buy__option where-to-buy__option--dealer-delivery ${buttonStates.dealerDeliveryClasses}  ${isDealerDeliveryPreferred ? 'selected' : ''}"
+             data-set-shipping-method-url="${URLUtils.https('Dealer-SetShippingMethod', 'method', 'dealer-delivery')}"
+             data-shipping-method = "dealer-delivery"
+        >
+            <div class="where-to-buy__option__icon-wrap">
+                <i class="where-to-buy__option__icon"></i>
+            </div>
+            <div class="where-to-buy__option__title">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.dealerDelivery', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__subtitle ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+                <span class="where-to-buy__option__subtitle__available">
+                    ${Resource.msg('dealer.wheretobuy.arrivesIn', 'dealer', null)}
+                    <isprint value="${dealerDeliveryTime.custom.body}" encoding="off" />
+                </span>
+                <span class="where-to-buy__option__subtitle__unavailable">
+                    ${Resource.msg('dealer.wheretobuy.unavailable', 'dealer', null)}
+                </span>
+            </div>
+            <isif condition="${dealerDeliveryCost > 0}">
+                <div class="where-to-buy__option__cost ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+                    <span>
+                        <isprint value="${Resource.msg('dealer.home.delivery.dollar', 'dealer', null)}" /><isprint value="${dealerDeliveryCost}" formatter="#" />
+                    </span>
+                </div>
+            </isif>
+            <div class="where-to-buy__option__badge">
+                <i class="where-to-buy__option__badge__icon"></i>
+            </div>
+        </div>
+
+        <div id="in-store-pickup"
+             class="where-to-buy__option where-to-buy__option--in-store-pickup ${buttonStates.storePickupDeliveryClasses} ${isStorePickupPreferred ? 'selected' : ''}"
+             data-set-shipping-method-url="${URLUtils.https('Dealer-SetShippingMethod', 'method', 'dealer-pickup')}"
+             data-shipping-method = "dealer-pickup"
+        >
+            <div class="where-to-buy__option__icon-wrap">
+                <i class="where-to-buy__option__icon"></i>
+            </div>
+            <div class="where-to-buy__option__title">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.inStorePickUp', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__subtitle ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+                <span class="where-to-buy__option__subtitle__available">
+                    ${Resource.msg('dealer.wheretobuy.availableIn', 'dealer', null)}
+                    <isprint value="${pickUpTime.custom.body}" encoding="off" />
+                </span>
+                <span class="where-to-buy__option__subtitle__unavailable">
+                    ${Resource.msg('dealer.wheretobuy.unavailable', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__cost ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.free', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__badge">
+                <i class="where-to-buy__option__badge__icon"></i>
+            </div>
+        </div>
+
+        <div id="ship-to-home"
+             class="where-to-buy__option where-to-buy__option--ship-to-home ${buttonStates.shiptoHomeDeliveryClasses}  ${isShiptoHomePreferred ? 'selected' : ''}"
+             data-set-shipping-method-url="${URLUtils.https('Dealer-SetShippingMethod', 'method', 'standard')}"
+             data-shipping-method = "standard"
+        >
+            <div class="where-to-buy__option__icon-wrap">
+                <i class="where-to-buy__option__icon"></i>
+            </div>
+            <div class="where-to-buy__option__title">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.shipToHome', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__subtitle ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+                <span class="where-to-buy__option__subtitle__available">
+                    ${Resource.msg('dealer.wheretobuy.shipsIn', 'dealer', null)}
+                    <isprint value="${shiptoHomeTime.custom.body}" encoding="off" />
+                </span>
+                <span class="where-to-buy__option__subtitle__unavailable">
+                    ${Resource.msg('dealer.wheretobuy.unavailable', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__cost ${hideAvailabilityAndPrice ? 'd-none' : ''}">
+                <span>
+                    <isprint value="${shiptoHomeCost}" encoding="off" />
+                </span>
+            </div>
+            <div class="where-to-buy__option__badge">
+                <i class="where-to-buy__option__badge__icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="where-to-buy__buttons">
+        <div class="simple-quantity invisible d-none">
+            <input id="quantity" type="text" name="quantity-input" class="quantity-input quantity-select form-control"
+                   value="1"
+                   data-url="${URLUtils.url('Product-Variation', 'pid', currentProduct.id)}"
+            />
+        </div>
+        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+
+        <isif condition="${buttonStates.addToCart}">
+            <button class="where-to-buy__button ${currentProduct.productType === 'set' ? 'add-to-cart-global' : 'add-to-cart'} btn btn-secondary"
+                    data-pid="${currentProduct.id}"
+                    data-gtmdata="${JSON.stringify(tagManager.getProductData(currentProduct.id))}"
+            >
+                <isif condition="${currentProduct.productType === 'set'}">
+                    ${Resource.msg('button.addalltocart', 'common', null)}
+                <iselse>
+                    ${Resource.msg('button.addtocart', 'common', null)}
+                </isif>
+            </button>
+        <iselseif condition="${buttonStates.outOfStock}">
+            <isif condition="${buttonStates.dealerIsSelected}">
+                <button class="where-to-buy__button btn btn-secondary js-contact-dealer-modal"
+                    data-product-id="${currentProduct.id}"
+                    data-product-name="${currentProduct.name}"
+                    data-contact-dealer-modal-update-url="${URLUtils.url('Dealer-ContactDealerModalUpdate')}"
+                >
+                    ${Resource.msg('button.contactDealer', 'common', null)}
+                </button>
+            <iselse/>
+                <button class="where-to-buy__button add-to-cart btn btn-secondary"
+                        data-pid="${currentProduct.id}"
+                        disabled
+                >
+                    ${Resource.msg('label.outofstock', 'common', null)}
+                </button>
+            </isif>
+        <iselseif condition="${buttonStates.unavailable}">
+            <isif condition="${buttonStates.dealerIsSelected}">
+                <button class="where-to-buy__button btn btn-secondary js-contact-dealer-modal"
+                    data-product-id="${currentProduct.id}"
+                    data-product-name="${currentProduct.name}"
+                    data-contact-dealer-modal-update-url="${URLUtils.url('Dealer-ContactDealerModalUpdate')}"
+                >
+                    ${Resource.msg('button.contactDealer', 'common', null)}
+                </button>
+            <iselse/>
+                <button class="where-to-buy__button add-to-cart btn btn-secondary"
+                        data-pid="${currentProduct.id}"
+                        disabled
+                >
+                    ${Resource.msg('button.unavailable', 'common', null)}
+                </button>
+            </isif>
+        <iselseif condition="${buttonStates.contactDealer}">
+            <isif condition="${!isQuickView}">
+                <button class="where-to-buy__button btn btn-secondary js-contact-dealer-modal"
+                    data-product-id="${currentProduct.id}"
+                    data-product-name="${currentProduct.name}"
+                    data-contact-dealer-modal-update-url="${URLUtils.url('Dealer-ContactDealerModalUpdate')}"
+                >
+                    ${Resource.msg('button.contactDealer', 'common', null)}
+                </button>
+            <iselse>
+                <button class="where-to-buy__button btn btn-secondary" data-button-event="findDealerEvent" data-find-dealer-url="${URLUtils.url('Stores-Find')}">
+                ${Resource.msg('find.a.dealer', 'common', null)}
+                </button>
+            </isif>
+        <iselseif condition="${buttonStates.findDealer}">
+            <button class="where-to-buy__button btn btn-secondary" data-button-event="findDealerEvent" data-find-dealer-url="${URLUtils.url('Stores-Find')}">
+                ${Resource.msg('find.a.dealer', 'common', null)}
+            </button>
+        <iselse>
+            <isif condition="${!isQuickView}">
+                <button type="button" class="where-to-buy__button btn btn-secondary" data-toggle="modal" data-target="#dealerSelectorModal">
+                    <isif condition="${currentProduct.productType === 'set'}">
+                        ${Resource.msg('button.addalltocart', 'common', null)}
+                    <iselse>
+                        ${Resource.msg('dealer.tile.button.addToCart', 'dealer', null)}
+                    </isif>
+                </button>
+            <iselse>
+                <button class="where-to-buy__button btn btn-secondary" data-button-event="findDealerEvent" data-find-dealer-url="${URLUtils.url('Stores-Find')}">
+                ${Resource.msg('find.a.dealer', 'common', null)}
+                </button>
+            </isif>
+        </isif>
+
+        <isif condition="${buttonStates.checkAnotherDealer && !isQuickView}">
+            <button type="button" class="btn-link" data-toggle="modal" data-target="#dealerSelectorModal">
+                ${Resource.msg('dealer.tagline.checkanotherdealerinventory.msg', 'dealer', null)}
+            </button>
+        </isif>
+    </div>
+</div>

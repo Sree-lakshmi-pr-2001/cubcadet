@@ -1,0 +1,8 @@
+<div class="product-rating clearfix">
+    <isif condition="${!pdict.product.isParts}">
+        <!-- Product Rating -->
+        <div class="ratings">
+            <isinclude template="product/components/productRating" />
+        </div>
+    </isif>
+</div>

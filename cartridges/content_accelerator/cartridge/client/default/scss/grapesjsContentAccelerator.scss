@@ -1,0 +1,76 @@
+/**
+* This CSS is injected into the canvas of the editor
+*/
+
+.container,
+.cta-container {
+    min-height: 40px;
+}
+
+.row {
+    min-height: 20px;
+}
+
+.hero-full-width {
+    position: relative;
+
+    .block-overlay {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+
+    picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.hero {
+    height: auto; // Override the 25vh setting for heros in base ref app
+
+    .col {
+        padding: 0; // override boostrap
+    }
+
+    .content-container {
+        margin: 0 rem(15px);
+    }
+
+    .hero-block {
+        > div {
+            width: 100%;
+            padding: 15% 11%;
+        }
+
+        .intro-block,
+        .display-1,
+        .copy-block {
+            margin-bottom: 5%;
+        }
+
+        ul {
+            font-size: 1rem;
+            padding-left: rem(15px);
+            line-height: 1.25;
+            list-style-type: none;
+
+            li::before {
+                content: "\2022";
+                font-size: 22px;
+                position: relative;
+                top: 2px;
+                margin-left: -15px;
+                padding-right: 10px;
+            }
+        }
+
+        .cta-container {
+            text-align: center;
+        }
+    }
+}

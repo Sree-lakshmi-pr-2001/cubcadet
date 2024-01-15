@@ -1,0 +1,6 @@
+<isinclude template="/components/modules" />
+
+<isif condition="${slotcontent != null && slotcontent.content.length > 0}">
+    <isset name="assets" value="${slotcontent.content}" scope="pdict" />
+    <isinclude template="content/components/blogPostCarousel" />
+</isif>

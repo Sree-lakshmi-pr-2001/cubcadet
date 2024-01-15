@@ -1,0 +1,4 @@
+<isdecorate template="common/layout/page">
+  <isinclude template="/components/modules" />
+    <iscontentasset aid="utv-service-notice" />
+</isdecorate>

@@ -1,0 +1,19 @@
+<isscript> var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+<div class="pdp-link">
+    <a class="link" href="${pdict.urls.product}" data-gtmdata="${JSON.stringify(tagManager.getProductData(product.id))}">${product.productName}</a>
+</div>
+<isif condition="${product.isWholeGood}">
+    <div class="product-extended-name ${product.extendedName ? '' : 'invisible d-none'}">
+        <span class="name">${product.extendedName}</span>
+    </div>
+    <iscomment>
+        JS may reference tile ID, therefore this is set to be hidden
+    </iscomment>
+    <div class="product-number invisible d-none">
+        <isinclude template="product/components/productNumber" />
+    </div>
+<iselse>
+    <div class="product-number">
+        <isinclude template="product/components/productNumber" />
+    </div>
+</isif>

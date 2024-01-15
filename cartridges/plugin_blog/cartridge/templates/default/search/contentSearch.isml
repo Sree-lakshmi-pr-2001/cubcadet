@@ -1,0 +1,24 @@
+<!--- TEMPLATENAME: articleSearch.isml --->
+<isdecorate template="common/layout/page">
+<isinclude template="/components/modules"/>
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+    </isscript>
+
+    <div class="blog-search-results">
+        <iscomment> Breadcrumbs </iscomment>
+        <div class="blog-breadcrumb container">
+            <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        </div>
+
+        <iscomment> Header </iscomment>
+        <isinclude template="search/components/contentSearchHeader"/>
+
+        <div class="container">
+            <isinclude template="search/contentSearchNoDecorator">
+        </div>
+    </div>
+</isdecorate>

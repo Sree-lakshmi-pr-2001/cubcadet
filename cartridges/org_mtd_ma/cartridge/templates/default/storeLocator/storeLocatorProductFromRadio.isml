@@ -1,0 +1,27 @@
+<label for="productFrom">
+    ${Resource.msg('field.purchased.product.from','storeLocator',null)}
+    <span class="sl-purchase-from-tooltip">
+        <iscontentasset aid="sl-purchase-from-tooltip"/>
+    </span>
+</label>
+<div class="custom-radio product-from-list" data-action-url="${pdict.stores.actionUrl}" data-missing-error="${Resource.msg('error.message.required', 'login', null)}">
+    <div class="form-check">
+        <input id="productFrom-dealer" name="productFrom" type="radio" class="custom-control-input form-check-input" value="dealers" checked>
+        <label class="custom-control-label product-from-option" for="productFrom-dealer">
+            <span class="font-weight-normal">${Resource.msg('field.radio.dealers','storeLocator',null)}</span>
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input id="productFrom-cubcare" name="productFrom" type="radio" class="custom-control-input form-check-input" value="cubcare">
+        <label class="custom-control-label product-from-option" for="productFrom-cubcare">
+            <span class="font-weight-normal">
+                <isif condition="${(dw.system.Site.getCurrent().ID === 'troybilt')}">
+                        ${Resource.msg('field.radio.troybilt','storeLocator',null)}
+                <iselse>
+                        ${Resource.msg('field.radio.cubcare','storeLocator',null)}
+                </isif>
+            </span>
+        </label>
+    </div>
+</div>

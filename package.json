@@ -1,0 +1,1151 @@
+{
+  "name": "lyonscg-sfra",
+  "version": "3.2.0",
+  "lcgversion": "1.0.0",
+  "description": "LyonsCG maintained version of SFCC SFRA",
+  "engines": {
+    "node": "8.9.0"
+  },
+  "scripts": {
+    "test": "node build_tools/build --test ./test/unit/**/*.js",
+    "test:appium": "node bin/Makefile functional -- appium -- ",
+    "cover": "node build_tools/build --cover",
+    "test:integration": "node bin/Makefile integration -- ",
+    "test:functional": "node bin/Makefile functional -- ",
+    "test:functional:docker": "bin/test-functional-docker.sh",
+    "test:functional:sauce": "./node_modules/.bin/wdio test/functional/webdriver/wdio.conf.js ",
+    "compile:js:prod": "webpack --config build_tools/tasks/compile.js --mode=production --config-name js",
+    "compile:scss:prod": "webpack --config build_tools/tasks/compile.js --mode=production --config-name scss",
+    "compile:js": "webpack --config build_tools/tasks/compile.js --mode=development --config-name js",
+    "compile:scss": "webpack --config build_tools/tasks/compile.js --mode=development --config-name scss",
+    "compile:fonts": "node bin/Makefile compileFonts",
+    "watch": "webpack --config build_tools/tasks/compile.js --mode=development --watch --info-verbosity none",
+    "lint": "node build_tools/build --lint",
+    "upload": "node build_tools/build --upload",
+    "uploadCartridge": "node build_tools/build --uploadCartridge",
+    "release": "node bin/Makefile release --",
+    "deployCartridges": "node build_tools/build --deployCartridges",
+    "createCartridge": "node build_tools/build --createCartridge",
+    "deployData:blog-mtd": "node build_tools/build --deploy-data --data-bundle=blog-mtd",
+    "deploy": "node --max-old-space-size=3048 build_tools/build --deploy-data",
+    "mtd_test": "node mtd_build_tools/build --test ./test/unit/**/*.js",
+    "mtd_test:appium": "node bin/Makefile functional -- appium -- ",
+    "mtd_cover": "node mtd_build_tools/build --cover",
+    "mtd_compile:js:prod": "webpack --config mtd_build_tools/tasks/compile.js --mode=production --config-name js",
+    "mtd_compile:scss:prod": "webpack --config mtd_build_tools/tasks/compile.js --mode=production --config-name scss",
+    "mtd_compile:js": "webpack --config mtd_build_tools/tasks/compile.js --mode=development --config-name js",
+    "mtd_compile:scss": "webpack --config mtd_build_tools/tasks/compile.js --mode=development --config-name scss",
+    "mtd_compile:fonts": "node bin/Makefile compileFonts",
+    "mtd_watch": "webpack --config mtd_build_tools/tasks/compile.js --mode=development --watch --info-verbosity none",
+    "mtd_lint": "node mtd_build_tools/build --lint",
+    "mtd_upload": "node mtd_build_tools/build --upload",
+    "mtd_uploadCartridge": "node mtd_build_tools/build --uploadCartridge",
+    "mtd_deployCartridges": "node mtd_build_tools/build --deployCartridges",
+    "mtd_createCartridge": "node mtd_build_tools/build --createCartridge",
+    "mtd_deploy": "node --max-old-space-size=3048 mtd_build_tools/build --deploy-data"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --lint-no-cache"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:lyonsconsultinggroup/reference-application-mobile-first.git"
+  },
+  "author": "Ilya Volodin <ivolodin@demandware.com>",
+  "contributors": [
+    "Ryan Walter <rwalter@lyonscg.com>",
+    "Dave Haas <dhaas@lyonscg.com>",
+    "Sandra Golden <sgolden@lyonscg.com>"
+  ],
+  "homepage": "https://bitbucket.org/lyonsconsultinggroup/reference-application-mobile-first#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@tridnguyen/config": "^2.3.1",
+    "babel-loader": "^8.0.6",
+    "cache-loader": "^1.2.5",
+    "chai": "^3.5.0",
+    "chai-subset": "^1.5.0",
+    "chalk": "^1.1.3",
+    "cheerio": "0.22.0",
+    "cldr-data": "^31.0.2",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.0",
+    "dwupload": "file:./bin/dwupload",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb-base": "^5.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-sitegenesis": "~1.0.0",
+    "folder-zip": "0.0.5",
+    "glob": "^7.1.4",
+    "globalize": "^1.4.2",
+    "grapesjs": "^0.14.62",
+    "husky": "^1.3.1",
+    "imagesloaded": "^4.1.4",
+    "istanbul": "^0.4.4",
+    "jsonlint": "^1.6.3",
+    "lodash": "^4.14.2",
+    "mini-css-extract-plugin": "^0.4.5",
+    "minimatch": "^3.0.4",
+    "minimist": "^1.2.0",
+    "mocha": "^2.5.3",
+    "mocha-junit-reporter": "^1.23.0",
+    "moment-timezone": "^0.5.25",
+    "node-notifier": "^5.4.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "optionator": "^0.8.2",
+    "postcss-loader": "^2.1.6",
+    "promise-retry": "^1.1.1",
+    "properties-parser": "^0.3.0",
+    "proxyquire": "1.7.4",
+    "q": "^1.5.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.4",
+    "request-promise-native": "^1.0.7",
+    "sass-loader": "^7.0.3",
+    "selenium-standalone": "^5.9.0",
+    "sgmf-scripts": "~1.1.2",
+    "shelljs": "^0.7.0",
+    "sinon": "^1.17.4",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-scss": "^2.1.0",
+    "underscore": "^1.9.1",
+    "underscore.string": "^3.3.5",
+    "url": "^0.11.0",
+    "wdio-sauce-service": "~0.1",
+    "webdriverio": "^3.3.0",
+    "webpack": "4.12.0",
+    "webpack-cli": "^3.3.5",
+    "xml2js": "^0.4.17"
+  },
+  "dependencies": {
+    "bootstrap": "4.2.1",
+    "cleave.js": "^1.5.0",
+    "cli-spinners": "^2.4.0",
+    "confluence-api": "^1.4.0",
+    "dwdav": "^3.5.1",
+    "flag-icon-css": "^2.3.0",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.4.1",
+    "ora": "^5.0.0",
+    "picturefill": "^3.0.3",
+    "popper.js": "^1.15.0",
+    "sfcc-ci": "^2.6.0",
+    "svg4everybody": "2.1.9",
+    "uninstall-all-modules": "^1.0.5"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 10"
+  ],
+  "sites": [
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_mtdparts"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtd"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "plugin_dis",
+          "name": "plugin_dis"
+        },
+        {
+          "alias": "plugin_productcompare",
+          "name": "plugin_productcompare"
+        },
+        {
+          "alias": "int_mtdservices",
+          "name": "int_mtdservices"
+        },
+        {
+          "alias": "int_chase",
+          "name": "int_chase"
+        },
+        {
+          "alias": "int_monetate",
+          "name": "int_monetate"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        },
+        {
+          "alias": "int_orderstatus",
+          "name": "int_orderstatus"
+        },
+        {
+          "alias": "int_ari",
+          "name": "int_ari"
+        },
+        {
+          "alias": "int_marketing_cloud",
+          "name": "int_marketing_cloud"
+        },
+        {
+          "alias": "int_handlerframework",
+          "name": "int_handlerframework"
+        },
+        {
+          "alias": "app_demo",
+          "name": "app_demo"
+        },
+        {
+          "alias": "app_test",
+          "name": "app_test"
+        },
+        {
+          "alias": "int_ordervelocityengine",
+          "name": "int_ordervelocityengine"
+        },
+        {
+          "alias": "server",
+          "name": "server"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_mtdparts_ca"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtd"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "plugin_dis",
+          "name": "plugin_dis"
+        },
+        {
+          "alias": "plugin_productcompare",
+          "name": "plugin_productcompare"
+        },
+        {
+          "alias": "int_mtdservices",
+          "name": "int_mtdservices"
+        },
+        {
+          "alias": "int_chase",
+          "name": "int_chase"
+        },
+        {
+          "alias": "int_monetate",
+          "name": "int_monetate"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        },
+        {
+          "alias": "int_orderstatus",
+          "name": "int_orderstatus"
+        },
+        {
+          "alias": "int_ari",
+          "name": "int_ari"
+        },
+        {
+          "alias": "int_marketing_cloud",
+          "name": "int_marketing_cloud"
+        },
+        {
+          "alias": "int_handlerframework",
+          "name": "int_handlerframework"
+        },
+        {
+          "alias": "app_demo",
+          "name": "app_demo"
+        },
+        {
+          "alias": "app_test",
+          "name": "app_test"
+        },
+        {
+          "alias": "int_ordervelocityengine",
+          "name": "int_ordervelocityengine"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_cubcadet"
+        },
+        {
+          "alias": "org_cubcadet",
+          "name": "org_cubcadet"
+        },
+        {
+          "alias": "org_ma",
+          "name": "org_mtd_ma"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtd"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "plugin_blog",
+          "name": "plugin_blog"
+        },
+        {
+          "alias": "int_bazaarvoice_sfra",
+          "name": "int_bazaarvoice_sfra"
+        },
+        {
+          "alias": "bc_bazaarvoice",
+          "name": "bc_bazaarvoice"
+        },
+        {
+          "alias": "plugin_dis",
+          "name": "plugin_dis"
+        },
+        {
+          "alias": "plugin_productcompare",
+          "name": "plugin_productcompare"
+        },
+        {
+          "alias": "int_mtdservices",
+          "name": "int_mtdservices"
+        },
+        {
+          "alias": "int_chase",
+          "name": "int_chase"
+        },
+        {
+          "alias": "int_monetate",
+          "name": "int_monetate"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        },
+        {
+          "alias": "int_orderstatus",
+          "name": "int_orderstatus"
+        },
+        {
+          "alias": "int_ari",
+          "name": "int_ari"
+        },
+        {
+          "alias": "int_marketing_cloud",
+          "name": "int_marketing_cloud"
+        },
+        {
+          "alias": "int_handlerframework",
+          "name": "int_handlerframework"
+        },
+        {
+          "alias": "app_demo",
+          "name": "app_demo"
+        },
+        {
+          "alias": "app_test",
+          "name": "app_test"
+        },
+        {
+          "alias": "int_ordervelocityengine",
+          "name": "int_ordervelocityengine"
+        },
+        {
+          "alias": "contentAccelerator",
+          "name": "content_accelerator"
+        },
+        {
+          "alias": "int_financing_app",
+          "name": "int_financing_app"
+        },
+        {
+          "alias": "int_extendedwarranty",
+          "name": "int_extendedwarranty"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_cubcadet_ca"
+        },
+        {
+          "alias": "org_cubcadet",
+          "name": "org_cubcadet"
+        },
+        {
+          "alias": "org_ma",
+          "name": "org_mtd_ma"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtd"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "plugin_blog",
+          "name": "plugin_blog"
+        },
+        {
+          "alias": "int_bazaarvoice_sfra",
+          "name": "int_bazaarvoice_sfra"
+        },
+        {
+          "alias": "bc_bazaarvoice",
+          "name": "bc_bazaarvoice"
+        },
+        {
+          "alias": "plugin_dis",
+          "name": "plugin_dis"
+        },
+        {
+          "alias": "plugin_productcompare",
+          "name": "plugin_productcompare"
+        },
+        {
+          "alias": "int_mtdservices",
+          "name": "int_mtdservices"
+        },
+        {
+          "alias": "int_chase",
+          "name": "int_chase"
+        },
+        {
+          "alias": "int_monetate",
+          "name": "int_monetate"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        },
+        {
+          "alias": "int_orderstatus",
+          "name": "int_orderstatus"
+        },
+        {
+          "alias": "int_ari",
+          "name": "int_ari"
+        },
+        {
+          "alias": "int_marketing_cloud",
+          "name": "int_marketing_cloud"
+        },
+        {
+          "alias": "int_handlerframework",
+          "name": "int_handlerframework"
+        },
+        {
+          "alias": "app_demo",
+          "name": "app_demo"
+        },
+        {
+          "alias": "app_test",
+          "name": "app_test"
+        },
+        {
+          "alias": "contentAccelerator",
+          "name": "content_accelerator"
+        },
+        {
+          "alias": "int_financing_app",
+          "name": "int_financing_app"
+        },
+        {
+          "alias": "int_extendedwarranty",
+          "name": "int_extendedwarranty"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_troybilt"
+        },
+        {
+          "alias": "org_troybilt",
+          "name": "org_troybilt"
+        },
+        {
+          "alias": "org_ma",
+          "name": "org_mtd_ma"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtd"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "plugin_blog",
+          "name": "plugin_blog"
+        },
+        {
+          "alias": "int_bazaarvoice_sfra",
+          "name": "int_bazaarvoice_sfra"
+        },
+        {
+          "alias": "bc_bazaarvoice",
+          "name": "bc_bazaarvoice"
+        },
+        {
+          "alias": "plugin_dis",
+          "name": "plugin_dis"
+        },
+        {
+          "alias": "plugin_productcompare",
+          "name": "plugin_productcompare"
+        },
+        {
+          "alias": "int_mtdservices",
+          "name": "int_mtdservices"
+        },
+        {
+          "alias": "int_chase",
+          "name": "int_chase"
+        },
+        {
+          "alias": "int_monetate",
+          "name": "int_monetate"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        },
+        {
+          "alias": "int_orderstatus",
+          "name": "int_orderstatus"
+        },
+        {
+          "alias": "int_ari",
+          "name": "int_ari"
+        },
+        {
+          "alias": "int_marketing_cloud",
+          "name": "int_marketing_cloud"
+        },
+        {
+          "alias": "int_handlerframework",
+          "name": "int_handlerframework"
+        },
+        {
+          "alias": "app_demo",
+          "name": "app_demo"
+        },
+        {
+          "alias": "app_test",
+          "name": "app_test"
+        },
+        {
+          "alias": "int_ordervelocityengine",
+          "name": "int_ordervelocityengine"
+        },
+        {
+          "alias": "contentAccelerator",
+          "name": "content_accelerator"
+        },
+        {
+          "alias": "int_financing_app",
+          "name": "int_financing_app"
+        },
+        {
+          "alias": "int_extendedwarranty",
+          "name": "int_extendedwarranty"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_troybilt_ca"
+        },
+        {
+          "alias": "org_troybilt",
+          "name": "org_troybilt"
+        },
+        {
+          "alias": "org_ma",
+          "name": "org_mtd_ma"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtd"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "plugin_blog",
+          "name": "plugin_blog"
+        },
+        {
+          "alias": "int_bazaarvoice_sfra",
+          "name": "int_bazaarvoice_sfra"
+        },
+        {
+          "alias": "bc_bazaarvoice",
+          "name": "bc_bazaarvoice"
+        },
+        {
+          "alias": "plugin_dis",
+          "name": "plugin_dis"
+        },
+        {
+          "alias": "plugin_productcompare",
+          "name": "plugin_productcompare"
+        },
+        {
+          "alias": "int_mtdservices",
+          "name": "int_mtdservices"
+        },
+        {
+          "alias": "int_chase",
+          "name": "int_chase"
+        },
+        {
+          "alias": "int_monetate",
+          "name": "int_monetate"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        },
+        {
+          "alias": "int_orderstatus",
+          "name": "int_orderstatus"
+        },
+        {
+          "alias": "int_ari",
+          "name": "int_ari"
+        },
+        {
+          "alias": "int_marketing_cloud",
+          "name": "int_marketing_cloud"
+        },
+        {
+          "alias": "int_handlerframework",
+          "name": "int_handlerframework"
+        },
+        {
+          "alias": "app_demo",
+          "name": "app_demo"
+        },
+        {
+          "alias": "app_test",
+          "name": "app_test"
+        },
+        {
+          "alias": "contentAccelerator",
+          "name": "content_accelerator"
+        },
+        {
+          "alias": "int_financing_app",
+          "name": "int_financing_app"
+        },
+        {
+          "alias": "int_extendedwarranty",
+          "name": "int_extendedwarranty"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "site_mtdproducts"
+        },
+        {
+          "alias": "org",
+          "name": "org_mtdproducts"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        },
+        {
+          "alias": "job_components",
+          "name": "bc_job_components"
+        },
+        {
+          "alias": "mtd_bm_customizations",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "bc_library",
+          "name": "bc_library"
+        },
+        {
+          "alias": "bm_tools",
+          "name": "bm_tools"
+        },
+        {
+          "alias": "site_ope",
+          "name": "site_ope"
+        },
+        {
+          "alias": "site_opepatents",
+          "name": "site_opepatents"
+        },
+        {
+          "alias": "site_dewaltprosupporthub",
+          "name": "site_dewaltprosupporthub"
+        },
+        {
+          "alias": "int_prop65",
+          "name": "int_prop65"
+        },
+        {
+          "alias": "int_googleFeed",
+          "name": "int_googleFeed"
+        },
+        {
+          "alias": "int_googletags",
+          "name": "int_googletags"
+        }
+      ]
+    },
+    {
+      "cartridges": [
+        {
+          "alias": "site",
+          "name": "mtd_bm_customizations"
+        },
+        {
+          "alias": "lyonscg",
+          "name": "app_lyonscg_mfra"
+        },
+        {
+          "alias": "fixes",
+          "name": "app_corrections"
+        },
+        {
+          "alias": "base",
+          "name": "app_storefront_base"
+        }
+      ]
+    }
+  ],
+  "buildEnvironment": {
+    "development": {
+      "mode": "development",
+      "verbose": "false",
+      "cssSourceMaps": "true",
+      "cssAutoPrefixer": "true",
+      "cssLinting": "true",
+      "jsSourceMaps": "true",
+      "jsLinting": "true",
+      "notifications": "true"
+    },
+    "production": {
+      "mode": "production",
+      "verbose": "false",
+      "cssSourceMaps": "false",
+      "cssAutoPrefixer": "true",
+      "cssLinting": "false",
+      "jsSourceMaps": "false",
+      "jsLinting": "false",
+      "notifications": "false"
+    }
+  },
+  "deployment": {
+    "instanceRoot": ".dev02-na01-mtd.demandware.net",
+    "dataOptions": {
+      "archivePath": "../data_impex",
+      "lastDeploymentFileName": "lastbuild.properties",
+      "uploadPath": "/on/demandware.servlet/webdav/Sites/Impex/src/instance/"
+    },
+    "dataBundles": {
+      "core": [
+        "core"
+      ],
+      "core-release": [
+        "release-2.0.0"
+      ],
+      "cc-release": [
+        "release-cc-0.1.0"
+      ],
+      "stage-release": [
+        "release-2.0.1",
+        "release-tb-0.2.0"
+      ],
+      "develop-release": [
+        "release-2.0.1",
+        "release-tb-0.2.0",
+        "tb-content-0.8.0"
+      ],
+      "td": [
+        "td-apply-buy"
+      ],
+      "ada-1.0": [
+        "release-ada-1.0"
+      ],
+      "content-release": [
+        "tb-content-0.6.0"
+      ],
+      "tb-init": [
+        "tb-init-data",
+        "release-tb-0.1.0"
+      ],
+      "core-config": [
+        "core",
+        "config_test"
+      ],
+      "core-config-data": [
+        "core",
+        "config_test",
+        "data_test"
+      ],
+      "core-data": [
+        "core",
+        "data_test"
+      ],
+      "config": [
+        "config_test"
+      ],
+      "data": [
+        "data_test"
+      ],
+      "dynosite": [
+        "dynosite"
+      ],
+      "static": [
+        "data_test_static"
+      ],
+      "store-logo": [
+        "store-logo"
+      ],
+      "td-troybilt": [
+        "release-troy-td-1.0.0"
+      ],
+      "td-troybilt-1.0.1": [
+        "release-troy-td-1.0.1"
+      ],
+      "request-forms-content-dev": [
+        "request-forms-content-dev"
+      ],
+      "request-forms-content-stg": [
+        "request-forms-content-stg"
+      ],
+      "safetech-1.0.0": [
+        "release-safetech-1.0.0"
+      ],
+      "blog-mtd": [
+        "release-blog-mtd-1.0.0"
+      ],
+      "branch-MTDS-165": [
+        "branch-MTDS-165"
+      ]
+    }
+  }
+}

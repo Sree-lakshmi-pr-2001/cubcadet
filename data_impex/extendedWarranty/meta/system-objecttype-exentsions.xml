@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="years-of-coverage-text">
+                <display-name xml:lang="x-default">Years of Coverage Text</display-name>
+                <description xml:lang="x-default">Years of Coverage Text</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>2-year coverage</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Extended Warranty">
+                <display-name xml:lang="x-default">Extended Warranty</display-name>
+                <attribute attribute-id="years-of-coverage-text"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="ProductLineItem">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="ew-type">
+                <display-name xml:lang="x-default">EW Type</display-name>
+                <description xml:lang="x-default">EW Type</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>EW_AFT</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="product-type">
+                <display-name xml:lang="x-default">Product Type</display-name>
+                <description xml:lang="x-default">Product Type</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>ExtendedWarranty</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-new-factory-number">
+                <display-name xml:lang="x-default">EW Product Model</display-name>
+                <description xml:lang="x-default">EW Product Model</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-productName">
+                <display-name xml:lang="x-default">EW Aftermarket-productName </display-name>
+                <description xml:lang="x-default">EW Aftermarket-productName </description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-aftermarket-purchase-date">
+                <display-name xml:lang="x-default">EW Aftermarket-Purchase Date</display-name>
+                <description xml:lang="x-default">EW Aftermarket-Purchase Date</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-aftermarket-purchased-from">
+                <display-name xml:lang="x-default">EW Aftermarket Purchased From</display-name>
+                <description xml:lang="x-default">EW Aftermarket Purchased From</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-aftermarket-factory-number">
+                <display-name xml:lang="x-default">EW Aftermarket Factory Number</display-name>
+                <description xml:lang="x-default">EW Aftermarket Factory Number</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-aftermarket-serial-number">
+                <display-name xml:lang="x-default">EW Aftermarket-Serial Number</display-name>
+                <description xml:lang="x-default">EW Aftermarket-Serial Number</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-existing-registration">
+                <display-name xml:lang="x-default">Aftermarket EW existing registration</display-name>
+                <description xml:lang="x-default">Aftermarket EW existing registration</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="ew-aftermarket-end-use">
+                <display-name xml:lang="x-default">EW Aftermarket End Use</display-name>
+                <description xml:lang="x-default">EW Aftermarket End Use</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Extended Warranty">
+                <display-name xml:lang="x-default">Extended Warranty</display-name>
+                <attribute attribute-id="ew-type"/>
+                <attribute attribute-id="product-type"/>
+                <attribute attribute-id="ew-aftermarket-purchase-date"/>
+                <attribute attribute-id="ew-aftermarket-purchased-from"/>
+                <attribute attribute-id="ew-aftermarket-factory-number"/>
+                <attribute attribute-id="ew-aftermarket-serial-number"/>
+                <attribute attribute-id="ew-aftermarket-end-use"/>
+                <attribute attribute-id="ew-new-factory-number"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Recommendation">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="recommendationType">
+                <display-name xml:lang="x-default">Recommendation Type</display-name>
+                <description xml:lang="x-default">Add new value to Enum: 4 -- EW</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">1</display>
+                        <value>1</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">2</display>
+                        <value>2</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">3</display>
+                        <value>3</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">4</display>
+                        <value>4</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Extended Warranty">
+                <display-name xml:lang="x-default">Extended Warranty</display-name>
+                <attribute attribute-id="recommendationType"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="enableEWNewSales">
+                <display-name xml:lang="x-default">Enable Extended Warranty</display-name>
+                <description xml:lang="x-default">Site preference to enable Extended Warranty</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="serviceEndPointTest">
+                <display-name xml:lang="x-default">Service End Point (test)</display-name>
+                <description xml:lang="x-default">Service End Point (test)</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="serviceEndPoint">
+                <display-name xml:lang="x-default">Service End Point (production)</display-name>
+                <description xml:lang="x-default">Service End Point (production)</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="EW-Purchase-From">
+                <display-name xml:lang="x-default">EW Purchase From List</display-name>
+                <description xml:lang="x-default">EW Purchase From List</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="EW-Dummy-Shipping-Address">
+                <display-name xml:lang="x-default">EW Dummy Shipping Address</display-name>
+                <description xml:lang="x-default">EW Dummy Shipping Address</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value></default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="EW-Error-Code-Content-Mapping">
+                <display-name xml:lang="x-default">EW Error Code Content Mapping</display-name>
+                <description xml:lang="x-default">EW Error Code Content Mapping</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value></default-value>
+            </attribute-definition>           
+
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Extended Warranty">
+                <display-name xml:lang="x-default">Extended Warranty</display-name>
+                <attribute attribute-id="enableEWNewSales"/>
+                <attribute attribute-id="serviceEndPoint"/>
+                <attribute attribute-id="serviceEndPointTest"/>
+                <attribute attribute-id="EW-Purchase-From"/>
+                <attribute attribute-id="EW-Dummy-Shipping-Address"/>
+                <attribute attribute-id="EW-Error-Code-Content-Mapping"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+</metadata>

@@ -1,0 +1,271 @@
+$desktop-min:  58.75em;
+$md: 768px;
+$tablet: 1024px;
+
+.ew-info-page,
+.ew-info-intermediate-page {
+    a.btn.btn-primary {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    #ce-20 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    small {
+        font-size: 18px;
+        position: relative;
+        top: -13px;
+    }
+
+    .footer {
+        margin-top: 0;
+    }
+
+    .cta-sec {
+        background: #efefef;
+    }
+
+    .container.content-asset-container {
+        margin-top: 15px;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+
+    .hero.slant-down.content-page-image {
+        display: none;
+    }
+
+    .small-image-holder-pic.text-center img {
+        max-width: 200px;
+    }
+
+    @media (max-width: $tablet) {
+        .mobile-hidden {
+            display: none;
+        }
+    }
+
+    .ffaqs {
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .ffaqs h3 {
+        text-align: center;
+    }
+
+    .ffaqs dl,
+    .ffaqs dt,
+    .ffaqs dd {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ffaqs dl {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .ffaqs dt {
+        color: #000;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        text-transform: none;
+        padding: 1rem 2rem 1rem 0;
+        border-bottom: 1px solid #d9d9d9;
+        position: relative;
+    }
+
+    .ffaqs dt:hover,
+    .ffaqs dt.show {
+        cursor: pointer;
+        color: #979797;
+    }
+
+    .ffaqs dt.show {
+        border-color: #fff;
+    }
+
+    .ffaqs dt::after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0.75rem;
+        right: -0.25rem;
+        background: url(https://d1dy019watpwba.cloudfront.net/images/financing/icon-plus.png) no-repeat center center;
+        background-size: 17px 17px;
+        transform: rotateZ(0deg);
+        -webkit-animation: rotateback 300ms;
+        -moz-animation: rotateback 300ms;
+        -o-animation: rotateback 300ms;
+        animation: rotateback 300ms;
+    }
+
+    .ffaqs dt.show::after {
+        transform: rotateZ(45deg);
+        -webkit-animation: rotate 300ms;
+        -moz-animation: rotate 300ms;
+        -o-animation: rotate 300ms;
+        animation: rotate 300ms;
+    }
+
+    .ffaqs dd {
+        padding: 0 1rem 1rem;
+        display: none;
+        opacity: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-bottom: 1px solid #fff;
+    }
+
+    .ffaqs dd.show {
+        display: block;
+        opacity: 1;
+        border-bottom-color: #d9d9d9;
+        animation: fade 1000ms;
+    }
+
+    .ffaqs dd * {
+        color: #000;
+    }
+
+    .ffaqs dd p {
+        line-height: 1.5rem;
+    }
+
+    .ffaqs dd p:last-child {
+        margin-bottom: 0;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fade {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fade {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade {
+
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @-webkit-keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @-moz-keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @-webkit-keyframes rotateback {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @-moz-keyframes rotateback {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes rotateback {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @media (min-width: $desktop-min) {
+        .ffaqs dl {
+            max-width: 840px;
+        }
+    }
+
+    @media (min-width: $md) {
+        .warrananty-page-items {
+            background: url('../../images/icon-yellow-check.png')  no-repeat 0 9px;
+            padding-left: 36px;
+            background-size: 29px;
+        }
+
+        .center-element .small-image-holder-pic {
+            margin-top: 43px;
+            margin-bottom: 81px;
+        }
+    }
+}
+
+dd.active-tab {
+    display: block !important;
+    opacity: 1 !important;
+}

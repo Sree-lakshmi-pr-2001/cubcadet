@@ -1,0 +1,9 @@
+<!--- TEMPLATENAME: productShippingInfo.isml --->
+
+<isscript>
+	var trackingNumbers = (lineItem.trackingNumbers) ? JSON.parse(lineItem.trackingNumbers) : [];
+</isscript>
+
+<isloop items="${trackingNumbers}" var="trackingNumber">
+	<isprint encoding="on" value="${trackingNumber.carrier}" />: <isprint encoding="off" value="${trackingNumber.trackingLink}" />
+</isloop>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="google.distance.api">
+        <url>https://maps.googleapis.com/maps/api/distancematrix/json</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">386me9SIPtkvFepU3i0EcaF7Ci4epz90WFHydayQvIU=</password>
+    </service-credential>
+
+    <service-profile service-profile-id="google.distance.api">
+        <timeout-millis>3000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service service-id="google.distance.api">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>googleDistanceAPI</log-prefix>
+        <comm-log-enabled>false</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>google.distance.api</profile-id>
+        <credential-id>google.distance.api</credential-id>
+    </service>
+
+</services>

@@ -1,0 +1,5 @@
+<script>
+    var ga4plp = JSON.parse('<isprint encoding="off" value="${pdict.context}" />');
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(ga4plp);
+</script>

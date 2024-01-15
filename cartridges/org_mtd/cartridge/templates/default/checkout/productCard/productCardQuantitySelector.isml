@@ -1,0 +1,32 @@
+<isinclude template="components/modules" />
+
+<div class="quantity-form">
+    <label class="line-item-pricing-info quantity-label d-none d-none-qty" for="quantity">${Resource.msg('field.selectquantity','cart',null)}</label>
+
+    <iscomment>Group input and svg into label so they are associate together</iscomment>
+    <label class="minus">
+        <input type="button" name="minus" value="-"  aria-label="decrease quantity"/>
+        <a href="#" aria-label="decrease quantity" role="button" class="minusWrapper">
+            <issvg icon="icon-qty-minus" image="true" altText="decrease quantity"/>
+        </a>
+    </label>
+
+    <input id="quantity" type="text" name="quantity-input" class="quantity-input quantity form-control"
+        value="${lineItem.quantity.toFixed()}"
+        min="${lineItem.quantityOptions.minOrderQuantity.toFixed()}"
+        max="${lineItem.quantityOptions.maxOrderQuantity.toFixed()}"
+        data-uuid="${lineItem.UUID}"
+        data-pid="${lineItem.id}"
+        data-action="${pdict.actionUrls.updateQuantityUrl}"
+        data-pre-select-qty="${lineItem.quantity}"
+        />
+
+        <iscomment>Group input and svg into label so they are associate together</iscomment>
+        <label class="plus">
+            <input type="button" name="plus" value="+" aria-label="increase quantity"/>
+            <a href="#" aria-label="increase quantity" role="button" class="plusWrapper">
+                <issvg icon="icon-qty-plus" image="true"  altText="increase quantity"/>
+            </a>
+        </label>
+
+</div>

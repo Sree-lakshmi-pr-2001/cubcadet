@@ -1,0 +1,7 @@
+<iscomment> Post's Tags </iscomment>
+<isinclude template="content/components/blogPostTags" />
+
+<iscomment> Post's social share links </iscomment>
+<div class="blog-social-bottom">
+    <isinclude template="content/components/blogPostSocial" />
+</div>

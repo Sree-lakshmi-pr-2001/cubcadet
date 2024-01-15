@@ -1,0 +1,60 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/welcomePage.js');
+    
+</isscript>
+<isdecorate template="common/layout/epcot">
+    <isif condition="${pdict.canPlaceOrders && pdict.isUserActive == true}">
+        <div class="row welcomeRow">
+            <div class="col-md-6">
+                <a href="${URLUtils.url('EpcotOrderConsumer-ChooseBrand')}" class="btn btn-primary btn-lg btn-block"
+                    role="button" aria-pressed="true">Place Order for Consumer</a>
+            </div>
+            <div class="col-md-6">
+                <a href="${URLUtils.url('EpcotOrderInquiry-Home')}" class="btn btn-primary btn-lg btn-block"
+                    role="button" aria-pressed="true">Order Inquiry</a>
+            </div>
+        </div>
+        <isif condition="${pdict.canManageUsers == true}">
+            <div class="row welcomeRow">
+                <div class="col-md-6">
+                    <a href="${URLUtils.url('EpcotAdmin-ManageRoles')}" class="btn btn-primary btn-lg btn-block"
+                        role="button" aria-pressed="true">Manage Roles</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="${URLUtils.url('EpcotAdmin-ManageUsers')}" class="btn btn-primary btn-lg btn-block"
+                        role="button" aria-pressed="true">Manage Users</a>
+                </div>
+            </div>
+        </isif>
+            <isif condition="${pdict.canAuditNoCharges == true}">
+                <div class="row welcomeRow">
+                    <div class="col-md-6">
+                        <a href="${URLUtils.url('EpcotAdmin-NoChargeAudit')}" class="btn btn-primary btn-lg btn-block"
+                            role="button" aria-pressed="true">No Charge Audits</a>
+                    </div>
+                </div>
+        </isif>
+    </isif>
+    <!-- Error conditions: -->
+    <isif condition="${pdict.isUserActive == false}">
+        <div class="row">
+            <div class="col-md-12 center">Your login is currently set to inactive <br />Please contact an administrator
+                to get this resolved</div>
+        </div>
+    </isif>
+    <isif condition="${pdict.canPlaceOrders == false}">
+        <div class="row">
+            <div class="col-md-12 center">Your login currently does not have any roles setup <br />Please contact an
+                administrator to get this resolved</div>
+        </div>
+    </isif>
+    <isif condition="${pdict.apiError == true}">
+        <div class="row">
+            <div class="col-md-12 center">There is currently an issue with the backend API<br />Please contact a member of the Mow Money Team to get this resolved</div>
+        </div>
+    </isif>
+</isdecorate>
+<script>
+        document.getElementById('pageName').value = 'WelcomePage';
+</script>

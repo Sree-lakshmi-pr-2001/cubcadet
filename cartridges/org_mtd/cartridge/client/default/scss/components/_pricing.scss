@@ -1,0 +1,81 @@
+@import "../variables";
+
+.price {
+    color: $gray-800;
+
+    .strike-through:not(.non-adjusted-price) {
+        display: block;
+        text-decoration: line-through;
+        color: $gray-600;
+
+        @include media-breakpoint-up(lg) {
+            display: inline;
+            margin-right: rem(10px);
+        }
+
+        ~ .pricing,
+        ~ .sales span {
+            display: block;
+            color: $danger;
+
+            @include media-breakpoint-up(lg) {
+                display: inline;
+            }
+        }
+    }
+
+    .starting,
+    .range,
+    .sales {
+        font-weight: bold;
+    }
+
+    .tiered {
+        color: $gray-100;
+
+        table {
+            border-top: 1px solid $gray-300;
+            margin: 0 auto;
+
+            tr {
+                &:nth-child(odd) {
+                    background-color: $gray-400;
+                }
+            }
+        }
+
+        td,
+        span.price {
+            font-size: rem(14px);
+            font-weight: bold;
+        }
+
+        td {
+            padding: rem(5px);
+
+            &.quantity {
+                font-weight: normal;
+                text-align: right;
+            }
+
+            &.value {
+                text-align: left;
+            }
+        }
+
+        .table-header {
+            font-size: rem(18px);
+            padding: rem(5px);
+        }
+
+        .column-header {
+            font-size: rem(16px);
+            padding: rem(5px);
+            font-weight: normal;
+        }
+
+        .column-header.quantity {
+            text-align: right;
+        }
+    }
+}

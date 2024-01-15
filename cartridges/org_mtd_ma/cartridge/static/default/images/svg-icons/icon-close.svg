@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Functional-/-Close">
+            <g id="Close">
+                <circle id="Oval" fill="#FFC20F" cx="10" cy="10" r="10"></circle>
+                <path d="M10.0078057,9.97747564 L13.631728,6.35355339 L14.1620581,6.88388348 L10.5381358,10.5078057 L14.1620581,14.131728 L13.631728,14.6620581 L10.0078057,11.0381358 L6.38388348,14.6620581 L5.85355339,14.131728 L9.47747564,10.5078057 L5.85355339,6.88388348 L6.38388348,6.35355339 L10.0078057,9.97747564 Z" id="Combined-Shape" fill="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>

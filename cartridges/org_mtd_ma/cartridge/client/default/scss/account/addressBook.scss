@@ -1,0 +1,47 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+
+.address-book-container {
+    padding-bottom: rem(60px);
+
+    .row > div {
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    .card {
+        padding-top: rem(32px);
+        padding-bottom: rem(37px);
+
+        .card-header {
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        .address-controls {
+            margin-top: rem(29px);
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-top: rem(30px);
+            padding-bottom: rem(57px);
+        }
+    }
+
+    .card-body-positioning {
+        position: relative;
+    }
+
+    .card-make-default-link {
+        display: inline;
+        margin-right: rem(15px);
+    }
+
+    .remove-address {
+        padding-bottom: rem(2px);
+    }
+}

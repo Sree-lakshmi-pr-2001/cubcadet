@@ -1,0 +1,13 @@
+<div class="col-lg-8 align-self-center p-0">
+    <div class="footer-main-links lt">
+        <div class="d-flex  flex-column flex-sm-row text-center justify-content-center">
+            <isloop items="${pdict.categories}" var="category">
+                    <div class="footer-link">
+                        <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>">
+                            ${category.name}
+                        </a>
+                    </div>
+            </isloop>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="recommendation-type-pdp">
+                <display-name xml:lang="x-default">Recommendation Type PDP</display-name>
+                <description xml:lang="x-default"></description>
+                <type>enum-of-int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Cross-Sell</display>
+                        <value>1</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Up-Sell</display>
+                        <value>2</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Accessory</display>
+                        <value>3</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Extended Warranty</display>
+                        <value>4</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="cub-content">
+                <display-name xml:lang="x-default">PDP Content Configuration</display-name>
+                <attribute attribute-id="recommendation-type-pdp"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+</metadata>

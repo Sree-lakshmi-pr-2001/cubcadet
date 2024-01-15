@@ -1,0 +1,145 @@
+<isdecorate template="common/layout/checkout">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/checkout/checkout.css');
+        assets.addJs('/js/checkoutRegistration.js');
+
+        if(pdict.bvScout) {
+            assets.addJs(pdict.bvScout);
+        }
+    </isscript>
+    <isinclude template="components/modules" />
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <isset name="confirmation" value="${true}" scope="page"/>
+
+    <div class="container receipt <isif condition="${pdict.order.shipping.length > 1}">multi-ship</isif>">
+        <div class="comfirmation-breadcrumb">
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            ${Resource.msg('breadcrumb.order.confirmation','confirmation',null)}
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row confirmation-header">
+            <div class="col-12 col-md-6">
+                <isif condition="${!pdict.isConfirmation}">
+                    <h2 class="order-thank-you-msg">${Resource.msg('msg.placed.order.thank.you','confirmation',null)}</h2>
+                <iselse>
+                    <h2 class="order-thank-you-msg">${Resource.msg('msg.placed.order.thank.you','confirmation',null)}</h2>
+                </isif>
+                <p class="confirmation-status">
+                    <span class="summary-section-label order-number-label">${Resource.msg('label.order.number', 'confirmation', null)}</span>
+                    <span class="summary-details order-number">${pdict.order.orderNumber}</span>
+                    <br/>
+
+                    <span class="summary-section-label order-date-label">${Resource.msg('label.order.date', 'confirmation', null)}</span>
+                    <span class="summary-details order-date"><isprint value="${pdict.order.creationDate}" style="DATE_SHORT"/></span>
+                    <br/>
+
+                    <isif condition="${!pdict.isConfirmation}">
+                        <span class="summary-section-label order-number-label">${Resource.msg('label.orderhistory.orderstatus','account',null)}</span>
+                        <isif condition="${pdict.order.orderStatusId}">
+                                <span class="summary-details order-number"> ${Resource.msg(pdict.order.orderStatusId, 'confirmation', null)}</span>
+                            <iselse>
+                                <span class="summary-details order-number"> ${pdict.order.orderStatus}</span>
+                            </isif>
+                        <br/>
+                    </isif>
+
+                    <iscomment>Prop65  Acknowledged Date if exists</iscomment>
+                    <isif condition="${pdict.order.prop65Ackowledged}">
+                        <span class="summary-section-label">${Resource.msg('label.order.prop65Acknowledged', 'confirmation', null)}:</span>
+                        <span class="summary-details order-date-label">
+                            <isprint value="${pdict.order.prop65Ackowledged}" style="DATE_SHORT"/>
+                            <isprint value="${pdict.order.prop65Ackowledged}" style="DATE_TIME"/>
+                        </span>
+                        <br/>
+                    </isif>
+
+                    <iscomment>Order Notes </iscomment>
+                    <isif condition="${pdict.order.notes.size() > 0}">
+                        <span class="summary-section-label order-notes">${Resource.msg('label.order.notes', 'confirmation', null)}</span>
+                        <isloop items="${pdict.order.notes}" var="note">
+                            <isif condition="${note.subject === 'storefront'}">
+                                <span class="summary-details tracking-notes"><isprint value="${note.text}" encoding="off" /></span>
+                                <br/>
+                            </isif>
+                        </isloop>
+                    </isif>
+                </p>
+                <div class="row">
+                    <div class="col-12 col-lg">
+                        <p class="order-thank-you-email-msg"><isprint value="${Resource.msgf('info.receive.email.confirmation', 'confirmation', null, pdict.order.orderEmail)}" encoding="htmlcontent" /></p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="javascript:window.print()" class="print-link-btn">
+                            <issvg icon="icon-print" image="true" />
+                            <div class="print-link-btn-copy">${Resource.msg('button.print', 'confirmation', null)}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-lg-6">
+                <isinclude template="checkout/confirmation/confirmationDetails" />
+                <a href="${URLUtils.url('Home-Show')}" class="btn btn-outline-secondary btn-block order-confirmation-continue-shopping d-none d-md-block" role="button">
+                    ${Resource.msg('button.continue.shopping','confirmation',null)}
+                </a>
+            </div>
+
+            <div class="col-md-5 offset-lg-1">
+                    <isif condition="${pdict.returningCustomer === false}">
+                        <isinclude template="checkout/confirmation/confirmationCreateAccount" />
+                    </isif>
+
+                    <iscomment>
+                        <div class="card checkout-order-total-summary">
+                            <div class="card-header">
+                                <h6>${Resource.msg('title.order.summary', 'confirmation', null)}</h6>
+                            </div>
+                            <div class="card-body order-total-summary">
+                                <isset name="isCheckout" value="${true}" scope="page" />
+                                <isinclude template="checkout/orderTotalSummary" />
+                                <a href="${URLUtils.url('Home-Show')}" class="btn btn-outline-secondary btn-block order-confirmation-continue-shopping d-md-none" role="button">
+                                    ${Resource.msg('button.continue.shopping','confirmation',null)}
+                                </a>
+                            </div>
+                        </div>
+                    </iscomment>
+                </div>
+        </div>
+
+        <isscript>var financeUtil = require('int_financing_app/cartridge/scripts/helpers/Util');</isscript>
+        <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
+            <isif condition="${payment.paymentMethod === financeUtil.VALUE.FINANCE_METHOD_ID}">
+                <div class="row disclaimer-section">
+                    <div class="col-12 col-md-6">
+                        <iscontentasset aid="${'td-plan-disclosure-' + payment.planID}"/>
+                    </div>
+                </div>
+            </isif>
+        </isloop>
+
+        <div class="row col">
+            <div class="col-12">
+                <a href="${URLUtils.url('Home-Show')}" class="btn btn-outline-secondary btn-block order-confirmation-continue-shopping d-md-none" role="button">
+                    ${Resource.msg('button.continue.shopping','confirmation',null)}
+                </a>
+            </div>
+        </div>
+    </div>
+    <isinclude template="bv/bvpixel/tracktransaction"/>
+    <ismonetatetrackpage pagename="purchase" />
+
+    <isinclude template="abandonedCart/trackOrder" />
+</isdecorate>

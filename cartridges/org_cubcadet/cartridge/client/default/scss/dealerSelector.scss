@@ -1,0 +1,375 @@
+@import "variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~org_ma/utilities/typeUtils";
+
+/*
+ * Generates styles for columns
+ * @param {number}	$column			Column number
+ */
+
+@mixin create-column($column) {
+    flex: 0 0 calc(100% / (12 / #{$column}));
+    max-width: calc(100% / (12 / #{$column}));
+}
+
+.dealer-selector-modal {
+    .modal-dialog {
+        @include media-breakpoint-up(lg) {
+            max-width: 829px;
+        }
+    }
+
+    .modal-header {
+        padding-top: rem(45px);
+        padding-bottom: rem(5px);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: rem(53px);
+            padding-bottom: rem(20px);
+            padding-left: rem(40px);
+        }
+    }
+
+    .modal-body {
+        padding: rem(5px);
+
+        @include media-breakpoint-up(lg) {
+            padding: rem(20px) rem(40px);
+        }
+    }
+
+    .modal-title {
+        @include media-breakpoint-up(lg) {
+            padding-left: rem(15px);
+        }
+    }
+
+    .nav-tabs {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: start;
+        border-bottom: none;
+        padding-top: rem(37px);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+            height: 55px;
+        }
+    }
+
+    .store-search {
+        margin-bottom: rem(5px);
+
+        @include media-breakpoint-up(lg) {
+            border-bottom: 1px solid $alto;
+            margin-bottom: rem(16px);
+        }
+    }
+
+    .store-logo {
+        width: 100%;
+        max-width: 100px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .storelocator-phone {
+        text-decoration: none;
+    }
+
+    .store-name {
+        margin-bottom: 0;
+    }
+}
+
+.dealer-selector-search-form-inner {
+    align-items: flex-end;
+
+    .dealer-locator {
+        margin-bottom: 0;
+    }
+
+    .btn-storelocator-search {
+        height: 40px;
+        width: 60px;
+        padding: 0;
+    }
+}
+
+.store-postal-code-input {
+    height: 40px;
+    width: 186px;
+    float: left;
+}
+
+.dealer-selector-search-form {
+    width: 100%;
+}
+
+.dealer-selector-radio-container {
+    position: relative;
+    margin-bottom: rem(5px);
+
+    &:last-child {
+        margin-left: rem(71px);
+    }
+
+    .dealer-selector-radio-label {
+        font-size: 12px;
+    }
+}
+
+.dealer-selector-radio-container .dealer-selector-radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dealer-selector-radio-input ~ .custom-radio-input {
+    display: inline-block;
+    border: 1px solid #000;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.dealer-selector-radio-input:checked ~ .custom-radio-input::after {
+    content: '';
+    background: #000;
+    width: 13px;
+    height: 13px;
+    left: 4px;
+    top: 5px;
+    border-radius: 100%;
+    position: absolute;
+    color: #000;
+}
+
+.dealer-selector-radio-label {
+    margin-left: rem(10px);
+}
+
+.dealer-selector-results {
+    .map-marker {
+        // icon
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: -8px;
+        height: 43px;
+        width: 26px;
+        float: left;
+
+        &.retail {
+            background-image: $svg-location-pin-grey-path;
+        }
+
+        &.dealer {
+            background-image: $svg-location-pin-yellow-path;
+        }
+
+        &.elite {
+            background-image: $svg-location-pin-black-path;
+        }
+
+        // index
+        span {
+            display: inline-block;
+            width: 26px;
+            position: relative;
+            top: 3px;
+            font-size: $font-size-xs;
+            color: $brand-dark;
+            text-align: center;
+        }
+    }
+}
+
+.dealer-selector-result {
+    padding: rem(17px) rem(18px);
+
+    &:nth-child(odd) {
+        background: $dealer-tab-head-bg;
+    }
+}
+
+.dealer-selector-list-view {
+    .map-marker {
+        display: none;
+    }
+
+    .store-logo-container {
+        @include create-column(3);
+
+        @include media-breakpoint-up(lg) {
+            @include create-column(2);
+        }
+    }
+
+    .store-dealer-distance-container {
+        margin-left: rem(12px);
+        @include create-column(4);
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 0;
+            @include create-column(2);
+        }
+    }
+
+    .store-dealer-address-container {
+        margin-top: rem(10px);
+        @include create-column(8);
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+            @include create-column(4);
+        }
+    }
+
+    .store-dealer-address {
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(11px);
+        }
+    }
+
+    .store-dealer-pickup-info-container {
+        @include create-column(8);
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+
+            .btn {
+                order: 1;
+                margin-bottom: rem(5px);
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include create-column(4);
+        }
+    }
+
+    .store-dealer-estimated-pickup,
+    .store-dealer-estimated-delivery {
+        @include media-breakpoint-down(md) {
+            order: 2;
+        }
+    }
+
+    .store-name,
+    .store-dealer-address {
+        @include media-breakpoint-up(lg) {
+            max-width: 200px;
+        }
+    }
+
+    .store-dealer-estimated-delivery {
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(4px);
+        }
+    }
+}
+
+.dealer-selector-map-view {
+    .store-logo-container {
+        @include media-breakpoint-down(md) {
+            order: 1;
+            @include create-column(3);
+        }
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: rem(18px);
+        }
+
+        .store-logo {
+            @include media-breakpoint-up(lg) {
+                max-width: 80px;
+            }
+        }
+    }
+
+    .store-dealer-distance-container {
+        @include media-breakpoint-down(md) {
+            order: 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: rem(24px);
+            @include create-column(10);
+
+            .map-marker {
+                margin-left: rem(10px);
+                margin-right: rem(15px);
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include create-column(4);
+        }
+    }
+
+    .store-dealer-pickup-info-container {
+        @include media-breakpoint-down(md) {
+            order: 2;
+            text-align: center;
+            margin: 0 auto;
+            @include create-column(10);
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-left: calc(100% / (12 / 4));
+            @include create-column(12);
+        }
+    }
+
+    .store-dealer-address-container {
+        @include media-breakpoint-down(md) {
+            order: 2;
+            margin-left: rem(20px);
+            @include create-column(7);
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-height: 108px;
+            @include create-column(5);
+        }
+    }
+
+    .store-distance {
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(15px);
+            width: 100%;
+        }
+    }
+
+    .map-canvas {
+        margin: 0;
+        height: 300px;
+        margin-top: rem(15px);
+        margin-bottom: rem(2px);
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+            margin-bottom: 0;
+            height: 100vh;
+        }
+    }
+
+    .store-dealer-address,
+    .store-dealer-estimated-delivery {
+        margin-bottom: rem(8px);
+    }
+}

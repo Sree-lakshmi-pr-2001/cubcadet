@@ -1,0 +1,58 @@
+// seperated webkit ellipsis due to Slick Slider causing the ellipsis to disappear on tiles despite on webkit browsers
+
+//  Adds ellipsis for multi line text overflow
+//  Works on all browsers, however does not look as well as the webkit-ellipsis
+//---------------------------------------
+
+@mixin ellipsis($line-height: 16px, $max-height: 33px, $backgroundColor: $white) {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    line-height: $line-height;
+    max-height: $max-height;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 10px;
+    padding-right: 12px;
+
+    &::before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $backgroundColor;
+    }
+}
+
+//  Adds webkit ellipsis for multi line text overflow
+//  Is not cross browser compatible, use above mixin as a fallback
+//---------------------------------------
+
+@mixin webkit-ellipsis($line: 2) {
+    @supports (-webkit-line-clamp: $line) {
+        display: -webkit-box;
+        text-overflow: -o-ellipsis-lastline;
+        -webkit-line-clamp: $line;
+
+        /* autoprefixer: off */
+        -webkit-box-orient: vertical;
+
+        /* autoprefixer: on */
+        margin: 0;
+        padding: 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}

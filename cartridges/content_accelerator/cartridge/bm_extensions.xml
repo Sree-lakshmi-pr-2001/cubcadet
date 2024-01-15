@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<extensions xmlns="http://www.demandware.com/xml/bmmodules/2007-12-11"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.demandware.com/xml/bmmodules/2007-12-11 bmext.xsd">
+
+    <menuaction id="content_menu_content_accelerator" menupath="content" position="999" site="true">
+        <name xml:lang="x-default">Capgemini Content Accelerator</name>
+        <short_description xml:lang="x-default">An interface to build and edit content assets.</short_description>
+        <description xml:lang="x-default">An interface to build and edit content assets.</description>
+        <exec pipeline="ContentAccelerator" node="Show" />
+        <sub-pipelines>
+            <pipeline name="ContentAccelerator-Show" />
+            <pipeline name="ContentAccelerator-Create" />
+            <pipeline name="ContentAccelerator-SaveContentAsset" />
+            <pipeline name="ContentAccelerator-OpenContentAsset" />
+            <pipeline name="ContentAccelerator-LoadContentAsset" />
+            <pipeline name="ContentAccelerator-CopyContentAsset" />
+            <pipeline name="ContentAccelerator-ValidateAsset" />
+        </sub-pipelines>
+        <icon>icons/star_yellow_new.gif</icon>
+    </menuaction>
+
+</extensions>

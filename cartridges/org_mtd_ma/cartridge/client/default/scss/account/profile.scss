@@ -1,0 +1,151 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+@import "../utilities/typeUtils";
+
+.address-form-container,
+.profile-form-container {
+    clear: both;
+    margin-bottom: rem(59px);
+
+    .card {
+        border: $border;
+        padding: 0 rem(15px);
+    }
+
+    .card-body {
+        padding-top: rem(13px);
+    }
+
+    .card-header {
+        h5 {
+            @include type-account-card-heading();
+        }
+    }
+
+    .card-form-buttons {
+        .btn {
+            max-width: 260px;
+            margin: 0 auto;
+            height: 48px;
+
+            &.btn-save {
+                margin-bottom: rem(10px);
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                    margin-right: rem(15px);
+                }
+            }
+
+            @include media-breakpoint-up(md) {
+                display: inline-block;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .form-group {
+        margin-bottom: rem(14px);
+    }
+
+    .btn-account {
+        padding: rem(11.5px) rem(16px);
+    }
+
+    label {
+        width: 100%;
+    }
+}
+
+.profile-form-container {
+    .card-header {
+        @include media-breakpoint-up(md) {
+            margin: 0 rem(-15px);
+
+            h5 {
+                padding-left: rem(15px);
+            }
+        }
+    }
+}
+
+.address-form-container {
+    .card {
+        margin-bottom: rem(30px);
+    }
+
+    .phone-form-group {
+        position: relative;
+        margin-bottom: rem(19px);
+
+        .info-icon {
+            position: absolute;
+            right: 37px;
+            bottom: 30px;
+        }
+
+        // tooltip position on form error
+        .is-invalid + .info-icon {
+            bottom: 54.5px;
+        }
+    }
+}
+
+.edit-profile-form {
+    .profile-password-form-group {
+        border-top: $border;
+        padding-top: rem(12px);
+        margin: 0 rem(15px) rem(20px);
+        width: 100%;
+
+        > div {
+            padding: 0;
+        }
+
+        .form-group {
+            @include media-breakpoint-up(md) {
+                padding-right: rem(15px);
+            }
+        }
+    }
+
+    label {
+        width: 100%;
+    }
+
+    .profile-phone-form-group {
+        margin-bottom: rem(6px);
+    }
+}
+
+.tracking-consent {
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    margin-bottom: rem(3px);
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(15px);
+    }
+}
+
+.receipt {
+    .checkout-card-header {
+        font-size: rem(20px);
+
+        @include media-breakpoint-up(md) {
+            font-size: $h4-font-size;
+        }
+    }
+
+    .line-item-total-price {
+        text-align: left;
+    }
+
+    .shipping-status {
+        > span {
+            font-size: $font-size-base;
+        }
+    }
+}

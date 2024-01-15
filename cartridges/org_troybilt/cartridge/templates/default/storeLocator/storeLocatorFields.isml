@@ -1,0 +1,51 @@
+<div class="col-12">
+    <div class="alert alert-danger geocoding-error hidden"><isprint value="${pdict.storeSearchAddressErrorMessage}" encoding="off" /></div>
+    <div class="row mb-2 mb-sm-3">
+        <isif condition="${pdict.showMap === 'true'}">
+            <div class="col-12 col-sm-5 col-md-4 btn-col">
+                <p class="sr-only">${Resource.msg('msg.find.store','storeLocator',null)}</p>
+                <button type="submit" class="btn btn-secondary btn-block detect-location" data-action="${pdict.stores.actionUrl}">
+                    ${Resource.msg('button.use.my.location','storeLocator',null)}
+                </button>
+            </div>
+            <div class="col-12 col-sm-7 col-md-8">
+        <iselse>
+            <div class="col-12">
+        </isif>
+            <${pdict.isForm === 'true' || pdict.isLandingPage ? 'form' : 'div'} action="${pdict.stores.actionUrl}" class="store-locator ${pdict.isServiceLocator && pdict.isLandingPage ? 'service-locator-form' : ''}" method="get" name="storelocator">
+                <div class="d-flex justify-content-xs-between sl-form ${pdict.isServiceLocator ? 'sl-container' : ''}">
+                    <div class="form-group required sl-zip ${pdict.isServiceLocator ? 'service-locator' : 'dealer-locator'}">
+                        <label class="form-control-label" for="store-postal-code">${Resource.msg('field.address.zip.postal.code','storeLocator',null)}</label>
+                        <isset name="addressValue" value="${pdict.isServiceLocator && pdict.CurrentHttpParameterMap.address.stringValue ? pdict.CurrentHttpParameterMap.address.stringValue : ''}" scope="page" />
+                        <input autofocus required type="text" class="form-control" id="store-postal-code" name="address" value="${addressValue}" autocomplete="nofill"/>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="sl-radius">
+                        <isinclude template="storeLocator/storeLocatorRadius" />
+                    </div>
+
+                    <isif condition="${!pdict.isServiceLocator}">
+                        <isif condition="${'retailerIds' in pdict && pdict.retailerIds !== ''}">
+                            <input type="hidden" value="${pdict.retailerIds}" class="productFrom" id="productFrom" />
+                        </isif>
+                         <isif condition="${'productType' in pdict && pdict.productType !== ''}">
+                            <input type="hidden" value="${pdict.productType}" class="productType" id="productType" />
+                        </isif>
+                    </isif>
+
+                    <div class="sl-btn ${pdict.isServiceLocator && pdict.isLandingPage ? 'service-locator' : 'dealer-locator'}">
+                        <button class="btn btn-secondary btn-storelocator-search ${!(pdict.isServiceLocator && pdict.isLandingPage) ? 'btn-sm' : ''}" type="${pdict.isForm === 'true' || pdict.isLandingPage ? 'submit' : 'button'}">
+                            <isif condition="${pdict.isServiceLocator && pdict.isLandingPage}">
+                                ${Resource.msg('button.find.service.centers','storeLocator',null)}
+                            <iselse>
+                                ${Resource.msg('button.find.stores','storeLocator',null)}
+                            </isif>
+                        </button>
+                    </div>
+
+                </div>
+            </${pdict.isForm === 'true' || pdict.isLandingPage ? 'form' : 'div'}>
+        </div>
+    </div> <!-- /.row -->
+</div>

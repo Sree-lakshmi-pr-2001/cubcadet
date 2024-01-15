@@ -1,0 +1,71 @@
+<isinclude template="components/modules" />
+
+<isif condition="${typeof pdict.querystring.q !== 'undefined' && typeof pdict.querystring.fdid !== 'undefined' && !empty(pdict.querystring.q) && !empty(pdict.querystring.fdid)}">
+    <isset name="resetlink" value="${URLUtils.url('Search-Show', 'q', pdict.querystring.q, 'fdid', pdict.querystring.fdid)}" scope="page" />
+<iselseif condition="${typeof pdict.querystring.q !== 'undefined' && !empty(pdict.querystring.q)}">
+    <isset name="resetlink" value="${URLUtils.url('Search-Show', 'q', pdict.querystring.q)}" scope="page" />
+<iselseif condition="${typeof pdict.querystring.fdid !== 'undefined' && !empty(pdict.querystring.fdid)}">
+    <isset name="resetlink" value="${URLUtils.url('Search-ShowContent', 'fdid', pdict.querystring.fdid)}" scope="page" />
+<iselse/>
+    <isset name="resetlink" value="${URLUtils.url('Search-ShowContent', 'fdid', pdict.blogRootFolderID)}" scope="page" />
+</isif>
+
+<div class="filter-title d-none d-md-block pb-2">
+    <h3>${Resource.msg('refinement.filter', 'search', null)}</h3>
+</div>
+<div class="filter-header">
+    <div class="header-bar d-md-none clearfix">
+        <div class="pull-left d-md-none">
+            <h3>${Resource.msg('refinement.filterby', 'search', null)}</h3>
+            <!--- Results count --->
+            <div class="result-count">
+                ${Resource.msgf('blog.items', 'blog', null, pdict.contentSearch.contentCount, pdict.contentSearch.contentCount > 1 ? 's' : '')}
+            </div>
+        </div>
+
+        <button class="pull-right close">
+            <span aria-hidden="true"><issvg icon="icon-close" image="true" altText="close" /></span>
+        </button>
+    </div>
+</div>
+
+<div>
+    <div class="content-refinements">
+        <isloop items="${pdict.contentSearch.refinements}" var="refinement">
+            <div class="card content-refinement <isif condition="${refinement.isCategoryRefinement}">refinement-category<iselse> collapsible-xl active</isif> refinement refinement-${refinement.displayName.toLowerCase().replace(/[ /]/g, '-')}">
+                <div class="card-header">
+                    ${refinement.displayName}
+                </div>
+                <div class="card-body">
+                    <!--- CATEGORY REFINEMENTS --->
+                    <isif condition="${refinement.isCategoryRefinement}">
+                        <isset name="categories" value="${refinement.values}" scope="page" />
+                        <isinclude template="search/refinements/contentCategories" />
+                    </isif>
+
+                    <!--- ATTRIBUTE REFINEMENTS --->
+                    <isif condition="${refinement.isAttributeRefinement}">
+                        <isinclude template="search/refinements/attributes" />
+                    </isif>
+
+                </div>
+            </div>
+        </isloop>
+    </div>
+</div>
+
+<!--- Results count and Reset button --->
+<isif condition="${pdict.contentSearch.contents.length > 0 && pdict.contentSearch.refinements.length > 0}">
+    <div>
+        <div class="secondary-bar pb-0 col-10 offset-1 d-md-none mb-0">
+            <span class="apply btn btn-block btn-secondary mb-sm-1">
+                ${Resource.msg('link.apply', 'search', null)}
+            </span>
+        </div>
+        <div class="secondary-bar col-10 offset-1 offset-md-0 col-md-12">
+            <a class="reset btn btn-outline-secondary btn-block" href="${resetlink}">
+                ${Resource.msg('link.reset', 'search', null)}
+            </a>
+        </div>
+    </div>
+</isif>

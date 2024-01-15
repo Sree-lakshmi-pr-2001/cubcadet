@@ -1,0 +1,56 @@
+<div class="row accordions">
+    <div class="col-sm-2">
+        <h3 class="accordion-header" id="miniCartAccordionHeader">
+            <button class="accordion-button btn btn-primary btn-block" type="button" data-bs-toggle="collapse"
+                data-bs-target="#miniCartAccordionDiv" aria-expanded="true" aria-controls="miniCartAccordionDiv">
+                Show/Hide Mini Cart
+            </button>
+        </h3>
+    </div>
+
+    <div class="col-sm-2">
+        <h3 class="accordion-header" id="discountAccordionHeader">
+            <button class="accordion-button btn btn-primary btn-block" type="button" data-bs-toggle="collapse"
+                data-bs-target="#discountAccordionDiv" aria-expanded="true" aria-controls="discountAccordionDiv">
+                Show/Hide Discounts
+            </button>
+        </h3>
+    </div>
+
+    <div class="col-sm-5" id="sfdcCaseUI" style="display:none">
+        <div class="form-group row">
+            <label for="sfdcCaseNumber" class="col-sm-3 col-form-label right">Case Number:</label>
+            <div class="col-sm-4">
+                <input type="text" name="sfdcCaseNumber" class="form-control" id="sfdcCaseNumber" value="" />
+            </div>
+            <div class="col-sm-2">
+                <button class="accordion-button btn btn-primary btn-block" id="sfdcCase-search-btn" type="button" data-bs-toggle="collapse" aria-expanded="true" >Search</button>
+            </div>
+            <div class="col-sm-2">
+                <button class="accordion-button btn btn-primary btn-block" id="sfdcCase-clear-btn" type="button" data-bs-toggle="collapse" aria-expanded="true" >Clear</button>
+            </div>
+            <div id="caseStatus" class="caseStatus center"></div>
+        </div>
+    </div>
+
+    <isif condition="${pdict.pageName == 'AddressView'}">
+        <div class="col-sm-2">
+            <h3 class="accordion-header" id="searchForAddressAccordionHeader">
+                <button class="accordion-button btn btn-primary btn-block" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#searchForAddressAccordionDiv" aria-expanded="true"
+                    aria-controls="searchForAddressAccordionDiv">
+                    Show/Hide Address
+                </button>
+            </h3>
+        </div>
+    </isif>
+</div>
+
+<script>
+var currentPage = document.getElementById('pageName').value;
+var currentSite = document.getElementById('hiddenSite').value;
+if (currentSite == 'epcotus' && currentPage === 'address') {
+    var sfdcCaseUIDisplay = document.getElementById('sfdcCaseUI');
+    sfdcCaseUIDisplay.style.display = 'block';
+}
+</script>

@@ -1,0 +1,54 @@
+{
+    "address": {
+        "US": {
+            "valid": {
+                "address1": "1913 Sherman Ave",
+                "address2": "Apt D2",
+                "city": "Evanston",
+                "state": "IL",
+                "zip": "60201"
+            },
+            "invalid": {
+                "address1": "100001 Sherman Ave",
+                "address2": "",
+                "city": "Evanston",
+                "state": "IL",
+                "zip": "10000"
+            }
+        },
+        "CA": {
+            "valid": {
+                "address1": "1038 Canada Pl",
+                "address2": "",
+                "city": "Vancouver",
+                "state": "BC",
+                "zip": "V6C 0B9"
+            },
+            "invalid": {
+                "address1": "100001 Test Pl",
+                "address2": "",
+                "city": "Vancouver",
+                "state": "BC",
+                "zip": "V0C 0B0"
+            }
+        }
+    },
+    "products": [
+        {
+            "qty": 1,
+            "amount": 100,
+            "id":"testProductId1",
+            "taxClass": "60001"
+        },
+        {
+            "qty": 1,
+            "amount": 100,
+            "id":"testProductId2",
+            "taxClass": "60002"
+        }
+    ],
+    "shipping": {
+        "amount": 10,
+        "taxClass": "90001"
+    }
+}

@@ -1,0 +1,41 @@
+<!--- TEMPLATENAME: landingPage.isml --->
+<isdecorate template="common/layout/page">
+<isinclude template="/components/modules"/>
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/blog.css');
+    </isscript>
+
+    <div class="blog-landing-page">
+        <iscomment>Blog HomePage search</iscomment>
+        <div class="blog-landing-search container-fluid">
+            <isinclude template="components/search" />
+        </div>
+
+        <iscomment>Category (subfolder) carousel</iscomment>
+        <div class="blog-landing-category container-fluid">
+            <isinclude template="search/components/subFolderNav" />
+        </div>
+
+        <iscomment>Blog Popular Posts carousel</iscomment>
+        <div class="blog-landing-post-carousel container-fluid">
+            <div class="blog-landing-header h2">
+                ${Resource.msg('blog.landing.blogpost.heading', 'blog', null)}
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <isslot id="blog-landing-content" description="Blog Landing Page Content" context="folder" context-object="${pdict.rootBlogFolder}" />
+                </div>
+                <div class="col-12 blog-landing-load-more">
+                    <div class="text-center">
+                        <a class="btn btn-secondary col-12 col-sm-4" href="${URLUtils.url('Search-ShowContent', 'fdid', pdict.contentSearch.folder.ID, 'showMore', 'true')}">
+                            ${Resource.msg('blog.postpage.checkoutmoreblogposts', 'blog', null)}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</isdecorate>

@@ -1,0 +1,7 @@
+<!--- TEMPLATENAME: downloadagreement.isml --->
+<div id="manuals-agreements" class="manuals-agreements"
+    style="display: none" 
+    data-agree-btn="${Resource.msg('button.agree', 'common', null)}"
+    data-disagree-btn="${Resource.msg('button.disagree', 'common', null)}">
+    <isprint value="${pdict.agreementHtml}" encoding="off">
+</div>

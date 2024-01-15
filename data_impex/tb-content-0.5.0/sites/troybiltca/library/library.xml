@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="home-product-support">
+      <display-name xml:lang="x-default">Homepage - Product Support Section</display-name>
+      <online-flag>true</online-flag>
+      <searchable-flag>false</searchable-flag>
+      <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;container text-center product-support&quot;&gt;
+          &lt;div class=&quot;row mb-3&quot;&gt;
+          &lt;div class=&quot;col&quot;&gt;
+          &lt;h2&gt;Product Support&lt;/h2&gt;
+          &lt;span class=&quot;hero-body text-dark&quot;&gt;Questions about your Troy Bilt? We're here to help.&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 d-flex justify-content-between flex-wrap&quot;&gt;
+          &lt;div class=&quot;icon-container&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-decoration-none&quot;&gt;
+          &lt;span class=&quot;icon-circle parts-support&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;link-chevron&quot;&gt;Find Parts&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;icon-container&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-decoration-none&quot;&gt;
+          &lt;span class=&quot;icon-circle service-center&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;link-chevron&quot;&gt;Find Service&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;icon-container&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-decoration-none&quot;&gt;
+          &lt;span class=&quot;icon-circle manual&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;link-chevron&quot;&gt;Download Manuals&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;icon-container&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;text-decoration-none&quot;&gt;
+          &lt;span class=&quot;icon-circle smart-assistant-white&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;link-chevron&quot;&gt;Smart Assistants&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+      </content>
+</library>

@@ -1,0 +1,23 @@
+<isif condition="${pdict.content.relatedProducts && pdict.content.relatedProducts.length > 0}" >
+    <div class="blog-related-products">
+        <div class="blog-related-products-title h1">
+            ${Resource.msg('blog.postpage.featured', 'blog', null)}
+        </div>
+
+        <div class="product-tile-caro">
+            <isloop items="${pdict.content.relatedProducts}" var="product">
+                <isobject object="${product}" view="recommendation">
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'promos', false, 'swatches', false, 'showQuickView', false, 'isSliderTile', true, 'bvSeo', true)}"/>
+                </isobject>
+            </isloop>
+        </div>
+
+        <isif condition="${pdict.content.relatedProducts.length > 1}">
+            <div class="product-tile-slider-controls slider-controls controls-center">
+                <span class="slide-prev"></span>
+                <div class="slide-dots"></div>
+                <span class="slide-next"></span>
+            </div>
+        </isif>
+    </div>
+</isif>

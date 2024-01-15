@@ -1,0 +1,24 @@
+{
+  "availabilityRequest": {
+    "consumerProximityToLocation": 300,
+    "numberOfDealersAllowed": 20,
+    "orderLineItems": [
+     {
+        "itemNumber": "13AQA1CQ010",
+        "itemPrice": 1899.0,
+        "model": "13AQA1CQ010",
+        "quantity": 1
+     },
+     {
+        "itemNumber": "954-04060C",
+        "itemPrice": 36.99,
+        "model": "954-04060C",
+        "quantity": 1
+     }
+   ],
+   "originCountryCode": "US",
+   "originPostalCode": "44130",
+   "retailerBrand": "cubcadet",
+   "totalPrice": 1935.99
+  }
+}

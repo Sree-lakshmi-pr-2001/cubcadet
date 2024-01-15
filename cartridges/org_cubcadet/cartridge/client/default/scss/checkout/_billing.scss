@@ -1,0 +1,21 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.billing-summary-row {
+    margin-bottom: 10px;
+
+    .summary-section-label {
+        font-size: rem(18px);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.billing-summary-col + .billing-summary-col {
+    @include media-breakpoint-down(sm) {
+        margin-top: 17px;
+    }
+}

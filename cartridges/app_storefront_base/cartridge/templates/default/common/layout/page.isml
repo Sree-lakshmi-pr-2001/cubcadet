@@ -1,0 +1,33 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<isinclude template="/components/modules" sf-toolkit="off" />
+<isset name="pageStyleGuide" value="${pdict.action == 'StyleGuide-Show' ? 'pt_styleguide' : ''}" scope="page" />
+
+<!DOCTYPE html>
+<iscomment>Updated the HTML element to contain a dynamic locale instead of a static 'en' (LRA-23)</iscomment>
+<html lang="${session.custom.currentLocale}">
+    <head>
+        <!--[if gt IE 9]><!-->
+            <isinclude sf-toolkit="off" template="/common/scripts" />
+        <!--<![endif]-->
+        <isinclude template="/common/htmlHead" />
+        <isactivedatahead/>
+    </head>
+    <body>
+        <div class="page ${pageStyleGuide}" data-action="${pdict.action}" data-querystring="${pdict.queryString}" >
+        	<div id="skip"> <a href="#main">Skip to Main Content</a></div>
+            <isinclude template="/components/header/pageHeader" />
+            <div id="main">
+            	<isreplace/>
+            </div>
+            <isinclude template="/components/footer/pageFooter" />
+        </div>
+        <div class="error-messaging"></div>
+        <div class="modal-background"></div>
+        <iscontentasset aid="cookie_hint" />
+         <!--[if lt IE 10]>
+            <isinclude sf-toolkit="off" template="/common/scripts" />
+        <![endif]-->
+        <isinclude url="${URLUtils.url('ConsentTracking-Check')}"/>
+    </body>
+</html>

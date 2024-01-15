@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+
+    <job job-id="Order Watcher" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_23"/>
+            </flow>
+            <flow>
+                <context site-id="mtdpartsca"/>
+                <template-ref template-id="template_23"/>
+            </flow>
+            <flow-template template-id="template_23">
+                <step step-id="OrderVelocity" type="custom.OrderVelocityEngine" enforce-restart="false">
+                    <description/>
+                    <parameters/>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-03-25Z</date-from>
+                    <start-time>20:50:06.000Z</start-time>
+                    <interval>12M</interval>
+                    <day-of-week/>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+    
+    <job job-id="MonetateIntelligentRecommendationsProductFeed" priority="0">
+        <description>Export Monetate Intelligent Recommendations CSV Feed</description>
+        <parameters/>
+        <flow>
+            <context site-id="monetate"/>
+            <step step-id="ExportAndUploadProductsCSVFeed" type="custom.Monetate.ExportProductsCSV" enforce-restart="false">
+                <description>Export products to CSV file and upload to Monetate SFTP</description>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2018-08-27Z</date>
+                <time>11:17:40.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+    <job job-id="MonetateXMLFeed" priority="0">
+        <description>Export Monetate XML Feed</description>
+        <parameters/>
+        <flow>
+            <context site-id="monetate"/>
+            <step step-id="ExportAndUploadProductsXMLFeed" type="custom.Monetate.ExportProductsXML" enforce-restart="false">
+                <description>Export products to XML file and upload to Monetate SFTP</description>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2018-08-27Z</date>
+                <time>11:15:55.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+</jobs>

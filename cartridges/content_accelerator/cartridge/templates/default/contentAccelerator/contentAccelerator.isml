@@ -1,0 +1,27 @@
+<iscontent type="text/html" charset="UTF-8" />
+
+<isinclude template="contentAccelerator/components/header" />
+
+<div id="gjs"
+    data-save-content-asset="${URLUtils.https('ContentAccelerator-SaveContentAsset')}"
+    data-load-content-asset="${URLUtils.https('ContentAccelerator-LoadContentAsset')}"
+    data-urlprefix="${pdict.staticURL}"
+    data-global-css="${pdict.siteCSS}"
+    data-grapes-css="${pdict.caCSS}"
+    data-loaded-content-asset="${pdict.assetID}"
+    data-locale="${pdict.locale}">
+
+     <isprint value="${pdict.html}" encoding="off" />
+
+    <iscomment>Locked Asset Error</iscomment>
+     <isif condition="${pdict.error}">
+        <div class="alert alert-danger p-5" role="alert">
+            <isprint value="${pdict.error}" />
+        </div>
+     </isif>
+
+</div>
+
+<isinclude template="contentAccelerator/components/footer" />
+<iscomment> page scripts </iscomment>
+<script src="${pdict.caJS}"></script>

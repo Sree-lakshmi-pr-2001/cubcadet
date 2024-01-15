@@ -1,0 +1,21 @@
+<isdecorate template="common/layout/page">
+ <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/content.css');
+    assets.addJs('/js/aftermarket.js');
+</isscript>
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<iscontentasset aid="EW-Overview" />
+
+<iscontentasset aid="EW-Why-Purchase" />
+
+<iscontentasset aid="EW-Imagery-Key-Points​" />
+
+<iscontentasset aid="EW-FAQ​" />
+
+<iscontentasset aid="EW-Contact-Info​​" />
+
+<isinclude template="eligibilityCheck/enterSerialNumber"/>
+
+ </isdecorate>

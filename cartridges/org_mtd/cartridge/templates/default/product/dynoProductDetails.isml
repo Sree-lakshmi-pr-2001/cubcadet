@@ -1,0 +1,115 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/manuals.js');
+        assets.addCss('/css/product/detail.css');
+
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+
+        var siteDisableCommerceFunctionality = dw.system.Site.getCurrent().getCustomPreferenceValue('siteDisableCommerceFunctionality');
+        var recProducts = pdict.product.raw.recommendations;
+    </isscript>
+
+    <isinclude template="components/modules" />
+
+    <isset name="product" value="${pdict.product}" scope="page" />
+    <div class="container product-dyno">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-8">
+                <!-- Product Name -->
+                <div class="product-info">
+                    <h1 class="product-name">
+                        <a href="${URLUtils.url('Product-Show', 'pid', product.id)}">${product.productName}</a>
+                    </h1>
+                    <div class="product-number">
+                        <isinclude template="product/components/productNumber" />
+                    </div>
+                    <div class="product-features-list d-none d-md-block">
+                        <isinclude template="product/components/dynoFeaturesList" />
+                    </div>
+                        <isif condition="${product.available && product.priceAvailability}">
+                            <a href="${URLUtils.url('Product-Show', 'pid', product.id)}" class="btn btn-primary pdp-cta d-none d-md-inline-block">
+                                ${Resource.msg('button.dyno.buynow', 'search', 'null')}
+                            </a>
+                        </isif>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <!-- Product Image -->
+                <isinclude template="product/components/dynoProductImage" />
+
+                <div class="product-info">
+                    <div class="product-features-list d-md-none">
+                        <isinclude template="product/components/dynoFeaturesList" />
+                    </div>
+
+                        <isif condition="${product.isBuyable !== false}">
+                            <a href="${URLUtils.url('Product-Show', 'pid', product.id)}" class="btn btn-primary pdp-cta d-md-none">
+                                ${Resource.msg('button.dyno.buynow', 'search', 'null')}
+                            </a>
+                        </isif>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container product-dyno-results">
+        <ul class="nav nav-pills content-switcher">
+            <li class="nav-item">
+                <a class="nav-link show active parts-search" data-toggle="tab" href="#parts-search-results-pane" role="tab" aria-controls="parts-search-results-pane" aria-selected="true">
+                    ${Resource.msg('search.dyno.parts', 'search', null)}
+                </a>
+            </li>
+            <isif condition="${pdict.enabledManualSearch}">
+                <li class="nav-item">
+                    <a class="nav-link show" data-toggle="tab" href="#manuals-search-results-pane" role="tab" aria-controls="manuals-search-results-pane" aria-selected="false">
+                        ${Resource.msg('search.dyno.manuals', 'search', null)}
+                    </a>
+                </li>
+            </isif>
+            <li class="nav-item">
+                <a class="nav-link show" data-toggle="tab" href="#diagrams-search-results-pane" role="tab" aria-controls="diagrams-search-results-pane" aria-selected="false">
+                    ${Resource.msg('search.dyno.diagrams', 'search', null)}
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane show active" id="parts-search-results-pane" role="tabpanel" aria-labelledby="parts-search-results-pane">
+                <isinclude url="${URLUtils.url('Search-Include', 'fitsOnModel', product.id, 'cgid', pdict.dynositeAllPartsCategory, 'includeInlineSchema', 'true')}" />
+            </div>
+
+            <!--- Manuals Section --->
+            <isif condition="${pdict.enabledManualSearch}">
+                <div class="tab-pane show" id="manuals-search-results-pane" role="tabpanel" aria-labelledby="manuals-search-results-pane">
+                    <div class="manuals-search-results">
+                        <div class="row">
+                            <div class="col-12 manuals-container">
+                                <isset name="modelNo" value="${product.raw.ID}" scope="page" />
+                                <isinclude url="${URLUtils.url('MTDManuals-Show', 'modelNo', modelNo)}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </isif>
+
+            <!--- Diagrams Section --->
+            <div class="tab-pane show" id="diagrams-search-results-pane" role="tabpanel" aria-labelledby="diagrams-search-results-pane">
+                <div class="tab-pane" id="diagrams-search-results-pane" role="tabpanel" aria-expanded="false">
+                    <div class="diagrams-search-results">
+                        <div class="row">
+                            <div class="col-12 diagrams-container">
+                                <h4 class="attribute-name">
+                                    ${Resource.msg('search.dyno.diagrams', 'search', null)}
+                                </h4>
+                                <isinclude url="${URLUtils.url('Page-Include', 'cid', 'ari-iframe-dyno')}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,298 @@
+// Custom disabled states for buttons
+
+button,
+.btn {
+    // bootstrap override for disabled style
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+
+    .icon {
+        margin-left: $btn-icon-spacing;
+    }
+
+    &.btn-sm {
+        padding: rem(8px) $btn-padding-x;
+        line-height: rem(20px);
+    }
+}
+
+.btn-primary {
+    color: $white;
+    border-color: $primary;
+    // for white text on dark backgrounds
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $secondary;
+        border-color: $primary;
+        background: $primary;
+    }
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-outline-primary {
+    color: $secondary;
+    border-color: $primary;
+    border-width: 2px;
+    background: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $primary;
+        background: $white;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-outline-secondary {
+    color: $primary;
+    border-color: $secondary;
+    border-width: 2px;
+    background: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $secondary;
+        background: $white;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-secondary {
+    border-color: $secondary;
+    background: $secondary;
+    color: $primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: $primary;
+        background: $secondary;
+    }
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-alt-bg;
+        border-color: $btn-disabled-alt-border-color;
+        color: $btn-disabled-alt-color;
+    }
+}
+
+.btn-filter {
+    color: $primary;
+    padding: rem(15px) rem(8px);
+    border-color: $border-color;
+    border-width: 1px;
+    background: $white;
+    font-weight: $font-weight-normal;
+    text-transform: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $primary;
+        background: $white;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-video-black-ol,
+.btn-video-white-ol,
+.btn-video-yellow-ol {
+    @include link-primary;
+
+    padding: 0 rem(25px) 0 0;
+
+    @include icon($svg-video-black-ol, right, 20px);
+
+    &::after {
+        transition: background 0.15s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+        text-decoration: underline;
+
+        @include icon($svg-video-ol, right, 20px);
+    }
+
+    &.icon-left {
+        padding: 0 0 0 rem(25px);
+
+        @include icon($svg-video-black-ol, left, 20px);
+
+        &:hover,
+        &:focus,
+        &:active {
+            @include icon($svg-video-ol, left, 20px);
+        }
+    }
+}
+
+.btn-video-white-ol {
+    color: $white;
+    @include icon($svg-video-white-ol, right, 20px);
+}
+
+.btn-video-yellow-ol {
+    color: $brand-main;
+    @include icon($svg-video-yellow-ol, right, 20px);
+}
+
+.btn-text {
+    @include link-primary;
+
+    padding: 0;
+
+    &::after {
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+}
+
+.pre-qual {
+    display: flex;
+
+    .btn-text {
+        min-inline-size: fit-content !important;
+    }
+
+    @include media-breakpoint-down(md) {
+        .prequal {
+            font-size: 11px !important;
+            margin-right: 7px !important;
+        }
+
+        .click {
+            font-size: 11px !important;
+        }
+    }
+}
+
+.btn-link {
+    color: $btn-link-color;
+    background-color: $trans; // override user agent
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+    text-decoration: underline;
+    text-transform: none;
+    padding: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+.btn-print {
+    @include icon($svg-print, left);
+
+    display: none;
+    padding: 0 0 0 rem(26px);
+    font-size: $font-size-xs;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
+
+.print-link-btn {
+    text-align: center;
+
+    .icon {
+        width: rem(25px);
+        margin-bottom: rem(2px);
+    }
+
+    .print-link-btn-copy {
+        font-size: rem(16px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+.remove-btn,
+.remove-btn-lg {
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        margin: 0 auto;
+        background-image: $svg-close;
+    }
+}
+
+.modal-header {
+    button.close {
+        text-shadow: none;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 20px;
+            width: 20px;
+            position: relative;
+            background-image: $svg-close;
+        }
+    }
+}
+
+// Modal standard buttons
+.modal {
+    .btn,
+    button {
+        padding: rem(11px) rem(25px);
+    }
+}

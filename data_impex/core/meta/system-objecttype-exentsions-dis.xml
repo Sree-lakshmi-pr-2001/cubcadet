@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="disImageSourceEnvironment">
+                <display-name xml:lang="x-default">DIS Image Source Environment</display-name>
+                <description xml:lang="x-default">Defines which environment is used to actually load the product images from.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Production</display>
+                        <value>PRD</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Staging</display>
+                        <value>STG</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Development</display>
+                        <value>DEV</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sandbox 1</display>
+                        <value>s01</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sandbox 2</display>
+                        <value>s02</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sandbox 3</display>
+                        <value>s03</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sandbox 4</display>
+                        <value>s04</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Sandbox 5</display>
+                        <value>s05</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Dynamic Imaging Service">
+                <display-name xml:lang="x-default">Dynamic Imaging Service</display-name>
+                <attribute attribute-id="disImageSourceEnvironment"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

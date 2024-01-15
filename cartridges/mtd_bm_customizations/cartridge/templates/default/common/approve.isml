@@ -1,0 +1,7 @@
+<isdecorate template="common/layout/epcot">
+    <isif condition="${pdict.error}">
+        <h1>${pdict.errorText}</h1>
+    <iselse/>
+        <h1>Thank you for Approving the order.</h1>
+    </isif>
+</isdecorate>

@@ -1,0 +1,1894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+
+    <content content-id="1-Millionth-XT-Enduro">
+        <display-name xml:lang="x-default">MTD Martin Produces 1 Millionth XT Enduro</display-name>
+        <description xml:lang="x-default">On September 25, our 1 millionth Cub Cadet XT Enduro rolled off the line at our Martin, Tennessee facility.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD Martin Produces 1 Millionth XT Enduro</page-title>
+            <page-description xml:lang="x-default">On September 25, our 1 millionth Cub Cadet XT Enduro rolled off the line at our Martin, Tennessee facility.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Sept-2020/XT-Enduro-Sept-2020.jpg?$staticlink$" /&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1&gt;&lt;b&gt;MTD Martin Produces 1 Millionth XT Enduro&lt;/b&gt;&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;MARTIN, TENNESSEE &amp;mdash; SEPT 25, 2020 &amp;mdash;&lt;/strong&gt; On September 25, our 1 millionth Cub Cadet XT Enduro rolled off the line at our Martin, Tennessee facility. Launched in 2015, the Cub Cadet XT Enduro Series brings innovation to consumer-centric design and continues to get better with age. Check out the full story &lt;a href="https://www.cubcadet.com/en_US/news-millionth-xt-rider.html"&gt;here&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/news/articles/Oct-19/Electric_logo.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2021-03-23T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="COVID-19-Headband">
+        <display-name xml:lang="x-default">MTD Develops Headband Components in Response to COVID-19</display-name>
+        <description xml:lang="x-default">MTD Develops Headband Components in Response to COVID-19</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD Develops Headband Components</page-title>
+            <page-description xml:lang="x-default">MTD joins the fight against  COVID-19 by developing headband components</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="content group one container-fluid"&gt;&#13;
+                    &lt;div class="row"&gt;&#13;
+                        &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                            &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                            &lt;div class="col-12 img"&gt;&#13;
+                                  &lt;img src="images/news/articles/April-20/ohioManufactuerAlliance-4-9-2020.jpg?$staticlink$" class="img-fluid" alt="Responsive image"&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="col-12 col-lg-8"&gt;&#13;
+                            &lt;div class="articles rb"&gt;&#13;
+                                &lt;div class="article details"&gt;&#13;
+                                    &lt;div class="title lt"&gt;&#13;
+                                        &lt;h1&gt;MTD Develops Headband Components in Response to COVID-19 &lt;/h1&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 1 rb"&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;strong&gt;CLEVELAND, OHIO — APR 9, 2020 —&lt;/strong&gt; The shop at MTD’s Valley City, Ohio headquarters developed and is producing headband components for plastic face shields through an injection mold tool and set up for CNC machines. &#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            At about 8,500 components per day, MTD will continue to supply the pieces to the Ohio Manufacturing Alliance to Fight COVID-19 who will have them assembled into 750,000 to one million face shields in the next five weeks. From there, the shields will become part of Ohio’s stockpile and distributed to those on the frontlines of the pandemic.&#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            To see The Manufacturing Alliance to Fight COVID-19 – Face Shield Project press release, click &lt;a target="_blank" href="https://ohiomfg.informz.net/ohiomfg/data/images/PRESS%20RELEASE%20-%20Face%20Shields%20Announcement%20-%20FINAL%20-%204.9.2020.pdf"&gt;here&lt;/a&gt;.&#13;
+                                        &lt;p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                &lt;/div&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/news/articles/Oct-19/Electric_logo.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2021-03-23T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="Cleveland-Metroparks-Winter-Riverfest">
+        <display-name xml:lang="x-default">MTD Products is Proud to Serve as Presenting Sponsor of the Cleveland Metroparks Winter Riverfest</display-name>
+        <description xml:lang="x-default">At MTD, our purpose is to inspire people to care for and enjoy the outdoors. Winter RiverFest is a fantastic way to do that,” says Chairman, CEO and President of MTD Products, Robert T. Moll.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD Products is Proud to Serve as Presenting Sponsor of the Cleveland Metroparks Winter Riverfest</page-title>
+            <page-description xml:lang="x-default">At MTD, our purpose is to inspire people to care for and enjoy the outdoors. Winter RiverFest is a fantastic way to do that,” says Chairman, CEO and President of MTD Products, Robert T. Moll.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Oct-20/WINTER-RIVERFEST.jpg?$staticlink$" /&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1&gt;&lt;b&gt;MTD Products is Proud to Serve as Presenting Sponsor of the Cleveland Metroparks Winter Riverfest&lt;/b&gt;&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;CLEVELAND, OHIO &amp;mdash; OCT&amp;nbsp;16, 2020 &amp;mdash;&lt;/strong&gt; At MTD, our purpose is to inspire people to care for and enjoy the outdoors. Winter RiverFest is a fantastic way to do that,&amp;rdquo; says Chairman, CEO and President of MTD Products, Robert T. Moll. &amp;ldquo;We are proud to partner with Cleveland Metroparks to bring forward this unique opportunity for families to enjoy one of our many beautiful outdoor spaces in Northeast Ohio.&amp;rdquo; Click &lt;a href="https://www.clevelandmetroparks.com/news-press/2020/october-2020/cleveland-metroparks-announces-winter-riverfest-ar"&gt;here&lt;/a&gt; to learn more.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/news/Winterfest_logo.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-10-16T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-article-assets">
+                <position>5.0</position>
+            </classification-link>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="Cub-Cadet-Australia-Partners-14-Bathurst-2020">
+        <display-name xml:lang="x-default">Cub Cadet Australia Partners with #14 for Bathurst 2020</display-name>
+        <description xml:lang="x-default">Cub Cadet Australia is excited to announce our partnership with Brad Jones Racing and the #14 car driven by Todd Hazelwood and co-driver Jordan Boys for the 2020 Supercheap Auto Bathurst 1000.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub Cadet Australia Partners with #14 for Bathurst 2020</page-title>
+            <page-description xml:lang="x-default">Cub Cadet Australia is excited to announce our partnership with Brad Jones Racing and the #14 car driven by Todd Hazelwood and co-driver Jordan Boys for the 2020 Supercheap Auto Bathurst 1000.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Oct-20/CC-Australia-Bathurst-2020.jpg?$staticlink$" /&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1&gt;&lt;b&gt;Cub Cadet Australia Partners with #14 for Bathurst 2020&lt;/b&gt;&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;OCT 14, 2020 &amp;mdash;&lt;/strong&gt; Cub Cadet Australia is excited to announce our partnership with Brad Jones Racing and the #14 car driven by Todd Hazelwood and co-driver Jordan Boys for the 2020 Supercheap Auto Bathurst 1000. Click &lt;a href="https://www.cubcadet.com.au/bathurst"&gt;here&lt;/a&gt; to read the full story.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">/images/news/articles/Oct-20/CC-Australia-Bathurst-2020.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-10-14T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="Cub-Cadet-Electrifies-Residential">
+        <display-name xml:lang="x-default">Cub Cadet Electrifies Its Residential Lawn Care Line</display-name>
+        <description xml:lang="x-default">Lithium-ion battery line features zero turn, tractor and walk-behind mowers, plus handheld tools that offer uncompromising cut quality in a premium, quiet, powerful and hassle-free package</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub Cadet Electrifies Its Residential Lawn Care Line</page-title>
+            <page-description xml:lang="x-default">Lithium-ion battery line features zero turn, tractor and walk-behind mowers, plus handheld tools that offer uncompromising cut quality in a premium, quiet, powerful and hassle-free package</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Mar-2021/Electric_Launch.jpg?$staticlink$" /&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1&gt;&lt;b&gt;Cub Cadet Electrifies Its Residential Lawn Care Line&lt;/b&gt;&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;Media Contacts&amp;nbsp;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+Cub Cadet&lt;/strong&gt;&lt;br /&gt;&#13;
+Siana Calanni&lt;br /&gt;&#13;
+216-956-9259&lt;br /&gt;&#13;
+scalanni@mtdproducts.com&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;strong&gt;Exponent&lt;/strong&gt;&lt;br /&gt;&#13;
+Andrew Miller&lt;br /&gt;&#13;
+612-819-7000&lt;br /&gt;&#13;
+andrew.miller@exponentpr.com&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;em&gt;Lithium-ion battery line features zero turn, tractor and walk-behind mowers, plus handheld tools that offer uncompromising cut quality in a premium, quiet, powerful and hassle-free package&amp;nbsp;&lt;/em&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;CLEVELAND, OHIO &amp;mdash; March 10, 2021 &amp;mdash;&lt;/strong&gt; Backed by 60 years of innovation and experience in developing industry-leading outdoor power equipment, Cub Cadet&amp;reg; is launching a full line of electric outdoor power equipment that provides hassle-free power for any lawn. &amp;nbsp; &amp;nbsp;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+Cub Cadet&amp;rsquo;s lithium-ion battery line features the same uncompromising commitment to design, comfort and performance found in all of its products. The electric lineup is proven to deliver the same results as Cub Cadet&amp;rsquo;s industry-leading gas models. From the Ultima ZT1 42E zero turn mower to the 60 Volt MAX String Trimmer, the electric line provides all the tools needed to fine-tune every part of your lawn.&amp;nbsp;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&amp;ldquo;Cub Cadet is deeply committed to innovating to meet the ever-evolving needs of its customers,&amp;rdquo; said Jason Koleki, director of Product Marketing Ride-On Equipment, Cub Cadet. &amp;ldquo;The momentum behind electric-powered outdoor power equipment is undeniable, so we&amp;rsquo;re excited to expand on the legacy and reputation of our gas-powered products to deliver electric options that pack more than enough power to get the job done.&amp;rdquo;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;strong&gt;Ultima ZT1 42E&lt;/strong&gt;&lt;br /&gt;&#13;
+The Ultima Series zero-turn mower, the top-selling model in the residential zero-turn category, has been redesigned as a fully electric lithiuim-ion unit. Continuous 2- x 2-inch square tubular frame enhances strength and durability. User-centric design includes a high-back seat, ergonomic hand grips, rubber floor mat and USB charging port. Fifteen quarter-inch deck height adjustments and a 42-inch stamped deck powered by two independent brushless motors provide the perfect cut every time.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;strong&gt;XT1 Enduro LT42E&lt;/strong&gt;&lt;br /&gt;&#13;
+As the next generation of lawn tractors, the XT Enduro Series is loaded with modern comforts like automotive-inspired design and steering, automatic transmission, USB charging port, adjustable seating and cruise control.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+Both the Ultima ZT1 42E and the XT1 Enduro LT42E feature:&lt;/p&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+	&lt;li&gt;Up to&lt;strong&gt; two acres of cut time on a single charge&lt;/strong&gt; with no power fade&lt;/li&gt;&#13;
+	&lt;li&gt;&lt;strong&gt;Less maintenance &lt;/strong&gt;including no gas, oil changes, spark plugs, fuel storage, pulleys or belts&lt;/li&gt;&#13;
+	&lt;li&gt;&lt;strong&gt;Four hours&lt;/strong&gt; to a fully charged battery and &lt;strong&gt;64%* quieter&lt;/strong&gt; than a comparable gas unit&lt;/li&gt;&#13;
+	&lt;li&gt;Backed by a strong &lt;strong&gt;four-year battery and three-year full machine warranty&lt;/strong&gt;&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;p&gt;Additional Cub Cadet electric products coming soon include:&lt;/p&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+	&lt;li&gt;CC30E Riding Lawn Mower&amp;nbsp;&lt;/li&gt;&#13;
+	&lt;li&gt;60 Volt Max 21&amp;quot; Signature Cut&amp;trade; Push Walk-Behind Mower&lt;/li&gt;&#13;
+	&lt;li&gt;60 Volt MAX Chainsaw&lt;/li&gt;&#13;
+	&lt;li&gt;60 Volt MAX Hedge Trimmer&lt;/li&gt;&#13;
+	&lt;li&gt;60 Volt MAX Leaf Blower&lt;/li&gt;&#13;
+	&lt;li&gt;60 Volt MAX String Trimmer&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;p&gt;Each of the 60 Volt MAX products run on the same, interchangeable lithium-ion battery system, while riders will feature a dedicated battery unique to each mower&amp;rsquo;s output.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+With no gas, no oil changes, no spark plugs, no belts and no pulleys needed, Cub Cadet&amp;rsquo;s electric lineup promises less maintenance and more freedom to kick back and relax outdoors. On &lt;a href="https://www.cubcadet.com/en_US/product-finder-electric-savings.html"&gt;CubCadet.com&lt;/a&gt;, homeowners can answer four simple questions to find out just how much time they can save each year by switching to one of Cub Cadet&amp;rsquo;s new electric mowers.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+The electric line will be available in limited quantities online, at local Cub Cadet dealerships, and at The Home Depot stores nationwide this Spring and Summer. Visit &lt;a href="https://www.cubcadet.com/en_US/electric-mowers-and-tools"&gt;https://www.cubcadet.com/en_US/electric-mowers-and-tools&lt;/a&gt; for more information.&amp;nbsp;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+*A-weighted sound level per ISO-5395-1, 95% confidence comparing XT1 Enduro Series LT42 and Ultima Series ZT1 42.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;strong&gt;About Cub Cadet&lt;/strong&gt;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+Established in 1961, Cub Cadet engineers, designs and builds outdoor power equipment using the highest-quality components sourced locally and globally. Through a dedicated and extensive network of dealers and retailers, Cub Cadet delivers a full line of high-performance power equipment and services that cover all aspects of grounds care for professionals and homeowners &amp;ndash; including battery and gasoline-powered lap bar zero-turn riders, lawn and garden tractors, handheld and chore products, and four-wheel steer zero-turn riders, snow throwers, utility vehicles and more. Based in Valley City, Ohio, Cub Cadet is recognized worldwide for its legacy in engineering excellence and its progressive dedication to thoughtfully designing around the people who depend on Cub Cadet equipment to help unlock the full potential of their outdoor spaces. For more information on all Cub Cadet products, visit cubcadet.com.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+###&lt;br /&gt;&#13;
+&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/news/Electric_logo.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2021-03-10T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-article-assets">
+                <position>4.0</position>
+            </classification-link>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="Cub-Cadet-Launches-The-Lawnual-Report">
+        <display-name xml:lang="x-default">Cub Cadet Launches The Lawnual Report</display-name>
+        <description xml:lang="x-default">Today, Cub Cadet, a leading outdoor power equipment designer and manufacturer, is announcing the Cub Cadet Lawnual Report, a national survey of American lawncare habits that assembled over 24 million data points to illuminate regional and national behaviors and trends.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub-Cadet-Launches-The-Lawnual-Report</page-title>
+            <page-description xml:lang="x-default">Cub-Cadet-Launches-The-Lawnual-Report</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1 class="lt"&gt;Cub Cadet Launches The Lawnual Report&lt;/h1&gt;&#13;
+&#13;
+&lt;h2 class="lt"&gt;Shedding Light on U.S. Lawncare Habits&lt;/h2&gt;&#13;
+&#13;
+&lt;h2 class="lt"&gt;National survey uncovers the truth about American&amp;rsquo;s relationship with their lawns and surprising generational and gender behaviors&lt;/h2&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;CLEVELAND, OHIO &amp;mdash; JUNE 15, 2020 &amp;mdash;&lt;/strong&gt; Today, Cub Cadet, a leading outdoor power equipment designer and manufacturer, is announcing the Cub Cadet Lawnual Report, a national survey of American lawncare habits that assembled over 24 million data points to illuminate regional and national behaviors and trends.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;br /&gt;&#13;
+Long story short, the Cub Cadet Lawnual Report found that Americans still love their lawns. Nearly half &lt;strong&gt;(48%)&lt;/strong&gt; of people say they like mowing their lawn. And somewhat surprisingly, millennials love mowing their lawn more than any other generation, with &lt;strong&gt;51.7%&lt;/strong&gt; taking great pride in lawncare and &lt;strong&gt;74.6%&lt;/strong&gt; keeping their lawns at the optimal length.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;br /&gt;&#13;
+&amp;ldquo;Cub Cadet is unapologetic in our love for all things lawn-related so we wanted to find out how people truly feel about their lawns,&amp;rdquo; said Siana Calanni, Brand Manager, Cub Cadet. &amp;ldquo;And our curiosity got the better of us: who&amp;rsquo;s more likely to listen to hip hop when they mow, women or men? And what&amp;rsquo;s the post-mow beverage of choice for millennials? The data we uncovered gave us a peek at the mowers behind the mowers.&amp;rdquo;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;br /&gt;&#13;
+The Lawnual Report brought to light gender differences in lawncare habits, showing that women tend to work more on their lawn while men like to brag more about their lawncare. After a good cut, men are &lt;strong&gt;11x&lt;/strong&gt; more likely to brag about how good their mow looks on social media than women.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;br /&gt;&#13;
+The survey also found surprising gender differences in musical taste and preferred beverages. The Lawnual Report found that women are &lt;strong&gt;3.4 times more likely than men &lt;/strong&gt;to listen to hip-hop while they mow. In addition, &lt;strong&gt;more women (11%) &lt;/strong&gt;choose to cool off with a craft beer after they mow compared to &lt;strong&gt;9% of men&lt;/strong&gt; who turn to craft beers after they mow the lawn.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;br /&gt;&#13;
+The survey uncovered generational differences as well: as far as lawn mowing attire, the survey shows that millennials are actually &lt;strong&gt;2x&lt;/strong&gt; more likely than baby boomers to wear shorts while mowing.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;br /&gt;&#13;
+&amp;ldquo;Research and data about our customers informs everything we do, beginning with product design,&amp;rdquo; said Calanni. &amp;ldquo;It allows us to build the best experience for consumers. The Lawnual puts a fun spin on understanding these mowing habits.&amp;rdquo;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;For more information on Cub Cadet and the findings of the Lawnual Report, visit &lt;a href="http://www.thelawnualreport.com/"&gt;TheLawnualReport.com&lt;/a&gt;.&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 2 rb"&gt;&#13;
+&lt;h2 class="lt"&gt;Cub Cadet Lawnual Report Methodology:&lt;/h2&gt;&#13;
+&#13;
+&lt;p&gt;The Cub Cadet Lawnual Report asked homeowners who also own either a walk behind mower, a riding mower, a zero-turn mower, or a robotic lawn mower to complete an online survey about behavioral patterns, mowing habits and preferences related to their yard. The survey was conducted among approximately 3,300 men and women across the country ages 21 to 74 by Savanta on behalf of Cub Cadet in March 2019.&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 2 rb"&gt;&#13;
+&lt;h2 class="lt"&gt;About Cub Cadet:&lt;/h2&gt;&#13;
+&#13;
+&lt;p&gt;Established in 1961, Cub Cadet engineers, designs and builds outdoor power equipment using the highest-quality components sourced locally and globally. Through a dedicated and extensive network of dealers and retailers, Cub Cadet delivers a full line of high-performance power equipment and services that cover all aspects of grounds care for professionals and homeowners, including four-wheel-steering zero-turn riders, lap bar zero-turn riders, utility vehicles, lawn and garden tractors, specialty turf products, chore products, snow blowers and more. Based in Valley City, Ohio, Cub Cadet is recognized worldwide for its legacy in engineering excellence and its progressive dedication to thoughtfully designing around the people who depend on Cub Cadet equipment to help unlock the full potential of their outdoor spaces. For more information on all Cub Cadet products, visit &lt;a href="https://www.cubcadet.com/"&gt;cubcadet.com&lt;/a&gt;, &lt;a href="https://www.instagram.com/cubcadet_usa/"&gt;Instagram&lt;/a&gt;, &lt;a href="https://twitter.com/CubCadet_USA"&gt;Twitter&lt;/a&gt;, &lt;a href="https://www.facebook.com/cubcadet"&gt;Facebook &lt;/a&gt;and &lt;a href="https://www.youtube.com/user/CubCadetRidingMowers"&gt;YouTube&lt;/a&gt;.&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-06-15T00:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="Cub-Cadet-Pro-X-Twenty-2020">
+        <display-name xml:lang="x-default">Cub Cadet PRO X Series was Named as One of Landscape Business “Twenty for 2020” New Product Award Winners</display-name>
+        <description xml:lang="x-default">Our Cub Cadet PRO X Series has been named one of the Twenty for 2020 New Product Awards by Landscape Business. With an easy step-on/step-off design and an operator platform with adjustable suspension and hip pad, this series of stand-on mowers is in a comfort class of its own. Click here to read more.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub Cadet PRO X Series was Named as One of Landscape Business “Twenty for 2020” New Product Award Winners</page-title>
+            <page-description xml:lang="x-default">Cub Cadet PRO X Series was Named as One of Landscape Business “Twenty for 2020” New Product Award Winners</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1 class="lt"&gt;Cub Cadet PRO X Series was Named as One of Landscape Business &amp;ldquo;Twenty for 2020&amp;rdquo; New Product Award Winners&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;CLEVELAND, OHIO &amp;mdash; July&amp;nbsp;1, 2020 &amp;mdash;&lt;/strong&gt; Our Cub Cadet PRO X Series has been named one of the Twenty for 2020 New Product Awards by &lt;a href="https://landscape-business.com/"&gt;Landscape Business&lt;/a&gt;. With an easy step-on/step-off design and an operator platform with adjustable suspension and hip pad, this series of stand-on mowers is in a comfort class of its own. &lt;a href="https://landscape-business.com/landscape-business-twenty-for-2020-new-product-award-winners-announced/"&gt;Click here&lt;/a&gt; to read more.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 2 rb"&gt;&#13;
+&lt;h2 class="lt"&gt;About Cub Cadet:&lt;/h2&gt;&#13;
+&#13;
+&lt;p&gt;Established in 1961, Cub Cadet engineers, designs and builds outdoor power equipment using the highest-quality components sourced locally and globally. Through a dedicated and extensive network of dealers and retailers, Cub Cadet delivers a full line of high-performance power equipment and services that cover all aspects of grounds care for professionals and homeowners, including four-wheel-steering zero-turn riders, lap bar zero-turn riders, utility vehicles, lawn and garden tractors, specialty turf products, chore products, snow blowers and more. Based in Valley City, Ohio, Cub Cadet is recognized worldwide for its legacy in engineering excellence and its progressive dedication to thoughtfully designing around the people who depend on Cub Cadet equipment to help unlock the full potential of their outdoor spaces. For more information on all Cub Cadet products, visit &lt;a href="https://www.cubcadet.com/"&gt;cubcadet.com&lt;/a&gt;, &lt;a href="https://www.instagram.com/cubcadet_usa/"&gt;Instagram&lt;/a&gt;, &lt;a href="https://twitter.com/CubCadet_USA"&gt;Twitter&lt;/a&gt;, &lt;a href="https://www.facebook.com/cubcadet"&gt;Facebook &lt;/a&gt;and &lt;a href="https://www.youtube.com/user/CubCadetRidingMowers"&gt;YouTube&lt;/a&gt;.&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-07-01T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="MTD-Closed-Leitchfield-Kentucky-Facility">
+        <display-name xml:lang="x-default">MTD to Close Leitchfield, Kentucky Facility; Remains Committed to US Manufacturing</display-name>
+        <description xml:lang="x-default">MTD to Close Leitchfield, Kentucky Facility; Remains Committed to US Manufacturing</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD to Close Leitchfield, Kentucky Facility; Remains Committed to US Manufacturing</page-title>
+            <page-description xml:lang="x-default">MTD to Close Leitchfield, Kentucky Facility; Remains Committed to US Manufacturing</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;MTD TO CLOSE LEITCHFIELD, KENTUCKY FACILITY; REMAINS COMMITTED TO US MANUFACTURING&lt;/h1&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;LEITCHFIELD, KY – October 3, 2019 –&lt;/strong&gt;MTD Products Inc today announced plans to close&#13;
+                                its manufacturing facility in Leitchfield, Kentucky by June 2020. The Leitchfield facility&#13;
+                                employs approximately 295 people and manufactures component and aftermarket parts used&#13;
+                                to supply the company’s assembly facilities.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                “MTD is grateful for the hard work and dedication of these employees and the continued&#13;
+                                support of the Leitchfield community,” said Craig Dukes, senior vice president of Human&#13;
+                                Resources. “We recognize the significant impact this closure will have on employees and&#13;
+                                their families and will be providing separation support including severance benefits,&#13;
+                                outplacement services and preferential hiring opportunities at MTD’s other US facilities.”&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                MTD made this decision after careful and ongoing evaluation of its manufacturing footprint in&#13;
+                                relation to future strategic needs. The move will improve overall efficiency and better position&#13;
+                                MTD to deliver competitive product in a rapidly evolving outdoor power equipment industry.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                MTD remains committed to US manufacturing and has increased employment at its other US&#13;
+                                manufacturing facilities over the last several years. The move also allows the company to&#13;
+                                focus on better leveraging advanced manufacturing capabilities in its other US facilities.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Contact:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Erica L. Creech&lt;/br&gt;&#13;
+                                MTD Products Inc&lt;/br&gt;&#13;
+                                corporate communications manager&lt;/br&gt;&#13;
+                                office: 330-558-7285&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;About MTD&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Founded in Cleveland in 1932, MTD Products Inc is a leader in the design and manufacture of outdoor power&#13;
+                                equipment such as lawnmowers and snow throwers. MTD is headquartered in Valley City, Ohio and has&#13;
+                                engineering, manufacturing, distribution, and sales offices across more than 20 countries. MTD’s family of&#13;
+                                brands includes Cub Cadet®, Troy-Bilt®, Rover®, WOLF-Garten®, Remington®, MTD Genuine Parts®, and&#13;
+                                Robomow®. Each brand is backed by a strong network of MTD sales, service and support and together they&#13;
+                                offer a range of lawn and garden products that inspire people all over the world to care for and enjoy the&#13;
+                                outdoors. To learn more, visit &lt;a href="https://www.mtdproducts.com"&gt;www.mtdproducts.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2019-10-03T00:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <folder-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="MTD-Hosts-2021-Cub-Cadet-Independent-Dealers">
+        <display-name xml:lang="x-default">MTD Hosts 2021 Cub Cadet Independent Dealers</display-name>
+        <description xml:lang="x-default">Despite not being able to get together in person with our Independent Dealer family this year, MTD was pleased to host our annual Cub Cadet Dealer Conventions in the U.S. and Canada.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD Hosts 2021 Cub Cadet Independent Dealers</page-title>
+            <page-description xml:lang="x-default">Despite not being able to get together in person with our Independent Dealer family this year, MTD was pleased to host our annual Cub Cadet Dealer Conventions in the U.S. and Canada.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Oct-20/CC-Dealer-10-2020-1.jpg?$staticlink$" /&gt;&lt;/div&gt;&lt;br&gt;&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Oct-20/CC-Dealer-10-2020-2.jpg?$staticlink$" /&gt;&lt;/div&gt;&lt;br&gt;&#13;
+&lt;div class="col-12 img"&gt;&lt;img alt="Responsive image" class="img-fluid" src="images/news/articles/Oct-20/CC-Dealer-10-2020-3.jpg?$staticlink$" /&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1&gt;&lt;b&gt;MTD Hosts 2021 Cub Cadet Independent Dealers&lt;/b&gt;&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;OCT 1, 2020 &amp;mdash;&lt;/strong&gt; Despite not being able to get together in person with our Independent Dealer family this year, MTD was pleased to host our annual Cub Cadet Dealer Conventions in the U.S. and Canada. The theme was UNITED and our unity shined as everyone came together virtually to kick off the 2021 season and the 60th anniversary of Cub Cadet. We were also proud and honored to recognize 95 U.S. dealerships who have been with Cub Cadet since it all began in 1961.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">/images/news/articles/Oct-20/CC-Dealer-10-2020-1.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-10-01T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="MTD-TSC-Partner-of-the-Year">
+        <display-name xml:lang="x-default">MTD Products Named Tractor Supply Company’s Vendor Partner of the Year</display-name>
+        <description xml:lang="x-default">MTD Products, the manufacturer of Cub Cadet and Troy-Bilt brands of outdoor power and lawn care equipment, was named Vendor Partner of the Year for sales growth, innovation and overall support of Tractor Supply and its customers.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub-Cadet-Launches-The-Lawnual-Report</page-title>
+            <page-description xml:lang="x-default">Cub-Cadet-Launches-The-Lawnual-Report</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1 class="lt"&gt;MTD Products Named Tractor Supply Company&amp;rsquo;s Vendor Partner of the Year&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;BRENTWOOD, TENNESSEE&amp;nbsp;&amp;mdash; August 18, 2020 &amp;mdash;&lt;/strong&gt; Tractor Supply Company, the largest rural lifestyle retailer in the United States, recognized its top vendor partners at the Company&amp;rsquo;s annual partnership conference held virtually on August 13, 2020. Each company was selected for their exceptional dedication, collaboration and commitment to offer products that resonate with the differentiated lifestyle of Tractor Supply&amp;rsquo;s customers.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;MTD Products, the manufacturer of Cub Cadet and Troy-Bilt brands of outdoor power and lawn care equipment, was named Vendor Partner of the Year for sales growth, innovation and overall support of Tractor Supply and its customers. &lt;a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcorporate.tractorsupply.com%2Fnewsroom%2Fnews-releases%2Fnews-releases-details%2F2020%2FTractor-Supply-Company-Honors-2020-Top-Vendor-Partners%2Fdefault.aspx&amp;amp;data=02%7C01%7CKelly.Bodner%40mtdproducts.com%7Cd6d04dff87c34307d3d408d8446d80db%7Cd25e1f3d158a48e9b7f255f55d26f851%7C0%7C0%7C637334584397457346&amp;amp;sdata=pGdIuck%2FvnzwyIAzJNa3HyUkTsnMmSHa9ft7nHpXXac%3D&amp;amp;reserved=0"&gt;Click here&lt;/a&gt; to see full release.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;ldquo;MTD is both honored and proud to be recognized as Vendor Partner of the Year,&amp;rdquo; says MTD Americas President, Gary Lobaza. &amp;ldquo;We would like to thank Tractor Supply Company for their support and commitment over the years; and, we look forward to continued success in the years to come.&amp;rdquo;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;ldquo;We also want to thank and congratulate our MTD teams who work hard each day to keep our relationship with Tractor Supply Company strong and ensure that each and every one of Tractor Supply Company&amp;rsquo;s customers is not only satisfied, but delighted, by the products we manufacture,&amp;rdquo; says Roy Keating, Vice President of Sales &amp;amp; Channel Development for MTD Americas. &amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-08-18T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="Troy-Bilt-Trees-Seeds-Me">
+        <display-name xml:lang="x-default">Troy-Bilt “Trees, Seeds &amp; Me” Community Event Recap</display-name>
+        <description xml:lang="x-default">Troy-Bilt “Trees, Seeds &amp; Me” Community Event Recap</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Troy-Bilt “Trees, Seeds &amp; Me” Community Event Recap</page-title>
+            <page-description xml:lang="x-default">Troy-Bilt “Trees, Seeds &amp; Me” Community Event Recap</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                    &lt;img src="images/news/articles/Nov-19/troybilt-seed-12-18-2019.jpg?$staticlink$" class="img-fluid" alt="Responsive image"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;Troy-Bilt “Trees, Seeds &amp; Me” Community Event Recap&lt;/h1&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;CLEVELAND, OHIO — DEC 18, 2019 —&lt;/strong&gt; The Troy-Bilt “Trees, Seeds &amp; Me” community improvement event to honor the late mayor of Waveland, MS, &lt;a href="https://www.sunherald.com/news/local/counties/hancock-county/article228682579.html"&gt;Tommy Longo&lt;/a&gt; was held in Waveland, MS on November 7, 2019. Troy-Bilt first met Mayor Longo during Hurricane Katrina recovery efforts in 2006-2010, where strong and enduring relationships were formed with many of the city leaders between Biloxi and Waveland, MS.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Mayor Longo passed away unexpectedly in March 2019. To honor his immense effort and dedication to hurricane recovery, a beautification project was completed at the city park next to the &lt;a href="https://www.wavelandgroundzero.com/"&gt;Waveland Ground Zero Hurricane Museum&lt;/a&gt; and included the construction of two 10 x 10 ft pergolas, the planting of six Live Oak trees and a small raised garden bed. An additional pergola and raised bed was also constructed at Our Lady of the Gulf Catholic Church and Holy Trinity Catholic School in Bay St Louis, MS, where Mayor Longo’s wife, Marcia, has been a teacher for many years. The students at the school received seed packets and educational materials related to the importance of environmental stewardship.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Dedication speakers at both sites included Longo family members, Mayor Mike Smith of Waveland, Mayor Mike Favre of Bay St Louis and Bay St Louis native, national journalist, author and former CNN reporter, &lt;a href="http://www.kathleenkoch.com/about.aspx"&gt;Kathleen Koch&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                On-site volunteers that day included several Troy-Bilt representatives from the marketing and 1MTD sales team, &lt;a href="https://www.planetinaction.org/"&gt;Planet In Action&lt;/a&gt; representatives, employees of the Silver Slipper Casino and Hotel, and Gulfport Navy Seabees.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Local coverage of the beautification event included a segment on &lt;a href="https://www.wlox.com/2019/11/07/waveland-mayor-tommy-longo-memorialized-hometown-bay-st-louis/?fbclid=IwAR3b3oCxsF3-j4PYd3rWgZrPG6YZz8o2GfC1yxgq5KLJiKhp1RU0_5ALoes"&gt;WLOX&lt;/a&gt;-Channel 13, an article in the local Sun-Herald newspaper and social media posts by the &lt;a href="https://www.facebook.com/hancock.chamber/"&gt;Hancock County Chamber of Commerce&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="Willard-Jobs">
+        <display-name xml:lang="x-default">Assemblers Needed Immediately to Join the MTD Willard Team</display-name>
+        <description xml:lang="x-default">MTD’s Willard, Ohio production facility is seeking to fill more than 180 assembler positions available immediately.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Assemblers Needed Immediately to Join the MTD Willard Team</page-title>
+            <page-description xml:lang="x-default">MTD’s Willard, Ohio production facility is seeking to fill more than 180 assembler positions available immediately.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+&lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+&lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero2.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-banner container-fluid"&gt;&#13;
+&lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+&lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="content group one container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+&lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 img"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12 col-lg-8"&gt;&#13;
+&lt;div class="articles rb"&gt;&#13;
+&lt;div class="article details"&gt;&#13;
+&lt;div class="title lt"&gt;&#13;
+&lt;h1&gt;&lt;b&gt;Assemblers Needed Immediately to Join the MTD Willard Team&lt;/b&gt;&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="body 1 rb"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;WILLARD, OHIO &amp;mdash; APRIL 7, 2021, UPDATED MAY 3, 2021 &amp;mdash;&lt;/strong&gt; MTD&amp;rsquo;s Willard, Ohio production facility is seeking to fill more than 180 assembler positions available immediately. Along with MTD&amp;rsquo;s competitive rates, candidates accepted for these positions may receive an off-shift differential, a generous sign-on bonus, and a Total Rewards compensation and benefit package you won&amp;rsquo;t find anywhere else - including low-cost healthcare options (medical, dental and vision), retirement savings plans, employee discounts, tuition reimbursement, paid vacation and holidays, and more.&lt;/p&gt;&#13;
+&#13;
+&lt;p style="text-align: center;"&gt;&lt;strong&gt;DRIVE-THRU JOB FAIR&lt;/strong&gt;&lt;br /&gt;&#13;
+Friday, May 7, 2021&lt;br /&gt;&#13;
+Stop by anytime between 3PM and 7PM&lt;br /&gt;&#13;
+Willard Manufacturing Plant&lt;br /&gt;&#13;
+979 South Conwell Ave., Willard, Ohio 44890&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;strong&gt;OR &lt;a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fphg.tbe.taleo.net%2Fphg02%2Fats%2Fcareers%2Fv2%2FviewRequisition%3Forg%3DMTDPRODUCTS%26cws%3D39%26rid%3D2812&amp;amp;data=04%7C01%7CKelly.Bodner%40mtdproducts.com%7C484546858f8b45e1d00f08d90e79790d%7Cd25e1f3d158a48e9b7f255f55d26f851%7C0%7C0%7C637556737159703252%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;amp;sdata=Csh1yuy3WdsDpHeJqGVvqv5pRGDW1v%2BZYBemy4VYRqY%3D&amp;amp;reserved=0"&gt;APPLY ONLINE&lt;/a&gt; TODAY&lt;/strong&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Assemblers in our MTD Willard facility are an integral part of building the innovative and quality outdoor power equipment MTD customers have come to know and love in brands like Cub Cadet and Troy-Bilt. Whether you&amp;rsquo;re helping to assemble snow throwers or tractors, you&amp;rsquo;ll be part of the MTD family and an incredible team that takes pride in their work.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Don&amp;rsquo;t miss out on this great opportunity! Click &lt;a href="https://phg.tbe.taleo.net/phg02/ats/careers/v2/viewRequisition?org=MTDPRODUCTS&amp;amp;cws=39&amp;amp;rid=2812"&gt;here&lt;/a&gt; for a complete job description as well as how to apply and get started as soon as next week.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;About MTD Products Inc&lt;/strong&gt;&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+Founded in 1932 and headquartered in Valley City, Ohio, MTD is a global company known for innovative and award-winning lawn mowers, snow throwers and outdoor power equipment for both residential and professional markets. The MTD family of brands includes Cub Cadet&amp;reg;, Troy-Bilt&amp;reg;, Robomow&amp;reg;, Rover&amp;reg;, and WOLF-Garten&amp;reg; &amp;ndash; all backed by a strong network of MTD support focused on uncompromising quality, service and value through advanced manufacturing. Products designed, manufactured, distributed, and sold by MTD can be found in retail outlets large and small all over the world. For more information, please visit &lt;a href="http://www.mtdproducts.com"&gt;www.mtdproducts.com&lt;/a&gt;.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Since 1953, MTD Willard manufacturing and distribution operations have called Huron County and Willard, Ohio home. The state-of-the-art facility manufactures snow throwers, riding lawnmowers and wheel assemblies for global distribution.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/news/Willard_logo.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2021-05-03T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-article-assets">
+                <position>3.0</position>
+            </classification-link>
+            <folder-link folder-id="news-archive-assets"/>
+        </folder-links>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>monthly</sitemap-changefrequency>
+    </content>
+
+    <content content-id="focusOn-landscapers">
+        <display-name xml:lang="x-default">FocusOn Landscapers Global Insights Interview with Robert T. Moll</display-name>
+        <description xml:lang="x-default">FocusOn Landscapers Global Insights Interview with Robert T. Moll</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">FocusOn Landscapers Global Insights Interview with Robert T. Moll</page-title>
+            <page-description xml:lang="x-default">FocusOn Landscapers Global Insights Interview with Robert T. Moll</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="content group one container-fluid"&gt;&#13;
+                    &lt;div class="row"&gt;&#13;
+                        &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                            &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                            &lt;div class="col-12 img"&gt;&#13;
+                                  &lt;img src="images/news/articles/Aug-19/focusOn-landscapers-11-8-2019.jpg?$staticlink$" class="img-fluid" alt="Responsive image"&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="col-12 col-lg-8"&gt;&#13;
+                            &lt;div class="articles rb"&gt;&#13;
+                                &lt;div class="article details"&gt;&#13;
+                                    &lt;div class="title lt"&gt;&#13;
+                                        &lt;h1 class="lt"&gt;FocusOn Landscapers Global Insights Interview with Robert T. Moll&lt;/h1&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 1 rb"&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;strong&gt;CLEVELAND, OHIO — NOV 8, 2019 —&lt;/strong&gt; "I am truly blessed to work with some incredible people that care so much for our business. A great day is to have spent time with them and to feel that we have done something with purpose. Not every day do we get to feel a huge sense of accomplishment but, we know we’ve been working and moving things forward. Family is really important to us at MTD. We think of ourselves as having a much tighter bond than people do at other companies. I’m grateful for that..." -Robert T. Moll, Chairman, CEO &amp; President, MTD Products. Click &lt;a target="_blank" href="http://www.focusonlandscapers.com/index.cfm?pge=prod&amp;prod_id=5478&amp;glb_id=1&amp;contest_id=1"&gt;here&lt;/a&gt; to read the full interview with FocusOn.&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                &lt;/div&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/news/articles/Aug-19/focusOn-landscapers-11-8-2019.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2019-11-08T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="home-depot-announces-2019-Innovation">
+        <display-name xml:lang="x-default">The Home Depot Announces 2019 Innovation Award Winners</display-name>
+        <description xml:lang="x-default">The Home Depot Announces 2019 Innovation Award Winners</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">The Home Depot Announces 2019 Innovation Award Winners</page-title>
+            <page-description xml:lang="x-default">The Home Depot Announces 2019 Innovation Award Winners</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="content group one container-fluid"&gt;&#13;
+                    &lt;div class="row"&gt;&#13;
+                        &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                            &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                            &lt;div class="col-12 img"&gt;&#13;
+                                  &lt;img src="images/news/articles/Oct-19/homedepot-10-23-2019.jpg?$staticlink$" class="img-fluid" alt="Responsive image"&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="col-12 col-lg-8"&gt;&#13;
+                            &lt;div class="articles rb"&gt;&#13;
+                                &lt;div class="article details"&gt;&#13;
+                                    &lt;div class="title lt"&gt;&#13;
+                                        &lt;h1 class="lt"&gt;The Home Depot Announces 2019 Innovation Award Winners&lt;/h1&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 1 rb"&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;strong&gt;CLEVELAND, OHIO — OCT 23, 2019 —&lt;/strong&gt; Every year, The Home Depot recognizes its best-in-class supplier partners who introduce new products that deliver efficiency and cost-savings. This year, MTD Products and Cub Cadet took the top prize for ULTIMA. Click &lt;a href="https://ir.homedepot.com/news-releases/2019/10-23-2019-210017445"&gt;here&lt;/a&gt; to learn more.&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                &lt;/div&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">/images/news/articles/Oct-19/homedepot-10-23-2019.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2019-10-23T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="mtd-key-industry-dynamics">
+        <display-name xml:lang="x-default">MTD PRODUCTS U.S. PRESIDENT TALKS KEY INDUSTRY DYNAMICS, PRICING STRATEGY AT OUTDOOR POWER EQUIPMENT AND ENGINE SERVICE ASSOCIATION ANNUAL MEETING</display-name>
+        <description xml:lang="x-default">MTD PRODUCTS U.S. PRESIDENT TALKS KEY INDUSTRY DYNAMICS, PRICING STRATEGY AT OUTDOOR POWER EQUIPMENT AND ENGINE SERVICE ASSOCIATION ANNUAL MEETING</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD PRODUCTS U.S. PRESIDENT TALKS KEY INDUSTRY DYNAMICS, PRICING STRATEGY AT OUTDOOR POWER EQUIPMENT AND ENGINE SERVICE ASSOCIATION ANNUAL MEETING</page-title>
+            <page-description xml:lang="x-default">MTD PRODUCTS U.S. PRESIDENT TALKS KEY INDUSTRY DYNAMICS, PRICING STRATEGY AT OUTDOOR POWER EQUIPMENT AND ENGINE SERVICE ASSOCIATION ANNUAL MEETING</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;MTD PRODUCTS U.S. PRESIDENT TALKS KEY INDUSTRY DYNAMICS, PRICING STRATEGY AT OUTDOOR POWER EQUIPMENT AND ENGINE SERVICE ASSOCIATION ANNUAL MEETING&lt;/h1&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;March 6, 2018 –&lt;/strong&gt; Last week, MTD Products’ president of U.S. business units, Gary Lobaza, provided an&#13;
+                                industry update to members at the Outdoor Power Equipment and Engine Service Association’s&#13;
+                                (OPEESA) Annual Meeting. The 45-minute keynote presentation highlighted key trends and industry&#13;
+                                dynamics affecting MTD and its competitors, suppliers, distributors, and customers. Among these were&#13;
+                                continued retail developments and the impact of giants like Amazon; the growth of battery-powered&#13;
+                                products amidst the relatively steady pace of traditional gas equipment; the rise of smart speakers,&#13;
+                                smart homes and smart yards; and, notably, commodity costs that have been adversely affecting the&#13;
+                                industry for the last decade.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                MTD, like manufacturers in a variety of industries, is feeling the squeeze of global inflationary pressure&#13;
+                                that has fueled a steady increase in the cost of raw material, energy, freight, and labor since 2008. In a&#13;
+                                conversation following the keynote, Lobaza says MTD has worked diligently to implement productivity&#13;
+                                enhancements and manage costs. Now, the company is finding these efforts alone are no longer&#13;
+                                enough to offset the cumulative impact of higher costs and MTD may need to consider a more&#13;
+                                aggressive 2019 pricing program in an industry where margins are very competitive.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                “Any change in pricing will impact each product category, price points, retailer, and manufacturer&#13;
+                                differently,” Lobaza says. “As a global leader in the industry, MTD understands our responsibility and&#13;
+                                remains committed to ensuring quality outdoor power equipment remains available at suggested retail&#13;
+                                prices that deliver the value proposition our customers want.”&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;About MTD&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                MTD Products Inc is a worldwide leader in outdoor power equipment founded in 1932 and&#13;
+                                headquartered in Valley City, Ohio. Across the globe, MTD manufactures and distributes equipment&#13;
+                                such as mowers, snow throwers, trimmers, chain saws, utility vehicles and hand tools for both&#13;
+                                residential and professional lawn and landscape markets. The company’s engineering expertise and&#13;
+                                state-of-the-art facilities are known for innovation and award-winning products under brands such as&#13;
+                                Cub Cadet®, Troy-Bilt®, Remington®, Robomow®, Rover®, WOLF-Garten®, and Yard Machines®. MTD&#13;
+                                has earned a reputation for excellence in quality, customer service and value; and, seeks to&#13;
+                                passionately create, build and deliver great products and services that consumers all over the world&#13;
+                                enjoy using to improve and beautify lawns and gardens. To learn more, visit &lt;a href="https://www.mtdproducts.com"&gt;www.mtdproducts.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 3 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Media Contacts:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Erica Creech&lt;/br&gt;&#13;
+                                Manager, Corporate Communications&lt;/br&gt;&#13;
+                                ecreech@mtdproducts.com&lt;/br&gt;&#13;
+                                (330) 558-7285&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2018-03-06T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="mtd-robomow-completes-transaction">
+        <display-name xml:lang="x-default">MTD COMPLETES TRANSACTION WITH ROBOMOW®, MAKING ONE COMPANY WITH MORE ROBOTICS TECHNOLOGY AND GREATER DISTRIBUTION WORLDWIDE</display-name>
+        <description xml:lang="x-default">MTD COMPLETES TRANSACTION WITH ROBOMOW®, MAKING ONE COMPANY WITH MORE ROBOTICS TECHNOLOGY AND GREATER DISTRIBUTION WORLDWIDE</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">MTD COMPLETES TRANSACTION WITH ROBOMOW®, MAKING ONE COMPANY WITH MORE ROBOTICS TECHNOLOGY AND GREATER DISTRIBUTION WORLDWIDE</page-title>
+            <page-description xml:lang="x-default">MTD COMPLETES TRANSACTION WITH ROBOMOW®, MAKING ONE COMPANY WITH MORE ROBOTICS TECHNOLOGY AND GREATER DISTRIBUTION WORLDWIDE</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;MTD COMPLETES TRANSACTION WITH ROBOMOW®, MAKING ONE COMPANY WITH MORE ROBOTICS TECHNOLOGY AND GREATER DISTRIBUTION WORLDWIDE&lt;/h1&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;CLEVELAND, OHIO – July 17, 2017&lt;/strong&gt; F. Robotics Acquisitions Ltd is now a subsidiary of MTD Products Inc. The&#13;
+                                transaction, which closed as planned on July 2nd, will enable MTD to employ Robomow’s progressive technology&#13;
+                                and broad line of robotic products under MTD’s brands in Europe and North America; while Robomow will&#13;
+                                benefit from MTD’s broader outdoor power equipment portfolio, sales and marketing resources and extensive&#13;
+                                global network of dealers.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Robotic technology for residential lawns has already taken hold in Europe, and the category is growing globally&#13;
+                                at an annual rate exceeding 15%. MTD is already the leader in robotics for golf course putting greens with the&#13;
+                                Cub Cadet RG3. With Robomow, the company further expands its portfolio of robotic offerings.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                In Europe, North America and elsewhere in the world, MTD will be marketing the Robomow portfolio under&#13;
+                                MTD’s Cub Cadet and WOLF-Garten brands as well as its newly acquired Robomow brand.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Robomow’s operations will remain headquartered in Pardesiya, Israel, and its present management team will&#13;
+                                continue to lead the organization toward rapid growth and innovation with support from MTD’s European, North&#13;
+                                American and Asia-Pacific divisions.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;About Robomow&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                F. Robotics Acquisitions Ltd designs, manufactures and distributes a complete line of Robomow brand&#13;
+                                robotic lawn mowers in markets around the globe. The company, started in 1995, is a leading&#13;
+                                manufacturer and marketer focusing exclusively on robotic lawn mowers. Robomow’s state-of-theart and award-winning mowers are built employing a wide portfolio of unique and proprietary&#13;
+                                technologies developed over the course of more than two decades. Robomow’s products are all&#13;
+                                inspired by the desire to make life easier and more enjoyable.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;About MTD&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                MTD Products Inc is a worldwide leader in outdoor power equipment with manufacturing facilities in&#13;
+                                North America, Europe and Asia, and distribution around the globe. MTD manufactures and&#13;
+                                distributes equipment like mowers, snow throwers, trimmers, chain saws, utility vehicles and hand&#13;
+                                tools for both residential and professional lawn and landscape markets. Founded more than 80 years&#13;
+                                ago and headquartered in Valley City, Ohio, MTD’s engineering expertise and state-of-the-art facilities&#13;
+                                are known for innovation and award-winning products for brands, including Cub Cadet, WOLFGarten, Troy-Bilt, Rover, Remington among others. MTD has earned a reputation around the world&#13;
+                                for excellence in quality, customer service and value through advanced manufacturing. To learn&#13;
+                                more, visit &lt;a href="https://www.mtdproducts.com"&gt;www.mtdproducts.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                F. Robotics Acquisitions Ltd, now part of MTD, designs, manufactures and distributes a complete line of&#13;
+                                Robomow brand robotic lawn mowers in markets around the globe. The company, started in 1995, is a leading&#13;
+                                manufacturer and marketer focusing exclusively on robotic lawn mowers. Robomow’s state-of-the-art and&#13;
+                                award-winning mowers are built employing a wide portfolio of unique and proprietary technologies developed&#13;
+                                over the course of more than two decades. Robomow’s products are all inspired by the desire to make life easier&#13;
+                                and more enjoyable. To learn more, visit &lt;a href="https://usa.robomow.com/"&gt;usa.robomow.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 4 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Contact:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Heidi Modarelli-Frank, APR&lt;/br&gt;&#13;
+                                Marcus Thomas LLC&lt;/br&gt;&#13;
+                                partner/public relations&lt;/br&gt;&#13;
+                                216.292.4700 x3062&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Erin Orsini&lt;/br&gt;&#13;
+                                Marcus Thomas LLC&lt;/br&gt;&#13;
+                                senior account executive&lt;/br&gt;&#13;
+                                216.292.4700 x3111&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Adi Meiry&lt;/br&gt;&#13;
+                                Friendly Robotics&lt;/br&gt;&#13;
+                                marketing manager&lt;/br&gt;&#13;
+                                +972.9890.1914&lt;/br&gt;&#13;
+                                info@robomow.co.il&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2017-07-17T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="mtd-robomow-merger">
+        <display-name xml:lang="x-default">SUBSIDIARY OF MTD TO MERGE WITH MAKERS OF ROBOMOW®, CREATING MORE OPPORTUNITY FOR ROBOTIC LAWN MOWING</display-name>
+        <description xml:lang="x-default">SUBSIDIARY OF MTD TO MERGE WITH MAKERS OF ROBOMOW®, CREATING MORE OPPORTUNITY FOR ROBOTIC LAWN MOWING</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">SUBSIDIARY OF MTD TO MERGE WITH MAKERS OF ROBOMOW®, CREATING MORE OPPORTUNITY FOR ROBOTIC LAWN MOWING</page-title>
+            <page-description xml:lang="x-default">SUBSIDIARY OF MTD TO MERGE WITH MAKERS OF ROBOMOW®, CREATING MORE OPPORTUNITY FOR ROBOTIC LAWN MOWING</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;SUBSIDIARY OF MTD TO MERGE WITH MAKERS OF ROBOMOW®, CREATING MORE OPPORTUNITY FOR ROBOTIC LAWN MOWING&lt;/h1&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;CLEVELAND, OHIO – May 22, 2017 &lt;/strong&gt; A subsidiary of MTD Products Inc is set to merge with a leading&#13;
+                                maker of environmentally friendly, robotic residential lawn mowers sold mainly in Europe, enabling&#13;
+                                opportunities to employ this progressive technology under MTD’s brands in Europe and North&#13;
+                                America.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                MTD’s subsidiary has entered into a merger agreement with F. Robotics Acquisitions Ltd – makers of&#13;
+                                the Robomow® – which is expected to close around July 2, 2017, pending governmental and other&#13;
+                                approvals. The transaction will combine Robomow’s industry-leading technology and award-winning&#13;
+                                robotic lawn mowers with MTD’s broader outdoor power equipment portfolio and extensive global&#13;
+                                network of dealers.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                “Both MTD and Robomow see tremendous opportunities to grow our brands through this merger of&#13;
+                                our products and talents,” said Rob Moll, CEO, MTD Products. “Initially, we will be looking to market&#13;
+                                Robomow technology under our Cub Cadet and WOLF-Garten brands. At the same time, we expect&#13;
+                                the Robomow brand to profit from MTD’s global reach and presence.”&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Moll said that ultimately MTD would be exploring ways to foster demand for robotic technology for&#13;
+                                residential lawns in North America. The technology has already taken hold in Europe, and the market&#13;
+                                is growing globally at a rate of 15% or more annually.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Following the merger, Robomow’s operations will remain headquartered in Pardesiya, Israel, and its&#13;
+                                present management team will continue to lead the company toward rapid growth and innovation&#13;
+                                with support from MTD’s European, North American and Asia-Pacific divisions.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                “For the last 22 years we have been focused on developing innovative technologies and leading&#13;
+                                robotic mowing products. We are excited to see this investment reach its full potential in the market&#13;
+                                via MTD’s leading brands and distribution,” stated Udi Peless, CEO, Friendly Robotics.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Both companies have industry-wide reputations for innovation in the fast-moving lawn mower and&#13;
+                                outdoor power equipment markets.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Founded in Israel, Robomow has launched six generations of rechargeable, robotic lawn mowers for&#13;
+                                residential use since 1995, with models for different mower widths and lawn sizes. Robomow is quiet &#13;
+                                enough to run at night; runs automatically on a schedule you set; docks itself for recharging; and can&#13;
+                                be managed through a smartphone app.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Headquartered in Valley City, Ohio, MTD already markets the Cub Cadet RG3, a robotic mower for&#13;
+                                golf greens. It also created the industry’s first steering-wheel controlled, zero-turn riding mower,&#13;
+                                marketed under both the Cub Cadet and Troy-Bilt® brands.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                In 2015, MTD acquired two companies that strengthened its technological advantage – CORE™&#13;
+                                Outdoor Power (CORE), with motor technology that provides greater torque and efficiency than&#13;
+                                traditional electric motors in cordless battery applications; and Precise Path Robotics, which brought&#13;
+                                RG3 to golf course putting greens.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;About Robomow&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                F. Robotics Acquisitions Ltd designs, manufactures and distributes a complete line of Robomow brand&#13;
+                                robotic lawn mowers in markets around the globe. The company, started in 1995, is a leading&#13;
+                                manufacturer and marketer focusing exclusively on robotic lawn mowers. Robomow’s state-of-the-art and award-winning mowers are built employing a wide portfolio of unique and proprietary&#13;
+                                technologies developed over the course of more than two decades. Robomow’s products are all&#13;
+                                inspired by the desire to make life easier and more enjoyable.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;About MTD&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                MTD Products Inc is a worldwide leader in outdoor power equipment with manufacturing facilities in&#13;
+                                North America, Europe and Asia, and distribution around the globe. MTD manufactures and&#13;
+                                distributes equipment like mowers, snow throwers, trimmers, chain saws, utility vehicles and hand&#13;
+                                tools for both residential and professional lawn and landscape markets. Founded more than 80 years&#13;
+                                ago and headquartered in Valley City, Ohio, MTD’s engineering expertise and state-of-the-art facilities&#13;
+                                are known for innovation and award-winning products for brands, including Cub Cadet, WOLFGarten, Troy-Bilt, Rover, Remington among others. MTD has earned a reputation around the world&#13;
+                                for excellence in quality, customer service and value through advanced manufacturing. To learn&#13;
+                                more, visit &lt;a href="https://www.mtdproducts.com"&gt;www.mtdproducts.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 4 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Contact:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Heidi Modarelli-Frank, APR&lt;/br&gt;&#13;
+                                Marcus Thomas LLC&lt;/br&gt;&#13;
+                                partner/public relations&lt;/br&gt;&#13;
+                                216.292.4700 x3062&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Erin Orsini&lt;/br&gt;&#13;
+                                Marcus Thomas LLC&lt;/br&gt;&#13;
+                                senior account executive&lt;/br&gt;&#13;
+                                216.292.4700 x3111&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Adi Meiry&lt;/br&gt;&#13;
+                                Friendly Robotics&lt;/br&gt;&#13;
+                                marketing manager&lt;/br&gt;&#13;
+                                +972.9890.1914&lt;/br&gt;&#13;
+                                info@robomow.co.il&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2017-05-22T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <folder-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="news-COVID-19-free-lawn-care">
+        <display-name xml:lang="x-default">Cub Cadet and TaskEasy Offer Free Lawncare to COVID-19 First Responders, Doctors and Nurses</display-name>
+        <description xml:lang="x-default">Industry-leading outdoor power brand and on-demand lawncare service partner to make life a little easier for heroes on the COVID-19 frontlines.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub Cadet and TaskEasy Offer Free Lawncare to COVID-19 First Responders, Doctors and Nurses</page-title>
+            <page-description xml:lang="x-default">Industry-leading outdoor power brand and on-demand lawncare service partner to make life a little easier for heroes on the COVID-19 frontlines.</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="content group one container-fluid"&gt;&#13;
+                    &lt;div class="row"&gt;&#13;
+                        &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                            &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+            &#13;
+                            &lt;div class="col-12 img"&gt;&#13;
+                                  &lt;img src="images/news/articles/May-20/taskeasy-5-4-2020.jpg?$staticlink$" class="img-fluid" alt="Responsive image"&gt;&#13;
+                            &lt;/div&gt;         &#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="col-12 col-lg-8"&gt;&#13;
+                            &lt;div class="articles rb"&gt;&#13;
+                                &lt;div class="article details"&gt;&#13;
+                                    &lt;div class="title lt"&gt;&#13;
+                                        &lt;h1&gt;Cub Cadet and TaskEasy Offer Free Lawncare to COVID-19 First Responders, Doctors and Nurses&lt;/h1&gt;&#13;
+                                        &lt;h2&gt;&#13;
+                                            Industry-leading outdoor power brand and on-demand lawncare service partner to make life a little easier for heroes on the COVID-19 frontlines.&#13;
+                                        &lt;h2&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 1 rb"&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;strong&gt;CLEVELAND, May 4, 2020 —&lt;/strong&gt; First responders and emergency workers risk their lives and well-being on the COVID-19 frontlines every day to care for our families, friends and communities. To support these everyday heroes and shoulder some of their to-do lists at home, Cub Cadet is partnering with TaskEasy to offer free lawn mowing.&#13;
+                                        &lt;/p&gt;&#13;
+            &#13;
+                                        &lt;p&gt;&#13;
+                                            Cub Cadet, a leading manufacturer of lawn care equipment, and TaskEasy, an on-demand lawncare service serving more than 12,000 U.S. cities, are offering a free month of lawn mowing service (up to two cuts, every other week) to doctors, nurses, paramedics, emergency medical technicians, police officers and firefighters. To apply for the free service, these workers should visit &lt;a href="https://www.taskeasy.com/offer/free-lawn-care-for-first-reponders"&gt;TaskEasy.com/offer&lt;/a&gt;.&#13;
+                                        &lt;/p&gt;&#13;
+            &#13;
+                                        &lt;p&gt;&#13;
+                                            “Cub Cadet is inspired by the daily sacrifices made by our first responders and emergency health care professionals as they care for our communities,” said Heidi Ketvertis, Vice President of Marketing, Cub Cadet. &#13;
+                                        &lt;/p&gt;&#13;
+            &#13;
+                                        &lt;p&gt;&#13;
+                                            “Through this simple gesture of providing lawn mowing, heroes can return home with one less task to do. We hope this service helps them and their families during a challenging time.” To make the offer available, Cub Cadet is donating the costs for TaskEasy contractors for services provided to these frontline emergency workers, up to $200,000. Lawn service has been deemed an essential service nationwide because proper maintenance reduces wildfire risk from tall grasses, helps prevent pest infestations, and helps keep homes in a safe condition.&#13;
+                                        &lt;/p&gt;&#13;
+            &#13;
+                                        &lt;p&gt;&#13;
+                                            “Helping thousands of first responders while providing additional work to our contractors really motivates our team,” said Ken Davis, CEO and founder, TaskEasy. “This pandemic has disrupted ordinary life for every American in ways big and small. Through this partnership, Cub Cadet and TaskEasy are doing as much good as we can for those who are putting it all on the line for us.”&#13;
+                                        &lt;/p&gt;&#13;
+            &#13;
+                                        &lt;p&gt;&#13;
+                                            For more information about this offer, please visit &lt;a href="https://www.cubcadet.com/en_US/covid-19-free-lawn-service-program.html"&gt;Cubcadet.com/heroes&lt;/a&gt;&#13;
+or &#13;
+&lt;a href="https://www.taskeasy.com/offer/free-lawn-care-for-first-reponders"&gt;TaskEasy.com/offer&lt;/a&gt;.&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 2 rb"&gt;&#13;
+                                        &lt;h3&gt;&#13;
+                                            About Cub Cadet&#13;
+                                        &lt;/h3&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            Established in 1961, Cub Cadet engineers, designs and builds outdoor power equipment using the highest-quality components sourced locally and globally. Through a dedicated and extensive network of dealers and retailers, Cub Cadet delivers a full line of high-performance power equipment and services that cover all aspects of grounds care for professionals and homeowners – including four-wheel-steer zero-turn riders; lap-bar zero-turn riders; utility vehicles; lawn and garden tractors; specialty turf products; battery- and gasoline-powered handheld and chore products; snow blowers and more. Based in Valley City, Ohio, Cub Cadet is recognized worldwide for its legacy in engineering excellence and its progressive dedication to thoughtfully designing around the people who depend on Cub Cadet equipment to help unlock the full potential of their outdoor spaces. For more information on all Cub Cadet products, visit &#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 3 rb"&gt;&#13;
+                                        &lt;h3&gt;&#13;
+                                            About TaskEasy&#13;
+                                        &lt;/h3&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            TaskEasy’s mission is to provide automated yard care and maintenance solutions for everyone, everywhere. In just six years, TaskEasy has become one of the largest providers of lawn and yard care in the world by developing technology to simplify how property management services are ordered and managed. From large residential and commercial property portfolio owners with tens of thousands of properties down to individual homeowners, TaskEasy customers can price, order and manage yard care and cleaning services without in-person contact using TaskEasy’s website and large customer APIs. Work is dispatched to TaskEasy’s network of over 15,000+ independent contractor entities representing tens of thousands of workers across all 50 states via TaskEasy’s contractor mobile app, which allows contractors to learn about the specifics of task requirements and supply proof of task completion with before &amp; after photos captured in the app. For more information, visit taskeasy.com.&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 4 rb"&gt;&#13;
+                                        &lt;h3&gt;&#13;
+                                            Media Contacts:&#13;
+                                        &lt;/h3&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;h4&gt;Cub Cadet&lt;/h4&gt;&#13;
+                                            Amanda Fullerton&lt;/br&gt;&#13;
+                                            (330) 558-7885&lt;/br&gt;&#13;
+                                            amanda.fullerton@mtdproducts.com&lt;/br&gt;&#13;
+                                        &lt;/p&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;h4&gt;TaskEasy&lt;/h4&gt;&#13;
+                                            Colby Shosted&lt;/br&gt;&#13;
+                                            (435) 840-2021&lt;/br&gt;&#13;
+                                            colby.shosted@taskeasy.com&lt;/br&gt;&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                &lt;/div&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">/images/news/articles/May-20/taskeasy-5-4-2020.jpg</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-05-04T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="ohio-manufacture-alliance">
+        <display-name xml:lang="x-default">Cub Cadet Introduces IntelliPower™ Engine Technology</display-name>
+        <description xml:lang="x-default">New technology provides consumers with more power, more control and less maintenance.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub Cadet Introduces IntelliPower™ Engine Technology</page-title>
+            <page-description xml:lang="x-default">Cub Cadet Introduces IntelliPower™ Engine Technology</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+                &lt;div class="content group one container-fluid"&gt;&#13;
+                    &lt;div class="row"&gt;&#13;
+                        &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                            &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                            &lt;div class="col-12 img"&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="col-12 col-lg-8"&gt;&#13;
+                            &lt;div class="articles rb"&gt;&#13;
+                                &lt;div class="article details"&gt;&#13;
+                                    &lt;div class="title lt"&gt;&#13;
+                                        &lt;h1 class="lt"&gt;Cub Cadet Introduces IntelliPower™ Engine Technology&lt;/h1&gt;&#13;
+                                        &lt;h2 class="lt"&gt;New technology provides consumers with more power, more control and less maintenance.&lt;/h2&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 1 rb"&gt;&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;strong&gt;CLEVELAND, OHIO — JAN 2020 —&lt;/strong&gt; Cub Cadet is proud to introduce IntelliPower™, an engine technology that delivers consistent engine performance for users who might be challenged to cut through thick, heavy grass or plow through wet, heavy snow.&#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            IntelliPower™ technology digitally monitors and maintains engine speed, which gives operators up to 20%* more available power that can be felt and heard.&#13;
+                                            This power gives lawn equipment the ability to better tackle heavy, wet grass without bogging or slowing down. This is especially effective in spring mowing conditions,&#13;
+                                            and it provides consistent blade speed and a clump-free Signature Cut™ while still providing power for superior mulching and bagging performance.&#13;
+                                            This feature also means additional power for mowing uphill.&#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            In snow blowers, IntelliPower™ provides increased power in heavy, wet snow to prevent the engine from bogging down. This means improved efficiency and the ability to maintain a steady walking speed through heavy snow while eliminating engine surging after cold starting. Additionally, in combination with electronic fuel injection, IntelliPower™ provides simple, dependable starting, so there’s no need to choke or prime the engine. And off-season storage is simple because there’s no need to drain the fuel tank.&#13;
+                                        &lt;p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            “The ability to incorporate IntelliPower™ into our residential machines is an exciting advancement that will improve the overall user experience in challenging mowing and snow blowing conditions,” said Guy Rodgers, director of engineering, Cub Cadet. “More consistent engine power when you need it most means peace of mind, a better-looking lawn and a clear driveway, even when Mother Nature isn’t cooperating.”&#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            The lawn mowers and snow blowers with IntelliPower™ are now on sale online, at local Cub Cadet dealerships, through Tractor Supply Co. and at The Home Depot stores nationwide. Visit cubcadet.com for more information and to find out where to buy machines that come equipped with IntelliPower™ technology. For additional information, check out this short video.&#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            *When compared to the same engine without the IntelliPower™ feature; improvements vary depending on engine model and specific operating conditions.&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 2 rb"&gt;&#13;
+                                        &lt;h2 class="lt"&gt;About Cub Cadet&lt;/h2&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            Established in 1961, Cub Cadet engineers, designs and builds outdoor power equipment using the highest-quality components sourced locally and globally. Through a dedicated and extensive network of dealers and retailers, Cub Cadet delivers a full line of high-performance power equipment and services that cover all aspects of grounds care for professionals and homeowners – including four-wheel-steer zero-turn riders; lap-bar zero-turn riders; utility vehicles; lawn and garden tractors; specialty turf products; battery- and gasoline-powered handheld and chore products; snow blowers and more. Based in Valley City, Ohio, Cub Cadet is recognized worldwide for its legacy in engineering excellence and its progressive dedication to thoughtfully designing around the people who depend on Cub Cadet equipment to help unlock the full potential of their outdoor spaces. For more information on all Cub Cadet products, visit &lt;a href="https://www.cubcadet.com/en_US/home"&gt;www.CubCadet.com&lt;/a&gt;.&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                    &lt;div class="body 2 rb"&gt;&#13;
+                                        &lt;h2 class="lt"&gt;Media Contacts:&lt;/h2&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;h3&gt;Cub Cadet&lt;/h3&gt;&#13;
+                                            Siana Calanni &lt;/br&gt;&#13;
+                                            (330) 558-3532 &lt;/br&gt;&#13;
+                                            scalanni@mtdproducts.com&#13;
+                                        &lt;/p&gt;&#13;
+&#13;
+                                        &lt;p&gt;&#13;
+                                            &lt;h3&gt;Exponent&lt;/h3&gt;&#13;
+                                            Kate Dmytrenko &lt;/br&gt;&#13;
+                                            (612) 305-6264 &lt;/br&gt;&#13;
+                                            kate.dmytrenko@exponentpr.com&#13;
+                                        &lt;/p&gt;&#13;
+                                    &lt;/div&gt;&#13;
+                                &lt;/div&gt;&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2020-01-01T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+	
+    <content content-id="stanley-black-decker-20-percent-MTD">
+        <display-name xml:lang="x-default">Stanley Black &amp; Decker To Acquire 20 Percent Stake In MTD Products For $234 Million</display-name>
+        <description xml:lang="x-default">Stanley Black &amp; Decker To Acquire 20 Percent Stake In MTD Products For $234 Million</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Stanley Black &amp; Decker To Acquire 20 Percent Stake In MTD Products For $234 Million</page-title>
+            <page-description xml:lang="x-default">Stanley Black &amp; Decker To Acquire 20 Percent Stake In MTD Products For $234 Million</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;Stanley Black &amp; Decker To Acquire 20 Percent Stake In MTD Products For $234 Million&lt;/h1&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;New Britain, Connecticut - September 12, 2018 -&lt;/strong&gt; Stanley Black &amp; Decker &lt;strong&gt;(NYSE:&#13;
+                                    SWK)&lt;/strong&gt; today announced that it has entered into a definitive agreement to acquire&#13;
+                                a 20 percent stake in MTD Products Inc (“MTD”), a privately held global&#13;
+                                manufacturer of outdoor power equipment, for $234 million in cash. Under the&#13;
+                                terms of the agreement, Stanley Black &amp; Decker has the option to acquire the&#13;
+                                remaining 80 percent of MTD beginning on July 1, 2021.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Stanley Black &amp; Decker's President and CEO James M. Loree commented, “This&#13;
+                                investment in MTD increases our presence in the $20 billion global lawn and&#13;
+                                garden market in a financially and operationally prudent way. We have always&#13;
+                                viewed outdoor products as an attractive growth category for us to expand our&#13;
+                                presence beyond handheld electric products. This transaction gives us the&#13;
+                                opportunity to do that with a world class partner. MTD has a first-rate management&#13;
+                                team, talented employees and a mission, values and commitment to innovation&#13;
+                                that are very closely aligned with our own, and we are excited to move forward&#13;
+                                with them.”&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                “MTD and Stanley Black &amp; Decker are both proven leaders in our respective&#13;
+                                industries with iconic brands and world class capabilities,” said MTD’s Chairman&#13;
+                                and CEO Robert T. Moll. “We’re both passionate about innovation with&#13;
+                                complementary businesses. Ultimately, this will give us more resources to bring&#13;
+                                really exciting products to our consumers.”&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                With 2017 revenues in excess of $2 billion, MTD manufactures and distributes&#13;
+                                lawn tractors, zero turn mowers, walk behind mowers, snow throwers, trimmers,&#13;
+                                chain saws, utility vehicles and other outdoor power equipment for both residential&#13;
+                                and professional lawn and garden customers. Founded over 85 years ago and&#13;
+                                headquartered in Valley City, Ohio, MTD’s brands include Cub Cadet, Troy-Bilt,&#13;
+                                and Remington, among others. MTD has state-of-the-art manufacturing facilities&#13;
+                                in North America, Europe and Asia, and a global distribution network.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                This partnership significantly enhances Stanley Black &amp; Decker and MTD’s&#13;
+                                existing commercial relationship, which currently includes the manufacture of&#13;
+                                select outdoor products under the Craftsman brand. Going forward, the two&#13;
+                                companies will work together to pursue revenue and cost opportunities, improve&#13;
+                                operational efficiency and introduce new and innovative products for professional&#13;
+                                and residential outdoor equipment customers, leveraging their respective&#13;
+                                portfolios of strong brands.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                The transaction, which is expected to close in early 2019, is subject to regulatory&#13;
+                                approvals and customary closing conditions. In connection with the transaction,&#13;
+                                Stanley Black &amp; Decker will appoint two representatives to MTD’s 11-member&#13;
+                                Board of Directors. Beginning in 2021, should Stanley Black &amp; Decker choose to&#13;
+                                exercise its right to acquire the remaining 80 percent stake, the companies have&#13;
+                                agreed to a valuation multiple based on MTD’s expected 2018 EBITDA, with a&#13;
+                                sharing arrangement for any future EBITDA growth.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Stanley Black &amp; Decker, an S&amp;P 500 company, is a diversified global provider of&#13;
+                                hand tools, power tools and related accessories, electronic security solutions,&#13;
+                                healthcare solutions, engineered fastening systems, and more. Learn more at&#13;
+                                &lt;a href="https://www.stanleyblackanddecker.com/"&gt;www.stanleyblackanddecker.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                MTD Products Inc is a worldwide leader in outdoor power equipment. The&#13;
+                                company’s engineering expertise and state-of-the-art facilities are known for&#13;
+                                innovation and award-winning products under brands such as Cub Cadet, TroyBilt, Remington, Robomow, Rover, WOLF-Garten, and Yard Machines. MTD has&#13;
+                                earned a reputation for excellence in quality, customer service and value; and,&#13;
+                                seeks to passionately create, build and deliver great products and services that&#13;
+                                consumers all over the world enjoy using to improve and beautify lawns and&#13;
+                                gardens. To learn more, visit &lt;a herf="https//www.mtdproducts.com"&gt;www.mtdproducts.com&lt;/a&gt;.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Investor Contacts:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Dennis Lange&lt;/br&gt;&#13;
+                                Vice President, Investor Relations&lt;/br&gt;&#13;
+                                dennis.lange@sbdinc.com&lt;/br&gt;&#13;
+                                (860) 827-3833&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Michelle Hards&lt;/br&gt;&#13;
+                                Director, Investor Relations&lt;/br&gt;&#13;
+                                michelle.hards@sbdinc.com&lt;/br&gt;&#13;
+                                (860) 827-3913&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Cort Kaufman&lt;/br&gt;&#13;
+                                Director, Investor Relations&lt;/br&gt;&#13;
+                                cort.kaufman@sbdinc.com&lt;/br&gt;&#13;
+                                (860) 515-2741&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 3 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Media Contacts:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Shannon Lapierre&lt;/br&gt;&#13;
+                                Vice President, Communications &amp; Public Relations&lt;/br&gt;&#13;
+                                shannon.lapierre@sbdinc.com&lt;/br&gt;&#13;
+                                (860) 259-7669&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Shannon Lapierre&lt;/br&gt;&#13;
+                                Vice President, Communications &amp; Public Relations&lt;/br&gt;&#13;
+                                shannon.lapierre@sbdinc.com&lt;/br&gt;&#13;
+                                (860) 259-7669&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 4 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;MTD Products Inc Contacts:&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Heidi Ketvertis&lt;/br&gt;&#13;
+                                Vice President, Marketing&lt;/br&gt;&#13;
+                                hketvertis@mtdproducts.com&lt;/br&gt;&#13;
+                                (330) 558-7038&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Erica Creech&lt;/br&gt;&#13;
+                                Manager, Corporate Communications&lt;/br&gt;&#13;
+                                ecreech@mtdproducts.com&lt;/br&gt;&#13;
+                                (330) 558-7285&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;Cautionary Note Regarding Forward-Looking Statements&lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Stanley Black &amp; Decker makes forward-looking statements in this press release which&#13;
+                                represent its expectations or beliefs about future events and financial performance.&#13;
+                                Forward-looking statements are identifiable by words such as "believe," "anticipate,"&#13;
+                                "expect," "intend," "plan," "will," "may" and other similar expressions. In addition, any&#13;
+                                statements that refer to expectations, projections or other characterizations of future&#13;
+                                events or circumstances are forward-looking statements. Forward looking statements&#13;
+                                made in this press release, include, but are not limited to, statements concerning: the&#13;
+                                consummation of the initial investment in MTD and Stanley Black &amp; Decker’s potential&#13;
+                                exercise of the right to acquire the remaining 80 percent stake in MTD; MTD’s business&#13;
+                                complementing and expanding Stanley Black &amp; Decker's existing operations; cost and&#13;
+                                growth synergies; and operational efficiencies.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                You are cautioned not to place undue reliance on these forward-looking statements.&#13;
+                                These forward-looking statements are not guarantees of future events and involve known&#13;
+                                and unknown risks, uncertainties and other factors that may cause actual results and&#13;
+                                performance to be materially different from any future results or performance expressed&#13;
+                                or implied by such forward-looking statements, including, but not limited to, the failure to&#13;
+                                consummate, or a delay in the consummation of, the initial investment in MTD or any&#13;
+                                future exercise of Stanley Black &amp; Decker’s right to acquire the remaining 80 percent&#13;
+                                stake in MTD for various reasons; failure to successfully collaborate with MTD and&#13;
+                                achieve expected cost and growth synergies; or the investment-related charges being&#13;
+                                greater than anticipated.&#13;
+                            &lt;/p&gt;&#13;
+&#13;
+                            &lt;p&gt;&#13;
+                                Forward-looking statements made herein are also subject to risks and uncertainties,&#13;
+                                described in: Stanley Black &amp; Decker's 2017 Annual Report on Form 10-K, its&#13;
+                                subsequently filed Quarterly Reports on Form 10-Q; and other filings Stanley Black &amp;&#13;
+                                Decker makes with the Securities and Exchange Commission. In addition, actual results&#13;
+                                could differ materially from those suggested by the forward-looking statements. Stanley&#13;
+                                Black &amp; Decker makes no commitment to revise or update any forward-looking&#13;
+                                statements to reflect events or circumstances occurring or existing after the date of any&#13;
+                                forward-looking statement.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2018-09-12T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="ultima-good-design">
+        <display-name xml:lang="x-default">Cub Cadet Ultima Series Receives Good Design Award</display-name>
+        <description xml:lang="x-default">The zero-turn mower line has received a GOOD DESIGN™ award for innovative and cutting-edge industrial design.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Cub Cadet Ultima Series Receives Good Design Award</page-title>
+            <page-description xml:lang="x-default">Cub Cadet Ultima Series Receives Good Design Award</page-description>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="newsArticle"&gt;&#13;
+    &lt;div class="jumbotron jumbotron-fluid p-0"&gt;&#13;
+        &lt;div alt="Responsive hero image" class="hero" style="background-image: url(images/news/news_hero.jpg?$staticlink$);"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&#13;
+        &lt;div class="hero-banner container-fluid"&gt;&#13;
+            &lt;div class="d-flex justify-content-center justify-content-md-start h-100"&gt;&#13;
+                &lt;div class="align-self-center"&gt;&lt;span class="lt"&gt;News&lt;/span&gt;&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&#13;
+    &lt;div class="content group one container-fluid"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-12 col-lg-4 p-0"&gt;&#13;
+                &lt;div class="col-12 button"&gt;&lt;a class="btn btn-primary btn-lg" href="$url('Search-Show', 'cgid', 'news')$" role="button"&gt;Back to News&lt;/a&gt;&lt;/div&gt;&#13;
+                &lt;div class="col-12 img"&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="col-12 col-lg-8"&gt;&#13;
+                &lt;div class="articles rb"&gt;&#13;
+                    &lt;div class="article details"&gt;&#13;
+                        &lt;div class="title lt"&gt;&#13;
+                            &lt;h1 class="lt"&gt;Cub Cadet Ultima Series Receives Good Design Award&lt;/h1&gt;&#13;
+                            &lt;h2 class="lt"&gt;The zero-turn mower line has received a GOOD DESIGN™ award for innovative and cutting-edge industrial design.&lt;/h2&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 1 rb"&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;strong&gt;CLEVELAND, OHIO — DEC 12, 2019 —&lt;/strong&gt; This year, The Chicago Athenaeum Museum presented Cub Cadet with a GOOD DESIGN™ award for its 2018-2019 Ultima Series zero-turn mower line.&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                GOOD DESIGN™ awards emphasize quality design, awarding products with “design of the highest form, function and aesthetics… a standard beyond ordinary,” as stated by the GOOD DESIGN™ Award Program. The Cub Cadet Ultima Series won the 2019 award in the TOOLS category for industrial product design.&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                “We knew we had something very special [on] our hands based on how the project came together – from the unique tubular frame design to the best-in-class performance and comfort” said Dennis Fowler, industrial design lead for MTD Products Inc. “We’ve already expanded the lineup to reach new audiences for 2020, and we look forward continuing our quest for innovation within this product line.”&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Metropolitan Arts Press Ltd. have presented GOOD DESIGN™ awards to those who produce the most innovative and cutting-edge industrial, product, and graphic designs produced around the world. GOOD DESIGN™ is an international symbol of a company’s commitment to innovation and superior design.&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                For the last 70 years, the Chicago Athenaeum Museum of Architecture and Design and Metropolitan Arts Press Ltd. have presented GOOD DESIGN™ awards to those who produce the most innovative and cutting-edge industrial, product, and graphic designs produced around the world. GOOD DESIGN™ is an international symbol of a company’s commitment to innovation and superior design.&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                To learn more about The Ultima Series, watch our &lt;a href="https://www.youtube.com/watch?v=p8VWOgPJuuE&amp;list=PLSOWUMaSCRQb2WEkDFf88hzeDszEAtmQM"&gt;Step Up videos&lt;/a&gt; on YouTube or visit our website.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 2 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;&#13;
+                                About Cub Cadet&#13;
+                            &lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                Established in 1961, Cub Cadet engineers, designs and builds outdoor power equipment using the highest-quality components sourced locally and globally. Through a dedicated and extensive network of dealers and retailers, Cub Cadet delivers a full line of high-performance power equipment and services that cover all aspects of grounds care for professionals and homeowners – including four-wheel-steer zero-turn riders; lap-bar zero-turn riders; utility vehicles; lawn and garden tractors; specialty turf products; battery- and gasoline-powered handheld and chore products; snow blowers and more. Based in Valley City, Ohio, Cub Cadet is recognized worldwide for its legacy in engineering excellence and its progressive dedication to thoughtfully designing around the people who depend on Cub Cadet equipment to help unlock the full potential of their outdoor spaces. For more information on all Cub Cadet products, visit www.CubCadet.com.&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="body 3 rb"&gt;&#13;
+                            &lt;h2 class="lt"&gt;&#13;
+                                Media Contacts:&#13;
+                            &lt;/h2&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;h3&gt;Exponent PR&lt;/h3&gt;&#13;
+                                Elleni Paulson&lt;/br&gt;&#13;
+                                (612) 305-6137&lt;/br&gt;&#13;
+                                elleni.paulson@collemcvoy.com&#13;
+                            &lt;/p&gt;&#13;
+                            &lt;p&gt;&#13;
+                                &lt;h3&gt;Cub Cadet&lt;/h3&gt;&#13;
+                                Siana Calanni&lt;/br&gt;&#13;
+                                (330) 558-3532&lt;/br&gt;&#13;
+                                scalanni@mtdproducts.com&#13;
+                            &lt;/p&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="postedDate">2019-12-12T12:00:00.000+0000</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="news-archive-assets"/>
+        </folder-links>
+    </content>
+
+</library>

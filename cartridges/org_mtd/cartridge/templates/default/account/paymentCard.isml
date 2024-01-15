@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header clearfix">
+        <h4 class="pull-left">${Resource.msg('label.payment','account',null)}</h4>
+        <isif condition="${pdict.account.payment}">
+            <a href="${URLUtils.url('PaymentInstruments-List')}" class="pull-right">${Resource.msg('link.view','account',null)}</a>
+        </isif>
+    </div>
+    <isif condition="${pdict.account.payment}">
+        <div class="card-body card-info-group">
+            <p>${Resource.msg('label.payment.credit','account',null)} <isif condition="${pdict.account.payment.creditCardType.toUpperCase() === 'MASTER'}">${Resource.msg('msg.payment.type.credit.master', 'confirmation', null)}<iselse>${pdict.account.payment.creditCardType}</isif></p>
+            <p>${pdict.account.payment.maskedCreditCardNumber}</p>
+            <p>${Resource.msg('label.payment.ending','account',null)} ${pdict.account.payment.creditCardExpirationMonth}/${pdict.account.payment.creditCardExpirationYear}</p>
+        </div>
+    </isif>
+</div>

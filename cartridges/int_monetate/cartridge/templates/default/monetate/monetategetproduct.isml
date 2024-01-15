@@ -1,0 +1,15 @@
+<iscomment>Getting product on clp/plp/search pages</iscomment>
+<isinclude template="monetate/modules" />
+<isset name="monetateObject" value="${require('~/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+<isif condition="${monetateObject.getMonetateEnabled()}">
+    <isif condition="${pdict.type === 'lp' && !empty(pdict.MProduct)}">
+    	<script type="text/javascript">
+    		if (Array.isArray(monetateData.addProducts)) {
+    			monetateData.addProducts.push("${monetateObject.getProductID(pdict.MProduct, true)}");
+    		}
+    	</script>
+    </isif>
+    <isif condition="${pdict.type === 'variant' && !empty(pdict.MProduct)}">
+    	<ismonetatetrackpage pagename="product" />
+    </isif>
+</isif>

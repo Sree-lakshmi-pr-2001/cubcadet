@@ -1,0 +1,54 @@
+//////////////////////////////////////////
+// productCarouselSlot.isml
+//////////////////////////////////////////
+
+.product-carousel-slot {
+    margin-bottom: rem(60px);
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(80px);
+    }
+
+    .carousel-title {
+        text-align: center;
+        margin-bottom: rem(30px);
+    }
+
+    .product-tile-caro {
+        .product-tile .tile-body .pdp-link a {
+            @include media-breakpoint-down(sm) {
+                font-size: rem(14px);
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////
+// categoryTile.isml
+//////////////////////////////////////////
+
+.category-slot {
+    margin-bottom: rem(45px);
+
+    @include media-breakpoint-up(md) {
+        margin-top: rem(60px);
+        margin-bottom: rem(65px);
+    }
+
+    .category-tile {
+        background-position: center;
+        background-size: cover;
+        height: 240px;
+
+        @include media-breakpoint-up(md) {
+            height: 300px;
+        }
+
+        h4 {
+            position: absolute;
+            bottom: 1.875rem;
+            left: 1.875rem;
+            color: $secondary;
+        }
+    }
+}

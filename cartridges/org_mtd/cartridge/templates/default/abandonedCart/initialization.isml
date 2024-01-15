@@ -1,0 +1,14 @@
+<iscomment>The main collect script</iscomment>
+<isscript> 
+    var abandonedCartUrlLanding = dw.system.Site.getCurrent().getCustomPreferenceValue("abandonedCartUrlLanding");
+    var setOrgId = dw.system.Site.getCurrent().getCustomPreferenceValue('mcMID');
+    var mtdHelper = require('*/cartridge/scripts/util/MTDHelper');
+    var isUsSite = mtdHelper.isUsSite();
+</isscript>
+
+<isif condition="${isUsSite && !empty(abandonedCartUrlLanding)}" >
+    <script type="text/javascript" src="${abandonedCartUrlLanding}"></script>
+    <script type="text/javascript">
+        _etmc_custom.push(['setOrgId', ${setOrgId}]);
+    </script>
+</isif>

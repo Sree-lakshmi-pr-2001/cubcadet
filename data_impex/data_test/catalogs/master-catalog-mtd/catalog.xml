@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="master-catalog-mtd">
+    <header>
+        <image-settings>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>swatch</view-type>
+            </view-types>
+            <variation-attribute-id>color</variation-attribute-id>
+            <alt-pattern>${productname}, ${variationvalue}, ${viewtype}</alt-pattern>
+            <title-pattern>${productname}, ${variationvalue}</title-pattern>
+        </image-settings>
+    </header>
+    <product product-id="00003067">
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">NUT-HEX CASTLE 34</display-name>
+        <short-description xml:lang="x-default">NUT-HEX CASTLE 34</short-description>
+        <long-description xml:lang="x-default">NUT-HEX CASTLE 34</long-description>
+        <online-flag>true</online-flag>
+        <available-flag>true</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <manufacturer-sku>00003067</manufacturer-sku>
+    </product>
+    <product product-id="00003107">
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">COTTER-PIN</display-name>
+        <short-description xml:lang="x-default">COTTER-PIN</short-description>
+        <long-description xml:lang="x-default">COTTER-PIN</long-description>
+        <online-flag>true</online-flag>
+        <available-flag>true</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <manufacturer-sku>00003107</manufacturer-sku>
+    </product>
+</catalog>

@@ -1,0 +1,258 @@
+<iscomment>
+    List of all tabs available
+    This will check all available tabs and will set the first tab available to be the active tab on the page
+</iscomment>
+<isif condition="${isProductSet}">
+    <isset name="product" value="${productItem}" scope="page" />
+<iselse>
+    <isset name="product" value="${pdict.product}" scope="page" />
+</isif>
+
+<isset name="activeTab" value="" scope="page"/>
+
+<isset name="specsTab" value="${false}" scope="page" />
+<isset name="maintenanceTab" value="${false}" scope="page" />
+<isset name="manualsTab" value="${false}" scope="page" />
+<isset name="pledgeTab" value="${false}" scope="page" />
+<isset name="cartfulTab" value="${false}" scope="page" />
+<isset name="partlinkTab" value="${false}" scope="page" />
+
+<isif condition="${product.specification && product.specification.length > 0}">
+    <isset name="specsTab" value="${true}" scope="page" />
+    <isif condition="${activeTab === ''}">
+        <isset name="activeTab" value="specs" scope="page"/>
+    </isif>
+</isif>
+<isif condition="${product.isWholeGood && product.raw.custom['content-maintenance-schedule'] && product.raw.custom['content-maintenance-schedule'].length > 0}">
+    <isset name="maintenanceTab" value="${true}" scope="page" />
+    <isif condition="${activeTab === ''}">
+        <isset name="activeTab" value="maintenance" scope="page"/>
+    </isif>
+</isif>
+<isif condition="${product.isWholeGood && pdict.enabledManualSearch}">
+    <isset name="manualsTab" value="${true}" scope="page" />
+    <isif condition="${activeTab === ''}">
+        <isset name="activeTab" value="manuals" scope="page"/>
+    </isif>
+</isif>
+<isif condition="${product.isParts || product.isAccessory}">
+    <isset name="pledgeTab" value="${true}" scope="page" />
+    <isif condition="${activeTab === ''}">
+        <isset name="activeTab" value="pledge" scope="page"/>
+    </isif>
+</isif>
+<isif condition="${dw.system.Site.getCurrent().getCustomPreferenceValue('cartfulSolutionsEnabled') && !(product.isWholeGood || isProductSet || isBundle)}">
+    <isset name="cartfulTab" value="${true}" scope="page" />
+    <isif condition="${activeTab === ''}">
+        <isset name="activeTab" value="cartful" scope="page"/>
+    </isif>
+</isif>
+<isif condition="${product.isWholeGood && !(isProductSet || isBundle)}">
+    <isset name="partlinkTab" value="${true}" scope="page" />
+    <isif condition="${activeTab === ''}">
+        <isset name="activeTab" value="partlink" scope="page"/>
+    </isif>
+</isif>
+
+<isset name="productID" value="${product.id}" scope="page"/>
+
+<div class="description-and-detail <isif condition="${activeTab === '' || isQuickView}">d-none</isif>">
+
+    <div class="container no-container-gutters-sm-down">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 text-center">
+                <h2 class="pdp-section-heading">
+                    <isif condition="${product.isWholeGood}">
+                        ${Resource.msg('heading.specsandmaintenance', 'product', null)}
+                    <iselse>
+                        ${Resource.msg('heading.specsandpledge', 'product', null)}
+                    </isif>
+                </h2>
+            </div>
+        </div>
+        <div class="row sticky-nav-container">
+            <div class="col-3 d-none d-md-block sticky-nav">
+                <ul class="nav nav-tabs pdp-specs-nav">
+
+                    <iscomment> Specifications Navigation Tab </iscomment>
+                    <isif condition="${specsTab}">
+                        <li class="nav-item">
+                            <a class="nav-link icon specs" tabindex="0" href="${('#specs-table-') + product.specification[0].ID}" data-toggle="collapse" data-target="${('#specsCollapse-') + productID}" aria-controls="${('specsCollapse-') + productID}" aria-expanded="true">${Resource.msg('label.specification', 'product', null)}</a>
+                            <ul>
+                                <isloop items="${product.specification}" var="attrGroup" status="loopstate">
+                                    <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                                        <li class="attribute-name">
+                                            <a href="${('#specs-table-') + attrGroup.ID}" tabindex="-1">${attrGroup.name}</a>
+                                        </li>
+                                    </isif>
+                                </isloop>
+                            </ul>
+                        </li>
+                    </isif>
+
+                    <iscomment> Maintenance Navigation Tab </iscomment>
+                    <isif condition="${maintenanceTab}">
+                        <li class="nav-item">
+                            <a class="nav-link icon maintenance" tabindex="0" data-toggle="collapse" data-target="${('#maintenanceCollapse-') + productID}" aria-controls="${('maintenanceCollapse-') + productID}">${Resource.msg('label.maintenance', 'product', null)}</a>
+                        </li>
+                    </isif>
+
+                    <iscomment> Manuals Search Navigation Tab </iscomment>
+                    <isif condition="${manualsTab}">
+                        <li class="nav-item">
+                            <a class="nav-link icon manuals" href="${('#manualsCollapse-') + productID}" tabindex="0" data-toggle="collapse" data-target="${('#manualsCollapse-') + productID}" aria-controls="${('manualsCollapse-') + productID}">${Resource.msg('tab.title.manuals', 'manuals', null)}</a>
+                        </li>
+                    </isif>
+
+                    <iscomment> Pledge Navigation Tab </iscomment>
+                    <isif condition="${pledgeTab}">
+                        <li class="nav-item">
+                            <a class="nav-link icon pledge" data-toggle="collapse" data-target="${('#pledgeCollapse-') + productID}" aria-controls="${('pledgeCollapse-') + productID}">${Resource.msg('label.pledge', 'product', null)}</a>
+                        </li>
+                    </isif>
+
+                    <iscomment> Cartful Solutions Navigation Tab </iscomment>
+                     <isif condition="${!pdict.fitsOnModelPDPEnable && pdict.siteId !='cubcadet' && pdict.siteId !='troybilt'}">
+                        <isif condition="${cartfulTab}">
+                                <li class="nav-item">
+                                    <a class="nav-link icon fits-model" data-toggle="collapse" data-target="${('#cartfulCollapse-') + productID}" aria-controls="${('cartfulCollapse-') + productID}">${Resource.msg('product.cartful.fitsmodels', 'product', null)}</a>
+                                </li>
+                        </isif>
+                    </isif>
+
+                    <iscomment>Parts Link</iscomment>
+                    <isif condition="${partlinkTab}">
+                        <section class="part-link" id="pdp-parts-link" data-anchor="pdp-parts-link">
+                            <li class="nav-button">
+                                <isinclude template="product/components/partLink" />
+                            </li>
+                        </section>
+                    </isif>
+
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-9">
+                <div id="${('pdpAccordion-') + productID}" class="pdp-specs-accordion accordion-default">
+
+                    <iscomment> Specifications Table </iscomment>
+                    <isif condition="${specsTab}">
+                        <div class="card">
+                            <div class="card-header" id="${('#heading-specs-') + productID}">
+                                <h5 class="mb-0">
+                                    <a href="#" class="btn btn-link icon specs" data-toggle="collapse" data-target="${('#specsCollapse-') + productID}" aria-expanded="true"
+                                        aria-controls="${('specsCollapse-') + productID}">
+                                        ${Resource.msg('label.specs', 'product', null)}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="${('specsCollapse-') + productID}" class="collapse ${activeTab === 'specs' ? 'show' : ''}" aria-labelledby="${('heading-specs-') + productID}" data-parent="${('#pdpAccordion-') + productID}">
+                                <div class="card-body">
+                                    <isinclude template="product/components/specificationsPre" />
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+
+                    <iscomment> Maintenance Table </iscomment>
+                    <isif condition="${maintenanceTab}">
+                        <div class="card">
+                            <div class="card-header" id="${('#heading-maintenance-') + productID}">
+                                <h5 class="mb-0">
+                                    <a href="#" class="btn btn-link icon collapsed maintenance" data-toggle="collapse" data-target="${('#maintenanceCollapse-') + productID}" aria-expanded="false"
+                                        aria-controls="${('maintenanceCollapse-') + productID}">
+                                        ${Resource.msg('label.maintenance', 'product', null)}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="${('maintenanceCollapse-') + productID}" class="collapse ${activeTab === 'maintenance' ? 'show' : ''}" aria-labelledby="${('heading-maintenance-') + productID}" data-parent="${('#pdpAccordion-') + productID}">
+                                <div class="card-body asset-body">
+                                    <iscontentasset aid="${product.raw.custom['content-maintenance-schedule']}" />
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+
+                    <iscomment> Manuals Table </iscomment>
+                    <isif condition="${manualsTab}">
+                        <div class="card">
+                            <div class="card-header" id="${('#heading-manuals-') + productID}">
+                                <h5 class="mb-0">
+                                    <a href="#" class="btn btn-link icon collapsed manuals" data-toggle="collapse" data-target="${('#manualsCollapse-') + productID}"
+                                        aria-expanded="false" aria-controls="${('manualsCollapse-') + productID}">
+                                        ${Resource.msg('tab.title.manuals', 'manuals', null)}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="${('manualsCollapse-') + productID}" class="collapse ${activeTab === 'manuals' ? 'show' : ''}" aria-labelledby="${('heading-manuals-') + productID}" data-parent="${('#pdpAccordion-') + productID}">
+                                <div class="card-body asset-body">
+                                    <div class="row">
+                                        <div class="col-12 manuals-container">
+
+                                            <isif condition="${pdict.product.productType === 'variant' || pdict.product.productType === 'variationGroup'}">
+                                                <isset name="modelNo" value="${product.raw.masterProduct.ID}" scope="page" />
+                                            <iselse>
+                                                <isset name="modelNo" value="${product.raw.ID}" scope="page" />
+                                            </isif>
+                                            <isinclude url="${URLUtils.url('MTDManuals-Show', 'modelNo', modelNo)}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+
+                    <iscomment> Pledge Table </iscomment>
+                    <isif condition="${pledgeTab}">
+                        <div class="card">
+                            <div class="card-header" id="${('#heading-pledge-') + productID}">
+                                <h5 class="mb-0">
+                                    <a href="#" class="btn btn-link icon collapsed pledge" data-toggle="collapse" data-target="${('#pledgeCollapse-') + productID}" aria-expanded="false"
+                                        aria-controls="${('pledgeCollapse-') + productID}">
+                                        ${Resource.msg('label.pledge', 'product', null)}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="${('pledgeCollapse-') + productID}" class="collapse ${activeTab === 'pledge' ? 'show' : ''}" aria-labelledby="${('heading-pledge-') + productID}" data-parent="${('#pdpAccordion-') + productID}">
+                                <div class="card-body asset-body">
+                                    <iscontentasset aid="part-pledge-asset" />
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+
+                    <iscomment> Cartful Solutions Table </iscomment>
+                    <isif condition="${!pdict.fitsOnModelPDPEnable && pdict.siteId !='cubcadet' && pdict.siteId !='troybilt'}">
+                    <isif condition="${cartfulTab}">
+                        <div class="card cartful-table">
+                            <div class="card-header" id="${('cartful-heading-') + productID}">
+                                <h5 class="mb-0">
+                                    <a href="#" class="btn btn-link icon collapsed fits-model" data-toggle="collapse" data-target="${('#cartfulCollapse-') + productID}"
+                                        aria-expanded="false" aria-controls="${('cartfulCollapse-') + productID}">
+                                        ${Resource.msg('product.cartful.fitsmodels', 'product', null)}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="${('cartfulCollapse-') + productID}" class="collapse ${activeTab === 'cartful' ? 'show' : ''}" aria-labelledby="${('cartful-heading-') + productID}" data-parent="${('#pdpAccordion-') + productID}">
+                                <div class="card-body asset-body">
+                                    <isinclude template="product/components/cartful" />
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+                    </isif>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iscomment>Mobile Parts Link</iscomment>
+    <isif condition="${partlinkTab}">
+        <section class="pdp-parts-link" id="pdp-parts-link" data-anchor="pdp-parts-link">
+            <div class="row d-md-none mobile-parts-link">
+                <div class="col-10 offset-1 col-sm-8 offset-sm-2">
+                    <isinclude template="product/components/partLink" />
+                </div>
+            </div>
+        </section>
+    </isif>
+</div>

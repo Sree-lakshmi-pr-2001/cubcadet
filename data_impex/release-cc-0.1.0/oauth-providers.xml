@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oauth-providers xmlns="http://www.demandware.com/xml/impex/oauthprovider/2013-07-16">
+    <oauth-provider provider-id="Facebook-cubcadet">
+        <description>Facebook login</description>
+        <client-id>805233389863905</client-id>
+        <client-secret>bb701801b19d818ebab806e15c0518cb</client-secret>
+        <scopes>public_profile,email</scopes>
+        <authorization-url>https://www.facebook.com/v3.2/dialog/oauth</authorization-url>
+        <token-url>https://graph.facebook.com/v3.2/oauth/access_token</token-url>
+        <user-info-url>https://graph.facebook.com/v3.2/me?fields=email,first_name,last_name</user-info-url>
+        <access-token-name>access_token</access-token-name>
+        <redirect-pipeline-node>Login-OAuthReentry</redirect-pipeline-node>
+    </oauth-provider>
+
+    <oauth-provider provider-id="Facebook-cubcadetca">
+        <description>Facebook login</description>
+        <client-id>399037170910007</client-id>
+        <client-secret>d0b73ba75bb06e3569d452b9cb49c0db</client-secret>
+        <scopes>public_profile,email</scopes>
+        <authorization-url>https://www.facebook.com/v3.2/dialog/oauth</authorization-url>
+        <token-url>https://graph.facebook.com/v3.2/oauth/access_token</token-url>
+        <user-info-url>https://graph.facebook.com/v3.2/me?fields=email,first_name,last_name</user-info-url>
+        <access-token-name>access_token</access-token-name>
+        <redirect-pipeline-node>Login-OAuthReentry</redirect-pipeline-node>
+    </oauth-provider>
+
+    <oauth-provider provider-id="Google-cubcadet">
+        <description>Google Authorizaiton</description>
+        <client-id>842112249777-g2bgduve95klo7m0a14b2pb7dr7dhbhc.apps.googleusercontent.com</client-id>
+        <client-secret>0TMHT5Bj48251TjYGAzkCC57</client-secret>
+        <scopes>profile,email</scopes>
+        <authorization-url>https://accounts.google.com/o/oauth2/auth</authorization-url>
+        <token-url>https://www.googleapis.com/oauth2/v3/token</token-url>
+        <user-info-url>https://www.googleapis.com/oauth2/v3/userinfo</user-info-url>
+        <access-token-name>access_token</access-token-name>
+        <redirect-pipeline-node>Login-OAuthReentry</redirect-pipeline-node>
+    </oauth-provider>
+
+    <oauth-provider provider-id="Google-cubcadetca">
+        <description>Google Authorizaiton</description>
+        <client-id>779133739074-p80t1t98tgs6i8alolo09cbj74esc59b.apps.googleusercontent.com</client-id>
+        <client-secret>dxgO5QiijditxbMc1FN_3g7_</client-secret>
+        <scopes>profile,email</scopes>
+        <authorization-url>https://accounts.google.com/o/oauth2/auth</authorization-url>
+        <token-url>https://www.googleapis.com/oauth2/v3/token</token-url>
+        <user-info-url>https://www.googleapis.com/oauth2/v3/userinfo</user-info-url>
+        <access-token-name>access_token</access-token-name>
+        <redirect-pipeline-node>Login-OAuthReentry</redirect-pipeline-node>
+    </oauth-provider>
+
+</oauth-providers>

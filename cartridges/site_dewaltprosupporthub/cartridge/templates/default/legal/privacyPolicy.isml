@@ -1,0 +1,13 @@
+<isdecorate template="common/layout/page">
+
+    <link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/css/dewalt-pro-support-hub.css')}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Oswald" />
+    <link rel="icon" type="image/png" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/images/dewalt-favicon.png')}" />
+
+    <div id="page-container">
+
+        <isslot id="dewalt-pro-support-privacy-policy-page" description="DeWalt PSH privacy policy page (header, footer, and content)" context="global" />
+
+    </div>
+
+</isdecorate>

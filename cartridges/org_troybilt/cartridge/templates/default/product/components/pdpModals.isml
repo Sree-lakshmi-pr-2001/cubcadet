@@ -1,0 +1,26 @@
+<isinclude template="components/modules" />
+
+<isset name="videoLink" value="${product.videoLink}" scope="page" />
+
+<isif condition="${videoLink.length > 0 && !isQuickView}">
+    <div class="pdp-modal-video">
+        <button
+            type="button"
+            class="btn btn-video-black-ol modal-link video-modal"
+            enable-title="false"
+            xl-modal="true"
+            data-embedvideo="${videoLink}"
+            data-content="#pdpVideo"
+            data-link="${URLUtils.url('Page-Show','cid','pdp-video-container')}">
+            ${Resource.msg('button.watchvideo', 'product', null)}
+        </button>
+    </div>
+</isif>
+
+<isif condition="${!isQuickView && !isBundleItem}">
+    <div class="row">
+        <div class="col-12 pdp-modal-content">
+            <iscontentasset aid="pdp-modals-content" />
+        </div>
+    </div>
+</isif>

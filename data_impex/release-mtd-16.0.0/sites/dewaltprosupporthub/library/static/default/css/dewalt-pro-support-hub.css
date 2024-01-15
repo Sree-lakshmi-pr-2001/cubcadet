@@ -1,0 +1,151 @@
+/* * * SITE * * */
+
+html {
+	min-height: 100vh;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+	height: 100%;
+    margin: 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+/* * * PAGE * * */
+
+div#page-container {
+	min-height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+/* * * HEADER * * */
+
+header#site-header {
+    background-color: black;
+    color:white;
+    padding: 1em 0;
+    text-align:center;
+    width: 100%;
+}
+
+header#site-header a {
+	color: white;
+	text-decoration: none;
+}
+
+h1#pro-support-hub-header-text {
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+}
+
+header#site-header a.header-link {
+    border: 1px solid black;
+	color: white;
+    display: inline-block;
+    font-size: 1.25em;
+    margin: auto 1%;
+}
+
+header#site-header a.header-link:hover {
+    border-bottom: 1px solid white; 
+    color: #FEBD17;
+}
+
+a.header-link:hover {
+	color: black;
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+
+/* * * PAGE CONTENT * * */
+
+div#content-container {
+	margin: auto;
+	max-width: 80%;
+	padding: 0.5em 1.5em;
+	padding-bottom: 8%;
+}
+
+a.in-text-link {
+	color: #6E6E6E;
+	text-decoration: none;
+}
+
+.conditions-block-list {
+	padding-left: 1.25em;
+}
+
+form {
+	width: 100%;
+}
+
+button {
+	background-color: #FEBD17;
+	border: 2px solid black;
+	border-radius: 5%;
+	color: black;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	max-height: 10%;
+	padding: 1em;
+	width: 45%;
+}
+
+button:hover {
+	background-color: #6E6E6E;
+	color: white;
+}
+
+/* * * FOOTER * * */
+
+footer {
+    background-color: black;
+	bottom: 0;
+    color: white;
+	position: absolute;
+    width: 100%;
+}
+
+footer p {
+
+	padding-left: 1em;
+}
+
+/* * * GENERIC ELEMENTS AND MINOR DETAIL CLASSES * * */
+
+h1 {
+    font-weight: 700;
+}
+
+h1 sup {
+	font-size: 0.5em;
+}
+
+.centered {
+	text-align: center;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.title-caps-override {
+	text-transform: none;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.green-text {
+	color: green;
+}

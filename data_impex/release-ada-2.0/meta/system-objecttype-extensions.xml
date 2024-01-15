@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences"> 
+        <custom-attribute-definitions>
+		    <attribute-definition attribute-id="checkoutToolTip">
+                <display-name xml:lang="x-default">checkout tooltip</display-name>
+                <description xml:lang="x-default">Switches between old styled "i" and new svg. When enabled uses the "i", and disabled uses the svg</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+	    </custom-attribute-definitions>
+	    <group-definitions>
+		    <attribute-group group-id="Storefront Configs">
+                	<attribute attribute-id="checkoutToolTip"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

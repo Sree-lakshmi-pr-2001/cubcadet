@@ -1,0 +1,54 @@
+  <isif condition="${lineItem.extendedWarranty.UUID}">
+  <div class="card product-info warranty-info warranty-order ${bonusproductlineitem} uuid-${lineItem.UUID} <isif condition="${status.last}"> last</isif>">
+    <div class="row <isif condition="${miniCart}"> warranty-minicart </isif> ">
+    <isif condition="${miniCart}"><isinclude template="cart/cartRemoveWarrantyCardLink" /></isif>
+      <div class="col-4 item-image warranty-image-order warranty-image">
+        <img class="product-image" src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty-minicart.png')}" />
+      </div>
+      <div class="col-8 product-line-item-details">
+        <h6>Extended Warranty</h6>
+        <div class="row  no-gutters coverage-text"><isprint value="${lineItem.extendedWarranty.shortDescription}" encoding="off"></div>
+        <div class="coverage-wrapp mb-1 text-uppercase"> <span class="done-mark"></span> <isprint value="${lineItem.extendedWarranty.coverage}" encoding="off"></div>
+        <isif condition="${miniCart}">
+        <div class="row warranty-minicart-footer">
+            <div class="col 1">
+            </div>
+            <div class="col 1">
+            ${lineItem.extendedWarranty.price}
+            </div>
+        </div>
+        </isif>
+        <isif condition="${!miniCart}">
+      <div class="product-line-item-results row product-price-qty-info mr-5">
+        <div class="col-12 line-item-price">
+          <div class="row no-gutters">
+            <p class="line-item-price-info  pr-2 col-5">${Resource.msg('label.price', 'cart', null)}:</p>
+            <div class="col-7">
+              <span class="sales">
+                <span class="value">${lineItem.extendedWarranty.formattedPrice}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 line-item-quantity">
+        <p class="line-item-pricing-info row no-gutters ">
+          <span class="line-item-total-text qty-card-quantity-label pr-2 col-5">${Resource.msg('label.qty', 'cart', null)}:</span>
+          <span class="pricing qty-card-quantity-count col-7">${lineItem.extendedWarranty.quantity}</span>
+        </p>
+        </div>
+        <div class="line-item-total-price justify-content-end col-12">
+          <div class="row no-gutters">
+            <p class="line-item-price-info  pr-2 col-5">${Resource.msg('label.total.total', 'cart', null)}:</p>
+            <div class="col-7">
+              <span class="sales">
+                <span class="value">${lineItem.extendedWarranty.totalPrice}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </isif>
+      </div>
+    </div>
+    </div>
+</isif>

@@ -1,0 +1,33 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+    </isscript>
+
+    <div class="${pdict.category.ID}">
+        <div class="jumbotron jumbotron-fluid p-0">
+            <isslot id="category-slot-hero" description="First slot on Category/Product Line Landing" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group one container-fluid">
+            <isslot id="category-slot-1" description="slot 1 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group two container-fluid">
+            <isslot id="category-slot-2" description="slot 2 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group three container-fluid">
+            <isslot id="category-slot-3" description="slot 3 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group four container-fluid">
+            <isslot id="category-slot-4" description="slot 4 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group five container-fluid">
+            <isslot id="category-slot-5" description="slot 5 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+    </div>
+
+</isdecorate>

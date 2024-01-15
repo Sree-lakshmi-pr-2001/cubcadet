@@ -1,0 +1,22 @@
+<div class="modal fade cart-dealer-change" id="cartChangeDealerModal" tabindex="-1" role="dialog" aria-labelledby="cartChangeDealerModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">${Resource.msg('dealer.cart.heading.changedealer.confirmation.modal','dealer',null)}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body">
+                <iscontentasset aid="cart-change-dealer-modal-description" />
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">${Resource.msg('dealer.cart.changedealer.button.cancel','dealer',null)}</button>
+                    <button type="button" id="changeDealerConfirmButton" class="btn btn-outline-secondary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#dealerSelectorModal">
+                        ${Resource.msg('dealer.cart.changedealer.button.confirm','dealer',null)}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

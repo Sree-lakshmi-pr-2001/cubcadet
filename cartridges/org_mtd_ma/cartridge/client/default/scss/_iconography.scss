@@ -1,0 +1,35 @@
+.icon {
+    &.logo {
+        width: 180px;
+
+        @include media-breakpoint-down(lg) {
+            width: 154px;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 138px;
+        }
+
+        &.mobile {
+            width: 138px;
+        }
+    }
+
+    &.icon-close {
+        opacity: 1;
+    }
+
+    &.icon-location-pin-black,
+    &.icon-location-pin-yellow {
+        height: 50px;
+
+        &.map-view {
+            height: 60px;
+        }
+    }
+
+    &.icon-info {
+        background: $svg-help;
+        background-size: cover;
+    }
+}

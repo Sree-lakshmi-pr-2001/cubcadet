@@ -1,0 +1,48 @@
+
+<span>
+    <isscript>
+        var ContentMgr = dw.content.ContentMgr;
+        var tooltipContent = ContentMgr.getContent('msrp-tooltip');
+    </isscript>
+    <isset name="finalOrigPrice" value="${price}" scope="page" />
+    <isset name="price" value="${finalOrigPrice.sales}" scope="page" />
+
+    <isif condition="${price.currency !== null}">
+        <span class="sales">
+            <isif condition="${isLowPrice == 'range-low'}">
+                <span class="value" content="${price.decimalPrice}"></span>
+            </isif>
+            <isif condition="${isLowPrice == 'range-high'}">
+                <span class="value" content="${price.decimalPrice}"></span>
+            </isif>
+            <isif condition="${isLowPrice == null}">
+                <span class="value" content="${price.decimalPrice}"></span>
+            </isif>
+            <isif condition="${isLowPrice != 'range-high'}">
+                <span class="msrp-text d-none"><isprint value="${Resource.msg('price.from', 'search', null)}" encoding="on" /></span>
+            </isif>
+            <span class="formatted-price">
+                <isinclude template="/product/components/pricing/formatted" />
+            </span>
+            <isif condition="${isLowPrice != 'range-low'}">
+                <span class="msrp-text d-none"><isprint value="${Resource.msg('price.msrp', 'search', null)}" encoding="on" /></span>
+                <isif condition="${!empty(tooltipContent.custom.body) && tooltipContent.online}">
+                    <span class="info-icon msrp-info">
+                        <span class="icon" data-toggle="tooltip"
+                            title="${tooltipContent.custom.body}">
+                        </span>
+                    </span>
+                </isif>
+            </isif>
+        </span>
+    </isif>
+
+    <isif condition="${finalOrigPrice.list !== null}">
+        <isset name="price" value="${finalOrigPrice.list}" scope="page" />
+            <span class="value" content="${price.decimalPrice}">
+                <isinclude template="/product/components/pricing/formatted" />
+            </span>
+        </span>
+    </isif>
+
+</span>

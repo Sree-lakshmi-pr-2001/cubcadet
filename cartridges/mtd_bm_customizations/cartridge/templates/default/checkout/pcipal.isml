@@ -1,0 +1,61 @@
+<isdecorate template="common/layout/epcot">
+    <script>
+        document.getElementById('pageName').value= 'pcipal';
+    </script>
+    <div class="row">
+        <div class="col-md-9">
+			<div class="pcipalframe">
+				<iframe id="i_frame" name="paymentframe" src="about:blank" width="800" height="750"
+					class="pcipalframe"></iframe>
+				<form
+					action="${pdict.iframeUrl}"
+					id="initForm" target="paymentframe" method="POST">
+					<input name="X-BEARER-TOKEN"
+						value="${pdict.agentAccessToken}"
+						type="hidden"> <input name="X-REFRESH-TOKEN"
+						value="${pdict.agentRefreshToken}"
+						type="hidden">
+				</form>  
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="epcot-button-container">
+			<h1>Welcome to PCI PAL window</h1>
+				<form action="${URLUtils.url('PCIPal-CompletePayment')}" method="post" styleId="myForm" onsubmit="document.getElementById('completePCIPALPayment').disabled=true;">
+					<input type="hidden" name="commerceStore" value="${pdict.commerceStore}"/>
+					<input type="hidden" name="doComplete" value="N">
+					<input type="hidden" name="doCancel" value="N">
+					<input type="hidden" name="basketId" value="${pdict.basketId}"/>
+					<input type="hidden" name="nvmAccessToken" value="${pdict.agentAccessToken}"/>
+					<input type="hidden" name="nvmSessionUid" value="${pdict.sessionGuid}"/>
+					<input type="hidden" name="nvmProviderSessionUid" value="${pdict.providerSessionGuid}"/>
+						<h3>Please click complete once the PCI Pal session has ended</h3>
+						<iscomment> <html:button property="" styleClass="nvm-mtd-button" onclick="doNvmComplete();">Complete</html:button>
+						<html:button property="" styleClass="nvm-mtd-button nvm-right" onclick="doNvmCancel();">Pend Order</html:button> </iscomment>
+						<button type="submit" id= "completePCIPALPayment" class="btn btn-primary btn-lg btn-block">Complete Payment</button>
+						<!-- <html:button property="" styleClass="portlet-form-button" onclick="doComplete();"><bean:message key="orderEntry.proceed"/></html:button> -->
+						<!-- <button id="mtdNvmButton" value="cancel">Cancel</button> -->
+				</form>
+
+				<form action="${URLUtils.url('PCIPal-ReturnToDiscounts')}" method="POST">
+					<input type="hidden" name="commerceStore" value="${pdict.commerceStore}"/>
+					<input type="hidden" name="basketId" value="${pdict.basketId}"/>
+					<input type="hidden" name="pciPalError" value=""/>
+					<input type="hidden" name="nvmAccessToken" value="${pdict.agentAccessToken}"/>
+					<input type="hidden" name="nvmSessionUid" value="${pdict.sessionGuid}"/>
+					<input type="hidden" name="nvmProviderSessionUid" value="${pdict.providerSessionGuid}"/>
+					<button type="submit" class="btn btn-secondary backToDiscountPageButton">Cancel / Return to Previous Page</button>
+				</form>
+				<script>
+					document.getElementById("initForm").submit();
+				</script>
+			</div>
+        </div>
+    </div>
+
+<script>
+	// document.getElementById('completePCIPALPayment').onclick = function () {
+	// 	this.disabled = true;
+	// };
+</script>
+</isdecorate>

@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/2004-08-24.xsd" targetNamespace="http://www.shopperscharge.com/TransactionWS5" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:serviceSchema="http://www.shopperscharge.com/TransactionWS5">
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://www.shopperscharge.com/TransactionWS5">
+
+
+			<!-- Types: Simple -->
+			<s:simpleType name="UserID">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="20" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="Password">
+				<s:restriction base="s:string">
+					<s:minLength value="8" />
+					<s:maxLength value="20" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="AccessToken">
+				<s:restriction base="s:string">
+					<s:minLength value="36" />
+					<s:maxLength value="36" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="LanguageCode">
+				<s:restriction base="s:string">
+					<s:pattern value="(en|fr|sp)?" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="Location">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="50" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="IPAddress">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="39" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="TransactionLink">
+				<s:restriction base="s:long">
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="ExternalID">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="400" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="ExternalDateTime">
+				<s:restriction base="s:dateTime">
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="AccountNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="16" />
+					<s:maxLength value="16" />
+					<s:pattern value="\d+" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="StoreNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="9" />
+					<s:pattern value="\d+" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="CreditPlan">
+				<s:restriction base="s:int">
+					<s:minInclusive value="1" />
+					<s:maxInclusive value="99998" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="FinanceProgram">
+				<s:restriction base="s:int">
+					<s:minInclusive value="1" />
+					<s:maxInclusive value="99998" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="TransactionAmount">
+				<s:restriction base="s:decimal">
+					<s:minInclusive value="0.01" />
+					<s:maxInclusive value="9999999.99" />
+					<s:fractionDigits value="2" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="TransactionAmount0">
+				<s:restriction base="s:decimal">
+					<s:minInclusive value="0.00" />
+					<s:maxInclusive value="9999999.99" />
+					<s:fractionDigits value="2" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="InvoiceNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="10" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="MfrModelNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="15" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="MfrSerialNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="15" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="Description">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="25" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="RefNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="19" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="EffectiveDate">
+				<s:restriction base="s:dateTime">
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="SerialNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="15" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="ModelNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="12" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="SKU">
+				<s:restriction base="s:int">
+					<s:minInclusive value="0" />
+					<s:maxInclusive value="999999999" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="DeptCode">
+				<s:restriction base="s:string">
+					<s:minLength value="0" />
+					<s:maxLength value="4" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="YN">
+				<s:restriction base="s:string">
+					<s:enumeration value="Y" />
+					<s:enumeration value="N" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="YNP">
+				<s:restriction base="s:string">
+					<s:enumeration value="Y" />
+					<s:enumeration value="N" />
+					<s:enumeration value="P" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="NameLine">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="30" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="AddressLine">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="30" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="City">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="22" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="State">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="3" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="CountryCode">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="3" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="PostalCode">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="9" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="PhoneNumber">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="11" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="IsYesNo">
+				<s:restriction base="s:string">
+					<s:pattern value="[YN]" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="AuthCode">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="10" />
+					<s:pattern value="\d+" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="SCAClass">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="3" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="StoreClass">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="9" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="PurchaseOrder">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="15" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="SalesClerk">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="12" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="Flag">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="3" />
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="InvoiceDateTime">
+				<s:restriction base="s:dateTime">
+				</s:restriction>
+			</s:simpleType>
+
+			<s:simpleType name="Status">
+				<s:restriction base="s:string">
+					<s:minLength value="1" />
+					<s:maxLength value="1" />
+				</s:restriction>
+			</s:simpleType>
+
+
+			<!-- Types: Complex  -->
+
+			<s:complexType name="ReceiptText">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TextID" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TextLanguageCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TextLocation" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionTextID" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionTextLanguageCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionTextLocation" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionText" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="DisclosureText">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TextID" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TextLanguageCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TextLocation" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionTextID" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionTextLanguageCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionTextLocation" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionText" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="NameAddressRequest">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="NameLine1" type="serviceSchema:NameLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameLine2" type="serviceSchema:NameLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameLine3" type="serviceSchema:NameLine" />
+					<s:element minOccurs="1" maxOccurs="1" name="AddressLine1" type="serviceSchema:AddressLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="serviceSchema:AddressLine" />
+					<s:element minOccurs="1" maxOccurs="1" name="City" type="serviceSchema:City" />
+					<s:element minOccurs="1" maxOccurs="1" name="State" type="serviceSchema:State" />
+					<s:element minOccurs="1" maxOccurs="1" name="PostalCode" type="serviceSchema:PostalCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="PrimaryHolderHomePhoneNumber" type="serviceSchema:PhoneNumber" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="NameAddressResponse">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="NameLine1" type="serviceSchema:NameLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameLine2" type="serviceSchema:NameLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameLine3" type="serviceSchema:NameLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="serviceSchema:AddressLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="serviceSchema:AddressLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="City" type="serviceSchema:City" />
+					<s:element minOccurs="0" maxOccurs="1" name="State" type="serviceSchema:State" />
+					<s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="serviceSchema:PostalCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="PrimaryHolderHomePhoneNumber" type="serviceSchema:PhoneNumber" />
+				</s:sequence>
+			</s:complexType>
+
+
+			<!-- Types: Validation, ValidationResponse
+           Either UserID+Password or AccessToken is required.
+           Response elements Link and LogLink uniquely identify the request, and are useful for documentation.
+      -->
+
+			<s:complexType name="Validation">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="UserID" type="serviceSchema:UserID" />
+					<s:element minOccurs="0" maxOccurs="1" name="Password" type="serviceSchema:Password" />
+					<s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="serviceSchema:AccessToken" />
+					<s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="Location" type="serviceSchema:Location" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="ValidationResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Invalid UserID
+                  4 - Error: Invalid UserID for WebService
+                  5 - Error: Invalid Password
+                  9 - Error: Element Validation Error
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Link" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="LogLink" type="s:int" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: SalePost -->
+
+			<s:complexType name="SaleLine">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="Type" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="serviceSchema:InvoiceNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="serviceSchema:MfrModelNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="serviceSchema:MfrSerialNumber" />
+					<s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="serviceSchema:RefNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="serviceSchema:SCAClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="serviceSchema:StoreClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="serviceSchema:Description" />
+					<s:element minOccurs="0" maxOccurs="1" name="TranType" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="Amount" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="serviceSchema:DeptCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="serviceSchema:SKU" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="serviceSchema:PurchaseOrder" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="serviceSchema:SalesClerk" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="serviceSchema:Flag" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="ArrayOfSale">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="SaleArray" nillable="true" type="serviceSchema:Sale" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Sale">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="AccountNumber" type="serviceSchema:AccountNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status" type="serviceSchema:Status" />
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="StoreLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreNumber" type="serviceSchema:StoreNumber" />
+					<!-- -->
+					<s:element minOccurs="0" maxOccurs="1" name="InvoiceDateTime" type="serviceSchema:InvoiceDateTime" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountSubTotal" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountSalesTax" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountTotalPrice" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountDownPayment" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountFinanced" type="serviceSchema:TransactionAmount" />
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="PlanMasterLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="CreditPlan" type="serviceSchema:CreditPlan" />
+					<!-- -->
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="FinanceProgramLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FinanceProgram" type="serviceSchema:FinanceProgram" />
+					<!-- -->
+					<s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" type="serviceSchema:InvoiceNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="1" maxOccurs="unbounded" name="Lines" type="serviceSchema:SaleLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthCode" type="serviceSchema:AuthCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="ReceiptTextYN" type="serviceSchema:YNP" />
+					<s:element minOccurs="0" maxOccurs="1" name="DisclosureTextYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameAddressMatchYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameAddress" type="serviceSchema:NameAddressRequest" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SaleResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfSaleResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfSaleResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:SaleResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SaleResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Service Not Permitted
+                  3 - Error: Invalid StoreNumber
+                  4 - Error: Authorization Failed
+                  5 - Error: Invalid FinanceProgram
+                  5 - Error: Invalid CreditPlan
+                  9 - Error: Element Validation Error
+                  11 - Error: Receipt Error
+                  12 - Error: Disclosure Error
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="EditErrorYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status" type="serviceSchema:Status" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthRes" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthDate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthCode" type="serviceSchema:AuthCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemAddressCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemAddressCodeMsg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ReceiptText" type="serviceSchema:ReceiptText" />
+					<s:element minOccurs="0" maxOccurs="1" name="DisclosureText" type="serviceSchema:DisclosureText" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameAddressMatchYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="NameAddress" type="serviceSchema:NameAddressResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: ReturnPost -->
+
+			<s:complexType name="ReturnLine">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="Type" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="serviceSchema:InvoiceNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="serviceSchema:MfrModelNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="serviceSchema:MfrSerialNumber" />
+					<s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="serviceSchema:RefNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="serviceSchema:SCAClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="serviceSchema:StoreClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="serviceSchema:Description" />
+					<s:element minOccurs="0" maxOccurs="1" name="TranType" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="Amount" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="serviceSchema:DeptCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="serviceSchema:SKU" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="serviceSchema:PurchaseOrder" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="serviceSchema:SalesClerk" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="serviceSchema:Flag" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="ArrayOfReturn">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ReturnArray" nillable="true" type="serviceSchema:Return" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Return">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="AccountNumber" type="serviceSchema:AccountNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status" type="serviceSchema:Status" />
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="StoreLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreNumber" type="serviceSchema:StoreNumber" />
+					<!-- -->
+					<s:element minOccurs="0" maxOccurs="1" name="InvoiceDateTime" type="serviceSchema:InvoiceDateTime" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountSubTotal" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountSalesTax" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountTotalPrice" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountDownPayment" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountFinanced" type="serviceSchema:TransactionAmount" />
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="PlanMasterLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="CreditPlan" type="serviceSchema:CreditPlan" />
+					<!-- -->
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="FinanceProgramLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FinanceProgram" type="serviceSchema:FinanceProgram" />
+					<!-- -->
+					<s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" type="serviceSchema:InvoiceNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="1" maxOccurs="unbounded" name="Lines" type="serviceSchema:ReturnLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="ReceiptTextYN" type="serviceSchema:YNP" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReturnResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfReturnResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfReturnResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:ReturnResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReturnResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Service Not Permitted
+                  3 - Error: Invalid StoreNumber
+                  4 - Error: Authorization Failed
+                  5 - Error: Invalid FinanceProgram
+                  5 - Error: Invalid CreditPlan
+                  9 - Error: Element Validation Error
+                  11 - Error: Receipt Error
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="EditErrorYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status" type="serviceSchema:Status" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthRes" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthDate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemAddressCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemAddressCodeMsg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ReceiptText" type="serviceSchema:ReceiptText" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: PaymentPost -->
+
+			<s:complexType name="PaymentLine">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="Type" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="serviceSchema:InvoiceNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="serviceSchema:MfrModelNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="serviceSchema:MfrSerialNumber" />
+					<s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="serviceSchema:RefNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="serviceSchema:SCAClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="serviceSchema:StoreClass" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="serviceSchema:Description" />
+					<s:element minOccurs="0" maxOccurs="1" name="TranType" type="s:int" />
+					<s:element minOccurs="1" maxOccurs="1" name="Amount" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="serviceSchema:DeptCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="serviceSchema:SKU" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="serviceSchema:PurchaseOrder" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="serviceSchema:SalesClerk" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="serviceSchema:Flag" />
+				</s:sequence>
+			</s:complexType>
+
+			<s:complexType name="ArrayOfPayment">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="PaymentArray" nillable="true" type="serviceSchema:Payment" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Payment">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="AccountNumber" type="serviceSchema:AccountNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status" type="serviceSchema:Status" />
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="StoreLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreNumber" type="serviceSchema:StoreNumber" />
+					<!-- -->
+					<s:element minOccurs="0" maxOccurs="1" name="InvoiceDateTime" type="serviceSchema:InvoiceDateTime" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountSubTotal" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountSalesTax" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountTotalPrice" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountDownPayment" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="1" maxOccurs="1" name="AmountFinanced" type="serviceSchema:TransactionAmount" />
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="PlanMasterLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="CreditPlan" type="serviceSchema:CreditPlan" />
+					<!-- -->
+					<!-- one or the other is required -->
+					<s:element minOccurs="0" maxOccurs="1" name="FinanceProgramLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FinanceProgram" type="serviceSchema:FinanceProgram" />
+					<!-- -->
+					<s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" type="serviceSchema:InvoiceNumber" />
+					<s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="1" maxOccurs="unbounded" name="Lines" type="serviceSchema:PaymentLine" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="ReceiptTextYN" type="serviceSchema:YNP" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PaymentResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfPaymentResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfPaymentResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:PaymentResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PaymentResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Service Not Permitted
+                  3 - Error: Invalid StoreNumber
+                  4 - Error: Authorization Failed
+                  5 - Error: Invalid FinanceProgram
+                  5 - Error: Invalid CreditPlan
+                  9 - Error: Element Validation Error
+                  11 - Error: Receipt Error
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="EditErrorYN" type="serviceSchema:YN" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status" type="serviceSchema:Status" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthRes" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthDate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemAddressCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemAddressCodeMsg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ReceiptText" type="serviceSchema:ReceiptText" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: Release -->
+
+			<s:complexType name="ArrayOfRelease">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ReleaseArray" nillable="true" type="serviceSchema:Release" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Release">
+				<s:sequence>
+					<!-- if passed, must be identical to original value -->
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionAmount" type="serviceSchema:TransactionAmount" />
+					<s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" type="serviceSchema:EffectiveDate" />
+					<!-- either ExternalIDTarget or TransactionLinkTarget must be passed to uniquely identify transaction -->
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleaseResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfReleaseResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfReleaseResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:ReleaseResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleaseResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Service Not Permitted
+                  5 - Error: Pending Sale Not Found
+                  6 - Error: Pending Sale TransactionAmount MisMatch
+                  9 - Error: Element Validation Error
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionDisclosureText" type="serviceSchema:DisclosureText" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: ReleasePartial -->
+
+			<s:complexType name="ArrayOfReleasePartial">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ReleasePartialArray" nillable="true" type="serviceSchema:ReleasePartial" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleasePartial">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<!--s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" /-->
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLinkTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumberTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FileDateTime" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleasePartialResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfReleasePartialResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfReleasePartialResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:ReleasePartialResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleasePartialResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Service Not Permitted
+                  5 - Error: Pending Sale Not Found
+                  6 - Error: Pending Sale TransactionAmount MisMatch
+                  9 - Error: Element Validation Error
+                 13 - Error: Invalid Amount
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthRes" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthDate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLinkTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumberTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLink" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumber" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FileDateTime" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:decimal" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: ReleasePartialDelete -->
+
+			<s:complexType name="ArrayOfReleasePartialDelete">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ReleasePartialDeleteArray" nillable="true" type="serviceSchema:ReleasePartialDelete" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleasePartialDelete">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<!--s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" /-->
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLinkTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumberTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleasePartialDeleteResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfReleasePartialDeleteResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfReleasePartialDeleteResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:ReleasePartialDeleteResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ReleasePartialDeleteResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 - Successful
+                  2 - Error: Service Not Permitted
+                  5 - Error: Pending Sale Not Found
+                  6 - Error: Pending Sale TransactionAmount MisMatch
+                  9 - Error: Element Validation Error
+                 13 - Error: Invalid Amount
+                  ? - Error: Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLinkTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumberTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: Void -->
+
+			<s:complexType name="ArrayOfVoid">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="VoidArray" nillable="true" type="serviceSchema:VoidElement" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoidElement">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoidResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfVoidResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfVoidResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:VoidResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoidResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 -   Successful
+                2 -   Error:    Service Not Permitted
+                4 -   Warning:  Authorization Failed but Void Successful 
+                5 -   Error:    Transaction Not Found
+                6 -   Error:    ExternalIDTarget Not Unique
+                7 -   Error:    Transaction Not Voidable
+                8 -   Error:    Transaction Not Permitted
+                9 -   Error:    Element Validation Error
+                12 -  Error:    ExternalIDTarget Mismatch
+                ? -   Error:    Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthRes" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthDate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+			<!-- Types: Void -->
+
+			<s:complexType name="ArrayOfVoidPartial">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="VoidPartialArray" nillable="true" type="serviceSchema:VoidPartial" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoidPartial">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+					<!--s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" /-->
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLinkTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumberTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FileDateTime" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoidPartialResult">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+					<s:element minOccurs="0" maxOccurs="1" name="Responses" type="serviceSchema:ArrayOfVoidPartialResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfVoidPartialResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="unbounded" name="ResponseArray" nillable="true" type="serviceSchema:VoidPartialResponse" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoidPartialResponse">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+					<!--  1 -   Successful
+                2 -   Error:    Service Not Permitted
+                4 -   Warning:  Authorization Failed but Void Successful 
+                5 -   Error:    Transaction Not Found
+                6 -   Error:    ExternalIDTarget Not Unique
+                7 -   Error:    Transaction Not Voidable
+                8 -   Error:    Transaction Not Permitted
+                9 -   Error:    Element Validation Error
+                12 -  Error:    ExternalIDTarget Mismatch
+                13 -  Error:    Invalid Amount
+                ? -   Error:    Other
+            -->
+					<s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalIDTarget" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLinkTarget" type="serviceSchema:TransactionLink" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthRes" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="AuthDate" type="s:dateTime" />
+					<s:element minOccurs="0" maxOccurs="1" name="DataLinkTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="RecordNumberTarget" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrInvoiceNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrModelNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MfrSerialNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="FileDateTime" type="serviceSchema:EffectiveDate" />
+					<s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SCAClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="StoreClass" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:decimal" />
+					<s:element minOccurs="0" maxOccurs="1" name="DeptCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SKU" type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="PurchaseOrder" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SalesClerk" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+					<s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+				</s:sequence>
+			</s:complexType>
+
+
+
+
+			<!-- Top-level Elements: Loan -->
+
+			<s:element name="LoanPost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfSale" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="LoanPostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:SaleResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+
+
+			<!-- Top-level Elements: Sale -->
+
+			<s:element name="SalePost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfSale" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SalePostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:SaleResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: Return -->
+
+			<s:element name="ReturnPost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfReturn" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ReturnPostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:ReturnResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: Payment -->
+
+			<s:element name="PaymentPost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfPayment" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="PaymentPostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:PaymentResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: Release -->
+
+			<s:element name="ReleasePost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfRelease" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ReleasePostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:ReleaseResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: ReleasePartial -->
+
+			<s:element name="ReleasePartialPost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfReleasePartial" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ReleasePartialPostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:ReleasePartialResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: ReleasePartial -->
+
+			<s:element name="ReleasePartialDeletePost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfReleasePartialDelete" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ReleasePartialDeletePostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:ReleasePartialDeleteResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: Void -->
+
+			<s:element name="VoidPost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfVoid" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VoidPostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:VoidResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+
+			<!-- Top-level Elements: VoidPartial -->
+
+			<s:element name="VoidPartialPost">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+						<s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfVoidPartial" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VoidPartialPostResult">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1" maxOccurs="1" name="result" type="serviceSchema:VoidPartialResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+
+		</s:schema>
+	</wsdl:types>
+
+
+
+
+	<!-- SOAP Messages -->
+
+	<wsdl:message name="LoanPostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:LoanPost" />
+	</wsdl:message>
+	<wsdl:message name="LoanPostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:LoanPostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="SalePostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:SalePost" />
+	</wsdl:message>
+	<wsdl:message name="SalePostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:SalePostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="ReturnPostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:ReturnPost" />
+	</wsdl:message>
+	<wsdl:message name="ReturnPostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:ReturnPostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="PaymentPostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:PaymentPost" />
+	</wsdl:message>
+	<wsdl:message name="PaymentPostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:PaymentPostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="ReleasePostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:ReleasePost" />
+	</wsdl:message>
+	<wsdl:message name="ReleasePostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:ReleasePostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="ReleasePartialPostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:ReleasePartialPost" />
+	</wsdl:message>
+	<wsdl:message name="ReleasePartialPostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:ReleasePartialPostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="ReleasePartialDeletePostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:ReleasePartialDeletePost" />
+	</wsdl:message>
+	<wsdl:message name="ReleasePartialDeletePostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:ReleasePartialDeletePostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="VoidPostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:VoidPost" />
+	</wsdl:message>
+	<wsdl:message name="VoidPostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:VoidPostResult" />
+	</wsdl:message>
+
+	<wsdl:message name="VoidPartialPostSoapIn">
+		<wsdl:part name="parameters" element="serviceSchema:VoidPartialPost" />
+	</wsdl:message>
+	<wsdl:message name="VoidPartialPostSoapOut">
+		<wsdl:part name="parameters" element="serviceSchema:VoidPartialPostResult" />
+	</wsdl:message>
+
+
+
+
+	<!-- SOAP Operations -->
+
+	<wsdl:portType name="TransactionWS5Soap">
+		<wsdl:operation name="LoanPost">
+			<wsdl:input message="serviceSchema:LoanPostSoapIn" />
+			<wsdl:output message="serviceSchema:LoanPostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="SalePost">
+			<wsdl:input message="serviceSchema:SalePostSoapIn" />
+			<wsdl:output message="serviceSchema:SalePostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ReturnPost">
+			<wsdl:input message="serviceSchema:ReturnPostSoapIn" />
+			<wsdl:output message="serviceSchema:ReturnPostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="PaymentPost">
+			<wsdl:input message="serviceSchema:PaymentPostSoapIn" />
+			<wsdl:output message="serviceSchema:PaymentPostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ReleasePost">
+			<wsdl:input message="serviceSchema:ReleasePostSoapIn" />
+			<wsdl:output message="serviceSchema:ReleasePostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ReleasePartialPost">
+			<wsdl:input message="serviceSchema:ReleasePartialPostSoapIn" />
+			<wsdl:output message="serviceSchema:ReleasePartialPostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ReleasePartialDeletePost">
+			<wsdl:input message="serviceSchema:ReleasePartialDeletePostSoapIn" />
+			<wsdl:output message="serviceSchema:ReleasePartialDeletePostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="VoidPost">
+			<wsdl:input message="serviceSchema:VoidPostSoapIn" />
+			<wsdl:output message="serviceSchema:VoidPostSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="VoidPartialPost">
+			<wsdl:input message="serviceSchema:VoidPartialPostSoapIn" />
+			<wsdl:output message="serviceSchema:VoidPartialPostSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+
+
+
+	<!-- SOAP Bindings -->
+
+	<wsdl:binding name="TransactionWS5Soap" type="serviceSchema:TransactionWS5Soap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+
+		<wsdl:operation name="LoanPost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/LoanPost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="SalePost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/SalePost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="PaymentPost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/PaymentPost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="ReturnPost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/ReturnPost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="ReleasePost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/ReleasePost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="ReleasePartialPost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/ReleasePartialPost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="ReleasePartialDeletePost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/ReleasePartialDeletePost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="VoidPost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/FTDsVoidPost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="VoidPartialPost">
+			<soap:operation soapAction="http://www.shopperscharge.com/TransactionWS5/FTDsVoidPartialPost" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+
+
+
+	<!-- Service Definition -->
+
+	<wsdl:service name="TransactionWS5">
+		<documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+		<wsdl:port name="TransactionWS5Soap" binding="serviceSchema:TransactionWS5Soap">
+			<soap:address location="http://www.shopperscharge.com/TransactionWS5/TransactionWS5.asmx" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

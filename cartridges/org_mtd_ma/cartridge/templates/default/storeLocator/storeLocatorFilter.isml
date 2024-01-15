@@ -1,0 +1,22 @@
+<!--- TEMPLATENAME: storeLocatorFilter.isml --->
+<isif condition="${/*!pdict.CurrentHttpParameterMap.isParameterSubmitted('rid') && */ !pdict.CurrentHttpParameterMap.isParameterSubmitted('pc')}">
+    <div class="col-12 filters">
+        <h6>${Resource.msg('storelocator.refine.search', 'storeLocator', null)}</h6>
+        <div class="d-flex flex-row flex-wrap">
+            <isloop items=${pdict.productCategoriesFilter} var="productCategory">
+                <div class="form-check custom-control custom-checkbox">
+                    <input
+                        id="store-filter-${productCategory.value}"
+                        name="store-filter"
+                        type="checkbox"
+                        class="custom-control-input"
+                        value="${productCategory.value}"
+                        />
+                    <label class="custom-control-label" for="store-filter-${productCategory.value}">
+                        ${productCategory.displayValue}
+                    </label>
+                </div>
+            </isloop>
+        </div>
+    </div>
+</isif>

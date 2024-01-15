@@ -1,0 +1,34 @@
+[
+    {
+        "name": "CipherHelper",
+        "modulePath": "/app_demo/cartridge/scripts/tests/CipherHelper.js"
+    },
+    {
+        "name": "NewsLetterTestSuite",
+        "modulePath": "/app_demo/cartridge/scripts/tests/NewsLetterTestSuite.js"
+    },
+    {
+        "name": "AddressValidationTestSuite",
+        "modulePath": "/app_demo/cartridge/scripts/tests/AddressValidationTestSuite.js"
+    },
+    {
+        "name": "TaxTestSuite",
+        "modulePath": "/app_demo/cartridge/scripts/tests/TaxTestSuite.js"
+    },
+    {
+        "name": "ChasePaymentTestSuite",
+        "modulePath": "/int_chase/cartridge/scripts/tests/ChasePaymentTestSuite.js"
+    },
+    {
+        "name": "ChaseCertificationTestSuite",
+        "modulePath": "/int_chase/cartridge/scripts/tests/ChaseCertificationTestSuite.js"
+    },
+    {
+        "name": "MTDServicesTestSuite",
+        "modulePath": "/int_mtdservices/cartridge/scripts/tests/MTDServicesTestSuite.js"
+    },
+    {
+        "name": "FinancingApplicationTestSuite",
+        "modulePath": "/int_financing_app/cartridge/scripts/tests/FinancingApplicationTestSuite.js"
+    }
+]

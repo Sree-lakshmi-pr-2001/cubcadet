@@ -1,0 +1,284 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~org/utilities/layout";
+
+.shipping-section {
+    #email {
+        max-width: 370px;
+    }
+
+    .dealer-zip-code-input {
+        @include media-breakpoint-up(md) {
+            max-width: 277px;
+        }
+    }
+
+    .dealer-zip-code-error {
+        color: $danger;
+        @include media-breakpoint-up(md) {
+            width: 200%; // prevent unwanted wrapping
+        }
+    }
+}
+
+.dealer-shipping-block {
+    .form-group {
+        width: calc(100% - 70px);
+        display: inline-block;
+    }
+
+    button.submit-dealer-lookup {
+        display: inline-block;
+        width: 60px;
+        padding: 0.5rem !important;
+        position: absolute;
+        top: 21px;
+        right: 15px;
+    }
+
+    .row {
+        margin-bottom: rem(15px);
+    }
+}
+
+.choose-msg {
+    margin: rem(15px) 0;
+}
+
+.dealer-info {
+    padding-left: rem(25px);
+    line-height: 1.57;
+}
+
+.dealer-distance {
+    padding-top: rem(30px);
+}
+
+.dealer-option,
+.pickup-option {
+    background-color: $light;
+    border: $border;
+    cursor: pointer;
+    padding: rem(15px);
+    margin-bottom: rem(15px);
+    position: relative;
+    height: calc(100% - #{rem(15px)});
+
+    &.active {
+        border: 1px solid $brand-main;
+    }
+}
+
+.user-actions {
+    .row {
+        margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(sm) {
+            justify-content: space-between;
+        }
+    }
+
+    .btn-col {
+        @include media-breakpoint-down(sm) {
+            flex-basis: calc(50% - 5px);
+        }
+
+        @include media-breakpoint-only(lg) {
+            margin-right: rem(30px);
+        }
+    }
+
+    .btn {
+        @include media-breakpoint-down(sm) {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 260px;
+        }
+    }
+
+    .customer-service-links {
+        object {
+            vertical-align: bottom;
+            padding-right: rem(5px);
+        }
+
+        .cs-link.first {
+            margin-bottom: rem(25px);
+        }
+
+        .label-1 {
+            text-decoration: none;
+        }
+    }
+}
+
+// custom button
+
+.show-more-less {
+    padding: rem(15px) 0;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+// standard shipping styles from checkout.css
+
+.shipping-address {
+    .shipment-selector-block {
+        margin-bottom: rem(15px);
+    }
+
+    .info-icon {
+        position: absolute;
+        top: 30px;
+        right: 60px;
+    }
+}
+
+.shipping-method-block {
+    margin-bottom: rem(20px);
+
+    .shipping-method-list {
+        margin-left: 0;
+        line-height: 1.86;
+    }
+
+    h5 {
+        margin-bottom: rem(15px);
+    }
+}
+
+.shipping-methods {
+    font-size: 1.125em;
+    font-weight: $checkout-font-weight;
+}
+
+.shipping-method-option {
+    font-size: 0.938em;
+}
+
+.shipping-method-pricing {
+    font-weight: bolder;
+}
+
+.shipping-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.shipping-summary-row {
+    .row {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-xs;
+    }
+
+    @include media-breakpoint-up(md) {
+        .divider {
+            border-left: $border;
+        }
+    }
+}
+
+.summary-section-label {
+    @include summary-section-label();
+
+    margin-bottom: rem(5px);
+}
+
+// multiship related
+
+.multi-shipping {
+    display: none;
+
+    .card-header {
+        background-color: $white;
+
+        .product-line-item {
+            .line-item-header {
+                font-size: $h5-font-size;
+                margin-bottom: rem(15px);
+            }
+        }
+    }
+}
+
+.multi-ship .multi-shipping {
+    display: block;
+}
+
+.multi-ship .single-shipping .shipping-content {
+    border-top: $border;
+}
+
+.multi-ship-action-buttons {
+    .btn {
+        margin-top: rem(20px);
+        width: auto;
+    }
+}
+
+.multi-ship-address-actions {
+    .btn {
+        width: 100%;
+    }
+}
+
+// carb compliant modal
+#carbCompliance {
+    .modal-dialog {
+        max-width: 100%;
+
+        @include media-breakpoint-up(md) {
+            max-width: 810px;
+        }
+    }
+
+    .swap-icon {
+        padding: rem(10px) 0 0;
+        position: relative;
+        height: 100%;
+    }
+
+    .icon-swap {
+        @include centerElement(vertical, relative);
+
+        @include media-breakpoint-down(sm) {
+            transform: rotate(90deg);
+        }
+    }
+
+    .tile-row,
+    .btn-row {
+        margin-top: rem(20px);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .modal-feature-toggle {
+        margin-top: rem(12px);
+
+        .hide {
+            display: none;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    .tile-attributes {
+        margin-top: rem(12px);
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+}

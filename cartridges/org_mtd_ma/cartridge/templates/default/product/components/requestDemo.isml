@@ -1,0 +1,5 @@
+<!--- TEMPLATENAME: requestDemo.isml --->
+
+<a href="${URLUtils.url('Page-Show','cid','request-a-demo-form')}" class="btn btn-secondary request-demo-btn">
+    ${Resource.msg('button.requestdemo', 'product', null)}
+</a>

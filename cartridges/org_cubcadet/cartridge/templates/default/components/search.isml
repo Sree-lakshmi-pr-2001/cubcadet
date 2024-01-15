@@ -1,0 +1,40 @@
+
+<div class="row">
+    <div class="col-8 col-lg-12 offset-2 offset-lg-0">
+        <div class="text-center">
+            <h1 class="mb-2 mt-3 mt-lg-5"><isprint value="${Resource.msg('blog.search.header', 'blog', null)}" /></h1>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4 offset-lg-4">
+        <div class="content-search">
+            <form role="search" action="${URLUtils.url('Search-ShowSearchContent')}" method="get" name="simpleSearch">
+                <div class="form-group">
+                    <label for="blog-content-search">
+                        <isprint value="${Resource.msg('blog.search.top.label', 'blog', null)}" />
+                    </label>
+                    <div class="input-group">
+                        <input id="blog-content-search" class="form-control search-field"
+                               type="search"
+                               name="q"
+                               value=""
+                               placeholder=""
+                               autocomplete="off"
+                               aria-describedby="contentSearchHelp"/>
+                        <input type="hidden" value="${pdict.locale}" name="lang">
+
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary search-content-button" type="submit">
+                                <isprint value="${Resource.msg('blog.search.go', 'blog', null)}" />
+                            </button>
+                        </span>
+
+                    </div>
+                    <small id="contentSearchHelp" class="form-text ">
+                        <isprint value="${Resource.msg('blog.search.bottom.label', 'blog', null)}" />
+                    </small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

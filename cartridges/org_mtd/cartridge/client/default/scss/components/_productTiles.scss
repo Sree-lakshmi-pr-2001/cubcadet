@@ -1,0 +1,316 @@
+@import "../utilities/swatch";
+@import "productCommon";
+@import "quickView";
+
+.product-carousel {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.product-grid {
+    > div:not(.grid-footer) {
+        margin-bottom: rem(30px);
+    }
+
+    .product-tile .pdp-link a {
+        @extend .ellipsis;
+        @extend .webkit-ellipsis;
+    }
+}
+
+.grid-tile {
+    display: inline;
+}
+
+.product-tile {
+    text-align: center;
+    max-width: 300px;
+    height: 100%;
+    margin-bottom: 0;
+    border: $border;
+
+    @include media-breakpoint-down(md) {
+        min-height: 23.4375em;
+    }
+
+    @include media-breakpoint-down(sm) {
+        min-height: 19.6875em;
+    }
+
+    @include media-breakpoint-down(xs) {
+        min-height: 297px;
+    }
+
+    &:hover {
+        .image-container .quickview {
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+        }
+    }
+
+    .image-container .quickview {
+        &:hover,
+        &:focus {
+            @include media-breakpoint-up(lg) {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+
+    .tile-body {
+        padding: rem(10px) rem(20px) rem(20px);
+
+        .coming-soon-tile {
+            text-align: center;
+        }
+
+        .pdp-link {
+            margin-bottom: rem(10px);
+            line-height: 1.2;
+            height: 33px;
+            overflow: hidden;
+
+            a {
+                font-size: $font-size-body;
+                color: $body-color;
+                text-decoration: none;
+            }
+        }
+
+        .product-extended-name {
+            min-height: rem(40px);
+            margin-bottom: rem(10px);
+            line-height: 1.45;
+        }
+
+        .price {
+            font-size: $font-size-base;
+            margin-bottom: rem(15px);
+
+            .strike-through {
+                font-weight: $font-weight-bold;
+                color: $brand-light;
+            }
+
+            span {
+                span:nth-of-type(2) {
+                    &.sales {
+                        color: $danger;
+                    }
+                }
+            }
+
+            .sales {
+                color: $body-color;
+            }
+
+            .tiered {
+                .value {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .callout {
+            margin-bottom: rem(10px);
+            color: $danger;
+            font-weight: $font-weight-bold;
+        }
+
+        .color-swatches {
+            min-height: 2.25em;
+            margin-bottom: rem(15px);
+
+            .product-tile-color-label {
+                cursor: pointer;
+                font-size: 1em;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 0.9375em;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.8125em;
+                }
+            }
+        }
+
+        .atc-product {
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .availability-msg,
+        .part-replaces-text {
+            margin: rem(10px) 0;
+        }
+
+        .availability-msg {
+            font-weight: $font-weight-bold;
+
+            &.instock {
+                color: $primary;
+            }
+
+            &.preorder {
+                color: $info;
+            }
+
+            &.backorder {
+                color: $accent-1;
+            }
+
+            &.notavailable {
+                color: $danger;
+            }
+        }
+
+        .part-replaces-text {
+            display: block;
+        }
+
+        .tile-body-footer {
+            position: absolute;
+            bottom: 15px;
+        }
+
+        .ratings {
+            display: none;
+            font-size: 0.9em;
+        }
+    }
+
+    .image-container {
+        position: relative;
+        overflow: auto;
+        padding: rem(20px) rem(20px) 0;
+
+        .quickview {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: rem(11px);
+            color: $brand-second;
+            background-color: rgba(255, 255, 255, 0.85);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .product-status {
+            position: absolute;
+            top: rem(20px);
+            left: rem(20px);
+            background-color: $gray-400;
+            color: $white;
+            padding: 0 1.5em;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+
+            .tile-image {
+                width: 100%;
+            }
+        }
+    }
+
+    .pc-promotion-message {
+        margin-bottom: rem(10px);
+    }
+
+    .swatches {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .swatch-circle {
+        // $white will be replaced by color image background via Javascript
+        @include swatch(1.8em, $white);
+    }
+}
+
+#chooseBonusProductModal {
+    .modal-header {
+        span {
+            width: 100%;
+            padding-bottom: rem(15px);
+            border-bottom: $border;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    .modal-footer {
+        .container {
+            margin-left: 0;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    .bonus-product-item {
+        padding: 0;
+    }
+
+    .select-cbp-container {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .product-name-wrapper {
+        width: 100%;
+    }
+
+    .bonus-quantity,
+    .bonus-option {
+        margin-top: 0.938em;
+    }
+
+    .bonus-quantity-select {
+        min-width: 5em;
+    }
+
+    .select-bonus-product {
+        margin-top: 1em;
+    }
+
+    .selected-pid {
+        .bonus-product-name {
+            padding: 0 rem(5px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .remove-btn {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 4px;
+        background-color: $trans;
+        border: 0;
+
+        &::after {
+            height: 12px;
+            width: 12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .bonus-product-price {
+        text-align: center;
+        margin-top: 1em;
+    }
+}

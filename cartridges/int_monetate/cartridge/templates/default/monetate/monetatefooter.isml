@@ -1,0 +1,17 @@
+<iscomment>Tracking pages which have type unknown</iscomment>
+<isset name="monetateObject" value="${require('~/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+<isif condition="${monetateObject.getMonetateEnabled()}">
+    <script type="text/javascript">
+    	if(monetateData.setPageType == "unknown") {
+    		monetateData.trackUnknownPage = function() {
+    			window.monetateQ.push(["setPageType", monetateData.setPageType]);
+    			
+    			if(monetateData.addCartRows) window.monetateQ.push(["addCartRows", monetateData.addCartRows]);
+    			if(monetateData.breadCrumbs) window.monetateQ.push(["addBreadcrumbs", monetateData.breadCrumbs]);
+    	
+    			window.monetateQ.push(["trackData"]);
+    		};
+    		monetateData.trackUnknownPage();
+    	}
+    </script>
+</isif>

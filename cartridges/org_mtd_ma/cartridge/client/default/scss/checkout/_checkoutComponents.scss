@@ -1,0 +1,680 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~org/utilities/layout";
+@import "../utilities/typeUtils";
+
+$checkout-font-weight: 700;
+
+$receipt-font-size: 0.875rem;
+$receipt-spacing: 0.625em;
+$stored-payment-spacing: 1rem;
+
+.page {
+    background-color: $white;
+
+    .page-title {
+        padding: rem(30px) rem(15px);
+
+        @include type-alt-section-heading();
+
+        @include media-breakpoint-up(md) {
+            padding: rem(30px) rem(15px) 0;
+            margin-bottom: rem(-20px);
+        }
+    }
+}
+
+.order-summary {
+    .edit-link a {
+        font-weight: $font-weight-bold;
+        float: right;
+    }
+}
+
+.order-total-summary {
+    border: $border;
+    border-top: none;
+    background-color: $white !important;
+
+    .row {
+        &.grand-total {
+            border-top: $border;
+            border-bottom: $border;
+            height: auto;
+            padding: rem(10px) 0;
+            margin: rem(10px) 0 0;
+
+            @include type-cart-estimated-total();
+        }
+
+        p {
+            margin-bottom: 0;
+            line-height: 1.86;
+        }
+    }
+
+    .order-discount,
+    .shipping-discount {
+        font-weight: $font-weight-bold;
+        color: $brand-second;
+
+        p {
+            line-height: 1.86;
+            margin-bottom: 0;
+        }
+    }
+
+    .order-discount-total,
+    .grand-total {
+        white-space: nowrap;
+    }
+}
+
+.product-summary-block {
+    margin: rem(20px) 0 0;
+
+    .line-item-divider {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .line-item-header {
+        flex-direction: column;
+    }
+
+    .promo-label,
+    .line-item-price-info,
+    .line-item-total-text {
+        font-weight: $font-weight-bold;
+    }
+
+    .product-image {
+        max-width: calc(100% - #{rem(10px)});
+        margin-right: rem(10px);
+    }
+
+    .extended-name {
+        @include comparison-product-extended-name;
+    }
+
+    .item-attributes,
+    .line-item-attributes,
+    .strike-through:not(.non-adjusted-price),
+    .line-item-price-info,
+    .line-item-total-text,
+    .line-item-total-price-amount,
+    .item-number {
+        font-size: $font-size-xs;
+    }
+
+    .product-line-item-results {
+        font-size: $font-size-xs;
+        line-height: 1.86;
+    }
+
+    .pricing {
+        font-weight: $font-weight-normal;
+    }
+
+    .line-item-quantity {
+        width: 100%;
+    }
+
+    .strike-through.list {
+        margin-left: 0;
+        display: inline;
+    }
+}
+
+.grand-total-price {
+    float: right;
+    font-weight: $checkout-font-weight;
+}
+
+.grand-total-label {
+    font-weight: $checkout-font-weight;
+}
+
+.order-receipt-label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.product-divider {
+    margin-left: -$receipt-spacing;
+    margin-right: -$receipt-spacing;
+
+    hr {
+        border-top: $border;
+    }
+}
+
+.product-line-item + .product-line-item::before,
+.multi-shipping + .product-line-item::before {
+    content: "";
+    display: block;
+    border-bottom: $border;
+    margin: $receipt-spacing 0;
+}
+
+.shipment-block + .shipment-block::before {
+    content: "";
+    display: block;
+    border-bottom: $border;
+    margin: $receipt-spacing 0;
+}
+
+.shipping-method {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.shipping-method,
+.shipping-method-price {
+    margin-bottom: 0;
+}
+
+.product-summary-block {
+    margin: 1em 0 0;
+}
+
+.summary-details,
+.shipping-dealer-info-block {
+    margin-bottom: rem(15px);
+}
+
+.summary-section-label {
+    font-weight: $checkout-font-weight;
+
+    @include media-breakpoint-up(lg) {
+        font-weight: 500;
+    }
+}
+
+.payment-options-section {
+    border-top: $border;
+    padding-top: rem(15px);
+    margin-top: rem(15px);
+}
+
+.add-payment,
+.cancel-new-payment {
+    margin-top: $stored-payment-spacing;
+    width: 260px;
+}
+
+.user-payment-instruments {
+    padding: 0;
+}
+
+.cc-imgs {
+    text-align: right;
+
+    .icon {
+        max-width: 50px;
+        margin-left: rem(5px);
+    }
+}
+
+.estimation-finance-info {
+    font-size: $font-size-body;
+    line-height: rem(20px);
+    margin: rem(5px) 0 rem(20px);
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-base;
+        line-height: rem(22px);
+        margin: rem(15px) 0 rem(30px);
+    }
+
+    .cc-container {
+        float: left;
+        display: inline-block;
+        width: 70px;
+        margin-right: rem(10px);
+
+        @include media-breakpoint-up(md) {
+            width: 86px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .td-estimation {
+        display: inline-block;
+        width: calc(100% - 85px);
+
+        @include media-breakpoint-up(md) {
+            width: calc(100% - 100px);
+        }
+
+        a {
+            font-size: $font-size-body;
+
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-base;
+            }
+        }
+
+        .td-links {
+            white-space: nowrap;
+        }
+
+        .vertical-divider {
+            margin: 0 rem(5px);
+            color: $gray-300;
+        }
+    }
+}
+
+.saved-payment-instrument {
+    background-color: $white;
+    border: $border;
+    padding: rem(15px);
+    margin-bottom: rem(15px);
+    height: calc(100% - #{rem(15px)});
+
+    // faked radios
+    .custom-radio {
+        top: 15px;
+        margin-right: rem(15px);
+    }
+
+    .card-image {
+        margin-top: -0.5rem;
+    }
+}
+
+.selected-payment {
+    border-color: $brand-main;
+}
+
+.saved-security-code {
+    margin-top: $stored-payment-spacing;
+}
+
+.payment-information {
+    margin-bottom: $stored-payment-spacing;
+
+    .nav-item {
+        width: 50%;
+
+        > .nav-link {
+            color: $body-color;
+
+            &.active {
+                .payment-input {
+                    &::before {
+                        @include media-breakpoint-up(lg) {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 1px;
+                            display: inline-block;
+                            height: rem(18px);
+                            width: rem(18px);
+                            background-image: $svg-radio-selected-blk;
+                            background-size: cover;
+                            background-color: $white;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            .payment-input {
+                @include media-breakpoint-up(lg) {
+                    position: relative;
+                    padding-left: rem(25px);
+                }
+
+                &::before {
+                    @include media-breakpoint-up(lg) {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 1px;
+                        display: inline-block;
+                        height: rem(18px);
+                        width: rem(18px);
+                        background-image: $svg-radio-unselected;
+                        background-size: cover;
+                        background-color: $white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        .credit-card-tab,
+        .finance-card-tab {
+            @include media-breakpoint-up(lg) {
+                display: block;
+                padding: 0 rem(10px);
+                line-height: rem(55px);
+                text-align: left;
+            }
+        }
+
+        .cc-imgs {
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+                width: calc(100% - 125px);
+                position: absolute;
+                top: -2px;
+                right: 10px;
+            }
+
+            .icon {
+                @include media-breakpoint-up(lg) {
+                    width: 20%;
+                }
+
+                &.cub-card {
+                    border: 1px solid $white;
+                }
+            }
+        }
+    }
+}
+
+.credit-card-content {
+    .credit-card-option {
+        margin: rem(30px) 0 rem(15px);
+        text-align: left;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        .icon:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.finance-card-content {
+    .credit-card-form {
+        > .row:last-child {
+            margin-top: rem(15px);
+        }
+    }
+
+    .plan-label {
+        @include label-2;
+
+        position: relative;
+        margin: rem(35px) 0 rem(6px);
+
+        @include media-breakpoint-up(md) {
+            margin: rem(30px) 0 rem(6px);
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: rem(10px) 0 rem(6px);
+        }
+
+        .instore-note {
+            float: right;
+            font-weight: $font-weight-normal;
+            text-transform: none;
+        }
+
+        .cc-imgs {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            .icon {
+                max-width: 65px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+
+    .financing-plans-list {
+        clear: both;
+    }
+
+    .form-group {
+        margin-bottom: rem(9px);
+    }
+
+    .custom-control {
+        padding: 0;
+    }
+
+    .custom-radio .custom-control-input ~ .custom-control-label {
+        &::before,
+        &::after {
+            left: 15px;
+            top: 15px;
+
+            @include media-breakpoint-up(md) {
+                @include centerElement(vertical);
+            }
+        }
+    }
+
+    .card-number-wrapper {
+        float: left;
+        width: 100%;
+        max-width: 315px;
+    }
+
+    .finance-account-lookup-link {
+        float: left;
+        line-height: rem(40px);
+
+        @include media-breakpoint-up(md) {
+            margin-left: rem(10px);
+        }
+    }
+}
+
+.finance-radio {
+    padding: rem(10px) rem(15px) rem(10px) rem(50px);
+    background-color: $white;
+    border: $border;
+    min-height: 80px;
+
+    @include media-breakpoint-up(md) {
+        padding: rem(15px) rem(20px) rem(15px) rem(50px);
+    }
+
+    .custom-control-input:checked ~ & {
+        border: 1px solid $secondary;
+    }
+
+    .label-title {
+        @include finance-form-label;
+
+        margin-bottom: rem(5px);
+    }
+
+    .label-disclaimer {
+        @include disclaimer-text;
+
+        margin-bottom: rem(5px);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    .label-text {
+        @include media-breakpoint-up(md) {
+            width: calc(100% - 110px);
+        }
+    }
+
+    > a {
+        font-size: $font-size-xs;
+
+        @include media-breakpoint-up(md) {
+            @include centerElement(vertical);
+
+            right: 20px;
+            font-size: $font-size-body;
+        }
+    }
+}
+
+.finance-card-terms {
+    .td-payment-details {
+        margin-left: rem(5px);
+        font-size: $font-size-xs;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-body;
+        }
+    }
+}
+
+.finance-promofee {
+    font-weight: $font-weight-bold;
+}
+
+.finance-card-amount {
+    font-weight: $font-weight-bold;
+}
+
+.security-code-input,
+.cc-email-input,
+.billing-phone-field {
+    position: relative;
+
+    .info-icon {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+}
+
+.checkout-hidden {
+    display: none;
+}
+
+.multi-ship .single-shipping .shipping-content {
+    display: none;
+}
+
+.multi-ship .shipping-summary .single-shipping {
+    display: none;
+}
+
+.gift-message-block {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.single-shipping .summary-section-label {
+    margin-bottom: 0;
+}
+
+.confirm-details .shipping-method,
+.confirm-details .shipping-method-price {
+    margin-bottom: 0;
+}
+
+.multi-ship .confirm-details .single-shipping {
+    display: none;
+}
+
+.multi-shipping {
+    display: none;
+}
+
+#financeMsg {
+    .modal-footer {
+        padding: 0;
+    }
+
+    .lookup-section {
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            text-align: left;
+        }
+
+        .lookup-text {
+            text-align: left;
+            margin-bottom: rem(15px);
+        }
+
+        .cub-card {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: rem(15px);
+        }
+    }
+
+    .lastSSN {
+        max-width: 315px;
+    }
+
+    .postalCode {
+        max-width: 136px;
+    }
+
+    .dob-select {
+        > .col-6 {
+            .form-group {
+                @include media-breakpoint-up(md) {
+                    margin-top: rem(22px);
+                }
+            }
+        }
+    }
+
+    .found-finance-account-number {
+        margin: rem(10px) 0;
+        font-size: rem(20px);
+    }
+
+    .copy-to-clipboard {
+        margin-right: rem(40px);
+    }
+
+    .print-account {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: inline;
+        }
+    }
+
+    .form-buttons {
+        margin-top: rem(15px);
+
+        button {
+            width: 100%;
+            height: 48px;
+            margin-bottom: rem(15px);
+
+            @include media-breakpoint-up(md) {
+                max-width: 180px;
+                margin-right: rem(15px);
+                margin-bottom: 0;
+            }
+
+            &.use-account {
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 265px;
+                }
+            }
+        }
+    }
+}

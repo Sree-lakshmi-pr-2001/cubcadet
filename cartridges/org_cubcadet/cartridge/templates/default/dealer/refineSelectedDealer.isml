@@ -1,0 +1,305 @@
+<isif condition="${pdict.productType === 'AUTO_WG' || pdict.productType === 'PT_ACC'}">
+    <isif condition="${((pdict.deliveryType === pdict.deliveryDealerPickup || pdict.deliveryType === pdict.deliveryDealer) && pdict.isProductEdealerEligible)}">
+
+        <isset name="selectedDealer" value="${pdict.selectedDealer}" scope="page" />
+        <isset name="region" value="${pdict.region}" scope="page" />
+
+        <isset name="regionClass" value="" scope="page" />
+        <isif condition="${region === 'PDP'}">
+            <isset name="regionClass" value="pdp-region" scope="page" />
+        <iselseif condition="${region === 'Cart'}">
+            <isset name="regionClass" value="cart-region" scope="page" />
+        <iselseif condition="${region === 'PLP'}">
+            <isset name="regionClass" value="plp-region" scope="page" />
+        </isif>
+
+        <isif condition="${empty(selectedDealer) && region === 'PDP'}">
+            <div class="col-12">
+                <div class="refine-selected-dealer no-selected-dealer ${regionClass}">
+                    <h6>
+                        ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}
+                    </h6>
+                    <isif condition="${!pdict.isQuickView}">
+                        <div class="dealer">
+                            <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                            ${Resource.msg('dealer.search.selectedDealer.findDealerNearMe', 'dealer', null)}
+                        </button>
+                        </div>
+                        <div class="change-delivery-zipcode">
+                            <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#deliveryZipcodeChangeModal" data-backdrop="static">
+                                ${Resource.msg('dealer.title.button.changeZipcode', 'dealer', null)}
+                            </button>
+                        </div>
+                    </isif>
+                </div>
+            </div>
+            <div class="col-12 d-none d-sm-block"><hr></div>
+        <iselseif condition="${!empty(selectedDealer) && region === 'Cart'}">
+            <div class="refine-selected-dealer ${regionClass}">
+                <h6>
+                    ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}:
+                </h6>
+                <div class="dealer">
+                    <div class="dealer-info-wrap">
+                        <isif condition="${!empty(selectedDealer.name)}">
+                            <div class="dealer-name">
+                                <isprint value="${selectedDealer.name}"/>
+                            </div>
+                        </isif>
+                        <div class="dealer-address">
+                            <isif condition="${selectedDealer.address1}">
+                                <isprint value="${selectedDealer.address1}" />,
+                            </isif>
+                            <isif condition="${selectedDealer.city}">
+                                <isprint value="${selectedDealer.city}" />,
+                            </isif>
+                            <isif condition="${selectedDealer.stateCode}">
+                                <isprint value="${selectedDealer.stateCode}" />
+                            </isif>
+                            <isif condition="${selectedDealer.postalCode}">
+                                <isprint value="${selectedDealer.postalCode}" />
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+                <isif condition="${!pdict.isQuickView}">
+                    <button type="button" class="btn btn-link" data-toggle="modal"
+                        data-target="#cartChangeDealerModal"
+                        data-action="${URLUtils.url('Cart-RemoveProductLineItem')}"
+                        aria-label="${Resource.msg('dealer.cart.button.changedealer', 'dealer', null)}"
+                    >
+                        ${Resource.msg('dealer.cart.button.changedealer', 'dealer', null)}
+                    </button>
+                </isif>
+            </div>
+        <iselseif condition="${!empty(selectedDealer)}">
+            <isif condition="${region === 'PDP'}">
+                <div class="col-12">
+            </isif>
+            <div class="refine-selected-dealer ${regionClass}">
+                <h6>
+                    ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}
+                </h6>
+                <div class="dealer">
+                    <div class="dealer-logo-wrap">
+                        <isif condition="${!empty(selectedDealer.custom.dealer_specific_logo_url)}">
+                            <img class="dealer-logo" src="${selectedDealer.custom.dealer_specific_logo_url}" alt="${Resource.msg('dealer.search.selectedDealer.logo.alt', 'dealer', null)}" >
+                        <iselse/>
+                            <img class="dealer-logo" src="${selectedDealer.custom.logoImage}" alt="${Resource.msg('dealer.search.selectedDealer.logo.alt', 'dealer', null)}" >
+                        </isif>
+                    </div>
+                    <div class="dealer-info-wrap">
+                        <isif condition="${!empty(selectedDealer.name)}">
+                            <div class="dealer-name">
+                                <isprint value="${selectedDealer.name}"/>
+                            </div>
+                        </isif>
+                        <div class="dealer-address">
+                            <isif condition="${selectedDealer.address1}">
+                                <isprint value="${selectedDealer.address1}" />,
+                            </isif>
+                            <isif condition="${selectedDealer.city}">
+                                <isprint value="${selectedDealer.city}" />,
+                            </isif>
+                            <isif condition="${selectedDealer.stateCode}">
+                                <isprint value="${selectedDealer.stateCode}" />
+                            </isif>
+                            <isif condition="${selectedDealer.postalCode}">
+                                <isprint value="${selectedDealer.postalCode}" />
+                            </isif>
+                        </div>
+                        <isif condition="${!pdict.isQuickView}">
+                            <button type="button" class="dealer-change btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                                <span aria-hidden="true"></span>
+                                    ${Resource.msg('dealer.search.selectedDealer.change', 'dealer', null)}
+                            </button>
+                        </isif>
+                    </div>
+                </div>
+                <div class="change-delivery-zipcode">
+                    <div class="zipcode-marker-wrap dealer-logo-wrap">
+                        <img class="zipcode-marker" src="${URLUtils.staticURL('images/svg-icons/icon-location-pin-black.svg')}" alt="${Resource.msg('dealer.zipcode.marker.logo.alt', 'dealer', null)}" />
+                    </div>
+                    <div class="zipcode-info-wrap dealer-info-wrap">
+                        <span class="zipcode-title">${Resource.msg('dealer.title.changeZipcode', 'dealer', null)}</span>
+                        <span class="zipcode-number">
+                            <isif condition="${session.custom.deliveryZipCode}">
+                                <isprint value="${session.custom.deliveryZipCode}" />
+                            <iselse/>
+                                <isprint value="${selectedDealer.postalCode}" />
+                            </isif>
+                        </span>
+                        <isif condition="${!pdict.isQuickView}">
+                            ${Resource.msg('dealer.title.separator', 'dealer', null)}
+                            <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#deliveryZipcodeChangeModal" data-backdrop="static">
+                                ${Resource.msg('dealer.title.button.changeZipcode', 'dealer', null)}
+                            </button>
+                        </isif>
+                    </div>
+                </div>
+            </div>
+            <isif condition="${region === 'PDP'}">
+                </div>
+                <div class="col-12 d-none d-sm-block"><hr></div>
+            </isif>
+        </isif>
+    </isif>
+<iselseif condition ="${pdict.productType != 'AUTO_WG' && pdict.productType != 'PT_ACC'}" />
+
+    <isset name="selectedDealer" value="${pdict.selectedDealer}" scope="page" />
+    <isset name="region" value="${pdict.region}" scope="page" />
+
+    <isset name="regionClass" value="" scope="page" />
+    <isif condition="${region === 'PDP'}">
+        <isset name="regionClass" value="pdp-region" scope="page" />
+    <iselseif condition="${region === 'Cart'}">
+        <isset name="regionClass" value="cart-region" scope="page" />
+    <iselseif condition="${region === 'PLP'}">
+        <isset name="regionClass" value="plp-region" scope="page" />
+    </isif>
+
+    <isset name="automaticGeolocationEnabled" value="${dw.system.Site.current.getCustomPreferenceValue('automaticGeolocationEnabled')}" scope="page" />
+    <isif condition="${empty(selectedDealer) && region === 'PDP'}">
+        <div class="col-12">
+            <div class="refine-selected-dealer no-selected-dealer ${regionClass}">
+                <h6>
+                    ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}
+                </h6>
+                <isif condition="${!pdict.isQuickView}">
+                    <div class="dealer">
+                        <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                        ${Resource.msg('dealer.search.selectedDealer.findDealerNearMe', 'dealer', null)}
+                    </button>
+                    </div>
+                    <div class="change-delivery-zipcode">
+                        <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#deliveryZipcodeChangeModal" data-backdrop="static">
+                            ${Resource.msg('dealer.title.button.changeZipcode', 'dealer', null)}
+                        </button>
+                    </div>
+                </isif>
+            </div>
+        </div>
+        <div class="col-12 d-none d-sm-block"><hr></div>
+    <iselseif condition="${empty(selectedDealer) && region === 'PLP' && !automaticGeolocationEnabled}">
+        <div class="refine-selected-dealer no-selected-dealer ${regionClass}">
+            <h6>
+                ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}
+            </h6>
+            <isif condition="${!pdict.isQuickView}">
+                <div class="dealer">
+                    <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                    ${Resource.msg('dealer.search.selectedDealer.findDealerNearMe', 'dealer', null)}
+                </button>
+                </div>
+            </isif>
+        </div>
+    <iselseif condition="${!empty(selectedDealer) && region === 'Cart'}">
+        <div class="refine-selected-dealer ${regionClass}">
+            <h6>
+                ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}:
+            </h6>
+            <div class="dealer">
+                <div class="dealer-info-wrap">
+                    <isif condition="${!empty(selectedDealer.name)}">
+                        <div class="dealer-name">
+                            <isprint value="${selectedDealer.name}"/>
+                        </div>
+                    </isif>
+                    <div class="dealer-address">
+                        <isif condition="${selectedDealer.address1}">
+                            <isprint value="${selectedDealer.address1}" />,
+                        </isif>
+                        <isif condition="${selectedDealer.city}">
+                            <isprint value="${selectedDealer.city}" />,
+                        </isif>
+                        <isif condition="${selectedDealer.stateCode}">
+                            <isprint value="${selectedDealer.stateCode}" />
+                        </isif>
+                        <isif condition="${selectedDealer.postalCode}">
+                            <isprint value="${selectedDealer.postalCode}" />
+                        </isif>
+                    </div>
+                </div>
+            </div>
+            <isif condition="${!pdict.isQuickView}">
+                <button type="button" class="btn btn-link" data-toggle="modal"
+                    data-target="#cartChangeDealerModal"
+                    data-action="${URLUtils.url('Cart-RemoveProductLineItem')}"
+                    aria-label="${Resource.msg('dealer.cart.button.changedealer', 'dealer', null)}"
+                >
+                    ${Resource.msg('dealer.cart.button.changedealer', 'dealer', null)}
+                </button>
+            </isif>
+        </div>
+    <iselseif condition="${!empty(selectedDealer)}">
+        <isif condition="${region === 'PDP'}">
+            <div class="col-12">
+        </isif>
+        <div class="refine-selected-dealer ${regionClass}">
+            <h6>
+                ${Resource.msg('dealer.search.selectedDealer.shoppingInventory', 'dealer', null)}
+            </h6>
+            <div class="dealer">
+                <div class="dealer-logo-wrap">
+                    <isif condition="${!empty(selectedDealer.custom.dealer_specific_logo_url)}">
+                        <img class="dealer-logo" src="${selectedDealer.custom.dealer_specific_logo_url}" alt="${Resource.msg('dealer.search.selectedDealer.logo.alt', 'dealer', null)}" >
+                    <iselse/>
+                        <img class="dealer-logo" src="${selectedDealer.custom.logoImage}" alt="${Resource.msg('dealer.search.selectedDealer.logo.alt', 'dealer', null)}" >
+                    </isif>
+                </div>
+                <div class="dealer-info-wrap">
+                    <isif condition="${!empty(selectedDealer.name)}">
+                        <div class="dealer-name">
+                            <isprint value="${selectedDealer.name}"/>
+                        </div>
+                    </isif>
+                    <div class="dealer-address">
+                        <isif condition="${selectedDealer.address1}">
+                            <isprint value="${selectedDealer.address1}" />,
+                        </isif>
+                        <isif condition="${selectedDealer.city}">
+                            <isprint value="${selectedDealer.city}" />,
+                        </isif>
+                        <isif condition="${selectedDealer.stateCode}">
+                            <isprint value="${selectedDealer.stateCode}" />
+                        </isif>
+                        <isif condition="${selectedDealer.postalCode}">
+                            <isprint value="${selectedDealer.postalCode}" />
+                        </isif>
+                    </div>
+                    <isif condition="${!pdict.isQuickView}">
+                        <button type="button" class="dealer-change btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                            <span aria-hidden="true"></span>
+                                ${Resource.msg('dealer.search.selectedDealer.change', 'dealer', null)}
+                        </button>
+                    </isif>
+                </div>
+            </div>
+            <div class="change-delivery-zipcode">
+                <div class="zipcode-marker-wrap dealer-logo-wrap">
+                    <img class="zipcode-marker" src="${URLUtils.staticURL('images/svg-icons/icon-location-pin-black.svg')}" alt="${Resource.msg('dealer.zipcode.marker.logo.alt', 'dealer', null)}" />
+                </div>
+                <div class="zipcode-info-wrap dealer-info-wrap">
+                    <span class="zipcode-title">${Resource.msg('dealer.title.changeZipcode', 'dealer', null)}</span>
+                    <span class="zipcode-number">
+                        <isif condition="${session.custom.deliveryZipCode}">
+                            <isprint value="${session.custom.deliveryZipCode}" />
+                        <iselse/>
+                            <isprint value="${selectedDealer.postalCode}" />
+                        </isif>
+                    </span>
+                    <isif condition="${!pdict.isQuickView}">
+                        ${Resource.msg('dealer.title.separator', 'dealer', null)}
+                        <button type="button" class="dealer-find btn-link" data-toggle="modal" data-target="#deliveryZipcodeChangeModal" data-backdrop="static">
+                            ${Resource.msg('dealer.title.button.changeZipcode', 'dealer', null)}
+                        </button>
+                    </isif>
+                </div>
+            </div>
+        </div>
+        <isif condition="${region === 'PDP'}">
+            </div>
+            <div class="col-12 d-none d-sm-block"><hr></div>
+        </isif>
+    </isif>
+</isif>

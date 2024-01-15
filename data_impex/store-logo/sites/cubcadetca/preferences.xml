@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="defaultStoreLogoImage">images/stores/logos/home-depot.svg</preference>
+        </development>
+        <staging>
+            <preference preference-id="defaultStoreLogoImage">images/stores/logos/home-depot.svg</preference>
+        </staging>
+    </custom-preferences>
+</preferences>
+

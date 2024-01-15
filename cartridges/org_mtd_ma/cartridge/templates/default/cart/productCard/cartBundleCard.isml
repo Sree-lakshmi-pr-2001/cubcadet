@@ -1,0 +1,56 @@
+<div class="card product-info bundle-product uuid-${lineItem.UUID} ${status.last ? 'last' : ''}">
+    <div class="row no-gutters">
+
+        <div class="col-5 col-md-2 col-lg-4 col-xl-3">
+            <div class="item-image">
+                <img class="product-image" src="${lineItem.images['line-item'][0].url}" alt="${lineItem.images['line-item'][0].alt}" title="${lineItem.images['line-item'][0].title}">
+            </div>
+            <div class="d-md-none">
+                <isinclude template="cart/productCard/cartRemoveProductCardLink" />
+                <div class="bundle-edit">
+                    <a href="${URLUtils.url('Cart-GetProduct', 'uuid', lineItem.UUID)}" class="edit" title="${Resource.msg('link.edit.item','cart',null)}">${Resource.msg('link.edit.item','cart',null)}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7 col-md-10 col-lg-8 col-xl-9 ">
+            <div class="item-attributes d-flex flex-column flex-md-row flex-lg-column flex-xl-row">
+                <div class="product-card-body">
+                    <!--- name and remove buttons --->
+                    <isinclude template="cart/productCard/cartProductCardHeader" />
+                    <div class="bundle-includes">${Resource.msg('msg.bundle.includes','cart',null)}</div>
+
+                    <!--- individual bundled line items --->
+                    <div class="bundled-products">
+                        <isinclude template="cart/productCard/cartProductCardBundledItems" />
+                    </div>
+
+                    <div class="line-item-availability availability-${lineItem.UUID}">
+                        <isloop items="${lineItem.availability.messages}" var="message">
+                            ${message}
+                        </isloop>
+                        <isif condition="${lineItem.availability.inStockDate}">
+                            <div class="line-item-instock-date">
+                                ${lineItem.availability.inStockDate}
+                            </div>
+                        </isif>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                        <isinclude template="cart/productCard/cartRemoveProductCardLink" />
+                        <div class="bundle-edit">
+                            <a href="${URLUtils.url('Cart-GetProduct', 'uuid', lineItem.UUID)}" class="edit" title="${Resource.msg('link.edit.item','cart',null)}">${Resource.msg('link.edit.item','cart',null)}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <isinclude template="cart/productCard/cartProductCardProductPrice" />
+
+                <isif condition="${'prop65Warning' in lineItem && lineItem.prop65Warning}">
+                    <div class="prop65-item-msg"><isprint value="${pdict.itemProp65WarningMsg}" encoding="off" /></div>
+                </isif>
+            </div>
+        </div>
+
+    </div>
+</div>

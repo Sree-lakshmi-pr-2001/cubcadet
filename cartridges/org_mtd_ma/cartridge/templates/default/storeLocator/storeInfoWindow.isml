@@ -1,0 +1,5 @@
+<isset name="store" value="${pdict.store}" scope="page"/>
+<isset name="fullLines" value="${pdict.fullLines}" scope="page"/>
+<isset name="utvs" value="${pdict.utvs}" scope="page"/>
+<isset name="retailer_id" value="${pdict.retailer_id}" scope="page"/>
+<isinclude template="storeLocator/storeDetails" />

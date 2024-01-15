@@ -1,0 +1,40 @@
+<isdecorate template="common/layout/epcot">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/noChargeAudit.js');
+</isscript>
+    <div>
+        <h1>No Charge Orders Needing Approval</h1>
+        <table id='pagination' width='100%' class='customDataTable'>
+            <thead>
+                <tr class="">
+                    <td><b>Store</b></td>
+                    <td><b>Order Number</b></td>
+                    <td><b>Customer Name</b></td>
+                    <td><b>Order Date</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Phone Number</b></td>
+                    <td><b>City/State</b></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <isloop iterator="${pdict.noChargeOrders}" alias="order">
+                    <tr class="orderRow">
+                        <td id="store" class="store">${order.store}</td>
+                        <td id="orderNumber" class="orderNumber">${order.order_no}</td>
+                        <td id="customerName" class="customerName">${order.billing_address.full_name}</td>
+                        <td id="creationDate" class="creationDate">${order.creation_date}</td>
+                        <td id="exportStatus" class="exportStatus">${order.export_status}</td>
+                        <td id="phoneNumber" class="phoneNumber">${order.billing_address.phone}</td>
+                        <td id="cityState" class="cityState">${order.billing_address.city} / ${order.billing_address.state_code}</td>
+                        <td><button class="btn btn-primary checkout-button auditButton" onClick="window.location.replace('EpcotOrderConsumer-OrderView?commerceOrderNumber=${order.order_no}&audit=true');">Audit Order</button></td>
+                    </tr>
+                </isloop>
+            </tbody>
+        </table>
+    </div>    
+</isdecorate>
+<script>
+        document.getElementById('pageName').value = 'NoChargeAudit';
+</script>

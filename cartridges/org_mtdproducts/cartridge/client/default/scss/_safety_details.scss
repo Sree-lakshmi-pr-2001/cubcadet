@@ -1,0 +1,124 @@
+.safety-kids,
+.safety-fire,
+.safety-battery,
+.safety-walk-behind,
+.safety-snow-blowers,
+.safety-riding-mowers,
+.safety-handheld {
+    .btn {
+        background-color: $button-green;
+        border-color: $button-green;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .btn.btn-primary:active {
+        background-color: $button-green;
+        border-color: $button-green;
+    }
+
+    .safety-links {
+        .btn {
+            width: 223px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .current {
+            background-color: $button-grey;
+            border-color: $button-grey;
+        }
+
+        .current:active {
+            background-color: $button-grey;
+            border-color: $button-grey;
+        }
+    }
+
+    .safety-kids-link,
+    .safety-fire-link {
+        text-decoration: underline;
+    }
+
+    .content {
+        &.group {
+            h2 {
+                font-weight: bold;
+                font-size: 18px;
+                padding-bottom: 25px;
+            }
+
+            p {
+                margin-bottom: 25px;
+            }
+
+            ul {
+                margin-bottom: 50px;
+
+                .second {
+                    list-style-type: none;
+                    padding-left: 25px;
+                }
+
+                li {
+                    padding-bottom: 25px;
+                }
+            }
+
+            .grey {
+                background-color: #e6e7e8;
+
+                .row {
+                    width: 80%;
+                    margin: auto;
+                    padding-top: 25px;
+                }
+            }
+        }
+
+        &.one {
+            padding-top: 50px;
+            width: 80%;
+        }
+
+        &.three {
+            padding-top: 50px;
+            width: 80%;
+
+            .kids-mowers-card {
+                max-width: 300px;
+                margin: auto;
+
+                img {
+                    max-width: 100%;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .content {
+            &.group {
+                img {
+                    max-width: 425px;
+                }
+
+                .fire-symbols {
+                    max-width: 500px;
+                }
+
+                .snow-symbols,
+                .riding-symbols {
+                    max-width: 900px;
+                    padding-bottom: 50px;
+                }
+            }
+
+            &.two {
+                .cards {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

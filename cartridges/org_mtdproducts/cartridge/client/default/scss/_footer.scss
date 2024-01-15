@@ -1,0 +1,109 @@
+footer {
+    padding-top: 50px;
+
+    .footer-nav {
+        .footer-main-links {
+            padding-top: 25px;
+        }
+
+        background-color: #e6e7e8;
+
+        a,
+        .msg,
+        .footer-link {
+            font-size: 11px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.18;
+            letter-spacing: normal;
+            color: $button-grey;
+        }
+
+        .footer-link {
+            padding: 5px 15px;
+            text-transform: uppercase;
+        }
+
+        .msg {
+            padding: 10px;
+        }
+
+        .list-group-item {
+            background-color: #e6e7e8;
+        }
+
+        .linkedin {
+            margin: 10px 0;
+
+            img {
+                max-width: 80%;
+            }
+        }
+
+        .footer-main-links {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    .footer-util {
+        background-color: $button-grey;
+
+        a,
+        span {
+            font-size: 11px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.73;
+            letter-spacing: normal;
+            color: #fff;
+        }
+
+        .list-group-item {
+            background-color: $button-grey;
+        }
+
+        .list-inline-item {
+            padding: 0 20px;
+        }
+
+        img {
+            padding: 10px;
+        }
+    }
+
+    .row {
+        div {
+            color: white;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .footer-nav {
+            .footer-main-links {
+                padding-top: 0;
+            }
+
+            .footer-link {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .footer-util {
+            .list-inline {
+                margin: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .footer-main-links {
+            width: 95%;
+            margin: auto;
+        }
+    }
+}

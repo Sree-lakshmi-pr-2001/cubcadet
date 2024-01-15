@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EPCOT 2.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" crossorigin="anonymous"/>
+    <input type="hidden" id="pageName" value=""/>
+    <input type="hidden" id="hiddenSite" value= ${dw.system.Site.getCurrent().getID()} />
+    <input type="hidden" id="isCARBEnabled" name="isCARBEnabled" value="${dw.system.Site.getCurrent().getCustomPreferenceValue('isCARBEnabled')}">
+    <isif condition="${dw.system.Site.getCurrent().getCustomPreferenceValue('isCARBEnabled')}">
+        <isif condition="${pdict.carbObject.CARBProductRemoved}">
+          <input type="hidden" id="CARBProductRemoved" value= "${pdict.carbObject.CARBProductRemoved}" />
+        </isif>
+
+        <isif condition="${pdict.carbObject.shippingState}">
+          <input type="hidden" id="CARBshippingState" value= "${pdict.carbObject.shippingState}" />
+        </isif>
+
+      <isif condition="${pdict.carbObject.aletrnativeProductId}">
+        <input type="hidden" id="aletrnativeProductId" value= "${pdict.carbObject.aletrnativeProductId}" />
+      </isif>
+    </isif>
+    
+  <input type="hidden" id="CARBItemInCart" value="" />
+
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/epcot.css');
+        assets.addJs('/js/spinner.js');
+        <iscomment> assets.addCss('/js/epcot.js');
+        assets.addJs('/js/checkout.js'); </iscomment>
+    </isscript>
+
+  <!-- custom css-->
+    <isloop items="${ require('*/cartridge/scripts/assets.js').styles }" var="style">
+        <link rel="stylesheet" href="${style}" />
+    </isloop>
+  </head>
+  <body>
+    <!-- header-->
+    <isinclude template="/common/layout/epcot_header" />
+    <div class="container">
+      <isreplace/>
+    </div>
+
+    <isinclude template="/common/layout/epcot_footer" />
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <iscomment> <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js" crossorigin="anonymous"></script> </iscomment>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <isloop items="${ require('*/cartridge/scripts/assets.js').scripts }" var="script">
+        <script type="text/javascript" src="${script}"></script>
+    </isloop>
+  </body>
+</html>

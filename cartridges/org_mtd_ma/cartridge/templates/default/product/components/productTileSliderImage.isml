@@ -1,0 +1,25 @@
+<div class="image-container">
+    <a href="${pdict.urls.product}">
+        <picture>
+            <iscomment>
+                Custom image template for Slider image hadnling; slider tiles are unique to grid tiles
+                Image slider-tile-desktop - XL Desktop - Product Tiles 4-up
+                Image slider-tile-mobile - SM mobile 2-up
+            </iscomment>
+           <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(min-width: 768px)" srcset="${product.images['slider-tile-desktop'][0].url}" />
+            <source media="(max-width: 767px)" srcset="${product.images['slider-tile-mobile'][0].url}" />
+            <!--[if IE 9]></video><![endif]-->
+            <img class="tile-image"
+                 src="${product.images['slider-tile-mobile'][0].url}"
+                 alt="${product.productName}"
+                 title="${product.images['slider-tile-mobile'][0].title}"
+            />
+        </picture>
+    </a>
+    <isif condition="${pdict.display.showQuickView !== false}">
+        <a class="quickview btn btn-secondary hidden-sm-down" href="${pdict.urls.quickView}" title="${Resource.msg('button.quickview', 'common', null)}">
+            ${Resource.msg('button.quickview', 'common', null)}
+        </a>
+    </isif>
+</div>

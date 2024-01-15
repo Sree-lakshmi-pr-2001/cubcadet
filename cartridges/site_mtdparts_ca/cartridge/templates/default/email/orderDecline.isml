@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<isscript>
+    var URLUtils = require('dw/web/URLUtils');
+</isscript>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x-apple-disable-message-reformatting">
+</head>
+
+<body>
+  <table style="max-width: 640px" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tbody>
+              <tr>
+                <td>
+                  <table style="background-color: rgba(255, 255, 255, 1)" cellspacing="0" cellpadding="0"
+                    bgcolor="#ffffff" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="center" valign="top">
+                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                              <tr>
+
+                                <td style="">
+
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>
+                                                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td align="center"><img
+                                                                            src="http://image.mktgmtdcanada.ca/lib/fe5a15707c620c7e7011/m/1/c7112498-80b5-44b9-9d2b-bb7676945afa.png"
+                                                                            alt="" width="640"
+                                                                            style="display: block; padding: 0; text-align: center; border: 0 solid rgba(0, 0, 0, 0); height: auto; width: 100%">
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>
+                                                                  <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="max-width: 600px"
+                                                                    width="100%">
+
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td align="center" style="padding: 0 0 10px"
+                                                                          valign="top" width="100%">
+                                                                          <table align="center" border="0"
+                                                                            cellpadding="0" cellspacing="0"
+                                                                            style="max-width: 570px" width="100%">
+
+                                                                            <tbody>
+                                                                              <tr>
+                                                                                <td align="center" style="padding: 0"
+                                                                                  valign="top">
+                                                                                  <div
+                                                                                    style="display: inline-block; margin: 0 -2px; width: 100%; vertical-align: top; max-width: 570px">
+                                                                                    <table border="0" cellpadding="0"
+                                                                                      cellspacing="0" width="100%">
+
+                                                                                      <tbody>
+                                                                                        <tr>
+                                                                                          <td style="padding: 10px">
+                                                                                            <table border="0"
+                                                                                              cellpadding="0"
+                                                                                              cellspacing="0"
+                                                                                              width="100%">
+
+                                                                                              <tbody>
+                                                                                                <tr>
+                                                                                                  <td>
+                                                                                                    <div
+                                                                                                      style="margin: 20px 0 0">
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                      style="font-family: Helvetica, Arial, sans-serif; color: rgba(51, 51, 51, 1); text-align: left; margin: 18px 0 0; font-weight: 700; font-size: 28px; line-height: 32px; text-transform: uppercase; padding-bottom: 0">
+                                                                                                      ${Resource.msgf('email.msg.order.decline.notprocess', 'email', null, pdict.orderNo)}
+                                                                                                    </div>
+                                                                                                    <p
+                                                                                                      style="font-family: Helvetica, Arial, sans-serif; color: rgba(54, 54, 54, 1) !important; text-align: left; margin: 0; padding: 0; font-weight: 400; font-size: 17px; line-height: 24px">
+                                                                                                      <br>
+                                                                                                      ${Resource.msgf('email.msg.order.decline.fullname', 'email', null, pdict.customerFirstName)}<br>
+                                                                                                      <br>
+                                                                                                      ${Resource.msgf('email.msg.order.decline.frenchmsg', 'email', null)}<br>
+                                                                                                      <br>
+                                                                                                      ${Resource.msgf('email.msg.order.decline.frenchmsgone', 'email', null)}
+                                                                                                    </p>
+                                                                                                  </td>
+                                                                                                </tr>
+                                                                                              </tbody>
+                                                                                            </table>
+                                                                                          </td>
+                                                                                        </tr>
+                                                                                      </tbody>
+                                                                                    </table>
+                                                                                  </div>
+                                                                                </td>
+                                                                              </tr>
+                                                                            </tbody>
+                                                                          </table>
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 20px 20px 0">
+                                                                  <div style="text-align: center">
+                                                                    <b>${Resource.msgf('email.msg.order.decline.frenchhelp', 'email', null)}</b></div>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 14px 20px 20px">
+                                                                  <table width="100%" border="0" cellspacing="0"
+                                                                    cellpadding="0">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td align="center">
+                                                                          <table border="0" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                              <tr>
+                                                                                <td bgcolor="#199422"
+                                                                                  style="border-radius: 0; background-color: #199422">
+                                                                                  <a href="${pdict.homePageUrl}"
+                                                                                    style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #000000; text-align: center; text-decoration: none; display: block; background-color: #199422; border: 0 solid rgba(0, 157, 220, 1); padding: 14px 20px 14px 30px; border-radius: 0"
+                                                                                    title="">Customer Support</a></td>
+                                                                              </tr>
+                                                                            </tbody>
+                                                                          </table>
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 20px 40px">
+                                                                  <div style="text-align: center">
+                                                                    <span
+                                                                      style="font-size: 16px"><b>${Resource.msgf('email.msg.order.decline.frenchphone', 'email', null)}</b></span><br>
+                                                                    <span
+                                                                      style="font-size: 14px; line-height: 42px">${Resource.msgf('email.msg.order.decline.frenchaddress', 'email', null)}</span></div>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>
+                                                                  <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="max-width: 600px"
+                                                                    width="100%">
+
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td align="center" style="padding: 0 0 10px"
+                                                                          valign="top" width="100%">
+                                                                          <table align="center" border="0"
+                                                                            cellpadding="0" cellspacing="0"
+                                                                            style="max-width: 570px" width="100%">
+
+                                                                            <tbody>
+                                                                              <tr>
+                                                                                <td align="center" style="padding: 0"
+                                                                                  valign="top">
+                                                                                  <div
+                                                                                    style="display: inline-block; margin: 0 -2px; width: 100%; vertical-align: top; max-width: 570px">
+                                                                                    <table border="0" cellpadding="0"
+                                                                                      cellspacing="0" width="100%">
+
+                                                                                      <tbody>
+                                                                                        <tr>
+                                                                                          <td style="padding: 10px">
+                                                                                            <table border="0"
+                                                                                              cellpadding="0"
+                                                                                              cellspacing="0"
+                                                                                              width="100%">
+
+                                                                                              <tbody>
+                                                                                                <tr>
+                                                                                                  <td>
+                                                                                                    <div
+                                                                                                      style="margin: 20px 0 0">
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                      style="font-family: Helvetica, Arial, sans-serif; color: rgba(51, 51, 51, 1); text-align: left; margin: 18px 0 0; font-weight: 700; font-size: 28px; line-height: 32px; text-transform: uppercase; padding-bottom: 0">
+                                                                                                      ${Resource.msgf('email.msg.order.decline.notprocess', 'email', null, pdict.orderNo)}
+                                                                                                    </div>
+                                                                                                    <p
+                                                                                                      style="font-family: Helvetica, Arial, sans-serif; color: rgba(54, 54, 54, 1) !important; text-align: left; margin: 0; padding: 0; font-weight: 400; font-size: 17px; line-height: 24px">
+                                                                                                      <br>
+                                                                                                      ${Resource.msgf('email.msg.order.decline.fullname', 'email', null, pdict.customerFirstName)}<br>
+                                                                                                      <br>
+                                                                                                      ${Resource.msgf('email.msg.order.decline.contentone', 'email', null)}<br>
+                                                                                                      <br>
+                                                                                                      ${Resource.msgf('email.msg.order.decline.contentsecond', 'email', null)}
+                                                                                                    </p>
+                                                                                                  </td>
+                                                                                                </tr>
+                                                                                              </tbody>
+                                                                                            </table>
+                                                                                          </td>
+                                                                                        </tr>
+                                                                                      </tbody>
+                                                                                    </table>
+                                                                                  </div>
+                                                                                </td>
+                                                                              </tr>
+                                                                            </tbody>
+                                                                          </table>
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 20px 20px 0">
+                                                                  <div style="text-align: center">
+                                                                    <b>${Resource.msgf('email.msg.order.decline.helptext', 'email', null)}</b></div>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 14px 20px 20px">
+                                                                  <table width="100%" border="0" cellspacing="0"
+                                                                    cellpadding="0">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td align="center">
+                                                                          <table border="0" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                              <tr>
+                                                                                <td bgcolor="#199422"
+                                                                                  style="border-radius: 0; background-color: #199422">
+                                                                                  <a href="${pdict.homePageUrl}"
+                                                                                    style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #000000; text-align: center; text-decoration: none; display: block; background-color: #199422; border: 0 solid rgba(0, 157, 220, 1); padding: 14px 20px 14px 30px; border-radius: 0"
+                                                                                    title="">Customer Support</a></td>
+                                                                              </tr>
+                                                                            </tbody>
+                                                                          </table>
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 20px 40px">
+                                                                  <div style="text-align: center">
+                                                                    <span
+                                                                      style="font-size: 16px"><b>${Resource.msgf('email.msg.order.decline.phone', 'email', null)}</b></span><br>
+                                                                    <span
+                                                                      style="font-size: 14px; line-height: 42px">${Resource.msgf('email.msg.order.decline.timing', 'email', null)}</span></div>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+
+                                        <td align="center" valign="top">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="left" valign="top">
+                                                  <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td valign="top" style="width: 100%">
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 0">
+                                                                  <div style="display: none">
+                                                                  </div>
+                                                                  <div style="margin-left: 40px">
+                                                                    <span style="font-size: 9px"><span
+                                                                        style="font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.order.decline.noreply', 'email', null)} <a
+                                                                          href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f88637a2223112157513da7e26ba9e42b691ce513686edb6383f8f85d55eb547ddf5152e04383f8bbc5a10ed63596f8d358b"
+                                                                          style="color: #000000; text-decoration: underline"
+                                                                          title="send a message">click here</a>
+                                                                        ${Resource.msg('email.msg.order.decline.phoneone', 'email', null)} <a href="tel:8006681238"
+                                                                          title="Call 1-800-668-1238">1-800-668-1238</a>.<br>
+                                                                        &nbsp;<br>
+                                                                        ${Resource.msgf('email.msg.order.decline.norepling', 'email', null)}&nbsp;${pdict.customerEmail}${Resource.msgf('email.msg.order.decline.noreplingone', 'email', null)}<br>
+                                                                        <br>
+                                                                        ${Resource.msg('email.msg.order.decline.copyright', 'email', null)}<br>
+                                                                        <br>
+                                                                        ${Resource.msg('email.msg.order.decline.right', 'email', null)} <a
+                                                                          href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f88666fabc883e2eaa47668d1cbd0f01dd0d1b39ea8930f20c8951d2ba0501ce1cc344a3e949db36bf6f346fa5d3d5043a9f"
+                                                                          style="color: #000000; text-decoration: underline"
+                                                                          target="_blank" title="Privacy Policy"><span
+                                                                            style="color: #000000">PRIVACY</span></a><span
+                                                                          style="color: #000000"> | </span><a
+                                                                          href="'https://www.mtdparts.ca/account"
+                                                                          style="color: #000000; text-decoration: underline"
+                                                                          target="_blank" title="View My Account"><span
+                                                                            style="color: #000000">MY
+                                                                            ACCOUNT</span></a><span
+                                                                          style="color: #000000"> | </span><a
+                                                                          href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f886f341cc601a5b08283869e8d5c085073a841e15eb52ada5f67bc74604bebf660c33b59d5d5219cd82e9db822d19043aee"
+                                                                          style="color: #000000; text-decoration: underline"
+                                                                          target="_blank"
+                                                                          title="Visit www.mtdparts.ca"><span
+                                                                            style="color: #000000">MTDPARTS.CA
+                                                                          </span></a>
+                                                                        <span style="color: #000000"> |
+                                                                        </span><a
+                                                                          href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f88632c73536dd3a1b6dcb01a046e74f414076c506ac99e2f0827bad311c693404a44071c614ec4e8e5f12f5897f2c036a58"
+                                                                          style="color: #000000; text-decoration: underline"
+                                                                          target="_blank" title="unsubscribe"><span
+                                                                            style="color: #000000">CONTACT</span></a></span></span>
+                                                                  </div>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+                                                            style="background-color: #EFEFEF; min-width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td style="padding: 20px 40px">
+                                                                  <table align="left" border="0" cellpadding="0"
+                                                                    cellspacing="0" style="width: 180px">
+
+                                                                  </table>
+
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+                                                <td align="center" valign="top">
+                                                  <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                                    width="100%">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td align="left" valign="top">
+                                                          <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td valign="top" style="width: 100%">
+                                                                  <table cellpadding="0" cellspacing="0" width="100%"
+                                                                    style="background-color: #EFEFEF; min-width: 100%">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td style="padding: 20px 40px">
+                                                                          <table align="left" border="0" cellpadding="0"
+                                                                            cellspacing="0" style="width: 180px">
+
+                                                                            <tbody>
+                                                                              <tr>
+                                                                                <td>
+                                                                                  <b style="font-size: 11px"><span
+                                                                                      style="font-family: arial, helvetica, sans-serif">CONNECT:&nbsp;</span>
+                                                                                  </b></td>
+                                                                                <td>
+                                                                                  <a href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f88610e1b2b750dd66a2d9fca766b4c59262a3ac278ebab143d37f5c2df87cf1fe15b3de4dc801ffef139b6c534ed9a47fa5"
+                                                                                    title="Facebook"><img alt="Facebook"
+                                                                                      height="25"
+                                                                                      src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/42db170c-9eeb-4e6e-8ebb-fb1884a4feb8.png"
+                                                                                      style="padding: 0; text-align: center; height: 25px; width: 25px; border: 0"
+                                                                                      width="25"></a></td>
+                                                                                <td>
+                                                                                  <a href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f886c4e0486be4342d074527ca6b3f6c5bff3f2b2892c5f9a8ebe6846891b5ea95e94f93f01f2400b1ad49cf2b53973e62a7"
+                                                                                    title="Twitter"><img alt="Twitter"
+                                                                                      height="25"
+                                                                                      src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/40cbb412-f370-42d4-9235-c746b9bdda39.png"
+                                                                                      style="padding: 0; text-align: center; height: 25px; width: 25px; border: 0"
+                                                                                      width="25"></a></td>
+                                                                                <td>
+                                                                                  <a href="http://click.mktgmtdcanada.ca/?qs=a2272372bb69f88626dc90f4c3e3f30bbdea4d8738f929cb9d7ee8ab0e8c2d3c1f93db37143b6ff9f3016676314c41975e9d73c089fc2aca"
+                                                                                    title="YouTube"><img alt="YouTube"
+                                                                                      height="25"
+                                                                                      src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/e949fba4-f396-4aa2-b8a2-8174bb50514b.png"
+                                                                                      style="padding: 0; text-align: center; height: 25px; width: 25px; border: 0"
+                                                                                      width="25"></a></td>
+                                                                              </tr>
+                                                                            </tbody>
+                                                                          </table>
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+</body>
+
+</html>

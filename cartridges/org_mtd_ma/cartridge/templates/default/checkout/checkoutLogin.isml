@@ -1,0 +1,47 @@
+<isdecorate template="common/layout/checkout">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/checkout/checkoutLogin.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <h1 class="page-title condensed-header-title">
+        ${Resource.msg('header.hero.image.login', 'login', null)}
+    </h1>
+    <div class="container checkout-login-page">
+        <iscomment>REMOVED: Cart Summary</iscomment>
+        <div class="justify-content-center">
+            <div class="card col-md-6">
+                <div class="card-header">
+                    <h6>${Resource.msg('heading.guest.checkout', 'checkout', null)}</h6>
+                </div>
+                <div class="card-body">
+                    <p>
+                        ${Resource.msg('msg.guest.checkout1', 'checkout', null)}
+                        ${Resource.msg('msg.guest.checkout2', 'checkout', null)}
+                    </p>
+                    <a
+                        href="${URLUtils.https('Checkout-Begin')}"
+                        class="btn btn-block btn-secondary checkout-as-guest">
+                        ${Resource.msg('button.checkout.as.guest', 'checkout', null)}
+                    </a>
+                </div>
+            </div>
+            <div class="card col-md-6">
+                <div class="card-header">
+                    <h6>${Resource.msg('heading.returning.customers', 'checkout', null)}</h6>
+                </div>
+                <div class="card-body">
+                    <isinclude template="account/components/loginForm" />
+                    <isinclude template="account/components/oauth" />
+                    <isinclude template="account/password/requestPasswordResetModal"/>
+                </div>
+            </div>
+            <iscomment>REMOVED: create account</iscomment>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,6 @@
+<isif condition="${isProductSet}">
+    <isset name="product" value="${productItem}" scope="page" />
+<iselse>
+    <isset name="product" value="${pdict.product}" scope="page" />
+</isif>
+<isinclude template="product/components/specification" />

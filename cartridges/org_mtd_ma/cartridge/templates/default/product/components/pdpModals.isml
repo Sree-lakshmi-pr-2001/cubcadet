@@ -1,0 +1,37 @@
+<isinclude template="components/modules" />
+
+<isset name="videoLink" value="${product.videoLink}" scope="page" />
+
+<iscomment> Commenting the video modal part as it is moved to carousel section below the product image.
+<div class="row">
+    <div class="col-7 col-sm-8 col-md-7">
+        This section is for Phase 2 - Email and Print Links
+    </div>
+    <isif condition="${videoLink.length > 0 && !isQuickView}">
+        <div class="col-5 col-sm-4 col-md-5 pdp-modal-video">
+            <button
+                type="button"
+                class="btn btn-video-black-ol icon-left modal-link video-modal"
+                enable-title="false"
+                xl-modal="true"
+                data-embedvideo="${videoLink}"
+                data-content="#pdpVideo"
+                data-link="${URLUtils.url('Page-Show','cid','pdp-video-container')}">
+                ${Resource.msg('button.watchvideo', 'product', null)}
+            </button>
+        </div>
+        TODO: Move this <hr/> to be outside of the conditional for Phase 2, since the Email & Print links will always be displayed.
+        <div class="col-12">
+            <hr/>
+        </div>
+    </isif>
+</div>
+</iscomment>
+
+<isif condition="${!isQuickView && !isBundleItem}">
+    <div class="row">
+        <div class="col-12 pdp-modal-content">
+            <iscontentasset aid="pdp-modals-content" />
+        </div>
+    </div>
+</isif>

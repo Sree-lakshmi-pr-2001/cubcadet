@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="pepperjamClickIdParamName">
+                <display-name xml:lang="x-default">Pepperjam Click ID Parameter Name</display-name>
+                <description xml:lang="x-default">For example, clickId, source, etc.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>clickId</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="pepperjamCookieMaxDays">
+                <display-name xml:lang="x-default">Pepperjam Cookie Max Days</display-name>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>60</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="pepperjamEnabled">
+                <display-name xml:lang="x-default">Pepperjam Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="pepperjamJSUrl">
+                <display-name xml:lang="x-default">Pepperjam JS Pixel Tracking URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://t.pepperjamnetwork.com/track</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="pepperjamProgramId">
+                <display-name xml:lang="x-default">Pepperjam Program ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>9384</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Pepperjam">
+                <display-name xml:lang="x-default">Pepperjam</display-name>
+                <attribute attribute-id="pepperjamEnabled"/>
+                <attribute attribute-id="pepperjamJSUrl"/>
+                <attribute attribute-id="pepperjamProgramId"/>
+                <attribute attribute-id="pepperjamClickIdParamName"/>
+                <attribute attribute-id="pepperjamCookieMaxDays"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

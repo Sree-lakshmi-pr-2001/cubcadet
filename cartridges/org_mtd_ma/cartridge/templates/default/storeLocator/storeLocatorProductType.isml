@@ -1,0 +1,13 @@
+<label for="productType">${Resource.msg('field.product.type','storeLocator',null)}</label>
+<div class="select-wrapper">
+    <select required class="form-control custom-select productType" id="productType" name="productType"
+        data-action-url="${pdict.stores.actionUrl}"
+        data-missing-error="${Resource.msg('error.message.required', 'login', null)}">
+        <option value="">${Resource.msg('field.select','storeLocator',null)}</option>
+        <isloop items="${pdict.productTypes}" var="option" status="loopstate">
+            <option value="${option.value}">${option.displayValue}</option>
+        </isloop>
+    </select>
+    <span class="selector"></span>
+</div>
+<div class="invalid-feedback"></div>

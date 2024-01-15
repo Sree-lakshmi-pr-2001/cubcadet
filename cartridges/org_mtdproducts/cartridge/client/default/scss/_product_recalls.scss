@@ -1,0 +1,107 @@
+.product-recalls,
+.product-recalls-archive,
+.archive-news {
+    .content {
+        .btn {
+            width: 200px;
+            background-color: $button-green;
+            border-color: $button-green;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .btn:active {
+            background-color: $button-green;
+            border-color: $button-green;
+        }
+
+        &.one {
+            padding-top: 50px;
+            width: 80%;
+            text-align: center;
+
+            h2 {
+                font-weight: bold;
+                font-size: 27px;
+                padding-bottom: 15px;
+            }
+
+            .recalls {
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                a {
+                    color: $button-grey;
+                }
+
+                .recall {
+                    padding-bottom: 20px;
+
+                    .title {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .articles {
+                padding-top: 50px;
+
+                .article {
+                    padding-bottom: 10px;
+
+                    .title {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+
+                    .date {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .label,
+            .historical {
+                font-weight: bold;
+
+                a {
+                    color: $button-grey;
+                }
+            }
+
+            .historical {
+                padding-bottom: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .content {
+            &.one {
+                text-align: left;
+
+                .recalls {
+                    text-align: left;
+                    padding-top: 0;
+                }
+
+                .label,
+                .historical {
+                    text-align: left;
+                }
+
+                .articles {
+                    padding-top: 0;
+
+                    .article {
+                        .title,
+                        .date {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

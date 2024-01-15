@@ -1,0 +1,1581 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/styleGuide.js');
+        assets.addCss('/css/styleGuide.css');
+    </isscript>
+    <isinclude template="components/modules" />
+
+    <div class="sg-sidenav-icon"><i class="fa fa-bars fa-lg"></i></div>
+
+    <ul class="sg-sidenav">
+        <li class="section-nav">Color Theme & Palette</li>
+        <li class="list-link">
+            <a href="#brand-colors">Brand Colors</a>
+        </li>
+        <li class="list-link">
+            <a href="#ui-colors">UI Colors</a>
+        </li>
+        <li class="list-link">
+            <a href="#grays">Grays</a>
+        </li>
+        <li class="list-link">
+            <a href="#accent-colors">Accent Colors</a>
+        </li>
+
+        <li class="section-nav">Styles</li>
+        <li class="list-link">
+            <a href="#borders-dividers">Borders & Dividers</a>
+        </li>
+        <li class="list-link">
+            <a href="#shadows">Shadows</a>
+        </li>
+
+        <li class="section-nav">Typography</li>
+        <li class="list-link">
+            <a href="#fonts">Fonts</a>
+        </li>
+        <li class="list-link">
+            <a href="#displays">Displays</a>
+        </li>
+        <li class="list-link">
+            <a href="#headings">Headings</a>
+        </li>
+        <li class="list-link">
+            <a href="#labels">Labels</a>
+        </li>
+        <li class="list-link">
+            <a href="#body">Body</a>
+        </li>
+        <li class="list-link">
+            <a href="#links">Links</a>
+        </li>
+
+        <li class="list-link section-nav">
+            <a href="#buttons">Buttons</a>
+        </li>
+
+        <li class="list-link section-nav">
+            <a href="#forms">Forms</a>
+        </li>
+
+        <li class="section-nav">Messages</li>
+        <li class="list-link">
+            <a href="#alerts">Alerts</a>
+        </li>
+        <li class="list-link">
+            <a href="#modals">Modals</a>
+        </li>
+        <li class="list-link">
+            <a href="#tooltips">Tooltips</a>
+        </li>
+
+        <li class="section-nav">Iconography</li>
+        <li class="list-link">
+            <a href="#logos">Logos</a>
+        </li>
+        <li class="list-link">
+            <a href="#utilityIcons">Utility Icons</a>
+        </li>
+        <li class="list-link">
+            <a href="#socialIcons">Social Icons</a>
+        </li>
+
+
+        <li class="section-nav">Grids & Spacing</li>
+        <li class="list-link">
+            <a href="#grids">Grids</a>
+        </li>
+        <li class="list-link">
+            <a href="#spacing">Spacing</a>
+        </li>
+
+        <li class="section-nav">Components</li>
+        <li class="list-link">
+            <a href="#product-tiles">Product Tiles</a>
+        </li>
+        <li class="list-link">
+            <a href="#cards">Cards</a>
+        </li>
+        <li class="list-link">
+            <a href="#accordions">Accordions</a>
+        </li>
+        <li class="list-link">
+            <a href="#tabs">Tabs</a>
+        </li>
+        <li class="list-link">
+            <a href="#progress-indicator">Progress Indicator</a>
+        </li>
+        <li class="list-link">
+            <a href="#tables">Tables</a>
+        </li>
+        <li class="list-link">
+            <a href="#breadcrumbs">Breadcrumbs</a>
+        </li>
+        <li class="list-link">
+            <a href="#content-switcher">Content Switcher</a>
+        </li>
+        <li class="list-link">
+            <a href="#lists">Lists</a>
+        </li>
+        <li class="list-link">
+            <a href="#loader">Loader</a>
+        </li>
+
+        <li class="section-nav">Motions</li>
+        <li class="list-link">
+            <a href="#card-hover-animation">Card Hover Animation</a>
+        </li>
+        <li class="list-link">
+            <a href="#button-hover-animation">Button Hover Animation</a>
+        </li>
+    </ul>
+
+    <div class="wrapper">
+        <h1>MTD Parts Style Guide</h1>
+
+        <h3 class="section">Color Theme & Palette</h3>
+        <p>Link: <a href="http://getbootstrap.com/docs/4.0/getting-started/theming/">http://getbootstrap.com/docs/4.0/getting-started/theming/</a>
+        </p>
+        <p>
+            <span class="text-primary">Note:</span> Bolded values indicate the theme name
+        </p>
+        <p>
+            <span class="text-primary">Usage:</span> Primary brand, interactive text, primary icon color, border
+            highlight
+        </p>
+
+        <h4 class="sub-section" id="brand-colors">Brand Colors</h4>
+        <div class="flex-container color brand-colors">
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $brand-main</span><br /> $mtd-green</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Primary Brand</li>
+                        <li>Interactive text </li>
+                        <li>Primary icon color </li>
+                        <li>Order Summary Dividers</li>
+                        <li>Icon Button</li>
+                        <li>Secondary Button Outline</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $brand-second</span><br /> $mtd-gray</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Page Headers</li>
+                        <li>Body Type</li>
+                        <li>Focus Outline</li>
+                        <li>Primary icon color</li>
+                        <li>Border highlight</li>
+                        <li>Button Hover</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $brand-light</span><br /> $mtd-lt-gray</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Form Outline</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $brand-dark</span><br /> $mtd-dk-green</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Hover over Button</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="ui-colors">UI Colors</h4>
+        <div class="flex-container color ui-colors">
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $primary</span><br /> $mtd-green</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Check mark and Radio Buttons</li>
+                        <li>Active Links</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $secondary</span><br /> $mtd-gray</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Page Headers</li>
+                        <li>Body Type</li>
+                        <li>Focus Outline</li>
+                        <li>Primary icon color </li>
+                        <li>Border highlight</li>
+                        <li>Button Hover</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $dark</span><br /> $mtd-dk-green</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Hover over Button</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $light</span><br /> $mtd-lt-gray</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Form Outline</li>
+                        <li>Gray Buttons</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $success</span><br /> $ui-green</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Success State</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $info</span><br /> $ui-blue</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Info Message</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $warning</span><br /> $ui-yellow</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Warning Message</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $danger</span><br /> $ui-red</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Error Message</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="grays">Grays</h4>
+        <div class="flex-container color gray-colors">
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$black</code>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$gray-900, $gray-800</code>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$gray-700, $gray-600</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Tabs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$gray-500, $gray-400</code>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$gray-300, $gray-200</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Dividers</li>
+                        <li>Product Tile Outline</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$gray-100</code>
+                <div class="spec">
+                    <strong>Usage:</strong>
+                    <ul>
+                        <li>Modal Footer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var">$white</code>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="accent-colors">Accent Colors</h4>
+        <div class="flex-container color accent-colors">
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $accent-1</span><br /> $ui-orange</code>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $accent-2</span><br /> $ui-yellow</code>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $accent-3</span><br /> $ui-dk-blue</code>
+            </div>
+            <div class="item">
+                <div class="color-block"></div>
+                <code class="color-var"><span>Theme color: $accent-4</span><br /> $ui-green</code>
+            </div>
+        </div>
+
+        <h3 class="section">Styles</h3>
+        <h4 class="sub-section" id="borders-dividers">Borders & Dividers</h4>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/utilities/borders/">https://getbootstrap.com/docs/4.0/utilities/borders/</a>
+        </p>
+
+        <div class="flex-container sg-divider">
+            <div class="item">
+                <hr/>
+                <code><span></span> &lt;hr&sol;&gt;</code>
+                <div class="spec">Usage:</div>
+            </div>
+        </div>
+
+        <div class="flex-container sg-borders">
+            <div class="item">
+                <div class="border-block"></div>
+                <code><span>$border</span> / .border-light</code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="border-block"></div>
+                <code><span>$border-thick</span></code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="border-block"></div>
+                <code><span>$border-2</span> / .border-success</code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="border-block"></div>
+                <code><span>$border-3</span> / .border-warning</code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="border-block"></div>
+                <code><span>$border-4</span> / .border-danger</code>
+                <div class="spec">Usage:</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="shadows">Shadows</h4>
+        <div class="flex-container sg-shadows">
+            <div class="item">
+                <div class="shadow-block"></div>
+                <code>$shadow</code>
+                <div class="spec">Usage:</div>
+            </div>
+        </div>
+
+        <!-- TODO Note: In the below sections I am using the bootstrap flex utility classes instead of applying in the SASS -->
+        <h3 class="section">Typography</h3>
+        <h4 class="sub-section" id="fonts">Fonts</h4>
+
+        <div class="sg-type">
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div class="h3 font-light">Source Sans Pro Light</div>
+                <code>$font-family-base</code>
+                <div class="spec">Usage: Brand Light</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div class="h3 font-regular">Source Sans Pro Regular</div>
+                <code>$font-family-base</code>
+                <div class="spec">Usage: Brand Regular</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div class="h3 font-bold">Source Sans Pro Bold</div>
+                <code>$font-family-base</code>
+                <div class="spec">Usage: Brand Bold</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div class="h3 system-fallback-font">Arial</div>
+                <code>$font-family-second</code>
+                <div class="spec">Usage: Fallback system font for Google fonts</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="displays">Displays</h4>
+        <div class="sg-type">
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <span class="display-1">Hero XL</span>
+                    <div class="small">Size: 56px / 3.5rem</div>
+                </div>
+                <code>.display-1</code>
+                <div class="spec">Usage: Type on Hero Image</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <span class="display-2">Hero Sm</span>
+                    <div class="small">Size: 48px / 3rem</div>
+                </div>
+                <code>.display-2</code>
+                <div class="spec">Usage: Type on Hero Image</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="headings">Headings</h4>
+        <div class="sg-type">
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <h1>H1: Page Title XL</h1>
+                    <div class="small">Size: 40px / 2.5rem</div>
+                </div>
+                <code>.h1 </code>
+                <div class="spec">Usage: Page Header</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <h2>H2: Page Title XS</h2>
+                    <div class="small">Size: 36px / 2.25rem</div>
+                </div>
+                <code>.h2</code>
+                <div class="spec">Usage: Page Header</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <h3>H3: Section Title</h3>
+                    <div class="small">Size: 30px / 2.5rem</div>
+                </div>
+                <code>.h3</code>
+                <div class="spec">Usage: Section Headers</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <h4>H4: Subsection Title</h4>
+                    <div class="small">Size: 22px / 2.5rem</div>
+                </div>
+                <code>.h4</code>
+                <div class="spec">Usage: Smaller type on hero image</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="labels">Labels</h4>
+        <div class="sg-type">
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <label class="label-xl">Label 1</label>
+                    <div class="small">Size: 16px / 1rem</div>
+                </div>
+                <code>.label-xl / $label-xl </code>
+                <div class="spec">Usage: Desktop and Mobile Section Description</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <label class="label-sm">Label 2</label>
+                    <div class="small">Size: 14px / 0.875rem</div>
+                </div>
+                <code>.label-sm / $label-sm </code>
+                <div class="spec">Usage: Selector Category, Main Footer links</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <label class="label-xs">Label 3</label>
+                    <div class="small">Size: 12px / 0.75rem</div>
+                </div>
+                <code>.label-xs / $label-xs </code>
+                <div class="spec">Usage: Breadcrumbs</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="body">Body</h4>
+        <div class="sg-type">
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <p>Paragraph</p>
+                    <div class="small">Size: 14px / 0.875rem</div>
+                </div>
+                <code>p</code>
+                <div class="spec">Usage: Body Text, Search results, Secondary Footer Links</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <p class="font-weight-bold">Paragraph Bold</p>
+                    <div class="small">Size: 14px / 0.875rem</div>
+                </div>
+                <code>p.font-weight-bold </code>
+                <div class="spec">Usage: Body Text, Form Label, Category Title</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="links">Links</h4>
+        <div class="sg-type">
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <a href="" class="main-nav">Main Navigation</a>
+                    <div class="small mt-1">Size: 14px / 0.875rem</div>
+                </div>
+                <code>.main-nav </code>
+                <div class="spec">Usage: Footer, Header Main links</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <a href="" class="link-primary">Primary Link</a>
+                    <div class="small mt-1">Size: 14px / 0.875rem</div>
+                </div>
+                <code>.link-primary </code>
+                <div class="spec">Usage: Use paragraph bold style, stand alone links, link lists, footer links</div>
+            </div>
+            <div class="item d-md-flex justify-content-start flex-wrap">
+                <div>
+                    <a href="" class="link-secondary">Secondary Link</a>
+                    <div class="small mt-1">Size: 12px / 0.75rem</div>
+                </div>
+                <code>.link-secondary</code>
+                <div class="spec">Usage: Tertiary Links</div>
+            </div>
+        </div>
+
+        <h3 class="section" id="buttons">Buttons</h3>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/buttons/">https://getbootstrap.com/docs/4.0/components/buttons/</a>
+        </p>
+
+        <div class="sg-buttons">
+            <div class="item">
+                <button class="btn btn-primary">Button Primary</button>
+                <button class="btn btn-primary" disabled>Button Primary Disabled</button>
+                <code>.btn-primary</code>
+                <div class="spec">Usage: CTA button for all primary actions</div>
+            </div>
+            <div class="item">
+                <button class="btn btn-outline-primary">Button Outline Primary</button>
+                <button class="btn btn-outline-primary" disabled>Button Outline Primary Disabled</button>
+                <code>.btn-outline-primary</code>
+                <div class="spec">Usage: CTA button for all secondary actions, use next to Main Buttons to establish
+                    hierarchies between the two</div>
+            </div>
+            <div class="item">
+                <button class="btn btn-secondary">Button Secondary</button>
+                <button class="btn btn-secondary" disabled>Button Secondary Disabled</button>
+                <code>.btn-secondary</code>
+                <div class="spec">Usage: CTA button for all tertiary actions, use for standalone action, establish
+                    hierarchy on pages with multiple CTAs</div>
+            </div>
+            <div class="item">
+                <button class="btn btn-primary">Button Icon <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary" disabled>Button Icon Disabled <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <code>.btn-primary</code>
+                <div class="spec">Usage: Alternate CTA button for primary actions</div>
+            </div>
+            <div class="item">
+                <button class="btn btn-text">Button Link</button>
+                <code>.btn-link</code>
+                <div class="spec">Usage: Used for standalone CTA’s, e.g., tertiary actions that follow content blocks (“Read More”)</div>
+            </div>
+            <div class="item">
+                <button class="btn btn-primary btn-lg">Button Primary Large</button>
+                <code>.btn-primary .btn-lg</code>
+                <div class="spec">Usage: </div>
+            </div>
+        </div>
+
+        <h3 class="section" id="forms">Forms</h3>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/forms/">https://getbootstrap.com/docs/4.0/components/forms/</a>
+        </p>
+        <div class="sg-forms">
+            <form class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email" required />
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <div class="invalid-feedback">
+                        <isprint value="${addressFields.firstName.error}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select class="custom-select">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                        required />
+                    <div class="invalid-feedback">
+                        <isprint value="${addressFields.firstName.error}" />
+                    </div>
+                </div>
+                <div class="custom-control custom-checkbox form-group">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" />
+                    <label class="custom-control-label" for="customCheck1">Checkbox</label>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" />
+                        <label class="custom-control-label" for="customRadio1">Radio button</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <h3 class="section">Messages</h3>
+        <h4 class="sub-section" id="alerts">Alerts</h4>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/alerts/">https://getbootstrap.com/docs/4.0/components/alerts/</a>
+        </p>
+        <p>
+            <span class="text-primary">Note:</span> Updates from XD pending
+        </p>
+
+        <div class="alert-colors">
+            <div class="item">
+                <div class="alert alert-success">Success alert</div>
+                <code class="color-var"><span>.alert-success:</span> $japanese-laurel</code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="alert alert-info">Info alert</div>
+                <code class="color-var"><span>.alert-info:</span> $calypso</code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="alert alert-warning">Warning alert</div>
+                <code class="color-var"><span>.alert-warning:</span> $mustard</code>
+                <div class="spec">Usage:</div>
+            </div>
+            <div class="item">
+                <div class="alert alert-danger">Danger alert</div>
+                <code class="color-var"><span>.alert-danger:</span> $tamarillo</code>
+                <div class="spec">Usage:</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="modals">Modals</h4>
+        <a href="" id="example-modal" class="hidden-xs-down" title="Example Modal" data-toggle="modal" data-target="#exampleModal">
+            Example Modal
+        </a>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <!-- Required to disable flex properties on headers -->
+                            <span class="label-xs">Modal Super Header</span>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-primary">Cancel</button>
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="tooltips">Tooltips</h4>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/tooltips/">https://getbootstrap.com/docs/4.0/components/tooltips/</a>
+        </p>
+        <div class="row">
+            <div class="col">
+                TOP <i data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas euismod sollicitudin. Morbi tincidunt euismod leo vel eleifend. "
+                    class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+            </div>
+            <div class="col">
+                RIGHT <i data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit dapibus tincidunt. Mauris egestas euismod sollicitudin."
+                    class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <h3 class="section" id="iconography">Iconography</h3>
+        <p>
+            <span class="text-primary">Note:</span> SVG implementation pending
+        </p>
+
+        <h4 class="sub-section" id="logos">Logos</h4>
+        <div class="flex-container sg-icons">
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="logo" image="" altText="" />
+                </div>
+                <code>.logo</code>
+                <div class="spec">Logo Desktop</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="logo" classes="tablet" image="" altText="" />
+                </div>
+                <code>.logo .tablet</code>
+                <div class="spec">Logo Tablet</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="logo" classes="mobile" image="" altText="" />
+                </div>
+                <code>.logo .mobile</code>
+                <div class="spec">Logo Mobile</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="utilityIcons">Utility Icons</h4>
+        <div class="flex-container sg-icons small-icons">
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="cart" image="" altText="" />
+                </div>
+                <code>.cart</code>
+                <div class="spec">Cart</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="mobile-menu" image="" altText="" />
+                </div>
+                <code>.mobile-menu</code>
+                <div class="spec">Mobile Menu</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="search" image="" altText="" />
+                </div>
+                <code>.search</code>
+                <div class="spec">Search</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="email" image="" altText="" />
+                </div>
+                <code>.email</code>
+                <div class="spec">Email</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="checkbox-selected" image="" altText="" />
+                </div>
+                <code>.checkbox-selected</code>
+                <div class="spec">Checkbox Selected</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="checkbox-unselected" image="" altText="" />
+                </div>
+                <code>.checkbox-unselected</code>
+                <div class="spec">Checkbox Unselected</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="radio-selected" image="" altText="" />
+                </div>
+                <code>.radio-selected</code>
+                <div class="spec">Radio Selected</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="radio-unselected" image="" altText="" />
+                </div>
+                <code>.radio-unselected</code>
+                <div class="spec">Radio Unselected</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-left-lg" image="" altText="" />
+                </div>
+                <code>.arrow-left-lg</code>
+                <div class="spec">Carousel Previous</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-right-lg" image="" altText="" />
+                </div>
+                <code>.arrow-right-lg</code>
+                <div class="spec">Carousel Next</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-up-sm" image="" altText="" />
+                </div>
+                <code>.arrow-up-sm</code>
+                <div class="spec">Expand/Collapse up arrow </div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-down-sm" image="" altText="" />
+                </div>
+                <code>.arrow-down-sm</code>
+                <div class="spec">Dropdown, Expand/Collapse Down Arrow</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-right-sm" image="" altText="" />
+                </div>
+                <code>.arrow-right-sm</code>
+                <div class="spec">CTA, Nav Arrow</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-left-sm" image="" altText="" />
+                </div>
+                <code>.arrow-left-sm</code>
+                <div class="spec">Nav Arrow</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-up-round" image="" altText="" />
+                </div>
+                <code>.arrow-up-round</code>
+                <div class="spec">Back to Top</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="arrow-down-long" image="" altText="" />
+                </div>
+                <code>.arrow-down-long</code>
+                <div class="spec">Search Mobile - More content below</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="close-dark" image="" altText="" />
+                </div>
+                <code>.close-dark</code>
+                <div class="spec">Close</div>
+            </div>
+            <div class="item bg-light">
+                <div class="icon-container">
+                    <issvg icon="close-white" image="" altText="" />
+                </div>
+                <code>.close-white</code>
+                <div class="spec text-white">Close</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="minus" image="" altText="" />
+                </div>
+                <code>.minus</code>
+                <div class="spec">Remove / Collapse</div>
+            </div>
+            <div class="item bg-light">
+                <div class="icon-container">
+                    <issvg icon="minus-white" image="" altText="" />
+                </div>
+                <code>.minus</code>
+                <div class="spec">Remove / Collapse</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="plus" image="" altText="" />
+                </div>
+                <code>.plus</code>
+                <div class="spec">Expand</div>
+            </div>
+            <div class="item bg-light">
+                <div class="icon-container">
+                    <issvg icon="plus-white" image="" altText="" />
+                </div>
+                <code>.plus</code>
+                <div class="spec">Expand</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="parts-icon-green" image="" altText="" />
+                </div>
+                <code>.parts-icon-green</code>
+                <div class="spec">View Parts Diagram</div>
+            </div>
+            <div class="item bg-light">
+                <div class="icon-container">
+                    <issvg icon="parts-icon-white" image="" altText="" />
+                </div>
+                <code>.parts-icon-white</code>
+                <div class="spec">View Parts Diagram - Hover</div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="socialIcons">Social Icons</h4>
+        <div class="flex-container sg-icons small-icons">
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="facebook" image="" altText="" />
+                </div>
+                <code>.facebook</code>
+                <div class="spec">Facebook</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="instagram" image="" altText="" />
+                </div>
+                <code>.instagram</code>
+                <div class="spec">Instagram</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="snapchat" image="" altText="" />
+                </div>
+                <code>.snapchat</code>
+                <div class="spec">Snapchat</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="twitter" image="" altText="" />
+                </div>
+                <code>.twitter</code>
+                <div class="spec">Twitter</div>
+            </div>
+            <div class="item">
+                <div class="icon-container">
+                    <issvg icon="youtube" image="" altText="" />
+                </div>
+                <code>.youtube</code>
+                <div class="spec">Youtube</div>
+            </div>
+        </div>
+
+        <h3 class="section">Grids & Spacing</h3>
+
+        <h4 class="sub-section" id="grids">Grids</h4>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a>
+        </p>
+        <p class="sub-section">12 columns for all viewports</p>
+
+        <div class="container sg-grid">
+            <div class="row">
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+                <div class="col col-sm-3 col-md-2 col-lg-1"></div>
+            </div>
+        </div>
+
+        <div class="container sg-grid-demo">
+            <div class="row">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="xs">col-12 <span>&#60 576px</span>
+                    </div>
+                    <div class="sm">col-sm-6 <span>&#8805 540px</span>
+                    </div>
+                    <div class="md">col-md-4 <span>&#8805 720px</span>
+                    </div>
+                    <div class="lg">col-lg-3 <span>&#8805 960px</span>
+                    </div>
+                    <div class="xl">col-xl-3 <span>&#8805 1200px</span>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="xs">col-12 <span>&#60 576px</span>
+                    </div>
+                    <div class="sm">col-sm-6 <span>&#8805 540px</span>
+                    </div>
+                    <div class="md">col-md-4 <span>&#8805 720px</span>
+                    </div>
+                    <div class="lg">col-lg-3 <span>&#8805 960px</span>
+                    </div>
+                    <div class="xl">col-xl-3 <span>&#8805 1200px</span>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="xs">col-12 <span>&#60 576px</span>
+                    </div>
+                    <div class="sm">col-sm-6 <span>&#8805 540px</span>
+                    </div>
+                    <div class="md">col-md-4 <span>&#8805 720px</span>
+                    </div>
+                    <div class="lg">col-lg-3 <span>&#8805 960px</span>
+                    </div>
+                    <div class="xl">col-xl-3 <span>&#8805 1200px</span>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="xs">col-12 <span>&#60 576px</span>
+                    </div>
+                    <div class="sm">col-sm-6 <span>&#8805 540px</span>
+                    </div>
+                    <div class="md">col-md-4 <span>&#8805 720px</span>
+                    </div>
+                    <div class="lg">col-lg-3 <span>&#8805 960px</span>
+                    </div>
+                    <div class="xl">col-xl-3 <span>&#8805 1200px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="sub-section" id="spacing">Spacing</h4>
+        <div class="sg-spacers">
+            <div class="spacer _8 mb-1">8px</div>
+            <code>.mb-1</code>
+            <small>Use this margin when a close association between elements is needed</small>
+            <div class="spacer _24 mb-3">24px</div>
+            <small>Use this margin when a close association between elements is needed, but the contetn needs more
+                padding for better readability </small>
+            <code>.mb-3</code>
+            <div class="spacer _40 mb-5">40px</div>
+            <small>Use this margin when elements need separation but are still connected with each other</small>
+            <code>.mb-5</code>
+            <div class="spacer _72 mb-9">72px</div>
+            <small>Use this margin when starting a new piece of content or new section/element</small>
+            <code>.mb-9</code>
+        </div>
+
+
+
+        <h3 class="section">Components</h3>
+        <h4 class="sub-section" id="product-tiles">Product Tiles</h4>
+        <div class="container-fluid sg-product-tiles">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid-tile">
+
+                        <div class="product-tile" itemscope="" itemtype="http://schema.org/Product">
+                            <div class="image-container">
+                                <a href="#">
+                                    <img class="tile-image" src="https://via.placeholder.com/260x260" alt="" title="" itemprop="image">
+                                </a>
+                                <a class="quickview hidden-sm-down" href="#" title="QuickView">
+                                    QuickView
+                                    <i class="fa fa-plus-circle"></i>
+                                </a>
+                            </div>
+                            <div class="tile-body">
+                                <div class="pdp-link" itemprop="name">
+                                    <a class="link" href="#" itemprop="url">Product Name 1 line</a>
+                                </div>
+                                <div class="product-extended-name" itemprop="name">
+                                    <span class="name">Product Short Description</span>
+                                </div>
+                                <div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <span>
+                                        <meta itemprop="priceCurrency" content="USD">
+                                        <span class="strike-through list">
+                                            <span class="value" itemprop="price" content="30.99">$30.99</span>
+                                        </span>
+                                        <meta itemprop="priceCurrency" content="USD">
+                                        <span class="sales">
+                                            <span class="value" itemprop="price" content="19.99">$19.99</span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="pc-promotion-message">
+                                    Promotional Message Buy One Get One
+                                </div>
+                                <div class="color-swatches">
+                                    <div class="swatches">
+                                        <div class="swatch-circle"></div>
+                                        <div class="swatch-circle"></div>
+                                        <div class="swatch-circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid-tile">
+
+                        <div class="product-tile" itemscope="" itemtype="http://schema.org/Product">
+                            <div class="image-container">
+                                <a href="#">
+                                    <img class="tile-image" src="https://via.placeholder.com/260x260" alt="" title="" itemprop="image">
+                                </a>
+                            </div>
+                            <div class="tile-body">
+                                <div class="pdp-link" itemprop="name">
+                                    <a class="link" href="#" itemprop="url">Product Name 1 line</a>
+                                </div>
+                                <div class="product-extended-name" itemprop="name">
+                                    <span class="name">Product Short Description</span>
+                                </div>
+                                <div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <span>
+                                        <meta itemprop="priceCurrency" content="USD">
+                                        <span class="sales">
+                                            <span class="value" itemprop="price" content="19.99">$19.99</span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="pc-promotion-message">
+                                    Promotional Message Buy One Get One
+                                </div>
+                                <div class="color-swatches">
+                                    <div class="swatches">
+                                        <div class="swatch-circle"></div>
+                                        <div class="swatch-circle"></div>
+                                        <div class="swatch-circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid-tile">
+
+                        <div class="product-tile" itemscope="" itemtype="http://schema.org/Product">
+                            <div class="image-container">
+                                <a href="#">
+                                    <img class="tile-image" src="https://via.placeholder.com/260x260" alt="" title="" itemprop="image">
+                                </a>
+                            </div>
+                            <div class="tile-body">
+                                <div class="pdp-link" itemprop="name">
+                                    <a class="link" href="#" itemprop="url">Product Name 1 line</a>
+                                </div>
+                                <div class="product-extended-name" itemprop="name">
+                                    <span class="name">Product Short Description</span>
+                                </div>
+                                <div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <span>
+                                        <meta itemprop="priceCurrency" content="USD">
+                                        <span class="sales">
+                                            <span class="value" itemprop="price" content="19.99">$19.99</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid-tile">
+
+                        <div class="product-tile" itemscope="" itemtype="http://schema.org/Product">
+                            <div class="image-container">
+                                <a href="#">
+                                    <img class="tile-image" src="https://via.placeholder.com/260x260" alt="" title="" itemprop="image">
+                                </a>
+                            </div>
+                            <div class="tile-body">
+                                <div class="pdp-link" itemprop="name">
+                                    <a class="link" href="#" itemprop="url">Product Name 1 line</a>
+                                </div>
+                                <div class="product-extended-name" itemprop="name">
+                                    <span class="name">Product Short Description</span>
+                                </div>
+                                <div class="price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <span>
+                                        <meta itemprop="priceCurrency" content="USD">
+                                        <span class="sales">
+                                            <span class="value" itemprop="price" content="19.99">$19.99</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <h4 class="sub-section" id="cards">Cards</h4>
+        <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/card/">https://getbootstrap.com/docs/4.0/components/card/</a>
+        </p>
+        <div class="sg-cards">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/318x180" alt="">
+                    <div class="
+                        card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                    <p class="card-text">
+                        <small class="text-muted">Example small text</small>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/318x180" alt="">
+                    <div class="
+                    card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <ul class="list-group list-group-flush font-weight-bold">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="https://via.placeholder.com/318x180" alt="">
+                    <div class="
+                card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <p class="card-text">
+                <small class="text-muted">Example small text</small>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="https://via.placeholder.com/318x180" alt="">
+                    <div class="
+            card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <h4 class="sub-section" id="accordions">Accordions</h4>
+    <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example">https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example</a>
+    </p>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Section 1 title
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Section 2 title
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                        Section 3 title
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="sub-section" id="tabs">Tabs</h4>
+    <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/navs/">https://getbootstrap.com/docs/4.0/components/navs/</a>
+    </p>
+    <!-- Nav pills -->
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#active" role="tab" aria-controls="active" aria-selected="true">Active
+                Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#link" role="tab" aria-controls="link" aria-selected="false">Link
+                Label</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#secondlink" role="tab" aria-controls="secondlink"
+                aria-selected="false">Link Label</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" data-toggle="tab" href="#disabled" role="tab" aria-controls="disabled"
+                aria-selected="false">Disabled Link</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <p>
+            <div class="tab-pane active" id="active" role="tabpanel" aria-labelledby="active-tab">Content from tab 1</div>
+            <div class="tab-pane" id="link" role="tabpanel" aria-labelledby="link-tab">Content from tab 2</div>
+            <div class="tab-pane" id="secondlink" role="tabpanel" aria-labelledby="link-tab">Content from tab 3</div>
+            <div class="tab-pane" id="disabled" role="tabpanel" aria-labelledby="disabled-tab">Content from tab 4</div>
+        </p>
+    </div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab1">Tab name 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#tab2">Tab name 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab3">Tab name 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab4">Tab name 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#tab5">Tab name 5</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <p>
+            <div class="tab-pane" id="tab1" role="tabpanel" aria-labelledby="content1-tab">Content from tab 1</div>
+            <div class="tab-pane active" id="tab2" role="tabpanel" aria-labelledby="content2-tab">Content from tab 2</div>
+            <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="content3-tab">Content from tab 3</div>
+            <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="content4-tab">Content from tab 4</div>
+            <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="content5-tab">Content from tab 5</div>
+        </p>
+    </div>
+
+    <h4 class="sub-section" id="progress-indicator">Progress Indicator</h4>
+    <p>
+        <span class="text-primary">Note: </span> Checkout steps progress indicator will be developed in the feature
+    </p>
+
+    <h4 class="sub-section" id="tables">Tables</h4>
+    <p>Link: <a href="https://getbootstrap.com/docs/4.0/content/tables/">https://getbootstrap.com/docs/4.0/content/tables/</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Column A</th>
+                <th scope="col">Column B</th>
+                <th scope="col">Column C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row</td>
+                <td>Row</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Row</td>
+                <td>Row</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Row</td>
+                <td>Row</td>
+                <td>Row</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 class="sub-section" id="breadcrumbs">Breadcrumbs</h4>
+    <p>Link: <a href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">https://getbootstrap.com/docs/4.0/components/breadcrumb/</a>
+    </p>
+    <div class="breadcrumbs">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+        </nav>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Library</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+        </nav>
+    </div>
+
+    <h4 class="sub-section" id="content-switcher">Content Switcher</h4>
+    <p>
+        <span class="text-primary">Note:</span> This part serves the same purpose as the nav tabs above a few sections
+        above?
+    </p>
+    <div class="content-switcher">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-primary">First section</button>
+            <button type="button" class="btn btn-outline-primary">Second section</button>
+        </div>
+    </div>
+
+    <h4 class="sub-section" id="lists">Lists</h4>
+    <div class="sg-lists">
+        <ul>
+            <li>Unordered list level 1</li>
+            <ul>
+                <li>Unordered list level 2</li>
+                <li>Unordered list level 2</li>
+            </ul>
+            <li>Unordered list level 1</li>
+            <li>Unordered list level 1</li>
+        </ul>
+
+        <ol>
+            <li>Ordered list level 1</li>
+            <ol>
+                <li>Ordered list level 2</li>
+                <li>Ordered list level 2</li>
+            </ol>
+            <li>Ordered list level 1</li>
+            <li>Ordered list level 1</li>
+        </ol>
+    </div>
+
+    <h4 class="sub-section" id="loader">Loader</h4>
+    <i class="fa fa-circle-o-notch fa-spin fa-5x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+    <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+
+    <h3 class="section">Motion</h3>
+    <p>
+        <span class="text-primary">Note:</span> XD will provide usage
+    </p>
+
+    <h4 class="sub-section" id="card-hover-animation">Card Hover Animation</h4>
+    <div class="flex-container sg-motion">
+        <div class="item">
+            <div class="card default"></div>
+            <code>Default</code>
+            <div class="spec">Usage: </div>
+        </div>
+        <div class="item">
+            <div class="card animation easeincubic"></div>
+            <code>$ease-in-cubic</code>
+            <div class="spec">Usage: </div>
+        </div>
+        <div class="item">
+            <div class="card animation easeoutcubic"></div>
+            <code>$ease-out-cubic</code>
+            <div class="spec">Usage: </div>
+        </div>
+        <div class="item">
+            <div class="card hover"></div>
+            <code>$card-hover-scale</code>
+            <div class="spec">Usage: </div>
+        </div>
+    </div>
+
+    <p>
+        <span class="text-primary">TODO Note:</span> ElasticInEase Animation
+    </p>
+    <h4 class="sub-section" id="button-hover-animation">Button Hover Animation</h4>
+    <div class="flex-container sg-motion">
+        <div class="item">
+            <button class="btn btn-secondary"></button>
+            <code>Default</code>
+            <div class="spec">Usage: </div>
+        </div>
+        <div class="item">
+            <button class="btn btn-secondary hover"></button>
+            <code>$button-hover-scaley</code>
+            <div class="spec">Usage: </div>
+        </div>
+    </div>
+
+    </div>
+</isdecorate>
+
+
+<script>
+// TODO - Placeholder script for form validation example
+(function() {
+    'use strict';
+
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+</script>

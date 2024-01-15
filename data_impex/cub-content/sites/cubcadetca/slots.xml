@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="header-banner-m" context="global" configuration-id="Header Banner - Test" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="font-weight-bold bg-secondary text-white pt-2 pb-2"&gt;TEST PROMO .font-weight-bold .bg-secondary .text-white .pt-2 .pb-2&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

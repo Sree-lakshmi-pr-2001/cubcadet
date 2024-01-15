@@ -1,0 +1,80 @@
+<isscript>
+    var siteDisableCommerceFunctionality = dw.system.Site.getCurrent().getCustomPreferenceValue("siteDisableCommerceFunctionality");
+</isscript>
+<div class="header-banner slide-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <nav role="navigation">
+        <div class="desktop-utility-nav">
+            <div class="container-fluid">
+                <iscomment> <isinclude template="components/header/utilityNav" /> </iscomment>
+                <div class="utility-nav">
+                    <ul class="utility-list">
+                     <li><iscontentasset aid="header-link-financing" /></li>
+                        <isif condition="${dw.system.Site.current.getCustomPreferenceValue('mtdLiveChatEnabled')}">
+                            <li><a href="javascript:void(0)" id="header-live-chat"
+                                    class="icon-chat"><span>${Resource.msg('global.livechat', 'common', null)}</span></a></li>
+                        </isif>
+                        <li><iscontentasset aid="header-link-find-a-store" /></li>
+                         <li><iscontentasset aid="header-link-registration" /></li>
+                        <isinclude url="${URLUtils.url('Account-Header')}" />
+                        <isset name="isdesktopView" value="${session.custom.deviceType}" scope="page" />
+                        <isif condition="${isdesktopView === 'desktop'}">
+                            <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />
+                        </isif>
+                    </ul>
+                </div>
+
+                <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                    <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                        <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                    </div>
+                </isif>
+            </div>
+        </div>
+        <div class="header container-fluid">
+            <div class="row">
+                <div class="col-12 p-md-1">
+                    <div class="navbar-header brand">
+                        <a href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <issvg icon="logo" image="true" altText="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="pull-left">
+                            <button class="navbar-toggler d-lg-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                <issvg icon="icon-menu" image="true" altText="" />
+                            </button>
+                        </div>
+                        <div class="pull-right">
+                            <div class="search">
+                                <isinclude template="components/header/search" />
+                            </div>
+                            <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                                <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                                    <isinclude url="${URLUtils.url('Cart-MiniCart', 'header', 'condensed')}" />
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-md menu-toggleable-left multilevel-dropdown" id="sg-navbar-collapse">
+            <div class="container-fluid">
+                <div class="row">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'pid', pdict.CurrentHttpParameterMap.pid)}"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

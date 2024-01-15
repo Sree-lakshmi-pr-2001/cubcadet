@@ -1,0 +1,51 @@
+.privacy-policy,
+.ca-policy {
+    .content {
+        &.one {
+            padding-top: 50px;
+            width: 80%;
+
+            .title,
+            .date {
+                font-size: 25px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.2;
+                letter-spacing: normal;
+                text-align: center;
+            }
+
+            .date {
+                font-size: 16px;
+                padding-bottom: 25px;
+            }
+
+            .section {
+                padding-bottom: 25px;
+
+                h3,
+                h4,
+                p {
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.88;
+                    letter-spacing: normal;
+                    text-align: left;
+                }
+
+                ol {
+                    list-style-type: lower-roman;
+                }
+
+                h3,
+                h4 {
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

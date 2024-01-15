@@ -1,0 +1,5 @@
+<div class="blog-post-header-bottom">
+    <h1 class="blog-post-title">
+        <isprint value="${pdict.content.name}" />
+    </h1>
+</div>

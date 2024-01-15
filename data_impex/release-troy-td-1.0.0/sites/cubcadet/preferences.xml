@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="tdBankBrokerServiceName">tdbank.soap.broker</preference>
+            <preference preference-id="tdCardholderServiceName">td.cardholder</preference>
+            <preference preference-id="tdTransactionServiceName">td.transaction</preference>
+        </development>
+        <staging>
+            <preference preference-id="tdBankBrokerServiceName">tdbank.soap.broker</preference>
+            <preference preference-id="tdCardholderServiceName">td.cardholder</preference>
+            <preference preference-id="tdTransactionServiceName">td.transaction</preference>
+        </staging>
+        <production>
+            <preference preference-id="tdBankBrokerServiceName">tdbank.soap.broker</preference>
+            <preference preference-id="tdCardholderServiceName">td.cardholder</preference>
+            <preference preference-id="tdTransactionServiceName">td.transaction</preference>
+        </production>
+    </custom-preferences>
+</preferences>
+

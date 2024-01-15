@@ -1,0 +1,66 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/paymentInstruments.js');
+        assets.addCss('/css/account/payment.css');
+    </isscript>
+    <isinclude template="account/payment/deletePaymentModal"/>
+
+    <div class="container payment-container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+
+        <div class="account-page-header">
+            <h5>${Resource.msg('page.heading.mypayments','payment',null)}</h5>
+
+            <a href="${URLUtils.url('Account-Show')}" class="link-primary pull-right">
+                ${Resource.msg('link.profile.backtoaccount','account',null)}
+            </a>
+        </div>
+
+        <isif condition="${!pdict.paymentInstruments}">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h3>${Resource.msg('msg.no.saved.payments','payment',null)}</h3>
+                </div>
+            </div>
+        </isif>
+        <!-- Rows for Credit Cards -->
+        <div class="row justify-content-center justify-content-md-start flex-md-row">
+            <isloop items="${pdict.paymentInstruments}" var="paymentInstrument">
+                <div class="col-sm-12 col-md-6 col-lg-4" id="uuid-${paymentInstrument.UUID}">
+                    <div class="card account-card">
+                        <div class="card-header">
+                            <h6 class="pull-left">${paymentInstrument.creditCardHolder}</h6>
+                        </div>
+                        <div class="card-body card-body-positioning">
+                            <div class="card-info-group">
+                                <dl><dt>${Resource.msg('label.payment.cardtype','account',null)}:</dt> <dd>${paymentInstrument.creditCardType}</dd></dl>
+                                <dl><dt>${Resource.msg('label.payment.cardnumber', 'account', null)}:</dt><dd>${paymentInstrument.formattedMaskedCCNumber}</dd></dl>
+                                <dl>
+                                    <dt>${Resource.msg('label.payment.expdate','account',null)}:</dt>
+                                    <isif condition="${String(paymentInstrument.creditCardExpirationYear).length === 4}">
+                                         <isset name="formattedYear" value="${String(paymentInstrument.creditCardExpirationYear).substr(2)}" scope="page"/>
+                                    <iselse>
+                                        <isset name="formattedYear" value="${paymentInstrument.creditCardExpirationYear}" scope="page"/>
+                                    </isif>
+                                    <dd>${paymentInstrument.creditCardExpirationMonth}/${formattedYear}</dd>
+                                </dl>
+                            </div>
+                            <button
+                                type="button"
+                                class="remove-payment btn btn-link"
+                                data-toggle="modal"
+                                data-target="#deletePaymentModal"
+                                data-id="${paymentInstrument.UUID}"
+                                data-card="${paymentInstrument.maskedCreditCardNumber}"
+                                data-url="${pdict.actionUrl}">
+                                ${Resource.msg('account.payment.removecreditcard', 'account', null)}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </isloop>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,283 @@
+@import "~org/utilities/swatch";
+@import "../variables";
+
+.site-search {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: auto;
+    width: 100%;
+    background: $accent-3;
+    padding: rem(15px);
+    z-index: z("site-search");
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    box-shadow: $shadow4;
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(20px);
+        width: 440px;
+        right: 0;
+        box-shadow: $shadow;
+    }
+
+    @include media-breakpoint-up(xl) {
+        right: 15px;
+    }
+
+    .search.close-search & {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        padding: rem(13px);
+        background: $secondary;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+
+        .close-dark {
+            margin: rem(17px);
+        }
+    }
+
+    > form {
+        position: relative;
+    }
+
+    input {
+        border: 0;
+        height: 48px;
+        width: calc(100% - 48px);
+
+        &::-webkit-search-cancel-button {
+            display: none;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: rem(15px) rem(54px) rem(15px) rem(15px);
+        }
+    }
+}
+
+.search.close-search {
+    transition: background 0.4s ease-out;
+}
+
+.search-button {
+    margin: 0;
+    padding: rem(10px) 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+
+    @include media-breakpoint-up(sm) {
+        padding: rem(10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(15px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: rem(15px) 0 rem(15px) rem(15px);
+    }
+
+    .search.close-search & {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            top: 1px; // prevent 1px space between button & search dropdown
+            padding-right: rem(15px);
+            max-height: 50px;
+            background: $accent-3;
+            z-index: z("site-search", "close-search");
+            transition: background 0.4s ease-out;
+        }
+
+        .icon-close {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .icon-search,
+        .search-button-label {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    .icon-close {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease-out;
+        }
+    }
+
+    .icon-search,
+    .search-button-label {
+        visibility: visible;
+        opacity: 1;
+
+        @include media-breakpoint-up(lg) {
+            transition: opacity 0.4s ease-out;
+        }
+    }
+
+    .icon-search {
+        width: 20px;
+        height: 20px;
+    }
+
+    .search-button-label {
+        display: none;
+
+        @include media-breakpoint-up(xl) {
+            @include label-1;
+
+            display: inline-block;
+            color: $white;
+            vertical-align: middle;
+        }
+    }
+}
+
+.suggestions-wrapper {
+    position: relative;
+}
+
+.suggestions {
+    display: block;
+    background-color: $white;
+    width: 100%;
+    margin-top: rem(10px);
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+    }
+
+    .swatch-square {
+        @include swatch(2.5em, $white);
+
+        border-radius: 0;
+        border: none;
+    }
+
+    .img-container {
+        padding-left: rem(15px);
+    }
+
+    .product-image {
+        width: 125px;
+        height: 125px;
+        max-width: none;
+        border: $border;
+        margin-right: rem(10px);
+    }
+
+    .header,
+    .items {
+        padding: 0 rem(5px);
+    }
+
+    .header {
+        @include search-suggestions-title;
+
+        padding-top: rem(15px);
+        margin-bottom: rem(-5px);
+
+        &:not(:first-child) {
+            border-top: $border;
+        }
+    }
+
+    .items {
+        padding-top: rem(10px);
+        padding-bottom: rem(10px);
+    }
+
+    .item {
+        clear: both;
+        padding-bottom: rem(3px);
+
+        &.product {
+            padding-bottom: rem(10px);
+        }
+
+        .name {
+            margin-top: 0.313em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @include media-breakpoint-down(xs) {
+            padding-bottom: 0.938em;
+        }
+    }
+
+    .product-info {
+        padding-right: rem(15px);
+        width: calc(100% - 150px);
+
+        .name {
+            margin: 0;
+
+            a {
+                @include search-suggestions-title;
+            }
+        }
+
+        .price {
+            margin-top: rem(10px);
+            font-size: $font-size-base;
+
+            .value {
+                font-size: $font-size-base;
+                margin-left: rem(5px);
+            }
+
+            .strike-through {
+                &:not(.non-adjusted-price) {
+                    @include media-breakpoint-up(sm) {
+                        display: inline;
+                    }
+                }
+
+                &.list {
+                    font-size: $font-size-base;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.more-below {
+    bottom: 1.875em;
+    position: fixed;
+    right: 1.875em;
+}

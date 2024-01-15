@@ -1,0 +1,1394 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~org/utilities/layout";
+@import "~org_ma/utilities/typeUtils";
+
+$checkout-font-weight: 700;
+
+$receipt-font-size: 0.875rem;
+$receipt-spacing: 0.625em;
+$stored-payment-spacing: 1rem;
+
+$xss: 359px;
+$xxs: 280px;
+$CARBMin: 620px;
+$CARBMax: 767px;
+$surfaceDuoMin: 520px;
+$surfaceDuoMax: 619px;
+$gFoldMin: 512px;
+$gFoldMax: 720px;
+
+.page {
+    background-color: $white;
+
+    .page-title {
+        padding: rem(30px) rem(15px);
+
+        @include type-alt-section-heading();
+    }
+}
+
+.order-summary {
+    .edit-link a {
+        font-weight: $font-weight-bold;
+        float: right;
+    }
+}
+
+.order-total-summary {
+    border: $border;
+    border-top: none;
+    background-color: $white !important;
+
+    .order-total-summary-heading {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        h6 {
+            font-size: rem(16px);
+            @include media-breakpoint-up(md) {
+                font-size: rem(22px);
+            }
+        }
+    }
+
+    .order-total-summary-row {
+        margin-bottom: 15px;
+
+        &.grand-total {
+            border-top: $border;
+            height: auto;
+            padding: rem(15px) 0;
+            margin: rem(10px) 0 0;
+
+            @include type-cart-estimated-total();
+
+            @include media-breakpoint-up(md) {
+                padding-top: rem(20px);
+                margin-top: rem(30px);
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .order-discount,
+    .shipping-discount {
+        font-weight: $font-weight-bold;
+        color: $brand-second;
+
+        p {
+            line-height: 1.86;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.order-total-summary-recap {
+    .order-total-summary-recap-heading {
+        border-top: $border;
+        border-bottom: $border;
+        padding: rem(20px) rem(15px);
+        margin: rem(10px) 0 rem(10px);
+        font-size: rem(16px);
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(22px);
+        }
+    }
+
+    .order-total-summary-recap-body {
+        .order-receipt-label {
+            padding-left: 15px;
+            font-size: rem(18px);
+            text-align: right;
+        }
+
+        .order-receipt-value {
+            padding: 0 40% 0 15px;
+            font-size: rem(18px);
+
+            @include media-breakpoint-up(md) {
+                padding: 0 20px;
+            }
+            @include media-breakpoint-up(lg) {
+                padding: 0 80px 0 20px;
+            }
+        }
+    }
+}
+
+.order-total-summary-submitting {
+    padding: 40px 15px 20px;
+    text-align: center;
+
+    .customer-message-review {
+        margin-bottom: 35px;
+    }
+
+    .place-order-button-wrap {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.product-summary-block {
+    margin: rem(14px) 0 0;
+
+    .product-line-item-row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .line-item-divider {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .line-item-header {
+        flex-direction: column;
+    }
+
+    .promo-label,
+    .line-item-price-info,
+    .line-item-total-text {
+        font-weight: $font-weight-bold;
+    }
+
+    .line-item-price-info {
+        margin-bottom: 0;
+    }
+
+    .product-image {
+        max-width: calc(100% - #{rem(10px)});
+        margin-right: rem(10px);
+    }
+
+    .extended-name {
+        @include comparison-product-extended-name;
+    }
+
+    .item-attributes,
+    .line-item-attributes,
+    .strike-through:not(.non-adjusted-price),
+    .line-item-price-info,
+    .line-item-total-text,
+    .line-item-total-price-amount,
+    .item-number {
+        font-size: $font-size-xs;
+    }
+
+    .product-line-item-results {
+        font-size: $font-size-xs;
+        line-height: 1.86;
+    }
+
+    .pricing {
+        font-weight: $font-weight-normal;
+    }
+
+    .line-item-quantity {
+        width: 100%;
+    }
+
+    .strike-through.list {
+        margin-left: 0;
+        display: inline;
+    }
+
+    .CARBIcon {
+        z-index: 101;
+        width: 95% !important;
+        @media (min-width: $surfaceDuoMin) and (max-width: $CARBMax) {
+            width: 60% !important;
+        }
+
+        @media (min-width: $CARBMin) and (max-width: $CARBMax) {
+            width: 60% !important;
+        }
+    }
+}
+
+.suggestion-img {
+    height: 90px;
+
+    @include media-breakpoint-up(md) {
+        height: 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 100px;
+    }
+
+    @media (min-width: $CARBMin) and (max-width: $CARBMax) {
+        height: 193px;
+    }
+
+    @media (min-width: $surfaceDuoMin) and (max-width: $surfaceDuoMax) {
+        height: 150px;
+    }
+
+    @media (min-width: $gFoldMin) and (max-width: $surfaceDuoMax) {
+        height: 125px;
+    }
+
+    @media (min-width: $xxs) and (max-width: $xss) {
+        height: 65px;
+    }
+}
+
+.iconPath {
+    fill: rgb(224, 68, 68);
+}
+
+.CARBSuggestion {
+    background-color: #fff;
+    text-align: center;
+}
+
+.alterPro {
+    font-size: 18px;
+}
+
+.alterContent {
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+.remove-line-item {
+    text-align: right;
+
+    .remove-product {
+        padding: 1px !important;
+        background-color: #f9dada;
+        border-color: #f9dada;
+    }
+}
+
+.CARBCompliantMessage {
+    text-align: center;
+}
+
+.CARBButton {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grand-total-price {
+    float: right;
+    font-weight: $checkout-font-weight;
+}
+
+.grand-total-label {
+    font-weight: $checkout-font-weight;
+}
+
+.product-divider {
+    margin-left: -$receipt-spacing;
+    margin-right: -$receipt-spacing;
+
+    hr {
+        border-top: $border;
+    }
+}
+
+.product-line-item + .product-line-item::before,
+.multi-shipping + .product-line-item::before {
+    content: "";
+    display: block;
+    border-bottom: $border;
+    margin: $receipt-spacing 0;
+}
+
+.shipment-block + .shipment-block::before {
+    content: "";
+    display: block;
+    border-bottom: $border;
+    margin: $receipt-spacing 0;
+}
+
+.summary-section-label {
+    font-weight: $checkout-font-weight;
+
+    @include media-breakpoint-up(lg) {
+        font-weight: 500;
+    }
+}
+
+.summary-section-sublabel {
+    font-weight: $checkout-font-weight;
+    font-size: rem(16px);
+}
+
+.summary-section-report {
+    font-size: rem(12px);
+    font-weight: $checkout-font-weight;
+}
+
+.payment-options-section {
+    border-top: $border;
+    padding-top: rem(15px);
+    margin-top: rem(15px);
+}
+
+.add-payment,
+.cancel-new-payment {
+    margin-top: $stored-payment-spacing;
+    width: 260px;
+}
+
+.user-payment-instruments {
+    padding: 0;
+}
+
+.cc-imgs {
+    text-align: right;
+
+    .icon {
+        max-width: 50px;
+        margin-left: rem(5px);
+
+        @include media-breakpoint-only(md) {
+            max-width: fit-content;
+            margin-top: 18px;
+            margin-left: 39px;
+            height: 50px;
+            margin-right: -20px;
+        }
+    }
+}
+
+.estimation-finance-info {
+    font-size: $font-size-body;
+    line-height: rem(20px);
+    margin: rem(5px) 0 0;
+    background-color: transparent;
+    border-top: 1px solid #6b6b6b;
+    border-right: 1px solid #6b6b6b;
+    border-left: 1px solid #6b6b6b;
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-base;
+        line-height: rem(22px);
+        margin: rem(15px) 0 0;
+        display: flex;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-base;
+        line-height: rem(22px);
+        margin: rem(15px) 0 0;
+        display: block;
+    }
+
+    @include media-breakpoint-between(xs, md) {
+        border-top: 1px solid #d9d9d9 !important;
+        border-right: 1px solid #d9d9d9 !important;
+        border-left: 1px solid #d9d9d9 !important;
+    }
+
+    .cc-container {
+        width: 95px;
+        float: none;
+        margin: -10px auto;
+        display: block;
+
+        @include media-breakpoint-up(md) {
+            float: left;
+            width: 130px;
+            flex-shrink: 0;
+            margin: 15px 25px 0 -20px;
+        }
+
+        @include media-breakpoint-down(md) {
+            float: none;
+            width: 130px;
+            margin: -10px auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .td-estimation {
+        display: inline-block;
+        width: calc(100%);
+        padding: 10px;
+
+        @include media-breakpoint-up(md) {
+            padding: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: rem(23px);
+            line-height: (25px);
+            @include media-breakpoint-between(xs, sm) {
+                font-size: 1.4375rem;
+                text-align: center;
+                line-height: 25px;
+                margin-top: -22px;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.55rem;
+                line-height: 25px;
+                margin-top: -15px;
+            }
+        }
+
+        h3 {
+            font-size: rem(14px);
+            line-height: (18px);
+            @include media-breakpoint-between(xs, sm) {
+                font-weight: 400;
+                text-align: center;
+                line-height: 23px;
+                padding-left: 12px;
+                padding-right: 12px;
+                font-size: 22px;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-weight: 300;
+                line-height: 26px;
+                font-size: 23px;
+            }
+        }
+
+        p {
+            font-size: rem(14px);
+            line-height: (18px);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            font-size: $font-size-body;
+
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-base;
+            }
+        }
+
+        .td-links {
+            white-space: nowrap;
+            display: block;
+        }
+
+        .vertical-divider {
+            margin: 0 rem(5px);
+            color: $gray-300;
+        }
+
+        .td-apply-finance {
+            @include media-breakpoint-between(xs, sm) {
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                width: 177px;
+                padding: 16px 47px;
+                height: 10px;
+            }
+
+            @include media-breakpoint-down(md) {
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                width: 177px;
+                padding: 16px 47px;
+                height: 10px;
+            }
+        }
+
+        .td-payment-details {
+            @include media-breakpoint-between(xs, sm) {
+                display: flex;
+                margin-top: 7px;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto !important;
+            }
+
+            @include media-breakpoint-down(md) {
+                display: flex;
+                margin-top: 4px;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto !important;
+                font-size: 0.77rem;
+            }
+        }
+    }
+}
+
+.financing-options-text {
+    padding: rem(8px) rem(24px);
+    background-color: $yellow;
+    border: $border;
+    border-bottom: 0;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-right: 1px solid #6b6b6b;
+    border-left: 1px solid #6b6b6b;
+    @include media-breakpoint-between(xs, md) {
+        padding: rem(8px) rem(8px);
+        border-right: none;
+        border-left: none;
+    }
+
+    .financing-plan-title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        font-weight: 700;
+        font-size: rem(20px);
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(24px);
+        }
+
+        @include media-breakpoint-between(xs, md) {
+            font-weight: 700;
+            font-size: rem(16px);
+            box-sizing: border-box;
+
+            .text-uppercase {
+                text-transform: none !important;
+                margin-left: auto;
+                padding-left: 100px;
+            }
+
+            .position-relative {
+                padding-right: 1.6rem;
+            }
+        }
+
+        @media only screen and (max-width: $xss) {
+            .text-uppercase {
+                text-transform: none !important;
+                margin-left: auto;
+                padding-left: 49px;
+            }
+        }
+
+        .superscript {
+            font-size: rem(12px);
+            position: absolute;
+        }
+    }
+
+    .financing-plan-disclaimer {
+        font-size: 12px;
+        font-weight: 400;
+        @include media-breakpoint-between(xs, md) {
+            font-size: 11px;
+            font-weight: 400;
+
+            strong {
+                font-weight: normal !important;
+            }
+        }
+    }
+
+    .label-disclaimer {
+        > a {
+            font-size: $font-size-xs;
+            white-space: nowrap;
+        }
+    }
+}
+
+.finance-estimate-disclaimer {
+    display: none;
+}
+
+.financing-returning-customer {
+    background-color: $gray-100;
+    margin: 0;
+    border-right: 1px solid #6b6b6b;
+    border-bottom: 1px solid #6b6b6b;
+    border-left: 1px solid #6b6b6b;
+
+    @include media-breakpoint-between(xs, md) {
+        border-right: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        border-left: 1px solid #d9d9d9;
+    }
+
+    .financing-returning-customer-title {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .form-control-label {
+        font-weight: 400;
+        text-transform: none;
+        font-size: rem(14px);
+        margin-top: 5px;
+    }
+
+    .financing-customer-links {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
+}
+
+.credit-card-selection-new {
+    flex-grow: 1;
+}
+
+.instore-note {
+    float: right;
+    font-weight: $font-weight-normal;
+    text-transform: none;
+    font-size: $small-font-size;
+    text-align: start;
+
+    @include media-breakpoint-between(xs, md) {
+        font-size: 70%;
+    }
+}
+
+.saved-payment-instrument {
+    background-color: $white;
+    border: $border;
+    padding: rem(15px);
+    margin-bottom: rem(15px);
+    height: calc(100% - #{rem(15px)});
+
+    // faked radios
+    .custom-radio {
+        top: 15px;
+        margin-right: rem(15px);
+    }
+
+    .card-image {
+        margin-top: -0.5rem;
+    }
+}
+
+.selected-payment {
+    border-color: $brand-main;
+}
+
+.saved-security-code {
+    margin-top: $stored-payment-spacing;
+}
+
+.payment-information {
+    margin-bottom: $stored-payment-spacing;
+
+    @include media-breakpoint-only(md) {
+        .credit-card-tab {
+            height: 175px !important;
+        }
+    }
+
+    @media only screen and (max-width: $xss) {
+        .credit-card-tab {
+            height: 75px !important;
+        }
+    }
+
+    .nav-pills {
+        &.content-switcher {
+            .nav-item {
+                padding: 0;
+                display: block;
+
+                &.first-child {
+                    .nav-link:not(.active) {
+                        border: 0;
+                    }
+                }
+            }
+
+            &:first-child {
+                .nav-link:not(.active) {
+                    // overwrite style in mobile mode
+                    border-right: 1px solid #6b6b6b;
+
+                    @include media-breakpoint-between(xs, md) {
+                        border: 1px solid #d9d9d9 !important;
+                        height: 105px;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-item {
+        width: 50%;
+
+        &:not(:first-child) {
+            .nav-link {
+                border: 1px solid #6b6b6b;
+            }
+        }
+
+        > .nav-link {
+            color: $body-color;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $white !important;
+            }
+
+            &.active {
+                background-color: $white !important;
+                @include media-breakpoint-between(xs, md) {
+                    border: 1px solid #d9d9d9 !important;
+                    height: 105px;
+                    justify-content: flex-start;
+                }
+
+                &::after {
+                    content: none;
+                }
+
+                &::before {
+                    @include media-breakpoint-up(lg) {
+                        content: '';
+                        position: absolute;
+                        display: inline-block;
+                        height: rem(18px);
+                        width: rem(18px);
+                        background-image: $svg-radio-selected-cubcadet;
+                        background-size: cover;
+                        background-color: $white;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        top: 50%;
+                        left: rem(-9px); // width / 2
+                        transform: translateY(-50%);
+                    }
+
+                    @include media-breakpoint-between(xs, md) {
+                        content: '';
+                        position: absolute;
+                        display: inline-block;
+                        height: rem(18px);
+                        width: rem(18px);
+                        background-image: $svg-radio-selected-cubcadet;
+                        background-size: cover;
+                        background-color: $white;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        top: 50%;
+                        left: rem(-10px); // width / 2
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+
+            .payment-input {
+                font-size: rem(18px);
+                font-weight: 900;
+                text-align: start;
+
+                @include media-breakpoint-up(lg) {
+                    position: relative;
+                    // remove padding from 'CLUB CADET FINANCING'
+                    // padding-left: rem(25px);
+                }
+
+                @include media-breakpoint-between(xs, md) {
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+            }
+
+            .credit-card {
+                padding-left: 7px;
+                white-space: nowrap;
+            }
+
+            &::before {
+                @include media-breakpoint-up(lg) {
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    height: rem(18px);
+                    width: rem(18px);
+                    background-image: $svg-radio-unselected;
+                    background-size: cover;
+                    background-color: $white;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    top: 50%;
+                    left: rem(-9px); // width / 2
+                    transform: translateY(-50%);
+                }
+
+                @include media-breakpoint-between(xs, md) {
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    height: rem(18px);
+                    width: rem(18px);
+                    background-image: $svg-radio-unselected;
+                    background-size: cover;
+                    background-color: $white;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    top: 50%;
+                    left: rem(-10px); // width / 2
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        // independent control for the option tabs
+        .credit-card-tab {
+            border: 1px solid #6b6b6b;
+
+            @media only screen and (max-width: $xss) {
+                .icon {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+                padding: 0 rem(10px) 0 rem(40px);
+                line-height: rem(55px);
+                text-align: left;
+            }
+
+            @include media-breakpoint-between(xs, sm) {
+                display: flex;
+                position: relative;
+                align-items: center;
+
+                .credit-card-option {
+                    display: block;
+                    margin-right: 5%;
+                    width: 135px;
+                    margin-top: -5%;
+                }
+            }
+
+            @include media-breakpoint-only(md) {
+                display: flex;
+                position: relative;
+                align-items: center;
+
+                .credit-card {
+                    margin-left: -18px;
+                }
+
+                .credit-card-option {
+                    display: block;
+                    width: fit-content;
+                    height: 150px;
+                    margin-right: 5%;
+                    margin-left: -40px;
+                }
+            }
+        }
+
+        .finance-card-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-right: 1px solid #6b6b6b;
+            border-bottom: 1px solid #6b6b6b;
+            border-left: 1px solid #6b6b6b;
+
+            @include media-breakpoint-up(md) {
+                align-items: flex-start;
+                padding-left: rem(40px);
+            }
+
+            @include media-breakpoint-between(xs, md) {
+                padding: 15px;
+                height: 100px;
+                padding-left: 20px;
+
+                .finance-card {
+                    white-space: nowrap;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 36px;
+                }
+            }
+
+            @media only screen and (max-width: $xss) {
+                .finance-card {
+                    white-space: normal;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+            }
+
+            &.active {
+                border-bottom: none;
+
+                @include media-breakpoint-between(xs, md) {
+                    border: 1px solid #d9d9d9 !important;
+                }
+            }
+        }
+
+        .cc-imgs {
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+                width: calc(100% - 125px);
+                position: absolute;
+                top: -2px;
+                right: 10px;
+            }
+
+            .icon {
+                @include media-breakpoint-up(lg) {
+                    width: 20%;
+                }
+
+                @include media-breakpoint-between(xs ,sm) {
+                    max-width: 44px;
+                    margin-left: 0.6rem;
+                    margin-top: 10px;
+                }
+
+                &.cub-card {
+                    border: 1px solid $white;
+                }
+            }
+        }
+    }
+}
+
+.credit-card-content {
+    .credit-card-option {
+        margin: rem(30px) 0 rem(15px);
+        text-align: left;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        .icon:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.finance-card-content {
+    .plan-label {
+        @include label-2;
+
+        position: relative;
+        margin: rem(35px) 0 rem(6px);
+
+        @include media-breakpoint-up(md) {
+            margin: rem(30px) 0 rem(6px);
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: rem(10px) 0 rem(6px);
+        }
+
+        // .instore-note {
+        //     float: right;
+        //     font-weight: $font-weight-normal;
+        //     text-transform: none;
+        // }
+
+        .cc-imgs {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            .icon {
+                max-width: 65px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+
+    .financing-plans-list {
+        clear: both;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .custom-control {
+        padding: 0;
+        border-right: 1px solid #6b6b6b;
+        border-left: 1px solid #6b6b6b;
+
+        @include media-breakpoint-between(xs, md) {
+            border: none !important;
+        }
+    }
+
+    .custom-radio .custom-control-input ~ .custom-control-label {
+        &::before,
+        &::after {
+            left: 15px;
+            top: 15px;
+
+            @include media-breakpoint-up(md) {
+                @include centerElement(vertical);
+            }
+
+            @include media-breakpoint-down(xs) {
+                left: 15px !important;
+                top: 55px !important;
+            }
+
+            @include media-breakpoint-between(638px,767px) {
+                left: 15px !important;
+                top: 35px;
+            }
+        }
+    }
+
+    .card-number-wrapper {
+        float: left;
+        width: 100%;
+
+        input {
+            border: 2px solid $gray-400;
+
+            &::placeholder {
+                color: $gray-500;
+            }
+        }
+    }
+
+    .finance-account-lookup-link {
+        font-size: rem(10px);
+        font-weight: 700;
+        text-align: center;
+        float: left;
+        line-height: rem(40px);
+        background-color: $gray-400;
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(14px);
+            text-align: left;
+        }
+    }
+
+    .finance-account-register-link {
+        font-size: rem(10px);
+        line-height: rem(40px);
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(14px);
+        }
+    }
+}
+
+.finance-radio {
+    padding: rem(10px) rem(15px) rem(10px) rem(50px);
+    background-color: $white;
+    border: $border;
+    min-height: 80px;
+    cursor: pointer;
+
+    @include media-breakpoint-up(md) {
+        padding: rem(15px) rem(20px) rem(15px) rem(50px);
+    }
+
+    @include media-breakpoint-between(xs, md) {
+        border-top: 1px #d9d9d9 !important;
+    }
+
+    .custom-control-input:checked ~ & {
+        // border: 1px solid $secondary;
+    }
+
+    .label-title {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: rem(18px);
+        margin-bottom: rem(5px);
+
+        @include media-breakpoint-between(xs, md) {
+            font-size: rem(16px);
+            margin-left: -15px;
+
+            .text-uppercase {
+                margin-left: auto;
+                text-transform: none !important;
+                padding-left: 100px;
+            }
+        }
+
+        @media only screen and (max-width: $xss) {
+            .text-uppercase {
+                margin-left: auto;
+                text-transform: none !important;
+                padding-left: 49px;
+            }
+        }
+
+        .superscript {
+            font-size: rem(12px);
+            position: absolute;
+        }
+    }
+
+    .label-disclaimer {
+        font-weight: 700;
+
+        @include disclaimer-text;
+
+        margin-bottom: rem(5px);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-between(xs, md) {
+            font-size: 11px;
+            margin-left: -13px;
+
+            strong {
+                font-weight: normal !important;
+            }
+        }
+
+        > a {
+            font-size: $font-size-xs;
+            white-space: nowrap;
+
+            @include media-breakpoint-between(xs, md) {
+                font-size: 11px;
+            }
+        }
+    }
+
+    .label-text {
+        @include media-breakpoint-up(md) {
+            width: 100%;
+        }
+    }
+
+    > a {
+        font-size: $font-size-xs;
+
+        @include media-breakpoint-up(md) {
+            @include centerElement(vertical);
+
+            right: 20px;
+            font-size: $font-size-body;
+        }
+    }
+}
+
+.finance-card-terms {
+    .td-payment-details {
+        margin-left: rem(5px);
+        font-size: $font-size-xs;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-body;
+        }
+    }
+}
+
+.finance-promofee {
+    font-weight: $font-weight-bold;
+}
+
+.finance-card-amount {
+    font-weight: $font-weight-bold;
+}
+
+.security-code-input,
+.cc-email-input,
+.billing-phone-field {
+    position: relative;
+
+    .info-icon {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+}
+
+.checkout-hidden {
+    display: none;
+}
+
+.multi-ship .single-shipping .shipping-content {
+    display: none;
+}
+
+.multi-ship .shipping-summary .single-shipping {
+    display: none;
+}
+
+.gift-message-block {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.single-shipping .summary-section-label {
+    margin-bottom: 0;
+}
+
+.confirm-details .shipping-method,
+.confirm-details .shipping-method-price {
+    margin-bottom: 0;
+}
+
+.multi-ship .confirm-details .single-shipping {
+    display: none;
+}
+
+.multi-shipping {
+    display: none;
+}
+
+#financeMsg {
+    .modal-footer {
+        padding: 0;
+    }
+
+    .lookup-section {
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            text-align: left;
+        }
+
+        .lookup-text {
+            text-align: left;
+            margin-bottom: rem(15px);
+        }
+
+        .cub-card {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: rem(15px);
+        }
+    }
+
+    .lastSSN {
+        max-width: 315px;
+    }
+
+    .postalCode {
+        max-width: 136px;
+    }
+
+    .dob-select {
+        > .col-6 {
+            .form-group {
+                @include media-breakpoint-up(md) {
+                    margin-top: rem(22px);
+                }
+            }
+        }
+    }
+
+    .found-finance-account-number {
+        margin: rem(10px) 0;
+        font-size: rem(20px);
+    }
+
+    .copy-to-clipboard {
+        margin-right: rem(40px);
+    }
+
+    .print-account {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: inline;
+        }
+    }
+
+    .form-buttons {
+        margin-top: rem(15px);
+
+        button {
+            width: 100%;
+            height: 48px;
+            margin-bottom: rem(15px);
+
+            @include media-breakpoint-up(md) {
+                max-width: 180px;
+                margin-right: rem(15px);
+                margin-bottom: 0;
+            }
+
+            &.use-account {
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 265px;
+                }
+            }
+        }
+    }
+}
+
+.submit-shipping-messages {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 15%;
+    left: 50%;
+}
+
+.submit-shipping-messages-alert {
+    animation: fade 5s linear forwards;
+    box-shadow: 1px 1px 5px grey;
+
+    @keyframes fade {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    &.show {
+        display: block;
+    }
+}

@@ -1,0 +1,113 @@
+@import "../variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "../components/formFields";
+@import "../components/oAuthLinks";
+@import "~org/utilities/nth_of_type";
+@import "../utilities/typeUtils";
+
+.checkout-login-page {
+    padding-bottom: rem(60px);
+
+    .card {
+        background: $accent-3;
+        border: $border;
+        padding: 0;
+
+        button,
+        .btn {
+            max-width: 260px;
+            display: block;
+            margin: 0 auto;
+            @include media-breakpoint-up(md) {
+                margin: 0;
+            }
+        }
+
+        .card-body {
+            padding: rem(15px) rem(16px) rem(32px);
+        }
+
+        .card-header {
+            background: $accent-3;
+            padding: auto 0;
+
+            h6 {
+                padding: 0 rem(16px);
+                margin-bottom: 0;
+            }
+        }
+
+        @include first() {
+            margin-bottom: rem(29px);
+            @include media-breakpoint-up(md) {
+                margin-right: rem(26px);
+                margin-bottom: rem(14px);
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            max-width: 550px;
+        }
+    }
+
+    > div {
+        padding: 0;
+
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: rem(240px);
+    }
+}
+
+.page-title {
+    margin-bottom: rem(18px);
+
+    @include type-alt-section-heading();
+    @include media-breakpoint-up(md) {
+        padding-left: 0;
+        margin-bottom: rem(87px);
+    }
+}
+
+.login {
+    margin-bottom: rem(20px);
+    background: $svg-facebook-filled-path repeat;
+
+    > .form-group {
+        padding: 0;
+
+        @include media-breakpoint-up(md) {
+            float: right;
+            padding-right: 0;
+            padding-left: 10px;
+            width: 49%;
+
+            @include first() {
+                float: left;
+                padding-left: 0;
+            }
+        }
+    }
+
+    .alert + .form-group {
+        @include media-breakpoint-up(md) {
+            float: left;
+            padding-left: 0;
+        }
+    }
+
+    label {
+        width: 100%; // prevent wrapping in iOS
+    }
+
+    .login-form-utilities {
+        clear: both;
+    }
+}

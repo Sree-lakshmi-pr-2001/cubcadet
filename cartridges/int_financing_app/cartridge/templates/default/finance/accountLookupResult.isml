@@ -1,0 +1,27 @@
+<div class="result-info" data-title="${pdict.resultTitle}">
+    <div class="lookup-section row">
+        <div class="col-12 col-md-4 order-md-1">
+            <img class="cub-card" src="${URLUtils.staticURL('images/cc-td-card.jpg')}" alt="">
+        </div>
+        <div class="lookup-text col-12 col-md-8 order-md-0">
+            <isprint value="${pdict.resultInfo}" encoding="off" />
+        </div>
+    </div>
+</div>
+<isif condition="${pdict.success}">
+    <div class="row">
+        <div id="foundAccountToPrint" class="found-finance-account-number col-12">
+            <strong>${Resource.msg('finance.your.account.number', 'checkout', null)}</strong>:
+            <span>${pdict.accountNumberFormatted}</span>
+            <input type="hidden" value="${pdict.accountNumberFormatted}" id="foundAccountNumber"/>
+        </div>
+        <div class="col-12 mb-md-8">
+            <a class="copy-to-clipboard" href="javascript:void(0)">${Resource.msg('finance.click.to.copy.to.clipboard', 'checkout', null)}</a>
+            <a class="print-account" href="javascript:void(0)">${Resource.msg('finance.print.account.number', 'checkout', null)}</a>
+        </div>
+
+        <div class="form-buttons col-12">
+            <button type="button" class="btn btn-block btn-secondary use-account">${Resource.msg('finance.use.this.number.and.checkout', 'checkout', null)}</button>
+        </div>
+    </div>
+</isif>

@@ -1,0 +1,72 @@
+{
+  "step-types": {
+      "chunk-script-module-step": [
+        {
+            "@type-id": "custom.Monetate.ExportProductsXML",
+            "@supports-parallel-execution": "false",
+            "@supports-site-context": "true",
+            "@supports-organization-context": "false",
+            "description": "Monetate Cartridge - export and upload products to monetate sftp.",
+            "module": "int_monetate/cartridge/scripts/jobs/exportMonetateProductsXML.js",
+            "before-step-function": "beforeStep",
+            "total-count-function": "getTotalCount",
+            "before-chunk-function": "",
+            "read-function": "read",
+            "process-function": "process",
+            "write-function": "write",
+            "after-chunk-function": "",
+            "after-step-function": "afterStep",
+            "chunk-size": 1,
+            "transactional": "false",
+            "parameters": {
+                "parameter": []
+            },
+            "status-codes": {
+                "status": [
+                    {
+                        "@code": "ERROR",
+                        "description": "Used when the step failed with an error."
+                    },
+                    {
+                        "@code": "OK",
+                        "description": "Used when the step finished successfully."
+                    }
+                ]
+            }
+        },
+        {
+            "@type-id": "custom.Monetate.ExportProductsCSV",
+            "@supports-parallel-execution": "false",
+            "@supports-site-context": "true",
+            "@supports-organization-context": "false",
+            "description": "Monetate Cartridge - export and upload products to monetate sftp.",
+            "module": "int_monetate/cartridge/scripts/jobs/exportMonetateProductsCSV.js",
+            "before-step-function": "beforeStep",
+            "total-count-function": "getTotalCount",
+            "before-chunk-function": "",
+            "read-function": "read",
+            "process-function": "process",
+            "write-function": "write",
+            "after-chunk-function": "",
+            "after-step-function": "afterStep",
+            "chunk-size": 1,
+            "transactional": "false",
+            "parameters": {
+                "parameter": []
+            },
+            "status-codes": {
+                "status": [
+                    {
+                        "@code": "ERROR",
+                        "description": "Used when the step failed with an error."
+                    },
+                    {
+                        "@code": "OK",
+                        "description": "Used when the step finished successfully."
+                    }
+                ]
+            }
+        }
+    ]
+  }
+}

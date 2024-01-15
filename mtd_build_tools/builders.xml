@@ -1,0 +1,283 @@
+<project name="builders" basedir="." default="deploy-install-audit-sonar" xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+    <!-- Importing sonar and npm audit tasks so they can also be run locally. Otherwise,
+         expectation is that npm audit would always be run locally and sonar run only
+         when run under Jenkins.
+    -->
+
+    <import file="run npm install.xml"/>
+    <import file="run sonar.xml"/>
+    <import file="run npm audit.xml"/>
+
+    <target name="deploy-install-audit-sonar" depends="npm-install, deploy, npm-audit, sonar">
+    </target>
+
+    <property name="workingCopy" value="deploy/working" />
+    <property name="zipfile" value="deploy/output/${env.BUILD_NUMBER}.zip" />
+    <property name="buildMode" value="development" />
+
+  <condition property="have-node" else="false">
+     <and>
+       <available file="${basedir}/../node_modules" type="dir"/>
+     </and>
+  </condition>
+
+    <target name="core-modification-warning">
+        <echo>WARNING: A core cartridge has been modified. Typically this is not correct and the modifications should be made in a site or organization cartridge.</echo>
+    </target>
+
+    <target name="check-node">
+        <echo level="info">The node_modules directory was not found.</echo>
+        <echo level="info">Please ensure the node modules are installed in the following directory:</echo>
+        <echo level="info">- ${basedir}/../node_modules</echo>
+        <echo level="info">Using the following command:</echo>
+        <echo level="info">&gt; npm install</echo>
+        <echo level="info">Users on Mac or Linux may need to use sudo:</echo>
+        <echo level="info">&gt; sudo npm install</echo>
+        <fail message="The directory 'node_modules' is missing."/>
+    </target>
+    <target name="buildCode" depends="css,js,fonts,zipCode">
+        <echo level="info">Build Complete</echo>
+    </target>
+    <target name="deploy" depends="css,js,fonts,upload">
+        <echo level="info">Deployment complete!</echo>
+    </target>
+
+    <target name="upload">
+        <echo level="info">Upload in progress...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg line='node build --deployCartridges' />
+            <arg value='--code-version="${buildVersion}"' if:set="buildVersion" />
+            <arg value='--cartridge="${cartridge}"' if:set="cartridge" />
+            <arg value='--client-id=${clientId}' if:set="clientId" />
+            <arg value='--client-secret=${clientSecret}' if:set="clientSecret" />
+            <arg value='--self-signed="${selfSigned}"' if:set="selfSigned" />
+            <arg value='--p12="${twoFactorp12}"' if:set="twoFactorp12" />
+            <arg value='--passphrase="${twoFactorPassword}"' if:set="twoFactorPassword" />
+            <arg value='--hostname="${hostname}"' if:set="hostname" />
+            <arg value='--deploy-hostname="${deployHostname}"' if:set="deployHostname" />
+            <arg value='--cert-hostname="${certHostname}"' if:set="certHostname" />
+            <arg value='--activation-hostname="${activationHostname}"' if:set="activationHostname" />
+            <arg value='--version-cartridge-name="${versionCartridgeName}"' if:set="versionCartridgeName" />
+        </exec>
+        <exec executable="node" osfamily="unix" failonerror="true">
+            <arg value="build"/>
+            <arg value="--deployCartridges" />
+            <arg value="--code-version=${buildVersion}" if:set="buildVersion" />
+            <arg value="--cartridge=${cartridge}" if:set="cartridge" />
+            <arg value="--client-id=${clientId}" if:set="clientId" />
+            <arg value="--client-secret=${clientSecret}" if:set="clientSecret" />
+            <arg value="--self-signed=${selfSigned}" if:set="selfSigned" />
+            <arg value="--p12=${twoFactorp12}" if:set="twoFactorp12" />
+            <arg value="--passphrase=${twoFactorPassword}" if:set="twoFactorPassword" />
+            <arg value="--hostname=${hostname}" if:set="hostname" />
+            <arg value='--deploy-hostname="${deployHostname}"' if:set="deployHostname" />
+            <arg value="--cert-hostname=${certHostname}" if:set="certHostname" />
+            <arg value="--activation-hostname=${activationHostname}" if:set="activationHostname" />
+            <arg value="--version-cartridge-name=${versionCartridgeName}" if:set="versionCartridgeName" />
+        </exec>
+        <echo level="info">Upload complete!</echo>
+    </target>
+
+    <target name="uploadCodeOnly">
+        <echo level="info">Upload in progress...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg line='node build --deployCartridges' />
+            <arg value='--code-version=${buildVersion}' if:set="buildVersion" />
+            <arg value='--cartridge="${cartridge}"' if:set="cartridge" />
+            <arg value='--client-id=${clientId}' if:set="clientId" />
+            <arg value='--client-secret=${clientSecret}' if:set="clientSecret" />
+            <arg value='--self-signed=${selfSigned}' if:set="selfSigned" />
+            <arg value='--p12=${twoFactorp12}' if:set="twoFactorp12" />
+            <arg value='--passphrase=${twoFactorPassword}' if:set="twoFactorPassword" />
+            <arg value='--hostname=${hostname}' if:set="hostname" />
+            <arg value='--deploy-hostname="${deployHostname}"' if:set="deployHostname" />
+            <arg value='--cert-hostname="${certHostname}"' if:set="certHostname" />
+            <arg value='--activation-hostname="${activationHostname}"' if:set="activationHostname" />
+            <arg value='--version-cartridge-name=${versionCartridgeName}' if:set="versionCartridgeName" />
+            <arg value='--upload-only' />
+        </exec>
+        <exec executable="node" osfamily="unix" failonerror="true">
+            <arg value="build"/>
+            <arg value="--deployCartridges" />
+            <arg value="--code-version=${buildVersion}" if:set="buildVersion" />
+            <arg value="--cartridge=${cartridge}" if:set="cartridge" />
+            <arg value="--client-id=${clientId}" if:set="clientId" />
+            <arg value="--client-secret=${clientSecret}" if:set="clientSecret" />
+            <arg value="--self-signed=${selfSigned}" if:set="selfSigned" />
+            <arg value="--p12=${twoFactorp12}" if:set="twoFactorp12" />
+            <arg value="--passphrase=${twoFactorPassword}" if:set="twoFactorPassword" />
+            <arg value="--hostname=${hostname}" if:set="hostname" />
+            <arg value='--deploy-hostname="${deployHostname}"' if:set="deployHostname" />
+            <arg value="--cert-hostname=${certHostname}" if:set="certHostname" />
+            <arg value="--activation-hostname=${activationHostname}" if:set="activationHostname" />
+            <arg value="--version-cartridge-name=${versionCartridgeName}" if:set="versionCartridgeName" />
+            <arg value='--upload-only="true"' />
+        </exec>
+        <echo level="info">Upload complete!</echo>
+    </target>
+
+    <target name="zipCode">
+        <echo level="info">prepaing code build progress...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg line='node build --deployCartridges' />
+            <arg value='--code-version=${buildVersion}' if:set="buildVersion" />
+            <arg value='--version-cartridge-name=${versionCartridgeName}' if:set="versionCartridgeName" />
+            <arg value='--skip-upload=true' />
+        </exec>
+        <exec executable="node" osfamily="unix" failonerror="true">
+            <arg value='build'/>
+            <arg value='--deployCartridges' />
+            <arg value='--code-version="${buildVersion}"' if:set="buildVersion" />
+            <arg value='--version-cartridge-name="${versionCartridgeName}"' if:set="versionCartridgeName" />
+            <arg value='--skip-upload=true' />
+        </exec>
+        <echo level="info">Code build complete!</echo>
+    </target>
+
+    <target name="css">
+        <echo level="info">Running CSS build task for ${os.name} in ${basedir}</echo>
+        <echo level="info">Sass Linter running...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='npm run mtd_lint scss -- --lint-no-cache'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_lint scss -- --lint-no-cache"/>
+        </exec>
+        <echo level="info">Sass Linter Successful</echo>
+        <echo level="info"></echo>
+
+        <echo level="info">Sass build running...</echo>
+        <echo level="info">Using build environment properties defined within the buildEnvironment.production object of the root package.json file. </echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='npm run mtd_compile:scss:prod'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_compile:scss:prod"/>
+        </exec>
+        <echo level="info">Styles build done!</echo>
+    </target>
+
+    <target name="js">
+        <echo level="info">Client JavaScript Linter running...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='npm run mtd_lint client-js -- --lint-no-cache'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_lint client-js -- --lint-no-cache"/>
+        </exec>
+        <echo level="info">Client JavaScript Linter Successful</echo>
+        <echo level="info">
+        </echo>
+        <echo level="info">Client JavaScript build running...</echo>
+        <echo level="info">Using build environment properties defined within the buildEnvironment.production object of the root package.json file. </echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='npm run mtd_compile:js:prod'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_compile:js:prod"/>
+        </exec>
+        <echo level="info">Client JavaScript build done!</echo>
+    </target>
+
+    <target name="fonts">
+        <echo level="info">Fonts build running...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='npm run mtd_compile:fonts'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_compile:fonts"/>
+        </exec>
+        <echo level="info">Client JavaScript build done!</echo>
+    </target>
+
+    <target name="server-js">
+        <echo level="info">Server JavaScript Linter running...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='npm run mtd_lint server-js -- --lint-no-cache'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_lint server-js -- --lint-no-cache"/>
+        </exec>
+        <echo level="info">Server JavaScript Linter Successful</echo>
+    </target>
+
+    <target name="cover">
+        <echo level="info">Test coverage running...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg value='node build --cover'/>
+        </exec>
+        <exec executable="/bin/bash" osfamily="unix" failonerror="true">
+            <arg value="-c"/>
+            <arg value="export PATH=/usr/local/bin:$PATH; npm run mtd_cover"/>
+        </exec>
+        <echo level="info">Test coverage complete!</echo>
+    </target>
+    <target name="deploy-data">
+        <echo level="info">Data deployment in progress...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg line='node --max-old-space-size=3048 build --deploy-data' />
+            <arg value='--code-version="${buildVersion}"' if:set="buildVersion" />
+            <arg value='--cartridge="${cartridge}"' if:set="cartridge" />
+            <arg value='--username="${user}"' if:set="user" />
+            <arg value='--password="${password}"' if:set="password" />
+            <arg value='--self-signed="${selfSigned}"' if:set="selfSigned" />
+            <arg value='--p12="${twoFactorp12}"' if:set="twoFactorp12" />
+            <arg value='--passphrase="${twoFactorPassword}"' if:set="twoFactorPassword" />
+            <arg value='--hostname="${hostname}"' if:set="hostname" />
+            <arg value='--cert-hostname="${certHostname}"' if:set="certHostname" />
+            <arg value='--activation-hostname="${activationHostname}"' if:set="activationHostname" />
+            <arg value='--data-bundle="${dataBundle}"' if:set="dataBundle" />
+        </exec>
+        <exec executable="node" osfamily="unix" failonerror="true">
+            <arg value='--max-old-space-size=3048'/>
+            <arg value='build'/>
+            <arg value='--deploy-data' />
+            <arg value='--code-version=${buildVersion}' if:set="buildVersion" />
+            <arg value='--cartridge=${cartridge}' if:set="cartridge" />
+            <arg value='--username=${user}' if:set="user" />
+            <arg value='--password=${password}' if:set="password" />
+            <arg value='--self-signed=${selfSigned}' if:set="selfSigned" />
+            <arg value='--p12=${twoFactorp12}' if:set="twoFactorp12" />
+            <arg value='--passphrase=${twoFactorPassword}' if:set="twoFactorPassword" />
+            <arg value='--hostname=${hostname}' if:set="hostname" />
+            <arg value='--cert-hostname=${certHostname}' if:set="certHostname" />
+            <arg value='--activation-hostname=${activationHostname}' if:set="activationHostname" />
+            <arg value='--data-bundle=${dataBundle}' if:set="dataBundle" />
+        </exec>
+        <echo level="info">Data deployment complete!</echo>
+    </target>
+
+    <target name="system-object-reports">
+        <echo level="info">Creating system object reports...</echo>
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg value="/c"/>
+            <arg line='node build --generate-object-report' />
+            <arg value='--data-bundle=${dataBundle}' if:set="dataBundle" />
+        </exec>
+        <exec executable="node" osfamily="unix" failonerror="true">
+            <arg value='build'/>
+            <arg value='--generate-object-report' />
+            <arg value='--data-bundle=${dataBundle}' if:set="dataBundle" />
+        </exec>
+        <echo level="info">System object reports created!</echo>
+    </target>
+
+</project>

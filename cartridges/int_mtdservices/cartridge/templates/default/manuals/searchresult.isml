@@ -1,0 +1,110 @@
+<!--- TEMPLATENAME: search.isml --->
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/content.css');
+        assets.addJs('/js/manuals.js');
+        var bannerImg = dw.content.ContentMgr.getContent('manuals-banner');
+    </isscript>
+    <div id="manuals-search" <isif condition="${empty(bannerImg.custom.body) || !bannerImg.online}">class="container"</isif>>
+        <iscomment>
+            content asset inserts a style tag to bring in a configurable image
+        </iscomment>
+        <isif condition="${!empty(bannerImg.custom.body) && bannerImg.online}">
+            <isprint value="${bannerImg.custom.body}" encoding="off" />
+            <div class="content-banner mb-2">
+                <div class="hero main-banner">
+                    <div class="hero-text hero-text-left">
+                        <h1 class="display-1">${pdict.mainContent.name}</h1>
+                    </div>
+                </div>
+            </div>
+            <iselse>
+            <div class="hero content-page-image">
+                <h1 class="page-title">${pdict.mainContent.name}</h1>
+            </div>
+        </isif>
+       <div class="container content-asset-container">
+          <!-- dwMarker="content" dwContentID="${pdict.mainContent.UUID}" -->
+          <isprint value="${pdict.mainContent.body}" encoding="off" />
+          <!-- END_dwmarker -->
+       </div>
+
+       <div class="container search-result-criteria mt-3">
+            <h6>${Resource.msg('search.manuals.searchedfor', 'manuals', null)}</h6>
+            <isif condition="${pdict.searchCriteria.model}">
+                <div class="search-value">
+                    ${Resource.msg('search.manuals.modelnumber', 'manuals', null)} ${pdict.searchCriteria.model}
+                </div>
+            </isif>
+            <isif condition="${pdict.searchCriteria.serial}">
+                <div class="search-value">
+                    ${Resource.msg('search.manuals.serialnumber', 'manuals', null)} ${pdict.searchCriteria.serial}
+                </div>
+            </isif>
+       </div>
+
+       <div class="manuals-search-result container">
+            <isif condition="${pdict.manualItems.size() > 0}">
+                <div>
+                    <div class="row d-none d-md-flex">
+                        <div class="label-xl col-12 col-md-2">${Resource.msg('header.column.image', 'manuals', null)}</div>
+                        <div class="label-xl col-12 col-md-2">${Resource.msg('header.column.model', 'manuals', null)}</div>
+                        <div class="label-xl col-12 col-md-4">${Resource.msg('header.column.manual', 'manuals', null)}</div>
+                        <div class="label-xl col-12 col-md-2">${Resource.msg('header.column.formnumber', 'manuals', null)}</div>
+                        <div class="label-xl col-12 col-md-2">${Resource.msg('header.column.viewoptions', 'manuals', null)}</div>
+                    </div>
+                    <isloop items="${pdict.manualModels}" var="modelNumber">
+                        <div class="row">
+                            <div class="col-12 col-md-2">
+                                <label class="d-md-none">${Resource.msg('header.column.image', 'manuals', null)}:</label>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <label class="d-md-none">${Resource.msg('header.column.model', 'manuals', null)}:</label>
+                                ${modelNumber}
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label class="d-md-none">${Resource.msg('header.column.manual', 'manuals', null)}:</label>
+                                ${pdict.manualItems.get(modelNumber)[0].modelDescription}
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <label class="d-md-none">${Resource.msg('header.column.formnumber', 'manuals', null)}:</label>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <label class="d-md-none">${Resource.msg('header.column.viewoptions', 'manuals', null)}:</label>
+                            </div>
+                        </div>
+                        <isloop items="${pdict.manualItems.get(modelNumber)}" var="manualItem">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="d-md-none">${Resource.msg('header.column.image', 'manuals', null)}:</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="d-md-none">${Resource.msg('header.column.model', 'manuals', null)}:</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="d-md-none">${Resource.msg('header.column.manual', 'manuals', null)}:</label>
+                                    ${manualItem.itemDescription}
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="d-md-none">${Resource.msg('header.column.formnumber', 'manuals', null)}:</label>
+                                    ${manualItem.itemNumber}
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="d-md-none">${Resource.msg('header.column.viewoptions', 'manuals', null)}:</label>
+                                    <a href="javascript:void(0)" class="manual-download-link" data-href="${manualItem.manualPDfURL}">
+                                        ${Resource.msg('download.pdf', 'manuals', null)}
+                                    </a>
+                                </div>
+                             </div>
+                         </isloop>
+                    </isloop>
+                </div>
+            <isinclude template="manuals/downloadagreement" />
+            <iselse>
+                <div>${Resource.msg('search.manuals.notfound', 'manuals', null)}</div>
+            </isif>
+
+       </div>
+    </div>
+</isdecorate>

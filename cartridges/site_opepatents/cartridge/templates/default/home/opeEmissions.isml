@@ -1,0 +1,3 @@
+<link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/css/ope-emissions.css')}" />
+
+<isslot id="ope-emissions-page" description="OPE Emissions page on OPE Patents site" context="global" />

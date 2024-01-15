@@ -1,0 +1,6 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<div class="badge-row">
+    <isloop items="${product.productBadge}" var="badge" end="1">
+        <iscontentasset aid="${badge}" />
+    </isloop>
+</div>

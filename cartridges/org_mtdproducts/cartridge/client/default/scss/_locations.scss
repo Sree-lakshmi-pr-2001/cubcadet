@@ -1,0 +1,41 @@
+.locations {
+    #map {
+        height: 450px;
+        width: 100%;
+    }
+
+    .content {
+        &.group {
+            img {
+                padding-top: 50px;
+                width: 100%;
+            }
+
+            .img-msg {
+                padding-top: 10px;
+                text-align: center;
+            }
+        }
+
+        &.one {
+            padding-top: 50px;
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .content {
+            &.group {
+                img {
+                    padding-top: 0;
+                    width: 425px;
+                }
+            }
+
+            &.one {
+                text-align: left;
+            }
+        }
+    }
+}

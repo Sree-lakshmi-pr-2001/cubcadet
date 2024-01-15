@@ -1,0 +1,60 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+    </isscript>
+
+            <div class="news">
+                <div class="jumbotron jumbotron-fluid">
+                   <isslot id="folder-slot-hero" description="hero slot for news pages" context="folder" context-object="${pdict.contentSearch.folder}">
+                </div>
+                <div class="content group one container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <div class="row lt">
+                                <div class="col-12 button">
+                                    <a class="btn btn-primary btn-lg" href="${URLUtils.url('Search-ShowContent', 'fdid', 'news-archive-assets', 'sort', 'postedDate')}" role="button">Archive News</a>
+                                </div>
+                                <div class="col-12 button">
+                                    <a class="btn btn-primary btn-lg" href="${URLUtils.url('Search-Show', 'cgid', 'product-recalls')}" role="button">Product Recalls</a>
+                                </div>
+                                <div class="col-12 linkedin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-9">
+                            <isloop items="${pdict.contentSearch.contents}" var="asset" status="loopstatus">
+                                <isif condition="${asset != null}">
+                                    <isif condition="${loopstatus.count > 3}">
+                                        <isbreak>
+                                    </isif>
+                                </isif>
+                                <isscript>
+                                    var getContentTileImageURLs = require('*/cartridge/scripts/helpers/contentTileHelpers').getContentTileImageURLs;
+
+                                    var videoClass = asset.custom.video ? 'video-with-icon' : '';
+                                    var assetURL = asset.hasOwnProperty('url') && asset.url !== null ? asset.url : URLUtils.url('Page-Show', 'cid', asset.ID);
+                                    var imageURLs = getContentTileImageURLs(asset);
+                                </isscript>
+                                <a href="${assetURL}">
+                                    <div class="row article-card">
+                                        <div class="col-12 col-md-4 pl-0">
+                                            <div class="d-flex justify-content-center justify-content-md-start">
+                                                <img src="${imageURLs.original}" class="img-fluid" alt="${asset.name}">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="date"><isprint value="${asset.custom.postedDate}" style="DATE_LONG" timezone="INSTANCE"></div>
+                                            <div class="title"><isprint value="${asset.name}"/></div>
+                                            <div class="synopsis"><isprint value="${asset.description}"/></div>
+                                        </div>
+                                        <div class="line-break"></div>
+                                    </div>
+                                </a>
+                            </isloop>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</isdecorate>

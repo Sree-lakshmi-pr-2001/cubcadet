@@ -1,0 +1,26 @@
+<isif condition="${lineItem.bonusProducts.length === 0 || lineItem.bonusProducts.length < lineItem.discountLineItems.length}">
+    <iscomment> If the user qualifies for a bonus but has not selected it, display the select button </iscomment>
+    <isloop items="${lineItem.discountLineItems}" var="discountLineItem" status="loopstatus" begin="${lineItem.bonusProducts.length}">
+
+        <div
+            class="card bonus-product-button"
+            data-duuid="${discountLineItem.uuid}"
+            data-pliuuid="${discountLineItem.pliuuid}"
+            data-maxpids="${discountLineItem.maxpids}"
+            data-pageStart="0"
+            data-pageSize="0"
+            data-url="${discountLineItem.url}"
+        >
+            <button class="btn btn-outline-secondary">${discountLineItem.msg}</button>
+        </div>
+
+    </isloop>
+</isif>
+
+<isloop items="${lineItem.bonusProducts}" var="productLineItem" status="loopstate">
+    <isif condition="${loopstate.first}">
+        <isset name="isPlural" value="${lineItem.bonusProducts.length > 1 ? 's' : ''}" scope="page" />
+        <div class="bonus-line-item-msg">${Resource.msgf('text.lineitem.bonus.msg', 'cart', null, isPlural)}:</div>
+    </isif>
+    <isinclude template="cart/productCard/cartNestedBonusProductCard" />
+</isloop>

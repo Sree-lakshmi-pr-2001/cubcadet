@@ -1,0 +1,19 @@
+<div class="related-blog-tile-caro kc-article row">
+    <isloop items="${pdict.assets}" var="asset">
+        <div class="blog-tile content-tile card">
+            <iscomment> Image </iscomment>
+            <isinclude template="content/components/contentTileImage" />
+
+            <iscomment> CTA Title </iscomment>
+            <isinclude template="content/components/contentTileCTATitle" />
+        </div>
+    </isloop>
+</div>
+
+<isif condition="${pdict.content.relatedProducts.length > 1}">
+    <div class="blog-tile-slider-controls slider-controls controls-center">
+        <span class="slide-prev"></span>
+        <div class="slide-dots"></div>
+        <span class="slide-next"></span>
+    </div>
+</isif>

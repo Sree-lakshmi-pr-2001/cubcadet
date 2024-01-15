@@ -1,0 +1,58 @@
+<isdecorate template="common/layout/epcot">
+    <script>
+        document.getElementById('pageName').value= 'productSearch';
+    </script>
+    <isinclude template="checkout/include/accordions.isml"/>
+    <div class="row">
+        <div class="col-md-12">
+            <iscomment> <isinclude template="checkout/include/mini_cart.isml"/> </iscomment>
+            <isinclude template="checkout/include/product_search_form.isml"/>
+        </div>
+        <div class="col-md-12">
+            <div id="productResults" class="productResults">
+
+            </div>
+
+            <template id="product-search-row-template">
+                <form id="GW-1128-1">
+                    <div class="row p-2 bg-white border rounded mt-2">
+                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image prodImage productImage" /></div>
+                        <div class="col-md-6 mt-1">
+                            <h5 class="productName"></h5>
+                            <div class="d-flex flex-row">
+                                <div class="ratings mr-2 productSku"></div>
+                            </div>
+
+                            <p class="text-justify para mb-0 longDescription"></p>
+
+                            <p class="text-justify para mb-0 productReplaces"></p>
+
+                        </div>
+                        <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                            <div class="d-flex flex-row align-items-center">
+                                <h4 class="mr-1 price">No Price</h4>
+                            </div>
+                            <h6 class="text-failure notAvailable"></h6>
+                            <h6 class="text-success freeFreight"></h6>
+                            <h6 class="text-success ltl"></h6>
+                            <h6 class="text-success stock"></h6>
+                            <h6 class="productExp"></h6>
+                            <h6 class="dealerFulfillment"></h6>
+                            <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm addToCartbutton" type="button">Add to Cart</button></div>
+                            <label class="quantityLabel">Quantity : </label><input class="productQuantity" type="number" name="quantity" value="1" size="5"/>
+                            <h6 class="text-failure addToCartStatus"></h6>
+                        </div
+                    </div>
+                </form>
+            </template>
+        </div>
+        <div class="col-md-12">
+            <isinclude template="checkout/include/mini_cart.isml"/>
+            
+        </div>
+    </div>
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/epcot-minicart.js');
+    </isscript>
+</isdecorate>

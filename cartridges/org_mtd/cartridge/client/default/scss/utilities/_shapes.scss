@@ -1,0 +1,39 @@
+@mixin circle($diameter, $color) { // Source:  https://gist.github.com/kogakure/4769904
+    border: 0.063em solid rgba(0, 0, 0, 0.3);
+    width: $diameter;
+    height: $diameter;
+    background: $color;
+    -moz-border-radius: $diameter/2;
+    border-radius: $diameter/2;
+}
+
+@mixin triangle($size: 10px, $direction: down, $color: $primary) { // Source:  https://gist.github.com/kogakure/4769904
+    width: 0;
+    height: 0;
+
+    @if $direction == up {
+        border-left: $size solid $trans;
+        border-right: $size solid $trans;
+        border-bottom: $size solid $color;
+    }
+
+    @else if $direction == down {
+        border-left: $size solid $trans;
+        border-right: $size solid $trans;
+        border-top: $size solid $color;
+    }
+
+    @else if $direction == left {
+        border-left: $size solid $color;
+        border-right: $size solid $trans;
+        border-bottom: $size solid $trans;
+        transform: rotate(-45deg);
+    }
+
+    @else if $direction == right {
+        border-left: $size solid $trans;
+        border-right: $size solid $color;
+        border-bottom: $size solid $trans;
+        transform: rotate(45deg);
+    }
+}

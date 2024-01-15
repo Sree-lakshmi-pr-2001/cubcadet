@@ -1,0 +1,45 @@
+<div class="col-12 store-search">
+    <div class="alert alert-danger geocoding-error hidden"><isprint value="${pdict.storeSearchAddressErrorMessage}" encoding="off" /></div>
+    <div class="row search-msg-1 m-0 p-3">
+        <iscontentasset aid="store-locator-message-1">
+    </div>
+    <div class="row mb-2 mb-sm-3 pt-3">
+        <div class="col-12 col-md-6 btn-col d-flex align-items-center justify-content-center justify-content-md-end">
+            <p class="sr-only">${Resource.msg('msg.find.store','storeLocator',null)}</p>
+            <button type="submit" class="btn btn-secondary btn-block detect-location" data-action="${pdict.stores.actionUrl}">
+                ${Resource.msg('button.use.my.location','storeLocator',null)}
+            </button>
+        </div>
+        <div class="col-12 col-md-6">
+            <form action="${pdict.stores.actionUrl}" class="store-locator" method="get" name="storelocator">
+                <div class="d-flex justify-content-xs-between sl-form">
+                    <div class="form-group required sl-zip dealer-locator">
+                        <label class="form-control-label" for="store-postal-code">${Resource.msg('field.address.zip.postal.code','storeLocator',null)}</label>
+                        <input autofocus required type="text" class="form-control" id="store-postal-code" name="address" value="" autocomplete="nofill"/>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="sl-radius">
+                        <isinclude template="storeLocator/storeLocatorRadius" />
+                    </div>
+
+                    <isif condition="${'retailerIds' in pdict && pdict.retailerIds !== ''}">
+                        <input type="hidden" value="${pdict.retailerIds}" class="productFrom" id="productFrom" />
+                    </isif>
+                    <isif condition="${'productType' in pdict && pdict.productType !== ''}">
+                        <input type="hidden" value="${pdict.productType}" class="productType" id="productType" />
+                    </isif>
+
+                    <div class="sl-btn dealer-locator">
+                        <button class="btn btn-secondary btn-storelocator-search btn-sm" type="submit">
+                            ${Resource.msg('button.find.stores','storeLocator',null)}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row search-msg-2 m-0 p-3">
+        <iscontentasset aid="store-locator-message-2">
+    </div>
+</div>

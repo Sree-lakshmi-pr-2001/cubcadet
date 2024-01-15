@@ -1,0 +1,38 @@
+ <isif condition="${'billingForm' in pdict.forms && pdict.forms.billingForm}">
+    <isset name="financeFields" value="${pdict.forms.billingForm.financeCardFields}" scope="page"/>
+ </isif>
+
+ <isloop items="${pdict.financePlans}" var="plan">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="form-control custom-control-input" id="financePlanId_${plan.planId}"
+                            value="${plan.planId}"
+                            name="${financeFields.planId.htmlName}"
+                            <isif condition="${pdict.selectedFinancePlanId === plan.planId}">checked</isif>
+                            <isif condition="${!plan.isPlanApplicable}">disabled</isif>
+                                encoding="off"/>
+                    <label class="form-control-label custom-control-label finance-radio" for="financePlanId_${plan.planId}">
+                        <div class="label-text">
+                            <div class="label-title">${plan.name}<isif condition="${!empty(plan.ss)}"><sup>${plan.ss}</sup></isif>
+                            </div>
+                            <div class="label-disclaimer">
+                                <isif condition="${plan.type === 'deferred'}">
+                                    <isprint value="${Resource.msgf('finance.plan.deferred','checkout', null, plan.minimumSpend)}" encoding="off" />
+                                <iselseif condition="${plan.type === 'apr'}">
+                                    <isprint value="${Resource.msgf('finance.plan.apr','checkout', null, plan.minimumSpend, plan.processFee)}" encoding="off" />
+                                <iselseif condition="${plan.type === 'standard'}">
+                                    <isprint value="${Resource.msgf('finance.plan.standard','checkout', null, plan.apr)}" encoding="off" />
+                                </isif>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" data-url="${URLUtils.url('FinancingApplication-Disclosure')}" data-title="${Resource.msg('finance.details.title','checkout',null)}" class="td-payment-details">
+                            ${Resource.msg('finance.see.details','checkout',null)}
+                        </a>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</isloop>

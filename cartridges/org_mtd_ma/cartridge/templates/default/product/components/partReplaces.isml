@@ -1,0 +1,9 @@
+<isset name="replacePartsStr" value="${product.raw.custom['replaces-parts'].split(/[ ,]+/)}" scope="page"/>
+<span class="part-replaces-text font-weight-bold">${Resource.msgf('text.partreplaces', 'product', null, ' ')}</span>
+<ul class="part-replaces-list list-unstyled">
+    <isloop items="${replacePartsStr}" var="partNumber" status="attributeStatus">
+        <li>
+            ${partNumber}
+        </li>
+    </isloop>
+</ul>

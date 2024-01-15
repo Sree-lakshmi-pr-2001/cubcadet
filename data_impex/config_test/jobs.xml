@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="CommunicationHandlers-Init" priority="0">
+        <description>For developer use, used to recreate communication handler configurations</description>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_139"/>
+            </flow>
+            <flow-template template-id="template_139">
+                <step step-id="communicationhandlers-init" type="custom.CommunicationHandlers-Init" enforce-restart="false">
+                    <description/>
+                    <parameters/>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>08:25:07.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="Export-Orders MTDParts CA" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdpartsca"/>
+                <template-ref template-id="template_97"/>
+            </flow>
+            <flow>
+                <context site-id="mtdpartsca"/>
+                <template-ref template-id="template_97"/>
+            </flow>
+            <flow-template template-id="template_97">
+                <step step-id="Order-Export MTDParts CA" type="ExportOrders" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="FileNamePrefix">upload/orders/mtdpartsca/</parameter>
+                        <parameter name="OverwriteExportFile">true</parameter>
+                        <parameter name="Created">true</parameter>
+                        <parameter name="New">true</parameter>
+                        <parameter name="Open">true</parameter>
+                        <parameter name="Completed">true</parameter>
+                        <parameter name="Failed">true</parameter>
+                        <parameter name="Canceled">true</parameter>
+                        <parameter name="Replaced">true</parameter>
+                        <parameter name="Use Order Export Delay">true</parameter>
+                        <parameter name="Confirmation Status">All</parameter>
+                        <parameter name="Shipment Status">All</parameter>
+                        <parameter name="Payment Status">All</parameter>
+                        <parameter name="Export Status">Ready for Export</parameter>
+                    </parameters>
+                    <rules>
+                        <on-exit status="ERROR">
+                            <stop-job/>
+                        </on-exit>
+                    </rules>
+                </step>
+            </flow-template>
+        </split>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Order-Upload" type="custom.CSComponents.FtpUpload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+.xml$</parameter>
+                    <parameter name="SourceFolder">src/upload/orders/mtdpartsca/</parameter>
+                    <parameter name="TargetFolder">/commerceshared/staging/orders/mtdpartsca</parameter>
+                    <parameter name="ArchiveFolder">src/upload/orders/mtdpartsca/archive</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-11-12Z</date-from>
+                    <start-time>20:01:19.000Z</start-time>
+                    <interval>5m</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Export-Orders MTDParts US" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_97"/>
+            </flow>
+            <flow>
+                <context site-id="mtdpartsca"/>
+                <template-ref template-id="template_97"/>
+            </flow>
+            <flow-template template-id="template_97">
+                <step step-id="Order-Export MTDParts US" type="ExportOrders" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="FileNamePrefix">upload/orders/mtdparts/</parameter>
+                        <parameter name="OverwriteExportFile">true</parameter>
+                        <parameter name="Created">true</parameter>
+                        <parameter name="New">true</parameter>
+                        <parameter name="Open">true</parameter>
+                        <parameter name="Completed">true</parameter>
+                        <parameter name="Failed">true</parameter>
+                        <parameter name="Canceled">true</parameter>
+                        <parameter name="Replaced">true</parameter>
+                        <parameter name="Use Order Export Delay">true</parameter>
+                        <parameter name="Confirmation Status">All</parameter>
+                        <parameter name="Shipment Status">All</parameter>
+                        <parameter name="Payment Status">All</parameter>
+                        <parameter name="Export Status">Ready for Export</parameter>
+                    </parameters>
+                    <rules>
+                        <on-exit status="ERROR">
+                            <stop-job/>
+                        </on-exit>
+                    </rules>
+                </step>
+            </flow-template>
+        </split>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Order-Upload" type="custom.CSComponents.FtpUpload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+.xml$</parameter>
+                    <parameter name="SourceFolder">src/upload/orders/mtdparts/</parameter>
+                    <parameter name="TargetFolder">/commerceshared/staging/orders/mtdparts</parameter>
+                    <parameter name="ArchiveFolder">src/upload/orders/mtdparts/archive</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2018-11-05Z</date>
+                <time>17:01:40.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="Google Feed 2.0" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="mtdparts"/>
+            <step step-id="generate" type="custom.GenerateGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+            <step step-id="upload" type="custom.UploadGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+            <step step-id="archive" type="custom.ArchiveGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+            <step step-id="cleanup archive" type="custom.CleanupGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-03-10Z</date-from>
+                    <start-time>00:15:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import-Catalog MTDParts CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Catalog Files MTDParts CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/catalogs/mtdpartsca/</parameter>
+                    <parameter name="TargetFolder">src/download/catalogs/mtdpartsca</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Catalog File(s) MTDParts CA" type="ImportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/catalogs/mtdpartsca</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/catalogs/mtdpartsca/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+            </on-running>
+            <on-exit status="ERROR" enabled="false">
+                <send-mail>
+                    <from>sfcc-jobs-staging@mtd.com</from>
+                    <to>mspaly@lyonscg.com</to>
+                    <cc>mspaly@lyonscg.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import-Catalog MTDParts US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Catalog Files MTDParts US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/catalogs/mtdparts/</parameter>
+                    <parameter name="TargetFolder">src/download/catalogs/mtdparts</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Catalog File(s)" type="ImportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/catalogs/mtdparts</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/catalogs/mtdparts/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+            </on-running>
+            <on-exit status="ERROR" enabled="false">
+                <send-mail>
+                    <from>sfcc-jobs-staging@mtd.com</from>
+                    <to>mspaly@lyonscg.com</to>
+                    <cc>mspaly@lyonscg.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import-Inventory MTDParts CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Inventory MTDParts CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">.+.xml</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/pricebooks/mtdpartsca/</parameter>
+                    <parameter name="TargetFolder">src/download/inventory/mtdpartsca</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Inventory MTDParts CA" type="custom.CSComponents.ImportInventoryLists" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SourceFolder">src/download/inventory/mtdpartsca</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="FileAction">ARCHIVE</parameter>
+                    <parameter name="ImportMode">MERGE</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                    <parameter name="OnError">CONTINUE</parameter>
+                    <parameter name="ArchivePath">src/download/inventory/mtdpartsca/archive</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+            </on-running>
+            <on-exit status="ERROR" enabled="false">
+                <send-mail>
+                    <from>staging-jobs@mtdpartsca.com</from>
+                    <to>mspaly@lyonscg.com</to>
+                    <cc>mspaly@lyonscg.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-11-12Z</date-from>
+                    <start-time>20:15:58.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import-Inventory MTDParts US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Inventory File(s) MTDParts US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/inventory/mtdparts/</parameter>
+                    <parameter name="TargetFolder">src/download/inventory/mtdparts</parameter>
+                    <parameter name="DeleteRemoteFiles">false</parameter>
+                    <parameter name="NoFileFoundStatus">ERROR</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Inventory MTDParts US" type="custom.CSComponents.ImportInventoryLists" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SourceFolder">src/download/inventory/mtdparts</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="FileAction">ARCHIVE</parameter>
+                    <parameter name="ImportMode">MERGE</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                    <parameter name="OnError">CONTINUE</parameter>
+                    <parameter name="ArchivePath">src/download/inventory/mtdparts/archive</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdparts.com</from>
+                    <to>mspaly@lyonscg.com</to>
+                    <cc>mspaly@lyonscg.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-11-12Z</date-from>
+                    <start-time>20:15:12.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import-Pricebooks MTDParts CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Pricebook Files MTDParts CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/pricebooks/mtdpartsca/</parameter>
+                    <parameter name="TargetFolder">src/download/pricebooks/mtdpartsca</parameter>
+                    <parameter name="DeleteRemoteFiles">false</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Pricebook File(s) MTDParts CA" type="ImportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/pricebooks/mtdpartsca</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/pricebooks/mtdpartsca/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+            </on-running>
+            <on-exit status="ERROR" enabled="false">
+                <send-mail>
+                    <from>sfcc-jobs-staging@mtd.com</from>
+                    <to>mspaly@lyonscg.com</to>
+                    <cc>mspaly@lyonscg.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:15:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import-Pricebooks MTDParts US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Pricebook Files MTDParts US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/pricebooks/mtdparts/</parameter>
+                    <parameter name="TargetFolder">src/download/pricebooks/mtdparts</parameter>
+                    <parameter name="DeleteRemoteFiles">false</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Pricebook File(s) MTDParts US" type="ImportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/pricebooks/mtdparts</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/pricebooks/mtdparts/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+            </on-running>
+            <on-exit status="ERROR" enabled="false">
+                <send-mail>
+                    <from>sfcc-jobs-staging@mtd.com</from>
+                    <to>mspaly@lyonscg.com</to>
+                    <cc>mspaly@lyonscg.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:15:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-CompileMappingTemplates" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="mtdparts"/>
+            <step step-id="mcc-compile-datafeed-templates" type="custom.MCC-CompileMappingTemplates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ObjectType">DataFeeds</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-compile-trigger-templates" type="custom.MCC-CompileMappingTemplates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ObjectType">Triggers</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-compile-analytic-templates" type="custom.MCC-CompileMappingTemplates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ObjectType">Analytics</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-10-03Z</date>
+                <time>05:03:15.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Catalog" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="mtdparts"/>
+            <step step-id="mcc-feed-exportCatalog" type="custom.MCC-Feed-ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExportID">catalogFeed</parameter>
+                    <parameter name="ExportFileName">catalogFeed.psv</parameter>
+                    <parameter name="Delimiter">|</parameter>
+                    <parameter name="IncrementalExport">false</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-feed-uploadcatalog" type="custom.MCC-Feed-UploadCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                    <parameter name="ExportFileName">catalogFeed.psv</parameter>
+                    <parameter name="TargetPath">/Import/</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-05-30Z</date>
+                <time>20:17:25.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Content" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="mtdparts"/>
+            <step step-id="mcc-feed-exportContent" type="custom.MCC-Feed-ExportContent" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExportID">contentFeed</parameter>
+                    <parameter name="ExportFileName">contentFeed.psv</parameter>
+                    <parameter name="Delimiter">|</parameter>
+                    <parameter name="IncrementalExport">false</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-feed-uploadcontent" type="custom.MCC-Feed-UploadContent" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                    <parameter name="ExportFileName">contentFeed.psv</parameter>
+                    <parameter name="TargetPath">/Import/</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-05-30Z</date>
+                <time>20:17:25.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Customers" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_77"/>
+            </flow>
+            <flow-template template-id="template_77">
+                <step step-id="mcc-feed-exportcustomers" type="custom.MCC-Feed-ExportCustomers" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExportID">customersFeed</parameter>
+                        <parameter name="ExportFileName">customersFeed.psv</parameter>
+                        <parameter name="Delimiter">|</parameter>
+                        <parameter name="IncrementalExport">false</parameter>
+                    </parameters>
+                </step>
+                <step step-id="mcc-feed-uploadcustomers" type="custom.MCC-Feed-UploadCustomers" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                        <parameter name="ExportFileName">customersFeed.psv</parameter>
+                        <parameter name="TargetPath">/Import/</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>15:41:10.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Orders" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_59"/>
+            </flow>
+            <flow-template template-id="template_59">
+                <step step-id="mcc-feed-exportorders" type="custom.MCC-Feed-ExportOrders" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExportID">ordersFeed</parameter>
+                        <parameter name="ExportFileName">ordersFeed.psv</parameter>
+                        <parameter name="Delimiter">|</parameter>
+                        <parameter name="IncrementalExport">false</parameter>
+                    </parameters>
+                </step>
+                <step step-id="mcc-feed-uploadorders" type="custom.MCC-Feed-UploadOrders" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                        <parameter name="ExportFileName">ordersFeed.psv</parameter>
+                        <parameter name="TargetPath">/Import/</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>15:37:40.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Promotions" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_59"/>
+            </flow>
+            <flow-template template-id="template_59">
+                <step step-id="mcc-feed-exportpromotions" type="custom.MCC-Feed-ExportPromotions" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExportID">promotionsFeed</parameter>
+                        <parameter name="ExportFileName">promotionsFeed.psv</parameter>
+                        <parameter name="Delimiter">|</parameter>
+                        <parameter name="IncrementalExport">false</parameter>
+                    </parameters>
+                </step>
+                <step step-id="mcc-feed-uploadpromotions" type="custom.MCC-Feed-UploadPromotions" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                        <parameter name="ExportFileName">promotionsFeed.psv</parameter>
+                        <parameter name="TargetPath">/Import/</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>15:37:40.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-InitTriggers" priority="0">
+        <description>For developer use, used to recreate trigger configurations</description>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="mtdparts"/>
+                <template-ref template-id="template_72"/>
+            </flow>
+            <flow-template template-id="template_72">
+                <step step-id="mcc-init-triggers" type="custom.MCC-InitTriggers" enforce-restart="false">
+                    <description/>
+                    <parameters/>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>08:16:12.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="order-status-update-mtdparts" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="mtdparts"/>
+            <step step-id="download-orders" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">OMSPushService</parameter>
+                    <parameter name="FilePattern">.*\.txt</parameter>
+                    <parameter name="SourceFolder">outbox/</parameter>
+                    <parameter name="TargetFolder">upload/mtdparts</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR,NO_FILE_FOUND">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="import-order-status" type="custom.OrderStatusNotify" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="file_location">upload/mtdparts</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2018-08-01Z</date>
+                <time>13:32:24.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="order-status-update-mtdpartsca" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="mtdpartsca"/>
+            <step step-id="download-orders" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">OMSPushService</parameter>
+                    <parameter name="FilePattern">.*\.txt</parameter>
+                    <parameter name="SourceFolder">outbox/</parameter>
+                    <parameter name="TargetFolder">upload/mtdpartsca</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR,NO_FILE_FOUND">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="import-order-status" type="custom.OrderStatusNotify" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="file_location">upload/mtdpartsca</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2018-08-01Z</date>
+                <time>13:32:24.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+    
+    <job job-id="PingChaseServers" priority="0">
+        <description>Check server connectivity.</description>
+        <parameters/>
+        <flow>
+            <context site-id="mtdparts"/>
+            <step step-id="PingServers" type="ExecuteScriptModule" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecuteScriptModule.Module">int_chase/cartridge/scripts/jobs/PingChaseServers.js</parameter>
+                    <parameter name="ExecuteScriptModule.FunctionName">execute</parameter>
+                    <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2018-11-19Z</date-from>
+                    <start-time>22:36:33.000Z</start-time>
+                    <interval>6m</interval>
+                    <day-of-week>
+                        <weekday>Sunday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Wednesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+</jobs>

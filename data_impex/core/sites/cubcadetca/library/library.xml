@@ -1,0 +1,3275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+      <folder folder-id="root">
+        <online-flag>true</online-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">RefArch Online Store</page-title>
+              <page-description xml:lang="x-default">Online shopping with the leader in on-demand eCommerce solutions.</page-description>
+            <page-keywords xml:lang="x-default">new arrivals,mens,womens,electronics</page-keywords>
+        </page-attributes>
+        <refinement-definitions>
+            <refinement-definition type="folder" bucket-type="none">
+                <display-name xml:lang="x-default">Folder</display-name>
+                <sort-mode>folder-position</sort-mode>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+        </refinement-definitions>
+    </folder>
+
+    <folder folder-id="My Customer Service">
+        <display-name xml:lang="x-default">Customer Service</display-name>
+        <description xml:lang="x-default">My Customer Service</description>
+        <online-flag>false</online-flag>
+        <parent>root</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="SearchBanner">
+        <display-name xml:lang="x-default">Search Banner</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="about-us">
+        <display-name xml:lang="x-default">About Commerce Cloud</display-name>
+        <online-flag>true</online-flag>
+        <template>rendering/folder/foldercontenthits</template>
+        <parent>root</parent>
+        <position>0.0</position>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="customCSSFile">css/aboutus.css</custom-attribute>
+        </custom-attributes>
+        <refinement-definitions>
+            <refinement-definition type="folder" bucket-type="none">
+                <display-name xml:lang="x-default">About Us</display-name>
+                <sort-mode>folder-position</sort-mode>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+        </refinement-definitions>
+    </folder>
+
+    <folder folder-id="as-seen-in">
+        <display-name xml:lang="x-default">As Seen In</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <position>3.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="contact-us-new">
+        <display-name xml:lang="x-default">Contact Us</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <position>4.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="employment">
+        <display-name xml:lang="x-default">Join Us</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <position>5.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="our-story">
+        <display-name xml:lang="x-default">Our Story</display-name>
+        <display-name xml:lang="fr-FR">Notre histoire</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <position>0.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="our-team">
+        <display-name xml:lang="x-default">Our Team</display-name>
+        <online-flag>true</online-flag>
+        <parent>about-us</parent>
+        <position>1.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="customer-service">
+        <display-name xml:lang="x-default">Customer Service</display-name>
+        <online-flag>true</online-flag>
+        <template>rendering/folder/foldercontenthits</template>
+        <parent>root</parent>
+        <position>1.0</position>
+        <page-attributes/>
+        <refinement-definitions>
+            <refinement-definition type="folder" bucket-type="none">
+                <display-name xml:lang="x-default">Customer Service</display-name>
+                <sort-mode>value-count</sort-mode>
+                <sort-direction>descending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+        </refinement-definitions>
+    </folder>
+
+    <folder folder-id="contact-us">
+        <display-name xml:lang="x-default">Contact Us</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>2.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="testfolder">
+        <display-name xml:lang="x-default">Test Folder</display-name>
+        <online-flag>true</online-flag>
+        <parent>contact-us</parent>
+        <position>1.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="my-account-information">
+        <display-name xml:lang="x-default">My Account</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>8.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="ordering">
+        <display-name xml:lang="x-default">Ordering</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>4.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="privacy-security">
+        <display-name xml:lang="x-default">Privacy &amp; Security</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>2.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="returns">
+        <display-name xml:lang="x-default">Returns</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>7.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="shippinginfo">
+        <display-name xml:lang="x-default">Shipping</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>5.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="terms">
+        <display-name xml:lang="x-default">Terms &amp; Conditions</display-name>
+        <online-flag>true</online-flag>
+        <parent>customer-service</parent>
+        <position>9.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="page-includes">
+        <display-name xml:lang="x-default">Content Asset Page Includes</display-name>
+        <description xml:lang="x-default">This folder contains all content assets that are included within the Storefront including home page assets, marketing landing page assets etc.</description>
+        <online-flag>false</online-flag>
+        <parent>root</parent>
+        <position>2.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="buying-guide">
+        <display-name xml:lang="x-default">Buying Guides</display-name>
+        <online-flag>false</online-flag>
+        <parent>page-includes</parent>
+        <position>16.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="cart-checkout">
+        <display-name xml:lang="x-default">Cart &amp; Checkout</display-name>
+        <online-flag>false</online-flag>
+        <parent>page-includes</parent>
+        <position>5.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="gift-certificates">
+        <display-name xml:lang="x-default">Gift Certificate Pages</display-name>
+        <display-name xml:lang="fr-FR">Pages ChÃ¨que-cadeau</display-name>
+        <display-name xml:lang="it-IT">Pagine per Certificato regalo</display-name>
+        <display-name xml:lang="ja-JP">ã‚®ãƒ•ãƒˆåˆ¸ãƒšãƒ¼ã‚¸</display-name>
+        <display-name xml:lang="zh-CN">ç¤¼åˆ¸é¡µé¢</display-name>
+        <online-flag>true</online-flag>
+        <parent>page-includes</parent>
+        <position>14.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="grid-banners">
+        <display-name xml:lang="x-default">Grid Page Banners</display-name>
+        <online-flag>false</online-flag>
+        <parent>page-includes</parent>
+        <position>4.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="home-page">
+        <display-name xml:lang="x-default">Home Page</display-name>
+        <online-flag>false</online-flag>
+        <parent>page-includes</parent>
+        <position>1.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="marketing-pages">
+        <display-name xml:lang="x-default">Marketing Landing Pages</display-name>
+        <online-flag>true</online-flag>
+        <parent>page-includes</parent>
+        <position>13.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="my-account">
+        <display-name xml:lang="x-default">My Account</display-name>
+        <online-flag>false</online-flag>
+        <parent>page-includes</parent>
+        <position>8.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="size-charts">
+        <display-name xml:lang="x-default">Size Charts</display-name>
+        <online-flag>false</online-flag>
+        <parent>page-includes</parent>
+        <position>16.0</position>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="top-nav">
+        <display-name xml:lang="x-default">Top Nav</display-name>
+        <description xml:lang="x-default">Holds all the articles</description>
+        <online-flag>false</online-flag>
+        <parent>root</parent>
+        <page-attributes/>
+    </folder>
+
+    <content content-id="2-day-shipping-popup">
+        <display-name xml:lang="x-default">2 Day Shipping Information</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div style="padding:24px 16px 0 16px"&gt;&#13;
+&lt;h2&gt;&amp;nbsp;&lt;span style="color: rgb(86, 79, 71); "&gt;Shipping |&lt;/span&gt;&amp;nbsp;&lt;span style="color: rgb(225, 185, 149);"&gt;Free 2 Day Shipping on Orders over $300&lt;/span&gt;&lt;/h2&gt;&#13;
+&lt;hr /&gt;&#13;
+&lt;h2&gt;Free 2 Day Shipping on Orders over $300&lt;/h2&gt;&#13;
+&lt;p style="text-align: left;"&gt;RefArch is offering Free 2 Day Shipping an any orders over $300 to the contiguous states. Free shipping offer is limited to 2 Day Shipping Only. &lt;em&gt;Free shipping offer not valid for AK, HI, or P.O. Boxes. &lt;/em&gt;Free shipping is determined by the merchandise total after discounts are applied.&lt;/p&gt;&#13;
+&lt;h2&gt;Shipping Bands&lt;/h2&gt;&#13;
+&lt;table class="shippingpromotable" summary="Shipping Promotion Table"&gt;&#13;
+    &lt;tbody&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;Shipment Cost&lt;/th&gt;&#13;
+            &lt;th&gt;UPS Ground&lt;/th&gt;&#13;
+            &lt;th&gt;2nd Day Air&lt;/th&gt;&#13;
+            &lt;th&gt;Next Day Air&lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;$0-$99.99&lt;/th&gt;&#13;
+            &lt;td&gt;$5.99&lt;/td&gt;&#13;
+            &lt;td&gt;$9.99&lt;/td&gt;&#13;
+            &lt;td&gt;$15.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;$100.00 - $199.99&lt;/th&gt;&#13;
+            &lt;td&gt;$7.99&lt;/td&gt;&#13;
+            &lt;td&gt;$11.99&lt;/td&gt;&#13;
+            &lt;td&gt;$19.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;$200.00 - $499.9&lt;/th&gt;&#13;
+            &lt;td&gt;$9.99&lt;/td&gt;&#13;
+            &lt;td&gt;$15.99&lt;/td&gt;&#13;
+            &lt;td&gt;$21.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;$500 +&lt;/th&gt;&#13;
+            &lt;td&gt;$15.99&lt;/td&gt;&#13;
+            &lt;td&gt;$20.99&lt;/td&gt;&#13;
+            &lt;td&gt;$29.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+    &lt;/tbody&gt;&#13;
+&lt;/table&gt;&#13;
+&lt;p style="margin:24px 0 8px 0;"&gt;&lt;strong&gt;Note:&lt;/strong&gt; All televisions must ship using Ground shipping, 2nd Day Air and Next Day Air are not available shipping options for televisions.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="home-page"/>
+        </folder-links>
+    </content>
+
+    <content content-id="404-banner">
+        <display-name xml:lang="x-default">404-banner</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Weâ€™re sorry!&lt;br /&gt;&#13;
+We seem to have misplaced this page: (Page or File Not Found: 404 error). Please try the search function below to help you find what you were looking for.</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="page-includes"/>
+        </folder-links>
+    </content>
+
+    <content content-id="msrp-tooltip">
+        <display-name xml:lang="x-default">MSRP Tooltip</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">MSRP Tooltip Content</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="404-callout">
+        <display-name xml:lang="x-default">404 Callout Message</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">404 Error</page-title>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p style="font-size:1.2em; font-weight:bold;"&gt;Weâ€™re sorry!&lt;/p&gt;&#13;
+&lt;p style="font-size:1.1em; font-weight:bold;"&gt;We seem to have misplaced this page: (Page or File Not Found: 404 error). Please try the search function below to help you find what you were looking for.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="404-service">
+        <display-name xml:lang="x-default">404-service</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div style="height:110px;"&gt;&#13;
+&lt;p style="font-weight:bold;"&gt;If you canâ€™t find what you are looking for, why not let our trained staff recommend something?&lt;/p&gt;&#13;
+&lt;p&gt;Our Customer Service representatives are available now to help. &lt;a href="$httpsUrl(CustomerService-ContactUs)$"&gt;Email us&lt;/a&gt; or call 800-555-0199.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="about-us">
+        <display-name xml:lang="x-default">About Us</display-name>
+        <description xml:lang="x-default">It all started with a series of observations: eCommerce merchandising and marketing innovation is what generates revenue, yet most operations are spending 80% of their budgets simply maintaining current infrastructure. The pace of ecommerce accelerates daily, but most operations are scrambling only to stand still. Merchandisers and marketers are supremely frustrated, spending more time chasing outsourced providers and internal IT organizations than actually merchandising and marketing their own businesses. There had to be a better way...</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;About Us&lt;/h1&gt;&#13;
+&lt;h2&gt;It all started with a series of observations:&lt;/h2&gt;      &#13;
+&lt;ul&gt;&#13;
+&lt;li&gt;eCommerce merchandising and marketing innovation is what generates revenue, yet most operations are spending 80% of their budgets simply maintaining current infrastructure.&lt;/li&gt;&#13;
+&lt;li&gt;The pace of eCommerce accelerates daily, yet most operations are scrambling only to stand still.&lt;/li&gt;&#13;
+&lt;li&gt;Merchandisers and marketers are supremely frustrated, spending more time chasing outsourced providers and internal IT organizations than actually merchandising and marketing their own businesses.&lt;/li&gt;&#13;
+&lt;/ul&gt; &#13;
+&lt;h2&gt;There had to be a better way...&lt;/h2&gt;          &#13;
+&lt;p&gt;So in 2004, we set out to find it. The vision&amp;mdash;then and now&amp;mdash;was clear: bring to market an enterprise-class eCommerce solution that would put more power and innovation in the hands of merchandisers and at the same time would remove the technical costs, risks and complexities of running an ecommerce operation. We took what we knew of great eCommerce merchandising (our founders have been in ecommerce since 1994) and applied to it the then-emerging advancements in Software-as-a-Service architectures and dynamic grid computing. Then we just worked hard. We stayed up late. We drank lots of coffee. And ultimately, in late 2005, we delivered the market&amp;rsquo;s first on-demand enterprise ecommerce platform.&lt;/p&gt;                &#13;
+&lt;h2&gt;Our customers could not be happier with the results.&lt;/h2&gt;       &#13;
+&lt;p&gt;With Commerce Cloud eCommerce, they're spending more time leading with merchandising and marketing. They're in complete control of their site, making changes and launching new storefronts whenever they like. They're spending more time developing their own proprietary innovations (versus building commodity functionality). They receive new software upgrades from Commerce Cloud continuously. And they never ever worry about site uptime, availability and security.&lt;/p&gt;&#13;
+&lt;p&gt;In short, they're free. Free to merchandise. Free to grow. Free to innovate. Free to change. Isn't that how eCommerce is supposed to be?&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&#13;
+For more information please browse our &lt;a title="About Us Content" href="$url(Search-ShowContent,fdid,about-us)$"&gt;About Us&lt;/a&gt; and  &lt;a title="About Us Content" href="$url(Search-ShowContent,fdid,customer-service)$"&gt;Customer Service&lt;/a&gt; pages.&#13;
+&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="about-us"/>
+        </folder-links>
+        <content-detail-page-meta-tag-rules>
+            <page-meta-tag-rule rule-id="cdp-title"/>
+            <page-meta-tag-rule rule-id="cdp-description"/>
+            <page-meta-tag-rule rule-id="cdp-name"/>
+            <page-meta-tag-rule rule-id="cdp-property"/>
+        </content-detail-page-meta-tag-rules>
+    </content>
+
+    <content content-id="account-banner">
+        <display-name xml:lang="x-default">My Account Banner</display-name>
+        <description xml:lang="x-default">Global My Account Banner</description>
+        <online-flag>false</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="my-account"/>
+        </folder-links>
+    </content>
+
+    <content content-id="account-help">
+        <display-name xml:lang="x-default">Create Account Help</display-name>
+        <description xml:lang="x-default">Create Account Help</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">'account-help'</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="my-account"/>
+        </folder-links>
+    </content>
+
+    <content content-id="apo-fpo">
+        <display-name xml:lang="x-default">APO FPO</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p style="margin:5px;font-weight:bold"&gt;Using An APO/FPO Address&lt;/p&gt;&#13;
+&lt;p style="margin:5px"&gt;Commerce Cloud is pleased to support billing and shipping of your order to an Armed Forces APO or FPO address. To take advantage of this service, please enter either APO or FPO in the &amp;quot;City&amp;quot; field. All APO and FPO orders will be shipped via the U.S. Postal Service. &amp;quot;Express&amp;quot; and &amp;quot;Next-Day&amp;quot; service is not available.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+    </content>
+
+    <content content-id="carousel-config-homepage">
+        <display-name xml:lang="x-default">Homepa Carousel Config</display-name>
+        <display-name xml:lang="fr-FR">Config. Carrousel de la page d'accueil </display-name>
+        <display-name xml:lang="it-IT">Config. carosello pagina principale</display-name>
+        <display-name xml:lang="ja-JP">Homepa Carousel Config</display-name>
+        <display-name xml:lang="zh-CN">é¦–é¡µè½¬ç›˜é…ç½®</display-name>
+        <description xml:lang="x-default">Configuration for 3D carousel on home page</description>
+        <description xml:lang="fr-FR">Configuration pour le carrousel 3D de la page d'accueil</description>
+        <description xml:lang="it-IT">Configurazione per carosello 3D sulla pagina iniziale</description>
+        <description xml:lang="ja-JP">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã® 3D ã‚«ãƒ«ãƒ¼ã‚»ãƒ«ç”¨æ§‹æˆ</description>
+        <description xml:lang="zh-CN">é¦–é¡µé…ç½® 3D è½¬ç›˜</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <template>rendering/content/xml</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;DDDCarouselV2&gt;&#13;
+  &lt;Images&#13;
+    CarouselWidth="600"&#13;
+    CarouselCenterLeft="0"&#13;
+    CarouselCenterTop="-35"&#13;
+    CarouselRandomImages="0"&#13;
+    CarouselRenderQuality="3"&#13;
+    CarouselPreloader=""&#13;
+    &#13;
+    BackGroundVisible="true"&#13;
+    BackGroundPath=""&#13;
+    BackGroundTop="0"&#13;
+    BackGroundLeft="0"&#13;
+    &#13;
+    NavigationType="custom"&#13;
+    NavigationSpeed="15"&#13;
+    NavigationButtonsColor="#ff0000"&#13;
+    NavigationButtonsAlpha="80"&#13;
+    NavigationButtonLeftLeft="260"&#13;
+    NavigationButtonLeftTop="330"&#13;
+    NavigationButtonLeftPath="images/flash/cmdLeft.png?$staticlink$"&#13;
+    NavigationButtonRightLeft="440"&#13;
+    NavigationButtonRightTop="330"&#13;
+    NavigationButtonRightPath="images/flash/cmdRight.png?$staticlink$"&#13;
+    &#13;
+    ReflectionVisible="true"&#13;
+    ReflectionAlpha="30"&#13;
+    ReflectionHeight="25"&#13;
+    ReflectionDistance="0"&#13;
+    &#13;
+    EffectsTime="0.5"&#13;
+    EffectCarouselEntry="flytop"&#13;
+    EffectCarouselExit="flytop"&#13;
+    EffectDetailImageEntry="flyleft"&#13;
+    EffectDetailImageExit="flyleft"&#13;
+    EffectContent1Entry="flyleft"&#13;
+    EffectContent1Exit="flyleft"&#13;
+    EffectContent2Entry="flyright"&#13;
+    EffectContent2Exit="flyright"&#13;
+    &#13;
+    HoverGlowEnabled="false"&#13;
+    HoverGlowColor="#ff0000"&#13;
+    HoverGlowAlpha="100"&#13;
+    HoverGlowBlur="32"&#13;
+    HoverGlowStength="2"&#13;
+    HoverGlowQuality="3"&#13;
+    &#13;
+    ToolTipHTML="false"&#13;
+    ToolTipAntiAliasing="false"&#13;
+    ToolTipAlign="left"&#13;
+    ToolTipBold="true"&#13;
+    ToolTipItalic="false"&#13;
+    ToolTipFont="Verdana"&#13;
+    ToolTipFontColor="#ffffff"&#13;
+    ToolTipFontSize="14"&#13;
+    ToolTipLeading="0"&#13;
+    ToolTipUnderline="false"&#13;
+    ToolTipLeft="90"&#13;
+    ToolTipTop="10"&#13;
+    ToolTipWidth="220"&#13;
+    ToolTipHeight="30"&#13;
+    ToolTipBgColor=""&#13;
+    ToolTipBorder="false"&#13;
+    ToolTipBorderColor="#b50000"&#13;
+    ToolTipTopMost="true"&#13;
+    &#13;
+    DetailPageEnabled="false"&#13;
+    DetailImageZoom="100"&#13;
+    DetailImageLeft="20"&#13;
+    DetailImageTop="75"&#13;
+    &#13;
+    Content1HTML="false"&#13;
+    Content1AntiAliasing="false"&#13;
+    Content1Align="left"&#13;
+    Content1Bold="false"&#13;
+    Content1Italic="false"&#13;
+    Content1Font="Verdana"&#13;
+    Content1FontColor="#ffffff"&#13;
+    Content1FontSize="9"&#13;
+    Content1Leading="0"&#13;
+    Content1Underline="false"&#13;
+    Content1Left="38"&#13;
+    Content1Top="50"&#13;
+    Content1Width="120"&#13;
+    Content1Height="25"&#13;
+    Content1TopMost="false"&#13;
+    Content1BgColor=""&#13;
+    Content1Border="false"&#13;
+    Content1BorderColor="#b50000"&#13;
+    &#13;
+    Content2HTML="false"&#13;
+    Content2AntiAliasing="false"&#13;
+    Content2Align="left"&#13;
+    Content2Bold="false"&#13;
+    Content2Italic="false"&#13;
+    Content2Font="Verdana"&#13;
+    Content2FontColor="#dddddd"&#13;
+    Content2FontSize="11"&#13;
+    Content2Leading="0"&#13;
+    Content2Underline="false"&#13;
+    Content2Left="185"&#13;
+    Content2Top="25"&#13;
+    Content2Width="300"&#13;
+    Content2Height="100"&#13;
+    Content2TopMost="false"&#13;
+    Content2BgColor=""&#13;
+    Content2Border="false"&#13;
+    Content2BorderColor="#b50000"  &gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img01.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','womens-footwear')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[Click image to return!]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img02.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img03.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Product-Show','pid','sony-ps3-bundleM','start','1','cgid','electronics-gaming')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img04.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-televisions','prefn1','brand','prefv1','Samsung')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img06.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens-accessories-luggage')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img07.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-digital-media-players','prefn1','brand','prefv1','Apple')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;  &#13;
+  &lt;/Images&gt;&#13;
+&lt;StaticContents&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false"&#13;
+    AntiAliasing="false"&#13;
+    Align="left"&#13;
+    Bold="false"&#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333"&#13;
+    FontSize="11"&#13;
+    Leading="0"&#13;
+    Underline="false"&#13;
+    Left="320"&#13;
+    Top="10"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="true"&#13;
+    VisibleOnDetailPage="false" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false" &#13;
+    AntiAliasing="false"&#13;
+    Align="left" &#13;
+    Bold="false" &#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333" &#13;
+    FontSize="11" &#13;
+    Leading="0"  &#13;
+    Underline="false"&#13;
+    Left="320" &#13;
+    Top="220"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="false"&#13;
+    VisibleOnDetailPage="true" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;    &#13;
+&lt;/StaticContents&gt;&#13;
+&lt;/DDDCarouselV2&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;DDDCarouselV2&gt;&#13;
+  &lt;Images&#13;
+    CarouselWidth="600"&#13;
+    CarouselCenterLeft="0"&#13;
+    CarouselCenterTop="-35"&#13;
+    CarouselRandomImages="0"&#13;
+    CarouselRenderQuality="3"&#13;
+    CarouselPreloader=""&#13;
+    &#13;
+    BackGroundVisible="true"&#13;
+    BackGroundPath=""&#13;
+    BackGroundTop="0"&#13;
+    BackGroundLeft="0"&#13;
+    &#13;
+    NavigationType="custom"&#13;
+    NavigationSpeed="15"&#13;
+    NavigationButtonsColor="#ff0000"&#13;
+    NavigationButtonsAlpha="80"&#13;
+    NavigationButtonLeftLeft="260"&#13;
+    NavigationButtonLeftTop="330"&#13;
+    NavigationButtonLeftPath="images/flash/cmdLeft.png?$staticlink$"&#13;
+    NavigationButtonRightLeft="440"&#13;
+    NavigationButtonRightTop="330"&#13;
+    NavigationButtonRightPath="images/flash/cmdRight.png?$staticlink$"&#13;
+    &#13;
+    ReflectionVisible="true"&#13;
+    ReflectionAlpha="30"&#13;
+    ReflectionHeight="25"&#13;
+    ReflectionDistance="0"&#13;
+    &#13;
+    EffectsTime="0.5"&#13;
+    EffectCarouselEntry="flytop"&#13;
+    EffectCarouselExit="flytop"&#13;
+    EffectDetailImageEntry="flyleft"&#13;
+    EffectDetailImageExit="flyleft"&#13;
+    EffectContent1Entry="flyleft"&#13;
+    EffectContent1Exit="flyleft"&#13;
+    EffectContent2Entry="flyright"&#13;
+    EffectContent2Exit="flyright"&#13;
+    &#13;
+    HoverGlowEnabled="false"&#13;
+    HoverGlowColor="#ff0000"&#13;
+    HoverGlowAlpha="100"&#13;
+    HoverGlowBlur="32"&#13;
+    HoverGlowStength="2"&#13;
+    HoverGlowQuality="3"&#13;
+    &#13;
+    ToolTipHTML="false"&#13;
+    ToolTipAntiAliasing="false"&#13;
+    ToolTipAlign="left"&#13;
+    ToolTipBold="true"&#13;
+    ToolTipItalic="false"&#13;
+    ToolTipFont="Verdana"&#13;
+    ToolTipFontColor="#ffffff"&#13;
+    ToolTipFontSize="14"&#13;
+    ToolTipLeading="0"&#13;
+    ToolTipUnderline="false"&#13;
+    ToolTipLeft="90"&#13;
+    ToolTipTop="10"&#13;
+    ToolTipWidth="220"&#13;
+    ToolTipHeight="30"&#13;
+    ToolTipBgColor=""&#13;
+    ToolTipBorder="false"&#13;
+    ToolTipBorderColor="#b50000"&#13;
+    ToolTipTopMost="true"&#13;
+    &#13;
+    DetailPageEnabled="false"&#13;
+    DetailImageZoom="100"&#13;
+    DetailImageLeft="20"&#13;
+    DetailImageTop="75"&#13;
+    &#13;
+    Content1HTML="false"&#13;
+    Content1AntiAliasing="false"&#13;
+    Content1Align="left"&#13;
+    Content1Bold="false"&#13;
+    Content1Italic="false"&#13;
+    Content1Font="Verdana"&#13;
+    Content1FontColor="#ffffff"&#13;
+    Content1FontSize="9"&#13;
+    Content1Leading="0"&#13;
+    Content1Underline="false"&#13;
+    Content1Left="38"&#13;
+    Content1Top="50"&#13;
+    Content1Width="120"&#13;
+    Content1Height="25"&#13;
+    Content1TopMost="false"&#13;
+    Content1BgColor=""&#13;
+    Content1Border="false"&#13;
+    Content1BorderColor="#b50000"&#13;
+    &#13;
+    Content2HTML="false"&#13;
+    Content2AntiAliasing="false"&#13;
+    Content2Align="left"&#13;
+    Content2Bold="false"&#13;
+    Content2Italic="false"&#13;
+    Content2Font="Verdana"&#13;
+    Content2FontColor="#dddddd"&#13;
+    Content2FontSize="11"&#13;
+    Content2Leading="0"&#13;
+    Content2Underline="false"&#13;
+    Content2Left="185"&#13;
+    Content2Top="25"&#13;
+    Content2Width="300"&#13;
+    Content2Height="100"&#13;
+    Content2TopMost="false"&#13;
+    Content2BgColor=""&#13;
+    Content2Border="false"&#13;
+    Content2BorderColor="#b50000"  &gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img01.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','womens-footwear')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[Cliquez sur l'image pour revenir]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img02.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img03.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Product-Show','pid','sony-ps3-bundleM','start','1','cgid','electronics-gaming')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img04.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-televisions','prefn1','brand','prefv1','Samsung')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img06.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens-accessories-luggage')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img07.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-digital-media-players','prefn1','brand','prefv1','Apple')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;  &#13;
+  &lt;/Images&gt;&#13;
+&lt;StaticContents&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false"&#13;
+    AntiAliasing="false"&#13;
+    Align="left"&#13;
+    Bold="false"&#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333"&#13;
+    FontSize="11"&#13;
+    Leading="0"&#13;
+    Underline="false"&#13;
+    Left="320"&#13;
+    Top="10"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="true"&#13;
+    VisibleOnDetailPage="false" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false" &#13;
+    AntiAliasing="false"&#13;
+    Align="left" &#13;
+    Bold="false" &#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333" &#13;
+    FontSize="11" &#13;
+    Leading="0"  &#13;
+    Underline="false"&#13;
+    Left="320" &#13;
+    Top="220"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="false"&#13;
+    VisibleOnDetailPage="true" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;    &#13;
+&lt;/StaticContents&gt;&#13;
+&lt;/DDDCarouselV2&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="it-IT">&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;DDDCarouselV2&gt;&#13;
+  &lt;Images&#13;
+    CarouselWidth="600"&#13;
+    CarouselCenterLeft="0"&#13;
+    CarouselCenterTop="-35"&#13;
+    CarouselRandomImages="0"&#13;
+    CarouselRenderQuality="3"&#13;
+    CarouselPreloader=""&#13;
+    &#13;
+    BackGroundVisible="true"&#13;
+    BackGroundPath=""&#13;
+    BackGroundTop="0"&#13;
+    BackGroundLeft="0"&#13;
+    &#13;
+    NavigationType="custom"&#13;
+    NavigationSpeed="15"&#13;
+    NavigationButtonsColor="#ff0000"&#13;
+    NavigationButtonsAlpha="80"&#13;
+    NavigationButtonLeftLeft="260"&#13;
+    NavigationButtonLeftTop="330"&#13;
+    NavigationButtonLeftPath="images/flash/cmdLeft.png?$staticlink$"&#13;
+    NavigationButtonRightLeft="440"&#13;
+    NavigationButtonRightTop="330"&#13;
+    NavigationButtonRightPath="images/flash/cmdRight.png?$staticlink$"&#13;
+    &#13;
+    ReflectionVisible="true"&#13;
+    ReflectionAlpha="30"&#13;
+    ReflectionHeight="25"&#13;
+    ReflectionDistance="0"&#13;
+    &#13;
+    EffectsTime="0.5"&#13;
+    EffectCarouselEntry="flytop"&#13;
+    EffectCarouselExit="flytop"&#13;
+    EffectDetailImageEntry="flyleft"&#13;
+    EffectDetailImageExit="flyleft"&#13;
+    EffectContent1Entry="flyleft"&#13;
+    EffectContent1Exit="flyleft"&#13;
+    EffectContent2Entry="flyright"&#13;
+    EffectContent2Exit="flyright"&#13;
+    &#13;
+    HoverGlowEnabled="false"&#13;
+    HoverGlowColor="#ff0000"&#13;
+    HoverGlowAlpha="100"&#13;
+    HoverGlowBlur="32"&#13;
+    HoverGlowStength="2"&#13;
+    HoverGlowQuality="3"&#13;
+    &#13;
+    ToolTipHTML="false"&#13;
+    ToolTipAntiAliasing="false"&#13;
+    ToolTipAlign="left"&#13;
+    ToolTipBold="true"&#13;
+    ToolTipItalic="false"&#13;
+    ToolTipFont="Verdana"&#13;
+    ToolTipFontColor="#ffffff"&#13;
+    ToolTipFontSize="14"&#13;
+    ToolTipLeading="0"&#13;
+    ToolTipUnderline="false"&#13;
+    ToolTipLeft="90"&#13;
+    ToolTipTop="10"&#13;
+    ToolTipWidth="220"&#13;
+    ToolTipHeight="30"&#13;
+    ToolTipBgColor=""&#13;
+    ToolTipBorder="false"&#13;
+    ToolTipBorderColor="#b50000"&#13;
+    ToolTipTopMost="true"&#13;
+    &#13;
+    DetailPageEnabled="false"&#13;
+    DetailImageZoom="100"&#13;
+    DetailImageLeft="20"&#13;
+    DetailImageTop="75"&#13;
+    &#13;
+    Content1HTML="false"&#13;
+    Content1AntiAliasing="false"&#13;
+    Content1Align="left"&#13;
+    Content1Bold="false"&#13;
+    Content1Italic="false"&#13;
+    Content1Font="Verdana"&#13;
+    Content1FontColor="#ffffff"&#13;
+    Content1FontSize="9"&#13;
+    Content1Leading="0"&#13;
+    Content1Underline="false"&#13;
+    Content1Left="38"&#13;
+    Content1Top="50"&#13;
+    Content1Width="120"&#13;
+    Content1Height="25"&#13;
+    Content1TopMost="false"&#13;
+    Content1BgColor=""&#13;
+    Content1Border="false"&#13;
+    Content1BorderColor="#b50000"&#13;
+    &#13;
+    Content2HTML="false"&#13;
+    Content2AntiAliasing="false"&#13;
+    Content2Align="left"&#13;
+    Content2Bold="false"&#13;
+    Content2Italic="false"&#13;
+    Content2Font="Verdana"&#13;
+    Content2FontColor="#dddddd"&#13;
+    Content2FontSize="11"&#13;
+    Content2Leading="0"&#13;
+    Content2Underline="false"&#13;
+    Content2Left="185"&#13;
+    Content2Top="25"&#13;
+    Content2Width="300"&#13;
+    Content2Height="100"&#13;
+    Content2TopMost="false"&#13;
+    Content2BgColor=""&#13;
+    Content2Border="false"&#13;
+    Content2BorderColor="#b50000"  &gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img01.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','womens-footwear')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[Fai clic sull'immagine per tornare indietro.]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img02.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img03.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Product-Show','pid','sony-ps3-bundleM','start','1','cgid','electronics-gaming')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img04.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-televisions','prefn1','brand','prefv1','Samsung')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img06.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens-accessories-luggage')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img07.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-digital-media-players','prefn1','brand','prefv1','Apple')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;  &#13;
+  &lt;/Images&gt;&#13;
+&lt;StaticContents&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false"&#13;
+    AntiAliasing="false"&#13;
+    Align="left"&#13;
+    Bold="false"&#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333"&#13;
+    FontSize="11"&#13;
+    Leading="0"&#13;
+    Underline="false"&#13;
+    Left="320"&#13;
+    Top="10"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="true"&#13;
+    VisibleOnDetailPage="false" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false" &#13;
+    AntiAliasing="false"&#13;
+    Align="left" &#13;
+    Bold="false" &#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333" &#13;
+    FontSize="11" &#13;
+    Leading="0"  &#13;
+    Underline="false"&#13;
+    Left="320" &#13;
+    Top="220"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="false"&#13;
+    VisibleOnDetailPage="true" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;    &#13;
+&lt;/StaticContents&gt;&#13;
+&lt;/DDDCarouselV2&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="ja-JP">&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;DDDCarouselV2&gt;&#13;
+  &lt;Images&#13;
+    CarouselWidth="600"&#13;
+    CarouselCenterLeft="0"&#13;
+    CarouselCenterTop="-35"&#13;
+    CarouselRandomImages="0"&#13;
+    CarouselRenderQuality="3"&#13;
+    CarouselPreloader=""&#13;
+    &#13;
+    BackGroundVisible="true"&#13;
+    BackGroundPath=""&#13;
+    BackGroundTop="0"&#13;
+    BackGroundLeft="0"&#13;
+    &#13;
+    NavigationType="custom"&#13;
+    NavigationSpeed="15"&#13;
+    NavigationButtonsColor="#ff0000"&#13;
+    NavigationButtonsAlpha="80"&#13;
+    NavigationButtonLeftLeft="260"&#13;
+    NavigationButtonLeftTop="330"&#13;
+    NavigationButtonLeftPath="images/flash/cmdLeft.png?$staticlink$"&#13;
+    NavigationButtonRightLeft="440"&#13;
+    NavigationButtonRightTop="330"&#13;
+    NavigationButtonRightPath="images/flash/cmdRight.png?$staticlink$"&#13;
+    &#13;
+    ReflectionVisible="true"&#13;
+    ReflectionAlpha="30"&#13;
+    ReflectionHeight="25"&#13;
+    ReflectionDistance="0"&#13;
+    &#13;
+    EffectsTime="0.5"&#13;
+    EffectCarouselEntry="flytop"&#13;
+    EffectCarouselExit="flytop"&#13;
+    EffectDetailImageEntry="flyleft"&#13;
+    EffectDetailImageExit="flyleft"&#13;
+    EffectContent1Entry="flyleft"&#13;
+    EffectContent1Exit="flyleft"&#13;
+    EffectContent2Entry="flyright"&#13;
+    EffectContent2Exit="flyright"&#13;
+    &#13;
+    HoverGlowEnabled="false"&#13;
+    HoverGlowColor="#ff0000"&#13;
+    HoverGlowAlpha="100"&#13;
+    HoverGlowBlur="32"&#13;
+    HoverGlowStength="2"&#13;
+    HoverGlowQuality="3"&#13;
+    &#13;
+    ToolTipHTML="false"&#13;
+    ToolTipAntiAliasing="false"&#13;
+    ToolTipAlign="left"&#13;
+    ToolTipBold="true"&#13;
+    ToolTipItalic="false"&#13;
+    ToolTipFont="Verdana"&#13;
+    ToolTipFontColor="#ffffff"&#13;
+    ToolTipFontSize="14"&#13;
+    ToolTipLeading="0"&#13;
+    ToolTipUnderline="false"&#13;
+    ToolTipLeft="90"&#13;
+    ToolTipTop="10"&#13;
+    ToolTipWidth="220"&#13;
+    ToolTipHeight="30"&#13;
+    ToolTipBgColor=""&#13;
+    ToolTipBorder="false"&#13;
+    ToolTipBorderColor="#b50000"&#13;
+    ToolTipTopMost="true"&#13;
+    &#13;
+    DetailPageEnabled="false"&#13;
+    DetailImageZoom="100"&#13;
+    DetailImageLeft="20"&#13;
+    DetailImageTop="75"&#13;
+    &#13;
+    Content1HTML="false"&#13;
+    Content1AntiAliasing="false"&#13;
+    Content1Align="left"&#13;
+    Content1Bold="false"&#13;
+    Content1Italic="false"&#13;
+    Content1Font="Verdana"&#13;
+    Content1FontColor="#ffffff"&#13;
+    Content1FontSize="9"&#13;
+    Content1Leading="0"&#13;
+    Content1Underline="false"&#13;
+    Content1Left="38"&#13;
+    Content1Top="50"&#13;
+    Content1Width="120"&#13;
+    Content1Height="25"&#13;
+    Content1TopMost="false"&#13;
+    Content1BgColor=""&#13;
+    Content1Border="false"&#13;
+    Content1BorderColor="#b50000"&#13;
+    &#13;
+    Content2HTML="false"&#13;
+    Content2AntiAliasing="false"&#13;
+    Content2Align="left"&#13;
+    Content2Bold="false"&#13;
+    Content2Italic="false"&#13;
+    Content2Font="Verdana"&#13;
+    Content2FontColor="#dddddd"&#13;
+    Content2FontSize="11"&#13;
+    Content2Leading="0"&#13;
+    Content2Underline="false"&#13;
+    Content2Left="185"&#13;
+    Content2Top="25"&#13;
+    Content2Width="300"&#13;
+    Content2Height="100"&#13;
+    Content2TopMost="false"&#13;
+    Content2BgColor=""&#13;
+    Content2Border="false"&#13;
+    Content2BorderColor="#b50000"  &gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img01.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','womens-footwear')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[æˆ»ã‚‹ã«ã¯ç”»åƒã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„!]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img02.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img03.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Product-Show','pid','sony-ps3-bundleM','start','1','cgid','electronics-gaming')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img04.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-televisions','prefn1','brand','prefv1','Samsung')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img06.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens-accessories-luggage')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img07.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-digital-media-players','prefn1','brand','prefv1','Apple')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;  &#13;
+  &lt;/Images&gt;&#13;
+&lt;StaticContents&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false"&#13;
+    AntiAliasing="false"&#13;
+    Align="left"&#13;
+    Bold="false"&#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333"&#13;
+    FontSize="11"&#13;
+    Leading="0"&#13;
+    Underline="false"&#13;
+    Left="320"&#13;
+    Top="10"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="true"&#13;
+    VisibleOnDetailPage="false" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false" &#13;
+    AntiAliasing="false"&#13;
+    Align="left" &#13;
+    Bold="false" &#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333" &#13;
+    FontSize="11" &#13;
+    Leading="0"  &#13;
+    Underline="false"&#13;
+    Left="320" &#13;
+    Top="220"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="false"&#13;
+    VisibleOnDetailPage="true" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;    &#13;
+&lt;/StaticContents&gt;&#13;
+&lt;/DDDCarouselV2&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="zh-CN">&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;DDDCarouselV2&gt;&#13;
+  &lt;Images&#13;
+    CarouselWidth="600"&#13;
+    CarouselCenterLeft="0"&#13;
+    CarouselCenterTop="-35"&#13;
+    CarouselRandomImages="0"&#13;
+    CarouselRenderQuality="3"&#13;
+    CarouselPreloader=""&#13;
+    &#13;
+    BackGroundVisible="true"&#13;
+    BackGroundPath=""&#13;
+    BackGroundTop="0"&#13;
+    BackGroundLeft="0"&#13;
+    &#13;
+    NavigationType="custom"&#13;
+    NavigationSpeed="15"&#13;
+    NavigationButtonsColor="#ff0000"&#13;
+    NavigationButtonsAlpha="80"&#13;
+    NavigationButtonLeftLeft="260"&#13;
+    NavigationButtonLeftTop="330"&#13;
+    NavigationButtonLeftPath="images/flash/cmdLeft.png?$staticlink$"&#13;
+    NavigationButtonRightLeft="440"&#13;
+    NavigationButtonRightTop="330"&#13;
+    NavigationButtonRightPath="images/flash/cmdRight.png?$staticlink$"&#13;
+    &#13;
+    ReflectionVisible="true"&#13;
+    ReflectionAlpha="30"&#13;
+    ReflectionHeight="25"&#13;
+    ReflectionDistance="0"&#13;
+    &#13;
+    EffectsTime="0.5"&#13;
+    EffectCarouselEntry="flytop"&#13;
+    EffectCarouselExit="flytop"&#13;
+    EffectDetailImageEntry="flyleft"&#13;
+    EffectDetailImageExit="flyleft"&#13;
+    EffectContent1Entry="flyleft"&#13;
+    EffectContent1Exit="flyleft"&#13;
+    EffectContent2Entry="flyright"&#13;
+    EffectContent2Exit="flyright"&#13;
+    &#13;
+    HoverGlowEnabled="false"&#13;
+    HoverGlowColor="#ff0000"&#13;
+    HoverGlowAlpha="100"&#13;
+    HoverGlowBlur="32"&#13;
+    HoverGlowStength="2"&#13;
+    HoverGlowQuality="3"&#13;
+    &#13;
+    ToolTipHTML="false"&#13;
+    ToolTipAntiAliasing="false"&#13;
+    ToolTipAlign="left"&#13;
+    ToolTipBold="true"&#13;
+    ToolTipItalic="false"&#13;
+    ToolTipFont="Verdana"&#13;
+    ToolTipFontColor="#ffffff"&#13;
+    ToolTipFontSize="14"&#13;
+    ToolTipLeading="0"&#13;
+    ToolTipUnderline="false"&#13;
+    ToolTipLeft="90"&#13;
+    ToolTipTop="10"&#13;
+    ToolTipWidth="220"&#13;
+    ToolTipHeight="30"&#13;
+    ToolTipBgColor=""&#13;
+    ToolTipBorder="false"&#13;
+    ToolTipBorderColor="#b50000"&#13;
+    ToolTipTopMost="true"&#13;
+    &#13;
+    DetailPageEnabled="false"&#13;
+    DetailImageZoom="100"&#13;
+    DetailImageLeft="20"&#13;
+    DetailImageTop="75"&#13;
+    &#13;
+    Content1HTML="false"&#13;
+    Content1AntiAliasing="false"&#13;
+    Content1Align="left"&#13;
+    Content1Bold="false"&#13;
+    Content1Italic="false"&#13;
+    Content1Font="Verdana"&#13;
+    Content1FontColor="#ffffff"&#13;
+    Content1FontSize="9"&#13;
+    Content1Leading="0"&#13;
+    Content1Underline="false"&#13;
+    Content1Left="38"&#13;
+    Content1Top="50"&#13;
+    Content1Width="120"&#13;
+    Content1Height="25"&#13;
+    Content1TopMost="false"&#13;
+    Content1BgColor=""&#13;
+    Content1Border="false"&#13;
+    Content1BorderColor="#b50000"&#13;
+    &#13;
+    Content2HTML="false"&#13;
+    Content2AntiAliasing="false"&#13;
+    Content2Align="left"&#13;
+    Content2Bold="false"&#13;
+    Content2Italic="false"&#13;
+    Content2Font="Verdana"&#13;
+    Content2FontColor="#dddddd"&#13;
+    Content2FontSize="11"&#13;
+    Content2Leading="0"&#13;
+    Content2Underline="false"&#13;
+    Content2Left="185"&#13;
+    Content2Top="25"&#13;
+    Content2Width="300"&#13;
+    Content2Height="100"&#13;
+    Content2TopMost="false"&#13;
+    Content2BgColor=""&#13;
+    Content2Border="false"&#13;
+    Content2BorderColor="#b50000"  &gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img01.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','womens-footwear')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[Click image to return!]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img02.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img03.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Product-Show','pid','sony-ps3-bundleM','start','1','cgid','electronics-gaming')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img04.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-televisions','prefn1','brand','prefv1','Samsung')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img06.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','mens-accessories-luggage')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;&#13;
+    &lt;Image&gt;&#13;
+      &lt;ImagePath&gt;images/homepage/img07.jpg?$staticlink$&lt;/ImagePath&gt;&#13;
+      &lt;ImageLink&gt;$url('Search-Show','cgid','electronics-digital-media-players','prefn1','brand','prefv1','Apple')$&lt;/ImageLink&gt;&#13;
+      &lt;ImageLinkTarget&gt;&lt;![CDATA[_self]]&gt;&lt;/ImageLinkTarget&gt;&#13;
+      &lt;ToolTip&gt;&lt;![CDATA[]]&gt;&lt;/ToolTip&gt;&#13;
+      &lt;Content1&gt;&lt;![CDATA[]]&gt;&lt;/Content1&gt;&#13;
+      &lt;Content2&gt;&lt;![CDATA[]]&gt;&lt;/Content2&gt;&#13;
+      &lt;JSFunction&gt;&lt;![CDATA[]]&gt;&lt;/JSFunction&gt;&#13;
+    &lt;/Image&gt;  &#13;
+  &lt;/Images&gt;&#13;
+&lt;StaticContents&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false"&#13;
+    AntiAliasing="false"&#13;
+    Align="left"&#13;
+    Bold="false"&#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333"&#13;
+    FontSize="11"&#13;
+    Leading="0"&#13;
+    Underline="false"&#13;
+    Left="320"&#13;
+    Top="10"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="true"&#13;
+    VisibleOnDetailPage="false" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;&#13;
+  &lt;StaticContent&#13;
+    HTML="false" &#13;
+    AntiAliasing="false"&#13;
+    Align="left" &#13;
+    Bold="false" &#13;
+    Italic="false"&#13;
+    Font="Verdana"&#13;
+    FontColor="#333333" &#13;
+    FontSize="11" &#13;
+    Leading="0"  &#13;
+    Underline="false"&#13;
+    Left="320" &#13;
+    Top="220"&#13;
+    Width="1200"&#13;
+    Height="20"&#13;
+    TopMost="true"&#13;
+    BgColor=""&#13;
+    Border="false"&#13;
+    BorderColor="#b50000"&#13;
+    VisibleOnCarouselPage="false"&#13;
+    VisibleOnDetailPage="true" &gt;&#13;
+    &lt;Content&gt;&lt;![CDATA[]]&gt;&lt;/Content&gt;&#13;
+  &lt;/StaticContent&gt;    &#13;
+&lt;/StaticContents&gt;&#13;
+&lt;/DDDCarouselV2&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="cart">
+        <display-name xml:lang="x-default">Cart</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Cart</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="cart-footer">
+        <display-name xml:lang="x-default">Cart Footer</display-name>
+        <description xml:lang="x-default">Global Cart Footer Content Asset</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+    </content>
+
+    <content content-id="cart-header">
+        <display-name xml:lang="x-default">Cart Header</display-name>
+        <description xml:lang="x-default">Global Cart Header Content Asset</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+    </content>
+
+    <content content-id="cat-landing-default">
+        <display-name xml:lang="x-default">Default Category Page</display-name>
+        <description xml:lang="x-default">Default Category Landing Page if no Category Banner is defined.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="cat-landing-electronics">
+        <display-name xml:lang="x-default">Electronics Landing Banner</display-name>
+         <description xml:lang="x-default">Banner for Electronics Landing Page</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="cat-landing-electronics-bottom">
+        <display-name xml:lang="x-default">Electronics Landing Bottom</display-name>
+         <description xml:lang="x-default">Bottom Asset for Electronics Landing Page</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div style="margin: 0px; padding: 0px; width: 754px; margin-top: 16px;"&gt;&#13;
+&lt;div style="float: left; width: 188px; height: 215px; text-align: center; vertical-align: top;"&gt;&#13;
+&lt;div&gt;&lt;img height="113" width="113" src="Images/Landing/test products/product_camera.gif?$staticlink$" alt="" /&gt;&lt;/div&gt;&#13;
+&lt;div&gt;&lt;span class="name"&gt;Nikon D60 Digital SLR Camera&lt;/span&gt;&lt;br /&gt;&#13;
+&lt;span style="margin: 2px 3px; display: inline; text-decoration: line-through;"&gt;$429.00&lt;/span&gt; &lt;span style="color: rgb(230, 38, 23);"&gt;$300.30&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div style="float: left; width: 188px; height: 215px; text-align: center; vertical-align: top;"&gt;&#13;
+&lt;div&gt;&lt;img height="113" width="113" src="Images/Landing/test products/product_LCD.gif?$staticlink$" alt="" /&gt;&lt;/div&gt;&#13;
+&lt;div&gt;&lt;span class="name"&gt;Vizio VW46LF 46&amp;quot; LCD HD&lt;/span&gt;&lt;br /&gt;&#13;
+&lt;span&gt;$1,089.99&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div style="float: left; width: 188px; height: 215px; text-align: center; vertical-align: top;"&gt;&#13;
+&lt;div&gt;&lt;img height="113" width="113" src="Images/Landing/test products/product_iPod.gif?$staticlink$" alt="" /&gt;&lt;/div&gt;&#13;
+&lt;div&gt;&lt;span class="name"&gt;Apple iPod Touch&lt;/span&gt;&lt;br /&gt;&#13;
+&lt;span&gt;$219 to $485&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div style="float: left; width: 188px; height: 215px; text-align: center; vertical-align: top;"&gt;&#13;
+&lt;div&gt;&lt;img height="113" width="113" src="Images/Landing/test products/product_gps.gif?$staticlink$" alt="" /&gt;&lt;/div&gt;&#13;
+&lt;div&gt;&lt;span class="name"&gt;Garmin nuvi 750 Portable GPS Unit&lt;/span&gt;&lt;br /&gt;&#13;
+&lt;span style="margin: 2px 3px; display: inline; text-decoration: line-through;"&gt;$519.99&lt;/span&gt; &lt;span style="color: rgb(230, 38, 23);"&gt;$311.99&lt;/span&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="checkout">
+        <display-name xml:lang="x-default">Checkout</display-name>
+        <description xml:lang="x-default">When you are ready to complete your purchase, simply go to Checkout and follow these steps to place your order:</description>
+          <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Checkout&lt;/h1&gt;&#13;
+&#13;
+&lt;h2&gt;When you are ready to complete your purchase, simply go to the Checkout and follow these steps to place your order:&lt;/h2&gt;&#13;
+&#13;
+&#13;
+&lt;h3&gt;For registered users:&lt;/h3&gt;&#13;
+&lt;p&gt;If you are a returning customer and already have an account, please sign in using your email address and password and you will be taken directly to the first Checkout tab.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;For non-registered users:&lt;/h3&gt;&#13;
+&lt;p&gt;If you are not registered, you can proceed without creating an account or you can create an account.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;Billing and Shipping Tab.&lt;/h3&gt;&#13;
+&lt;p&gt;Enter your billing information as it appears on your credit card statement. Your credit card will not be accepted without the appropriate billing address and telephone number. If you are a returning customer, your billing address will automatically appear on the Billing and Shipping page. If the shipping address is different than the billing address, enter the address where you would like your order shipped.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;Shipping Options.&lt;/h3&gt;&#13;
+&lt;p&gt;From the options provided, select from the shipping methods that are available for the items you wish to purchase. For more information on shipping, &lt;a href="$url('Page-Show', 'cid', 'shipping-methods')$"&gt;click here&lt;/a&gt;.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;Payment Information.&lt;/h3&gt;&#13;
+&lt;p&gt;At this time, you must verify your address information is correct, review your order and then enter your payment method and click &amp;quot;Place Order&amp;quot;. For more information on payment, &lt;a href="$url('Page-Show', 'cid', 'payment')$"&gt;click here&lt;/a&gt;.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;Purchase Summary.&lt;/h3&gt;&#13;
+&lt;p&gt;After you complete the checkout process, the Purchase Summary page confirms details of the order you have placed and also provides you with a reference number. We recommend that you print this Purchase Summary page for your records as it may be needed for order references.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;Order and Shipment Confirmations.&lt;/h3&gt;&#13;
+&lt;p&gt;You will receive an order confirmation email which will include an order number - you can use this to track your order in My Account. Once your items have been shipped, you will receive a shipping confirmation email with details of which items have been sent. Please note that if you order more than one item, it is possible that different items may arrive on different days depending on stock availability.&lt;/p&gt;&#13;
+&#13;
+&lt;h3&gt;VAT Invoice.&lt;/h3&gt;&#13;
+&lt;p&gt;After your items are invoiced, you will receive an email which includes a link for retrieval of a VAT invoice for items purchased and shipped to you. This email will be sent in addition to the Shipment Confirmation email you will receive.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ordering">
+                <position>1.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="checkout-coupon-help">
+        <description xml:lang="x-default">Help text for the coupons located on the checkout payment page.</description>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;You may apply more than one coupon code to your order, but you must apply them one at a time. If there is a balance remaining on your order, you will be able to add another coupon code after you click "Apply".&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;To apply a coupon code, enter the code below. Coupon codes may void existing promotions that have already been applied.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+
+    <content content-id="checkout-giftcert-help">
+        <display-name xml:lang="x-default">Gift Certificates Help</display-name>
+         <description xml:lang="x-default">Help text for gift certificates on the checkout billing step.</description>
+          <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;If you wish to use a gift certificate to pay for some or all of your order, please enter your gift certificate number and click "Apply".&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+
+    <content content-id="checkout-giftcertcoupon-help">
+        <display-name xml:lang="x-default">Gift Certificate/Coupon Help</display-name>
+         <description xml:lang="x-default">Help text for the coupons and gift certificates located on the checkout payment page.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;You may apply more than one coupon code or gift certificate to your order, but you must apply them one at a time. If there is a balance remaining on your order, you will be able to add another coupon code or gift certificate after you click "Apply".&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;To apply a coupon code, enter the code below. Coupon codes may void existing promotions that have already been applied.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+
+    <content content-id="checkout-security-code">
+        <display-name xml:lang="x-default">Security Code Tooltip</display-name>
+        <description xml:lang="x-default">What is this Security Code Tooltip</description>
+        <description xml:lang="fr-FR">Infobulle Qu'est-ce que le code de sÃ©curitÃ©</description>
+          <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="cvn-tooltip"&gt;&lt;img src="images/Cart/cvnimage.jpg?$staticlink$" alt="CVN Number" /&gt;&lt;p&gt;What is a Card Verification Number (CVN)?&lt;/p&gt;&#13;
+&lt;p&gt;For Discover, MasterCard and Visa, enter the last three digits on the signature strip. For American Express, enter the four digits in small print on the front of the card.&lt;/p&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+    </content>
+
+    <content content-id="confirmation-message">
+        <display-name xml:lang="x-default">Confirmation Message</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">If you have questions about your order, weâ€™re happy to take your call (888-555-0199) Monday - Friday, 8AM - 8PM</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="cookie_hint">
+        <display-name xml:lang="x-default">cookie_hint</display-name>
+        <online-flag>false</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="cookie-warning-messaging cookie-warning"&gt; &#13;
+            &lt;div class="alert alert-warning alert-dismissible valid-cookie-warning fade show" role="alert"&gt;&#13;
+                &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&#13;
+                    &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&#13;
+                &lt;/button&gt;&#13;
+                &lt;p&gt;Cookies are in use on this site&lt;/p&gt;&#13;
+            &lt;/div&gt;&#13;
+    &lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="tracking_hint">
+        <display-name xml:lang="x-default">tracking hint</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="tracking-consent"&gt;&#13;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="create-account-benefits">
+        <display-name xml:lang="x-default">Account Benefits</display-name>
+        <description xml:lang="x-default">Benefits to creating an account include receiving email updates on special promotions, reviewing information about orders and saving billing and shipping addresses along with a default payment method to aid in faster checkout.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&lt;span style="font-size: large;"&gt;Benefits of Creating an Account&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;News and exclusive offers!&lt;/strong&gt;&lt;br/&gt;Sign up to receive email updates on special promotions, new product announcements, gift ideas and more.&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;&#13;
+&lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;Order History&lt;/strong&gt;&lt;br/&gt;Receive important information about your order. You can even track it up to the minute it arrives.&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;&#13;
+&lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;Faster Checkout&lt;/strong&gt;&lt;br/&gt;Save your billing and shipping information to make it easier to buy your favorite gear.&lt;br /&gt;&#13;
+(&lt;a href="$url(Page-Show,cid,security-policy)$"&gt;read more about security&lt;/a&gt;)&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="my-account"/>
+        </folder-links>
+    </content>
+
+    <content content-id="cs-contact-number">
+        <display-name xml:lang="x-default">Customer Service Contact Number</display-name>
+        <description xml:lang="x-default">The label and phone number for contacting customer service.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Help?&amp;nbsp;&lt;span&gt;888-555-0199&lt;/span&gt;&lt;/h3&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+
+    <content content-id="cs-landing">
+        <display-name xml:lang="x-default">Customer Service Landing Page</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Customer Servive</page-title>
+             <page-description xml:lang="x-default">Here you will find answers to your questions about shopping at our online store, your order, payment options and more. Simply select from the categories below for your complete information.</page-description>
+            <page-keywords xml:lang="x-default">service, help</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Welcome to Customer Service&lt;/h1&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="customer-service"/>
+        </folder-links>
+    </content>
+
+    <content content-id="error-callout">
+        <display-name xml:lang="x-default">error-callout</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">General Error</page-title>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p style="font-size:1.1em; font-weight:bold;"&gt;We're sorry that your order could not be placed. This probably happened due to a very high order volume or temporary connection errors. Please wait a few minutes and resubmit your order. We won't process your payment until your order is placed successfully. If you have further questions, please contact us via &lt;a href="mailto:noreply@salesforce.com"&gt;noreply@salesforce.com&lt;/a&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="page-includes"/>
+        </folder-links>
+    </content>
+
+    <content content-id="error-service">
+        <display-name xml:lang="x-default">Customer Service Error Text</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div style="height:110px;"&gt;&#13;
+&lt;p style="font-weight:bold;"&gt;If you canâ€™t find what you are looking for, why not let our trained staff recommend something?&lt;/p&gt;&#13;
+&lt;p&gt;Our Customer Service Representatives are available now to help. &lt;a href="$httpsUrl(CustomerService-ContactUs)$"&gt;Email us&lt;/a&gt; or call 800-555-0199.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="faqs">
+        <display-name xml:lang="x-default">FAQs</display-name>
+         <description xml:lang="x-default">Many of our customers have the the same questions and concerns regarding orders, the capturing and storage of personal information, shipping methods and shipping charges. Here is a list of the most common questions and answers provided for customers.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header" id="faq-top"&gt;Frequently Asked Questions&lt;/h1&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;01. &lt;a href="#q01"&gt;Can I pre-order items for delivery?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;02. &lt;a href="#q02"&gt;Can I change my order?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;03. &lt;a href="#q03"&gt;Do you offer gift wrapping options?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;04. &lt;a href="#q04"&gt;Can I return items to a store?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;05. &lt;a href="#q05"&gt;When do I get my refund once I have returned an item?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;06. &lt;a href="#q06"&gt;If I return all the items in my order will I still be charged for delivery?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;07. &lt;a href="#q07"&gt;What should I do if my credit/debit card has been refused when placing an order?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;08. &lt;a href="#q08"&gt;Do I get charged for delivery of each item I order?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;09. &lt;a href="#q09"&gt;Do you deliver overseas?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;10. &lt;a href="#q10"&gt;I have a complaint, who should I speak to?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;11. &lt;a href="#q11"&gt;What do I do if my product breaks down during the guarantee period?&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;12. &lt;a href="#q12"&gt;Do you offer discounts on corporate or bulk orders?&lt;/a&gt;&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;h2&gt;Answers&lt;/h2&gt;&#13;
+&#13;
+&lt;h3 id="q01"&gt;01. Can I pre-order items for delivery?&lt;/h3&gt;&#13;
+&lt;p&gt;Yes. However, pre-order items will be specifically indicated as such; this generally applies to new releases. We will only accept orders on items that we have in stock at the time.&#13;
+&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q02"&gt;02. Can I change my order?&lt;/h3&gt;&#13;
+&lt;p&gt;Once the order has been placed, it cannot be changed online. If you want to change your order, please call 1 (800) 555 0199, and if it has not yet been processed we will change or re-issue a new amended order.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q03"&gt;03. Do you offer gift wrapping options?&lt;/h3&gt;&#13;
+&lt;p&gt;Yes. Your gifts can be delivered in our beautifully presented gift boxes for just $4.99 per item. Each box carries the Commerce Cloud logo and comes with a gift card for your personal message. Enter your personal message into the fields provided (up to a maximum of 4 lines and 80 characters). If you would like to change your gift wrap options, simply select from the dropdown box. Once you are happy with your selections, click "Continue" to proceed with your purchase. Please note: Gift wrap is not available on all items, extra large items such as rocking horses and sit-and-ride vehicles are excluded.&#13;
+&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q04"&gt;04. Can I return items to a store?&lt;/h3&gt;&#13;
+&lt;p&gt;Yes. With the exception of notified non-returnable goods. You must provide proof of purchase such as a delivery invoice or your email order confirmation. Your goods will be taken and your exchange or refund will be processed on the card you used to place your order.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q05"&gt;05. When do I get my refund once I have returned an item?&lt;/h3&gt;&#13;
+&lt;p&gt;Once we have received the item in our warehouse, we aim to process a refund onto the original payment card within two weeks.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q06"&gt;06. If I return all the items in my order will I still be charged for delivery?&lt;/h3&gt;&#13;
+&lt;p&gt;If any of the items we deliver are damaged or incorrect, we will refund the delivery charge. If you change your mind about wanting to keep them, you may return them free of charge but we will not refund the original delivery charge.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q07"&gt;07. What should I do if my credit/debit card has been refused when placing an order?&lt;/h3&gt;&#13;
+&lt;p&gt;Check that all the details you have entered on the checkout page are correct. If it is refused after that, try another credit card.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q08"&gt;08. Do I get charged for delivery of each item I order?&lt;/h3&gt;&#13;
+&lt;p&gt;Postage and packaging for each gift basket are charged separately but all other items will have one delivery charge, no matter how many you buy.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q09"&gt;09. Do you deliver overseas?&lt;/h3&gt;&#13;
+&lt;p&gt;Yes, with the exception of gift certificates.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q10"&gt;10. I have a complaint, who should I speak to?&lt;/h3&gt;&#13;
+&lt;p&gt;If it is about a product you have bought from our stores, please get in touch with the store you purchased from &amp;ndash; the telephone numbers of all our stores can be found on this website. If the complaint is about an online shopping experience please call one of our customer service representatives at 1 (800) 555 1212 or complete the form on the &lt;a href="$httpsUrl(CustomerService-ContactUs)$"&gt;Contact Us&lt;/a&gt; page.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q11"&gt;11. What do I do if my product breaks down during the guarantee period?&lt;/h3&gt;&#13;
+&lt;p&gt;If products are under guarantee, your order confirmation email/delivery note is your proof of purchase/receipt and you should follow the manufacturer&amp;rsquo;s instructions for notifying the manufacturer of any problems within the guarantee period.&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h3 id="q12"&gt;12. Do you offer discounts on corporate or bulk orders?&lt;/h3&gt;&#13;
+&lt;p&gt;We offer discounts for deliveries to the same address over certain order values. Please call 1(800) 555 0199 to discuss your requirements&#13;
+&lt;br /&gt;&lt;a href="#faq-top"&gt;Back to Top&lt;/a&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="contact-us">
+                <position>2.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="footer-about">
+        <display-name xml:lang="x-default">Footer About Links</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;&lt;a class="title" href="#"&gt;About&lt;/a&gt;&lt;/h3&gt;&#13;
+                &lt;ul class="menu-footer content"&gt;&#13;
+                &lt;li&gt;&lt;a href="$url('Page-Show', 'cid', 'about-us')$" title="Go to About Us"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="$url('Page-Show', 'cid', 'privacy-policy')$" title="Go to Privacy"&gt;Privacy&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="$url('Page-Show', 'cid', 'terms')$" title="Go to Terms"&gt;Terms&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="$url('Page-Show', 'cid', 'jobs-landing')$" title="Go to Jobs"&gt;Jobs&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;/ul&gt;&lt;!-- END: footer_about --&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-account">
+        <display-name xml:lang="x-default">Footer Account Links</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;&lt;a class="title" href="#"&gt;Account&lt;/a&gt;&lt;/h3&gt;&#13;
+                &lt;ul class="menu-footer content"&gt;&#13;
+                &lt;li&gt;&lt;a href="$httpsURL('Account-Show')$" title="Go to My Account"&gt;My Account&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="$httpsURL('Order-History')$" title="Go to Check Order"&gt;Check Order&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;!-- &lt;li&gt;&lt;a href="$httpsURL('Wishlist-Search')$" title="Go to Wishlist"&gt;Find a Wishlist&lt;/a&gt;&lt;/li&gt; --&gt;&#13;
+                &lt;!-- &lt;li&gt;&lt;a href="$httpsURL('GiftRegistry-Landing')$" title="Go to Gift Registry"&gt;Gift Registry&lt;/a&gt;&lt;/li&gt; --&gt;&#13;
+                &lt;/ul&gt;&lt;!-- END: footer-account --&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-copy">
+        <display-name xml:lang="x-default">Footer Copyright</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="copyright"&gt;&#13;
+    &lt;ul class="terms-privacy-links"&gt;&#13;
+        &lt;li&gt;&lt;a href="#"&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;&#13;
+        &lt;li class="copyright-text"&gt;Copyright &amp;copy; MTD  2018&lt;/li&gt;&#13;
+        &lt;li&gt;&lt;a href="#"&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;/ul&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-knowledge-center">
+        <display-name xml:lang="x-default">Footer Knowledge Center Links</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;&lt;a class="title" href="#"&gt;Knowledge Center&lt;/a&gt;&lt;/h3&gt;&#13;
+&#13;
+&lt;ul class="menu-footer content"&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Maintenance"&gt;Maintenance&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Repairs"&gt;Repairs&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Safety"&gt;Safety&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Tricks &amp; Tips"&gt;Tricks &amp; Tips&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Spring Seasonal Tips"&gt;Spring Seasonal Tips&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Summer Seasonal Tips"&gt;Summer Seasonal Tips&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Fall Seasonal Tips"&gt;Fall Seasonal Tips&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="#" title="Go to Winter Seasonal Tips"&gt;Winter Seasonal Tips&lt;/a&gt;&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;!-- END: footer_knowledge_center --&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-locate-store">
+        <display-name xml:lang="x-default">Footer Locate Store</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;a href="$httpsURL('Stores-Find', 'showMap', true, 'horizontalView', true, 'isForm', true)$" class="menu-footer locate-store"&gt;&lt;h3&gt;Locate Store&lt;/h3&gt;&lt;/a&gt;&#13;
+                &lt;span class="content"&gt;The Store Locator is designed to help you find the closest store near you.&lt;/span&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-products">
+        <display-name xml:lang="x-default">Footer Products Links</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;&lt;a class="title" href="#"&gt;Products&lt;/a&gt;&lt;/h3&gt;&#13;
+&#13;
+&lt;ul class="menu-footer content"&gt;&#13;
+    &lt;li&gt;&lt;a href="$url('Search-Show','cgid','equipment')$" title="Go to Equipment"&gt;Equipment&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="$url('Search-Show','cgid','part-types')$" title="Go to Parts"&gt;Parts&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="$url('Search-Show','cgid','accessories-attachments')$" title="Go to Accessories and Attachments"&gt;Accessories &amp; Attachments&lt;/a&gt;&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;!-- END: footer_product --&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-social-email">
+        <display-name xml:lang="x-default">Footer Social and Email</display-name>
+        <description xml:lang="x-default">Footer content asset containing the social icons and email form.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;ul class="social-links"&gt;&#13;
+                &lt;li&gt;&lt;a class="social-icon facebook" title="Go to Facebook" href="https://www.facebook.com/demandware" target="_blank"&gt;&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a class="social-icon instragram" title="Go to Instragram" href="https://www.instragram.com/" target="_blank"&gt;&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a class="social-icon snapchat" title="Go to Snapchat" href="https://www.snapchat.com/" target="_blank"&gt;&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a class="social-icon twitter" title="Go to Twitter" href="https://twitter.com/demandware" target="_blank"&gt;&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a class="social-icon youtube" title="Go to YouTube" href="https://www.youtube.com/user/demandware" target="_blank"&gt;&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="footer-support">
+        <display-name xml:lang="x-default">Footer Support Links</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;&lt;a class="title" href="#"&gt;Support&lt;/a&gt;&lt;/h3&gt;&#13;
+                &lt;ul class="menu-footer content"&gt;&#13;
+                &lt;li&gt;&lt;a href="#" title="Go to Contact Us"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="#" title="Go to FAQs"&gt;FAQs&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="#" title="Go to Operator's Manuals"&gt;Operator's Manuals&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;li&gt;&lt;a href="$httpsURL('Stores-Find', 'showMap', true, 'horizontalView', true, 'isForm', true)$" class="locate-store"&gt;Service Locators&lt;/a&gt;&lt;/li&gt;&#13;
+                &lt;/ul&gt;&lt;!-- END: footer_support --&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="gift-additional-details">
+        <display-name xml:lang="x-default">Gift Certificate Additonal Details</display-name>
+        <description xml:lang="x-default">Gift Certificate Additional Details</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="terms-of-use"&gt;&#13;
+&lt;p&gt;&lt;strong&gt;Terms Of Use&lt;/strong&gt;&lt;/p&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;You cannot purchase an online gift certificate with another gift certificate.&lt;/li&gt;&#13;
+    &lt;li&gt;If the amount of your online gift certificates does NOT cover the total order amount, you will need to pay the remainder of the purchase with a valid credit card.&lt;/li&gt;&#13;
+    &lt;li&gt;If the amount of your online gift certificates is for MORE than the total order amount, the balance will be stored with your Commerce Cloud account for your next purchase using the same gift certificate code.&lt;/li&gt;&#13;
+    &lt;li&gt;If you have any additional questions, please contact our Customer Service team.&lt;/li&gt;&#13;
+    &lt;li&gt;Online gift certificates are non-transferable, non-refundable and are not redeemable for cash (except where required by state law).&lt;/li&gt;&#13;
+    &lt;li&gt;We cannot replace lost or stolen online gift certificates.&lt;/li&gt;&#13;
+    &lt;li&gt;We do not charge sales tax when you buy an online gift certificate because it is charged when the gift certificate is used. State tax may be added to all orders shipped to addresses in the states indicated here.&lt;/li&gt;&#13;
+&lt;/ul&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="gift-certificates"/>
+        </folder-links>
+    </content>
+
+    <content content-id="gift-check-balance">
+        <display-name xml:lang="x-default">Gift Certificate Check Balance</display-name>
+        <description xml:lang="x-default">Gift Certificate Check Balance Pop-Up</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Check Balance of Existing Certificate&lt;/h2&gt;&#13;
+&lt;div style="padding:20px 0;"&gt;&#13;
+To redeem a gift certificate, provide the cardâ€™s 16-digit number code on the billing page of the checkout process. To check the balance of your online gift certificate, enter the number below:&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="gift-certificates"/>
+        </folder-links>
+    </content>
+
+    <content content-id="gift-details">
+        <display-name xml:lang="x-default">Gift Certificate Details</display-name>
+        <description xml:lang="x-default">Gift Certificate Details</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Purchasing Gift Certificates</page-title>
+            <page-description xml:lang="x-default">Purchasing Gift Certificates</page-description>
+         </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Purchase an Online Gift Certificate&lt;/h2&gt;&#13;
+&#13;
+&lt;img height="162" width="312" src="images/gift-certificates.png?$staticlink$" alt="" /&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Delivered by email within hours&lt;/li&gt;&#13;
+    &lt;li&gt;Send as email&lt;/li&gt;&#13;
+    &lt;li&gt;Use online only&lt;/li&gt;&#13;
+    &lt;li&gt;Only redeemable in the country where purchased&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Online Gift Certificate General Information&lt;/strong&gt;&lt;/p&gt;&#13;
+&lt;p&gt;Online Gift Certificates can be ordered in any amount between $5.00 and $5000.00. They are sent via email to any individual with a valid email address. The recipient of an online gift certificate will receive an email with a gift certificate code redeemable only at Commerce Cloud. The code is activated within 24 hours after receiving the email.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="gift-certificates"/>
+        </folder-links>
+    </content>
+
+    <content content-id="help-telephone">
+        <display-name xml:lang="x-default">Phone</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&lt;strong&gt;Shipping Phone Number&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This phone number is required in the event the shipping partner needs to arrange a delivery time with you.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Billing Phone Number&lt;/strong&gt;&lt;/p&gt;&#13;
+&lt;p&gt;The billing phone number must match the telephone number on your credit card account, otherwise the card will not be authorized.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="history">
+        <display-name xml:lang="x-default">Our Story</display-name>
+         <description xml:lang="x-default">With Commerce Cloud eCommerce, our customers are spending more time leading with merchandising and marketing. They're in complete control over their site, making changes and launching new storefronts whenever they like. They're spending more time developing their own proprietary innovations (versus building commodity functionality). They receive new software upgrades from Commerce Cloud continuously. And they never ever worry about site uptime, availability and security!</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&lt;strong&gt;It all started with a series of observations:&lt;/strong&gt;&lt;/p&gt;&#13;
+                &#13;
+                &lt;ul&gt;&#13;
+                    &lt;li&gt;eCommerce merchandising and marketing innovation is what generates the revenue, yet most operations are spending 80% of their budgets simply maintaining current infrastructure.&#13;
+                    &lt;li&gt;The pace of eCommerce accelerates daily, yet most operations are scrambling only to stand still.&#13;
+                    &lt;li&gt;Merchandisers and marketers are supremely frustrated, spending more time chasing outsourced providers and internal IT organizations, than actually merchandising and marketing their own businesses.&#13;
+                &lt;/ul&gt;&#13;
+                &#13;
+                &lt;h5 class="internal"&gt;There had to be a better way.&lt;/h5&gt;&#13;
+                &#13;
+                &lt;p&gt;So in 2004, we set out to find it. The vision&amp;mdash;then and now&amp;mdash;was clear: bring to market an enterprise-class eCommerce solution that would put more power and innovation in the hands of merchandisers and at the same time would remove the technical costs, risks and complexities of running an eCommerce operation. We took what we knew of great eCommerce merchandising (our founders have been in eCommerce since 1994) and applied to it the then-emerging advancements in Software-as-a-Service architectures and dynamic grid computing. Then we worked hard. We stayed up late. We drank lots of coffee. And ultimately, in late 2005, we delivered the market&amp;rsquo;s first on-demand enterprise ecommerce platform.&lt;/p&gt;&#13;
+                &#13;
+                &lt;h5 class="internal"&gt;Our customers could not be happier with the results.&lt;/h5&gt;&#13;
+                &#13;
+                &lt;p&gt;With Commerce Cloud eCommerce, our customers are spending more time leading with merchandising and marketing. They're in complete control over their site, making changes and launching new storefronts whenever they like. They're spending more time developing their own proprietary innovations (versus building commodity functionality). They receive new software upgrades from Commerce Cloud continuously. And they never ever worry about site uptime, availability and security.&lt;/p&gt;&#13;
+&#13;
+                &lt;p&gt;In short, they're free. Free to merchandise. Free to grow. Free to innovate. Free to change. Isn't that how eCommerce is supposed to be?&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="our-story">
+                <position>2.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="home-bottom-center">
+        <display-name xml:lang="x-default">Home Bottom Center</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img alt="Free shipping on orders over $150" src="images/homepage/home-promo-free-shipping.png?$staticlink$" /&gt;&#13;
+&lt;div class="home-bottom-center-text"&gt;&#13;
+&lt;h1&gt;Free&lt;/h1&gt;&#13;
+&lt;h2&gt;Ground Shipping&lt;/h2&gt;&#13;
+&lt;h3&gt;on orders of $150 or more&lt;/h3&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-bottom-left">
+        <display-name xml:lang="x-default">Home Bottom Left</display-name>
+        <description xml:lang="x-default">First slot on the left below home page Flash/jQuery scroller</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div id="home-promo-shop-shoes"&gt;&#13;
+    &lt;h2&gt;Shop Shoes&lt;/h2&gt;&#13;
+    &lt;ul&gt;&#13;
+        &lt;li&gt;&lt;span&gt;Shoes:&lt;/span&gt;&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$"&gt;Heels&lt;/a&gt;&lt;/li&gt;&#13;
+        &lt;li&gt;&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$"&gt;Flats&lt;/a&gt;&lt;/li&gt;&#13;
+        &lt;li&gt;&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$"&gt;Open Toe&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;/ul&gt;&#13;
+&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$" title="Go to category: Women's Shoes"&gt;&lt;img alt="Women's Shoes" src="images/homepage/womensshoes.png?$staticlink$" /&gt;&lt;/a&gt;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-bottom-right">
+        <display-name xml:lang="x-default">Home Bottom Right</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img height="413" width="320" alt="" src="images/homepage/home_bottom_right.png?$staticlink$" /&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-bottom-womens-shoes">
+        <display-name xml:lang="x-default">Shop Women's Shoes</display-name>
+        <description xml:lang="x-default">First slot on the left below home page Flash/jQuery scroller</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Shop Shoes&lt;/h2&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;&lt;span&gt;Shoes:&lt;/span&gt;&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$"&gt;Heels&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$"&gt;Flats&lt;/a&gt;&lt;/li&gt;&#13;
+    &lt;li&gt;&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$"&gt;Open Toe&lt;/a&gt;&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;a href="$url('Search-Show', 'cgid', 'womens-accessories-shoes')$" title="Go to Category: Women's Shoes"&gt;&lt;img alt="Women's Shoes" src="images/homepage/womensshoes.png?$staticlink$" /&gt;&lt;/a&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-categories">
+        <display-name xml:lang="x-default">Home  Categories</display-name>
+        <description xml:lang="x-default">Container for Home Page categories slots.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style&gt;&#13;
+@media (max-width: 543px) {&#13;
+    .square-tile {&#13;
+        background-image: url(https://via.placeholder.com/345x260/676767);&#13;
+    }&#13;
+    .wide-tile {&#13;
+        background-image: url(https://via.placeholder.com/345x200/676767);&#13;
+    }&#13;
+    .tall-tile {&#13;
+        background-image: url(https://via.placeholder.com/345x380/676767);&#13;
+    }&#13;
+}&#13;
+@media (min-width: 544px) {&#13;
+    .tall-tile {&#13;
+        background-image: url(https://via.placeholder.com/410x850/676767);&#13;
+    }&#13;
+    .wide-tile {&#13;
+        background-image: url(https://via.placeholder.com/850x410/676767);&#13;
+    }&#13;
+}&#13;
+@media (min-width: 544px) {&#13;
+    .square-tile {&#13;
+        background-image: url(https://via.placeholder.com/410/676767);&#13;
+    }&#13;
+}&#13;
+&lt;/style&gt;&#13;
+&#13;
+&lt;div class="row home-main-categories no-gutters"&gt;&#13;
+&lt;div class="col-sm-8"&gt;&#13;
+  &lt;div class="row no-gutters"&gt;&#13;
+    &lt;div class="col-sm-6"&gt;&#13;
+      &lt;a href="$url('Search-Show','cgid','parts-machine--riding-l')$"&gt;&#13;
+        &lt;div class="womens-dresses square-tile half-height category-tile"&gt;&#13;
+          &lt;h4 class="hp-category-message"&gt;&#13;
+            Shop Push Mowers&#13;
+          &lt;/h4&gt;&#13;
+        &lt;/div&gt;&#13;
+      &lt;/a&gt;&#13;
+    &lt;/div&gt;&#13;
+    &lt;div class="col-sm-6"&gt;&#13;
+      &lt;a href="$url('Search-Show','cgid','parts-part-typ-engine-p')$"&gt;&#13;
+        &lt;div class="womens-jewelry square-tile half-height category-tile"&gt;&#13;
+          &lt;h4 class="hp-category-message"&gt;&#13;
+            Shop Engine Parts&#13;
+          &lt;/h4&gt;&#13;
+        &lt;/div&gt;&#13;
+      &lt;/a&gt;&#13;
+    &lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div class="row no-gutters"&gt;&#13;
+    &lt;div class="col-12"&gt;&#13;
+      &lt;a href="$url('Search-Show','cgid','parts-machine--snow-blo')$"&gt;&#13;
+        &lt;div class="wide-tile half-height category-tile"&gt;&#13;
+          &lt;h4 class="hp-promotion-message"&gt;&#13;
+            Shop Snow Blowers&#13;
+          &lt;/h4&gt;&#13;
+        &lt;/div&gt;&#13;
+      &lt;/a&gt;&#13;
+    &lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div class="col-12 col-sm-4"&gt;&#13;
+  &lt;a href="$url('Search-Show','cgid','parts-machine--riding-l')$"&gt;&#13;
+    &lt;div class="tall-tile full-height category-tile"&gt;&#13;
+        &lt;h4 class="hp-category-message"&gt;&#13;
+            Shop Riding Mowers&#13;
+        &lt;/h4&gt;&#13;
+    &lt;/div&gt;&#13;
+  &lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-cycle">
+        <display-name xml:lang="x-default">Home Cycle Data</display-name>
+         <description xml:lang="x-default">images/homepage/img01.jpg?$staticlink$</description>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;ul id="homepage-slides"&gt;&#13;
+    &lt;li class="slide slide1"&gt;&#13;
+    &lt;a href="$url('Search-Show','cgid','mens-clothing-suits')$"&gt;&#13;
+            &lt;div class="banner-message"&gt;&#13;
+                &lt;div class="banner-text2"&gt;Mens&lt;/div&gt;&#13;
+                &lt;div class="banner-text1"&gt;Suits&lt;/div&gt;&#13;
+                &lt;div class="banner-text3"&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;img src="images/homepage/car-suit.jpg?$staticlink$" alt="Mens Suits"/&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class="slide slide2"&gt;&#13;
+        &lt;a href="$url('Search-Show','cgid','womens-accessories')$"&gt;&#13;
+            &lt;div class="banner-message"&gt;&#13;
+                &lt;div class="banner-text2"&gt;The&lt;/div&gt;&#13;
+                &lt;div class="banner-text1"&gt;Perfect Companion&lt;/div&gt;&#13;
+                &lt;div class="banner-text3"&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;img src="images/homepage/car-accessories.jpg?$staticlink$" alt="Perfect Companion"/&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class="slide slide3"&gt;&#13;
+        &lt;a href="$url('Search-Show','cgid','womens-accessories-shoes')$"&gt;&#13;
+            &lt;div class="banner-message"&gt;&#13;
+                &lt;div class="banner-text2"&gt;Womens&lt;/div&gt;&#13;
+                &lt;div class="banner-text1"&gt;Shoes&lt;/div&gt;&#13;
+                &lt;div class="banner-text3"&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;img src="images/homepage/car-shoes.jpg?$staticlink$" alt="Women's Shoes"/&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class="slide slide4"&gt;&#13;
+        &lt;a href="$url('Search-Show','cgid','womens-clothing-dresses')$"&gt;&#13;
+            &lt;div class="banner-message"&gt;&#13;
+                &lt;div class="banner-text2"&gt;Womens&lt;/div&gt;&#13;
+                &lt;div class="banner-text1"&gt;Dresses&lt;/div&gt;&#13;
+                &lt;div class="banner-text3"&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;img src="images/homepage/car-dresses.jpg?$staticlink$" alt="Womens Dresses"/&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class="slide slide5"&gt;&#13;
+&lt;a href="$url('Search-Show','cgid','newarrivals-womens')$"&gt;&#13;
+            &lt;div class="banner-message"&gt;&#13;
+                &lt;div class="banner-text1"&gt;Spring&lt;/div&gt;&#13;
+                &lt;div class="banner-text2"&gt;New Arrivals&lt;/div&gt;&#13;
+                &lt;div class="banner-text3"&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;img src="images/homepage/car-spring.jpg?$staticlink$" alt="Spring Arrivals" /&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-free-shipping-orders-over-150">
+        <display-name xml:lang="x-default">Free ground shipping on orders of $150 or more</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img alt="Free Shipping on orders over $150" src="images/homepage/home-promo-free-shipping.png?$staticlink$" /&gt;&#13;
+&lt;div class="home-bottom-center-text"&gt;&#13;
+&lt;h1&gt;Free&lt;/h1&gt;&#13;
+&lt;h2&gt;Ground Shipping&lt;/h2&gt;&#13;
+&lt;h3&gt;on orders of $150 or more&lt;/h3&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-main">
+        <display-name xml:lang="x-default">Home Main</display-name>
+        <description xml:lang="x-default">Container for Home Page main image.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style&gt;&#13;
+@media (max-width: 543px) {&#13;
+    .hero.main-callout {&#13;
+        background-image: url(https://via.placeholder.com/375x400/676767);&#13;
+    }&#13;
+}&#13;
+@media (min-width: 544px) {&#13;
+    .hero.main-callout {&#13;
+        background-image: url(https://via.placeholder.com/1920x400/676767);&#13;
+    }&#13;
+}&#13;
+&#13;
+&lt;/style&gt;&#13;
+&lt;div class="hero main-callout"&gt;&#13;
+    &lt;div class="hero-text hero-text-left"&gt;&#13;
+        &lt;h1 class="display-1"&gt;Post Season Savings!&lt;/h1&gt;&#13;
+        &lt;h4&gt;Stock your supply of summer maintenance parts&lt;/h4&gt;&#13;
+        &lt;button class="btn btn-primary btn-lg"&gt;Shop Mower Parts&lt;/button&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="home-page"/>
+        </folder-links>
+    </content>
+
+    <content content-id="home-product-set-content">
+        <display-name xml:lang="x-default">home product set content</display-name>
+        <description xml:lang="x-default">Content shown on the homepage that will reveal product tiles of products assigned to the 'home-product-set' slot.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style&gt;&#13;
+@media (max-width: 543px) {&#13;
+    .hero {&#13;
+        background-image: url(https://via.placeholder.com/375x400/676767);&#13;
+    }&#13;
+}&#13;
+@media (min-width: 544px) {&#13;
+    .hero {&#13;
+        background-image: url(https://via.placeholder.com/1920x400/676767);&#13;
+    }&#13;
+}&#13;
+&lt;/style&gt;&#13;
+&lt;div class="hero"&gt;&#13;
+    &lt;div class="hero-text hero-text-center"&gt;&#13;
+        &lt;h1 class="display-1"&gt;Start the Holidays Right&lt;/h1&gt;&#13;
+        &lt;h4&gt;Start the Holidays Right&lt;/h4&gt;&#13;
+        &lt;button class="btn btn-primary btn-lg"&gt;Shop Decorations&lt;/button&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-product-tile-content">
+        <display-name xml:lang="x-default">Home page product tiles</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;a href="$url('Search-Show','cgid','newarrivals')$"&gt;&#13;
+&lt;span class="largeText"&gt;Styles to Love&lt;/span&gt;&#13;
+&lt;br /&gt;&#13;
+&lt;span&gt;Only Online&lt;/span&gt;&#13;
+&lt;/a&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home-right">
+        <display-name xml:lang="x-default">HOME_RIGHT</display-name>
+        <description xml:lang="x-default">Placeholder for Product Scroller</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="inactive-source-code">
+        <display-name xml:lang="x-default">Inactive Source Code Landing Page</display-name>
+        <description xml:lang="x-default">Landing Page for Inactive Source Codes</description>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="marketing-pages"/>
+        </folder-links>
+    </content>
+
+    <content content-id="jobs-landing">
+        <display-name xml:lang="x-default">Jobs Landing Page</display-name>
+        <description xml:lang="x-default">Welcome to Commerce Cloud! At Commerce Cloud we recognize all success starts with people. At Commerce Cloud we value individuals who are passionate about delivering a strong product and services to all of our customers. At Commerce Cloud we will provide you with an opportunity to work in an employee-friendly environment as well as improve Commerce Cloud's offering and services to our customers. The possibilities are endless, not to mention the extensive benefits package, training and development opportunities along with discounts for all of our employees.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div style="padding:24px 16px 0 16px; font-size:1.1em;"&gt;&#13;
+&#13;
+&lt;h1 style="color: rgb(86, 79, 71);"&gt;Careers at Commerce Cloud&lt;/h1&gt;&#13;
+&lt;hr /&gt;&#13;
+&lt;p style="margin:0 0 8px 0;"&gt;&#13;
+Welcome to Commerce Cloud. At Commerce Cloud we recognize all good success starts with people. At Commerce Cloud we value individuals who are passionate about delivering a strong product and services to all of our customers. At Commerce Cloud we will provide you with an opportunity to work in an employee friendly environment as well improve Commerce Cloud's offering and services to our customers.&#13;
+&lt;/p&gt;&#13;
+&#13;
+&lt;p style="margin:0 0 8px 0;"&gt;&#13;
+The possibilities are endless, not to mention the extensive benefits package, training and development opportunities along with employee discounts for all of our employees.&#13;
+&lt;/p&gt;&#13;
+                &#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="employment"/>
+        </folder-links>
+    </content>
+
+    <content content-id="keyword_belt">
+        <display-name xml:lang="x-default">Keyword Belt</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&lt;img width="789" height="136" src="images/SearchBanner/womens-accessories-footwear.jpg?$staticlink$" alt="" /&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="SearchBanner"/>
+        </folder-links>
+    </content>
+
+    <content content-id="managing-account">
+        <display-name xml:lang="x-default">Managing Your Account</display-name>
+        <description xml:lang="x-default">Your email address serves as a convenient way to receive important information about your order and serves as your Commerce Cloud account identification. Your account stores information such as order history and your billing and shipping address. It also offers you the ability to track your order(s). The password assures that only you have access to your account information.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Managing Your Account&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;It's easy to change your account information online at any time. Simply click &lt;a href="$httpsURL('Account-Show')$"&gt;My Account&lt;/a&gt; now to access your account. If you have forgotten your password, &lt;a href="$httpsURL('Account-Show')$"&gt;click here&lt;/a&gt;.&lt;/p&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Your email address serves as a convenient way to receive important information about your order and serves as your Commerce Cloud account identification.&lt;/li&gt;&#13;
+    &lt;li&gt;Your account stores information such as order history and your billing and shipping address. It also offers you the ability to track your orders. The password assures that only you have access to your account information.&lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+         </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="my-account-information">
+                <position>1.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="minicart-content">
+        <display-name xml:lang="x-default">Mini Cart Message</display-name>
+       <description xml:lang="x-default">Content Asset for Mini-Cart Message</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"/>
+        </folder-links>
+    </content>
+
+    <content content-id="myaccount-addresses">
+        <display-name xml:lang="x-default">My Account Addresses</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Addresses</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="myaccount-home">
+        <display-name xml:lang="x-default">My Account Home</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Account Home</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="myaccount-login">
+        <display-name xml:lang="x-default">My Account Login</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Account Login</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="myaccount-orderhistory">
+        <display-name xml:lang="x-default">My Account Order History</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Order History</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="myaccount-paymentsettings">
+        <display-name xml:lang="x-default">My Account Payment Settings</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Payment Settings</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="myaccount-personaldata">
+        <display-name xml:lang="x-default">My Account Edit Personal Data</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My RefArch Edit Account</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="noresults-bottom">
+        <display-name xml:lang="x-default">No Search Results Bottom</display-name>
+        <description xml:lang="x-default">Content at bottom of no search results.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;If you cannot find what you are looking for, why not let our trained staff recommend something?&lt;/p&gt;&#13;
+&lt;div&gt;Our Customer Service Representatives are available now to help. &lt;a href="mailto:service@salesforce.com"&gt;Email&lt;/a&gt; us or call 800-555-0199.&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="grid-banners"/>
+        </folder-links>
+    </content>
+
+    <content content-id="noresults-help">
+        <display-name xml:lang="x-default">No Search Results Help</display-name>
+        <description xml:lang="x-default">Message displayed to customers offering search help.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;Try your search again using these tips:&lt;/p&gt;&#13;
+&lt;ul class="grayarrow"&gt;&#13;
+    &lt;li&gt;Double check the spelling. Try varying the spelling.&lt;/li&gt;&#13;
+    &lt;li&gt;Limit the search to one or two words.&lt;/li&gt;&#13;
+    &lt;li&gt;Be less specific in the choice of your search terms. Sometimes a more general term will lead you to similar products.&lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="grid-banners"/>
+        </folder-links>
+    </content>
+
+    <content content-id="opening-account">
+        <display-name xml:lang="x-default">Opening An Account</display-name>
+        <description xml:lang="x-default">Opening an account is easy. You may create an account at any time by clicking the "My Account" hyperlink in the header or when you place an order, you will be prompted to log in with your email address and password. An account offers you a safe, easy and fast way to order. It also serves as a way to track your order and receive emails about your order.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Opening an Account&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;Opening an account is easy. Simply click &lt;a href="$httpsURL('Account-Show')$"&gt;My Account&lt;/a&gt;, or when you place an order, you will be prompted to log in with your email address and password. An account offers you a safe, easy and fast way to order. It also serves as a way to track your order and receive emails about your order.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Account Benefits&lt;/h2&gt; &#13;
+&lt;p&gt;Set up an account and customize your preferences. Improve your shopping experience by taking advantage of great benefits.&lt;/p&gt;&#13;
+        &#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;h2&gt;News and Exclusive Offers&lt;/h2&gt; &#13;
+        &lt;p&gt;Sign up to receive email updates on special promotions, new product announcements, gift ideas and more.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;h2&gt;Order History&lt;/h2&gt; &#13;
+        &lt;p&gt;Receive important information regarding your order and the capability to track your order up to the moment it arrives.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;h2&gt;Faster Checkout&lt;/h2&gt;&#13;
+        &lt;p&gt;Save your billing and shipping information to make it easier to find and buy your favorite stuff. Enjoy hassle-free checkout.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;h2&gt;Save My Cart&lt;/h2&gt; &#13;
+        &lt;p&gt;Save your cart for checkout at a later time.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="my-account-information">
+                <position>2.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="ordering-canceling">
+        <display-name xml:lang="x-default">Changing/Canceling Orders</display-name>
+        <description xml:lang="x-default">You have the right to cancel your purchase and receive a full refund provided you notify us in writing as set out in (2) below that you are exercising this right of cancellation no later than seven working days (i.e. excluding weekends and bank holidays) beginning with the day after you received your goods.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Changing or Canceling Your Order&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;For details on your 28-day right of return, please see the Returns Policy section of the website. This section details your statutory rights of cancellation. Please note that this is a shorter period than the 28-day period under the Returns Policy.&lt;/p&gt;&#13;
+&#13;
+&lt;ol&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;p&gt;You have the right to cancel your purchase and receive a full refund provided you notify us in writing as set out in (2) below that you are exercising this right of cancellation no later than seven working days (i.e. excluding weekends and bank holidays) beginning with the day after you received your goods.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;p&gt;To exercise this right of cancellation:&lt;/p&gt;&#13;
+        &lt;ol&gt;&#13;
+            &lt;li&gt;&#13;
+                &lt;p&gt;Contact us by email at &lt;a href="mailto:customerservice@salesforce.com"&gt;customerservice@salesforce.com.&lt;/a&gt;,&amp;nbsp;&lt;/p&gt;&#13;
+            &lt;/li&gt;&#13;
+            &lt;li&gt;&#13;
+                &lt;p&gt;Follow the returns instructions as laid out in the &lt;a href="$url('Page-Show', 'cid', 'returns')$"&gt;Returns&lt;/a&gt; section of this site.&lt;/p&gt;&#13;
+            &lt;/li&gt;&#13;
+        &lt;/ol&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;p&gt;Please note that if you fail to take reasonable care of returned goods or fail to return the goods to us, we will be entitled to make a claim against you for any losses which we suffer.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;p&gt;If your goods are faulty or do not meet the description given on the site, we will refund the value of your order for those goods. For more information on how to return goods to us please refer to the &lt;a href="$url('Page-Show', 'cid', 'returns')$"&gt;Return Policy&lt;/a&gt; section of the site.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;p&gt;We recommend that returned goods be sent via insured, traceable delivery for your protection.&lt;/p&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li&gt;&#13;
+        &lt;p&gt;Please note that you do not have a cancellation right with regards to customized products. Occasionally, orders or parts of an order are cancelled by our system for various reasons. Some reasons are:&lt;/p&gt;&#13;
+        &lt;ul&gt;&#13;
+            &lt;li&gt;  &#13;
+                &lt;p&gt;Item(s) not available&lt;/p&gt;&#13;
+            &lt;/li&gt;&#13;
+            &lt;li&gt;  &#13;
+                &lt;p&gt;Problem processing your payment information&lt;/p&gt;&#13;
+            &lt;/li&gt;&#13;
+            &lt;li&gt;&#13;
+                &lt;p&gt;Shipping not possible to provided address&lt;/p&gt;&#13;
+            &lt;/li&gt;&#13;
+            &lt;li&gt;  &#13;
+                &lt;p&gt;Duplicate order was placed&lt;/p&gt;&#13;
+            &lt;/li&gt;&#13;
+        &lt;/ul&gt;&#13;
+    &lt;/li&gt;&#13;
+&lt;/ol&gt;&#13;
+&#13;
+&lt;p&gt;If your order is cancelled by us, you will receive an email which will explain the reason for the cancellation. You will not be billed for any cancelled items. If you are interested in alternative products, please contact our Customer Service Team by email or by calling 1 (800) 555 0199&amp;nbsp;for a recommendation. &lt;/p&gt;&#13;
+&lt;p&gt;* Please note that calls to 1 (800) 555 0199 &amp;nbsp;that are not made from a US landline may be subject to a charge.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ordering">
+                <position>2.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="payment">
+        <display-name xml:lang="x-default">Valid Payment Methods</display-name>
+        <description xml:lang="x-default">Payment for all goods must be made by credit or debit card. We accept payment with: Visa, MasterCard, American Express and Discover.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Valid Payment Methods&lt;/h1&gt;&#13;
+    &#13;
+&lt;p&gt;Payment for all goods must be made by credit or debit card.&lt;/p&gt;&#13;
+&lt;p&gt;We accept payment with:&lt;/p&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;Visa&lt;/li&gt;&#13;
+    &lt;li&gt;MasterCard&lt;/li&gt;&#13;
+    &lt;li&gt;American Express&lt;/li&gt;&#13;
+    &lt;li&gt;Discover&lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ordering">
+                <position>3.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="privacy-policy">
+        <display-name xml:lang="x-default">Privacy Policy</display-name>
+       <description xml:lang="x-default">At Commerce Cloud, we respect the privacy of our customers and the visitors to our website. This statement describes the current information gathering, sharing and privacy practices for our website, wwwwww.salesforce.com/products/commerce-cloud.com</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">eCommerce Solutions On-Demand | Commerce Cloud Privacy Policy</page-title>
+            <page-keywords xml:lang="x-default">Privacy Policy</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header privacy-policy"&gt;Privacy Policy&lt;/h1&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Collection of Personal Information&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Use of Personal Information&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Control of Personal Information&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Security of the Information We Collect&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Protection of Children's Privacy&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Privacy and Online Forums&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Privacy and Tell-a-Friend Forms&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Use of Cookies and Clear GIF Technology&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Enforcement of this Statement&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Links to Other Websites&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Changes to this Statement&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;Contact Information&lt;/h2&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, nominati senserit abhorreant nec ut, cu vocibus detraxit eos. Liber altera bonorum sea cu, id vulputate voluptatibus usu. Vix periculis torquatos in. No probo laoreet vel, simul dolor accusam pri ad. Usu nihil equidem mandamus ex, quo in augue nonumy torquatos, ex natum doctus eos. Sed ut saepe maiestatis abhorreant.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Lorem ipsum, Inc.&lt;br /&gt;&#13;
+ATTN: Privacy&lt;br /&gt;&#13;
+0 Some St&lt;br /&gt;&#13;
+CityName, XX 00000 USA&lt;br /&gt;&#13;
++1 (800)&amp;nbsp;555 0199&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="privacy-security">
+                <position>1.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="prop65-warning">
+        <display-name xml:lang="x-default">Proposition 65 Warning</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Warning about Proposition 65! Content asset ID: &lt;strong&gt;prop65-warning&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="cart-checkout"></classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="returns">
+        <display-name xml:lang="x-default">Information About Returns</display-name>
+        <description xml:lang="x-default">We want you to be entirely happy with your purchase from us. If you are unhappy with the goods in any way please contact our Customer Service Team at customerservice@salesforce.com or call 1 (800) 555 0199 as soon as possible. Please note that calls to 1 (800) 555 0199 that are not made from a US landline may be subject to a charge. If for any reason you are unhappy with your goods, you have the right to return them and receive a full refund.</description>
+         <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Return Policy&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;We want you to be entirely happy with your purchase from us. If you are unhappy with the goods in any way please contact our Customer Service Team at customerservice@salesforce.com or call 1 (800) 800 555 0199 as soon as possible. Please note that calls to 1 (800) 888 555 0199 that are not made from a US landline may be subject to a charge. If for any reason you are unhappy with your goods, you have the right to return them and receive a full refund. This right of return is without prejudice to your statutory right of cancellation, details of which are in the Order Cancellation section of the website. You may return goods and receive a refund provided:&lt;/p&gt;&#13;
+&lt;ul&gt;&#13;
+    &lt;li&gt;They are received back at our Returns Department located at XXXXXX normally within 28 days. This 28 day period commences the day after your order has been shipped. Please see Return Instructions for details on the returns process.&lt;/li&gt;&#13;
+    &lt;li&gt;They have not been damaged, washed, altered or worn and must include the original packaging, labelling and Returns Form located at the bottom of the Packing List (enclosed with the delivered goods). Please note that we are unable to accept returns for customized products.&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&lt;p&gt;We'll do everything we can to take care of your return quickly. It may take up to two billing cycles for the credit to appear on your credit card statement. Returns with complete documentation receive priority. Please note that if the Commerce Cloud returns process is not followed, Commerce Cloud is not responsible for returns lost in transit to us. All sales involving customized products are final, and may not be returned. Please also note that you do not have a statutory cancellation right for customized products. If you purchased a customized product online and it is damaged during shipping, please contact our Customer Service Team at 1 (800) 555 0199 within 10 days of receiving your purchase.&lt;/p&gt;&#13;
+&lt;p&gt;If you purchased a customized product at a retail location and receive a damaged or defective item, please contact the specific store where the purchase was made. For a list of US stores, please refer to the Store Locator section of our website or call us at 1 (800) 555 0199.  Please note that calls to 1 (800) 555 0199 that are not made from a US landline may be subject to a charge.&lt;/p&gt;</custom-attribute>
+    </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="returns">
+                <position>1.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="search-promo1">
+        <display-name xml:lang="x-default">Search Promotion Message 1</display-name>
+        <description xml:lang="x-default">Promotional message on search results page. This is the promotional message on the left.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="grid-banners"/>
+        </folder-links>
+    </content>
+
+    <content content-id="search-promo2">
+        <display-name xml:lang="x-default">Search Promotion 2</display-name>
+        <description xml:lang="x-default">Promotional message in the middle of the search results page.</description>
+          <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="grid-banners"/>
+        </folder-links>
+    </content>
+
+    <content content-id="search-promo3">
+        <display-name xml:lang="x-default">Search Promotion 3</display-name>
+        <description xml:lang="x-default">Promotional message on the right of the search results page.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <folder-links>
+            <classification-link folder-id="grid-banners"/>
+        </folder-links>
+    </content>
+
+    <content content-id="search-results-default">
+        <display-name xml:lang="x-default">Search Results Default</display-name>
+        <description xml:lang="x-default">Default Banner for Search Results</description>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;script language="javascript"&gt;&#13;
+    if (AC_FL_RunContent == 0) {&#13;
+        alert("This page requires AC_RunActiveContent.js.");&#13;
+    } else {&#13;
+        AC_FL_RunContent(&#13;
+            'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',&#13;
+            'width', '752',&#13;
+            'height', '138',&#13;
+            'src', 'Images/flash/gift_certificates_ad.swf?$staticlink$',&#13;
+            'quality', 'high',&#13;
+            'pluginspage', 'http://www.macromedia.com/go/getflashplayer',&#13;
+            'align', 'middle',&#13;
+            'play', 'true',&#13;
+            'loop', 'true',&#13;
+            'scale', 'showall',&#13;
+            'wmode', 'window',&#13;
+            'devicefont', 'false',&#13;
+            'id', 'gift_certificates_ad',&#13;
+            'bgcolor', '#ffffff',&#13;
+            'name', 'gift_certificates_ad',&#13;
+            'menu', 'true',&#13;
+            'allowFullScreen', 'false',&#13;
+            'allowScriptAccess','sameDomain',&#13;
+            'movie', 'gift_certificates_ad',&#13;
+            'salign', ''&#13;
+            ); //end AC code&#13;
+    }&#13;
+&lt;/script&gt; &lt;noscript&gt;&#13;
+    &lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="752" height="138" id="gift_certificates_ad" align="middle"&gt;&#13;
+    &lt;param name="allowScriptAccess" value="sameDomain" /&gt;&#13;
+    &lt;param name="allowFullScreen" value="false" /&gt;&#13;
+    &lt;param name="movie" value="gift_certificates_ad.swf" /&gt;&lt;param name="quality" value="high" /&gt;&lt;param name="bgcolor" value="#ffffff" /&gt;  &lt;embed src="Images/flash/gift_certificates_ad/gift_certificates_ad.swf?$staticlink$" quality="high" bgcolor="#ffffff" width="752" height="138" name="gift_certificates_ad" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /&gt;&#13;
+    &lt;/object&gt;&#13;
+&lt;/noscript&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="grid-banners"/>
+        </folder-links>
+    </content>
+
+    <content content-id="security-policy">
+        <display-name xml:lang="x-default">Security Policy</display-name>
+        <description xml:lang="x-default">At Commerce Cloud, we know that keeping your credit card information secure is important to you. That makes it very important to us. We use Secure Socket Layer (SSL) 128-bit encryption technology to protect your online information.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Security Policy&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;At Commerce Cloud, we know that keeping your credit card information secure is important to you. That makes it very important to us. We use Secure Socket Layer (SSL) 128-bit encryption technology to protect your online information.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;How do we make sure information is secure? &lt;/strong&gt;&lt;br /&gt;&#13;
+We use the latest encryption technology (Secure Sockets Layer, or SSL) to secure your personal information. The information you provide when you place an order is encrypted (or coded) using a secure server for maximum security. This coding makes it extremely difficult for anyone to reach your information as it moves through our ordering system.&lt;/p&gt;&#13;
+&lt;p&gt;Certain browsers will not allow communication through secure servers. If this is the case, you won't be able to place an order online. If you have any problems placing an order online please print your shopping page and place your order by phone at 1 (800) 555 0199. Please note that calls to 1 (800) 555 0199 that are not made from a UK landline may be subject to a charge.&lt;/p&gt;&#13;
+&lt;p&gt;To check the security of your computer, look at the lower right-hand corner of your browser window if you are using Internet Explorer. If you see an unbroken key or a closed lock, then the encryption technology is active and the server is secure. You can also check by looking at the URL line of your browser; when you access a secure server, the initial characters of the site address will be &amp;quot;https.&amp;quot;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;What if you link to another site? &lt;/strong&gt;&lt;br /&gt;&#13;
+Our website may provide links to other websites that are not under our control. Neither we nor the third party service providers who manage our website are responsible for these linked websites, their content or for the actions of the providers of such sites. We recommend that you review the Privacy and Security Policies and terms of use for any websites you use.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Do I have to turn the security feature on when I want to shop? &lt;/strong&gt;&lt;br /&gt;&#13;
+The security features are automatic, and always on. You don't have to do anything but shop. Clicking &amp;quot;Checkout&amp;quot; on any page is all it takes to get started in our secure checkout process.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;How do I know if I'm connected when I start ordering? &lt;/strong&gt;&lt;br /&gt;&#13;
+Once you've clicked the &amp;quot;Continue Checkout&amp;quot; button, your browser looks for a digital certificate to confirm that it's communicating with our website. Once a positive identification is made, your order will continue securely.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Are all the pages on your website secure? &lt;/strong&gt;&lt;br /&gt;&#13;
+Most of the pages on our website provide information about Commerce Cloud and our products. We make this information available freely and there's no reason for these pages to be &amp;quot;secure.&amp;quot; The pages that we make secure are the ones on which you actually submit purchasing data such as when managing your account, checking your order status, or within the &amp;quot;Checkout&amp;quot; area. For example, the entire checkout process, from introduction to final confirmation, is completely secure.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Is my information secure when it's transmitted across the Internet? &lt;/strong&gt;&lt;br /&gt;&#13;
+All of your information is encrypted before it's transmitted across the Internet, then decoded only after it arrives at our secure servers.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;strong&gt;Consent&lt;/strong&gt;&lt;br /&gt;&#13;
+We take the privacy rights of users of this site very seriously and our Privacy Policy explains to you how certain information about you may be processed.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="privacy-security">
+                <position>2.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="shipping">
+        <display-name xml:lang="x-default">Information About Shipping</display-name>
+         <description xml:lang="x-default">We shall endeavour to dispatch the goods to you as soon as possible after you place your order (subject to the order having been accepted by us as will be confirmed to you by email), normally within 2 working days or less if the goods are in stock, and in any event within 30 days beginning on the day after you place your order.</description>
+         <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Shipping Policy&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;Unless you specify an alternative delivery option the goods will be delivered by UPS Standard.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;We shall endeavour to dispatch the goods to you as soon as possible after you place your order (subject to the order having been accepted by us as will be confirmed to you by email), normally within 2 working days or less if the goods are in stock, and in any event within 30 days beginning on the day after you place your order. If we are unable to dispatch the goods within that time we will email to let you know and give you an estimated delivery date and you will have the right to cancel your order and receive a full refund as set out in that email.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;As soon as the goods are delivered to you, you are responsible for them.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="shippinginfo">
+                <position>1.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="shipping-methods">
+        <display-name xml:lang="x-default">Shipping Methods</display-name>
+         <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Shipping Methods&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;&lt;em&gt;Commerce Cloud does not ship to AK, HI, or P.O. Boxes.&lt;/em&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;table summary="Shipping Promotion Table"&gt;&#13;
+    &lt;tbody&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;th&gt;Shipment Cost&lt;/th&gt;&#13;
+            &lt;th&gt;UPS Ground&lt;/th&gt;&#13;
+            &lt;th&gt;2nd Day Air&lt;/th&gt;&#13;
+            &lt;th&gt;Next Day Air&lt;/th&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;$0-$99.99&lt;/td&gt;&#13;
+            &lt;td&gt;$5.99&lt;/td&gt;&#13;
+            &lt;td&gt;$9.99&lt;/td&gt;&#13;
+            &lt;td&gt;$15.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;$100.00 - $199.99&lt;/td&gt;&#13;
+            &lt;td&gt;$7.99&lt;/td&gt;&#13;
+            &lt;td&gt;$11.99&lt;/td&gt;&#13;
+            &lt;td&gt;$19.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;$200.00 - $499.99&lt;/td&gt;&#13;
+            &lt;td&gt;$9.99&lt;/td&gt;&#13;
+            &lt;td&gt;$15.99&lt;/td&gt;&#13;
+            &lt;td&gt;$21.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;$500 +&lt;/td&gt;&#13;
+            &lt;td&gt;$15.99&lt;/td&gt;&#13;
+            &lt;td&gt;$20.99&lt;/td&gt;&#13;
+            &lt;td&gt;$29.99&lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+    &lt;/tbody&gt;&#13;
+&lt;/table&gt;&#13;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; All televisions must ship using ground shipping, 2nd Day Air and Next Day Air are not available shipping options for televisions.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="shippinginfo">
+                <position>2.0</position>
+            </classification-link>
+        </folder-links>
+    </content>
+
+    <content content-id="store-locator">
+        <display-name xml:lang="x-default">Store Locator</display-name>
+          <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">RefArch Store Locator</page-title>
+        </page-attributes>
+    </content>
+
+    <content content-id="super-save-shipping">
+        <display-name xml:lang="x-default">Super Saver Shipping</display-name>
+        <description xml:lang="x-default">Super Saver Shipping for video games.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Super Saver Shipping&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;Super Saver Shipping for Video Games&lt;/p&gt;&#13;
+&lt;p&gt;Commerce Cloud is offering Super Saver Shipping on the shipment of video games only. A fixed shipping cost of $1.99 will be applied to all orders that contain video games only and have the Super Saver Shipping option selected. Any orders that contain products other than video games do not qualify for Super Saver Shipping. &lt;em&gt;Super Saver Shipping&lt;/em&gt;&amp;nbsp;&lt;em&gt;offer not valid for AK, HI, or P.O. Boxes.&amp;nbsp;&lt;/em&gt;&lt;/p&gt;&#13;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; All video games have a $1.00 shipping surcharge fee for Super Saver Shipping.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="shippinginfo">
+                <position>3.0</position>
+            </classification-link>
+        </folder-links>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+
+    <content content-id="terms">
+        <display-name xml:lang="x-default">Terms &amp; Conditions of Sale</display-name>
+        <description xml:lang="x-default">These terms of use set forth the basis on which you are permitted to access and use this website, salesforce.com/products/commerce-cloud</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1 class="content-header"&gt;Terms &amp;amp; Conditions of Sale&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;ATTENTION: These terms of use set forth the basis on which you are permitted to access and use this website, salesforce.com/products/commerce-cloud (the &amp;quot;Website&amp;quot;). Please read the terms of use carefully before using the Website. By accessing and using the Website in any way, including, without limitation, browsing the Website, you agree to and are bound by the terms of use described herein. If you do not agree to all of the terms and conditions contained herein, do not use the Website in any manner.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;OWNERSHIP&lt;/h2&gt;&#13;
+&lt;p&gt;All copyrights and other intellectual property rights in the Website, including without limitation all software and written and graphical content included in the Website, are owned by Commerce Cloud, Inc. (&amp;quot;Commerce Cloud&amp;quot;) and are hereby reserved.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;USE OF WEBSITE AND DOCUMENTS&lt;/h2&gt;&#13;
+&lt;p&gt;Commerce Cloud hereby authorizes you to make a single copy of the content displayed on the Website for your use in learning about, evaluating or acquiring Commerce Cloud services or products, provided (i) you mark such copy &amp;quot;&amp;copy; 2016 Commerce Cloud, Inc. All rights reserved.&amp;quot;; (ii) the use of such copy is for informational and non-commercial or personal use and will not be copied or posted on any network computer or broadcast in any media; and (iii) no modifications to such copy are made. No other permission is granted to you to print, copy, reproduce, distribute, transmit, upload, download, store, perform, display in public, alter, or modify the content contained on the Website. Accredited educational institutions, such as K-12, universities and colleges, may download and reproduce the content displayed on the Website for distribution in the classroom. Distribution outside the classroom requires express written permission. Use for any other purpose is expressly prohibited by law, and may result in severe civil and criminal penalties. Violators will be prosecuted to the maximum extent possible. The Website may contain email services, bulletin board services, forums, communities, and/or other message or communication facilities designed to enable you to communicate with others (collectively &amp;quot;Communication Services&amp;quot;). You agree to use the Communication Services only to post, send and receive messages and material that are proper. By way of example, and not as a limitation, you agree that when using the Communication Services or the Website, you will not (i) use them in connection with surveys, contests, pyramid schemes, chain letters, junk email, spamming or any duplicative or unsolicited messages; (ii) defame, abuse, harass, threaten or otherwise violate the legal rights of others; (iii) publish, post, upload, distribute or disseminate any inappropriate, profane, defamatory, obscene, pornographic, racist, lewd, lascivious, excessively violent, harassing, unlawful, or otherwise objectionable topic, name, material or information; (iv) upload, or otherwise make available, files that contain material protected by intellectual property laws unless you own or control the rights thereto or have received all necessary consent to do the same; (v) advertise or offer to sell or buy any goods or services for any business purpose, unless such Communication Services specifically allows such messages; (vi) restrict or inhibit any other user from using and enjoying the Communication Services or the Website; (vii) harvest or otherwise collect information about others, including email addresses; or (viii) violate any applicable laws or regulations. Commerce Cloud has no obligation to monitor the Website or Communication Services. However, Commerce Cloud reserves the right to review materials posted to the Website and the Communication Services and to remove and/or edit any materials in its sole discretion. Commerce Cloud reserves the right to terminate your access to the Website and the Communication Services at any time, without notice, for any reason whatsoever. Commerce Cloud reserves the right at all times to disclose any information as it deems necessary to satisfy any applicable law, regulation, legal process or governmental request, or to edit, refuse to post or to remove any information or materials, in whole or in part, in Commerce Cloud's sole discretion.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;TRADEMARKS/COPYRIGHTS&lt;/h2&gt;&#13;
+&lt;p&gt;Commerce Cloud &amp;reg;, Commerce Cloud eCommerce &lt;sup&gt;(SM)&lt;/sup&gt;, the Commerce Cloud logo, and any other marks used on the Website are trademarks of Commerce Cloud or their respective owners. Such marks may not be used without the prior written consent of Commerce Cloud. Any use of those marks, or any others displayed on the Website, will inure solely to the benefit of their respective owners.&lt;/p&gt;&#13;
+&lt;p&gt;Copyright Notice. Copyright &amp;copy; 2004-2016 Commerce Cloud, Inc. All rights reserved.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;UNSOLICITED SUBMISSION POLICY&lt;/h2&gt;&#13;
+&lt;p&gt;Commerce Cloud does not accept or consider unsolicited ideas, suggestions, materials or other information (all of the foregoing being &amp;quot;Submissions&amp;quot;). The purpose for this policy is to avoid misunderstandings or disputes with respect to the origin of ideas, products, services and strategies of Commerce Cloud. Please do not send your unsolicited Submissions to Commerce Cloud or anyone at Commerce Cloud. In the event that you disregard this policy and post, upload, input, provide, submit or otherwise make a Submission to Commerce Cloud, (i) you will be granting Commerce Cloud and its affiliates permission to use your Submission in connection with the operation of its businesses (the &amp;quot;License&amp;quot;), including, without limitation, the right to copy, distribute, display, edit, reproduce, translate and reformat your Submission for both commercial and non-commercial purposes, (ii) you warrant and represent that you own or otherwise control all of the rights to your Submission, including, without limitation, the rights necessary to grant the License and (iii) any such Submissions will be considered non confidential and non proprietary communications. No compensation will be paid with respect to your Submission. Commerce Cloud will not be subject to any obligation of confidence with respect to your Submission.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;NO UNLAWFUL OR PROHIBITED USE&lt;/h2&gt;&#13;
+&lt;p&gt;You may not use the Website for any purpose that is unlawful or prohibited by the terms and conditions provided herein. You may not use the Website in any manner that could damage, disable, overburden or otherwise impair any Commerce Cloud server or the networks connected to any Commerce Cloud server, or interfere with any other person's use and enjoyment of the Website. You may not attempt to gain unauthorized access to the Website or the computer systems or networks connected to any Commerce Cloud server through any means. You may not obtain any materials or information through any means not intentionally made available to you through the Website.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;LINKS&lt;/h2&gt;&#13;
+&lt;p&gt;Any links to third party websites are provided for your convenience only, and Commerce Cloud makes no recommendation or endorsement as to such websites or the products or services offered thereon.&lt;/p&gt;&#13;
+&lt;p&gt;You may link to the Commerce Cloud Website, unless notified otherwise in writing by Commerce Cloud. However, you may not frame the Website in a manner that may cause confusion to Commerce Cloud customers, nor may you interfere or attempt to interfere in any way with the operation of the Website, including without limitation through data mining, the use of any robot, scraper or other automated device, or circumvention or attempted circumvention of any website security features.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;SPAM EMAIL AND POSTINGS&lt;/h2&gt;&#13;
+&lt;p&gt;You agree that Commerce Cloud would be irreparably harmed by the use, by you or others, of the Website or facilities in connection with the transmission of spam, newsgroup postings or unsolicited email in violation of the terms of use as provided herein, and that Commerce Cloud is entitled to obtain injunctive relief against any such transmission (in addition to all other remedies available at law or in equity). Commerce Cloud reserves the right to block, filter or delete unsolicited email.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;U.S. EXPORT ADMINISTRATION LAWS AND REGULATIONS&lt;/h2&gt;&#13;
+&lt;p&gt;You acknowledge and agree that material on the Website is subject to the U.S. Export Administration Laws and Regulations. Diversion of such material contrary to U.S. law is prohibited. You agree that none of the material on the Website, nor any direct product therefrom, is being or will be acquired for, shipped, transferred, or re-exported, directly or indirectly, to proscribed or embargoed countries or their nationals, nor be used for nuclear activities, chemical biological weapons, or missile projects unless authorized by the U.S. Government. You certify that you are not on the U.S. Department of Commerce's Denied Persons List or affiliated lists or on the U.S. Department of Treasury's Specially Designated Nationals List. You agree to comply strictly with all U.S. export laws and assume sole responsibility for obtaining licenses to export or re-export as may be required.&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h2&gt;DISCLAIMER&lt;/h2&gt;&#13;
+&lt;p&gt;THE CONTENT CONTAINED IN THE WEBSITE IS PROVIDED BY COMMERCE CLOUD FOR GENERAL INFORMATIONAL PURPOSES ONLY AND DOES NOT CONSTITUTE A SPECIFIC RECOMMENDATION OR ADVICE. SUCH CONTENT IS PROVIDED &amp;quot;AS IS&amp;quot; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, AND IS SUBJECT TO CHANGE WITHOUT NOTICE. YOUR USE OF THE WEBSITE IS AT YOUR SOLE RISK, AND YOU ASSUME ALL LIABILITY IN RELATION TO IT.&lt;/p&gt;&#13;
+&lt;p&gt;ANY INFORMATION OR ADVICE PROVIDED THROUGH THE WEBSITE THAT IS RELATED TO SUPPORT OF COMMERCE CLOUD SOFTWARE PRODUCTS IS SUBJECT TO THE TERMS AND CONDITIONS OF THE LICENSE AND SUPPORT AGREEMENT BETWEEN YOU AND COMMERCE CLOUD, AND NOT TO THESE TERMS OF USE.&lt;/p&gt;&#13;
+&lt;p&gt;ANY MENTION IN THE WEBSITE OF NON COMMERCE CLOUD PRODUCTS OR SERVICES IS FOR INFORMATION PURPOSES ONLY AND CONSTITUTES NEITHER AN ENDORSEMENT NOR A RECOMMENDATION.&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h2&gt;LIMITATION ON LIABILITY&lt;/h2&gt;&#13;
+&lt;p&gt;AS CONSIDERATION FOR YOUR USE OF AND ACCESS TO THE WEBSITE, AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, YOU AGREE THAT: (i) IN NO EVENT WILL COMMERCE CLOUD OR ANY OTHER PARTY INVOLVED IN CREATING, PRODUCING, OR DELIVERING THE WEBSITE OR ANY SITE LINKED TO THE WEBSITE, BE LIABLE TO YOU IN ANY MANNER WHATSOEVER FOR ANY DECISION MADE OR ACTION OR NON-ACTION TAKEN BY YOU IN RELIANCE UPON THE INFORMATION PROVIDED THROUGH THE WEBSITE; AND (ii) THE AGGREGATE LIABILITY OF COMMERCE CLOUD OR ANY OF ITS DISTRIBUTORS OR DEALERS, ARISING FROM OR RELATING TO THIS AGREEMENT (REGARDLESS OF THE FORM OF ACTION OR CLAIM, e.g. CONTRACT, WARRANTY, TORT, STRICT LIABILITY, NEGLIGENCE, FRAUD, AND/OR OTHERWISE) IS LIMITED TO $100; AND (iii) COMMERCE CLOUD SHALL NOT IN ANY CASE BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, EVEN IF COMMERCE CLOUD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.&lt;/p&gt;&#13;
+&lt;p&gt;Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not apply to you.&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;h2&gt;NOTICES OF COPYRIGHT INFRINGEMENT&lt;/h2&gt;&#13;
+&lt;p&gt;If you believe that material posted on the Website infringes your copyright, you should provide notice of such infringement to the following person, who is Commerce Cloud's designated agent for the purposes of the Digital Millennium Copyright Act (17 U.S.C. 512):&lt;/p&gt;&#13;
+&lt;p&gt;Commerce Cloud, Inc.&lt;br /&gt;&#13;
+5 Wall St&lt;br /&gt;&#13;
+Burlington, MA 01803, USA&lt;br /&gt;&#13;
+&lt;a href="mailto:info@salesforce.com"&gt;info@salesforce.com&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;ENTIRE AGREEMENT&lt;/h2&gt;&#13;
+&lt;p&gt;These terms of use are the entire agreement between you and Commerce Cloud in relation to your use of the Website, and all other representations or discussions are hereby excluded from this agreement. If any part of these terms are held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. Commerce Cloud's failure to insist on or enforce strict performance of these terms shall not constitute a waiver of any breach or any future breaches thereof.&lt;/p&gt;&#13;
+&#13;
+&lt;h2&gt;GOVERNING LAW AND JURISDICTION&lt;/h2&gt;&#13;
+&lt;p&gt;The Website is controlled and operated from within the United States, and Commerce Cloud does not represent that the Website is appropriate for use outside the United States. If you access the Website from outside the United States, you are responsible for compliance with any applicable local law. Your use of the Website shall be governed in all respects by the laws of the Commonwealth of Massachusetts, USA, without regard to choice of law provisions, and not by the United Nations Convention on Contracts for the International Sale of Goods. You agree that jurisdiction over and venue in any proceeding directly or indirectly arising out of or relating to the Website shall be in the state or federal courts located in Suffolk County or Middlesex County, Massachusetts.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="terms"/>
+        </folder-links>
+    </content>
+
+    <content content-id="need-help-text">
+        <display-name xml:lang="x-default">Need Help Text</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;span&gt;Need Help? Call&lt;/span&gt;&#13;
+&lt;span&gt;&lt;a href="tel:1-800-555-0199"&gt;1-800-555-0199&lt;/a&gt;&lt;/span&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="error-address-validation">
+        <display-name xml:lang="x-default">Error Validation Asset</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Address Validation Error: content asset ID &lt;strong&gt;error-address-validation&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="error-tax-unavailable">
+        <display-name xml:lang="x-default">Error Tax unavailable</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Tax service is down: content asset ID &lt;strong&gt;error-tax-unavailable&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="manuals-download-notification">
+        <display-name xml:lang="x-default">Manuals Download Notification</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;manuals-download-notification&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ari-partstream">
+        <display-name xml:lang="x-default">ARI Part Stream</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">ARI Part Stream</page-title>
+        </page-attributes>
+    </content>
+
+<content content-id="email-signup-form">
+    <display-name xml:lang="x-default">Email Signup Form</display-name>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;container&quot;&gt;
+        &lt;form id=&quot;email-subscribe-form&quot; data-url=&quot;$url('MCSubscription-FooterSubscribe')$&quot; role=&quot;form&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-sm-12&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+
+        &lt;label for=&quot;email-signup&quot;&gt;Register To Receive Our Newsletter!&lt;/label&gt;
+        &lt;div class=&quot;input-group&quot;&gt;
+        &lt;input id=&quot;email-signup&quot; aria-label=&quot;Join our Email List&quot; class=&quot;form-control&quot; name=&quot;hpEmailSignUp&quot; placeholder=&quot;Enter Your Email Address&quot; type=&quot;email&quot; pattern=&quot;^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$&quot; data-missing-type=&quot;Required Field:&quot; data-missing-msg=&quot;Please fill out this field.&quot;/&gt;
+        &lt;span class=&quot;input-group-btn&quot;&gt;&lt;button class=&quot;btn btn-secondary&quot; type=&quot;submit&quot;&gt;Go&lt;/button&gt; &lt;/span&gt;
+        &lt;div class=&quot;invalid-feedback&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;/form&gt;
+        &lt;/div&gt;</custom-attribute>
+<custom-attribute attribute-id="body" xml:lang="fr-CA">&lt;div class=&quot;container&quot;&gt;
+        &lt;form id=&quot;email-subscribe-form&quot; data-url=&quot;$url('MCSubscription-FooterSubscribe')$&quot; role=&quot;form&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-sm-12&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;email-signup&quot;&gt;Register To Receive Our Newsletter!&lt;/label&gt;
+        &lt;div class=&quot;input-group&quot;&gt;
+        &lt;input id=&quot;email-signup&quot; aria-label=&quot;Join our Email List&quot; class=&quot;form-control&quot; name=&quot;hpEmailSignUp&quot; placeholder=&quot;Enter Your Email Address&quot; type=&quot;email&quot; pattern=&quot;^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$&quot; data-missing-type=&quot;Required Field:&quot; data-missing-msg=&quot;Ce champ est obligatoire&quot; /&gt;
+        &lt;span class=&quot;input-group-btn&quot;&gt;
+        &lt;button class=&quot;btn btn-secondary&quot; type=&quot;submit&quot;&gt;Go&lt;/button&gt;
+        &lt;/span&gt;
+        &lt;div class=&quot;invalid-feedback&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;/div&gt;</custom-attribute>
+      </custom-attributes>
+      <folder-links>
+        <classification-link folder-id="footer" />
+      </folder-links>
+    </content>
+
+    <content content-id="no-email-oauth-login">
+        <display-name xml:lang="x-default">No Email from oAuth Login</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;no-email-oauth-login&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="prop65-cart-line-item-warning">
+        <display-name xml:lang="x-default">Prop65 warning on cart line item</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;prop65-cart-line-item-warning&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

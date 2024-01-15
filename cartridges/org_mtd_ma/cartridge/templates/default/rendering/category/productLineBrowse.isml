@@ -1,0 +1,54 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+        assets.addJs('/lib/magic360/magic360.js');
+        assets.addCss('/lib/magic360/magic360.css');
+
+        if(pdict.bvScout) {
+        	assets.addJs(pdict.bvScout);
+        }
+    </isscript>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!---Breadcrumbs--->
+                <div class="search-breadcrumb">
+                    <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pl-browse-1 pl-browse">
+        <isslot id="pl-browse-1" description="First slot on Product Line Browse Page" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="pl-browse-2 pl-browse">
+        <isslot id="pl-browse-2" description="Second slot on Product Line Browse Page" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="pl-browse-3 pl-browse">
+        <isslot id="pl-browse-3" description="Third slot on Product Line Browse Page" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <isinclude template="search/searchResultsPLB" />
+
+    <div class="pl-browse-4 pl-browse">
+        <isslot id="pl-browse-4" description="Fourth slot on Product Line Browse Page" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="pl-browse-5 pl-browse">
+        <isslot id="pl-browse-5" description="Fifth slot on Product Line Browse Page" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="pl-browse-6 pl-browse">
+        <isslot id="pl-browse-6" description="Sixth slot on Product Line Browse Page" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <isinclude template="product/compareBar" />
+
+</isdecorate>

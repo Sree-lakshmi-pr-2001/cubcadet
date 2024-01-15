@@ -1,0 +1,13 @@
+<isif condition="${pdict.contentSearch.folder.subFolders != null && !empty(pdict.contentSearch.folder.subFolders)}">
+    <div class="blog-category-subfolder">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                <div class="blog-category-subfolders-title">
+                    <iscontentasset aid="blog-subfolder-title" />
+                </div>
+            </div>
+        </div>
+        <isset name="subFolders" value="${pdict.contentSearch.folder.subFolders}" scope="pdict" />
+        <isinclude template="components/blogSubFolderList" />
+    </div>
+</isif>

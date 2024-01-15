@@ -1,0 +1,10 @@
+<iscomment>Populated user infromation into JS variables</iscomment>
+<isset name="monetateObject" value="${require('~/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+<isif condition="${monetateObject.getMonetateEnabled()}">
+    <isif condition="${pdict.CurrentCustomer.authenticated && pdict.CurrentCustomer.registered}">
+    	<script type="text/javascript">
+            var mUserJson = "<isprint value="${JSON.stringify(monetateObject.getUserInfo(pdict.CurrentCustomer.profile))}" encoding="jsblock" />";
+    		var mUser = JSON.parse(mUserJson);
+    	</script>
+    </isif>
+</isif>

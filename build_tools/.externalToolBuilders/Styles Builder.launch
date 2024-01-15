@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ant.AntBuilderLaunchConfigurationType">
+<stringAttribute key="org.eclipse.ant.ui.ATTR_ANT_AFTER_CLEAN_TARGETS" value="css,"/>
+<stringAttribute key="org.eclipse.ant.ui.ATTR_ANT_AUTO_TARGETS" value="css,"/>
+<stringAttribute key="org.eclipse.ant.ui.ATTR_ANT_MANUAL_TARGETS" value="css,"/>
+<booleanAttribute key="org.eclipse.ant.ui.ATTR_TARGETS_UPDATED" value="true"/>
+<booleanAttribute key="org.eclipse.ant.ui.DEFAULT_VM_INSTALL" value="false"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${working_set:&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;resources&gt;&#10;&lt;item path=&quot;/app_storefront_base/cartridge/static/default/css&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/org_mtd/cartridge/static/default/css&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_cubcadet/cartridge/static/default/css&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_mtdparts/cartridge/static/default/css&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_troybilt/cartridge/static/default/css&quot; type=&quot;2&quot;/&gt;&#10;&lt;/resources&gt;}"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
+<booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="build_tools"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_BUILD_SCOPE" value="${working_set:&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;resources&gt;&#10;&lt;item path=&quot;/app_lyonscg_mfra/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/app_storefront_base/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/app_storefront_base/cartridge/client/fr_FR/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/app_storefront_base/cartridge/client/it_IT/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/org_mtd/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/org_troybilt/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_cubcadet_ca/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_mtdparts/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_mtdparts_ca/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_troybilt/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;item path=&quot;/site_troybilt_ca/cartridge/client/default/scss&quot; type=&quot;2&quot;/&gt;&#10;&lt;/resources&gt;}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${workspace_loc:/build_tools/builders.xml}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_RUN_BUILD_KINDS" value="full,incremental,auto,"/>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_TRIGGERS_CONFIGURED" value="true"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/build_tools}"/>
+</launchConfiguration>

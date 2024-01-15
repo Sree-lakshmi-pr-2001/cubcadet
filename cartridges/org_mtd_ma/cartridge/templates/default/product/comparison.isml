@@ -1,0 +1,49 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+        assets.addJs('/lib/magic360/magic360.js');
+        assets.addCss('/lib/magic360/magic360.css');
+
+        if(pdict.bvScout) {
+        	assets.addJs(pdict.bvScout);
+        }
+    </isscript>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!---Breadcrumbs--->
+            <div class="search-breadcrumb">
+                <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search-banner">
+    <h1 class="header h2 cat-page-title container">
+        ${Resource.msg('label.compareproducts', 'product', null)}
+    </h1>
+</div>
+
+    <div class="container product-comparison">
+        <div class="row">
+            <div class="col-12 col-lg-3 back-to-results">
+                <button class="btn btn-text" onclick="history.back();">${Resource.msg('button.backtoresults', 'product', null)}</button>
+            </div>
+        </div>
+        <isif condition="${pdict.attributes.length > 0}">
+            <isinclude template="product/compareAttributes"/>
+        <iselse>
+            <div class="row compare-columns product-grid">
+                <isloop items="${pdict.pids}" var="productId">
+                    <div class="col-6 col-lg-3">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', productId, 'swatches', false, 'ratings', true, 'promos', false, 'showQuickView', true, 'badges', false, 'compare', false)}" />
+                    </div>
+                </isloop>
+            </div>
+        </isif>
+    </div>
+</isdecorate>

@@ -1,0 +1,5 @@
+<isif condition="${!price.value}">
+    <isprint encoding="off" value="${price.noPriceContent}" />
+<iselse>
+    ${price.formatted}
+</isif>

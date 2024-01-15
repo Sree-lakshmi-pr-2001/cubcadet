@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="bazaarvoice.sftp.stg.troybiltca">
+        <url>sftp-stg.bazaarvoice.com</url>
+        <user-id>troybilt-ca</user-id>
+        <password encrypted="true" encryption-type="common.export">PiPW6TX1IeYw/WKNp2YVlzoccLJZukdqFYnmqEpvl/kSnw3S1FrY6KRU5QnLbLhL</password>
+    </service-credential>
+    
+    <service-credential service-credential-id="marketingcloud.rest.auth-troybilt">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>oopa727xaljz8xbffgc25ypy</user-id>
+        <password encrypted="true" encryption-type="common.export">CosXd7S33WFvSpBPo3M91R4BS2T8JxzXUSfYN5EynLF+53ED9votkOB4n/Av8zk8IkUuIS/Emqo4w4yan5Zz7Q==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.rest.auth-troybiltca">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>rnt36hm4x6tgwfcjk5vlvr2v</user-id>
+        <password encrypted="true" encryption-type="common.export">yFXrlhPx3uKXs323RD3TlLxJExDUW/cbCwg+6+QY/5GSkQpqiNv2AS8NcTR6VlKGd51oomz+DQO/yL0DCjV5dw==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-troybilt">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10959299</user-id>
+        <password encrypted="true" encryption-type="common.export">mtlutE75zC+JbmJpjq/lX9C5WN2SeSQM4tVEAtdHcKRV4no33hU/QTlj2rxGGkD3</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-troybiltca">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10968355</user-id>
+        <password encrypted="true" encryption-type="common.export">jw12m663urJRJTsTjUaE9o9ysB0tg0BL0aLzUlycrkl2GBAgwfuiMn0NwmmNXi5f</password>
+    </service-credential>
+
+    <service-credential service-credential-id="Monetate.SFTP.credentials-troybilt">
+        <url>sftp://download.monetate.net</url>
+        <user-id>ftp47122041</user-id>
+        <password encrypted="true" encryption-type="common.export">VCVUKFJyMA0+VjPRhZbNT6+Msg8zCyJ/L2OMq/LNJb35YiHLQaV8tDz0bRAf9XUo</password>
+    </service-credential>
+
+</services>

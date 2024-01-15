@@ -1,0 +1,64 @@
+/* Bootstrap Badge Overrides */
+
+.badge {
+    text-transform: uppercase;
+    background: $white;
+    color: $primary;
+
+    &.badge-primary {
+        border: 2px solid $primary;
+    }
+
+    &.badge-secondary {
+        border: 2px solid $secondary;
+    }
+
+    &.badge-dark {
+        border: 2px solid $dark;
+    }
+
+    &.badge-light {
+        background: $accent-3;
+        border: 2px solid $light;
+    }
+
+    &.badge-success {
+        border: 2px solid $success;
+    }
+
+    &.badge-info {
+        border: 2px solid $info;
+    }
+
+    &.badge-warning {
+        border: 2px solid $warning;
+    }
+
+    &.badge-danger {
+        border: 2px solid $danger;
+    }
+}
+
+.product-tile,
+.product-detail {
+    .badge-row {
+        position: absolute;
+        width: calc(100% - 50px);
+        display: flex;
+        flex-wrap: wrap;
+        z-index: z("badge");
+
+        .badge-info {
+            color: $info;
+        }
+
+        .badge {
+            display: flex;
+            margin-bottom: rem(5px);
+        }
+
+        .image-badge {
+            max-height: 25px;
+        }
+    }
+}

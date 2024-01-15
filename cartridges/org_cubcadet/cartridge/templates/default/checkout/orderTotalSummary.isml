@@ -1,0 +1,74 @@
+<isset name="isCheckout" value="${typeof isCheckout !== 'undefined' && isCheckout === true}" scope="page" />
+
+<!--- Subtotal --->
+<div class="row no-gutters order-total-summary-row subtotal-item">
+    <div class="${isCheckout === true ? 'col-5' : 'col-6'}">
+        <p class="order-receipt-label"><span>${Resource.msg('label.order.subtotal','confirmation', null)}</span></p>
+    </div>
+    <div class="${isCheckout ? 'col-7' : 'col-6'}">
+        <p class="order-receipt-value text-right"><span class="sub-total">${pdict.order.totals.subTotal}</span></p>
+    </div>
+</div>
+
+<!--- Order Discount --->
+<div class="row no-gutters order-total-summary-row order-discount <isif condition="${pdict.order.totals.orderLevelDiscountTotal.value === 0}">hide-order-discount</isif>">
+    <div class="${isCheckout ? 'col-5' : 'col-6'}">
+        <p class="order-receipt-label"><span>${Resource.msg('label.order.discount', 'common', null)}</span></p>
+    </div>
+    <div class="${isCheckout ? 'col-7' : 'col-6'}">
+        <p class="order-receipt-value text-right"><span class="order-discount-total">-${pdict.order.totals.orderLevelDiscountTotal.formatted}</span></p>
+    </div>
+</div>
+
+<iscomment>We need to hide shipping item if we have DF without dealers or delivery is not available</iscomment>
+<isset name="hideShippingItem" value="${'needToHideShippingItem' in pdict ? pdict.needToHideShippingItem : false}" scope="page" />
+<!--- Shipping Cost --->
+<div class="row no-gutters order-total-summary-row shipping-item <isif condition="${hideShippingItem}">hidden</isif>">
+    <div class="${isCheckout ? 'col-5' : 'col-6'}">
+        <p class="order-receipt-label"><span>${Resource.msg('label.delivery.charge','confirmation', null)}</span></p>
+    </div>
+    <div class="${isCheckout ? 'col-7' : 'col-6'}">
+        <p class="order-receipt-value text-right"><span class="shipping-total-cost">${pdict.order.totals.totalShippingCost}</span></p>
+    </div>
+</div>
+
+<!--- Shipping Discount --->
+<div class="row no-gutters order-total-summary-row shipping-discount <isif condition="${pdict.order.totals.shippingLevelDiscountTotal.value === 0}">hide-shipping-discount</isif>">
+    <div class="${isCheckout ? 'col-5' : 'col-6'}">
+        <p class="order-receipt-label"><span>${Resource.msg('label.delivery.discount', 'confirmation', null)}</span></p>
+    </div>
+    <div class="${isCheckout ? 'col-7' : 'col-6'}">
+        <p class="order-receipt-value text-right"><span class="shipping-discount-total">-${pdict.order.totals.shippingLevelDiscountTotal.formatted}</span></p>
+    </div>
+</div>
+
+<!--- Sales Tax --->
+<div class="row no-gutters order-total-summary-row sales-tax-item">
+    <div class="${isCheckout ? 'col-5' : 'col-6'}">
+        <p class="order-receipt-label"><span>${Resource.msg('label.order.sales.tax','confirmation', null)}</span></p>
+    </div>
+    <div class="${isCheckout ? 'col-7' : 'col-6'}">
+        <p class="order-receipt-value text-right"><span class="tax-total">${pdict.order.totals.totalTax}</span></p>
+    </div>
+</div>
+
+<!--- Grand Total --->
+<div class="row grand-total order-total-summary-row no-gutters">
+    <div class="${isCheckout ? 'col-5' : 'col-6'}">
+        <isset name="totalLabel" value="${pdict.order.totals.totalTax === '-' ?  Resource.msg('label.estimatedtotal','cart',null) : Resource.msg('label.order.grand.total','confirmation', null)}" scope="page" />
+        <p class="order-receipt-label"><span>${totalLabel}</span></p>
+    </div>
+    <div class="${isCheckout ? 'col-7' : 'col-6'}">
+        <p class="order-receipt-value text-right">
+            <span class="grand-total-sum">
+                <isif condition="${pdict.order.isEpcotOrder === true}">
+                    ${pdict.order.totals.grandTotal}
+                <iselseif condition="${'processFee' in selectedPaymentInstrument && selectedPaymentInstrument.processFee > 0}">
+                    ${selectedPaymentInstrument.formattedAmount}
+                <iselse>
+                    ${pdict.order.totals.grandTotal}
+                </isif>
+            </span>
+        </p>
+    </div>
+</div>

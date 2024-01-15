@@ -1,0 +1,42 @@
+/**
+*   @output Result : String
+*
+*/
+importPackage( dw.system );
+
+function execute( args : PipelineDictionary ) : Number
+{
+	var data = require('/app_demo/cartridge/scripts/tests/CipherHelperBDD');
+	
+	var tree = {
+		"text": data.name,
+		"nodes": []		
+	};
+	
+	var prevCategory = '';
+	var currentNode = null;
+	
+	data.tests.forEach(function (test) {
+		if (test.category !== prevCategory) {
+			currentNode = {
+		 		"text": test.category,
+				"nodes": [{
+					"text": test.name,
+					"skip": test.skip
+				}]
+			};
+			tree.nodes.push(currentNode);
+		} else {
+			currentNode.nodes.push({
+				"text": test.name,
+				"skip": test.skip
+			});			
+		};
+		
+		prevCategory = test.category;
+	});
+
+   	args.Result = JSON.stringify(tree, null, 2);
+
+   return PIPELET_NEXT;
+}

@@ -1,0 +1,105 @@
+<isscript>
+    var siteDisableCommerceFunctionality = dw.system.Site.getCurrent().getCustomPreferenceValue("siteDisableCommerceFunctionality");
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/aftermarket.js');
+</isscript>
+
+<div class="header-banner slide-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <nav role="navigation">
+        <iscomment> <div class="desktop-utility-nav">
+            <div class="container-fluid">
+                <isinclude template="components/header/utilityNav" />
+                <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                    <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                        <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                    </div>
+                </isif>
+            </div>
+        </div> </iscomment>
+
+        <div class="utility-nav d-none d-lg-block">
+            <ul class="utility-list" style="text-align:right;">
+                <isif condition="${dw.system.Site.current.getCustomPreferenceValue('mtdLiveChatEnabled')}">
+                    <li><a href="javascript:void(0)" id="header-live-chat" class="icon-chat"><span>${Resource.msg('global.livechat', 'common', null)}</span></a></li>
+                </isif>
+                <isif condition="${session.currency.currencyCode==='USD'}">
+                    <li>
+                        <iscontentasset aid="header-link-extended-warranty" />
+                    </li>
+                    <li>
+                        <iscontentasset aid="header-link-find-service" />
+                    </li>
+                </isif>
+                <isif condition="${session.currency.currencyCode==='USD'}">
+                    <li>
+                        <iscontentasset aid="header-link-financing" />
+                    </li>
+                </isif>
+                <li>
+                    <iscontentasset aid="header-link-find-a-store" />
+                </li>
+                <li>
+                    <iscontentasset aid="header-link-registration" />
+                </li>
+                <isinclude url="${URLUtils.url('Account-Header')}" />
+                <isset name="isDesktopView" value="${session.custom.deviceType}" scope="page" />
+                <isif condition="${isDesktopView === 'desktop'}">
+                    <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />  
+                </isif>
+                <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}">
+                    <li>
+                        <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                            <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                        </div>
+                    </li>
+                </isif>
+            </ul>
+        </div>
+        <div class="header container-fluid">
+            <div class="row">
+                <div class="col-12 p-md-1">
+                    <div class="navbar-header brand">
+                        <a href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <issvg icon="logo" image="true" alttext="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="pull-left">
+                            <button class="navbar-toggler d-lg-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                <issvg icon="icon-menu" image="true" alttext="" />
+                            </button>
+                        </div>
+                        <div class="pull-right">
+                            <div class="search">
+                                <isinclude template="components/header/search" />
+                            </div>
+                            <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                                <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                                    <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-md menu-toggleable-left multilevel-dropdown" id="sg-navbar-collapse">
+            <div class="container-fluid">
+                <div class="row">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'pid', pdict.CurrentHttpParameterMap.pid)}"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

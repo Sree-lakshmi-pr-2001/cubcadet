@@ -1,0 +1,9 @@
+<isset name="showQuickView" value="${true}" scope="page" />
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="fitsOnModel" value="${pdict.willFitsOnModel}" scope="page" /> 
+
+<isif condition="${product && product.id && product.id.length > 0}">
+    <div class="grid-tile" data-pid="${product.id}">
+        <isinclude template="product/productTile" />
+    </div>
+</isif>

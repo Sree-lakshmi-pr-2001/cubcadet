@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <group-definitions>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="customerServiceURL"/>
+                <attribute attribute-id="scheduleTestdriveURL"/>
+                <attribute attribute-id="testdriveProductTypes"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+                <attribute attribute-id="enablePDPWhereToBuy"/>
+                <attribute attribute-id="enableProductBadges"/>
+                <attribute attribute-id="maxOrderQty"/>
+                <attribute attribute-id="enableConsentTracking"/>
+                <attribute attribute-id="youtubeImageURL"/>
+                <attribute attribute-id="productTileA2CProductTypes"/>
+                <attribute attribute-id="productTileStockMsgEnabled"/>
+                <attribute attribute-id="productTilePartReplacesEnabled"/>
+                <attribute attribute-id="cartSlotType"/>
+                <attribute attribute-id="cartAccessoryRecommendationsCount"/>
+                <attribute attribute-id="formHandlerEmailsTo"/>
+                <attribute attribute-id="dynositeEnable"/>
+                <attribute attribute-id="dynositeAllPartsCategoryId"/>
+                <attribute attribute-id="see-details-link"/>
+                <attribute attribute-id="enableModelFilterOnSearchPage"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

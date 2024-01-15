@@ -1,0 +1,119 @@
+<div class="lookup-section row">
+    <div class="lookup-text col-12 col-md-8">
+        <isprint value="${pdict.lookupInfo}" encoding="off" />
+    </div>
+    <div class="d-none d-md-block col-4">
+        <img class="cub-card" src="${URLUtils.staticURL('images/cc-td-card.jpg')}" alt="">
+    </div>
+</div>
+<div class="alert alert-danger alert-dismissible account-lookup-error fade show d-none" role="alert">
+    ${Resource.msg('finance.error.account.not.found', 'checkout', null)}
+</div>
+<form class="finance-account-lookup-form" autocomplete="on" novalidate
+          action="${URLUtils.url('FinancingApplication-SubmitAccountLookup')}"
+          <isprint value=${pdict.lookupForm.attributes} encoding="off" />
+          method="post">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group
+                <isif condition="${pdict.lookupForm.lastSSN.mandatory === true}">required</isif>
+                ${pdict.lookupForm.lastSSN.htmlName}">
+                <label class="form-control-label" for="lastSSN">${Resource.msg('label.input.finance.last.ssn','forms',null)}</label>
+                <div class="card-number-wrapper">
+                    <input type="text" class="form-control lastSSN" id="lastSSN" type="tel" aria-describedy="#lastSnn-error"
+                        data-pattern-mismatch="${Resource.msg('error.message.ssn.invalid', 'forms', null)}"
+                        value=""
+                        <isprint value="${pdict.lookupForm.lastSSN.attributes}" encoding="off"/>
+                    >
+                    <div class="invalid-feedback"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group
+                <isif condition="${pdict.lookupForm.postalCode.mandatory === true}">required</isif>
+                ${pdict.lookupForm.postalCode.htmlName}">
+                <label class="form-control-label" for="postalCode">${Resource.msg('label.input.postalcode','forms',null)}</label>
+                <div class="card-number-wrapper">
+                    <input type="text" class="form-control postalCode" id="postalCode"
+                        data-pattern-mismatch="${Resource.msg('error.message.postal.invalid', 'forms', null)}"
+                        value=""
+                        <isprint value="${pdict.lookupForm.postalCode.attributes}" encoding="off"/>
+                    >
+                    <div id="lastSnn-error" class="invalid-feedback"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row dob-select">
+        <div class="col-12 col-md-4">
+            <div class="form-group
+                <isif condition="${pdict.lookupForm.month.mandatory === true}">required</isif>
+                ${pdict.lookupForm.month.htmlName}">
+                <label class="form-control-label" for="financeMonth">${Resource.msg('label.input.dob','forms',null)}</label>
+                <div class="select-wrapper">
+                    <select class="form-control finance-month custom-select" id="financeMonth"
+                    <isprint value="${pdict.lookupForm.month.attributes}" encoding="off"/> autocomplete="off">
+                        <isloop items=${pdict.lookupForm.month.options} var="month">
+                            <option id="${month.id}" value="${month.htmlValue}">
+                                ${month.label}
+                            </option>
+                        </isloop>
+                    </select>
+                    <span class="selector"></span>
+                </div>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+            <div class="form-group
+                <isif condition="${pdict.lookupForm.day.mandatory === true}">required</isif>
+                ${pdict.lookupForm.day.htmlName}">
+
+                <div class="select-wrapper">
+                    <select class="form-control finance-day custom-select" id="financeDay"
+                    <isprint value="${pdict.lookupForm.day.attributes}" encoding="off"/> autocomplete="off">
+                        <option value="${pdict.lookupForm.day.options[0].htmlValue}">${pdict.lookupForm.day.options[0].label}</option>
+                         <isloop items=${pdict.financeDays} var="day">
+                            <option id="${day.toFixed(0)}" value="${day.toFixed(0)}">
+                               <isprint value="${day}" formatter="##" />
+                            </option>
+                        </isloop>
+                    </select>
+                    <span class="selector"></span>
+                </div>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+            <div class="form-group
+                <isif condition="${pdict.lookupForm.year.mandatory === true}">required</isif>
+                ${pdict.lookupForm.year.htmlName}">
+                <div class="select-wrapper">
+                    <select class="form-control finance-year custom-select" id="financeYear"
+                    <isprint value="${pdict.lookupForm.year.attributes}" encoding="off"/> autocomplete="off">
+                        <option value="${pdict.lookupForm.year.options[0].htmlValue}">${pdict.lookupForm.year.options[0].label}</option>
+                        <isloop items=${pdict.financeYears} var="year">
+                            <option id="${year.toFixed(0)}" value="${year.toFixed(0)}">
+                               <isprint value="${year}" formatter="####" />
+                            </option>
+                        </isloop>
+                    </select>
+                    <span class="selector"></span>
+                </div>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-buttons">
+        <button type="submit" class="btn btn-secondary">${Resource.msg('button.text.submit', 'forms', null)}</button>
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">${Resource.msg('button.text.cancel', 'forms', null)}</button>
+    </div>
+</form>

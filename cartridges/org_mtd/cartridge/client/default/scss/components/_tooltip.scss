@@ -1,0 +1,92 @@
+$arrow-height: 1.25em; /* 20/16 */
+
+.info-icon {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    .icon {
+        border-radius: 50%;
+        background-color: $secondary;
+        width: rem(16px);
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        font-size: $font-size-xs;
+        font-family: serif;
+        font-style: italic;
+        font-weight: $font-weight-bold;
+        line-height: rem(16px);
+    }
+
+    &:hover .tooltip {
+        display: block;
+    }
+
+    .tooltip {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        padding: rem(5px);
+        border-radius: $border-radius;
+        background-color: $secondary;
+        color: $white;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        text-align: left;
+        min-width: rem(320px);
+        max-width: rem(240px);
+        transform: translate(-50%, -$arrow-height/2);
+        left: 50%;
+        margin-left: 4px;
+        animation: fade-in 0.5s linear forwards;
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        &::before {
+            content: " ";
+            position: absolute;
+            display: block;
+            height: $arrow-height; /* 20/16 */
+            left: 0;
+            bottom: -$arrow-height;
+            width: 100%;
+        }
+
+        &::after {
+            border-left: solid transparent $arrow-height/2; /* 10/16 */
+            border-right: solid transparent $arrow-height/2; /* 10/16 */
+            border-top: solid $gray-100 $arrow-height/2;
+            bottom: -$arrow-height/2;
+            content: " ";
+            height: 0;
+            left: 50%;
+            margin-left: -13px;
+            position: absolute;
+            width: 0;
+        }
+    }
+}
+
+.tooltip {
+    &.bs-tooltip-right,
+    &.bs-tooltip-auto[x-placement^="right"],
+    &.bs-tooltip-left,
+    &.bs-tooltip-auto[x-placement^="left"] {
+        margin: 0 rem(14px);
+    }
+
+    &.bs-tooltip-top,
+    &.bs-tooltip-auto[x-placement^="top"],
+    &.bs-tooltip-bottom,
+    &.bs-tooltip-auto[x-placement^="bottom"] {
+        margin: rem(14px) 0;
+    }
+}
+
+.tooltip-inner {
+    text-align: left !important;
+}

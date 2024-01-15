@@ -1,0 +1,73 @@
+<isinclude template="components/modules" />
+
+<footer>
+    <div class="upper-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2">
+                    <iscontentasset aid="footer-support-service-section" />
+                </div>
+                <div class="col-12">
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5">
+                    <div class="footer-email-signup">
+                        <issvg icon="ask-troy-red" image="true" altText="" />
+                        <iscontentasset aid="email-signup-form" />
+                    </div>
+                    <div class="footer-btns-group">
+                        <iscontentasset aid="footer-buttons"/>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 d-flex flex-wrap flex-lg-nowrap">
+                    <div class="footer-item ">
+                        <iscontentasset aid="footer-about" />
+                    </div>
+                    <div class="footer-item ">
+                        <iscontentasset aid="footer-owners-center" />
+                    </div>
+                    <div class="footer-item ">
+                        <iscontentasset aid="footer-customer-service" />
+                    </div>
+                    <div class="footer-item ">
+                        <iscontentasset aid="footer-social-email"/>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lower-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 copyright-notice">
+                    <iscontentasset aid="footer-copy" />
+                </div>
+                <iscomment> Back to Top Button</iscomment>
+                <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}">
+                    <issvg icon="icon-back-to-top-arrow" image="true" altText="" />
+                    <span class="btt-text">${Resource.msg('global.backtotop', 'common', null)}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <isinclude template="monetate/monetatefooter" />
+
+    <isinclude url="${URLUtils.url('LiveAgent-Show')}" />
+</footer>
+<isif condition="${!('pageContext' in this) || empty(pageContext)}">
+    <isscript>pageContext = new Object();</isscript>
+</isif>
+<isscript>pageContext.locale = request.locale</isscript>
+<script>pageContext = <isprint value="${JSON.stringify(pageContext)}" encoding="off"/>;</script>
+<isinclude template="monetate/monetateuserinfo" />

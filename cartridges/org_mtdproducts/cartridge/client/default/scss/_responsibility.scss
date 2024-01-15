@@ -1,0 +1,79 @@
+.responsibility {
+    .content {
+        &.group {
+            .image {
+                max-height: 450px;
+            }
+
+            h1 {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+
+        &.one {
+            padding-top: 50px;
+            width: 80%;
+
+            .car-con {
+                width: 450px;
+            }
+        }
+
+        &.two {
+            padding-top: 50px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .msg {
+                height: auto;
+                background-color: $button-grey;
+                color: #fff;
+                font-size: 35px;
+                text-align: center;
+
+                .quote {
+                    margin: auto;
+                    padding-top: 10px;
+                    width: 90%;
+                }
+
+                .name {
+                    margin: auto;
+                    padding-bottom: 10px;
+                    width: 80%;
+                    text-align: right;
+                    font-size: 25px;
+                }
+
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &.three {
+            padding-top: 50px;
+            width: 80%;
+        }
+
+        &.four {
+            padding-top: 50px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .safety-image {
+                height: 250px;
+                background-attachment: fixed;
+                background-position: 20%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        &.five {
+            padding-top: 50px;
+            width: 80%;
+        }
+    }
+}

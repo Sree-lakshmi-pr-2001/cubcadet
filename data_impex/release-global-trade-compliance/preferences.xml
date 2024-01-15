@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="CustomCartridges">mtd_bm_customizations:content_accelerator:plugin_dis:bc_job_components:bc_library:bm_tools:int_marketing_cloud:int_handlerframework:int_ordervelocityengine:int_bazaarvoice_sfra:bc_bazaarvoice:int_worldcheck</preference>
+        </all-instances>
+        <development/>
+        <staging/>
+        <production/>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development/>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>
+

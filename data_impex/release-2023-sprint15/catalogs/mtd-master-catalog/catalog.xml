@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="mtd-master-catalog">
+    <header>
+        <image-settings>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>large-cubcadet</view-type>
+                <view-type>large-troybilt</view-type>
+                <view-type>large-mtdparts</view-type>
+                <view-type>360view</view-type>
+                <view-type>360view-cubcadet</view-type>
+                <view-type>360view-troybilt</view-type>
+                <view-type>360view-mtdparts</view-type>
+                <view-type>swatch</view-type>
+            </view-types>
+        </image-settings>
+    </header>
+</catalog>

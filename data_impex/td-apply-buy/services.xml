@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="td.cardholder">
+        <url>https://tdrcsmerchanttest.com/wf/CardholderWS/CardholderWS4.asmx</url>
+        <user-id>MR432001cct1</user-id>
+        <password encrypted="true" encryption-type="common.export">b9uZlh01REmeoOz7T01DFbSl9g7TBhkqkbHgkKubLgtf2nWCMe2lmb3sF6KmOCa9</password>
+    </service-credential>
+
+    <service-credential service-credential-id="td.transaction">
+        <url>https://tdrcsmerchanttest.com/wf/TransactionWS/TransactionWS5.asmx</url>
+        <user-id>mr432001ws5</user-id>
+        <password encrypted="true" encryption-type="common.export">IvQzopA+YK8BigzWVKGWDl6q5Qf3xdZicWwGZkvVF4i8tSAfUkRMGcH3HGoU8Tis</password>
+    </service-credential>
+
+    <service-profile service-profile-id="td.cardholder">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="td.transaction">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service service-id="td.cardholder">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>tdCardholder</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>td.cardholder</profile-id>
+        <credential-id>td.cardholder</credential-id>
+    </service>
+
+    <service service-id="td.transaction">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>tdTransaction</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>td.transaction</profile-id>
+        <credential-id>td.transaction</credential-id>
+    </service>
+</services>

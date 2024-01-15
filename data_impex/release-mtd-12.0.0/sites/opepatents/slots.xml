@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="ope-patents-content" context="global" configuration-id="New Slot Configuration - 2020-08-31 17:05:09" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-emissions-page" context="global" configuration-id="ope-emissions-page" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-emissions"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-patents-header" context="global" configuration-id="ope-patents-header" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-patents-header"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-patents-page" context="global" configuration-id="ope-patents-page" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-patents-header"/>
+                <content-asset content-id="ope-patents-chipper-shredder-vacuum-logsplitter"/>
+                <content-asset content-id="ope-patents-mower"/>
+                <content-asset content-id="ope-patents-rider"/>
+                <content-asset content-id="ope-patents-snow-thrower"/>
+                <content-asset content-id="ope-patents-tiller"/>
+                <content-asset content-id="ope-patents-utility-vehicle"/>
+                <content-asset content-id="ope-patents-zero-turn-rider"/>
+                <content-asset content-id="ope-patents-application-equipment"/>
+                <content-asset content-id="ope-patents-trimmers"/>
+                <content-asset content-id="ope-patents-blowers"/>
+                <content-asset content-id="ope-patents-chainsaws"/>
+                <content-asset content-id="ope-patents-battery-electric"/>
+                <content-asset content-id="ope-patents-edgers-and-cultivators"/>
+                <content-asset content-id="ope-patents-autonomous-mower"/>
+                <content-asset content-id="ope-patents-specialty-turf"/>
+                <content-asset content-id="ope-patents-hand-tools"/>
+                <content-asset content-id="ope-patents-disclaimer"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

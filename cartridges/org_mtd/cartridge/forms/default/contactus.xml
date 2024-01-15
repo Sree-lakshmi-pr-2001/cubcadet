@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+    <field formid="firstname" label="contactus.firstname.label" type="string" mandatory="true" binding="firstname" max-length="50"/>
+    <field formid="lastname" label="contactus.lastname.label" type="string" mandatory="true" binding="lastname" max-length="50"/>
+    <field formid="phone" label="contactus.phone.label" type="string" mandatory="true" binding="phone"
+           min-length="8"
+           max-length="10"
+           regexp="^\(?([2-9][0-8][0-9])\)?[\-\. ]?([2-9][0-9]{2})[\-\. ]?([0-9]{4})(\s*x[0-9]+)?$"
+           missing-error="error.message.required"
+           parse-error="error.message.parse.phone"
+           range-error="error.message.between10and20" />
+    <field formid="email" label="contactus.email.label" type="string" mandatory="true" regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" parse-error="contactus.email.parse-error" binding="email" max-length="50"/>
+    <field formid="message" label="contactus.message.label" type="string" mandatory="true" binding="message" max-length="250"/>
+
+    <action formid="send" valid-form="true"/>
+</form>

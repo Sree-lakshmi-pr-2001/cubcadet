@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences/>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="EW-Purchase-From">{
+                "en_US": [
+                            "Cub Cadet Independent Dealer", 
+                            "The Home Depot", 
+                            "Tractor Supply Co.", 
+                            "www.cubcadet.com", 
+                            "Other"
+                          ]
+              }</preference>
+              <preference preference-id="EW-Dummy-Shipping-Address">{
+    "firstName": "Aftermarket1",
+    "lastName": "Warranty1",
+    "address1": "5965 Grafton Rd1",
+    "country": "US",
+    "city": "Valley City1",
+    "stateCode": "OH",
+    "postalCode": "44280"
+}</preference>
+
+              <preference preference-id="EW-Error-Code-Content-Mapping">{
+                "EW_ELIG_AFTER_MARKET_DIRECT_TO_ERROR": "EW_ELIG_ERROR",
+                "EW_ELIG_AFTER_MARKET_SERIAL_NUMBER_NOT_FOUND": "EW_ELIG_ERROR",
+                "EW_ELIG_AFTER_MARKET_EW_NOT_OFFERED_FOR_FACTORY_MODEL": "EW_NOT_ELIGIBLE",
+                "EW_ELIG_AFTER_MARKET_FACTORY_MODEL_TOO_OLD": "EW_NOT_ELIGIBLE",
+                "EW_ELIG_AFTER_MARKET_ENTITLEMENT_ALREADY_EXISTS": "EW_ENTITLEMENT_ALREADY_EXISTS",
+                "EW_ELIG_AFTER_MARKET_CANNOT_DETERMINE_ELIG": "EW_ELIG_ERROR",
+                "EW_ELIG_AFTER_MARKET_REASON_CODE_NOT_DEFINED": "EW_ELIG_ERROR"
+              }</preference>
+        </development>
+        <staging>
+            <preference preference-id="EW-Purchase-From">{
+                "en_US": {
+                            "Cub Cadet Independent Dealer", 
+                            "The Home Depot", 
+                            "Tractor Supply Co.", 
+                            "www.cubcadet.com", 
+                            "Other"
+                          }
+              }</preference>
+              <preference preference-id="EW-Dummy-Shipping-Address">{
+    "firstName": "Aftermarket1",
+    "lastName": "Warranty1",
+    "address1": "5965 Grafton Rd1",
+    "country": "US",
+    "city": "Valley City1",
+    "stateCode": "OH",
+    "postalCode": "44280"
+}</preference>
+              <preference preference-id="EW-Error-Code-Content-Mapping">{
+                "EW_ELIG_AFTER_MARKET_DIRECT_TO_ERROR": "EW_ELIG_ERROR",
+                "EW_ELIG_AFTER_MARKET_SERIAL_NUMBER_NOT_FOUND": "EW_ELIG_ERROR",
+                "EW_ELIG_AFTER_MARKET_EW_NOT_OFFERED_FOR_FACTORY_MODEL": "EW_NOT_ELIGIBLE",
+                "EW_ELIG_AFTER_MARKET_FACTORY_MODEL_TOO_OLD": "EW_NOT_ELIGIBLE",
+                "EW_ELIG_AFTER_MARKET_ENTITLEMENT_ALREADY_EXISTS": "EW_ENTITLEMENT_ALREADY_EXISTS",
+                "EW_ELIG_AFTER_MARKET_CANNOT_DETERMINE_ELIG": "EW_ELIG_ERROR",
+                "EW_ELIG_AFTER_MARKET_REASON_CODE_NOT_DEFINED": "EW_ELIG_ERROR"
+              }</preference>
+        </staging>
+        <production/>
+    </custom-preferences>
+</preferences>

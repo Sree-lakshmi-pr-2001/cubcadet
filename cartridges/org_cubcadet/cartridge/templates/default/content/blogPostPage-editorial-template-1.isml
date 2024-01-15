@@ -1,0 +1,78 @@
+<!--- TEMPLATENAME: postPage.isml --->
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/productTile.js');
+        assets.addJs('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534e9b1152d206ab');
+        assets.addCss('/css/blog.css');
+    </isscript>
+
+    <isinclude template="components/modules" />
+
+    <iscomment> Breadcrumbs </iscomment>
+    <div class="blog-breadcrumb container">
+        <isset name="breadcrumbs" value="${pdict.content.breadcrumbs}" scope="pdict" />
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+    </div>
+
+    <div class="blog-article editorial-article-template">
+        <iscomment> Header </iscomment>
+        <div class="content-header-bar container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header page-title">
+                        <isinclude template="content/components/blogPostHeader" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-post-body container">
+            <iscomment> Hero Image </iscomment>
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1">
+                    <isinclude template="content/components/blogPostImage" />
+                </div>
+            </div>
+
+            <iscomment> Body </iscomment>
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <div class="blog-post-html">
+                        <isprint value="${pdict.content.body}" encoding="off"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <iscomment> Post's Footer </iscomment>
+        <div class="blog-post-info-bottom container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-post-info-bottom-inner">
+                        <isinclude template="content/components/blogPostFooter" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <iscomment> Related Products </iscomment>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <isinclude template="content/components/blogPostRelatedProducts" />
+                </div>
+            </div>
+        </div>
+
+        <iscomment> Related Content </iscomment>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <isinclude template="content/components/blogPostRelatedContent" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</isdecorate>

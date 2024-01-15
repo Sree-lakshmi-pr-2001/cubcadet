@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/css/ope-symbol.css')}" />
+
+<iscomment> BACK TO TOP button </iscomment>
+<isslot id="ope-symbol-back-to-top-button" description="OPE Symbol 'back to top' button" context="global" />
+
+<iscomment>* * * BEGIN presentation template opeSymbol-lt.isml (Lithuanian) * * *</iscomment>
+
+<iscomment> WELCOME page (top page) - Lithuainian (lt) </iscomment>
+    <iscomment>
+    Content assets include:
+        SNOW symbols table (only content for lt as of August 2020)
+    </iscomment>
+<div id="top-page" class="page lt">
+    <isslot id="ope-symbol-content-welcome-page-lt" description="OPE Symbol top content page (welcome page) - Lithuanian (lt)" context="global" />
+</div>
+
+<iscomment> CONTENT (SYMBOLS) pages: SNOW </iscomment>
+<iscomment>
+    This language only has SNOW content (no welcome content
+    or other machine content), so everything is contained in the
+    ope-symbol-content-welcome-page-lt content asset for now. As
+    more content is added, this content slot can be built-out and utilized.
+    * slot id = ope-symbol-content-pages-lt
+    * slot description = OPE Symbol content pages (symbol pages) - Lithuanian (lt)
+    * slot context = global
+</iscomment>
+
+<script src="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY, '', '/js/ope-symbol.js')}"></script>

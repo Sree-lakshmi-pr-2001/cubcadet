@@ -1,0 +1,44 @@
+<!--- applicable credit cards--->
+<div class="tab-pane <isif condition="${currentPaymentMethod === paymentOption.ID}">active</isif> finance-card-content" id="finance-card-content" role="tabpanel" aria-labelledby="finance-card-content">
+    <!--- payment method is credit card --->
+
+    <fieldset class="credit-card-form">
+        <isset name="financeFields" value="${pdict.forms.billingForm.financeCardFields}" scope="page"/>
+
+        <div class="plan-label">
+            <span>${Resource.msg('finance.choose.plan','checkout',null)}</span>
+            <span class="instore-note"><isprint value="${Resource.msg('finance.instore.offers','checkout',null)}" encoding="off" /></span>
+            <span class="cc-imgs">
+                <img class="icon cub-card" src="${URLUtils.staticURL('images/cc-td-card.jpg')}" alt="">
+            </span>
+        </div>
+
+        <div class="financing-plans-list" data-url="${URLUtils.url('FinancingApplication-Plans')}">
+            <isinclude template="checkout/billing/paymentOptions/financingPlans" />
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group
+                    <isif condition="${financeFields.accountNumber.mandatory === true}">required</isif>
+                    ${financeFields.accountNumber.htmlName}">
+                    <label class="form-control-label" for="accountNumber">${Resource.msg('label.input.finance.account.number','forms',null)}</label>
+                    <div class="card-number-wrapper">
+                        <input type="text" class="form-control accountNumber" id="accountNumber"
+                            data-pattern-mismatch="${Resource.msg('error.message.financenumber.invalid', 'forms', null)}"
+                            <isprint value="${financeFields.accountNumber.attributes}" encoding="off"/>
+                        >
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <a href="javascript:void(0)"
+                        class="finance-account-lookup-link"
+                        data-title="${Resource.msg('finance.find.your.account.number','checkout', null)}"
+                        data-url="${URLUtils.url('FinancingApplication-AccountLookup')}">
+                        ${Resource.msg('finance.cannot.find.your.account','checkout',null)}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</div>

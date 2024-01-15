@@ -1,0 +1,23 @@
+<isif condition="${pdict.content.classificationFolder}" >
+    <div class="blog-post-category h4">
+        <a href="${URLUtils.url('Search-ShowContent', 'fdid', pdict.content.classificationFolder.ID)}">
+            <isprint value="${pdict.content.classificationFolder.displayName}" encoding="on" />
+        </a>
+    </div>
+</isif>
+
+<div class="blog-post-header-bottom">
+    <h1 class="blog-post-title">
+        <isprint value="${pdict.content.name}" />
+    </h1>
+
+    <div class="blog-post-header-date-social">
+        <div class="blog-post-date h4">
+            <isprint value="${pdict.content.postedDate}" style="DATE_LONG" />
+        </div>
+
+        <div class="blog-social-top">
+            <isinclude template="content/components/blogPostSocial" />
+        </div>
+    </div>
+</div>

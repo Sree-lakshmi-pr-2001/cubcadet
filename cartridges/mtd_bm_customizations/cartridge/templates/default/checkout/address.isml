@@ -1,0 +1,306 @@
+<isdecorate template="common/layout/epcot">
+    <script>
+    document.getElementById('pageName').value= 'address';
+</script>
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/epcot-billing-shipping-address.js');
+    assets.addJs('/js/epcot-minicart.js');
+
+    var googleValidationCountry = dw.system.Site.getCurrent().getCustomPreferenceValue('country'); 
+    var enableGoogleAutocomplete = dw.system.Site.getCurrent().getCustomPreferenceValue('enableGoogleAutocomplete');
+    var googleAutocompletepolyfillURL = dw.system.Site.getCurrent().getCustomPreferenceValue('googleAutocompletepolyfillURL');
+    var googleAutocompleteURLKey = dw.system.Site.getCurrent().getCustomPreferenceValue('googleAutocompleteURLKey'); 
+    var isGoogleAddressValidationEnabled =  dw.system.Site.getCurrent().getCustomPreferenceValue('enableGoogleAddressValidation'); 
+    if (enableGoogleAutocomplete){
+        assets.addJs('/js/googleAutoComplete.js');
+        assets.addJs(googleAutocompletepolyfillURL);
+        assets.addJs(googleAutocompleteURLKey);
+    }
+</isscript>
+
+<input type="hidden" id="googleAutofillCountry" name="googleAutofillCountry" value="${googleValidationCountry}">
+<input type="hidden" id="isGoogleAddressValidationEnabled" name="isGoogleAddressValidationEnabled" value="${isGoogleAddressValidationEnabled}">
+    <link rel="stylesheet" href="${URLUtils.staticURL('/css/billing-shipping.css')}" />
+    <isset name="pageName" value="AddressView" scope="page" />
+    <isinclude template="checkout/include/accordions.isml" />
+
+    <div class="row cart">
+        <div class="col-md-12">
+            <isinclude template="checkout/include/mini_cart.isml" />
+        </div>
+    </div>
+    <div id="addressValidationDiv">
+
+        <div class="accordion" id="searchForAddressAccordion">
+            <div class="accordion-item">
+                <div id="searchForAddressAccordionDiv" class="accordion-collapse collapse show"
+                    aria-labelledby="searchForAddressAccordionHeader" data-bs-parent="#searchForAddressAccordion">
+                    <div class="accordion-body">
+                        <div class="search">
+                            <iscomment>
+                                <h2 class="text-center p-5">Search for existing address</h2>
+                            </iscomment>
+                            <isinclude template="checkout/include/epcot_customer_search_form.isml" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="newAddressForm">
+            <div class="col-md-12">
+                <h3>Billing / Shipping Addresses</h3>
+            </div>
+            <form action="${URLUtils.url('EpcotOrderConsumer-AddressSubmit')}" method="post" id="addressForm"
+                name="addressForm" autocomplete="off">
+                <div class="row">
+                    <div class="col-md-6 billing">
+                        <input type="hidden" name="basketId" value="${pdict.basketId}" />
+                        <input type="hidden" name="commerceStore" value="${pdict.commerceStore}" />
+                        <h4>Billing</h4>
+                        <isset name="addressType" value="billing" scope="page"></isset>
+                        <isinclude template="checkout/include/address_template.isml" />
+
+                        <iscomment>
+                            <div class="row">
+                                <label class="checkbox-inline no_indent">
+                                    <input type="checkbox" value="${pdict.addresses.sameAsBilling}" name="sameAsBilling"
+                                        id="sameAsBilling">
+                                    Use same billing address for shipping
+                                    </input>
+                                </label>
+                            </div>
+                        </iscomment>
+                    </div>
+
+                    <div class="col-md-6 shipping">
+                        <h4>Shipping</h4>
+                        <isset name="addressType" value="shipping" scope="page"></isset>
+                        <isinclude template="checkout/include/address_template.isml" />
+                        <div class="row">
+                            <div class="col-md-12 center">
+                                <label class="checkbox-inline no_indent">
+                                    <input type="checkbox" value="${pdict.addresses.sameAsBilling}" name="sameAsBilling"
+                                        id="sameAsBilling">
+                                    Use same billing address for shipping
+                                    </input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 center">
+                                <br />
+                                Note:  If customer does not provide an email address, they will not receive an order confirmation or receipt for their purchase
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="carb-msg-block">
+                <div class="CARBCompliantMessage alert alert-danger d-none">
+                    One or more of your items is unable to ship to your location.  Please note the change in "Items to Ship" and edit your order to proceed.
+                </div>
+                <iscomment> <a class="CARBCompliantMessage CARBButton col-6 btn btn-secondary " 
+                    href="${URLUtils.url('EpcotOrderConsumer-ReturnToStartBasket', 'basketId', pdict.basketId )}">
+                    REMOVE PRODUCT AND EDIT ORDER
+                </a> </iscomment>
+                <isif condition="${dw.system.Site.getCurrent().getCustomPreferenceValue('isCARBEnabled')}">
+                    <form id="carb-edit" class="CARBCompliantMessage CARBButton d-none" action="${URLUtils.url('EpcotOrderConsumer-ReturnToStartBasket', 'basketId', pdict.basketId )}" method="POST">
+                    <button type="submit" id="carb-remove-product"
+                    class="btn btn-md btn-primary">REMOVE PRODUCT AND EDIT ORDER</button>
+                    <input type="hidden" id="globalBasketId" name="basketId" value="${pdict.basketId}" />
+                    <input type="hidden" id="globalCommerceSite" name="globalCommerceSite" value="${pdict.commerceStore}" />
+                    <input type="hidden" id="commerceStore" name="commerceStore" value="${pdict.commerceStore}" />
+                    <input type="hidden" id="globalShippingMethod" name="globalShippingMethod" value="" />
+                    <input type="hidden" id="CARBShippingStateVal" name="CARBShippingStateVal" value="" />
+                </form>
+                </isif>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <isinclude template="checkout/include/return_to_product_search.isml" />
+
+    <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <iscomment> <div class="row">
+                            <div class="col-6 bill-block">
+                                <h2 class="pb-5">billing:</h2>
+                                <div class="billing original pb-5">
+                                    <div class="radio">
+                                        <input type="radio" id="bill-1" name="bill" checked />
+                                        <label for="bill-1">Selected</label>
+                                    </div>
+                                    <div class="font-weight-bold">You Input: </div>
+                                    <div class="street"></div>
+                                    <div class="street2"></div>
+                                    <div class="street-city-zip"></div>
+                                    <input type="hidden" class="city" />
+                                    <input type="hidden" class="state" />
+                                    <input type="hidden" class="zip" />
+                                </div>
+                                <div class="billing corrected" style="display: none;">
+                                    <div class="radio">
+                                        <input type="radio" id="bill-2" name="bill" />
+                                        <label for="bill-2">Selected</label>
+                                    </div>
+                                    <div class="font-weight-bold">Corrected: </div>
+                                    <div class="street"></div>
+                                    <div class="street2"></div>
+                                    <div class="street-city-zip"></div>
+                                    <input type="hidden" class="city" />
+                                    <input type="hidden" class="state" />
+                                    <input type="hidden" class="zip" />
+                                </div>
+                            </div>
+                            <div class="col-6 ship-block">
+                                <h2 class="pb-5">shipping:</h2>
+                                <div class="shipping original pb-5">
+                                    <div class="radio">
+                                        <input type="radio" id="ship-1" name="ship" checked />
+                                        <label for="ship-1">Selected</label>
+                                    </div>
+                                    <div class="font-weight-bold">You Input: </div>
+                                    <div class="street"></div>
+                                    <div class="street2"></div>
+                                    <div class="street-city-zip"></div>
+                                    <input type="hidden" class="city" />
+                                    <input type="hidden" class="state" />
+                                    <input type="hidden" class="zip" />
+                                </div>
+                                <div class="shipping corrected" style="display: none;">
+                                    <div class="radio">
+                                        <input type="radio" id="ship-2" name="ship" />
+                                        <label for="ship-2">Selected</label>
+                                    </div>
+                                    <div class="font-weight-bold">Corrected: </div>
+                                    <div class="street"></div>
+                                    <div class="street2"></div>
+                                    <div class="street-city-zip"></div>
+                                    <input type="hidden" class="city" />
+                                    <input type="hidden" class="state" />
+                                    <input type="hidden" class="zip" />
+                                </div>
+                            </div>
+                        </div>
+                        ------ </iscomment>
+                        <div class="row">
+                            <div class="col-2">
+                                <!-- Spacer -->
+                            </div>
+                            <div class="col-5">
+                                <h3>Billing:</h3>
+                            </div>
+                            <div class="col-5">
+                                <h3>Shipping:</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <small>Your input:</small>
+                            </div>
+                            <div class="col-5 billing original">
+                                <div class="street"></div>
+                                <div class="street2"></div>
+                                <div class="street-city-zip"></div>
+                                <input type="hidden" class="city" />
+                                <input type="hidden" class="state" />
+                                <input type="hidden" class="zip" />
+                            </div>
+                            <div class="col-5 shipping original">
+                                <div class="street"></div>
+                                <div class="street2"></div>
+                                <div class="street-city-zip"></div>
+                                <input type="hidden" class="city" />
+                                <input type="hidden" class="state" />
+                                <input type="hidden" class="zip" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <!-- Selector row -->
+                            </div>
+                            <div class="col-5 billing original">
+                                <div class="radio">
+                                    <input type="radio" id="bill-1" name="bill" checked />
+                                    <label for="bill-1">Use Original</label>
+                                </div>
+                            </div>
+                            <div class="col-5 shipping original">
+                                <div class="radio">
+                                    <input type="radio" id="ship-1" name="ship" checked />
+                                    <label for="ship-1">Use Original</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Spacer -->
+                            <br />
+                        </div>
+                        <div class="row">
+                            <div class="col-2 corrected-address">
+                                <small>Corrected:</small>
+                            </div>
+                            <div class="col-5 billing corrected">
+                                <div class="street"></div>
+                                <div class="street2"></div>
+                                <div class="street-city-zip"></div>
+                                <input type="hidden" class="city" />
+                                <input type="hidden" class="state" />
+                                <input type="hidden" class="zip" />
+                                <div class="message">
+                                <p>Postal Service database does not list the exact billing address you entered. </p>
+                                </div>
+                            </div>
+                            <div class="col-5 shipping corrected">
+                                <div class="street"></div>
+                                <div class="street2"></div>
+                                <div class="street-city-zip"></div>
+                                <input type="hidden" class="city" />
+                                <input type="hidden" class="state" />
+                                <input type="hidden" class="zip" />
+                                <div class="message">
+                                <p>Postal Service database does not list the exact shipping address you entered. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <!-- Selector row -->
+                            </div>
+                            <div class="col-5 billing corrected">
+                                <div class="radio">
+                                    <input type="radio" id="bill-2" name="bill" checked />
+                                    <label for="bill-2">Use Corrected</label>
+                                </div>
+                            </div>
+                            <div class="col-5 shipping corrected">
+                                <div class="radio">
+                                    <input type="radio" id="ship-2" name="ship" checked />
+                                    <label for="ship-2">Use Corrected</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="addressForm" value="Submit" class="btn btn-primary"
+                        id="modal-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

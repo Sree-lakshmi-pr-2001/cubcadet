@@ -1,0 +1,52 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/content.css');
+        assets.addJs('/js/aftermarket.js');
+        var bannerImg = dw.content.ContentMgr.getContent('content-page-banner');
+    </isscript>
+    <isif condition="${'enableEWNewSales' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.enableEWNewSales != false}">
+        <isinclude template="eligibilityCheck/enterSerialNumber"/>
+    </isif>
+    <isinclude template="/components/modules"/>
+    <iscomment>
+        content asset inserts a style tag to bring in a configurable image
+    </iscomment>
+    <isif condition="${bannerImg && !empty(bannerImg.custom.body) && bannerImg.online}">
+      <isprint value="${bannerImg.custom.body}" encoding="off"/>
+      <div class="content-banner">
+        <div class="hero main-banner">
+          <div class="hero-text hero-text-left">
+              <h1 class="display-1">${pdict.content.name}</h1>
+          </div>
+        </div>
+      </div>
+    <iselse>
+        <div class="hero slant-down content-page-image">
+            <h1 class="page-title">${pdict.content.name}</h1>
+        </div>
+    </isif>
+
+    <div class="container content-asset-container">
+        <!-- dwMarker="content" dwContentID="${pdict.content.UUID}" -->
+        <isprint value="${pdict.content.body}" encoding="off" />
+        <!-- END_dwmarker -->
+    </div>
+
+    <isif condition="${pdict.content.ID === 'knowledge-center'}">
+        <ismonetatetrackpage pagename="Knowledge Center" />
+    <iselseif condition="${pdict.content.folderIds.length > 0}">
+        <isscript>
+            var isKnowledgeCenterArticle = false;
+            for (var i = 0, l = pdict.content.folderIds.length; i < l; i++) {
+                var folderId = pdict.content.folderIds[i];
+                if (folderId.indexOf('knowledge-center') === 0) {
+                    isKnowledgeCenterArticle = true;
+                }
+            }
+        </isscript>
+        <isif condition="${isKnowledgeCenterArticle}">
+            <ismonetatetrackpage pagename="knowledge_center" />
+        </isif>
+    </isif>
+</isdecorate>

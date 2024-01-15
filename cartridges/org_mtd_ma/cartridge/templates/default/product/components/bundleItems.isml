@@ -1,0 +1,17 @@
+<div class="container no-container-gutters-lg-down">
+    <div class="row">
+        <div class="col-12">
+            <h5 class="bundle-items-label">${Resource.msg('label.bundle.contains', 'product', null)}</h5>
+        </div>
+    </div>
+</div>
+
+<div class="bundle-items">
+    <isloop items="${product.bundledProducts}" var="productItem" status="loopState">
+        <isset name="product" value="${productItem}" scope="page" />
+        <isset name="isBundle" value="${true}" scope="page" />
+        <isset name="isBundleItem" value="${true}" scope="page" />
+
+        <isinclude template="product/components/bundleItem" />
+    </isloop>
+</div>

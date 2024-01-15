@@ -1,0 +1,27 @@
+<!--- TEMPLATENAME: findDealer.isml --->
+
+<isif condition="${(!product.isParts || dw.system.Site.getCurrent().ID === 'cubcadetca') && dw.system.Site.getCurrent().getCustomPreferenceValue('enablePDPWhereToBuy')}">
+
+    <isset name="dealerFilter" value="${product.whereToBuy.join(',')}" scope="page" />
+    <isset name="productCategoryFilter" value="${product.raw.custom['locator-product-category'] && product.raw.custom['locator-product-category'].value ? product.raw.custom['locator-product-category'].value : ''}" scope="page" />
+    <isset name="isUTV" value="${productCategoryFilter === 'UTV'}" scope="page" />
+    <isset name="findStore" value="${false}" scope="page" />
+    <isset name="findDealer" value="${false}" scope="page" />
+
+    <isif condition="${isUTV}">
+        <isset name="findDealer" value="${true}" scope="page" />
+    <iselse>
+        <isset name="findStore" value="${true}" scope="page" />
+    </isif>
+
+    <div class="find-dealer-container">
+        <a href="${URLUtils.https('Stores-Find', 'showMap', true, 'horizontalView', true, 'isForm', true, 'rid', dealerFilter, 'pc', productCategoryFilter, 'pid', product.id)}" class="find-dealer">
+            <isif condition="${findStore}">
+                ${Resource.msg('find.a.store', 'common', null)}
+            <iselse>
+                ${Resource.msg('find.a.dealer', 'common', null)}
+            </isif>
+        </a>
+    </div>
+
+</isif>

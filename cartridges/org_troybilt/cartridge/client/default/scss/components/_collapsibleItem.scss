@@ -1,0 +1,80 @@
+@each $size in map-keys($grid-breakpoints) {
+
+    @include media-breakpoint-down($size) {
+        .collapsible-#{$size} {
+            .title,
+            .card-header {
+                line-height: 2.5rem; /* 40/16 */
+
+                @include clearfix;
+
+                &::after {
+                    @include centerElement(vertical);
+
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    right: 0;
+                    background-image: $svg-arrow-down;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+            }
+
+            .content,
+            .card-body {
+                display: none;
+            }
+
+            &.active {
+                .title::after,
+                .card-header::after {
+                    @include centerElement(vertical);
+
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    right: 0;
+                    background-image: $svg-arrow-up;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+
+                .content,
+                .card-body {
+                    display: block;
+                }
+            }
+
+            &.product-attributes,
+            &.product-support {
+                .title,
+                .card-header {
+                    width: 100%;
+
+                    &::after {
+                        background-image: $svg-accordion-open;
+                    }
+                }
+
+                &.active {
+                    .title::after,
+                    .card-header::after {
+                        background-image: $svg-accordion-close;
+                    }
+                }
+            }
+        }
+    }
+
+    .container div.collapsible-#{$size} a.title {
+        color: $dark;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

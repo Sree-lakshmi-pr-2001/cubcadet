@@ -1,0 +1,94 @@
+<isinclude template="components/modules" />
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customerService.css');
+    assets.addJs('/js/contactUs.js');
+</isscript>
+
+<isset name="contactUsForm" value="${pdict.contactUsForm}" scope="page" />
+<isset name="csrf" value="${pdict.csrf}" scope="page" />
+
+<div class="contact-dealer-form-wrap">
+
+    <div class="contact-dealer-form-head">
+        <iscontentasset aid="contact-dealer-form-modal" />
+    </div>
+
+    <div id="contactUsFormSuccessMessage" class="w-100 px-sm-1" style="display: none;">
+        <isslot id="ContactUsSuccess" context="global" description="Contact Us Success Message" />
+    </div>
+    <div id="contactUsFormErrorMessage" class="w-100 px-sm-1" style="display: none;">
+        <isslot id="ContactUsFailed" context="global" description="Contact Us Failed Message" />
+    </div>
+
+    <form action="${contactUsForm.actionUrl}" class="" id="contactUsForm" method="POST" name="${contactUsForm.htmlName}">
+
+        <div class="form-group-wrap">
+            <div class="form-group ${!!contactUsForm.firstname.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="registration-form-firstname">
+                    <isprint value="${contactUsForm.firstname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="registration-form-firstname" name="firstname" <isprint value=${contactUsForm.firstname.attributes} encoding="off" /> >
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group ${!!contactUsForm.lastname.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="registration-form-lastname">
+                    <isprint value="${contactUsForm.lastname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="registration-form-lastname" name="lastname" <isprint value=${contactUsForm.lastname.attributes} encoding="off" /> >
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group ${!!contactUsForm.phone.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="registration-form-phone">
+                    <isprint value="${contactUsForm.phone.label}" encoding="htmlcontent" />
+                </label>
+                <input type="tel" class="form-control" id="registration-form-phone" name="phone"
+                       data-range-error="${Resource.msg('error.message.between10and20', 'forms', null)}"
+                       data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'forms', null)}"
+                       <isprint value=${contactUsForm.phone.attributes} encoding="off" />
+                >
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group ${!!contactUsForm.email.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="registration-form-email">
+                    <isprint value="${contactUsForm.email.label}" encoding="htmlcontent" />
+                </label>
+                <input type="email" class="form-control" data-pattern-mismatch="${Resource.msg('error.email.mismatch','forms',null)}" id="registration-form-email" name="email" <isprint value=${contactUsForm.email.attributes} encoding="off" /> >
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group ${!!contactUsForm.message.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="registration-form-message">
+                    <isprint value="${contactUsForm.message.label}" encoding="htmlcontent" />
+                </label>
+                <textarea class="form-control" id="registration-form-message" name="message"
+                          placeholder="${Resource.msg('contactus.message.placeholder', 'forms', null)}"
+                          <isprint value=${contactUsForm.message.attributes} encoding="off" />
+                ></textarea>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="form-actions-wrap">
+            <div class="recaptcha-content">
+                <div id="contactUsRecaptcha" class="g-recaptcha"></div>
+                <div class="invalid-feedback">${Resource.msg('captcha.error','forms',null)}</div>
+            </div>
+
+            <input type="hidden" name="${csrf.tokenName}" value="${csrf.token}"/>
+            <input type="hidden" name="CompanyId" value="${contactUsForm.dealerId}"/>
+            <input type="hidden" name="ModelName"  value=""/>
+            <input type="hidden" name="ModelNumber"  value=""/>
+            <div class="form-group-cta">
+                <button type="submit" id="sendContactUs" class="btn contact-us btn-block btn-secondary">${Resource.msg('contactus.submit.label','forms',null)}</button>
+            </div>
+        </div>
+    </form>
+
+    <isinclude template="content/dealerRecaptcha"/>
+
+</div>

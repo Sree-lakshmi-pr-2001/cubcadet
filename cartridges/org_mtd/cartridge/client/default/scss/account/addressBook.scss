@@ -1,0 +1,47 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+@import "../utilities/delete-card-button";
+@import "../utilities/functions";
+@import "../utilities/layout";
+@import "../utilities/simple-hero";
+
+.account-image {
+    @include simple-hero;
+}
+
+.card-header {
+    h4 {
+        width: 85%;
+        margin: 0;
+
+        @include media-breakpoint-only(xs) {
+            font-size: $font-size-base;
+        }
+    }
+}
+
+.card-body-positioning {
+    position: relative;
+}
+
+.card-make-default-link {
+    margin-top: 0.625em; /* 10/16 */
+}
+
+.remove-btn {
+    @include delete-card-button();
+
+    width: 3rem;
+}
+
+.back-to-account-link {
+    margin-bottom: rem(10px);
+
+    @include media-breakpoint-up(md) {
+        position: relative;
+        top: 10px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,26 @@
+<div class="card aftermarket product-info ${bonusproductlineitem} uuid-${lineItem.UUID} <isif condition="${status.last}"> last</isif>">
+  <div class="row  no-gutters">
+      <div class="col-5 col-md-2 col-lg-3 col-xl-3 pl-2 pr-2 warranty-image">
+        <img src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty.png')}" />
+      </div> 
+      <div class="col-7 col-md-7 col-lg-7 col-xl-7"><h6>Extended Warranty</h6>
+        ${lineItem.ew['model']}<br>
+        ${lineItem.ew['productName']}<br>
+        ${dw.web.Resource.msg('dialog2.serialNumber', 'eligibilitycheck', null)} <b>${lineItem.ew['serialNumber']}</b><br>
+        ${dw.web.Resource.msg('dialog2.factoryNumber', 'eligibilitycheck', null)} <b>${lineItem.ew['factoryNumber']}</b><br>
+      <div class="row no-gutters coverage-text"><isprint value="${lineItem.ew.shortDescription}" encoding="off"></div>
+      <div class="coverage-wrapp mb-1 text-uppercase"><span class="done-mark"></span> 
+        <isprint value="${lineItem.ew.coverage}" encoding="off">
+      </div>
+      </div>
+      <div class="col-7 col-md-2 col-lg-2 col-xl-2 d-flex align-items-stretch justify-content-between text-right flex-column ml-auto m-md-0 price-wrapper-am">
+          <div class="total-price total-price mr-3 mr-md-0">
+            <p class="line-item-price-info mb-0">${Resource.msg('label.total.totalprice','cart',null)}</p>
+            ${lineItem.price.sales.formatted}
+          </div>
+          <div class="col-auto align-items-end p-0">
+              <isinclude template="cart/productCard/cartRemoveProductCardLink" />
+          </div>
+      </div>
+  </div>
+</div> 

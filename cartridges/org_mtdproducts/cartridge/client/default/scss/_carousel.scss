@@ -1,0 +1,175 @@
+.brand-car {
+    @include media-breakpoint-down(sm) {
+        .carousel-inner {
+            .carousel-item {
+                > div {
+                    display: none;
+                }
+
+                > div:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .carousel-inner {
+        height: 120px;
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: flex;
+        }
+
+        .carousel-item {
+            img {
+                height: 120px;
+            }
+        }
+    }
+
+    /* medium - display 4  */
+    @include media-breakpoint-up(md) {
+        .carousel-inner {
+            .carousel-item-right.active,
+            .carousel-item-next {
+                transform: translateX(25%);
+            }
+
+            .carousel-item-left.active,
+            .carousel-item-prev {
+                transform: translateX(-25%);
+            }
+        }
+    }
+
+    /* large - display 6 */
+    @include media-breakpoint-up(lg) {
+        .carousel-inner {
+            .carousel-item-right.active,
+            .carousel-item-next {
+                transform: translateX(16.666%);
+            }
+
+            .carousel-item-left.active,
+            .carousel-item-prev {
+                transform: translateX(-16.666%);
+            }
+        }
+    }
+
+    .carousel-inner {
+        .carousel-item-right,
+        .carousel-item-left {
+            transform: translateX(0);
+        }
+    }
+}
+
+.about-car,
+.careers-car {
+    @include media-breakpoint-down(sm) {
+        .carousel-inner {
+            .carousel-item {
+                > div {
+                    display: none;
+                }
+
+                > div:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .carousel-inner {
+        height: auto;
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: flex;
+        }
+    }
+
+    /* medium - display 3  */
+    @include media-breakpoint-up(md) {
+        .carousel-inner {
+            .carousel-item-right.active,
+            .carousel-item-next {
+                transform: translateX(33%);
+            }
+
+            .carousel-item-left.active,
+            .carousel-item-prev {
+                transform: translateX(-33.333%);
+            }
+        }
+    }
+
+    .carousel-inner {
+        .carousel-item-right,
+        .carousel-item-left {
+            transform: translateX(0);
+        }
+    }
+}
+
+.community-car {
+    .carousel-inner {
+        .carousel-item {
+            > div {
+                display: none;
+            }
+
+            > div:first-child {
+                display: block;
+            }
+        }
+    }
+
+    .carousel-inner {
+        height: auto;
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: flex;
+        }
+    }
+
+    .carousel-inner {
+        .carousel-item-right,
+        .carousel-item-left {
+            transform: translateX(0);
+        }
+    }
+}
+
+.brand-car,
+.about-car,
+.careers-car,
+.community-car {
+    text-align: center;
+
+    .car-play {
+        color: #343a40;
+        text-decoration: none;
+        opacity: 0.5;
+    }
+
+    .car-play:hover {
+        color: #1d2124;
+        opacity: 0.9;
+    }
+
+    .fa {
+        padding-top: 10px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 35px !important;
+    }
+}

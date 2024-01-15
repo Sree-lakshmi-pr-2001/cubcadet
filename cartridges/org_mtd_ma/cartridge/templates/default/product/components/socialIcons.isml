@@ -1,0 +1,9 @@
+<div class="col-12 social-container hidden-sm-down">
+    <span class="social-icons">
+        <issvg icon="instagram" image="true" altText="${Resource.msg('social.instagram','common',null)}" />
+        <issvg icon="twitter" image="true" altText="${Resource.msg('social.twitter','common',null)}" />
+        <issvg icon="facebook" image="true" altText="${Resource.msg('social.facebook','common',null)}" />
+        <issvg icon="youtube" image="true" altText="${Resource.msg('social.youtube','common',null)}" />
+        <issvg icon="snapchat" image="true" altText="${Resource.msg('social.snapchat','common',null)}" />
+    </span>
+</div>

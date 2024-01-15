@@ -1,0 +1,65 @@
+@import "../variables";
+@import "~base/checkout/checkoutComponents";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "../utilities/functions";
+
+$receipt-spacing: rem(20px);
+
+.leading-lines {
+    .start-lines::before {
+        content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+    }
+
+    .end-lines span {
+        padding-left: rem(5px);
+    }
+}
+
+.page {
+    background-color: $white;
+}
+
+.product-summary-block {
+    margin-bottom: 0;
+}
+
+.summary-section-label,
+.line-item-total-text {
+    font-weight: $font-weight-bold;
+}
+
+.tracking-notes {
+    margin-bottom: rem(10px);
+
+    a {
+        display: block;
+    }
+}
+
+.line-item-total-price {
+    text-align: right;
+}
+
+.product-line-item + .product-line-item::before,
+.multi-shipping + .product-line-item::before {
+    content: "";
+    display: block;
+    border-bottom: 1px dashed $horizontal-rule-grey;
+    margin: $receipt-spacing -0.625em;
+
+    @include media-breakpoint-up(lg) {
+        margin: $receipt-spacing -1.225em;
+    }
+}
+
+.order-total-summary {
+    .order-discount,
+    .shipping-discount {
+        font-weight: $font-weight-bold;
+    }
+}
+
+.my-account {
+    text-align: center;
+}

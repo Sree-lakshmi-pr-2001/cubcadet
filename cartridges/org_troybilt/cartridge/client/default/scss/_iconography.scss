@@ -1,0 +1,204 @@
+.icon {
+    &.logo {
+        width: 221px;
+
+        @include media-breakpoint-down(md) {
+            width: 152px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            width: 132px;
+        }
+
+        &.mobile {
+            width: 152px;
+
+            @include media-breakpoint-down(xs) {
+                width: 132px;
+            }
+        }
+    }
+
+    &.ask-troy-red {
+        width: 198px;
+
+        @include media-breakpoint-down(md) {
+            width: 182px;
+        }
+
+        &.mobile {
+            width: 182px;
+        }
+    }
+
+    &.icon-close {
+        opacity: 1;
+    }
+
+    &.icon-location-pin-black,
+    &.icon-location-pin-red {
+        height: 45px;
+
+        &.map-view {
+            height: 53px;
+        }
+    }
+
+    &.icon-info {
+        background: $svg-help;
+        background-size: cover;
+    }
+}
+
+.icon-container {
+    .product-support & {
+        width: 50%;
+        margin-bottom: rem(25px);
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        .icon-circle {
+            margin-bottom: rem(5px);
+        }
+    }
+}
+
+.icon-element {
+    display: inline-block;
+
+    .footer-product-support & {
+        &.icon-parts-support-footer {
+            width: 60px;
+            height: 60px;
+            background: $svg-parts-support-footer;
+            background-size: contain;
+        }
+
+        &.icon-service-center-footer {
+            width: 60px;
+            height: 60px;
+            background: $svg-service-center-footer;
+            background-size: contain;
+        }
+
+        &.icon-find-manual-footer {
+            width: 60px;
+            height: 60px;
+            background: $svg-find-manual-footer;
+            background-size: contain;
+        }
+    }
+
+    &.ask-troy-red-box {
+        width: 140px;
+        height: 40px;
+        background: $svg-ask-tory-box;
+        background-size: contain;
+    }
+
+    &.icon-google-home-white {
+        width: 40px;
+        height: 40px;
+        background: $svg-google-home-white;
+        background-size: contain;
+    }
+
+    &.icon-amazon-echo-white {
+        width: 40px;
+        height: 40px;
+        background: $svg-amazon-echo-white;
+        background-size: contain;
+    }
+
+    &.icon-chat-assistant-white {
+        width: 40px;
+        height: 40px;
+        background: $svg-chat-assistant-white;
+        background-size: cover;
+    }
+
+    &.icon-google-home {
+        width: 40px;
+        height: 40px;
+        background: $svg-google-home;
+        background-size: contain;
+    }
+
+    &.icon-amazon-echo {
+        width: 40px;
+        height: 40px;
+        background: $svg-amazon-echo;
+        background-size: contain;
+    }
+
+    &.icon-chat-assistant {
+        width: 40px;
+        height: 40px;
+        background: $svg-chat-assistant;
+        background-size: cover;
+    }
+
+    &.parts-support {
+        width: 70px;
+        height: 70px;
+        background: $trans $svg-parts-support center/70px no-repeat;
+    }
+
+    &.service-center {
+        width: 70px;
+        height: 70px;
+        background: $trans $svg-service-center center/70px no-repeat;
+    }
+
+    &.manual {
+        width: 70px;
+        height: 70px;
+        background: $trans $svg-find-manual center/70px no-repeat;
+    }
+
+    &.smart-assistant {
+        width: 70px;
+        height: 70px;
+        background: $trans $svg-smart-assistant center/70px no-repeat;
+    }
+}
+
+.icon-circle {
+    display: block;
+    margin: 0 auto;
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+
+    &-sm {
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+
+        &.chevron-right {
+            background: $secondary $svg-arrow-up-light center/15px no-repeat;
+            transform: rotate(90deg);
+        }
+    }
+
+    &.parts-support {
+        background: $secondary $svg-parts-support-footer center/60px no-repeat;
+    }
+
+    &.service-center {
+        background: $secondary $svg-service-center-footer center/80px no-repeat;
+    }
+
+    &.manual {
+        background: $secondary $svg-find-manual-footer center/70px no-repeat;
+    }
+
+    &.smart-assistant-white {
+        background: $secondary $svg-smart-assistant-white center/70px no-repeat;
+    }
+}

@@ -1,0 +1,9 @@
+<script>//common/scripts.isml</script>
+<script defer type="text/javascript" src="${URLUtils.staticURL('/js/main.js')}"></script>
+
+<iscomment> Zoom ses on all pages with product tiles </iscomment>
+<script defer type="text/javascript" src="${URLUtils.staticURL('/lib/jquery.zoom.min.js')}"></script>
+
+<isloop items="${ require('*/cartridge/scripts/assets.js').scripts }" var="script">
+    <script defer type="text/javascript" src="${script}"></script>
+</isloop>

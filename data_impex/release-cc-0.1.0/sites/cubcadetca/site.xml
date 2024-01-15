@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site xmlns="http://www.demandware.com/xml/impex/site/2007-04-30" site-id="cubcadetca">
+    <name>Cub Cadet CA</name>
+    <currency>CAD</currency>
+    <taxation>net</taxation>
+    <custom-cartridges>int_prop65:site_cubcadet_ca:org_mtd_ma:org_mtd:int_financing_app:int_monetate:int_bazaarvoice_sfra:bc_bazaarvoice:plugin_dis:plugin_productcompare:int_chase:int_googleFeed:int_mtdservices:int_googletags:int_orderstatus:int_ari:app_lyonscg_mfra:app_corrections:app_storefront_base:bc_job_components:int_marketing_cloud:int_handlerframework:app_demo:app_test</custom-cartridges>
+    <storefront-status>protected</storefront-status>
+    <storefront-password>mtd2019</storefront-password>
+</site>
+

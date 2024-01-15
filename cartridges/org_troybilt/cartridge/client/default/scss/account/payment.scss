@@ -1,0 +1,47 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+
+.payment-container {
+    padding-bottom: rem(60px);
+
+    .row > div[id^="uuid"] {
+        margin-bottom: rem(15px);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    .card {
+        padding-top: rem(16px);
+        padding-bottom: rem(20px);
+        margin-bottom: 0; // was collapsing, put on col div
+
+        .card-body {
+            dl {
+                padding-bottom: rem(1px);
+            }
+        }
+
+        .card-header {
+            h6 {
+                margin-bottom: rem(12px);
+            }
+        }
+        @include media-breakpoint-up(md) {
+            padding-top: rem(25px);
+            padding-bottom: rem(43px);
+        }
+    }
+
+    .card-body-positioning {
+        position: relative;
+    }
+}
+
+.remove-payment {
+    margin-top: rem(52px);
+    border: none;
+}

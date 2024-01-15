@@ -1,0 +1,37 @@
+<!--- TEMPLATENAME: carbReplace.isml --->
+<isinclude template="components/modules" />
+<div id="carbContent">
+    <div id="dialogTitle" class="hidden"><isprint value="${pdict.title}" encoding="off"/></div>
+    <div class="alert brand-warning">
+        <isprint value="${pdict.assetText}" encoding="off"/>
+    </div>
+    <div class="error-mgs"></div>
+        <div class="row tile-row d-flex flex-column flex-md-row no-gutters">
+            <isloop items="${pdict.productData}" var="data">
+                <div class="col-12 col-md-5 original-tile">
+                    <h6>${Resource.msg('carb.replace.currentmodel', 'dealer', null)}</h6>
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', data.originProductId, 'swatches', false, 'ratings', false, 'promos', false, 'showQuickView', false, 'isCarbModal', true)}" />
+                </div>
+
+                <div class="col-12 col-md-2">
+                    <div class="swap-icon">
+                        <issvg icon="icon-swap" />
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-5 replace-tile">
+                    <h6>${Resource.msg('carb.replace.suggestedmodel', 'dealer', null)}</h6>
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', data.productId, 'swatches', false, 'ratings', false, 'promos', false, 'showQuickView', false, 'isCarbModal', true)}" />
+                </div>
+            </isloop>
+        </div>
+        <div class="row btn-row">
+            <div class="col">
+                <form action="${URLUtils.url('Checkout-CarbReplace')}" name="carbReplace" id="carbReplace">
+                    <button class="btn btn-secondary" type="submit" name="dealer" value="cartReplace">
+                        ${pdict.ctaText}
+                    </button>
+                </form>
+            </div>
+        </div>
+</div>

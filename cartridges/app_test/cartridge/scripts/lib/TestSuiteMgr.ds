@@ -1,0 +1,9 @@
+function get(name) {
+	var testSuite = require('../testsuites.json').filter(function(suite) {
+		return suite.name == name;
+	})[0];  
+	
+	return require(testSuite.modulePath);
+}
+
+module.exports.get = get;

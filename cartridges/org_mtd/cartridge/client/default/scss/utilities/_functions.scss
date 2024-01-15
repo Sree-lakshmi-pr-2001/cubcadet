@@ -1,0 +1,60 @@
+////-----------------------------------------------
+/// GLOBAL FUNCTIONS
+////-----------------------------------------------
+
+///	calculateRem - Calculates a proper rem value (usually a font-size) given a pixel value.
+///	@param {number} $size - a pixel || verbal attribute: auto, initial, etcetera.
+///	@return {number} a rem value based on a default browser font size of 16px
+///	@alias rem()
+
+@function calculateRem($size) {
+    @if type-of($size) == string or $size == 0 or unit($size) == "rem" {
+        @return $size;
+    }
+    @if unit($size) != "px" {
+        @error "The calculateRem function expects a pixel || verbal attribute: auto, initial, etcetera.";
+    }
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@function rem($size) {
+    @return calculateRem($size);
+}
+
+///	calculateEm - Calculates an em value given a px value - mainly used in media queries.
+/// @param {number} $size - a pixel || verbal attribute auto, initial, etcetera.
+///	@return {number} an em value based on a font size of 16px
+
+@function calculateEm($size) {
+    @if type-of($size) == string or $size == 0 or unit($size) == "em" {
+        @return $size;
+    }
+    @if unit($size) != "px" {
+        @error "The calculateEm function expects a pixel || verbal attribute: auto, initial, etcetera.";
+    }
+    $emSize: $size / 16px;
+    @return $emSize * 1em;
+}
+
+@function map-has-nested-keys($map, $keys...) {
+    @each $key in $keys {
+        @if type-of($map) != "map" {
+            @return false;
+        }
+        @if not map-has-key($map, $key) {
+            @return false;
+        }
+        $map: map-get($map, $key);
+    }
+    @return true;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        @if type-of($map) == "map" {
+            $map: map-get($map, $key);
+        }
+    }
+    @return $map;
+}

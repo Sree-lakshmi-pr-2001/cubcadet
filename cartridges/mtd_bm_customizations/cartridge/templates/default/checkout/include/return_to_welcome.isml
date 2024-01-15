@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col-6">
+        <form action="${URLUtils.url('Epcot-Welcome')}" method="GET">
+            <button type="submit" class="btn btn-primary btn-lg">Return to Epcot</button>
+        </form>
+    </div>
+</div>

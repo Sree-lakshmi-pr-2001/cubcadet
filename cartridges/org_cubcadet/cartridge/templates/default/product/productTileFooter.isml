@@ -1,0 +1,24 @@
+<div class="tile-body-footer">
+    <isif condition="${pdict.display.showQuickView !== false}">
+        <div class="tile-atc col-12 mb-2">
+            <isif condition="${pdict.showPartReplacesWidget && product.replacesParts}">
+                <isset name="replacePartsArray" value="${product.replacesParts.split(/[ ,]+/)}" scope="page" />
+                <isif condition="${replacePartsArray.indexOf(pdict.searchKeyword) >= 0}">
+                    <span class="part-replaces-text font-weight-bold">
+                        ${Resource.msgf('text.partreplaces', 'product', null, ' ') + (replacePartsArray[replacePartsArray.indexOf(pdict.searchKeyword)])}
+                    </span>
+                </isif>
+            </isif>
+            <iscomment> Show Availability Message </iscomment>
+            <isif condition="${pdict.showAddToCartButton || pdict.showStockMessage}">
+                <isinclude template="product/productTileAvailability" />
+            </isif>
+        </div>
+    </isif>
+
+    <isif condition="${pdict.display.compare}">
+        <div class="compare col-12">
+            <isinclude template="product/components/compare" />
+        </div>
+    </isif>
+</div>

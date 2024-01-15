@@ -1,0 +1,25 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.exportSFDCOrders",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "module": "int_sfdc/cartridge/scripts/jobs/exportSFDCOrders.js",
+                "function": "execute",
+                "transactional": "true",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR"
+                        },
+                        {
+                            "@code": "OK"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+<div class="modal fade model-num-modal will-fit" id="modal-will-fit" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered text-left">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <h4 class="modal-title text-center w-100">${Resource.msg('fits.on.model.find.number', 'partFitment', null)}</h4>
+                <button aria-label="${Resource.msg('link.quickview.close', 'product', null)}" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <div class="modal-body p-0">
+                <iscontentasset aid="how-to-find-model-number" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,381 @@
+<isdecorate template="common/layout/epcot">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/ordersearch.js');
+</isscript>
+    <iscomment>
+        <div class="row border border-dark prod-row">
+            <form action="${URLUtils.url('EpcotOrderInquiry-AJAXOrderSearch')}" method="post" id="searchForm"
+                name="searchForm">
+                <input type="hidden" name="basketId" value="${pdict.basketId}" />
+                <h1>Order Search</h1>
+
+                <table class="address-table">
+                    <tr>
+                        <td class="title" align="right">Customer Name:</td>
+                        <td align="left">
+                            <input type="text" name="customerName" id="customerName" value="" maxlength="50"
+                                size="25" />
+                        </td>
+                        <td class="title" align="right">Zip Code:</td>
+                        <td align="left">
+                            <input type="text" name="customerZip" id="customerZip" value="" maxlength="9" size="15" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="title" align="right">Phone Number:</td>
+                        <td align="left">
+                            <input type="text" name="phoneNumber" id="phoneNumber" value="" maxlength="14" size="10" />
+                        </td>
+                        <td class="title" align="right">Epcot / Online / COM Order Number:</td>
+                        <td align="left">
+                            <input type="text" name="orderNumber" id="orderNumber" maxlength="15" size="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title" align="right">Email Address:</td>
+                        <td align="left">
+                            <input type="text" name="emailAddress" id="emailAddress" maxlength="40" size="40" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"><button id="clearSearch" class="btn product-search btn-primary"
+                                type="button">Clear</button> <button id="orderSearch"
+                                class="btn product-search btn-primary" type="button">Search</button>
+                        </td>
+                        <td></td>
+                        <td colspan="2">
+                            <center>You must specify one of the following search fields before performing a
+                                search:<small> <br />Epcot / Online / Com Order Number <br />Customer Name & Zip
+                                    Code<br />Email Address<br />Phone Number</center></small>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </iscomment>
+    <center>
+        <iscomment> ------------ NEW TESTING BOX ------------ NEW TESTING BOX ------------ NEW TESTING BOX ------------
+            NEW TESTING BOX ------------ NEW TESTING BOX ------------ </iscomment>
+        <div class="minicartDiscountsDiv">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 left">
+                        <h2>Order Search</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="customerName" class="col-sm-4 col-form-label">Customer Name:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="customerName" class="form-control" id="customerName"
+                                    value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="customerZip" class="col-sm-4 col-form-label">Postal Code:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="customerZip" class="form-control" id="customerZip" title="Postal code is accepted with or without the space (i.e. M5H 2N2 or M5H2N2)" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="phoneNumber" class="col-sm-4 col-form-label">Phone Number:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="couponCode" class="col-sm-4 col-form-label">EPCOT / Online / COM Order
+                                Number:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="orderNumber" class="form-control" id="orderNumber" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="couponCode" class="col-sm-4 col-form-label">Email Address:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="emailAddress" class="form-control" id="emailAddress"
+                                    value="" />
+                            </div>
+                        </div>
+                        
+                        <isif condition="${pdict.country == 'US'}">
+                            <div class="form-group row">
+                                <label for="chaseAuthId" class="col-sm-4 col-form-label">Chase Auth Id:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="chaseAuthId" class="form-control" id="chaseAuthId"
+                                        value="" />
+                                </div>
+                            </div>
+                        </isif>
+
+                        <div class="form-group row orderClearAndSearch">
+                            <div class="col-md-6" align="left">
+                                <button type="button" id="clearSearch" class="btn btn-secondary btn-lg">Clear</button>
+                                <button type="button" id="orderSearch" class="btn btn-primary btn-lg">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row center">
+                            <div class="col-sm-12 searchConditions">
+                                You must specify one of the following search fields before performing a search:
+                                <br />EPCOT / Online / COM Order Number <br />Customer Name & Postal Code<br />Email
+                                Address<br />Phone Number<isif condition="${pdict.country == 'US'}"><br />Chase Auth Id </isif>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    <!-- <isinclude template="checkout/include/return_to_welcome.isml"/> -->
+    <div id="orders"></div>
+    <div id="selectedOrder"></div>
+    <div id="trackingInformation"></div>
+    <div id="paymentInformation"></div>
+
+</isdecorate>
+
+<template id="order-template">
+    <p class="hits">hits: 0</p>
+    <!-- row border border-dark prod-row checkout-box -->
+    <container>
+    <table class='orderSearchResults' width="100%" >
+        <thead>
+        <tr>
+            <td></td>
+            <td><b>Epcot Order Number</b></td>
+            <td><b>Online Order Number</b></td>
+            <td><b>Order Total</b></td>
+            <td><b>Customer Name</b></td>
+            <td><b>Order Date</b></td>
+            <td><b>Status</b></td>
+            <td><b>Phone Number</b></td>
+            <td><b>City &amp; State / Province</b></td>
+        </tr>
+        </thead>
+        <tbody class="ordersHeader">
+        </tbody>
+    </table>
+    </container>
+</template>
+
+<template id="order-results-template">
+    <tr class="orderSearchResultRow">
+        <td><button class='btn btn-primary checkout-button selectButton' type='button' id='temp'>Select</button></td>
+        <td class="epcotOrderNumber"></td>
+        <td class="orderNumber"></td>
+        <td class="orderTotal"></td>
+        <td class="billingName"></td>
+        <td class="orderDate"></td>
+        <td class="orderStatus"></td>
+        <td class="phoneNumber"></td>
+        <td class="cityState"></td>
+    </tr>
+</template>
+
+<template id="order-details-template">
+    <table class='table orderDetailsDiv'>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td scope="row"><b>Order Details for:</b></td>
+                <td class="orderNumber">Order number goes here</td>
+            </tr>
+            <tr>
+                <td><b>Date Created: </b></td>
+                <td class="createdDate">Created Date</td>
+                <td><b>Date Modified: </b></td>
+                <td class="modifiedDate">Modified Date</td>
+                <td><b>Date Submitted: </b></td>
+                <td class="submittedDate">Submitted Date</td>
+            </tr>
+            <tr>
+                <td><b>Created By: </b></td>
+                <td class='submitUsername'>submitUsername</td>
+                <td><b>Modified By: </b></td>
+                <td class='modifiedUsername'>submitUsername</td>
+                <td><b>Submitted By: </b></td>
+                <td class='createdUsername'>submitUsername</td>
+            </tr>
+            <tr>
+                <td><b>COM Order Number: </b></td>
+                <td class='comOrderNumber'>comOrderNumber</td>
+                <td><b>Shipping Method: </b></td>
+                <td class='shippingMethodDescription'>shippingMethodDescription</td>
+                <td><b>Payment Method: </b></td>
+                <td class='paymentDescription'>paymentDescription</td>
+            </tr>
+            <tr>
+                <td><b>Customer P.O. Number: </b></td>
+                <td class='customerPONumber'>customerPONumber</td>
+                <td><b>Notes: </b></td>
+                <td class='customerPONote1'>customerPONote1</td>
+                <td><b>Notes: </b></td>
+                <td class='customerPONote2'>customerPONote2</td>
+            </tr>
+            <tr>
+                <td><b>NC Reason Code: </b></td>
+                <td class='noChargeReason'></td>
+                <td><b>NC Model Number: </b></td>
+                <td class='noChargeModelNumber'></td>
+                <td><b>NC Serial Number: </b></td>
+                <td class='noChargeSerialNumber'></td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>Bill To: </b></td>
+                <td colspan="5" class='billTo'>billTo</td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>Ship To: </b></td>
+                <td colspan="5" class='shipTo'>shipTo</td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>Auth Id: </b></td>
+                <td colspan="5" class='authId'>authId</td>
+            </tr>
+            <tr>
+                <td colspan="1"><b>Additional Auth Ids:</b></td>
+                <td colspan="5" id="additionalAuthIds"></td>
+            </tr>
+        </tbody>
+    </table>
+</template>
+
+<template id="tracking-header-template">
+    <table class='table orderDetailsDiv'>
+        <thead>
+            <tr class="trackingHeader">
+                <td><b>Tracking Number</b></td>
+                <td><b>Carrier</b></td>
+                <td><b>Item Number</b></td>
+                <td><b>Description</b></td>
+                <td><b>Qty(Ship)</b></td>
+                <td><b>Date</b></td>
+                <td><b>Unit</b></td>
+                <td><b>Extended</b></td>
+                <td><b>Disc</b></td>
+                <td><b>NC</b></td>
+                <td><b>LTL</b></td>
+            </tr>
+        </thead>
+    </table>
+</template>
+
+<template id="auth-header-template">
+    <div class="authTableWrapper">
+        <table class="table table-striped table-hover testtable">
+            <thead>
+                <tr>
+                    <th scope="col">Payment Status</th>
+                    <th scope="col">Active</th>
+                    <th scope="col">Auth Order Id</th>
+                    <th scope="col">Merchant Id</th>
+                    <th scope="col">Auth Expiration</th>
+                    <th scope="col">Date Authorized</th>
+                </tr>
+            </thead>
+            <tbody class="authHeader"></tbody>
+        </table>
+    </div>
+</template>
+
+<template id="auth-details-template">
+    <tr>
+        <td class="paymentStatus"></td>
+        <td class="active"></td>
+        <td class="authOrderId"></td>
+        <td class="merchantId"></td>
+        <td class="dateAuthorizationExpires"></td>
+        <td class="dateAuthorized"></td>
+    </tr>
+
+</template>
+
+<template id="tracking-details-template">
+    <tr>
+        <td class='trackingNumber'></td>
+        <td class='carrier'>carrier</td>
+        <td class='itemNumber'>itemNumber</td>
+        <td class='description'>description</td>
+        <td class='quantityShipped'>quantityShipped</td>
+        <td class='dateShipped'>dateShipped</td>
+        <td class='unit'>unit</td>
+        <td class='extended'>extended</td>
+        <td class='discount'>discount </td>
+        <td class='noCharge'>noCharge</td>
+        <td class='ltlFlag'>ltlFlag</td>
+    </tr>
+</template>
+
+<template id="payment-template">
+    <table class='table orderDetailsDiv'>
+        <tbody>
+            <tr>
+                <td colspan='100%'>
+                    <center><b>Pricing Information</b>
+                        <center>
+                </td>
+            <tr>
+                <td class="col-md-4"><b>Order Promo: </b></td>
+                <td class="col-md-3 orderPromo">orderPromo</td>
+                <td class="col-md-3"><b>Subtotal:</b></td>
+                <td class="col-md-2 subTotal">subTotal</td>
+            </tr>
+            <tr>
+                <td><b>Shipping Promo: </b></td>
+                <td class="shippingPromo">shippingPromo</td>
+                <td><b>Tax:</b></td>
+                <td class="tax">tax</td>
+            </tr>
+            <tr>
+                <td><b>Dealer Fulfillment: </b></td>
+                <td class="dealerFulfillmentCheckbox" />
+                </td>
+                <td><b>Handling:<b></td>
+                <td class="handling">handling</td>
+            </tr>
+            <tr>
+                <td><b>Waive Handling: </b></td>
+                <td class="waiveHandlingCheckbox" />
+                </td>
+                <td><b>Freight:</b></td>
+                <td class="freight">freight</td>
+            </tr>
+            <tr>
+                <td><b>Waive Freight: </b></td>
+                <td class="waiveFreightCheckbox" />
+                </td>
+                <td><b>Discount:</b></td>
+                <td class="discount">discount</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>Total:</b></td>
+                <td class="total">total</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="center"><a href="#epcotHeader">Return To Top of Page</a></div>
+</template>
+
+<script>
+        document.getElementById('pageName').value = 'OrderSearch';
+</script>

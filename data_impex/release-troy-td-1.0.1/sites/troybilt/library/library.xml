@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+  <content content-id="financing-plans">
+    <display-name xml:lang="x-default">Financing Plans Landing Page</display-name>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;of-plans&quot; id=&quot;of-plans&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;plb-group-heading col-12 col-lg-8 offset-lg-2 text-center&quot;&gt;
+        &lt;h1 id=&quot;online&quot;&gt;Online Financing Plans&lt;/h1&gt;
+        &lt;p&gt;The offers below are available for equipment, parts and accessory purchases on troybilt.com.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-deckz group&quot;&gt;
+        &lt;div class=&quot;flo&quot;&gt;
+        &lt;div class=&quot;card-container&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;front&quot;&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;6 &lt;span&gt;months&lt;/span&gt;&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        $300 minimum purchase required.
+        &lt;/p&gt;
+        &lt;div class=&quot;btn-wrap&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-details btn-primary btn-sm&quot;&gt;Learn more&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;back&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-back&quot;&gt;Back&lt;/button&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h4 class=&quot;card-title&quot;&gt;No interest if paid in full within 6 months&lt;sup&gt;1&lt;/sup&gt;&lt;/h4&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Interest will be charged from the purchase date if the purchase balance is not paid in full by the end of the promotional period.
+        &lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Minimum purchase $300
+        &lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Valid from: &lt;span&gt;March 1, 2020 - June 30, 2020&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;a href=&quot;#&quot; title=&quot;Click for details&quot; class=&quot;btn-text&quot; data-target=&quot;#financing-modal&quot; data-toggle=&quot;modal&quot;&gt;Click for details&lt;/a&gt;
+        &lt;a href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-GetURL')$&quot; title=&quot;Apply Now&quot; class=&quot;td-apply-finance btn btn-primary btn-sm&quot;&gt;Apply Now&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flo&quot;&gt;
+        &lt;div class=&quot;card-container&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;front&quot;&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;12 &lt;span&gt;months&lt;/span&gt;&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        $500 minimum purchase required.
+        &lt;/p&gt;
+        &lt;div class=&quot;btn-wrap&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-details btn-primary btn-sm&quot;&gt;Learn more&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;back&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-back&quot;&gt;Back&lt;/button&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h4 class=&quot;card-title&quot;&gt;No interest if paid in full within 12 months&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Interest will be charged from the purchase date if the purchase balance is not paid in full by the end of the promotional period.
+        &lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Minimum purchase $500
+        &lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Valid from: &lt;span&gt;March 1, 2020 - June 30, 2020&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;a href=&quot;#&quot; title=&quot;Click for details&quot; class=&quot;btn-text&quot; data-target=&quot;#financing-modal&quot; data-toggle=&quot;modal&quot;&gt;Click for details&lt;/a&gt;
+        &lt;a href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-GetURL')$&quot; title=&quot;Apply Now&quot; class=&quot;td-apply-finance btn btn-primary btn-sm&quot;&gt;Apply Now&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;flo&quot;&gt;
+        &lt;div class=&quot;card-container&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;front&quot;&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;24 &lt;span&gt;months&lt;/span&gt;&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        $1,500 minimum purchase required.
+        &lt;/p&gt;
+        &lt;div class=&quot;btn-wrap&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-details btn-primary btn-sm&quot;&gt;Learn more&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;back&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-back&quot;&gt;Back&lt;/button&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h4 class=&quot;card-title&quot;&gt;0% APR for 24 months with equal payments&lt;sup&gt;3&lt;/sup&gt;&lt;/h4&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        &lt;strong&gt;There is a promotional fee of $125 for this transaction.&lt;/strong&gt;
+        &lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Minimum purchase $1,500
+        &lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+        Valid from: &lt;span&gt;March 1, 2020 - June 30, 2020&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;a href=&quot;#&quot; title=&quot;Click for details&quot; class=&quot;btn-text&quot; data-target=&quot;#financing-modal&quot; data-toggle=&quot;modal&quot;&gt;Click for details&lt;/a&gt;
+        &lt;a href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-GetURL')$&quot; title=&quot;Apply Now&quot; class=&quot;td-apply-finance btn btn-primary btn-sm&quot;&gt;Apply Now&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;section class=&quot;ffaqs&quot;&gt;
+        &lt;h3&gt;FAQs&lt;/h3&gt;
+        &lt;dl&gt;
+        &lt;dt class=&quot;question&quot;&gt;How long does the online application take?&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;p&gt;The application takes only minutes, and most application decisions are returned within seconds.&lt;/p&gt;
+        &lt;/dd&gt;
+        &lt;dt class=&quot;question&quot;&gt;Is there an annual fee with the Troy-Bilt credit card?&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;p&gt;There is no annual fee to carry the Troy-Bilt credit card.&lt;/p&gt;
+        &lt;/dd&gt;
+        &lt;dt class=&quot;question&quot;&gt;Can I apply for the Troy-Bilt credit card by mail?&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;p&gt;There is no mail-in application. Applications can only be completed online.&lt;/p&gt;
+        &lt;/dd&gt;
+        &lt;dt class=&quot;question&quot;&gt;How do I make payments on my Troy-Bilt credit card account?&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;p&gt;You can make payments on your Troy-Bilt credit card account in 3 convenient ways:&lt;/p&gt;
+        &lt;ol&gt;
+        &lt;li&gt;Online with TD's Online Account Management system at &lt;a href=&quot;https://www.myonlineaccount.net&quot;&gt;www.myonlineaccount.net&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Via phone at &lt;a href=&quot;tel:18667024074&quot; title=&quot;Call 1-866-702-4074&quot;&gt;1-866-702-4074&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Via mail: Troy-Bilt, PO BOX 100114, Columbia SC 29202-3114&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/dd&gt;
+        &lt;dt class=&quot;question&quot;&gt;How do I contact customer service regarding my Troy-Bilt credit card account?&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;p&gt;The customer service number for your Troy-Bilt credit card account is &lt;a href=&quot;tel:18008086750&quot; title=&quot;Call 1-800-808-6950&quot;&gt;1-800-808-6950&lt;/a&gt;.&lt;/p&gt;
+        &lt;/dd&gt;
+        &lt;dt class=&quot;question&quot;&gt;Where can I use my Troy-Bilt credit card?&lt;/dt&gt;
+        &lt;dd&gt;
+        &lt;p&gt;The Troy-Bilt credit card can be used online at Troybilt.com.&lt;/p&gt;
+        &lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;/section&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal fade&quot; id=&quot;financing-modal&quot; style=&quot;display:none;&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div class=&quot;modal-dialog modal-dialog-centered&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;div&gt;
+        &lt;h4 class=&quot;modal-title&quot;&gt;&lt;/h4&gt;
+        &lt;p&gt;&lt;strong&gt;Troy-Bilt Revolving Plan Disclosures Available 3/1/2020-6/30/2020&lt;br/&gt;&lt;/strong&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;&lt;strong&gt;&lt;sup&gt;1&lt;/sup&gt; No Interest if Paid in Full within 6 Months:&lt;/strong&gt; Minimum purchase $300. To avoid interest, you must pay the full promotional balance before the promotional period ends. If you do not, we will charge interest from the purchase date at the Standard APR. After promotional period ends, the Standard APR also applies to the remaining balance. &lt;strong&gt;Minimum monthly payments required, but they will not pay off the balance in time. You must make larger payments to avoid the interest&lt;/strong&gt;. Prior purchases excluded. Account must be in good standing. Other finance plans may be available. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Troy-Bilt financing account issued by TD Bank, N.A.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;&lt;sup&gt;2&lt;/sup&gt; No Interest if Paid in Full within 12 Months:&lt;/strong&gt; Minimum purchase $500. To avoid interest, you must pay the full promotional balance before the promotional period ends. If you do not, we will charge interest from the purchase date at the Standard APR. After promotional period ends, the Standard APR also applies to the remaining balance. &lt;strong&gt;Minimum monthly payments required, but they will not pay off the balance in time. You must make larger payments to avoid the interest.&lt;/strong&gt; Prior purchases excluded. Account must be in good standing. Other finance plans may be available. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Troy-Bilt financing account issued by TD Bank, N.A.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;&lt;sup&gt;3&lt;/sup&gt; 0% APR for 24 Months with Equal Payments:&lt;/strong&gt; Minimum purchase $1,500. &lt;strong&gt;There is a promotional fee of $125 for this transaction.&lt;/strong&gt; 0% APR from date of eligible purchase until paid in full. Monthly payment is the purchase amount divided by the number of months in the offer. Last payment may vary due to rounding. On-time payments will pay off the promotional balance. Other transactions and charges affect total monthly payment amount. Prior purchases excluded. Account must be in good standing. Standard account terms apply to purchases that do not qualify. New accounts: Standard Purchase APR 29.99%. Minimum interest charge $1. Existing accounts, see your credit agreement for applicable terms. Subject to credit approval. Troy-Bilt financing account issued by TD Bank, N.A.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;style&gt;
+        .of-plans {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 1.5rem 1rem;
+        }
+        .of-plans .card-deckz {
+        margin-bottom: 2rem;
+        }
+        .of-plans .card-container {
+        -webkit-perspective: 800px;
+        -moz-perspective: 800px;
+        -ms-perspective: 800px;
+        -o-perspective: 800px;
+        perspective: 800px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .of-plans .card-container.flip .card {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -ms-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        }
+        .of-plans .card {
+        padding: 0;
+        position: relative;
+        -webkit-transition: -webkit-transform .5s;
+        -moz-transition: -moz-transform .5s;
+        -ms-transition: -ms-transform .5s;
+        -o-transition: -o-transform .5s;
+        transition: transform .5s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        }
+        .of-plans .front,
+        .of-plans .back {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        .of-plans .card-container,
+        .of-plans .front,
+        .of-plans .back {
+        width: 100%;
+        max-width: 420px;
+        height: 430px;
+        }
+        .of-plans .front {
+        z-index: 2;
+        background: #1e1e1e;
+        box-shadow: 0 0 8px rgba(0,0,0,.35);
+        }
+        .of-plans .back {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -ms-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        z-index: 3;
+        background: #d1d3d4;
+        box-shadow: 0 0 8px rgba(0,0,0,.35);
+        padding: 0 .5rem;
+        }
+        .of-plans .card-body {
+        color: #fff;
+        padding: 1rem .875rem;
+        text-align: center;
+        }
+        .of-plans .card-title {
+        color: #fff;
+        font-size: 8rem;
+        line-height: 4.5rem;
+        font-weight: 700;
+        margin-top: 5rem;
+        margin-bottom: 0.25rem;
+        }
+        .of-plans .card-title span {
+        color: #fff;
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 500;
+        }
+        .of-plans .card-text {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        }
+        .of-plans .btn-details {
+        width: 200px;
+        margin: 0px auto 2rem;
+        display: block;
+        }
+        .of-plans .back .card-body {
+        background: transparent;
+        padding: 0;
+        margin-top: .25rem;
+        }
+        .of-plans .btn-back {
+        width: 25px;
+        height: 25px;
+        outline: none;
+        background: transparent url(https://d1dy019watpwba.cloudfront.net/troy-bilt/btn-arrow-left-red.png) no-repeat left center;
+        background-size: 25px 25px;
+        border: none;
+        margin-top: 1rem;
+        margin-left: 0;
+        text-indent: -9999px;
+        }
+        .of-plans .btn-back:hover {
+        cursor: pointer;
+        }
+        .of-plans .back h4 {
+        color: black;
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        }
+        .of-plans .back h4 sup {
+        color: black;
+        font-size: 50%;
+        top: -.75rem;
+        font-weight: 500;
+        }
+        .of-plans .back p span {
+        display: block;
+        }
+        .of-plans .back .card-text {
+        color: black;
+        margin-bottom: 1rem;
+        }
+        .of-plans .back .btn-text {
+        display: block;
+        width: 110px;
+        margin: 0 auto 2rem;
+        }
+        .ffaqs {
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+        }
+        .ffaqs h3 {
+        text-align: center;
+        }
+        .ffaqs dl, .ffaqs dt, .ffaqs dd {
+        margin: 0;
+        padding: 0;
+        }
+        .ffaqs dl {
+        max-width: 640px;
+        margin: 0px auto;
+        }
+        .ffaqs dt {
+        color: #000;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        text-transform: none;
+        padding: 1rem 2rem 1rem 0;
+        border-bottom: 1px solid #d9d9d9;
+        position: relative;
+        }
+        .ffaqs dt:hover,
+        .ffaqs dt.show {
+        cursor: pointer;
+        color: #979797;
+        }
+        .ffaqs dt.show {
+        border-color: #fff;
+        }
+        .ffaqs dt::after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: .75rem;
+        right: -.25rem;
+        background: url(https://d1dy019watpwba.cloudfront.net/images/financing/icon-plus.png) no-repeat center center;
+        background-size: 17px 17px;
+        transform: rotateZ(0deg);
+        -webkit-animation: rotateback 300ms;
+        -moz-animation: rotateback 300ms;
+        -o-animation: rotateback 300ms;
+        animation: rotateback 300ms;
+        }
+        .ffaqs dt.show::after {
+        transform: rotateZ(45deg);
+        -webkit-animation: rotate 300ms;
+        -moz-animation: rotate 300ms;
+        -o-animation: rotate 300ms;
+        animation: rotate 300ms;
+        }
+        .ffaqs dd {
+        padding: 0 1rem 1rem;
+        display: none;
+        opacity: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-bottom: 1px solid #fff;
+        }
+        .ffaqs dd.show {
+        display: block;
+        opacity: 1;
+        border-bottom-color: #d9d9d9;
+        -webkit-animation: fade 1000ms;
+        -moz-animation: fade 1000ms;
+        -o-animation: fade 1000ms;
+        animation: fade 1000ms;
+        }
+        .ffaqs dd * {
+        color: #000;
+        }
+        .ffaqs dd p {
+        line-height: 1.5rem;
+        }
+        .ffaqs dd p:last-child {
+        margin-bottom: 0;
+        }
+        @-webkit-keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+        @-moz-keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+        @-o-keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+        @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+        @-webkit-keyframes rotate {
+        0%   { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(45deg); }
+        }
+        @-moz-keyframes rotate {
+        0%   { -moz-transform: rotate(0deg); }
+        100% { -moz-transform: rotate(45deg); }
+        }
+        @keyframes rotate {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(45deg); }
+        }
+        @-webkit-keyframes rotateback {
+        0%   { -webkit-transform: rotate(45deg); }
+        100% { -webkit-transform: rotate(0deg); }
+        }
+        @-moz-keyframes rotateback {
+        0%   { -moz-transform: rotate(45deg); }
+        100% { -moz-transform: rotate(0deg); }
+        }
+        @keyframes rotateback {
+        0%   { transform: rotate(45deg); }
+        100% { transform: rotate(0deg); }
+        }
+        @media only screen and (min-width: 58.75em) {
+        .of-plans .card-deckz {
+        margin: 0;
+        }
+        .of-plans .group {
+        overflow: hidden;
+        clear: both;
+        margin: 0px auto 2rem;
+        }
+        .of-plans .card-deckz.group {
+        max-width: 1232px;
+        }
+        .of-plans .flo {
+        width: 33.3%;
+        float: left;
+        padding: 0 .75rem;
+        }
+        .fis {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        margin-bottom: 2rem;
+        }
+        .fis .group {
+        max-width: 1198px;
+        margin-bottom: 4rem;
+        }
+        .fis .colz {
+        width: 50%;
+        float: left;
+        margin-bottom: 0;
+        }
+        .fis .photo img {
+        width: 616px;
+        }
+        .fis .copy {
+        padding: 3rem 3rem;
+        }
+        .fis .copy h3,
+        .ffaqs h3 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+        }
+        .fis .copy h3,
+        .fis .copy p {
+        margin-bottom: 2rem;
+        }
+        .fis .copy p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        }
+        .fis .copy p:last-child {
+        margin-bottom: 0;
+        }
+        .ffaqs dl {
+        max-width: 840px;
+        }
+        .ffaqs dt {
+        font-size: 1.375rem;
+        line-height: 1.875rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        }
+        .ffaqs dt:after {
+        top: 2rem;
+        }
+        .ffaqs dd {
+        padding-bottom: 2rem;
+        }
+        .ffaqs dd p {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        }
+        }
+        @media only screen and (min-width: 64em) {
+        .of-plans .flo {
+        padding: 0 1rem;
+        }
+        .fis .copy {
+        padding: 4rem 3rem;
+        }
+        }
+        @media only screen and (min-width: 71.75em) {
+        .of-plans .back .card-body {
+        margin-top: 1rem;
+        }
+        .fis .copy {
+        padding: 6rem 4rem 5rem;
+        }
+        }
+        /* IE11 Fix for cards */
+        .ie11 .card-container {
+        perspective: none;
+        }
+        .ie11 .card-container .card {
+        transition: none;
+        transform-style: unset;
+        }
+        .ie11 .card-container.flip .card,
+        .ie11 .front,
+        .ie11 .back {
+        transform: none;
+        }
+        .ie11 .front {
+        transform: none;
+        z-index: 4;
+        }
+        .ie11 .flip .front {
+        z-index: 2;
+        }
+        
+        &lt;/style&gt;
+        
+        &lt;script&gt;
+        /**
+        * Element.closest() polyfill
+        * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
+        */
+        if (!Element.prototype.closest) {
+        if (!Element.prototype.matches) {
+        Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+        }
+        Element.prototype.closest = function (s) {
+        var el = this;
+        var ancestor = this;
+        if (!document.documentElement.contains(el)) return null;
+        do {
+        if (ancestor.matches(s)) return ancestor;
+        ancestor = ancestor.parentElement;
+        } while (ancestor !== null);
+        return null;
+        };
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        
+        var $OFP = document.getElementById('of-plans'),
+        flipClass = 'flip',
+        questionClass = 'question',
+        showClass = 'show';
+        
+        $OFP.addEventListener('click', function(event) {
+        
+        if (event.target.classList.contains('btn-details') || event.target.className === 'btn-back') {
+        var $cardContainer = event.target.closest('.card-container');
+        if ($cardContainer.classList.contains(flipClass)) {
+        $cardContainer.classList.remove(flipClass);
+        } else {
+        $cardContainer.classList.add(flipClass);
+        }
+        }
+        if (event.target.classList.contains(questionClass)) {
+        var $question = event.target;
+        var $answer = event.target.nextElementSibling;
+        if ($question.classList.contains(showClass)) {
+        $question.classList.remove(showClass);
+        $answer.classList.remove(showClass);
+        } else {
+        $question.classList.add(showClass);
+        $answer.classList.add(showClass);
+        }
+        }
+        })
+        // ie11 fix for cards
+        var isIE11 = !!window.MSInputMethodContext &amp;&amp; !!document.documentMode;
+        if (isIE11) {
+        $OFP.classList.add('ie11');
+        }
+        
+        });
+        &lt;/script&gt;</custom-attribute>
+      </custom-attributes>
+    </content>
+  </library>

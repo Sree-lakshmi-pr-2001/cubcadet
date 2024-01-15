@@ -1,0 +1,9 @@
+<isif condition="${pdict.contentSearch.folder.subFolders != null && !empty(pdict.contentSearch.folder.subFolders)}">
+    <div class="blog-category-subfolder container">
+        <div class="blog-category-subfolders-title h1">
+            ${Resource.msg('blog.pickacategory', 'blog', null)}
+        </div>
+        <isset name="subFolders" value="${pdict.contentSearch.folder.subFolders}" scope="pdict" />
+        <isinclude template="components/blogSubFolderCarousel" />
+    </div>
+</isif>

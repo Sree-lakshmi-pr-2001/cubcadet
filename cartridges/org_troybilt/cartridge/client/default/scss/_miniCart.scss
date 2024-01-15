@@ -1,0 +1,278 @@
+@import "variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "productCard";
+
+.minicart {
+    position: relative;
+
+    h6 {
+        margin-bottom: rem(15px);
+        text-transform: capitalize;
+    }
+
+    .cart {
+        padding: rem(13px) rem(20px) rem(21px);
+        background: $accent-3;
+        width: 450px; // increased for vertical scroll width
+        max-height: 541px;
+    }
+
+    .remove-line-item {
+        position: absolute;
+        right: 16px;
+        top: -5px;
+    }
+
+    .remove-btn {
+        @extend .remove-btn-sm;
+
+        float: right;
+        position: static;
+        width: 20px;
+        height: 20px;
+        margin-top: 0;
+        padding: 0;
+        border: none;
+        font-size: 1.625em;
+        background-color: $white;
+    }
+
+    .product-summary {
+        margin-right: -0.938em;
+        max-height: 21.875em;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        padding-right: 0.938em;
+
+        > .row:last-child {
+            .card {
+                border-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .card {
+            margin-top: 9px;
+
+            @include first() {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .card-body {
+        padding: rem(15px) rem(8px);
+        background: $white;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .icon-cart,
+        .icon-cart-white {
+            position: absolute;
+            left: 0;
+        }
+
+        .minicart-label {
+
+            @include media-breakpoint-up(lg) {
+                @include utility-nav-link;
+
+                padding-left: rem(22px);
+            }
+        }
+    }
+
+    .minicart-quantity {
+        color: $body-color;
+    }
+
+    .quantity {
+        width: 100%;
+        max-height: 40px;
+        margin-top: rem(5px);
+    }
+
+    .line-item-promo {
+        margin: 0;
+        color: $primary;
+        padding: 0;
+
+        .promo-name {
+            padding-top: rem(15px);
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    .popover {
+        top: 100%;
+        left: auto;
+        right: 0;
+        width: 440px;
+        max-width: none;
+        min-height: 6.25rem;
+        border-radius: 0;
+        display: none;
+        border-top: 0;
+
+        &::before {
+            left: auto;
+            right: 15px;
+        }
+
+        &::after {
+            left: auto;
+            right: 16px;
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .minicart-header {
+        position: relative;
+    }
+
+    .minicart-footer {
+        .btn {
+            width: 240px;
+            display: block;
+            margin: 19px auto 0;
+        }
+    }
+
+    .estimated-total {
+        padding: rem(22px) 0 rem(3px);
+        border-bottom: $border2;
+
+        > div {
+            @include first() {
+                padding-left: 0;
+            }
+
+            @include last() {
+                padding-right: 0;
+            }
+        }
+
+        .sub-total-label {
+            margin-bottom: 0;
+        }
+    }
+
+    .sub-total-label,
+    .sub-total {
+        @include minicart-sub-total();
+    }
+
+    .line-item-name {
+        width: 90%;
+        font-size: $font-size-body;
+
+        .extended-name {
+            font-weight: $font-weight-normal;
+            font-size: $font-size-xs;
+        }
+    }
+
+    .line-item-total-price {
+        text-align: right;
+        width: 50%;
+        padding-top: rem(12px);
+        padding-right: rem(22px); // account for col margin
+        padding-left: 0;
+
+        // Overwrite styles in pricing.scss
+        .pricing:not(.non-adjusted-price) {
+            float: none;
+        }
+
+        .strike-through:not(.non-adjusted-price) {
+            display: block;
+            margin-right: 0;
+            font-size: rem(16px);
+        }
+
+        .pricing > span {
+            position: relative;
+            left: 5px;
+        }
+    }
+
+    .product-line-item {
+        position: relative;
+
+        .product-image {
+            max-width: 125px;
+            width: auto;
+            height: auto;
+        }
+
+        .line-item-header {
+            width: 85%;
+        }
+
+        .bundled-line-item {
+            .line-item-name,
+            .item-attributes p {
+                font-size: $font-size-xs;
+            }
+
+            .product-line-item-results {
+                padding-left: 0;
+                max-width: 100%;
+                margin: rem(15px) 0 0;
+            }
+
+            .line-item-total-price {
+                padding-right: 0;
+            }
+
+            .bundle-line-item-details {
+                padding-right: rem(10px);
+
+                .item-attributes > p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .quantity-form {
+        min-width: 120px;
+    }
+
+    .line-item-quantity {
+        // no wrapping when vertical scroll appears
+        min-width: 140px;
+    }
+
+    .promo-label {
+        font-weight: $font-weight-bold;
+    }
+
+    .line-item-divider {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.minicart-bonus-product {
+    .line-item-quantity {
+        margin-top: rem(15px);
+
+        span {
+            font-weight: $font-weight-normal;
+        }
+    }
+}
+
+#removeProductModal {
+    .product-to-remove {
+        @include type-product-to-remove();
+
+        margin-top: rem(5px);
+    }
+}

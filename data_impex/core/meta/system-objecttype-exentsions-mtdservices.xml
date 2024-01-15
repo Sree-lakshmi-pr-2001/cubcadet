@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="mtdServicesClientID">
+                <display-name xml:lang="x-default">oAuth Client ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>CommerceCloud</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdServicesClientSecret">
+                <display-name xml:lang="x-default">oAuth Client Secret</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>xaHeNrBKRzxx9tls5MAAzyNgFfq7OcDaFpC6SEtNFXhYqJsSjiK56vq24LTeh9b4</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdServicesPassword">
+                <display-name xml:lang="x-default">oAuth Password</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>2#Aas$ebWW</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdServicesUsername">
+                <display-name xml:lang="x-default">oAuth Username</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>sfccservice</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="taxSystemName">
+                <display-name xml:lang="x-default">Tax Service System Name</display-name>
+                <description xml:lang="x-default">Tax Service System Name for Tax request</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>sfcc</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="useBackupTaxTable">
+                <display-name xml:lang="x-default">Use Backup Tax Table</display-name>
+                <description xml:lang="x-default">Use SFCC Tax table for fallback</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdAddressValidationEnabled">
+                <display-name xml:lang="x-default">Address Validation Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="enableManualsSearch">
+                <display-name xml:lang="x-default">Enable Manual Search</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdManualsBrandCodes">
+                <display-name xml:lang="x-default">Brand Codes for Manuals</display-name>
+                <description xml:lang="x-default">Scope the search to an implicit brand, or allow the customer to choose.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Bolens</display>
+                        <value>06</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Brute</display>
+                        <value>80</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Huskee</display>
+                        <value>11</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">McCulloch</display>
+                        <value>08</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MTD</display>
+                        <value>62</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MTD Gold</display>
+                        <value>47</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MTD Pro</display>
+                        <value>17</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Murray</display>
+                        <value>63</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Remington</display>
+                        <value>100</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Ryobi</display>
+                        <value>04</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Trimmer Plus</display>
+                        <value>28</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Troy-Bilt</display>
+                        <value>02</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">White Outdoor</display>
+                        <value>07</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Yard Machines</display>
+                        <value>05</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Yard-Man</display>
+                        <value>03</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="MTDServices">
+                <display-name xml:lang="x-default">MTD Services</display-name>
+                <attribute attribute-id="mtdServicesClientID"/>
+                <attribute attribute-id="mtdServicesClientSecret"/>
+                <attribute attribute-id="mtdServicesUsername"/>
+                <attribute attribute-id="mtdServicesPassword"/>
+                <attribute attribute-id="taxSystemName"/>
+                <attribute attribute-id="useBackupTaxTable"/>
+                <attribute attribute-id="mtdAddressValidationEnabled"/>
+                <attribute attribute-id="enableManualsSearch"/>
+                <attribute attribute-id="mtdManualsBrandCodes"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="mtdTaxResponse">
+                <display-name xml:lang="x-default">MTD Tax Response</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+    
+    <type-extension type-id="ShippingMethod">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="specialChargeCode">
+                <display-name xml:lang="x-default">Special Charge Code</display-name>
+                <description xml:lang="x-default">FRT or DFD</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="mixedCart">
+                <display-name xml:lang="x-default">Mixed cart</display-name>
+                <description xml:lang="x-default">LTL and non-LTL products</description>
+                <type>boolean</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="MTD">
+                <display-name xml:lang="x-default">MTD</display-name>
+                <attribute attribute-id="specialChargeCode"/>
+                <attribute attribute-id="mixedCart"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

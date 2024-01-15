@@ -1,0 +1,323 @@
+@import "../utilities/swatch";
+@import "productCommon";
+
+.quick-view-dialog {
+    .modal-footer {
+        padding: rem(15px) rem(48px) rem(24px);
+    }
+}
+
+.quick-view-dialog,
+.choose-bonus-product-dialog {
+    max-width: 56.25em;
+
+    .selectable-bonus-product-line-item {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+
+    .beenSelected {
+        background-color: $gray-400;
+    }
+
+    .modal-header {
+        background-color: $trans;
+        border-bottom: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        .full-pdp-link {
+            color: $primary;
+            position: absolute;
+            top: 25px;
+        }
+
+        .close {
+            font-size: $quickview-font-size5;
+            line-height: rem(24px);
+        }
+    }
+
+    .modal-title {
+        font-size: $font-size-base;
+    }
+
+    .primary-images {
+        margin-bottom: rem(15px);
+
+        @include media-breakpoint-up(sm) {
+            margin: 0;
+        }
+    }
+
+    .product-name {
+        font-size: $quickview-font-size2;
+    }
+
+    .product-number {
+        font-weight: $font-weight-bold;
+        margin: rem(10px) 0 rem(20px);
+    }
+
+    .product-description {
+        .short-description {
+            font-weight: $font-weight-bold;
+            margin-bottom: rem(5px);
+        }
+    }
+
+    .swatch-circle {
+        // $white will be replaced by color image background via Javascript
+        @include swatch(2.5em, $white);
+    }
+
+    a[disabled] .swatch-circle {
+        cursor: not-allowed;
+
+        &.color-value.selected::after {
+            background-color: $gray-100;
+        }
+    }
+
+    .availablity-container {
+        text-align: right;
+    }
+
+    .availablity-container,
+    .size-chart {
+        margin-top: 0.938em;
+    }
+
+    .modal-content {
+        border: $border6;
+    }
+
+    .modal-body {
+        max-height: 55vh;
+        overflow-y: auto;
+
+        @include media-breakpoint-down(xs) {
+            padding: rem(10px);
+        }
+
+        @include media-breakpoint-up(md) {
+            max-height: 28.125em; /* 450/16 */
+        }
+
+        .attributes {
+            .col-12 {
+                padding: 0;
+            }
+        }
+    }
+
+    button.close {
+        font-size: $font-size-lg;
+        text-shadow: none;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            top: 25px;
+            background-image: $close-dark-svg;
+        }
+    }
+
+    .modal-footer {
+        background-color: $gray-100;
+        border: none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+        .global-availability {
+            margin: 0;
+
+            ~ .col {
+                margin: 0;
+
+                .row > div {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .availability {
+            .row .col-12:first-child {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+
+        .quantity-select.custom-select.form-control {
+            height: 40px;
+        }
+
+        .prices {
+            padding-top: 0;
+
+            .price {
+                font-size: $h5-font-size;
+
+                @include media-breakpoint-up(md) {
+                    font-size: rem(22px);
+                }
+            }
+        }
+
+        .add-to-cart-global,
+        .update-cart-product-global {
+            width: calc(100% - #{rem(15px)});
+        }
+
+        .cart-and-ipay {
+            padding-bottom: 0;
+            text-align: right;
+
+            > div {
+                padding: 0;
+            }
+        }
+    }
+
+    .prices .sales {
+        font-size: $h5-font-size;
+
+        @include media-breakpoint-up(md) {
+            font-size: rem(22px);
+        }
+    }
+
+    .promotions {
+        margin: 0;
+        text-align: left;
+        color: $danger;
+        font-weight: $font-weight-bold;
+
+        .callout {
+            margin-bottom: rem(10px);
+        }
+    }
+
+    .bonus-summary {
+        padding: rem(5px);
+        font-weight: $font-weight-bold;
+
+        @include media-breakpoint-down(sm) {
+            font-size: $quickview-font-size1;
+        }
+
+        .bonus-product-name {
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+        }
+    }
+
+    .pre-cart-products {
+        margin-right: 0.125em;
+    }
+
+    .product-set-detail,
+    .product-set {
+        padding: 0;
+
+        .set-items {
+            @include media-breakpoint-down(sm) {
+                margin: 0 rem(-15px);
+            }
+
+            > hr {
+                @include media-breakpoint-down(sm) {
+                    margin-left: rem(15px);
+                    margin-right: rem(15px);
+                }
+            }
+
+            + hr {
+                @include media-breakpoint-down(sm) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        h1.product-name {
+            margin-bottom: 0;
+        }
+
+        .product-name {
+            > a {
+                color: $body-color;
+                font-size: $h3-font-size;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .description-and-detail {
+            @include media-breakpoint-down(sm) {
+                margin-left: rem(15px);
+                margin-right: rem(15px);
+            }
+        }
+
+        .atc-product {
+            padding-bottom: 0;
+        }
+
+        .set-add-to-cart-actions {
+            @include media-breakpoint-only(xs) {
+                .price {
+                    text-align: left;
+                }
+
+                .cart-and-ipay {
+                    > div {
+                        width: 100%;
+                        max-width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .bundle-footer {
+            @include media-breakpoint-up(sm) {
+                padding: 0;
+            }
+
+            .prices-add-to-cart-actions {
+                @include media-breakpoint-up(sm) {
+                    padding: 0;
+                }
+
+                > .price {
+                    margin: rem(10px) 0;
+
+                    @include media-breakpoint-up(sm) {
+                        margin: 0 0 rem(15px);
+                    }
+                }
+
+                .cart-and-ipay {
+                    > div {
+                        margin: 0 auto;
+                    }
+                }
+
+                .add-to-cart-global {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

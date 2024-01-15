@@ -1,0 +1,105 @@
+<form action="${URLUtils.url('Account-SaveProfile')}" class="edit-profile-form" method="POST" <isprint value="${pdict.profileForm.attributes}" encoding="off" />>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group
+                <isif condition="${pdict.profileForm.customer.firstname.mandatory === true}">required</isif>">
+                <label class="form-control-label" for="firstName">
+                    <isprint value="${pdict.profileForm.customer.firstname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="firstName"
+                    <isprint value="${pdict.profileForm.customer.firstname.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group
+                <isif condition="${pdict.profileForm.customer.lastname.mandatory === true}">required</isif>">
+                <label class="form-control-label" for="lastName">
+                    <isprint value="${pdict.profileForm.customer.lastname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="lastName"
+                    <isprint value="${pdict.profileForm.customer.lastname.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group
+                <isif condition="${pdict.profileForm.customer.email.mandatory === true}">required</isif>">
+                <label class="form-control-label" for="email">
+                    <isprint value="${pdict.profileForm.customer.email.label}" encoding="htmlcontent" />
+                </label>
+                <input type="email" class="form-control" id="email"
+                    <isprint value="${pdict.profileForm.customer.email.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group
+                <isif condition="${pdict.profileForm.customer.emailconfirm.mandatory === true}">required</isif>">
+                <label class="form-control-label" for="confirmEmail">
+                    <isprint value="${pdict.profileForm.customer.emailconfirm.label}" encoding="htmlcontent" />
+                </label>
+                <input type="email" class="form-control" id="confirmEmail" <isprint value="${pdict.profileForm.customer.emailconfirm.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group profile-phone-form-group
+                <isif condition="${pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
+                <label class="form-control-label" for="phone">
+                    <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
+                </label>
+                <input type="tel" class="form-control" id="phone"
+                    <isprint value="${pdict.profileForm.customer.phone.attributes}" encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <div class="col-12 form-group">
+            <isif condition="${pdict.ctPreference}">
+                <span class="${pdict.tracking_consent == null ? '' : 'consented' } tracking-consent"
+                    data-url="${URLUtils.url('ConsentTracking-GetContent', 'cid', 'tracking_hint')}"
+                    data-reject="${URLUtils.url('ConsentTracking-SetSession', 'consent', 'false')}"
+                    data-accept="${URLUtils.url('ConsentTracking-SetSession', 'consent', 'true')}"
+                    data-acceptText="${Resource.msg('button.consentTracking.yes', 'common', null)}"
+                    data-rejectText="${Resource.msg('button.consentTracking.no', 'common', null)}"
+                    data-heading="${Resource.msg('heading.consentTracking.track.consent', 'common', null)}"
+                >
+                    ${Resource.msg('link.tracking.consent','account',null)}
+                </span>
+            </isif>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="profile-password-form-group">
+            <div class="col-md-6">
+                <div class="form-group
+                    <isif condition="${pdict.profileForm.login.password.mandatory === true}">required</isif>">
+                    <label class="form-control-label" for="password">
+                        <isprint value="${pdict.profileForm.login.password.label}" encoding="htmlcontent" />
+                    </label>
+                    <input type="password" class="form-control" id="password" aria-describeby="passwordHelp" <isprint value="${pdict.profileForm.login.password.attributes}" encoding="off" />>
+                    <div class="invalid-feedback"></div>
+                    <span id="passwordHelp" class="form-text">${Resource.msg('account.profile.passwordconfirm.helper', 'account', null)}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+    <div class="row">
+        <div class="col-md-12 card-form-buttons">
+            <button type="submit" name="save" class="btn btn-save btn-block btn-secondary">${Resource.msg('button.saveupdates','account',null)}</button>
+            <a href="${URLUtils.url('Account-Show')}" class="btn btn-block btn-outline-secondary">${Resource.msg('button.cancel','account',null)}</a>
+        </div>
+    </div>
+</form>

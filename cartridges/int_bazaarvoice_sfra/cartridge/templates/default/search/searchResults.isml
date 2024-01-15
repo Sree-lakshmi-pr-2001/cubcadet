@@ -1,0 +1,16 @@
+<!--- TEMPLATENAME: searchResults.isml --->
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+        assets.addJs('/lib/magic360/magic360.js');
+        assets.addCss('/lib/magic360/magic360.css');
+
+        if(pdict.bvScout) {
+        	assets.addJs(pdict.bvScout);
+        }
+    </isscript>
+    <isinclude template="search/searchResultsNoDecorator" />
+    <isinclude template="product/compareBar" />
+</isdecorate>

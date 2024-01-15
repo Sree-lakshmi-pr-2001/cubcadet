@@ -1,0 +1,65 @@
+
+<div class="category-subfolder-tile-list row">
+    <div class="tile-list-container">
+        <isloop items="${pdict.subFolders}" var="folder">
+            <isif condition="${folder != null && folder.online}">
+                <isset name="folderName" value="${folder.displayName}" scope="page"/>
+                <isset name="categoryButtonText" value="${folder.displayName}" scope="page"/>
+                <isset name="folderDescription" value="${folder.description}" scope="page"/>
+
+                <isset name="folderURL" value="${URLUtils.url('Search-ShowContent','fdid', folder.ID)}" scope="page"/>
+
+                <div class="blog-tile">
+                    <iscomment> Category name </iscomment>
+                    <isif condition="${folderName}">
+                        <div class="content-tile-title d-none d-lg-block">
+                            <isprint value="${folderName}"/>
+                        </div>
+                        <a class="content-tile-link d-lg-none link-chevron" href="${folderURL}">
+                            <isprint value="${folderName}"/>
+                        </a>
+                    </isif>
+
+                    <iscomment> Image </iscomment>
+                    <isset name="isImage" value="${folder.custom.image != null && !empty(folder.custom.image)}" scope="page"/>
+
+                    <isif condition="${isImage}">
+                        <div class="content-tile-image d-none d-lg-block">
+                            <a class="content-tile-image-link" href="${folderURL}">
+                                <isscript>
+                                    var assetImage = folder.custom.image;
+                                    var mobileURL = assetImage.getImageURL({scaleWidth: 232, scaleHeight: 121, scaleMode: 'cut'});
+                                    var tabletURL = assetImage.getImageURL({scaleWidth: 232, scaleHeight: 121, scaleMode: 'cut'});
+                                    var desktopURL = assetImage.getImageURL({scaleWidth: 232, scaleHeight: 121, scaleMode: 'cut'});
+                                </isscript>
+                                <picture>
+                                    <source alt="${folder.displayName}" media="(max-width: 575px)" srcset="${mobileURL}" title="${folder.displayName}">
+                                    <source alt="${folder.displayName}" media="(min-width: 576px) and (max-width: 991px)" srcset="${tabletURL}" title="${folder.displayName}">
+                                    <source alt="${folder.displayName}" media="(min-width: 992px)" srcset="${desktopURL}" title="${folder.displayName}">
+                                    <img class="img-fluid" src="null" srcset="${mobileURL}" alt="${folder.displayName}" title="${folder.displayName}" />
+                                </picture>
+                            </a>
+                        </div>
+                    </isif>
+
+                    <iscomment> Category description </iscomment>
+                    <isif condition="${folderDescription}">
+                        <div class="content-tile-description d-none d-lg-block">
+                            <isprint value="${folderDescription}"/>
+                        </div>
+                    </isif>
+
+                    <iscomment> Category </iscomment>
+                    <isif condition="${categoryButtonText}">
+                        <div class="content-tile-category body-s font-semibold d-none d-lg-block">
+                            <a class="content-tile-category-link btn btn-secondary" href="${URLUtils.url('Search-ShowContent', 'fdid', folder.ID)}">
+                                <isprint value="${Resource.msgf('blog.subfolder.tile.buttontext', 'blog', null, categoryButtonText)}"/>
+                            </a>
+                        </div>
+                    </isif>
+                </div>
+            </isif>
+        </isloop>
+    </div>
+</div>
+<hr class="separator"/>

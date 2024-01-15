@@ -1,0 +1,66 @@
+@import "variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "../utilities/typeUtils";
+
+.login-oauth {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        display: inline-block;
+    }
+
+    a {
+        @include type-oauth-links();
+
+        &::before {
+            float: left;
+            margin-right: 7px;
+        }
+
+        &.oauth-facebook::before {
+            content: $svg-facebook-filled;
+
+            @include media-breakpoint-up(md) {
+                margin-left: 20px;
+            }
+        }
+
+        &.oauth-google {
+            border-radius: 5px;
+            color: #737373;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding-right: 15px;
+            font-family: 'Roboto';
+            font-size: 14px;
+            text-transform: none;
+
+            &:focus,
+            &:hover {
+                box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
+            }
+
+            &:active {
+                background-color: #e5e5e5;
+                box-shadow: none;
+                transition-duration: 10ms;
+            }
+
+            &::before {
+                width: 46px;
+                height: 46px;
+                content: $svg-google-filled;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        justify-content: flex-start;
+    }
+}

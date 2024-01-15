@@ -1,0 +1,32 @@
+<!--- applicable credit cards--->
+<div class="tab-pane <isif condition="${currentPaymentMethod === paymentOption.ID}">active</isif> credit-card-content" id="credit-card-content" role="tabpanel" aria-labelledby="credit-card-content">
+    <!--- payment method is credit card --->
+
+    <!--- register/authenticated user --->
+    <isif condition="${pdict.customer.registeredUser}">
+        <div class="user-payment-instruments container ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? '' : 'checkout-hidden'}">
+            <!--- Stored user payments --->
+            <div class="stored-payments">
+                <isinclude template="checkout/billing/storedPaymentInstruments" />
+            </div>
+
+            <!--- Add new credit card button --->
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-block add-payment btn-outline-secondary" type="button">${Resource.msg('button.add.payment', 'checkout', null)}</button>
+                </div>
+            </div>
+        </div>
+    </isif>
+
+    <fieldset class="credit-card-form ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? 'checkout-hidden' : ''}">
+        <isinclude template="checkout/billing/creditCardForm" />
+        <isif condition="${pdict.customer.registeredUser}">
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-block cancel-new-payment btn-outline-secondary ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? '' : 'checkout-hidden'}" type="button">${Resource.msg('button.back.to.stored.payments', 'checkout', null)}</button>
+                </div>
+            </div>
+        </isif>
+    </fieldset>
+</div>

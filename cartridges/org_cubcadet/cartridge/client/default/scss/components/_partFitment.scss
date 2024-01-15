@@ -1,0 +1,135 @@
+.part-fitment-wrapper {
+    background-color: $gallery;
+    position: relative;
+
+    &.will-fit {
+        .part-fitment-input {
+            font-weight: 700;
+        }
+    }
+
+    &.plp {
+        padding: 15px 30px;
+    }
+
+    &.pdp {
+        padding: 10px;
+
+        .need-validation {
+            padding-left: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .need-validation {
+                padding-left: 0;
+            }
+
+            max-width: 68%;
+            padding-left: 35px;
+            margin-left: 45px;
+            flex-grow: 1;
+        }
+    }
+
+    &.not-fit {
+        border: 2px solid red;
+
+        .part-fitment-icon {
+            background-image: $icon-error-x;
+            filter: none;
+            opacity: 1;
+        }
+
+        .has-number {
+            background-color: transparent;
+            border: none;
+        }
+
+        .disclaimer {
+            font-size: 0.76rem;
+        }
+    }
+}
+
+.part-fitment-input {
+    flex: 1 0 55%;
+
+    &[readonly] {
+        background-color: $white;
+    }
+}
+
+.stock-availability-wrapper {
+    font-weight: 700;
+    flex: 0 0 34%;
+    font-size: rem(18px);
+
+    @include media-breakpoint-up(lg) {
+        border-right: 2px solid $gallery;
+    }
+
+    .stock-icon {
+        background-image: $svg-check;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+}
+
+.has-number {
+    font-weight: 700;
+}
+
+.does-not-fit-title {
+    color: red;
+}
+
+.part-fitment-icon {
+    background-image: $svg-radio-selected-cubcadet;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+
+    &.pdp {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-30%, -50%);
+        height: 50px;
+        width: 50px;
+        filter: grayscale(1);
+        opacity: 0.8;
+        z-index: 10;
+
+        @include media-breakpoint-up(lg) {
+            transform: translate(-50%, -50%);
+        }
+
+        &.verified {
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}

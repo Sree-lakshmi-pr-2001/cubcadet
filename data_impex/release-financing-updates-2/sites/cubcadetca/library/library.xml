@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+
+    <content content-id="td-estimated-payment-billing-apr">
+        <display-name xml:lang="x-default">Cub Cadet TD Estimated Payment Billing APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Buy Now, Pay Later!&lt;/h2&gt;&#13;&lt;h3&gt;Your order is eligible for Cub Cadet Financing.&lt;/h3&gt;&#13;&lt;p class=&quot;finance-estimate-disclaimer&quot;&gt;&#13;&lt;span&gt;Subject to credit approval. Restrictions apply.&lt;/span&gt;&#13;&lt;/p&gt;&#13;&lt;p&gt;&lt;span class=&quot;td-links&quot;&gt; &lt;a class=&quot;btn btn-secondary td-apply-finance&quot; href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-GetURL')$&quot;&gt;Apply Now&lt;/a&gt;&lt;a class=&quot;td-payment-details ml-3&quot; data-title=&quot;Details &amp;amp; Disclosures&quot; data-url=&quot;$url('FinancingApplication-Disclosure')$&quot; href=&quot;javascript:void(0)&quot;&gt;See Details&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+</library>

@@ -1,0 +1,5 @@
+<isinclude template="components/modules" />
+
+<div class="pdp-modal-content">
+    <iscontentasset aid="pdp-modals-content" />
+</div>

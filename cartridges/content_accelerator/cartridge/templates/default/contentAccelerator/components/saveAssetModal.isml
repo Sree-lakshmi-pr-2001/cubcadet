@@ -1,0 +1,94 @@
+<div class="modal fade save-asset-modal" id="save-asset-modal" tabindex="-1" role="dialog" aria-labelledby="save-asset-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="save-asset-label">${Resource.msg('dashboard.modal.saveheading', 'content_accelerator', null)}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form class="modal-save-asset-form mb-4" data-action="${URLUtils.https('ContentAccelerator-SaveContentAsset')}">
+                    <iscomment> hiding tabs; leaving option for Save As later </iscomment>
+                    <ul class="nav nav-tabs d-none" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="save-asset-tab" data-toggle="tab" href="#save-asset-pane" role="tab" aria-controls="save-asset-pane" aria-selected="false">
+                                ${Resource.msg('dashboard.button.save', 'content_accelerator', null)}
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="save-asset-pane" role="tabpanel" aria-labelledby="save-asset-tab">
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.assetid', 'content_accelerator', null)}</label>
+
+                                <iscomment>
+                                    TODO: implement preset templates attr strategy to prevent overwriting templates
+                                    (if we use assets as template permanently (ie: pdict.assetID != 'heroBanner'))
+                                    and ID format validation
+                                </iscomment>
+                                <input required
+                                    type="text"
+                                    class="form-control modal-asset-id"
+                                    placeholder="${Resource.msg('dashboard.modal.placeholder.enternewid.required', 'content_accelerator', null)}"
+                                    <isif condition="${pdict.assetID && pdict.assetID != 'heroBanner'}">
+                                        value="${pdict.assetID}"
+                                    </isif>
+                                    />
+                                <div class="small caption">
+                                    ${Resource.msg('dashboard.modal.id.format.caption', 'content_accelerator', null)}
+                                </div>
+                                <div class="invalid-feedback">
+                                    ${Resource.msg('dashboard.modal.invalidcopyid', 'content_accelerator', null)}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.assetname', 'content_accelerator', null)}</label>
+                                <input type="text" class="form-control modal-asset-save-name"
+                                placeholder="${Resource.msg('dashboard.modal.placeholder.entername', 'content_accelerator', null)}"
+                                <isif condition="${pdict.assetName && pdict.assetID != 'heroBanner'}">
+                                    value="${pdict.assetName}"
+                                </isif>
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.assetfolder', 'content_accelerator', null)}</label>
+                                <select class="form-control modal-asset-save-folder">
+                                    <option value="">${Resource.msg('dashboard.modal.placeholder.enterfolder', 'content_accelerator', null)}</option>
+                                    <isloop items="${pdict.folderList}" var="folder">
+                                        <option value="${folder.ID}" <isif condition="${pdict.assetFolder && pdict.assetFolder.ID == folder.ID}"> selected </isif> > ${folder.ID}</option>
+                                    </isloop>
+                                </select>
+                                <div class="small caption">
+                                    ${Resource.msg('dashboard.modal.folder.format.caption', 'content_accelerator', null)}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="mr-2">${Resource.msg('dashboard.label.locale', 'content_accelerator', null)}</label>
+                                <select class="form-control locale-selection" data-locales="${pdict.locales}">
+                                    <isprint value="${pdict.localeOptions}" encoding="off" />
+                                </select>
+                            </div>
+
+                            <a class="btn btn-info save-asset-button" href="${'#'}" data-save-href="${URLUtils.https('ContentAccelerator-SaveContentAsset', 'locale', pdict.locale)}">
+                                ${Resource.msg('dashboard.button.save', 'content_accelerator', null)}
+                            </a>
+
+                        </div>
+                    </div>
+                </form>
+
+                <div class="content-asset-tree">
+                    <isprint value="${pdict.assetBrowser}" encoding="off" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="action-messages"></div>

@@ -1,0 +1,19 @@
+@mixin is-valid-custom() {
+    padding-right: rem(40px);
+    background-repeat: no-repeat;
+    background-position: center right rem(10px);
+    background-size: rem(20px);
+    background-image: $svg-icon-check-mark-grey-path;
+}
+
+@mixin number-input-remove-arrows() {
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    -moz-appearance: textfield;
+}

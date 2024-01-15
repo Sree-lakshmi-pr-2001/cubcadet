@@ -1,0 +1,107 @@
+.product-safety {
+    .btn {
+        background-color: $button-green;
+        border-color: $button-green;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .btn.btn-primary:active {
+        background-color: $button-green;
+        border-color: $button-green;
+    }
+
+    .content {
+        &.group {
+            .image {
+                height: 450px;
+                width: 100%;
+                background-position: top center;
+                background-size: cover;
+            }
+        }
+
+        &.one {
+            width: 80%;
+
+            .col-12 {
+                padding-top: 50px;
+            }
+
+            .safety-msg {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .safety-links {
+                padding-top: 30px;
+                padding-bottom: 50px;
+
+                .btn {
+                    width: 223px;
+                    padding: 10px;
+                    margin: 10px;
+                }
+            }
+        }
+
+        &.two {
+            .image {
+                height: 225px;
+                margin-bottom: 25px;
+                box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .img-text {
+                    span {
+                        font-weight: 300;
+                    }
+
+                    font-size: 35px;
+                    color: white;
+                    padding-bottom: 30px;
+                }
+
+                .btn {
+                    width: 177px;
+                    margin: auto;
+                }
+            }
+
+            .image:hover {
+                box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0);
+            }
+
+            .general-safety {
+                h1 {
+                    font-size: 25px;
+                    font-weight: normal;
+                    line-height: 1.2;
+                }
+
+                ul {
+                    padding-top: 50px;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 1.88;
+
+                    li {
+                        padding-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .content {
+            &.two {
+                .cards {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+

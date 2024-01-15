@@ -1,0 +1,75 @@
+---
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  labels:
+    jenkins: "slave"
+    jenkins/label: "mtd-sfra-builder"
+  name: "mtd-sfra-builder"
+spec:
+  volumes:
+  - name: "workspace-volume"
+    emptyDir: {}
+  - name: "docker-sock"
+    hostPath:
+      path: "/var/run/docker.sock"
+  - name: "tmp"
+    emptyDir: {}
+  - name: "chrome"
+    emptyDir: {}
+  imagePullSecrets:
+    # !! This is a kube secret, not a Jenkins secret !!
+    - name: "nexus-mtd"
+  containers:
+  - name: "mtd-sfra-builder"
+    image: "550541866875.dkr.ecr.us-west-1.amazonaws.com/node-8-builder:latest"
+    imagePullPolicy: "Always"
+    args:
+    - "cat"
+    command:
+    - "/bin/sh"
+    - "-c"
+    securityContext:
+      privileged: false
+    tty: true
+    volumeMounts:
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
+    workingDir: "/home/jenkins/agent"
+  - name: mtd-sonar
+    image: 550541866875.dkr.ecr.us-west-1.amazonaws.com/dcx-sonarscanner:latest
+    imagePullPolicy: "Always"
+    args:
+    - "cat"
+    command:
+    - "/bin/sh"
+    - "-c"
+    securityContext:
+      privileged: false
+    tty: true
+    volumeMounts:
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
+    workingDir: "/home/jenkins/agent"
+  - name: mtd-docker
+    image: docker:latest
+    command:
+    - cat
+    securityContext:
+      privileged: false
+    tty: true
+    volumeMounts:
+    - mountPath: "/var/run/docker.sock"
+      name: "docker-sock"  
+      readOnly: false
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
+    workingDir: "/home/jenkins/agent"
+  hostNetwork: false
+  nodeSelector:
+    beta.kubernetes.io/os: "linux"
+  restartPolicy: "Never"
+  securityContext: {}

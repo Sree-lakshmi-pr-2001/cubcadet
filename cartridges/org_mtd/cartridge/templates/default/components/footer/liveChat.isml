@@ -1,0 +1,5 @@
+<!--- TEMPLATENAME: liveChat.isml --->
+<isif condition="${dw.system.Site.current.getCustomPreferenceValue('mtdLiveChatEnabled')}">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <iscontentasset aid="live-agent-code" />
+</isif>

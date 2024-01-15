@@ -1,0 +1,12 @@
+{
+    "hooks": [
+        {
+            "name": "dw.system.request.onSession",
+            "script": "./cartridge/scripts/hooks/onSession.js"
+        },
+        {
+            "name": "dw.system.request.onRequest",
+            "script": "./cartridge/scripts/hooks/onRequest.js"
+        }
+    ]
+}

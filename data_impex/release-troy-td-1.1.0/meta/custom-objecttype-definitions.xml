@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <custom-type type-id="TDFinancePlans">
+        <display-name xml:lang="x-default">TDFinancePlans</display-name>
+        <description xml:lang="x-default">Available TD Finance Plans for the Site</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="planID">
+            <display-name xml:lang="x-default">Plan ID</display-name>
+            <description xml:lang="x-default">Based on planID provided by TD Bank</description>
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="APR">
+                <display-name xml:lang="x-default">Annual Percentage Rate</display-name>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="displayCart">
+                <display-name xml:lang="x-default">Display on Cart</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="displayPDP">
+                <display-name xml:lang="x-default">Display on PDP</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="eligibleProducts">
+                <display-name xml:lang="x-default">Eligible Products</display-name>
+                <description xml:lang="x-default">List of Master product models that the plan is eligible.</description>
+                <type>set-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="enabled">
+                <display-name xml:lang="x-default">Plan Enabled?</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="isPlanProductSpecific">
+                <display-name xml:lang="x-default">Is Plan Product Specific</display-name>
+                <description xml:lang="x-default">Flag to identify that plan applies all products or Specific products.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="minimumSpend">
+                <display-name xml:lang="x-default">Minimum Required Spend</display-name>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="planName">
+                <display-name xml:lang="x-default">Plan Name</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="processFee">
+                <display-name xml:lang="x-default">Process Fee</display-name>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="repaymentFactor">
+                <display-name xml:lang="x-default">Repayment Factor</display-name>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">24-month</display>
+                        <value>.04167</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">36-month</display>
+                        <value>.02778</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">48-month</display>
+                        <value>.02083</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">54-month</display>
+                        <value>.01852</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">60-month</display>
+                        <value>.01667</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="superscriptNumber">
+                <display-name xml:lang="x-default">Superscript Number</display-name>
+                <type>int</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="termLength">
+                <display-name xml:lang="x-default">Length of Term in Months</display-name>
+                <type>int</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="General">
+                <display-name xml:lang="x-default">General</display-name>
+                <attribute attribute-id="planID"/>
+                <attribute attribute-id="planName"/>
+                <attribute attribute-id="enabled"/>
+                <attribute attribute-id="minimumSpend"/>
+                <attribute attribute-id="APR"/>
+                <attribute attribute-id="termLength"/>
+                <attribute attribute-id="processFee"/>
+                <attribute attribute-id="repaymentFactor"/>
+                <attribute attribute-id="displayPDP"/>
+                <attribute attribute-id="lastModified" system="true"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="displayCart"/>
+                <attribute attribute-id="superscriptNumber"/>
+                <attribute attribute-id="eligibleProducts"/>
+                <attribute attribute-id="isPlanProductSpecific"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+</metadata>

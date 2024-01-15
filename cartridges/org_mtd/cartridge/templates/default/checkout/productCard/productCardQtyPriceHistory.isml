@@ -1,0 +1,39 @@
+<div class="product-line-item-results row">
+    <div class="col-12 line-item-price">
+        <div class="row no-gutters">
+            <p class="line-item-price-info  col-3">${Resource.msg('label.price', 'cart', null)}:</p>
+            <div class="col-7">
+                <div class="price">
+                    <span>
+                        <span class="sales">
+                            <span class="value" content="${lineItem.basePrice}">${lineItem.sellingPrice}</span>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="line-item-quantity col-12">
+        <p class="line-item-pricing-info row no-gutters">
+            <span class="line-item-total-text qty-card-quantity-label col-3 ">
+                ${Resource.msg('label.qty', 'cart', null)}:
+            </span>
+            <span class="pricing qty-card-quantity-count col-7">${lineItem.extendedWarranty.quantity}</span>
+        </p>
+    </div>
+
+    <div class="line-item-total-price justify-content-end col-12">
+        <div class="row no-gutters">
+            <p class="line-item-pricing-info col-3 ">
+                <span class="line-item-total-text line-item-total-price-label ">
+                    ${Resource.msg('label.total.price', 'cart', null)}:
+                </span>
+            </p>
+            <div class="item-total price col-7">
+                <div class="pricing line-item-total-price-amount item-total">${lineItem.extendedPrice}</div>
+            </div>
+        </div> <!-- / .row -->
+    </div>
+</div>

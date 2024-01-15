@@ -1,0 +1,298 @@
+@import "~org/utilities/ellipsis";
+@import "./utilities/simple-hero";
+
+.modal-background {
+    background-color: $black;
+    display: none;
+    height: 100%;
+    position: fixed;
+    opacity: 0.5;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+input[placeholder] {
+    text-overflow: ellipsis;
+}
+
+.hide-order-discount {
+    display: none;
+}
+
+.hide-shipping-discount {
+    display: none;
+}
+
+.order-discount {
+    color: $brand-second;
+}
+
+.shipping-discount {
+    color: $brand-second;
+}
+
+.error-messaging {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: z("error-messaging");
+}
+
+.error-hero {
+    @include simple-hero;
+}
+
+.error-message {
+    margin-top: rem(50px);
+    margin-bottom: rem(50px);
+}
+
+.error.continue-shopping {
+    margin-bottom: 6.25em;
+}
+
+.print-link {
+    text-decoration: none;
+}
+
+.remove-btn-sm {
+    @extend .remove-btn;
+
+    &::after {
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+    }
+}
+
+.ellipsis {
+    @include ellipsis(18px, 38px, $accent-3);
+}
+
+// seperated webkit ellipsis due to Slick Slider causing the ellipsis to disappear on tiles on webkit browsers
+
+.webkit-ellipsis {
+    @include webkit-ellipsis();
+}
+
+.hidden {
+    display: none;
+}
+
+.disablePhoneLink {
+    cursor: default;
+    pointer-events: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: inherit;
+    }
+
+    &.footer-link {
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+        }
+    }
+}
+
+//----------------------------
+// No Container Padding Helper Classes
+// Used if no row classes is used  - otherwise use .no-gutters
+//----------------------------
+
+.no-container-gutters {
+    padding-left: 0;
+    padding-right: 0;
+
+    &-lg-down {
+        @include media-breakpoint-down(lg) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-md-down {
+        @include media-breakpoint-down(md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-sm-down {
+        @include media-breakpoint-down(sm) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-xs-down {
+        @include media-breakpoint-down(xs) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+//----------------------------
+// Underline Helper Classes
+//----------------------------
+
+.underline-left-primary {
+    @include underline($primary, left);
+}
+
+.underline-right-primary {
+    @include underline($primary, right);
+}
+
+.underline-center-primary {
+    @include underline($primary, center);
+}
+
+.underline-left-secondary {
+    @include underline($secondary, left);
+}
+
+.underline-right-secondary {
+    @include underline($secondary, right);
+}
+
+.underline-center-secondary {
+    @include underline($secondary, center);
+}
+
+.underline-left-dark {
+    @include underline($dark, left);
+}
+
+.underline-right-dark {
+    @include underline($dark, right);
+}
+
+.underline-center-dark {
+    @include underline($dark, center);
+}
+
+.underline-left-light {
+    @include underline($light, left);
+}
+
+.underline-right-light {
+    @include underline($light, right);
+}
+
+.underline-center-light {
+    @include underline($light, center);
+}
+
+.underline-left-accent-1 {
+    @include underline($accent-1, left);
+}
+
+.underline-right-accent-1 {
+    @include underline($accent-1, right);
+}
+
+.underline-center-accent-1 {
+    @include underline($accent-1, center);
+}
+
+.underline-left-accent-2 {
+    @include underline($accent-2, left);
+}
+
+.underline-right-accent-2 {
+    @include underline($accent-2, right);
+}
+
+.underline-center-accent-2 {
+    @include underline($accent-2, center);
+}
+
+.underline-left-accent-3 {
+    @include underline($accent-3, left);
+}
+
+.underline-right-accent-3 {
+    @include underline($accent-3, right);
+}
+
+.underline-center-accent-3 {
+    @include underline($accent-3, center);
+}
+
+.underline-left-accent-4 {
+    @include underline($accent-4, left);
+}
+
+.underline-right-accent-4 {
+    @include underline($accent-4, right);
+}
+
+.underline-center-accent-4 {
+    @include underline($accent-4, center);
+}
+
+.underline-left-accent-5 {
+    @include underline($accent-5, left);
+}
+
+.underline-right-accent-5 {
+    @include underline($accent-5, right);
+}
+
+.underline-center-accent-5 {
+    @include underline($accent-5, center);
+}
+
+.underline-left-success {
+    @include underline($success, left);
+}
+
+.underline-right-success {
+    @include underline($success, right);
+}
+
+.underline-center-success {
+    @include underline($success, center);
+}
+
+.underline-left-info {
+    @include underline($info, left);
+}
+
+.underline-right-info {
+    @include underline($info, right);
+}
+
+.underline-center-info {
+    @include underline($info, center);
+}
+
+.underline-left-warning {
+    @include underline($warning, left);
+}
+
+.underline-right-warning {
+    @include underline($warning, right);
+}
+
+.underline-center-warning {
+    @include underline($warning, center);
+}
+
+.underline-left-danger {
+    @include underline($danger, left);
+}
+
+.underline-right-danger {
+    @include underline($danger, right);
+}
+
+.underline-center-danger {
+    @include underline($danger, center);
+}

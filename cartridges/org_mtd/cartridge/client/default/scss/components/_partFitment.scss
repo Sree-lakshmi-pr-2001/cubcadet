@@ -1,0 +1,184 @@
+.part-fitment-wrapper {
+    background-color: transparent;
+    position: relative;
+
+    .part-fitment-title {
+        font-size: 0.9375rem;
+        font-weight: 700;
+        color: #1e1e1e;
+        position: relative;
+        padding: 0.9375rem 0;
+        background-color: transparent;
+        border-top: 1px solid #d1d3d4;
+        border-bottom: 1px solid #d1d3d4;
+        line-height: normal;
+        width: 100%;
+
+        h6 {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    &.plp {
+        padding: 15px 30px;
+    }
+
+    &.pdp {
+        background-color: #efefef;
+        padding: 10px;
+        @include media-breakpoint-up(md) {
+            max-width: 300px;
+            padding-left: 35px;
+            margin-left: 45px;
+            flex-grow: 1;
+        }
+
+        &.not-fit {
+            border: 2px solid red;
+        }
+    }
+
+    &.not-fit {
+        .part-fitment-icon {
+            background-image: $icon-not-fit;
+            filter: none;
+            opacity: 1;
+        }
+
+        .has-number {
+            background-color: transparent !important;
+            border: none;
+        }
+
+        .disclaimer {
+            font-size: 0.76rem;
+        }
+    }
+
+    .find-model {
+        color: $mtd-green;
+        font-size: 1em;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .part-fitment-label {
+        color: #1e1e1e;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+
+        a {
+            font-size: 13px;
+        }
+
+        &-text {
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+
+.has-number {
+    background-color: #fff !important;
+}
+
+.part-fitment-input-group {
+    .part-fitment-input {
+        flex: 1 0 55%;
+        max-height: 38px;
+
+        &[readonly] {
+            background-color: $white;
+        }
+    }
+
+    .content-search {
+        max-height: 38px;
+    }
+}
+
+.stock-availability-wrapper {
+    font-weight: 700;
+    flex: 0 0 34%;
+    border-bottom: 1px solid $gray-200;
+    font-size: rem(18px);
+
+    @include media-breakpoint-up(md) {
+        border-bottom: none;
+        border-right: 1px solid $gray-200;
+    }
+
+    .availability-msg {
+        font-size: 0.8em;
+    }
+}
+
+.does-not-fit-title {
+    color: red;
+}
+
+.part-fitment-icon {
+    background-image: $svg-radio-selected-path-blk;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+
+    &.pdp {
+        background-size: contain;
+        margin: 0 auto 8px;
+        height: 60px;
+        width: 100%;
+        filter: grayscale(1);
+        opacity: 0.8;
+        background-position: 50%;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        &.verified {
+            background-image: $icon-will-fit;
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.modal.will-fit {
+    .modal-body > .content-asset {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}

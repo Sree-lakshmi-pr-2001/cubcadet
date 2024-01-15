@@ -1,0 +1,101 @@
+<isset name="productImageSize" value="${isQuickView ? product.images['quickview'] : product.images['large']}" scope="page" />
+<isset name="productImageSize" value="${isBonusProduct ? product.images['medium'] : productImageSize}" scope="page" />
+<isset name="has360Images" value="${product.images360 && '360-view' in product.images360 && product.images360['360-view'].length > 1 ? true : false}" scope="page" />
+<isset name="hasVideos" value="${product.pdpMainVideo && product.pdpMainVideo.length > 0 ? true : false}" scope="page" />
+
+<div class="primary-images col-12 <isif condition="${isBonusProduct}">col-sm-6<iselse>col-sm-7 order-sm-1</isif> col-lg-8">
+    <isif condition="${dw.system.Site.getCurrent().getCustomPreferenceValue('enableProductBadges')}">
+        <div class="d-none d-sm-block badge-container">
+            <isinclude template="product/components/productBadge" />
+        </div>
+    </isif>
+    <div id="pdpCarousel-${product.id}" class="pdp-carousel ${product.id}" role="listbox">
+        <iscomment>If this product has 360 image views, pull it in separately</iscomment>
+        <isif condition="${has360Images}">
+            <isinclude template="product/components/360view" />
+        </isif>
+        <isif condition="${hasVideos && !isQuickView}">
+            <isloop items="${productImageSize}" var="image" status="loopStatus" begin="0" end="1">
+                <div class="slide">
+                    <span class="slide-link ${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? 'zoom-hires' : 'zoom-disabled'}"
+                        data-src="${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? product.imagesZoom['hi-res'][loopStatus.index].url : image.url}">
+                        <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                    </span>
+                </div>
+            </isloop>
+            <isloop items="${product.pdpMainVideo}" var="video" status="loopStatus">
+                <div class="slide video-slide">
+                    <span class="slide-link zoom-disabled modal-link video-modal"
+                        enable-title="false"
+                        xl-modal="true"
+                        data-embedvideo="${video.url}"
+                        data-content="#pdpVideo"
+                        data-link="${URLUtils.url('Page-Show','cid','pdp-video-container')}">
+                        <img src="${video.thumbLg}" class="slide-img" alt="" />
+                    </span>
+                </div>
+            </isloop>
+            <isloop items="${productImageSize}" var="image" status="loopStatus" begin="2">
+                <div class="slide">
+                    <span class="slide-link ${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? 'zoom-hires' : 'zoom-disabled'}"
+                        data-src="${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? product.imagesZoom['hi-res'][loopStatus.index].url : image.url}">
+                        <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                    </span>
+                </div>
+            </isloop>
+        <iselse>
+            <iscomment>Loop through and add standard product images</iscomment>
+            <isloop items="${productImageSize}" var="image" status="loopStatus">
+                <div class="slide">
+                    <span class="slide-link ${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? 'zoom-hires' : 'zoom-disabled'}"
+                        data-src="${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? product.imagesZoom['hi-res'][loopStatus.index].url : image.url}">
+                        <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                    </span>
+                </div>
+            </isloop>
+        </isif>
+    </div>
+    <isif condition="${product.images['xsmall'].length > 1 || (product.images['xsmall'].length > 0 && has360Images) || (product.images['xsmall'].length > 0 && hasVideos)}">
+        <div id="pdpCarouselNav-${product.id}" class="pdp-carousel-nav hidden-xs-down" data-product-id="${product.id}">
+            <isif condition="${has360Images}">
+                <div class="slide">
+                    <span class="slide-link zoom-disabled rotate-thumb">
+                        <img src="${product.images360['360-view'][0].url}" class="slide-img" alt="${product.images360['360-view'][0].alt}" />
+                    </span>
+                </div>
+            </isif>
+            <isif condition="${hasVideos && !isQuickView}">
+                <isloop items="${product.images['xsmall']}" var="image" status="loopStatus" begin="0" end="1">
+                    <div class="slide">
+                        <span class="slide-link zoom-disabled"
+                            data-src="${image.url}">
+                            <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                        </span>
+                    </div>
+                </isloop>
+                <isloop items="${product.pdpMainVideo}" var="video" status="loopStatus">
+                    <div class="slide video-slide">
+                        <span class="slide-link zoom-disabled" style="background: url('${video.thumbSm}') center/cover no-repeat"></span>
+                    </div>
+                </isloop>
+                <isloop items="${product.images['xsmall']}" var="image" status="loopStatus" begin="2">
+                    <div class="slide">
+                        <span class="slide-link zoom-disabled"
+                            data-src="${image.url}">
+                            <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                        </span>
+                    </div>
+                </isloop>
+            <iselse>
+                <isloop items="${product.images['xsmall']}" var="image" status="loopStatus">
+                    <div class="slide">
+                        <span class="slide-link zoom-disabled"
+                            data-src="${image.url}">
+                            <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                        </span>
+                    </div>
+                </isloop>
+            </isif>
+        </div>
+    </isif>
+</div>

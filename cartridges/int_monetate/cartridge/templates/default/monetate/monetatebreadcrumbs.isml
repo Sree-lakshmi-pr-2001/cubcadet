@@ -1,0 +1,13 @@
+<isset name="monetateObject" value="${require('~/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+<isif condition="${monetateObject.getMonetateEnabled()}">
+    <isset name="breadCrumbsArray" 
+    	value="${require('~/cartridge/scripts/monetate/libMonetate').getCommonBreadCrumbs(pdict.breadcrumbs)}" scope="page"/>
+    
+    <script type="text/javascript">
+    	/*
+    	*	Writing breadcrumbs to the temporary storage
+        */
+        var breadCrumbsJson = "<isprint value="${breadCrumbsArray}" encoding="jssource" />";
+        monetateData.breadCrumbs = JSON.parse(breadCrumbsJson);
+    </script>
+</isif>

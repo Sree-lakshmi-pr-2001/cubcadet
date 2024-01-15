@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}">
+    <head>
+       <isinclude template="components/gtmDataLayer"/>
+    </head>
+    <body>
+        <isinclude template="components/gtmNoScript"/>
+            <div id="main">
+            	<isreplace/>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<!--- TEMPLATENAME: cartful.isml --->
+<script>
+(function(c,a,r,t,f,u,l){c[u]=c[u]||function(){(c[u].q=c[u].q||[]).push(arguments)},l=a.createElement(r),l.async=1,l.id=u+"scr",l.src=f,a[t].appendChild(l)})(window,document,"script","body","//embed.cartfulsolutions.com/ft/part-fitment/recommendation.min.js","cfl1");
+</script>
+
+<h4 class="attribute-name">
+    ${Resource.msg('product.cartful.fitsmodels', 'product', null)}
+</h4>
+
+<div class="row">
+    <div id="part-fit-container" class="col-12 col-lg-10"></div>
+</div>

@@ -1,0 +1,14 @@
+<isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+
+<iscomment>Checking if false, so default is true</iscomment>
+
+<isif condition="${product.isBuyable !== false}">
+    <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+    <button class="add-to-cart btn btn-secondary"
+        data-pid="${product.id}"
+        data-gtmdata="${JSON.stringify(tagManager.getProductData(product.id))}"
+
+            ${!product.readyToOrder || !product.available ? "disabled" : ""}>
+            ${Resource.msg('button.addtocart', 'common', null)}
+    </button>
+</isif>

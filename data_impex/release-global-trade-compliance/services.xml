@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+
+    <service-credential service-credential-id="gtc.world.check.rest.creds">
+        <url>https://u-api.sbdinc.com/refinitiv/v1/screen?Id=396c72dd6c394fbaa18a7281e66e2471</url>
+        <user-id>5jb6tmn1o2hd1finffy06u8tg</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-profile service-profile-id="gtc.world.check.rest.prof">
+        <timeout-millis>30000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>2000</cb-millis>
+    </service-profile>
+
+    <service service-id="gtc.world.check.rest">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>GTC</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>gtc.world.check.rest.prof</profile-id>
+        <credential-id>gtc.world.check.rest.creds</credential-id>
+    </service>
+
+</services>

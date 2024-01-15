@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+    <field
+        formid="endUse"
+        label="label.enduse.checkbox"
+        mandatory="true"
+        missing-error="error.message.required"
+        type="boolean"/>
+
+    <field
+        formid="purchasedFrom"
+        label="label.purchasedfrom"
+        mandatory="true"
+        binding="ew-aftermarket-purchased-from"
+        missing-error="error.message.required"
+        type="string"/>
+        <options>
+            <option optionid="" label="resource.select" value=""/>
+            <option optionid="" label="" value=""/>
+            <option optionid="" label="" value=""/>
+        </options>
+</form>

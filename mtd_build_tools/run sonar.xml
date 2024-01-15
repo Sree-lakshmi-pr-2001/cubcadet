@@ -1,0 +1,167 @@
+<project name="sonar" default="sonar" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+
+    <!-- 
+      This build task exists to allow you to run SonarQube locally separate 
+      from the gulp_builder builders.xml file. It is referenced in the 
+      builders.xml file using <import file="filename"/> so that it will
+      automatically run after a successful build. 
+    
+    Normally, this task would be run only on Jenkins, but if you want to run 
+    locally, you will need:
+      1. To be on VPN in order to connect to the SonarQube server
+      2. Define the ant.git.work.tree variable to be the value of the 
+         git_work_tree variable. You can do this in Eclipse at 
+         Window > Preferences > Ant > Runtime.
+       
+    The Jenkins server will need:
+      1. Network access to the SonarQube server
+      2. The GIT_URL environment variable defined to contain the git url for 
+         the project
+  -->
+
+  <!-- This just defines a prefix for accessing system environment variables -->
+  <property environment="env" />
+
+  <!-- 
+    Using JS here since it's much easier to implement the logic when checking for 
+    different properties in different environments. In Ant, it would be a pile of
+    confusing conditions, tasks, and intermediate properties since property 
+    definitions don't support if and unless clauses without extra 
+    Ant:Contributions packages or funky extra xml namespaces.
+
+    System environment variables can't be accessed by JS, so using Ant getProperty
+    and setProperty for that.
+  -->
+    <script language="javascript">
+    // For either the git.repo.url or ant.git.work.tree variables, split the url 
+      // and grab the last element (e.g. 'reference-application.git')
+    if (project.getProperty('env.GIT_URL') != null) {
+        arr = project.getProperty('env.GIT_URL').split('/');
+      if (arr.length > 0) {
+        repoName = arr[arr.length-1];
+            project.setProperty('git.repo.name', repoName.replace(".git",""));
+        // Set the property for Ant to use
+          project.setProperty('have-sonar-props', "true");
+      }
+    } else {
+        if (project.getProperty('ant.git.work.tree') != null) {
+          project.setProperty('git.repo.name', project.getProperty('ant.git.work.tree'));
+          // Set the property for Ant to use
+          project.setProperty('have-sonar-props', "true");
+        } else {
+              project.setProperty('have-sonar-props', "false");
+        }
+        }
+  </script>
+        
+  <!-- 
+    SonarQube property definitions
+    See https://docs.sonarqube.org/display/SONAR/Analysis+Parameters for more info.
+    
+    sonar.projectKey and sonar.projectName
+    
+    The convention for these property values is <name of repo> to ensure uniqueness 
+    among all other projects for all clients on the SonarQube server. The SonarQube 
+    project will be automatically created provided the projectKey name is legal. 
+    After it's created though, the key can't change as that would disassociate all 
+    the history from previous runs.
+    
+    The basename task removes the '.git' at the end of the git.repo.name variable 
+    (when set to ant.git.work.tree) so we end up with 'reference-application' from 
+    'reference-application.git'. If git.repo.name is set to the GIT_URL value, 
+    basename won't change anything. Using basename avoids having to deal with forward 
+    or backslashes in different OS platforms.
+
+    sonar.host.url
+    
+    The property must be defined either here, passed via the command line or 
+    through an Ant property. It's set here since it's not expected to change.
+    
+    sonar.projectBaseDir and sonar.sources
+    
+    The sonar.projectBaseDir property tells SonarQube where to begin looking for source
+    files to analyze. The sonar.sources property is a path relative to that folder.
+    With the configuration below, SonarQube will analyze all files in the current 
+    project - even if they are not included in the config.json file. Can't use the 
+    gulp_builder deploy folder since it's cleared out during the gulp build. 
+    
+    sonar.java.binaries and sonar.java.libraries
+
+    These are used by the scanner for find it's jar files to do the analysis. 
+  -->
+  <basename property="repo.name" file="${git.repo.name}"/>
+
+  <!-- Set required properties for SonarQube -->
+  <property name="sonar.projectKey" value="${repo.name}"/>
+  <property name="sonar.projectName" value="${sonar.projectKey}"/>
+  <property name="sonar.host.url" value="https://sfcc-snq.lcgosc.com"/>
+  <property name="sonar.sources" value="." />
+  <property name="sonar.projectBaseDir" value=".." />
+  <property name="sonar.java.binaries" value="build" />
+  <property name="sonar.java.libraries" value="lib/*.jar" /> 
+
+  <!-- 
+    Set SonarQube project version to the value of the BUILD_NUMBER env var if defined 
+    (will always be defined when run in Jenkins). Otherwise default to a legal string as 
+    required by SonarQube. The buildVersion variable defined in config.json is available 
+    only to gulp_builder tasks and not the IDE or system env.
+  -->
+  <condition property="sonar.projectVersion" value="Build ${env.BUILD_NUMBER}" else="Build number NA">
+    <and>
+      <isset property="env.BUILD_NUMBER" />
+    </and>
+  </condition>
+
+  <!-- 
+    Check that the BUILD_NUMBER env var is set. Since this is typically only set 
+    when running in Jenkins, the absence of the variable definition will be used 
+    to suppress the messages about SonarQube properties or the server not being 
+    available. That way when this task in run locally, it will be quiet and 
+    not issue error messages but when running in Jenkins, error messages will 
+    be displayed as that would indicate a real issue with the Jenkins config or 
+    network. 
+  -->
+  <condition property="show-sonar-config-errors" else="false">
+    <and>
+      <isset property="env.BUILD_NUMBER" />
+    </and>
+  </condition> 
+
+    <target name="check-sonar-properties" if="${show-sonar-config-errors}" unless="${have-sonar-props}">
+    <echo level="info">Neither the ant.git.work.tree variable nor the GIT_URL variable is defined in </echo>
+    <echo level="info">order to determine the name of the project for the SonarQube dashboard. Normally,</echo>
+    <echo level="info">the GIT_URL environment variable is defined on the server for the Jenkins build.</echo>
+    <echo level="info">To run SonarQube locally, the ant.git.work.tree variable should be defined as </echo>
+    <echo level="info">${git_work_tree}. In Eclipse, this is done using Window - Preferences - Ant - Runtime.</echo>
+    <fail message="Missing ant.git.work.tree variable definition required to run SonarQube"/>
+  </target>
+
+  <!-- Check that SonarQube server is reachable (since VPN is required to be active when running locally) -->
+  <condition property="sonar-reachable" else="false"> 
+    <http url="${sonar.host.url}"/> 
+  </condition> 
+
+  <target name="check-sonar-reachable" if="${show-sonar-config-errors}" unless="${sonar-reachable}">
+    <echo level="info">The SonarQube server at ${sonar.host.url} is not reachable so this step was skipped.</echo>
+    <echo level="info">To run SonarQube locally, VPN is required but SonarQube is normally run only on the Jenkins server.</echo>
+  </target>
+
+  <!-- Check that the SonarQube properties are defined and the server is reachable -->
+  <condition property="have-sonar" value="true" else="false">
+    <and>
+      <istrue value="${have-sonar-props}" />
+      <istrue value="${sonar-reachable}" />
+    </and>
+  </condition>
+
+  <!-- Define SonarQube Scanner for Ant Target -->
+  <target name="sonar" depends="check-sonar-properties,check-sonar-reachable" if="${have-sonar}">
+      <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+         <!-- Can leave the classpath line out if the "sonarqube-ant-task-*.jar" file is added as an external jar file -->
+      </taskdef>
+     
+      <!-- Execute SonarQube scanner -->
+      <sonar:sonar />
+    </target>
+
+</project>

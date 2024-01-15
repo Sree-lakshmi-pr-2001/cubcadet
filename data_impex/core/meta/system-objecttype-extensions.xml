@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Category">
+        <custom-attribute-definitions>
+             <attribute-definition attribute-id="mtdWebToLeadID">
+                <display-name xml:lang="x-default">Web to Lead Form ID</display-name>
+                <description xml:lang="x-default">The content asset ID of a web to lead form asset that should display for this category.</description>
+                <type>string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="alternativeUrl">
+                <display-name xml:lang="x-default">Alternative URL</display-name>
+                <description xml:lang="x-default">Renders an alternative URL in main navigation. Uses Commerce Cloud content url notation. For example: $url('Account-Show')$ or normal URL http://xchange.demandware.com</description>
+                <type>html</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <field-length>0</field-length>
+                <field-height>2</field-height>
+            </attribute-definition>
+            <attribute-definition attribute-id="catBannerID">
+                <display-name xml:lang="x-default">Category Banner ID</display-name>
+                <description xml:lang="x-default">Used to define the content asset used to populate a grid page banner for a category. This value is applied to all sub-category navigation (cascading) if no specific catBannerID has been defined for  a sub-category.</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="enableCompare">
+                <display-name xml:lang="x-default">Enable Compare</display-name>
+                <description xml:lang="x-default">Used to define if/when the Compare feature is to be visualized in the storefront based on navigation. If enableCompare = FALSE, no Compare checkboxes will be displayed in the grid view. If enableCompare = TRUE, the category (and its children) will support the Compare feature.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="headerMenuBanner">
+                <display-name xml:lang="x-default">Header Menu Banner</display-name>
+                <type>html</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="headerMenuOrientation">
+                <display-name xml:lang="x-default">Header Menu Orientation</display-name>
+                <description xml:lang="x-default">Which way to orient the menu and optional header menu HTML. Vertical will list all in one line. Horizontal will list in columns.</description>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Horizontal</display>
+                        <value>Horizontal</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Vertical</display>
+                        <value>Vertical</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="showInMenu">
+                <display-name xml:lang="x-default">Show in Menu Navigation</display-name>
+                <description xml:lang="x-default">Used to indicate that a category (such as Mens -&gt; Footwear -&gt; Boots) will display in the roll-over navigation. A sub-category only shows if also the parent category is marked as showInMenu. Up to three category levels are shown in roll-over navigation.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="sizeChartID">
+                <display-name xml:lang="x-default">Size Chart</display-name>
+                <description xml:lang="x-default">Used to define the content asset ID of the Size Chart that is appropriate for products whose PRIMARY category is the associated category (and its children). Whenever a product detail page (or quick view) is rendered, the Size Chart link is populated based on the value of this attribute for the products primary categorization. If not defined, NO size chart link is displayed.</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="slotBannerImageMobile">
+                <display-name xml:lang="x-default">Category Landing Slot Mobile Image</display-name>
+                <description xml:lang="x-default"> Image displayed at the top of the Category Landing or Browse pages in mobile viewports. </description>
+                <type>image</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="slotBannerImage">
+                <display-name xml:lang="x-default">Category Landing Slot Desktop Image</display-name>
+                <description xml:lang="x-default"> Image displayed at the top of the Category Landing or Browse pages in desktop viewports. </description>
+                <type>image</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="seoText">
+                <display-name xml:lang="x-default">SEO HTML</display-name>
+                <description xml:lang="x-default">SEO copy displayed at the top of the Category Browse pages.</description>
+                <type>html</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="customAttributes">
+                <display-name xml:lang="x-default">Custom</display-name>
+                <attribute attribute-id="sizeChartID"/>
+                <attribute attribute-id="showInMenu"/>
+                <attribute attribute-id="enableCompare"/>
+                <attribute attribute-id="catBannerID"/>
+                <attribute attribute-id="headerMenuOrientation"/>
+                <attribute attribute-id="headerMenuBanner"/>
+                <attribute attribute-id="alternativeUrl"/>
+                <attribute attribute-id="slotBannerImageMobile"/>
+                <attribute attribute-id="slotBannerImage"/>
+                <attribute attribute-id="seoText"/>
+            </attribute-group>
+            <attribute-group group-id="MTD">
+                <display-name xml:lang="x-default">MTD</display-name>
+                <attribute attribute-id="mtdWebToLeadID"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Content">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="body">
+                <display-name xml:lang="x-default">Body</display-name>
+                <type>html</type>
+                <localizable-flag>true</localizable-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdWebToLeadOverrides">
+                <display-name xml:lang="x-default">Non Production Web to Lead Overrides</display-name>
+                <description xml:lang="x-default">If the form defined by this content asset is being submitted in a non-production instance of Commerce Cloud, the form parameters referenced in this list will be overridden to the given values. For ex. one entry may be "recordType:012A0000000GoMp". This would ignore recordType submitted and use the new value when sending the data to Salesforce.</description>
+                <type>set-of-string</type>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Content">
+                <display-name xml:lang="x-default">Content</display-name>
+                <attribute attribute-id="body"/>
+            </attribute-group>
+            <attribute-group group-id="MTD">
+                <display-name xml:lang="x-default">MTD</display-name>
+                <attribute attribute-id="mtdWebToLeadOverrides"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="prop65Warning">
+                <display-name xml:lang="x-default">Proposition 65 Product Warning</display-name>
+                <description xml:lang="x-default">Product level flag to indicate that this product triggers the warning.</description>
+                <type>boolean</type>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Prop65">
+                <display-name xml:lang="x-default">Proposition 65</display-name>
+                <attribute attribute-id="prop65Warning"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="prop65Acknowledged">
+                <display-name xml:lang="x-default">Proposition 65 Acknowledged Date</display-name>
+                <description xml:lang="x-default">Captured acknowledgement date</description>
+                <type>datetime</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="addressValidated">
+                <display-name xml:lang="x-default">Address Validated</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="prop65Acknowledged">
+                <display-name xml:lang="x-default">Proposition 65 Acknowledged Date</display-name>
+                <description xml:lang="x-default">Captured acknowledgement date</description>
+                <type>datetime</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="addressValidated">
+                <display-name xml:lang="x-default">Address Validated</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="General">
+                <display-name xml:lang="x-default">General</display-name>
+                <attribute attribute-id="prop65Acknowledged"/>
+                <attribute attribute-id="addressValidated"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+             <attribute-definition attribute-id="listPriceDefault">
+                <display-name xml:lang="x-default">Default List Price Book ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>usd-m-list-prices</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="GoogleVerificationTag">
+                <display-name xml:lang="x-default">GoogleVerificationTag - Content Attribute</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="buildNotificationEmailList">
+                <display-name xml:lang="x-default">Build Notification Email List</display-name>
+                <description xml:lang="x-default">Semicolon separated list</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="countryCode">
+                <display-name xml:lang="x-default">Default Country Code</display-name>
+                <description xml:lang="x-default">Default country code for store searches</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">USA</display>
+                        <value>US</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">CANADA</display>
+                        <value>CA</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="enableStorePickUp">
+                <display-name xml:lang="x-default">Enable In Store Pickup</display-name>
+                <description xml:lang="x-default">This Boolean enables the storefront ability to perform tasks related to in store orders</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="customerServiceEmail">
+                <display-name xml:lang="x-default">Customer Service Email</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+                <default-value>noreply@dsalesforce.com</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mapAPI">
+                <display-name xml:lang="x-default">google map api key</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <!-- LYONSCG -->
+            <attribute-definition attribute-id="siteDisableCommerceFunctionality">
+                <display-name xml:lang="x-default">Disable Commerce Functionality</display-name>
+                <type>boolean</type>
+            </attribute-definition>
+            <!-- MTD -->
+            <attribute-definition attribute-id="financingTDapplicationEnabled">
+                <display-name xml:lang="x-default">TD Bank Financing Application Enabled</display-name>
+                <description xml:lang="x-default">Toggle the feature on and off.</description>
+                <type>boolean</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="financingTDaccessKey">
+                <display-name xml:lang="x-default">TD Bank Access Key</display-name>
+                <description xml:lang="x-default">Required value for token request.</description>
+                <type>string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="financingTDduration">
+                <display-name xml:lang="x-default">TD Bank Access Token Duration</display-name>
+                <description xml:lang="x-default">Lifetime of access token in secs. (Optional, supports testing.)</description>
+                <type>int</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="financingTDuseCtMax">
+                <display-name xml:lang="x-default">TD Bank Access Token Reuse</display-name>
+                <description xml:lang="x-default">Maximum number of times an access token can be used. (Optional, supports testing.)</description>
+                <type>int</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="financingTDRCSURL">
+                <display-name xml:lang="x-default">TD Bank Application Redirect URL Template</display-name>
+                <description xml:lang="x-default">Template for the redirect URL.</description>
+                <type>string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="financingTDstoreID">
+                <display-name xml:lang="x-default">TD Bank Application Store ID</display-name>
+                <description xml:lang="x-default">Required value for redirect.</description>
+                <type>string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdDealerFulfillmentEnabled">
+                <display-name xml:lang="x-default">Dealer Fulfillment Enabled</display-name>
+                <description xml:lang="x-default">Is the feature enabled?</description>
+                <type>boolean</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdDealerConsumerProximity">
+                <display-name xml:lang="x-default">Consumer Proximity for Dealer Fulfillment</display-name>
+                <description xml:lang="x-default">Configuration for web service call.</description>
+                <type>int</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdDealerNumberAllowed">
+                <display-name xml:lang="x-default">Number Allowed for Dealer Fulfillment</display-name>
+                <description xml:lang="x-default">Configuration for web service call.</description>
+                <type>int</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdDealerRetailerBrand">
+                <display-name xml:lang="x-default">Retailer Brand for Dealer Fulfillment</display-name>
+                <description xml:lang="x-default">Configuration for web service call.</description>
+                <type>string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdLiveChatConfig">
+                <display-name xml:lang="x-default">Live Agent Chat Configuration</display-name>
+                <description xml:lang="x-default">Contains the markup to enable chat on the current storefront.</description>
+                <type>html</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdLiveChatEnabled">
+                <display-name xml:lang="x-default">Live Agent Chat Enabled</display-name>
+                <description xml:lang="x-default">Enable or disable live chat without deleting the configuration.</description>
+                <type>boolean</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="partStreamEnabled">
+                <display-name xml:lang="x-default">PartStream Enabled</display-name>
+                <description xml:lang="x-default">Toggle the feature on the site.</description>
+                <type>boolean</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="partStreamAppKey">
+                <display-name xml:lang="x-default">PartStream App Key</display-name>
+                <description xml:lang="x-default">Credential required for integration.</description>
+                <type>password</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="partStreamBrand">
+                <display-name xml:lang="x-default">PartStream App Key</display-name>
+                <description xml:lang="x-default">Brand value for PartStream context/search, if not defined per product.</description>
+                <type>string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="prop65Enabled">
+                <display-name xml:lang="x-default">Proposition 65 Disclaimers Enabled</display-name>
+                <description xml:lang="x-default">Flag to indicate whether this feature is enabled for a site.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdLiveChatEnabled">
+                <display-name xml:lang="x-default">Live Agent Chat Enabled</display-name>
+                <description xml:lang="x-default">Enable or disable live chat without deleting the configuration.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="enableGoogleRecaptcha">
+                <display-name xml:lang="x-default">Enable Google Recaptcha</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleRecaptchaSecretKey">
+                <display-name xml:lang="x-default">Google Recaptcha Secret Key</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>6Le6hIEUAAAAAH2CRH1GtZPaTzLCgKEMLjF6sb55</default-value>
+             </attribute-definition>
+             <attribute-definition attribute-id="googleRecaptchaSiteKey">
+                <display-name xml:lang="x-default">Google Recaptcha Site Key</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>6Le6hIEUAAAAACNuchJ4xHgLB1iD3gEor1no4CtN</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="enablePromoCalloutMessagesProductTile">
+                <display-name xml:lang="x-default">Enable Promo Callout on Tiles</display-name>
+                <description xml:lang="x-default">When true, this enables display of promotion callout messages on product tiles.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="numTilePromos">
+                <display-name xml:lang="x-default">Number of Promos on Product Tiles</display-name>
+                <description xml:lang="x-default">The number of promotional callout messages to display on product tiles.</description>
+                <type>enum-of-int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">one</display>
+                        <value>1</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">two</display>
+                        <value>2</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">three</display>
+                        <value>3</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">four</display>
+                        <value>4</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">five</display>
+                        <value>5</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="GoogleVerificationTag"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="mapAPI"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="mtdLiveChatEnabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+            </attribute-group>
+            <attribute-group group-id="MTD">
+                <attribute attribute-id="mtdDealerFulfillmentEnabled"/>
+                <attribute attribute-id="mtdDealerConsumerProximity"/>
+                <attribute attribute-id="mtdDealerNumberAllowed"/>
+                <attribute attribute-id="mtdDealerRetailerBrand"/>
+                <attribute attribute-id="mtdLiveChatConfig"/>
+                <attribute attribute-id="mtdLiveChatEnabled"/>
+                <attribute attribute-id="partStreamEnabled"/>
+                <attribute attribute-id="partStreamAppKey"/>
+                <attribute attribute-id="partStreamBrand"/>
+            </attribute-group>
+            <attribute-group group-id="MTD Financing">
+                <attribute attribute-id="financingTDapplicationEnabled"/>
+                <attribute attribute-id="financingTDaccessKey"/>
+                <attribute attribute-id="financingTDduration"/>
+                <attribute attribute-id="financingTDuseCtMax"/>
+                <attribute attribute-id="financingTDRCSURL"/>
+                <attribute attribute-id="financingTDstoreID"/>
+            </attribute-group>
+            <attribute-group group-id="Google Recaptcha">
+               <attribute attribute-id="enableGoogleRecaptcha"/>
+               <attribute attribute-id="googleRecaptchaSiteKey"/>
+               <attribute attribute-id="googleRecaptchaSecretKey"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Profile">
+
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="emailMarketingSubscription">
+                <display-name xml:lang="x-default">Email Marketing Subscription</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Standard">
+                <display-name xml:lang="x-default">Profile Attributes</display-name>
+                <attribute attribute-id="salutation" system="true"/>
+                <attribute attribute-id="title" system="true"/>
+                <attribute attribute-id="companyName" system="true"/>
+                <attribute attribute-id="jobTitle" system="true"/>
+                <attribute attribute-id="firstName" system="true"/>
+                <attribute attribute-id="lastName" system="true"/>
+                <attribute attribute-id="suffix" system="true"/>
+                <attribute attribute-id="gender" system="true"/>
+                <attribute attribute-id="birthday" system="true"/>
+                <attribute attribute-id="email" system="true"/>
+                <attribute attribute-id="nextBirthday" system="true"/>
+                <attribute attribute-id="secondName" system="true"/>
+                <attribute attribute-id="emailMarketingSubscription"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="ProductLineItem">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="bonusProductLineItemUUID">
+                <display-name xml:lang="x-default">Bonus Product Line Item UUID</display-name>
+                <description xml:lang="x-default">This represents the UUID of the product line item that holds the qualifying product.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="fromStoreId">
+                <display-name xml:lang="x-default">From Store ID</display-name>
+                <description xml:lang="x-default">Links the store to the product line item for grouping shipments in the checkout process.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="preOrderUUID">
+                <display-name xml:lang="x-default">pre order uuid</display-name>
+                <description xml:lang="x-default">this custom attribute captures the original product line item uuid before it is part of an placed order</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="bundledBasePrice">
+                <display-name xml:lang="x-default">Bunled Base Price</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="BonusDiscountLineItem">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="bonusProductLineItemUUID">
+                <display-name xml:lang="x-default">Bonus Product Line Item UUID</display-name>
+                <description xml:lang="x-default">This represents the UUID of the product line item that holds the qualifying product.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="ShippingMethod">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="estimatedArrivalTime">
+                <display-name xml:lang="x-default">Estimated Arrival Time</display-name>
+                <description xml:lang="x-default">Estimated days until delivery</description>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="storePickupEnabled">
+                <display-name xml:lang="x-default">Store Pickup Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="storePickUp">
+                <display-name xml:lang="x-default">Store Pick Up</display-name>
+                <attribute attribute-id="storePickupEnabled"/>
+            </attribute-group>
+            <attribute-group group-id="shippingMethodAttr">
+                <display-name xml:lang="x-default">Shipping Method Attributes</display-name>
+                <attribute attribute-id="estimatedArrivalTime"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Store">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="cubcadet">
+                <display-name xml:lang="x-default">Cub Cadet?</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="cubcadetcare">
+                <display-name xml:lang="x-default">Cub Cadet Care?</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="customernumber">
+                <display-name xml:lang="x-default">Customer Number</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer_id">
+                <display-name xml:lang="x-default">Dealer ID</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="product_categories">
+                <display-name xml:lang="x-default">Product Categories</display-name>
+                <type>enum-of-string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Blower</display>
+                        <value>BLO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Chipper Shredder</display>
+                        <value>CHS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Handheld &amp; Cleanup</display>
+                        <value>HNC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Lawn Edger</display>
+                        <value>LED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Lawn &amp; Garden Tractor</display>
+                        <value>LGT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Log Splitter</display>
+                        <value>LOG</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Professional</display>
+                        <value>PRO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Robotic</display>
+                        <value>ROB</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Residential Zero-Turn</display>
+                        <value>RZT</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Snow</display>
+                        <value>SNO</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">String Trimmer</display>
+                        <value>STR</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Tiller &amp; Cultivator</display>
+                        <value>TNC</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Utility Vehicle</display>
+                        <value>UTV</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Walk-Behind Mower</display>
+                        <value>WBM</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="retailer_id">
+                <display-name xml:lang="x-default">Retailer ID</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="sells_products">
+                <display-name xml:lang="x-default">Dealer Sells Products</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="services_products">
+                <display-name xml:lang="x-default">Services Products</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="website">
+                <display-name xml:lang="x-default">Website URL</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+</metadata>

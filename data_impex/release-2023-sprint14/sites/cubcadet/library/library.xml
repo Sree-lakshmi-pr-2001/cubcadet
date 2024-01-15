@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="home_delivery-estimate-accessories">
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <custom-attributes>
+          <custom-attribute attribute-id="body" xml:lang="x-default">3-5 days</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+      </content>
+</library>

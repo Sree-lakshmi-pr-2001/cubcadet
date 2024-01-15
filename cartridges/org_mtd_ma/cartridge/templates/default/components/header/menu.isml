@@ -1,0 +1,42 @@
+<isinclude template="components/modules" />
+
+<nav id="collapsible-mobile-menu" class="navbar navbar-expand-lg bg-inverse col-12">
+    <div class="close-menu clearfix d-lg-none">
+        <div class="back pull-left">
+            <a href="${'#'}" role="button">
+                ${Resource.msg('link.header.menu.back', 'common', null)}
+            </a>
+        </div>
+        <div class="close-button pull-right">
+            <a href="${'#'}" role="button">
+                ${Resource.msg('link.header.menu.close', 'common', null)}
+                <span aria-hidden="true"><issvg icon="icon-close" image="true" altText="" /></span>
+            </a>
+        </div>
+    </div>
+    <div class="menu-group" aria-label="Main menu" role="navigation">
+        <ul class="nav navbar-nav" role="menu">
+<isif condition="${pdict.categories}">
+    <isloop items="${pdict.categories}" var="category">
+        <isset name="categoryLayout" value="${category.layoutType}" scope="page" />
+        <isset name="categoryPromo" value="${category.promoAsset.length > 0 ? category.promoAsset : false}" scope="page" />
+        <isif condition="${category.subCategories}">
+            <li class="nav-item dropdown ${categoryLayout} top-level-menu-heading" role="none">
+                <a role="menuitem" href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link dropdown-toggle <isif condition="${category.id === pdict.activeParent}">active</isif>" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${category.name}</a>
+                <isset name="menuItem" value="${category}" scope="page" />
+                <isset name="parentCatLayout" value="${categoryLayout}" scope="page" />
+                <isinclude template="components/header/menuItem" />
+            </li>
+        <iselse/>
+            <li class="nav-item ${categoryLayout}" role="none">
+                <a role="menuitem" href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" role="button" class="nav-link <isif condition="${category.id === pdict.activeParent}">active</isif>">${category.name}</a>
+            </li>
+        </isif>
+    </isloop>
+</isif>
+        </ul>
+        <div class="mobile-utility-nav">
+            <isinclude template="components/header/utilityNav" />
+        </div>
+    </div>
+</nav>

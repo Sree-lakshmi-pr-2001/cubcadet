@@ -1,0 +1,18 @@
+<!--- TEMPLATENAME: pdp.isml --->
+<h4 class="attribute-name">
+    ${Resource.msg('operator.manuals', 'manuals', null)}
+</h4>
+<ul>
+    <isif condition="${pdict.manualItems.length === 0}">
+        <li class="attribute-values">
+            ${Resource.msg('search.manuals.notfound', 'manuals', null)}
+        </li>
+    <iselse>
+        <isloop items="${pdict.manualItems}" var="manualItem">
+            <li class="attribute-values">
+                <a href="javascript:void(0)" class="manual-download-link" data-href="${manualItem.manualPDfURL}">${manualItem.itemDescription}</a>
+            </li>
+        </isloop>
+        <isinclude template="manuals/downloadagreement" />
+    </isif>
+</ul>

@@ -1,0 +1,73 @@
+<isif condition="${pdict.account.orderHistory}">
+    <isset name="order" value="${pdict.account.orderHistory}" scope="page" />
+</isif>
+
+<div class="card <isif condition="${!pdict.accountlanding}">account-order-history-card</isif>">
+    <isif condition="${pdict.accountlanding}">
+        <div class="card-header clearfix">
+            <h4 class="pull-left">${Resource.msg('label.myorders.myorders','account',null)}</h4>
+        </div>
+    <iselse/>
+        <div class="card-header clearfix">
+            <h5 class="pull-left">${Resource.msg('label.orderhistory.orderno','account',null)} <span class="font-weight-normal">${order.orderNumber}</span></h5>
+            <a href="${URLUtils.url('Order-Details', 'orderID', order.orderNumber, 'orderFilter', pdict.orderFilter)}" class="pull-right">${Resource.msg('link.view','account',null)}</a>
+        </div>
+    </isif>
+
+    <isif condition="${order}">
+
+        <div class="card-body card-info-group order-history-card-body">
+            <div class="row">
+                <iscomment>REMOVED: most recent order heading</iscomment>
+                <div class="col-5">
+                    <isif condition="${order && order.firstLineItem}">
+                        <img class="img-fluid" src="${order.firstLineItem.imageURL}" alt="${order.firstLineItem.alt}" title="${order.firstLineItem.title}">
+                    </isif>
+                </div>
+                <div class="col-7">
+                    <isif condition="${pdict.accountlanding}">
+                        <dl>
+                            <dt>${Resource.msg('label.orderhistory.ordernumber','account',null)}</dt>
+                            <dd><isprint value="${order.orderNumber}"/></dd>
+                        </dl>
+                    </isif>
+                    <dl>
+                        <dt>${Resource.msg('label.orderhistory.dateordered','account',null)}</dt>
+                        <dd><isprint value="${order.creationDate}" formatter="M/dd/yyyy"/></dd>
+                    </dl>
+                    <dl>
+                        <dt>${Resource.msg('label.orderhistory.orderstatus','account',null)}</dt>
+                        <dd><span class="dashboard-order-card-status">${order.orderStatus}</span></dd>
+                    </dl>
+                    <isinclude template="account/order/shippingTitle"/>
+                    <div class="dashboard-order-card-footer-value">
+                        <dl>
+                            <dt>${Resource.msg('label.orderhistory.totalitems','account',null)}:</dt>
+                            <dd><isprint value="${order.productQuantityTotal}" formatter="#"/></dd>
+                        </dl>
+                        <dl>
+                            <dt>${Resource.msg('label.myorders.ordertotal','account',null)}: </dt>
+                            <dd>
+                                <isset name="selectedPaymentInstrument" value="${order.billing.payment.selectedPaymentInstruments.length > 0 ? order.billing.payment.selectedPaymentInstruments[0] : new Object()}" scope="page" />
+                                <isif condition="${'processFee' in selectedPaymentInstrument && selectedPaymentInstrument.processFee > 0}">
+                                    ${selectedPaymentInstrument.formattedAmount}
+                                <iselse>
+                                    ${order.priceTotal}
+                                </isif>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <isif condition="${pdict.accountlanding}">
+            <div class="card-footer">
+                <a href="${URLUtils.url('Order-History')}" class="btn btn-outline-secondary btn-account">${Resource.msg('label.myorders.myorders','account',null)}</a>
+            </div>
+        </isif>
+    <iselse>
+        <div class="card-body">
+            ${Resource.msg('msg.orderhistory.noorders', 'account', null)}
+        </div>
+    </isif>
+</div>

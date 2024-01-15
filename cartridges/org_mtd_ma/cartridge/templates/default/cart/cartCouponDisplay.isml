@@ -1,0 +1,35 @@
+<isloop items="${pdict.totals.discounts}" var="discount" status="loopstate">
+    <isif condition="${discount.type === 'coupon'}">
+        <div class="coupon-price-adjustment coupon-uuid-${discount.UUID}"
+             data-uuid="${discount.UUID}">
+            <div class="coupon-code">${discount.couponCode}
+                <isif condition="${discount.applied}">
+                    <span class="coupon-applied"> (${Resource.msg('msg.coupon.applied','cart',null)})</span>
+                <iselse/>
+                    <span class="coupon-not-applied"> (${Resource.msg('msg.coupon.not.applied','cart',null)})</span>
+                </isif>
+                <button type="button" class="float-right remove-coupon btn-link"
+                        data-code="${discount.couponCode}"
+                        aria-label="Close"
+                        data-toggle="modal"
+                        data-target="#removeCouponModal"
+                        data-uuid="${discount.UUID}">${Resource.msg('cart.link.remove', 'cart', null)}
+                </button>
+            </div>
+            <ul class="coupon-promotion-relationship">
+                <isset name="prevCallOut" value="" scope="page"/>
+                <isloop items="${discount.relationship}" var="relatedPromotion" status="loopstate">
+                    <isif condition="${(prevCallOut !== relatedPromotion.ID) && relatedPromotion.callOutMsg}">
+                        <li>${relatedPromotion.callOutMsg}</li>
+                    </isif>
+                    <isset name="prevCallOut" value="${relatedPromotion.ID}" scope="page"/>
+                </isloop>
+            </ul>
+        </div>
+    <iselse/>
+        <div class="promotion-information">
+            <span class="promotion-name">${discount.lineItemText}</span>
+            <span class="applied-promotion-discount">${discount.price}</span>
+        </div>
+    </isif>
+</isloop>

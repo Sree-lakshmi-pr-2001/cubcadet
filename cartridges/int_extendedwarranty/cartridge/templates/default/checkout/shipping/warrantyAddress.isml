@@ -1,0 +1,42 @@
+<fieldset class="shipping-address-block">
+    <legend><h6>${Resource.msg('heading.checkout.shipping.contactinfo', 'checkout', null)}</h6></legend>
+</fieldset>
+
+<div class="row">
+    <isif condition="${!pdict.isDealerPickup}">
+        <div class="col-sm-6">
+            <isinclude template="checkout/shipping/orderEmailForm" />
+        </div>
+    </isif>
+    <div class="col-sm-6">
+        <div class="form-group
+            ${addressFields.phone.mandatory === true ? 'required' : ''}
+            ${addressFields.phone.htmlName}">
+            <label class="form-control-label" for="shippingPhoneNumber" id="shippingPhoneNumberLabel">
+                ${Resource.msg('field.shipping.address.phone','address',null)}
+            </label>
+
+            <input
+                type="tel"
+                aria-labelledby="shippingPhoneNumberLabel"
+                class="form-control shippingPhoneNumber"
+                id="shippingPhoneNumber"
+                data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form', 'forms', null)}"
+                value="${shippingAddress.phone||''}"
+                autocomplete="tel"
+                <isprint value="${addressFields.phone.attributes}" encoding="off"/>
+            />
+
+                <iscomment> telephone tooltip content asset</iscomment>
+                <isset name="tooltipContent" value="${dw.content.ContentMgr.getContent('phone-help-tooltip')}" scope="page" />
+                <isif condition="${tooltipContent != null}">
+                    <span class="info-icon">
+                        <img class="icon" src="${URLUtils.staticURL('images/svg-icons/icon-help.svg')}" alt="${Resource.msg('tooltip.img.alt','common',null)}"
+                            data-toggle="popover" tabindex="0" data-placement="top" title="" data-content="${tooltipContent.custom.body}" />
+                    </span>
+                </isif>
+            <span class="form-description">${Resource.msg('example.phone','forms',null)}</span>
+            <div class="invalid-feedback"><isprint value="${addressFields.phone.error}" /></div>
+        </div>
+    </div>
+</div>

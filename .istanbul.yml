@@ -1,0 +1,39 @@
+instrumentation:
+    root: .
+    extensions:
+        - .js
+    default-excludes: true
+    excludes: [
+        "**/static/**", # Those are pre-processed client-side scripts
+        "**/js/**", # Those are client-side scripts
+        "**/controllers/**", # We can't test controllers without too much mocking
+        "**/server/EventEmitter.js", # Third-party library
+        "**/modules/*.js", # Those are just wrappers around modules
+        "bin/*", # Those are task files
+        "**/scripts/payment/processor/*", # Those are payment processor files, we don't test them
+        "webpack.config.js", # This is webpack config for javascript
+    "cartridges/int_googleFeed/cartridge/scripts/**", # Old legacy code
+    "cartridges/int_googletags/cartridge/controllers/**", # Old legacy code
+    "cartridges/int_googletags/cartridge/scripts/**", # Old legacy code
+    "cartridges/int_orderstatus/cartridge/scripts/**", # Old legacy code
+    "cartridges/bc_job_components/cartridge/scripts/**", # Old legacy code
+    "cartridges/int_handlerframework/cartridge/scripts/**", # Old legacy code
+    "cartridges/int_handlerframework/cartridge/controllers/**", # Old legacy code
+    "cartridges/int_marketing_cloud/cartridge/scripts/**", # Old legacy code
+    "cartridges/int_marketing_cloud/cartridge/controllers/**", # Old legacy code
+    "cartridges/app_demo/cartridge/scripts/**", # Old legacy code
+    "cartridges/app_test/cartridge/scripts/**", # Old legacy code
+    "cartridges/app_test/cartridge/controllers/**", # Old legacy code
+    "cartridges/plugin_blog/cartridge/scripts/**", # Old legacy code
+    "cartridges/plugin_blog/cartridge/controllers/**", # Old legacy code
+    "cartridges/int_ordervelocityengine/cartridge/scripts/**", #Old legacy code
+    "cartridges/int_bazaarvoice_sfra/cartridge/scripts/**",
+    "cartridges/int_bazaarvoice_sfra/cartridge/controllers/**",
+    "cartridges/bc_bazaarvoice/cartridge/scripts/**",
+    "cartridges/bc_bazaarvoice/cartridge/controllers/**",
+    "cartridges/int_monetate/cartridge/scripts/**",
+    "cartridges/int_monetate/cartridge/controllers/**",
+    "cartridges/content_accelerator/**",
+        "**/build_tools/**" # These are javascript build tools that don't need to be tested
+    ]
+    include-all-sources: true

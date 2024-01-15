@@ -1,0 +1,128 @@
+/////////////////////////////////
+// Nth-of-type mixins
+/////////////////////////////////
+
+// Select The First nth Elements - pass in 1 to select the first-of-type selector, or pass in n get the first nth elements
+// ex:  @include first(3) {
+//     color: $black;
+// }
+//---------------------------------------
+
+@mixin first($num: 1) {
+    @if $num == 1 {
+        &:first-of-type {
+            @content;
+        }
+    } @else {
+        &:nth-of-type(-n+#{$num}) {
+            @content;
+        }
+    }
+}
+
+// Select The Last nth Elements - pass in 1 to select the last-of-type selector, or pass in n get the last nth elements
+//---------------------------------------
+
+@mixin last($num: 1) {
+    @if $num == 1 {
+        &:last-of-type {
+            @content;
+        }
+    } @else {
+        &:nth-last-of-type(-n+#{$num}) {
+            @content;
+        }
+    }
+}
+
+// Select Single nth Element
+// ex: passing in 3 would select the 3rd
+//---------------------------------------
+
+@mixin nth($num) {
+    &:nth-of-type(#{$num}) {
+        @content;
+    }
+}
+
+// Evens - select all even elements in the list of selected elements
+//---------------------------------------
+
+@mixin even() {
+    &:nth-of-type(even) {
+        @content;
+    }
+}
+
+// Odds - select the odd elements in the list of selected elements
+//---------------------------------------
+
+@mixin odd() {
+    &:nth-of-type(odd) {
+        @content;
+    }
+}
+
+// Select Every nth Element
+// ex: passing in 3 would highlight elements 3, 6, 9... ect
+//---------------------------------------
+
+@mixin each($num) {
+    &:nth-of-type(#{$num}n) {
+        @content;
+    }
+}
+
+// Select After nth Elements - select all elements after a certain number
+// ex: @include after(4) {color: $black;} //styles the 5th element and higher
+//---------------------------------------
+
+@mixin after($num) {
+    &:nth-of-type(n+#{$num + 1}) {
+        @content;
+    }
+}
+
+// Select From Last Elements - select a single element that is n from the end of the group
+//---------------------------------------
+
+@mixin from-end($num) {
+    &:nth-last-of-type(#{$num}) {
+        @content;
+    }
+}
+
+// Select All Between Two Elements
+// ex: @include between(1, 4) {color: red;}
+//---------------------------------------
+
+@mixin between($first, $last) {
+    &:nth-of-type(n+#{$first}):nth-of-type(-n+#{$last}) {
+        @content;
+    }
+}
+
+// Select All But One
+//---------------------------------------
+
+@mixin all-but($num) {
+    &:not(:nth-of-type(#{$num})) {
+        @content;
+    }
+}
+
+// Select All But The Last N
+// ex: @include all-but-last(2) - selects everything but the last two elements
+//---------------------------------------
+
+@mixin all-but-last($num: null) {
+    @if $num == 1 or $num == null {
+        &:nth-last-of-type(n+2) {
+            @content;
+        }
+    } @else {
+        &:nth-last-of-type(n+#{$num + 1}) {
+            @content;
+        }
+    }
+}

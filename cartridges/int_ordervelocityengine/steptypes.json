@@ -1,0 +1,26 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.OrderVelocityEngine",
+                "module": "int_ordervelocityengine/cartridge/scripts/OrderVelocityEngine.js",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

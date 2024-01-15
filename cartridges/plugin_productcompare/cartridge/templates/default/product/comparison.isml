@@ -1,0 +1,53 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+    </isscript>
+
+<div class="search-banner">
+    <h1 class="header cat-page-title container">
+        ${pdict.category.name}
+    </h1>
+
+    <iscomment>
+        mobile and desktop category banners are taken from category attributes.
+        If only one image is provided, use that in all viewports.
+        if no image, the space collapses
+    </iscomment>
+    <isset name="mobileImageUrl" value="${!empty(pdict.category.mobileImgUrl) ? pdict.category.mobileImgUrl : ''}" scope="page"/>
+    <isset name="desktopImageUrl" value="${!empty(pdict.category.imgUrl) ? pdict.category.imgUrl : ''}" scope="page"/>
+    <isif condition="${empty(mobileImageUrl) && !empty(desktopImageUrl)}">
+        <isset name="mobileImageUrl" value="${desktopImageUrl}" scope="page"/>
+    <iselseif condition="${!empty(mobileImageUrl) && empty(desktopImageUrl)}">
+        <isset name="desktopImageUrl" value="${mobileImageUrl}" scope="page"/>
+    </isif>
+    <isif condition="${!empty(mobileImageUrl)}">
+        <picture>
+           <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(min-width: 768px)" srcset="${desktopImageUrl}">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="${mobileImageUrl}" alt="${pdict.productSearch.category.name}">
+        </picture>
+    </isif>
+</div>
+
+    <div class="container product-comparison">
+        <div class="row">
+            <div class="col-3 back-to-results">
+                <button class="btn btn-outline-primary" onclick="history.back();">${Resource.msg('button.backtoresults', 'product', null)}</button>
+            </div>
+        </div>
+        <isif condition="${pdict.attributes.length > 0}">
+            <isinclude template="product/compareAttributes"/>
+        <iselse>
+            <div class="row compare-columns product-grid">
+                <isloop items="${pdict.pids}" var="productId">
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', productId, 'swatches', true, 'ratings', true, 'compare', false)}" />
+                    </div>
+                </isloop>
+            </div>
+        </isif>
+    </div>
+</isdecorate>

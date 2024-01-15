@@ -1,0 +1,33 @@
+<div class="header-banner slide-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <nav role="navigation">
+        <div class="header container-fluid condensed-header">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbar-header brand">
+                        <a href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <issvg icon="logo" image="true" altText="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="pull-right">
+                            <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                                <isinclude url="${URLUtils.url('Cart-MiniCart', 'header', 'condensed')}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

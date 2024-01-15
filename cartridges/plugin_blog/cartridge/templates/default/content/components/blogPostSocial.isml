@@ -1,0 +1,15 @@
+<div class="blog-social">
+    <div class="blog-social-title h4">${Resource.msg('blog.sharethisarticle', 'blog', null)}</div>
+    <div class="blog-social-icons">
+        <div class="addthis_toolbox">
+            <div class="custom_images">
+                <a class="blog-social-link addthis_button_facebook">
+                    <img class="icon" src="${URLUtils.staticURL('/images/svg-icons/social-facebook.svg')}" alt="Facebook" />
+                </a>
+                <a class="blog-social-link addthis_button_twitter">
+                    <img class="icon" src="${URLUtils.staticURL('/images/svg-icons/social-twitter.svg')}" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="dynositeEnable">
+                <display-name xml:lang="x-default">Enable Dynosite Features</display-name>
+                <description xml:lang="x-default"></description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="dynositeAllPartsCategoryId">
+                <display-name xml:lang="x-default">Dynosite All Parts Category ID</display-name>
+                <description xml:lang="x-default"></description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>all-parts</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+           <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+                <attribute attribute-id="enablePDPWhereToBuy"/>
+                <attribute attribute-id="enableProductBadges"/>
+                <attribute attribute-id="maxOrderQty"/>
+                <attribute attribute-id="enableConsentTracking"/>
+                <attribute attribute-id="youtubeImageURL"/>
+                <attribute attribute-id="productTileA2CProductTypes"/>
+                <attribute attribute-id="productTileStockMsgEnabled"/>
+                <attribute attribute-id="productTilePartReplacesEnabled"/>
+                <attribute attribute-id="cartSlotType"/>
+                <attribute attribute-id="cartAccessoryRecommendationsCount"/>
+                <attribute attribute-id="formHandlerEmailsTo"/>
+                <attribute attribute-id="dynositeEnable"/>
+                <attribute attribute-id="dynositeAllPartsCategoryId"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <!-- <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="dynosite">
+                <display-name xml:lang="x-default">Dynosite</display-name>
+                <description xml:lang="x-default">Is a Dynosite Product</description>
+                <type>boolean</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Dynosite">
+                <display-name xml:lang="x-default">Dynosite</display-name>
+                <attribute attribute-id="dynosite"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>-->
+</metadata>

@@ -1,0 +1,46 @@
+var Cipher = require('dw/crypto').Cipher;
+
+var key = 'ZUqAC/ShGIKKFUte7PAw8Kv8MtYJbF5JI/4dnYssBKg=',		   
+	transformation = 'AES/ECB/PKCS5Padding',
+	salt = '00B7031FBBA990D7',
+	iterations = 1;
+
+//-------------------------------------------------------------------------------------
+//Description:
+//	Encryts a string 
+//-------------------------------------------------------------------------------------
+function encrypt(stringToEncrypt) {
+	if (stringToEncrypt) {		
+		return new Cipher().encrypt(stringToEncrypt, key, transformation, salt, iterations);
+	} else {
+		return stringToEncrypt;
+	}
+};
+
+//-------------------------------------------------------------------------------------
+//Description:
+//	Decrypts a string
+//-------------------------------------------------------------------------------------
+function decrypt(stringToDecrypt) {
+	if (stringToDecrypt) {
+		try {			
+			return new Cipher().decrypt(stringToDecrypt, key, transformation, salt, iterations);
+		} catch (err) {
+			return null;
+		}
+	} else {
+		return stringToDecrypt;
+	}
+};	
+
+function throwException() {
+	throw Error("demo exception");
+};
+
+function doesNotThrowException() {		
+};
+	
+module.exports.encrypt = encrypt;
+module.exports.decrypt = decrypt;
+module.exports.throwException = throwException;
+module.exports.doesNotThrowException = doesNotThrowException;

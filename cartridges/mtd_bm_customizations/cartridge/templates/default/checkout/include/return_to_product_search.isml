@@ -1,0 +1,8 @@
+<div class="row hidden" id="returnToProductSearch">
+    <div class="col-6">
+        <form action="${URLUtils.url('EpcotOrderConsumer-StartBasket')}" method="GET">
+            <input type="hidden" name="commerceStore" value="${pdict.commerceStore}"/>
+            <button type="submit" class="btn btn-primary btn-lg">Return to Product Search</button>
+        </form>
+    </div>
+</div>

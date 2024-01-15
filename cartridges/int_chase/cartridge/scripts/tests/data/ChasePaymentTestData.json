@@ -1,0 +1,99 @@
+{
+    "creditCard": {
+        "valid": {
+            "Visa": {
+                "fullName": "Tester Payer",
+                "number": "4788250000028291",
+                "expiration": "202210",
+                "cvv": "123"
+            },
+            "Master": {
+                "fullName": "Tester Payer",
+                "number": "5454545454545454",
+                "expiration": "202205",
+                "cvv": "123"
+            },
+            "Amex": {
+                "fullName": "Tester Payer",
+                "number": "371449635398431",
+                "expiration": "202205",
+                "cvv": "1234"
+            },
+            "Discover": {
+                "fullName": "Tester Payer",
+                "number": "6011000995500000",
+                "expiration": "202205",
+                "cvv": "123"
+            }
+        },
+        "invalid": {
+            "Visa": {
+                "fullName": "Tester Payer",
+                "number": "4111111111111111",
+                "expiration": "202205",
+                "cvv": "758"
+            },
+            "Master": {
+                "fullName": "Tester Payer",
+                "number": "5105105105105100",
+                "expiration": "202205",
+                "cvv": "758"
+            }
+        }
+       
+    },
+    "savedCard": {
+        "valid": {
+            "Visa": {
+                "fullName": "Tester Payer",
+                "customerRefNum": "96839782",
+                "expiration": "05/22",
+                "cvv": "123"
+            },
+            "Master": {
+                "fullName": "Tester Payer",
+                "customerRefNum": "96839784",
+                "expiration": "05/22",
+                "cvv": "758"
+            },
+            "Amex": {
+                "fullName": "Tester Payer",
+                "customerRefNum": "96839786",
+                "expiration": "05/22",
+                "cvv": "1234"
+            },
+            "Discover": {
+                "fullName": "Tester Payer",
+                "customerRefNum": "96839788",
+                "expiration": "05/22",
+                "cvv": "758"
+            }
+        },
+        "invalid": {
+            "Visa": {
+                "fullName": "Tester Payer",
+                "customerRefNum": "90039784",
+                "expiration": "05/18",
+                "cvv": "123"
+            },
+            "Master": {
+                "fullName": "Tester Payer",
+                "customerRefNum": "90039785",
+                "expiration": "05/18",
+                "cvv": "758"
+            }
+        }
+    },
+    "address": {
+        "valid": {
+             "fullName": "Alexei Volosozhar",
+             "address1": "1913 Sherman Ave",
+             "address2": "Apt D2",
+             "city": "Evanston",
+             "state": "IL",
+             "zip": "60201",
+             "countryCode": "US",
+             "phone": "333-333-3333"
+        }
+    }
+}

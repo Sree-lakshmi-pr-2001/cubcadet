@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="gardening-blog">
+        <display-name xml:lang="x-default">Gardening</display-name>
+        <description xml:lang="x-default">Gardening category folder for blog articles</description>
+        <online-flag>true</online-flag>
+        <parent>blog</parent>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="image">images/blog/category-folder/folder-gardening.jpg</custom-attribute>
+        </custom-attributes>
+    </folder>
+
+    <folder folder-id="cultivators-blog">
+        <display-name xml:lang="x-default">Cultivators</display-name>
+        <description xml:lang="x-default">Cultivator category folder for blog articles, child of Gardening</description>
+        <online-flag>true</online-flag>
+        <parent>gardening-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="garden-tips-blog">
+        <display-name xml:lang="x-default">Garden Tips</display-name>
+        <description xml:lang="x-default">Garden Tips category folder for blog articles, child of Gardening</description>
+        <online-flag>true</online-flag>
+        <parent>gardening-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="gardenscaping-blog">
+        <display-name xml:lang="x-default">Gardenscaping</display-name>
+        <description xml:lang="x-default">Gardenscaping category folder for blog articles, child of Gardening</description>
+        <online-flag>true</online-flag>
+        <parent>gardening-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="planting-tips-blog">
+        <display-name xml:lang="x-default">Planting Tips</display-name>
+        <description xml:lang="x-default">Planting Tips category folder for blog articles, child of Gardening</description>
+        <online-flag>true</online-flag>
+        <parent>gardening-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="soil-penetration-blog">
+        <display-name xml:lang="x-default">Soil Penetration</display-name>
+        <description xml:lang="x-default">Soil Penetration category folder for blog articles, child of Gardening</description>
+        <online-flag>true</online-flag>
+        <parent>gardening-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="tillers-blog">
+        <display-name xml:lang="x-default">Tillers</display-name>
+        <description xml:lang="x-default">Tillers category folder for blog articles, child of Gardening</description>
+        <online-flag>true</online-flag>
+        <parent>gardening-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="lawn-care-blog">
+        <display-name xml:lang="x-default">Lawn Care</display-name>
+        <description xml:lang="x-default">Lawn Care category folder for blog articles</description>
+        <online-flag>true</online-flag>
+        <parent>blog</parent>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="image">images/blog/category-folder/folder-gardening.jpg</custom-attribute>
+        </custom-attributes>
+    </folder>
+
+    <folder folder-id="edger-blog">
+        <display-name xml:lang="x-default">Edger</display-name>
+        <description xml:lang="x-default">Edger category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="flex-blog">
+        <display-name xml:lang="x-default">Flex</display-name>
+        <description xml:lang="x-default">Flex category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="general-lawn-care-blog">
+        <display-name xml:lang="x-default">General Lawn Care</display-name>
+        <description xml:lang="x-default">General Lawn Care category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="maintenance-blog">
+        <display-name xml:lang="x-default">Maintenance</display-name>
+        <description xml:lang="x-default">Maintenance category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="riding-mower-blog">
+        <display-name xml:lang="x-default">Riding Mower</display-name>
+        <description xml:lang="x-default">Riding Mower category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="string trimmers-blog">
+        <display-name xml:lang="x-default">String Trimmers</display-name>
+        <description xml:lang="x-default">String Trimmers category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="walk-behind-mower-blog">
+        <display-name xml:lang="x-default">Walk-Behind Mower</display-name>
+        <description xml:lang="x-default">Walk-Behind Mower category folder for blog articles, child of Lawn Care</description>
+        <online-flag>true</online-flag>
+        <parent>lawn-care-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="snow-blog">
+        <display-name xml:lang="x-default">Snow</display-name>
+        <description xml:lang="x-default">Snow category folder for blog articles</description>
+        <online-flag>true</online-flag>
+        <parent>blog</parent>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="image">images/blog/category-folder/folder-gardening.jpg</custom-attribute>
+        </custom-attributes>
+    </folder>
+
+    <folder folder-id="snow-blower-maintenance-blog">
+        <display-name xml:lang="x-default">Snow Blower Maintenance</display-name>
+        <description xml:lang="x-default">Snow Blower Maintenance category folder for blog articles, child of Snow</description>
+        <online-flag>true</online-flag>
+        <parent>snow-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="snow-blower-tips-blog">
+        <display-name xml:lang="x-default">Snow Blower Tips</display-name>
+        <description xml:lang="x-default">Snow Blower Tips category folder for blog articles, child of Snow</description>
+        <online-flag>true</online-flag>
+        <parent>snow-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="snow-blowers-blog">
+        <display-name xml:lang="x-default">Snow Blowers</display-name>
+        <description xml:lang="x-default">Snow Blowers category folder for blog articles, child of Snow</description>
+        <online-flag>true</online-flag>
+        <parent>snow-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="snow-removal-tips-blog">
+        <display-name xml:lang="x-default">Snow Removal Tips</display-name>
+        <description xml:lang="x-default">Snow Removal Tips category folder for blog articles, child of Snow</description>
+        <online-flag>true</online-flag>
+        <parent>snow-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="trees-leaves-blog">
+        <display-name xml:lang="x-default">Trees and Leaves</display-name>
+        <description xml:lang="x-default">Trees and Leaves category folder for blog articles</description>
+        <online-flag>true</online-flag>
+        <parent>blog</parent>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="image">images/blog/category-folder/folder-gardening.jpg</custom-attribute>
+        </custom-attributes>
+    </folder>
+
+    <folder folder-id="chipper-shredders-blog">
+        <display-name xml:lang="x-default">Chipper Shredders</display-name>
+        <description xml:lang="x-default">Chipper Shredders category folder for blog articles, child of Trees and Leaves</description>
+        <online-flag>true</online-flag>
+        <parent>trees-leaves-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="clean-up-tips-blog">
+        <display-name xml:lang="x-default">Clean Up Tips</display-name>
+        <description xml:lang="x-default">Clean Up Tips category folder for blog articles, child of Trees and Leaves</description>
+        <online-flag>true</online-flag>
+        <parent>trees-leaves-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="leaf-blowers-blog">
+        <display-name xml:lang="x-default">Leaf Blowers</display-name>
+        <description xml:lang="x-default">Leaf Blowers category folder for blog articles, child of Trees and Leaves</description>
+        <online-flag>true</online-flag>
+        <parent>trees-leaves-blog</parent>
+        <page-attributes/>
+    </folder>
+
+    <folder folder-id="log-splitters-blog">
+        <display-name xml:lang="x-default">Log Splitters</display-name>
+        <description xml:lang="x-default">Log Splitters category folder for blog articles, child of Trees and Leaves</description>
+        <online-flag>true</online-flag>
+        <parent>trees-leaves-blog</parent>
+        <page-attributes/>
+    </folder>
+</library>

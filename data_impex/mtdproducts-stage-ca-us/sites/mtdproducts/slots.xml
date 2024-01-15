@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="suppliers" configuration-id="New Slot Configuration - 2020-03-31 21:56:16" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="wolf-garten-brand" configuration-id="New Slot Configuration - 2020-05-20 15:48:38" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="about-us" configuration-id="New Slot Configuration - 2020-06-17 12:39:53" assigned-to-site="false">
+        <template>slots/product/product_1x2.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <products/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="about-us" configuration-id="aboutpage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-about-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="about-us" configuration-id="aboutpage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-about-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="about-us" configuration-id="aboutpage-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-about-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="about-us" configuration-id="aboutpage-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-about-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-4" context="category" context-id="about-us" configuration-id="aboutpage-slot-4-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-about-asset-4"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-5" context="category" context-id="about-us" configuration-id="aboutpage-slot-5-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-about-asset-5"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="archive-news" configuration-id="archive-news-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-news-archive-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="bio" configuration-id="biopage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-bio-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="bio" configuration-id="biopage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-bio-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="bolens-brand" configuration-id="bolens-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-bolens-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="bolens-brand" configuration-id="bolens-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-bolens-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="our-brands" configuration-id="brandpage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="brands" configuration-id="brandpage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="brands" configuration-id="brandpage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="ca-policy" configuration-id="capolicy-page-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-ca-policy-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="ca-policy" configuration-id="capolicy-page-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-ca-policy-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="careers" configuration-id="career-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-careers-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="careers" configuration-id="careers-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-careers-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="careers" configuration-id="careerspage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-careers-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="yardman-brand" configuration-id="columbia-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-yardman-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="columbia-brand" configuration-id="columbia-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-columbia-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="columbia-brand" configuration-id="columbia-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-columbia-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="community" configuration-id="community-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-community-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="community" configuration-id="community-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-community-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="community" configuration-id="community-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-community-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="contact" configuration-id="contact-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-contact-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="contact" configuration-id="contact-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-contact-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="cub-brand" configuration-id="cub-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-cub-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="cub-brand" configuration-id="cub-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-cub-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="header-banner-m" context="global" configuration-id="header-util-slot" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-header-util"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="history" configuration-id="historypage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-history-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="history" configuration-id="historypage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-history-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="our-brands" configuration-id="historypage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-history-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="homepage-hero-mtdparts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-home-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="leadership" configuration-id="leadershippage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-leadership-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="leadership" configuration-id="leadershippage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-leadership-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="locations" configuration-id="locations-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-locations-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="locations" configuration-id="locations-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-locations-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="contact" configuration-id="mtdproducts-contactpage-brand-carousel" default="true" assigned-to-site="false">
+        <template>slots/content/brandCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="brand-cubcadet"/>
+                <content-asset content-id="brand-troybilt"/>
+                <content-asset content-id="brand-rover"/>
+                <content-asset content-id="brand-wolfgarten"/>
+                <content-asset content-id="brand-robomow"/>
+                <content-asset content-id="brand-mtdparts"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-1" context="global" configuration-id="mtdproducts-home-content-one" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-homepage-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="mtdproducts-home-content-three" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-homepage-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="mtdproducts-home-content-two" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-homepage-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="mtdproducts-homepage-brand-carousel" default="true" assigned-to-site="false">
+        <template>slots/content/brandCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="brand-cubcadet"/>
+                <content-asset content-id="brand-troybilt"/>
+                <content-asset content-id="brand-rover"/>
+                <content-asset content-id="brand-wolfgarten"/>
+                <content-asset content-id="brand-robomow"/>
+                <content-asset content-id="brand-mtdparts"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="product-recalls" configuration-id="mtdproducts-product-recalls-asset-1" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-product-recalls-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="product-recalls" configuration-id="mtdproducts-product-recalls-hero" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-product-recalls-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="news" configuration-id="news-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-news-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="news" configuration-id="news-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-news-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="mtd-parts-brand" configuration-id="parts-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-parts-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="mtd-parts-brand" configuration-id="parts-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-parts-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="privacy-policy" configuration-id="privacy-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-privacy-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="privacy-policy" configuration-id="privacypage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-privacy-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="product-recalls-archive" configuration-id="product-recall-archive-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-product-recalls-archive-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="product-recalls-archive" configuration-id="product-recalls-archive-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-product-recalls-archive-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="archive-news" configuration-id="remington-archive-news-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-product-archive-news-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="remington-brand" configuration-id="remington-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-remington-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="remington-brand" configuration-id="remington-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-remington-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="responsibility" configuration-id="responsibilitypage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-responsibility-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="responsibility" configuration-id="responsibilitypage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-responsibility-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="responsibility" configuration-id="responsibilitypage-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-responsibility-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="responsibility" configuration-id="responsibilitypage-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-responsibility-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-4" context="category" context-id="responsibility" configuration-id="responsibilitypage-slot-4-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-responsibility-asset-4"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-5" context="category" context-id="responsibility" configuration-id="responsibilitypage-slot-5-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-responsibility-asset-5"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="robomow-brand" configuration-id="robomow-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-robomow-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="robomow-brand" configuration-id="robomow-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-robomow-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="rover-brand" configuration-id="rover-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-rover-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="rover-brand" configuration-id="rover-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-rover-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-battery" configuration-id="safety-battery-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-battery-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-battery" configuration-id="safety-battery-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-battery-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="safety-battery" configuration-id="safety-battery-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-battery-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="safety-battery" configuration-id="safety-battery-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-battery-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-fire" configuration-id="safety-fire-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-fire-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-fire" configuration-id="safety-fire-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-fire-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="safety-fire" configuration-id="safety-fire-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-fire-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="safety-fire" configuration-id="safety-fire-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-fire-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-handheld" configuration-id="safety-handheld-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-handheld-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-handheld" configuration-id="safety-handheld-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-handheld-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="safety-handheld" configuration-id="safety-handheld-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-handheld-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="safety-handheld" configuration-id="safety-handheld-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-handheld-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-kids" configuration-id="safety-kids-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-kids-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-kids" configuration-id="safety-kids-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-kids-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="safety-kids" configuration-id="safety-kids-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-kids-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="safety-kids" configuration-id="safety-kids-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-kids-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-riding-mowers" configuration-id="safety-riding-mowers-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-riding-mower-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-riding-mowers" configuration-id="safety-riding-mowers-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-riding-mower-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="safety-riding-mowers" configuration-id="safety-riding-mowers-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-riding-mower-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="safety-riding-mowers" configuration-id="safety-riding-mowers-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-riding-mower-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-snow-blowers" configuration-id="safety-snow-blower-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-snow-thrower-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-snow-blowers" configuration-id="safety-snow-blower-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-snow-thrower-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety-walk-behind" configuration-id="safety-walk-behind-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-walk-hehind-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety-walk-behind" configuration-id="safety-walk-behind-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-walk-behind-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="safety-walk-behind" configuration-id="safety-walk-behind-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-walk-behind-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="safety-walk-behind" configuration-id="safety-walk-behind-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-walk-behind-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="safety" configuration-id="safetypage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="product-safety" configuration-id="safetypage-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="safety" configuration-id="safetypage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="product-safety" configuration-id="safetypage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="product-safety" configuration-id="safetypage-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-safety-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="community" configuration-id="slotpage-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-community-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="suppliers" configuration-id="suppliers-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-suppliers-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="suppliers" configuration-id="suppliers-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-suppliers-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-2" context="category" context-id="suppliers" configuration-id="suppliers-slot-2-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-suppliers-asset-2"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-3" context="category" context-id="suppliers" configuration-id="suppliers-slot-3-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-suppliers-asset-3"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="troybilt-brand" configuration-id="troybilt-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-troybilt-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="troybilt-brand" configuration-id="troybilt-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-troybilt-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="wolf-garten-brand" configuration-id="wolf-garten-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-wolf-garten-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="wolf-garten-brand" configuration-id="wolf-garten-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-wolf-garten-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-hero" context="category" context-id="yard-machine-brand" configuration-id="yard-machine-brand-hero-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-yard-machines-brand-hero"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="yard-machine-brand" configuration-id="yard-machines-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-yard-machines-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="category-slot-1" context="category" context-id="yardman-brand" configuration-id="yardman-brand-slot-1-mtdproducts" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="mtdproducts-yardman-brand-asset-1"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

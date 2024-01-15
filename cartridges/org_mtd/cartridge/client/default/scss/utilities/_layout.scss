@@ -1,0 +1,38 @@
+
+//  Center Elements - Requires Relative or Absolute positioning & parent element requires Relative positioning
+//---------------------------------------
+
+@mixin centerElement($elePosition: center, $positioning: absolute) {
+    position: $positioning;
+
+    @if $elePosition == center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @if $elePosition == horizontal {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if $elePosition == vertical {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// Full-Bleed (using VW's)
+//---------------------------------------
+
+@mixin full-bleed-width() {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+}
+
+// can be applied to elements that already receive the full-bleed styling to override within a particular viewport
+
+@mixin override-full-bleed() {
+    width: auto;
+    max-width: 0;
+    margin-left: initial;
+}

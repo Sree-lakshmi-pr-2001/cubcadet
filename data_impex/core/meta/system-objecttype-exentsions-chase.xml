@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="PaymentTransaction">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="chaseApprovalStatus">
+                <display-name xml:lang="x-default">Chase Approval Status</display-name>
+                <description xml:lang="x-default">Transaction detail to capture.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseCustomerReferenceNumber">
+                <display-name xml:lang="x-default">Chase Customer Profile Number</display-name>
+                <description xml:lang="x-default">Token for account used as order payment.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseRespCode">
+                <display-name xml:lang="x-default">Chase Response Code</display-name>
+                <description xml:lang="x-default">Transaction detail to capture.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseRespDateTime">
+                <display-name xml:lang="x-default">Chase Response Date/Time</display-name>
+                <description xml:lang="x-default">Transaction detail to capture.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseTxRefIdx">
+                <display-name xml:lang="x-default">Chase Transaction Reference Index</display-name>
+                <description xml:lang="x-default">Transaction detail to capture.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseTxRefNum">
+                <display-name xml:lang="x-default">Chase Transaction Reference Number</display-name>
+                <description xml:lang="x-default">Transaction detail to capture.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseMerchantId">
+                <display-name xml:lang="x-default">Chase Merchant ID</display-name>
+                <description xml:lang="x-default">Merchant ID for order export.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+    
+    <type-extension type-id="CustomerPaymentInstrument">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="chaseCustomerReferenceNumber">
+                <display-name xml:lang="x-default">Chase Customer Profile Number</display-name>
+                <description xml:lang="x-default">Token for account saved for future use.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+    
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="chaseMerchantId">
+                <display-name xml:lang="x-default">Chase Merchant ID</display-name>
+                <description xml:lang="x-default">The Merchant ID to use for transactions.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseTerminalId">
+                <display-name xml:lang="x-default">Chase Terminal ID</display-name>
+                <description xml:lang="x-default">The Terminal ID to use for transactions.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>001</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseSoapVersion">
+                <display-name xml:lang="x-default">Chase SOAP Version</display-name>
+                <description xml:lang="x-default">Version of SOAP request</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>3.7</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="chaseSoapBin">
+                <display-name xml:lang="x-default">Chase SOAP Bin</display-name>
+                <description xml:lang="x-default">Bin of SOAP request</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>000001</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Chase">
+                <display-name xml:lang="x-default">Chase</display-name>
+                <attribute attribute-id="chaseMerchantId"/>
+                <attribute attribute-id="chaseSoapVersion"/>
+                <attribute attribute-id="chaseSoapBin"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

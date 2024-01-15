@@ -1,0 +1,22 @@
+<isscript>
+    var Resource = require('dw/web/Resource');
+    var URLUtils = require('dw/web/URLUtils');
+</isscript>
+<body>
+    <p>${Resource.msg('gtc.orderReviewGreetings.text1','email', null)}</p>
+    <p>${Resource.msg('gtc.orderReviewGreetings.text2','email', null)}</p>
+    <p>${Resource.msgf('gtc.orderReviewMessage.text1','email', null, pdict.siteName , pdict.orderId)}</p>
+    <p>${Resource.msg('gtc.orderReviewMessage.text2','email', null)}</p>
+    <p>${Resource.msg('gtc.orderReviewMessage.text3','email', null)}</p>
+
+    <a style="background-color:#58FF33;width:100px;height:100px;padding:10px;marging:10px;font-size:17px;color:#FFFFFF;font-weight:700;border-radius:5%;margin-right:20px;"
+    href="${URLUtils.abs('EpcotOrderConsumer-OrderProcessedByReviewer','orderNo', pdict.encodedOrderNo,'process','APPROVED')}"
+    role="button" >Approve Order</a>
+
+    <a style="background-color:#FF5233;width:100px;height:100px;padding:10px;marging:10px;font-size:17px;color:#FFFFFF;font-weight:700;border-radius:5%"
+    href="${URLUtils.abs('EpcotOrderConsumer-OrderProcessedByReviewer','orderNo', pdict.encodedOrderNo,'process','NOT_APPROVED')}"
+    role="button" >Decline Order</a>
+    <p>${Resource.msgf('gtc.orderReviewCustomer_info.text','email', null)}</p>${pdict.customerInfo}
+    <p>${Resource.msgf('gtc.RefinitiveScreening_Shipping.text','email', null, pdict.shippingGTCStatusResponse ? pdict.shippingGTCStatusResponse : 'Refinitive Screening was succeeded for Shipping.')}</p>
+    <p>${Resource.msgf('gtc.RefinitiveScreening_Billing.text','email', null, pdict.billingGTCStatusResponse ? pdict.billingGTCStatusResponse : 'Refinitive Screening was succeeded for Billing.')}</p>
+</body>

@@ -1,0 +1,37 @@
+<isset name="dealer" value="${pdict.dealer}" scope="page"/>
+<isset name="categories" value="${pdict.categories}" scope="page"/>
+<isscript>
+    var URLUtils = require('dw/web/URLUtils');
+</isscript>
+<div class="row">
+<isloop items="${pdict.categories}" var="category">
+<!-- CARD -->
+    <div class="col-12 col-lg-4 product-col" category="${category.getID()}">
+        <div class="card category-card-dealer" style="background-image: url('${category.custom.dealerBackgroundImage.absURL}')">
+            <div class="card-body">
+                <h3 class="card-title">${category.displayName}</h3>
+                <isif condition="${!empty(category.description)}">
+                    <p class="card-text">${category.description}</p>
+                </isif>
+                <isif condition="${!empty(category.custom.dealerImage)}">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="${category.custom.dealerImage.absURL}">
+                        <source media="(min-width: 767px)" srcset="${category.custom.dealerImage.absURL}">
+                        <source media="(min-width: 480px)" srcset="${category.custom.dealerImage.absURL}">
+                        <img alt="category tile" class="primary-tile-image lazyload" data-src="${category.custom.dealerImage.absURL}" src="${category.custom.dealerImage.absURL}" title="${category.displayName}">
+                    </picture>
+                </isif>
+                <div class="category-cta">
+                    <a class="btn btn-outline-secondary btn-sm" href="${URLUtils.url('Search-Show', 'cgid', category.ID)}"
+                    id="category-${category.ID}" aria-label="${category.displayName}">
+                        ${category.displayName}
+                    </a>
+                    <a class="icon" href="${URLUtils.url('Search-Show', 'cgid', category.ID)}" aria-label="${category.displayName}"></a>
+                </div>
+                <a class="overlay-link" href="${URLUtils.url('Search-Show', 'cgid', category.ID)}" aria-hidden="true"></a>
+            </div>
+        </div>
+    </div>
+<!-- /CARD -->
+</isloop>
+</div>

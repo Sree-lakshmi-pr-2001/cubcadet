@@ -1,0 +1,68 @@
+.form-group {
+    label {
+        width: 100%; // iOS wrapping fix
+    }
+
+    .form-control-feedback {
+        display: none;
+    }
+
+    &.has-danger {
+        .form-control-feedback {
+            display: block;
+        }
+    }
+
+    &.required .form-control-label::before {
+        // No star for required but overwrite Bootstrap
+        content: "";
+    }
+}
+
+.form-group {
+    > .form-control-feedback {
+        display: none;
+        font-size: rem(13px);
+    }
+
+    &.has-danger,
+    &.has-warning {
+        > .form-control-feedback {
+            display: block;
+        }
+    }
+}
+
+.quantity-form {
+    input[type="button"] {
+        display: none;
+    }
+
+    .minus,
+    .plus {
+        position: relative;
+        top: -2px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .minus {
+        right: 7px;
+    }
+
+    .plus {
+        left: 7px;
+    }
+
+    input[type="text"] {
+        max-width: 50px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .icon {
+        pointer-events: none;
+    }
+}

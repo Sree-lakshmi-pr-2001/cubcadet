@@ -1,0 +1,79 @@
+.modal-content {
+    background-clip: padding-box;
+    border-radius: 0;
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+    border-bottom: $modal-header-border-width solid $modal-header-border-color;
+    border-top: $modal-border-top;
+    border-radius: 0;
+
+    h6 {
+        margin-bottom: 0;
+    }
+
+    .modal-title {
+        @include modal-header;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: rem(20px);
+        margin: 0;
+        opacity: 1;
+        color: $trans;
+        font-size: 0;
+
+        &:hover {
+            color: $trans;
+        }
+    }
+
+    button,
+    .btn {
+        &:hover,
+        &:active,
+        &:focus {
+            background: $trans;
+        }
+    }
+}
+
+.modal-body {
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-top: 0;
+
+    @include media-breakpoint-up(md) {
+        max-height: 70vh;
+    }
+}
+
+.modal-footer {
+    padding: rem(24px);
+    justify-content: flex-start;
+
+    .btn {
+        min-width: 120px;
+        margin-right: rem(10px);
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.video-modal {
+    .modal-dialog {
+        max-width: 85%;
+    }
+
+    .modal-body {
+        max-height: unset;
+        padding-top: rem(10px);
+    }
+}

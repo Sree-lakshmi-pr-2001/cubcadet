@@ -1,0 +1,45 @@
+{
+    "viewTypeMapping": {
+        "hi-res": "large",
+        "large":  "large",
+        "pdp":  "large",
+        "medium": "large",
+        "small": "large",
+        "360-view": "360view",
+        "swatch": "swatch"
+    },
+    "hi-res": {
+        "scaleWidth": 1000,
+        "scaleHeight": 1000
+    },
+    "360-view": {
+        "scaleWidth": 1000,
+        "scaleHeight": 1000
+    },
+    "large": {
+        "scaleWidth": 1000,
+        "scaleHeight": 1000
+    },
+    "pdp": {
+        "scaleWidth": 630,
+        "scaleHeight": 630
+    },
+    "medium": {
+        "scaleWidth": 400,
+        "scaleHeight": 400
+    },
+    "small": {
+        "scaleWidth": 140,
+        "scaleHeight": 140
+    },
+    "swatch": {
+       "scaleWidth": 20,
+       "scaleHeight": 20
+    },
+    "missingImages": {
+        "large": "images/noimagelarge.png",
+        "pdp": "images/noimagelarge.png",
+        "medium": "images/noimagemedium.png",
+        "small": "images/noimagesmall.png"
+    }
+}

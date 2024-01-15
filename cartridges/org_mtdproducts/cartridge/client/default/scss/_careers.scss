@@ -1,0 +1,134 @@
+.careers,
+.internships {
+    .content {
+        &.group {
+            .image {
+                height: 450px;
+                width: 100%;
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .btn {
+                width: 200px;
+                background-color: $button-green;
+                border-color: $button-green;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+
+        &.one {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .button {
+                text-align: center;
+            }
+
+            .button {
+                padding-bottom: 25px;
+            }
+
+            .img {
+                padding: 25px 0;
+            }
+
+            .msg {
+                padding: 25px 0;
+
+                .benefits,
+                .positions {
+                    padding-top: 50px;
+                    font-size: 16px;
+                    text-align: center;
+
+                    h2 {
+                        font-weight: bold;
+                    }
+
+                    .list-group-item {
+                        padding: 5px;
+                    }
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+
+                .culture,
+                .people {
+                    padding-top: 50px;
+
+                    h2 {
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        &.two {
+            padding: 0;
+
+            .msg {
+                height: auto;
+                background-color: $button-grey;
+                color: #fff;
+                font-size: 35px;
+                text-align: center;
+
+                .quote {
+                    margin: auto;
+                    padding-top: 10px;
+                    width: 90%;
+                }
+
+                .name {
+                    margin: auto;
+                    padding-bottom: 10px;
+                    width: 90%;
+                    text-align: right;
+                    font-size: 25px;
+                }
+
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .content {
+            &.one {
+                .msg {
+                    .benefits,
+                    .positions {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .content {
+            &.one {
+                .msg {
+                    padding: 0 100px;
+
+                    .culture,
+                    .people {
+                        h2 {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .img {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

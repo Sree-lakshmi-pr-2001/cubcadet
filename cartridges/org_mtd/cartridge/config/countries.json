@@ -1,0 +1,13 @@
+[{
+    "id": "en_US",
+    "currencyCode": "USD",
+    "currencySymbol": "$"
+}, {
+    "id": "en_CA",
+    "currencyCode": "CAD",
+    "currencySymbol": "$"
+}, {
+    "id": "fr_CA",
+    "currencyCode": "CAD",
+    "currencySymbol": "$"
+}]

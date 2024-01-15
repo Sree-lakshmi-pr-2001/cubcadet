@@ -1,0 +1,84 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+@import "~org/utilities/functions";
+@import "~org/utilities/layout";
+
+.account-dashboard {
+    .card {
+        border: $border;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+            min-height: 340px;
+        }
+    }
+
+    .card-header {
+        padding: rem(20px) 0;
+
+        h4 {
+            padding: 0 rem(14px);
+            font-size: rem(20px);
+        }
+    }
+
+    .card-body {
+        padding: rem(13px) rem(14px) rem(30px);
+
+        dl {
+            padding-bottom: rem(4px);
+        }
+
+        &.order-history-card-body {
+            padding-bottom: rem(15px);
+        }
+    }
+
+    &.order-history-card-body {
+        padding-bottom: rem(15px);
+    }
+
+    .card-footer {
+        background: $brand-light;
+        justify-content: flex-end;
+        margin-top: auto;
+        border-top: none;
+        padding: 0 rem(16px) rem(20px);
+
+        > a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+
+            &:not(.btn) {
+                font-size: rem(14px);
+            }
+
+            + a:not(.btn) {
+                margin-left: rem(17px);
+            }
+        }
+    }
+
+    .dashboard-cards-block-title {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .dashboard-order-card-image {
+        max-width: 120px;
+    }
+
+    .password {
+        position: relative;
+        top: 4px;
+    }
+}

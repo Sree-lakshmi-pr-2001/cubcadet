@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="ariPdpLink">
+                <display-name xml:lang="x-default">ARI Diagram Link on PDP</display-name>
+                <description xml:lang="x-default">Displays a ARI Parts Diagram Link on PDP.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Parts</display>
+                        <value>PARTS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Accessories</display>
+                        <value>ACCESSORY</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+
+        <group-definitions>
+            <attribute-group group-id="ARIPartStream">
+                <display-name xml:lang="x-default">ARI PartStream Diagrams</display-name>
+                <attribute attribute-id="ariEnabled"/>
+                <attribute attribute-id="ariJSURL"/>
+                <attribute attribute-id="ariAppKey"/>
+                <attribute attribute-id="ariBrandCode"/>
+                <attribute attribute-id="ariPdpLink"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+</metadata>

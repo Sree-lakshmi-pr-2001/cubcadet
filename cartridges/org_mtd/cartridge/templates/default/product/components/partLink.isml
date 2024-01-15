@@ -1,0 +1,15 @@
+<!--- TEMPLATENAME: partLink.isml --->
+<isif condition="${pdict.product.productType === 'variant' || pdict.product.productType === 'variationGroup'}">
+    <isset name="modelNo" value="${pdict.product.raw.masterProduct.ID}" scope="page" />
+<iselse>
+    <isset name="modelNo" value="${pdict.product.id}" scope="page" />
+</isif>
+
+<h4 class="attribute-name">
+    ${Resource.msg('product.partlink.title', 'product', null)}
+</h4>
+<ul>
+    <li class="attribute-values">
+        <a href="${URLUtils.url('Search-Show', 'q', modelNo)}" target="_blank" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('product.find.parts.for.model', 'product', null))}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('product.find.parts.for.model', 'product', null))}">${Resource.msg('product.find.parts.for.model', 'product', null)}</a>
+    </li>
+</ul>

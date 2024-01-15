@@ -1,0 +1,30 @@
+<isdecorate template="common/layout/epcot">
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/epcot-minicart.js');
+</isscript>
+    <script>
+        if(${pdict.audit === 'true'}){
+            document.getElementById('pageName').value= 'AuditOrderPage';
+        } else {
+            document.getElementById('pageName').value= 'OrderView';
+        }
+        
+    </script>
+
+    <isif condition="${pdict.audit === 'true'}"><input type="hidden" name="allowAudit" id="allowAudit" value="true"/></isif>
+    <isif condition="${pdict.canApproveOrders === true}"><input type="hidden" name="allowApproval" id="allowApproval" value="true"/></isif>
+
+	<input type="hidden" id="globalOrderNumber" name="globalOrderNumber" value="${pdict.order.order_no}"/>
+
+    <div class="row">
+        <div class="col-md-12">
+			<h2>Order Number: ${pdict.order.order_no}</h2>
+		</div>
+	</div>
+    <div class="row">
+        <div class="col-md-12">
+            <isinclude template="checkout/include/mini_cart.isml"/>
+        </div>
+	</div>
+</isdecorate>

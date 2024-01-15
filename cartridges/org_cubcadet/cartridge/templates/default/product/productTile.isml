@@ -1,0 +1,87 @@
+<isset name="isProductTile" value="${true}" scope="page" />
+<isset name="isQuickView" value="${false}" scope="page" />
+<isinclude template="/components/modules"/>
+<isinclude url="${URLUtils.url('Monetate-GetProductID', 'pid', product.id)}"/>
+<div class="product-tile"
+     data-product-name="${product.productName}"
+     data-product-extended-name="${product.extendedName ? product.extendedName : ''}"
+     data-monetate-pid="${product.id}"
+     data-monetate-producturl="${URLUtils.abs('Product-Show', 'pid', product.id)}" >
+    <!-- dwMarker="product" dwContentID="${product.UUID}" -->
+
+    <iscomment> Slider tiles have different image presets</iscomment>
+    <isif condition="${pdict.display.isSliderTile == true}">
+        <isinclude template="product/components/productTileSliderImage" />
+    <iselse>
+        <isinclude template="product/components/productTileImage" />
+    </isif>
+
+    <isset name="tileClassName" value="" scope="page" />
+
+    <isif condition="${((pdict.showAddToCartButton || pdict.showStockMessage) && pdict.display.compare) || (pdict.showPartReplacesWidget && product.replacesParts)}">
+        <isset name="tileClassName" value="tile-footer-xlg" scope="page" />
+    <iselseif condition="${pdict.showAddToCartButton && pdict.showStockMessage}">
+        <isset name="tileClassName" value="tile-footer-lg" scope="page" />
+    <iselseif condition="${pdict.showAddToCartButton || pdict.showStockMessage}">
+        <isset name="tileClassName" value="tile-footer-md" scope="page" />
+    <iselseif condition="${pdict.display.compare}">
+        <isset name="tileClassName" value="tile-footer-sm" scope="page" />
+    </isif>
+
+    <div class="tile-body ${tileClassName}">
+
+        <isinclude template="product/components/productTileName" />
+
+        <isset name="price" value="${product.price}" scope="page" />
+        <isif condition="${product.productType === 'set'}">
+            <isinclude template="product/components/pricing/setPrice" />
+        <iselse>
+            <isinclude template="product/components/pricing/main" />
+        </isif>
+
+        <isif condition="${pdict.display.ratings !== false}">
+            <div class="ratings">
+                <isinclude template="product/components/ratings" />
+            </div>
+        </isif>
+
+        <isif condition="${pdict.display.isCarbModal == true && product.features.length > 0}">
+            <div class="modal-feature-toggle">
+                <a class="show" href="${'#'}">${Resource.msg('carb.replace.tile.showfeatures', 'dealer', null)}</a>
+                <a class="hide" href="${'#'}">${Resource.msg('carb.replace.tile.hidefeatures', 'dealer', null)}</a>
+            </div>
+        </isif>
+
+        <isif condition="${pdict.display.isSliderTile !== true}">
+            <isinclude template="product/components/productTileFeatures" />
+        </isif>
+
+        <isif condition="${pdict.display.promos !== false}">
+            <isinclude template="product/components/promotions" />
+        </isif>
+
+        <isif condition="${pdict.display.swatches !== false}">
+            <isinclude template="product/components/productTileSwatch" />
+        </isif>
+    </div>
+    <!-- END_dwmarker -->
+
+    <isif condition="${product.productType === 'set'}">
+        <div id="productSetList" class="product-detail d-none">
+            <isloop items="${product.individualProductIds}" var="currentProductId" status="loopState">
+                <span class="product-id">${currentProductId}</span>
+            </isloop>
+        </div>
+    </isif>
+
+    <isif condition="${product && product.id}">
+    <isscript>
+        var storeMgr = require('dw/catalog/StoreMgr');
+        var dealerId = storeMgr.getStoreIDFromSession();
+    </isscript>
+            <isinclude template="search/components/tileButtonState" />
+       
+    </isif>
+    <isinclude template="product/productTileFooter" />
+</div>
+

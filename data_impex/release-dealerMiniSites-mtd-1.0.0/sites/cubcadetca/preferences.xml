@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances/>
+        <development/>
+        <staging/>
+        <production/>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="defaultStoreHeroImage">images/stores/heros/store-hero-default.png</preference>
+            <preference preference-id="defaultStoreLogoImage">images/stores/logos/store-logo-default.jpg</preference>
+        </development>
+        <staging>
+            <preference preference-id="defaultStoreHeroImage">images/stores/heros/store-hero-default.png</preference>
+            <preference preference-id="defaultStoreLogoImage">images/stores/logos/store-logo-default.jpg</preference>
+        </staging>
+        <production>
+            <preference preference-id="defaultStoreHeroImage">images/stores/heros/store-hero-default.png</preference>
+            <preference preference-id="defaultStoreLogoImage">images/stores/logos/store-logo-default.jpg</preference>
+        </production>
+    </custom-preferences>
+</preferences>
+

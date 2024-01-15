@@ -1,0 +1,56 @@
+<isdecorate template="common/layout/page">
+
+    <div >
+    </div>
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        if (pdict.googleMapsApi) {
+            assets.addJs(pdict.googleMapsApi);
+            assets.addJs('https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js');
+        }
+        assets.addJs('/js/locations.js');
+    </isscript>
+
+    <div class="${pdict.category.ID}">
+        <div class="jumbotron jumbotron-fluid p-0">
+            <div div aria-label="MTD Locations" class="hero" alt="Responsive hero image">
+                <div id="map"
+                    data-url-dark-green="${URLUtils.staticURL('images/DarkGreen.png')}" 
+                    data-url-light-green="${URLUtils.staticURL('images/LightGreen.png')}"
+                    data-url-m1="${URLUtils.staticURL('images/m1.png')}"
+                    data-url-split="${URLUtils.staticURL('images/split.png')}"
+                    data-map-id="${pdict.googleMapsID}">
+                </div>
+            </div>
+            <div class="hero-banner container-fluid">
+                <div class="d-flex justify-content-center justify-content-md-start h-100">
+                    <div class="align-self-center">
+                        <h1><span class="lt">${pdict.category.ID}</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content group one container-fluid">
+            <isslot id="category-slot-1" description="slot 1 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group two container-fluid">
+            <isslot id="category-slot-2" description="slot 2 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group three container-fluid">
+            <isslot id="category-slot-3" description="slot 3 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group four container-fluid">
+            <isslot id="category-slot-4" description="slot 4 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+
+        <div class="content group five container-fluid">
+            <isslot id="category-slot-5" description="slot 5 on category landing page" context="category" context-object="${pdict.category}" />
+        </div>
+    </div>
+
+</isdecorate>

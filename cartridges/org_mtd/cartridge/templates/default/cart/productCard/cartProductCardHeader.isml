@@ -1,0 +1,35 @@
+<isif condition="${lineItem.isBonusProductLineItem}" />
+    <div>${Resource.msg('msg.bonus.product','cart',null)}</div>
+</isif>
+<div class="line-item-header">
+    <div class="line-item-name">
+         <a href="${URLUtils.url('Product-Show', 'pid', lineItem.id)}">${lineItem.productName}</a>
+    </div>
+    <isif condition="${!lineItem.isBonusProductLineItem}"/>
+        <isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+        <div class="remove-line-item d-lg-none">
+            <button type="button" class="remove-btn remove-product btn btn-light" data-toggle="modal"
+                    data-target="#removeProductModal" data-pid="${lineItem.id}"
+                    data-name="${lineItem.productName}"
+                    data-action="${pdict.actionUrls.removeProductLineItemUrl}"
+                    data-uuid="${lineItem.UUID}"
+                    data-gtmdata="${JSON.stringify(tagManager.getProductData(lineItem.id))}"
+                    data-qty="${lineItem.quantity}"
+                    aria-label="remove ${lineItem.productName}">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="hidden-md-down">
+            <button type="button" class="remove-btn-lg remove-product btn btn-light" data-toggle="modal"
+                    data-target="#removeProductModal" data-pid="${lineItem.id}"
+                    data-name="${lineItem.productName}"
+                    data-action="${pdict.actionUrls.removeProductLineItemUrl}"
+                    data-uuid="${lineItem.UUID}"
+                    data-gtmdata="${JSON.stringify(tagManager.getProductData(lineItem.id))}"
+                    data-qty="${lineItem.quantity}"
+                    aria-label="remove ${lineItem.productName}">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </isif>
+</div>

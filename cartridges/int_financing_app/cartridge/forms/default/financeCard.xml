@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+    <field formid="accountNumber" label="label.input.finance.account.number" type="string" mandatory="true" binding="cardNumber"
+           min-length="16" max-length="19" missing-error="error.message.required" parse-error="error.message.financenumber.invalid"
+           regexp="^(?:\d[ -]*?){16,20}$" range-error="error.message.financenumber.invalid"/>
+
+    <field formid="planId" type="string" mandatory="false" binding="custom.planID"/>
+
+</form>

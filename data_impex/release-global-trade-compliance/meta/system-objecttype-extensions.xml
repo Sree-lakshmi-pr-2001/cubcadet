@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="globalComplianceCheckStatus">
+                <display-name xml:lang="x-default">globalComplianceCheckStatus</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">PENDING</display>
+                        <value>PENDING</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MANUAL</display>
+                        <value>MANUAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">APPROVED</display>
+                        <value>APPROVED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">NOT_APPROVED</display>
+                        <value>NOT_APPROVED</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="General">
+                <display-name xml:lang="x-default">General</display-name>
+                <attribute attribute-id="prop65Acknowledged"/>
+                <attribute attribute-id="addressValidated"/>
+                <attribute attribute-id="globalComplianceCheckStatus"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="GTCNotificationEmail">
+                <display-name xml:lang="x-default">GTC Notification Email</display-name>
+                <description xml:lang="x-default">Email to which the MANUAL orders notification will be sent to.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="customerServiceURL"/>
+                <attribute attribute-id="scheduleTestdriveURL"/>
+                <attribute attribute-id="testdriveProductTypes"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+                <attribute attribute-id="enablePDPWhereToBuy"/>
+                <attribute attribute-id="enableProductBadges"/>
+                <attribute attribute-id="maxOrderQty"/>
+                <attribute attribute-id="enableConsentTracking"/>
+                <attribute attribute-id="youtubeImageURL"/>
+                <attribute attribute-id="productTileA2CProductTypes"/>
+                <attribute attribute-id="productTileStockMsgEnabled"/>
+                <attribute attribute-id="productTilePartReplacesEnabled"/>
+                <attribute attribute-id="cartSlotType"/>
+                <attribute attribute-id="cartAccessoryRecommendationsCount"/>
+                <attribute attribute-id="formHandlerEmailsTo"/>
+                <attribute attribute-id="dynositeEnable"/>
+                <attribute attribute-id="dynositeAllPartsCategoryId"/>
+                <attribute attribute-id="see-details-link"/>
+                <attribute attribute-id="enableModelFilterOnSearchPage"/>
+                <attribute attribute-id="GTCNotificationEmail"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+</metadata>

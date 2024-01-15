@@ -1,0 +1,2 @@
+<!--- TEMPLATENAME: checkout.isml --->
+<input type="hidden" name="prop65VerifyUrl" id="prop65VerifyUrl" value="${URLUtils.https('Prop65-Verify')}" />

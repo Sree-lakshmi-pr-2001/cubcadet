@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="blog-landing-hero-carousel" context="folder" context-id="blog" configuration-id="implementation-blog-hero-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetHeroCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-hero-left-troybilt-sample"/>
+                <content-asset content-id="home-hero-center-troybilt-sample"/>
+                <content-asset content-id="home-hero-right-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="blog-landing-content" context="folder" context-id="blog" configuration-id="implementation-popular-posts" assigned-to-site="true">
+        <template>slots/content/contentAssetPostsCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="test-blog-article"/>
+                <content-asset content-id="test-blog-article-video"/>
+                <content-asset content-id="knowledge-chipper-shredder-operation-tips"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="blog-landing-product-carousel" context="folder" context-id="blog" configuration-id="implementation-product-carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <products>
+                <product product-id="13A6A1BS066"/>
+                <product product-id="13A277BS066"/>
+                <product product-id="13A726JD066"/>
+                <product product-id="13A721JD066"/>
+                <product product-id="13AJA1BZ066"/>
+                <product product-id="13AJA1BT066"/>
+                <product product-id="17ANDALD066"/>
+                <product product-id="17ARCBDT066"/>
+                <product product-id="17ANDALD066"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="ask-troy-slot" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetAskTroyCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="test-blog-article"/>
+                <content-asset content-id="test-blog-article-video"/>
+                <content-asset content-id="test-blog-article-no-image"/>
+                <content-asset content-id="knowledge-how-to-change-the-air-filter-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-air-filter-on-a-cub-cadet-zero-turn-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-blade-on-your-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-deck-belt-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-deck-belt-on-a-cub-cadet-zero-turn-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-gas-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-gas-on-a-cub-cadet-walk-behind-mower"/>
+                <content-asset content-id="knowledge-how-to-change-the-oil-in-a-cub-cadet-riding-lawn-mower"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="ask-troy-slot" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetAskTroyCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="test-blog-article"/>
+                <content-asset content-id="test-blog-article-video"/>
+                <content-asset content-id="test-blog-article-no-image"/>
+                <content-asset content-id="knowledge-how-to-change-the-air-filter-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-air-filter-on-a-cub-cadet-zero-turn-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-blade-on-your-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-deck-belt-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-deck-belt-on-a-cub-cadet-zero-turn-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-gas-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-gas-on-a-cub-cadet-walk-behind-mower"/>
+                <content-asset content-id="knowledge-how-to-change-the-oil-in-a-cub-cadet-riding-lawn-mower"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="gardening" configuration-id="ask-troy-slot" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-secondary p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;p&gt;Ask Troy Slot&lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="riding-lawn-mowers" configuration-id="ask-troy-slot" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetAskTroyCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="test-blog-article"/>
+                <content-asset content-id="test-blog-article-video"/>
+                <content-asset content-id="test-blog-article-no-image"/>
+                <content-asset content-id="knowledge-how-to-change-the-air-filter-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-air-filter-on-a-cub-cadet-zero-turn-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-blade-on-your-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-deck-belt-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-deck-belt-on-a-cub-cadet-zero-turn-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-gas-on-a-cub-cadet-rider"/>
+                <content-asset content-id="knowledge-how-to-change-the-gas-on-a-cub-cadet-walk-behind-mower"/>
+                <content-asset content-id="knowledge-how-to-change-the-oil-in-a-cub-cadet-riding-lawn-mower"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+</slot-configurations>

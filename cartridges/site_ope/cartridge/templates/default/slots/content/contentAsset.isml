@@ -1,0 +1,7 @@
+<iscomment> <isdecorate template="common/layout/page">
+        <isprint value="${pdict.content.body}" encoding="off" />
+</isdecorate> </iscomment>
+
+<mark>This is plain text written into /slots/content/contentAsset.isml. Everything below me is in an isDecorate tag with template="opeSymbol/opeSymbolHome".</mark>
+<isdecorate template="opeSymbol/opeSymbol-landing">
+</isdecorate>

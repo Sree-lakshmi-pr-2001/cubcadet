@@ -1,0 +1,17 @@
+.icon {
+    &.logo {
+        width: 150px;
+
+        &.tablet {
+            width: 122px;
+        }
+
+        &.mobile {
+            width: 80px;
+        }
+    }
+
+    &.close {
+        opacity: 1;
+    }
+}

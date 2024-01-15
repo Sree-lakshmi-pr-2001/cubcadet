@@ -1,0 +1,226 @@
+<isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+    <isinclude template="reporting/reportingUrls" />
+</isif>
+<isinclude template="components/modules" />
+<isset name="isDynosite" value="${pdict.CurrentHttpParameterMap.fitsOnModel.submitted}" scope="page" />
+<isset name="willFitsOnModel" value="${pdict.willFitsOnModel}" scope="page" />
+
+<isif condition="${pdict.shouldIncludeInlineSchema}">
+    <isinclude template="/components/schema" />
+</isif>
+
+<isinclude template="seo/searchDataLayerPLP"/>
+<isif condition="${!isDynosite || willFitsOnModel}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!---Breadcrumbs--->
+                <div class="search-breadcrumb">
+                    <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container search-banner">
+        <div class="row text-center">
+            <isinclude template="search/components/partFitmentPLP"/>
+            <div class="col">
+                <h1 class="header h2 cat-page-title container">
+                    <isif condition="${pdict.productSearch.isCategorySearch || willFitsOnModel && pdict.productSearch.category}">
+                        ${pdict.productSearch.category.name}
+                    </isif>
+                </h1>
+            </div>
+        </div>
+
+        <iscomment>
+            mobile and desktop category banners are taken from category attributes.
+            If only one image is provided, use that in all viewports.
+            if no image, the space collapses
+        </iscomment>
+        <isset name="mobileImageUrl" value="${!empty(pdict.productSearch.mobileBannerImageUrl) ? pdict.productSearch.mobileBannerImageUrl : ''}" scope="page"/>
+        <isset name="desktopImageUrl" value="${!empty(pdict.productSearch.bannerImageUrl) ? pdict.productSearch.bannerImageUrl : ''}" scope="page"/>
+        <isif condition="${empty(mobileImageUrl) && !empty(desktopImageUrl)}">
+            <isset name="mobileImageUrl" value="${desktopImageUrl}" scope="page"/>
+        <iselseif condition="${!empty(mobileImageUrl) && empty(desktopImageUrl)}">
+            <isset name="desktopImageUrl" value="${mobileImageUrl}" scope="page"/>
+        </isif>
+        <isif condition="${!empty(mobileImageUrl)}">
+            <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source media="(min-width: 768px)" srcset="${desktopImageUrl}">
+                <source media="(max-width: 767px)" srcset="${mobileImageUrl}">
+                <!--[if IE 9]></video><![endif]-->
+                <img srcset="${mobileImageUrl}" alt="${pdict.productSearch.category.name}">
+            </picture>
+        </isif>
+
+        <iscomment>
+            Custom SEO text attribute on the category
+        </iscomment>
+        <isif condition="${!empty(pdict.productSearch.seoText)}">
+            <div class="seo-text container">
+                <isprint value="${pdict.productSearch.seoText}" encoding="off"/>
+            </div>
+        </isif>
+    </div>
+</isif>
+
+<div class="${!isDynosite ? 'container' : ''} search-results" data-dynosite="${isDynosite}" <isif condition="${isDynosite}">data-dynosite-model="${pdict.CurrentHttpParameterMap.fitsOnModel.value}"</isif>>
+    <div class="row search-nav <isif condition="${pdict.productSearch.isCategorySearch || pdict.partfinderquery}">border-0</isif>">
+        <isif condition="${!pdict.productSearch.isCategorySearch && !pdict.partfinderquery && !isDynosite}">
+            <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs nav-fill" role="tablist">
+
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active product-search" href="#product-search-results" data-toggle="tab" role="tab" aria-expanded="true">
+                            ${Resource.msg('tab.nav.search.productsresults', 'search', null)}
+                        </a>
+                    </li>
+                    <isif condition="${pdict.contentSearch.contents.length > 0}">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link content-search" href="#content-search-results-pane" data-toggle="tab" role="tab" aria-expanded="false"
+                                data-url="${URLUtils.url('Search-Content', 'q', pdict.productSearch.searchKeywords, 'startingPage', 0)}">
+                                ${Resource.msg('tab.nav.search.artclesresults', 'search', null)}
+                            </a>
+                        </li>
+                    </isif>
+                </ul>
+            </div>
+        </isif>
+    </div>
+    <div class="row">
+        <div class="tab-content col-12">
+            <div class="tab-pane container active" id="product-search-results">
+                <isif condition="${!isDynosite}">
+                    <div class="row result-header">
+                        <isset name="hasBtn" value="${pdict.CurrentHttpParameterMap.ispartfinder.submitted && pdict.CurrentHttpParameterMap.ispartfinder.booleanValue === true}" scope="page" />
+                        <div class="result-count col-12 <isif condition="${hasBtn}">col-lg-8</isif> <isif condition="${pdict.productSearch.productIds.length < 1}">no-results</isif>">
+                            <isinclude template="search/resultsCount" />
+                        </div>
+                        <isif condition="${hasBtn}">
+                            <div class="col-12 col-lg-4 text-right">
+                                <a href="${URLUtils.url('Page-Show', 'cid', 'ari-partstream', 'arimn', pdict.CurrentHttpParameterMap.q.value)}" class="btn btn-outline-secondary btn-ari">
+                                    ${Resource.msg('view.parts.in.diagram', 'search', null)}
+                                </a>
+                            </div>
+                        </isif>
+                    </div>
+                </isif>
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <div class="row grid-header">
+                        <isif condition="${isDynosite}">
+                            <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center">
+                                <isif condition="${!willFitsOnModel && !pdict.productSearch.apiProductSearch.category.custom.fitsOnModelEnable}">
+                                    <h3 class="attribute-name">${Resource.msg('search.dyno.parts', 'search', null)}</h3>
+                                </isif>
+                                <isif condition="${willFitsOnModel}">
+                                    <div class="d-flex w-100">
+                                        <div class="part-fitment-icon plp mr-1"></div>
+                                        <div><strong>${Resource.msgf('fits.on.model.verified', 'partFitment', null, pdict.CurrentHttpParameterMap.fitsOnModel.value)}</strong></div>
+                                    </div>
+                                </isif>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-5 col-xl-6">
+                                <isif condition="${!willFitsOnModel && !pdict.productSearch.apiProductSearch.category.custom.fitsOnModelEnable}">
+                                    <isinclude template="search/dynoTextSearchInput" />
+                                </isif>
+                            </div>
+                        </isif>
+                        <div class="col-6 ${isDynosite ? 'd-md-none' : 'col-lg-8'}">
+                            <button type="button" class="btn btn-filter filter-results col-12 d-md-none">
+                                ${Resource.msg('refinement.filterby', 'search', null)}
+                                <i><issvg icon="icon-filter" image="true" altText="" /></i>
+                            </button>
+
+                            <!--- Selected filters bar --->
+                            <div class="filter-bar d-none d-md-inline-block">
+                                <isinclude template="search/filterBar" />
+                            </div>
+                        </div>
+
+                        <div class="text-right col-6 ${isDynosite ? 'col-md-5 col-lg-4 col-xl-3' : 'col-lg-4'}">
+                            <span class="item-count">
+                                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                                    ${Resource.msgf('label.items', 'search', null, pdict.productSearch.count, pdict.productSearch.count > 1 ? 's' : '')}
+                                </isif>
+                            </span>
+                            <isinclude template="search/sortOrderMenu" />
+                        </div>
+
+                        <!--- Selected filters bar --->
+                        <div class="filter-bar mobile d-md-none col-12">
+                            <isinclude template="search/filterBar" />
+                        </div>
+                    </div>
+                </isif>
+
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <!--- Refinement bar --->
+                    <div class="row">
+                        <div class="refinement-bar col-md-3">
+                            <isinclude url="${pdict.refineurl}"/>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="container">
+                                 <isset name="monetateObject" value="${require('*/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+                                 <isif condition="${monetateObject.getMonetateEnabled()}">
+                                     <iscomment>Monetate JS code</iscomment>
+                                     <script type="text/javascript">
+                                        monetateData.addProducts = [];
+                                     </script>
+                                 </isif>
+
+                                <!--- Product Grid --->
+                                <div class="row product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+                                    <isinclude template="search/productGrid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </isif>
+            </div>
+            <!--- Content Grid --->
+            <div class="tab-pane container" id="content-search-results-pane" role="tabpanel" aria-expanded="false">
+                <div class="blog-search-results">
+
+                    <isif condition="${pdict.contentSearch && pdict.contentSearch.contentCount > 0}">
+                        <div class="row grid-header">
+                            <div class="col-8 col-md-10">
+                                <div class="blog-post-header-bottom">
+                                    <h1 class="blog-post-title">
+                                        ${Resource.msg('label.articles', 'search', null)}
+                                    </h1>
+                                </div>
+                            </div>
+
+                            <div class="col-4 col-md-2 text-right">
+                                <div class="blog-search-count">${Resource.msgf('blog.items', 'blog', null, pdict.contentSearch.contentCount, pdict.contentSearch.contentCount > 1 ? 's' : '')}</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!--- Content Grid --->
+                            <div class="col-12">
+                                <div class="content-grid-container">
+
+                                    <isif condition="${!pdict.contentSearch.contents.empty}">
+                                        <div class="content-grid kc-article">
+                                            <isinclude template="search/contentGrid"/>
+                                        </div>
+                                    </isif>
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<ismonetatetrackpage pagename="index" />
+<ismonetatetrackpage pagename="category" />

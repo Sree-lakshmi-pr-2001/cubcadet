@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inventory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.demandware.com/xml/impex/inventory/2007-05-31">
+    <inventory-list>
+        <header list-id="inventory-mtd">
+            <default-instock>true</default-instock>
+            <description>Test MTD Inventory - Always in-stock</description>
+            <use-bundle-inventory-only>false</use-bundle-inventory-only>
+            <on-order>false</on-order>
+        </header>
+        <records>
+            <record product-id="00003067">
+                <allocation>1000.0</allocation>
+            </record>
+            <record product-id="00003107">
+                <allocation>1000.0</allocation>
+            </record>
+        </records>
+    </inventory-list>
+</inventory>

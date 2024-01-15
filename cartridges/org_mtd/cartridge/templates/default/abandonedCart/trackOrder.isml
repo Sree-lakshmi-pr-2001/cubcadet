@@ -1,0 +1,11 @@
+<iscomment>Track Order on confirmation page</iscomment>
+<isscript>
+    var mtdHelper = require('*/cartridge/scripts/util/MTDHelper');
+    var isUsSite = mtdHelper.isUsSite();
+</isscript>
+
+<isif condition="${isUsSite}" >
+    <script type="text/javascript">
+        _etmc_custom.push(["trackOrder", { "order": "${pdict.order.orderNumber}" , "basket": "${session.custom.basketIdSession}"}]);
+    </script>
+</isif>

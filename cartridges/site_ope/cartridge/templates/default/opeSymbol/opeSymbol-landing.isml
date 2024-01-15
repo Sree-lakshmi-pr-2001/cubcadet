@@ -1,0 +1,9 @@
+<iscomment>* * * START opeSymbol-landing.isml * * *</iscomment>
+
+<link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/css/ope-symbol.css')}" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<isinclude template="components/gtmDataLayer"/>
+
+<iscomment> Header and language selection grid </iscomment>
+<isinclude template="components/gtmNoScript"/>
+<isslot id="ope-symbol-landing-page" description="OPE Symbol site landing page" context="global" />

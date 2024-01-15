@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="youtubeVideoID">
+                <display-name xml:lang="x-default">YouTube Video URL (Legacy)</display-name>
+                <description xml:lang="x-default">(Deprecated) YouTube video URLs for use on the PDP video thumbnail. Use YouTube Video URL V2 instead that allows set video specific for a site.</description>
+                <type>set-of-string</type>
+            </attribute-definition>
+            <attribute-definition attribute-id="youtubeVideoUrl">
+                <display-name xml:lang="x-default">YouTube Video URL V2</display-name>
+                <description xml:lang="x-default">YouTube video URLs for use on the PDP video thumbnail. It will use the old attribute when this is not set.</description>
+                <type>set-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>true</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="cub-content">
+                <display-name xml:lang="x-default">PDP Content Configuration</display-name>
+                <attribute attribute-id="pdp-main-image-video-slider"/>
+                <attribute attribute-id="pdp-content"/>
+                <attribute attribute-id="pdp-features"/>
+                <attribute attribute-id="youtubeVideoUrl"/>
+                <attribute attribute-id="youtubeVideoID"/>
+                <attribute attribute-id="vimeoVideoID"/>
+                <attribute attribute-id="content-maintenance-schedule"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="salesPriceDefaultExpirationDays">
+                <display-name xml:lang="x-default">Sales Price Default Expiration Days</display-name>
+                <description>Number of days after which the sales price will expire when not specified in the price book. Used for populating the "priceValidUntil" field in the product schema</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>90</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="salesPriceDefaultExpirationDays"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="customerServiceURL"/>
+                <attribute attribute-id="scheduleTestdriveURL"/>
+                <attribute attribute-id="testdriveProductTypes"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+                <attribute attribute-id="enablePDPWhereToBuy"/>
+                <attribute attribute-id="enableProductBadges"/>
+                <attribute attribute-id="maxOrderQty"/>
+                <attribute attribute-id="enableConsentTracking"/>
+                <attribute attribute-id="youtubeImageURL"/>
+                <attribute attribute-id="productTileA2CProductTypes"/>
+                <attribute attribute-id="productTileStockMsgEnabled"/>
+                <attribute attribute-id="productTilePartReplacesEnabled"/>
+                <attribute attribute-id="cartSlotType"/>
+                <attribute attribute-id="cartAccessoryRecommendationsCount"/>
+                <attribute attribute-id="formHandlerEmailsTo"/>
+                <attribute attribute-id="dynositeEnable"/>
+                <attribute attribute-id="dynositeAllPartsCategoryId"/>
+                <attribute attribute-id="see-details-link"/>
+                <attribute attribute-id="enableModelFilterOnSearchPage"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

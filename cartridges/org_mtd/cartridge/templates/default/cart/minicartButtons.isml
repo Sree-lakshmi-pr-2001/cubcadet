@@ -1,0 +1,6 @@
+<div>
+    <a href="${URLUtils.https('Cart-Show')}" class="btn btn-primary btn-block checkout-btn ${pdict.valid.error ? 'disabled' : ''}"
+        role="button">
+        ${Resource.msg('minicart.viewcart.checkout','common',null)}
+    </a>
+</div>

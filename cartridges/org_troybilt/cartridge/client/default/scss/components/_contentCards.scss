@@ -1,0 +1,127 @@
+// override in desktop only
+.card-group.container-fluid {
+    @include media-breakpoint-only(lg) {
+        max-width: map-get($container-max-widths, lg);
+    }
+    @include media-breakpoint-only(xl) {
+        max-width: map-get($container-max-widths, xl);
+    }
+}
+
+.card-group.container-fluid.product-support {
+    @include media-breakpoint-only(lg) {
+        max-width: 100%;
+    }
+    @include media-breakpoint-only(xl) {
+        max-width: 100%;
+    }
+
+    .card-super-title {
+        margin-bottom: rem(20px);
+    }
+
+    .card-text {
+        margin-bottom: rem(35px);
+    }
+
+    .icon-list {
+        padding-bottom: 0;
+    }
+
+    .btn {
+        min-width: 220px;
+    }
+}
+
+.card-group.content-card-group {
+    padding: 0 rem(15px);
+
+    > .row {
+        width: 100vw;
+    }
+
+    .row .col-12 {
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(15px);
+        }
+    }
+
+    // override bootstrap inner grid gutters
+    // 2-up grid
+    @include media-breakpoint-up(sm) {
+        .row [class^="col"] {
+            &:nth-child(even) {
+                padding-left: calc(#{map-get($spacers, 2)} / 2);
+            }
+
+            &:nth-child(odd) {
+                padding-right: calc(#{map-get($spacers, 2)} / 2);
+            }
+        }
+    }
+
+    // 4-up
+    @include media-breakpoint-up(md) {
+        .row [class^="col"] {
+            &:nth-child(n+2) {
+                padding-left: calc(#{map-get($spacers, 2)} / 2);
+            }
+
+            &:nth-child(odd),
+            &:nth-child(2) {
+                padding-right: calc(#{map-get($spacers, 2)} / 2);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 0 rem(30px) rem(30px);
+    }
+}
+
+.card.content-card {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%; // sync heights
+
+    .card-super-title {
+        margin-bottom: 7%;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 16%;
+        }
+    }
+
+    .card-title {
+        margin-bottom: 5%;
+    }
+
+    .card-body {
+        padding: 10% 6% 11%;
+        background: $accent-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media-breakpoint-up(lg) {
+            padding: rem(15px) rem(15px) rem(30px);
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: rem(25px) rem(25px) rem(60px);
+        }
+    }
+
+    .card-text {
+        margin-bottom: 5%;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 25%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 15%;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+<div class="store-details" data-store-id="${store.ID}">
+    <div class="row no-gutters flex-column flex-md-row">
+        <div class="col-12 col-md-9">
+            <div class="store-name h6">${store.name}</div>
+            <address>
+                ${store.address1},
+                <isif condition="${store.address2}">
+                    ${store.address2},
+                </isif>
+                <isif condition="${store.city}">
+                    ${store.city},
+                </isif>
+                <isif condition="${store.stateCode}">
+                    ${store.stateCode}
+                </isif>
+                ${store.postalCode}
+
+                <p>
+                    <isif condition="${store.phone}">
+                        <span><a class="storelocator-phone font-weight-bold" href="tel:${store.phone}" title="${Resource.msg('storelocator.phone.title', 'storeLocator', null)}">${store.phone}</a></span>
+                    </isif>
+                </p>
+            </address>
+        </div>
+        <div class="col-12 col-md-3 text-md-right">
+            <div class="">
+                <a class="store-map" target='_blank' href="https://maps.google.com/?daddr=${store.latitude},${store.longitude}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.getdirections', 'storeLocator', null))}" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.getdirections', 'storeLocator', null))}">
+                    ${Resource.msg('storelocator.getdirections', 'storeLocator', null)}
+                </a>
+            </div>
+        </div>
+    </div> <!-- /.row -->
+    <div class="row no-gutters">
+        <div class="col-12">
+            <div class="store-links">
+                <iscomment> Store Details pages to be added in future release
+                <a class="store-link" target='_blank' href="${URLUtils.staticURL('Stores-Detail', 'storeId', store.ID)}">
+                    ${Resource.msg('storelocator.details.link', 'storeLocator', null)}
+                </a>
+                </iscomment>
+                <a class="store-link" target='_blank' href="${URLUtils.url('Dealer-Show', 'dealer_id', store.ID)}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.dealer.link', 'storeLocator', null))}" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.dealer.link', 'storeLocator', null))}">
+                    ${Resource.msg('storelocator.dealer.link', 'storeLocator', null)}
+                </a>
+            </div>
+        </div>
+        <div class="col-7 col-md-9">
+            <div class="product-lines">
+                <isset name="proOnly" value="${store.custom.pro || pdict.pro ? true : false}" scope="page"/>
+                <isset name="snoOnly" value="${store.custom.sno || pdict.sno ? true : false}" scope="page"/>
+                <isset name="utvsOnly" value="${store.custom.utvs || pdict.utvs ? true : false}" scope="page"/>
+                <isset name="fullNoUtvs" value="${store.custom.fullNoUtvs || pdict.fullNoUtvs ? true : false}" scope="page"/>
+                <isset name="fullLines" value="${store.custom.fullLines || pdict.fullLines ? true : false}" scope="page"/>
+                <isset name="retailerID" value="${(store.custom.retailer_id !== '' && store.custom.retailer_id[0]) ? store.custom.retailer_id[0] : ('retailer_id' in pdict ? pdict.retailer_id : null)}" scope="page" />
+
+                <div class="store-offerings">
+                    <isif condition="${store.custom.limited_line}">
+                        <span>${Resource.msg('storelocator.limitedline', 'storeLocator', null)}</span>
+                    <iselseif condition="${empty(store.custom.customernumber)}"/>
+                        <span>${Resource.msg('storelocator.serviceonly', 'storeLocator', null)}</span>
+                    <iselseif condition="${proOnly}"/>
+                        <span>${Resource.msg('storelocator.pro', 'storeLocator', null)}</span>
+                    <iselseif condition="${snoOnly}"/>
+                        <span>${Resource.msg('storelocator.sno', 'storeLocator', null)}</span>
+                    <iselseif condition="${utvsOnly}"/>
+                        <span>${Resource.msg('storelocator.utvs', 'storeLocator', null)}</span>
+                    <iselseif condition="${fullNoUtvs}"/>
+                        <span>${Resource.msg('storelocator.fulllines.noutvs', 'storeLocator', null)}</span>
+                    <iselseif condition="${fullLines}"/>
+                        <span>${Resource.msg('storelocator.fulllines.utvs', 'storeLocator', null)}</span>
+                    </isif>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="col-5 col-md-3 text-right">
+            <div class="store-logo tsc pull-right">
+                <isif condition = "${store.custom.isEliteDealer}">
+                    <img src="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/Dealer/elite-dealer/cub-cadet-elite-dealer.svg')}" alt="${Resource.msg('tsc.logo.alt', 'storeLocator', null)}" />
+                <iselse>
+                    <img src="${store.custom.logoImage}" alt="${Resource.msg('tsc.logo.alt', 'storeLocator', null)}" />
+                </isif>
+            </div>
+        </div>
+    </div>
+</div>

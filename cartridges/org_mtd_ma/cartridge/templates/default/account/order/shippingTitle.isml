@@ -1,0 +1,11 @@
+<isset name="currentShippingMethodId" value="${order.selectedShippingMethod.ID}" scope="page"/>
+
+<dl>
+    <isif condition="${currentShippingMethodId != '' && (currentShippingMethodId == 'dealer-pickup')}">
+        <dt>${Resource.msg('label.orderhistory.pickedupby','account', null)}</dt>
+    <iselse>
+        <dt>${Resource.msg('label.orderhistory.shippedto','account',null)}</dt>
+    </isif>
+
+    <dd>${order.shippedToFirstName} ${order.shippedToLastName}</dd>
+</dl>

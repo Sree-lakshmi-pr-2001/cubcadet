@@ -1,0 +1,20 @@
+<div class="modal fade see-details-modal" id="seeDetailsModal" tabindex="-1" role="dialog" aria-labelledby="seeDetailsModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12">
+                    <isif condition="${Site.getCurrent().getCustomPreferenceValue('see-details-link')}">
+                        <iscontentasset aid="${Site.getCurrent().getCustomPreferenceValue('see-details-link')}" />
+                    </isif>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="tdFinanceProgram">
+                <display-name xml:lang="x-default">TD Finance Program Number</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>597</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="tdStoreNumber">
+                <display-name xml:lang="x-default">TD Store Number</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>432001</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="FinancingApplication">
+                <display-name xml:lang="x-default">Financing Application</display-name>
+                <attribute attribute-id="financingTDapplicationEnabled"/>
+                <attribute attribute-id="financingTDaccessKey"/>
+                <attribute attribute-id="financingTDapplicationDOMAIN"/>
+                <attribute attribute-id="financingTDstoreID"/>
+                <attribute attribute-id="tdStoreNumber"/>
+                <attribute attribute-id="tdFinanceProgram"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="OrderPaymentInstrument">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="tdAccountNumber">
+                <display-name xml:lang="x-default">TD Account Number</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tdPlanID">
+                <display-name xml:lang="x-default">TD Plan ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tdStoreNumber">
+                <display-name xml:lang="x-default">TD Store Number</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="TD Finance">
+                <display-name xml:lang="x-default">TD Finance</display-name>
+                <attribute attribute-id="tdAccountNumber"/>
+                <attribute attribute-id="tdPlanID"/>
+                <attribute attribute-id="tdStoreNumber"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+      <type-extension type-id="PaymentTransaction">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="authCode">
+                <display-name xml:lang="x-default">TD Auth Code</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="authDate">
+                <display-name xml:lang="x-default">TD Auth Date</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="voidAuthDate">
+                <display-name xml:lang="x-default">TD Void Auth Date</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="voidTransactionID">
+                <display-name xml:lang="x-default">TD Void Transaction ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="processFee">
+                <display-name xml:lang="x-default">Process Fee</display-name>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="tdDisclosure">
+                <display-name xml:lang="x-default">TD Disclosure</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="TD Finance">
+                <display-name xml:lang="x-default">TD Finance</display-name>
+                <attribute attribute-id="authDate"/>
+                <attribute attribute-id="authCode"/>
+                <attribute attribute-id="processFee"/>
+                <attribute attribute-id="voidTransactionID"/>
+                <attribute attribute-id="voidAuthDate"/>
+                <attribute attribute-id="tdDisclosure"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

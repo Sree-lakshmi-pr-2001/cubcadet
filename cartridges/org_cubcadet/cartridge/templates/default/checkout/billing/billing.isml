@@ -1,0 +1,67 @@
+<div class="card payment-form">
+    <div class="card-header">
+        <span class="checkout-step-number filled">2</span>
+        <h6 class="checkout-card-header">${pdict.billingSectionHeader}</h6>
+    </div>
+    <div class="card-body">
+        <form autocomplete="on" method="POST" action="${URLUtils.url('CheckoutServices-SubmitPayment')}"
+            data-address-mode="${!pdict.order.billing.billingAddress.address ? 'new' : 'edit'}"
+            <isprint value=${pdict.forms.billingForm.attributes} encoding="off" /> novalidate>
+
+            <!-------------------------------------------------------------------------->
+            <!-- Billing Address Selector                                             -->
+            <!-------------------------------------------------------------------------->
+            <fieldset class="address-selector-block" <isif condition="${pdict.aftermarketOnly == true}"> style="display:none" </isif>>
+                <legend><h6>${Resource.msg('heading.billing.address', 'checkout', null)}</h6></legend>
+
+                <div class="form-group">
+                    <label class="form-control-label d-none d-none-shipment" for="addressSelector">
+                        ${Resource.msg('heading.billing.address', 'checkout', null)}
+                    </label>
+
+                    <isinclude template="checkout/billing/addressSelector" />
+                    <div class="invalid-feedback"></div>
+                    <div class="row">
+                        <a class="col-6 col-lg-3 btn-show-details" href="javascript:void(0)">${Resource.msg('action.update.address', 'checkout', null)}</a>
+                        <a class="col-6 col-lg-9 btn-add-new" href="javascript:void(0)">${Resource.msg('action.add.new', 'checkout', null)}</a>
+                    </div>
+                </div>
+                <!-------------------------------------------------------------------------->
+                <!-- Billing Address                                                      -->
+                <!-------------------------------------------------------------------------->
+                <div class="billing-address">
+                    <isinclude template="checkout/billing/billingAddress" />
+                </div>
+            </fieldset>
+
+            <!-------------------------------------------------------------------------->
+            <!-- Payment Options                                                      -->
+            <!-------------------------------------------------------------------------->
+            <fieldset>
+                <div class="row payment-options-section">
+                    <legend class="col-12 col-md-5">
+                        <h6>${Resource.msg('heading.payment.method', 'checkout', null)}</h6>
+                    </legend>
+                    <isif condition="${!pdict.isFinanceCreditAvailable}">
+                        <div class="col-12 col-md-7 text-left text-md-right cc-imgs">
+                            <iscomment>Loop through configured cardTypes to display icons of accepted cards</iscomment>
+                            <isloop items="${pdict.order.billing.payment.applicablePaymentCards}" var="card" status="loopSate">
+                                    <issvg icon="${card.cardType.toLowerCase()}" image="true" altText="${card.name}" />
+                            </isloop>
+                        </div>
+                    </isif>
+                </div>
+                <isinclude template="checkout/billing/paymentOptions" />
+            </fieldset>
+
+            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+        </form>
+        <div class="col-12 next-step-button">
+            <div class="next-step-button-inner">
+                <button class="btn btn-secondary btn-block submit-payment js-pay-btn" type="submit" name="submit" value="submit-payment" ${currentPaymentMethod && !empty(currentPaymentMethod) ? '' : 'disabled'}>
+                    ${productRegistration ? Resource.msg('button.next.product.registration', 'checkout', null) : Resource.msg('button.next.place.order', 'checkout', null)}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

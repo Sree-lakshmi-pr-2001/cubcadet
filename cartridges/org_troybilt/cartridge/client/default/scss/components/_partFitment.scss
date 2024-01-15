@@ -1,0 +1,192 @@
+.part-fitment-wrapper {
+    background-color: transparent;
+    position: relative;
+
+    .part-fitment-title {
+        font-size: 0.9375rem;
+        font-weight: 700;
+        color: #1e1e1e;
+        position: relative;
+        padding: 0.9375rem 0;
+        background-color: transparent;
+        border-top: 1px solid #d1d3d4;
+        border-bottom: 1px solid #d1d3d4;
+        line-height: normal;
+        width: 100%;
+
+        h6 {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    &.plp {
+        padding: 15px 30px;
+    }
+
+    &.pdp {
+        background-color: #efefef;
+        padding: 10px;
+
+        .need-validation {
+            padding-left: 30px;
+        }
+
+        @include media-breakpoint-up(md) {
+            .need-validation {
+                padding-left: 0;
+            }
+
+            max-width: 300px;
+            padding-left: 35px;
+            margin-left: 45px;
+            flex-grow: 1;
+        }
+
+        &.not-fit {
+            border: 2px solid red;
+        }
+    }
+
+    &.not-fit {
+        .part-fitment-icon {
+            background-image: $icon-not-fit;
+            filter: none;
+            opacity: 1;
+        }
+
+        .has-number {
+            background-color: transparent !important;
+            border: none;
+        }
+
+        .disclaimer {
+            font-size: 0.76rem;
+        }
+    }
+
+    .find-model {
+        color: #707575;
+        font-size: 0.75em;
+        font-weight: 400;
+    }
+
+    .part-fitment-label {
+        color: #1e1e1e;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+
+        a {
+            font-size: 13px;
+        }
+
+        &-text {
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+
+.has-number {
+    background-color: #fff !important;
+}
+
+.part-fitment-input-group {
+    .part-fitment-input {
+        flex: 1 0 55%;
+        max-height: 38px;
+
+        &[readonly] {
+            background-color: $white;
+        }
+    }
+
+    .content-search {
+        max-height: 38px;
+    }
+}
+
+.stock-availability-wrapper {
+    font-weight: 700;
+    flex: 0 0 34%;
+    border-right: 2px solid $athens-gray;
+    font-size: rem(18px);
+
+    .stock-icon {
+        background-image: $svg-check;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+
+    .icon-in-stock {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 46 46"> <path fill="%23056808" d="M4.1 46C2.4 46 1 44.6 1 42.9V8.4c0-1.7 1.4-3.1 3.1-3.1l13.1-.5c0-1.9.9-2.9 2.8-2.9 1.8 0 4.8 1.1 4.9 3l13.4.1c1.7 0 3.1 1.4 3.1 3.1v34.5c0 1.7-1.4 3.1-3.1 3.1L4.1 46z"/> <path d="M18.3 46H3.5c-.9 0-1.8-.4-2.5-1.1-.6-.6-1-1.5-1-2.4V8.2c0-.9.3-1.8.9-2.5.6-.6 1.1-1 1.6-1h11.9c.7-3.2 3.8-5.2 7-4.6.9.2 1.8.6 2.5 1.2 1.1.8 1.8 2 2 3.4h11.9c.9 0 1.8.4 2.5 1.1.7.6 1.1 1.5 1.1 2.5v11.9h-3.5v-12h-6.2v7.6H9.8V8.2H3.5v34.2h14.8V46zm11.1-1.5L20 35.1l2.5-2.5 6.9 6.9 14.1-14.1 2.5 2.5-16.6 16.6zM20.3 7.1c1.3 0 2.3-1 2.4-2.3v-.1c0-1.3-1.1-2.4-2.4-2.4s-2.4 1.1-2.4 2.4 1 2.4 2.4 2.4c-.1 0-.1 0 0 0z"/></svg>');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+    }
+
+    .availability-msg {
+        font-size: 0.8em;
+    }
+}
+
+.does-not-fit-title {
+    color: red;
+}
+
+.part-fitment-icon {
+    background-image: $svg-radio-selected-path-blk;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+
+    &.pdp {
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-30%, -50%);
+        height: 45px;
+        width: 45px;
+        filter: grayscale(1);
+        opacity: 0.8;
+        z-index: 10;
+
+        @include media-breakpoint-up(md) {
+            height: 50px;
+            width: 50px;
+            transform: translate(-50%, -50%);
+        }
+
+        &.verified {
+            background-image: $icon-will-fit;
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}

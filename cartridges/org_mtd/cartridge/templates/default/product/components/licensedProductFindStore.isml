@@ -1,0 +1,10 @@
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="licensedProductUrl" value="${product.licensedProductFindStoreUrl ? product.licensedProductFindStoreUrl : '#'}" scope="page" />
+
+<button class="btn btn-block btn-secondary" onclick="window.open('${licensedProductUrl}')" ${product.licensedProductFindStoreUrl ? '' : 'disabled'}>
+    ${Resource.msg(
+        'find.a.store.licensed',
+        'common',
+        Resource.msg('find.a.store', 'common', null)
+    )}
+</button>

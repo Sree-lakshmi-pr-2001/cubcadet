@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="blog-featured-products-slot" context="global" configuration-id="implementation-featured-products" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="39A70090100"/>
+                <product product-id="39A70102100"/>
+                <product product-id="39A70106100"/>
+                <product product-id="39A70119100"/>
+                <product product-id="504-01596"/>
+                <product product-id="504-01606"/>
+                <product product-id="504-01611"/>
+            </products>
+        </content>
+    </slot-configuration>
+</slot-configurations>

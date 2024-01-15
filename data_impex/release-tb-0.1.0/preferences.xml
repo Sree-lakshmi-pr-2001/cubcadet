@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="countryLocales">[&#13;
+	{&#13;
+		"id": "en_CA",&#13;
+		"currencyCode": "CAD",&#13;
+		"currencySymbol": "$",&#13;
+		"site": "cubcadetca",&#13;
+		"allowedSites": [&#13;
+			"cubcadet",&#13;
+			"cubcadetca"&#13;
+		]&#13;
+	},&#13;
+	{&#13;
+		"id": "fr_CA",&#13;
+		"currencyCode": "CAD",&#13;
+		"currencySymbol": "$",&#13;
+		"site": "cubcadetca",&#13;
+		"allowedSites": [&#13;
+			"cubcadet",&#13;
+			"cubcadetca"&#13;
+		]&#13;
+	},&#13;
+	{&#13;
+		"id": "en_US",&#13;
+		"currencyCode": "USD",&#13;
+		"currencySymbol": "$",&#13;
+		"site": "cubcadet",&#13;
+		"allowedSites": [&#13;
+			"cubcadet",&#13;
+			"cubcadetca"&#13;
+		]&#13;
+	},&#13;
+    {&#13;
+        "id": "en_CA",&#13;
+        "currencyCode": "CAD",&#13;
+        "currencySymbol": "$",&#13;
+        "site": "troybiltca",&#13;
+        "allowedSites": [&#13;
+            "troybilt",&#13;
+            "troybiltca"&#13;
+        ]&#13;
+    },&#13;
+    {&#13;
+        "id": "fr_CA",&#13;
+        "currencyCode": "CAD",&#13;
+        "currencySymbol": "$",&#13;
+        "site": "troybiltca",&#13;
+        "allowedSites": [&#13;
+            "troybilt",&#13;
+            "troybiltca"&#13;
+        ]&#13;
+    },&#13;
+    {&#13;
+        "id": "en_US",&#13;
+        "currencyCode": "USD",&#13;
+        "currencySymbol": "$",&#13;
+        "site": "troybilt",&#13;
+        "allowedSites": [&#13;
+            "troybilt",&#13;
+            "troybiltca"&#13;
+        ]&#13;
+    }&#13;
+]</preference>
+        </development>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>

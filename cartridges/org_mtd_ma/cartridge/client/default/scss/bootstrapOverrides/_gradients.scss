@@ -1,0 +1,15 @@
+.gradient-lin1 {
+    @include gradient-directional($start-color: $brand-main, $end-color: $brand-second, $deg: 62deg);
+}
+
+.gradient-lin2 {
+    @include gradient-directional($start-color: $brand-dark, $end-color: $brand-light, $deg: 90deg);
+}
+
+.gradient-radial {
+    @include gradient-radial($inner-color: $accent-1, $outer-color: $accent-2);
+}
+
+.gradient-lin3 {
+    @include gradient-x-three-colors($start-color: $accent-2, $mid-color: $accent-3, $color-stop: 50%, $end-color: $accent-4);
+}

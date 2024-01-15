@@ -1,0 +1,74 @@
+<isscript>
+    var Util = require('*/cartridge/scripts/helpers/Util');
+</isscript>
+<isset name="currentPaymentMethod" value="${pdict.forms.billingForm.paymentMethod.value}" scope="page" />
+<isset name="firstApplicablePlanText" value="${true}" scope="page" />
+<isloop items="${pdict.financePlans}" var="plan">
+    <isif condition="${firstApplicablePlanText == true && (!pdict.selectedFinancePlanId || (pdict.selectedFinancePlanId && plan.planId == pdict.selectedFinancePlanId))}">
+        <isset name="selectedPlan" value="${plan}" scope="page" />
+        <isset name="firstApplicablePlanText" value="${false}" scope="page" />
+    </isif>
+</isloop>
+
+<input type="hidden" class="form-control"
+            name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+            value="${currentPaymentMethod}"
+    >
+<isif condition="${pdict.isFinanceCreditAvailable}">
+    <div class="estimation-finance-info">
+        <div class="cc-container">
+            <img class="cc-icon" src="${URLUtils.staticURL('images/cc-td-card-3d.png')}" alt=""/>
+        </div>
+        <div class="finance-estimation-block py-2" data-url="${URLUtils.url('FinancingApplication-Estimation', 'pageType', 'billing')}">
+            <iscomment> Renders the Content Assets for the `BUY NOW PAY LATER` unitl the order fee % estimative </iscomment>
+            <isinclude url="${URLUtils.url('FinancingApplication-Estimation', 'pageType', 'billing')}"/>
+        </div>
+    </div>
+    <div class="col-12 financing-options-text">
+        <div class="label-text">
+            <div class="estimation label-title financing-plan-title">
+                <span class="position-relative">
+                    ${selectedPlan.monthlyPayment ? selectedPlan.monthlyPayment + " " + Resource.msg("label.and", "cart", null) : ""}
+                    ${selectedPlan.name}
+                    <isif condition="${!empty(selectedPlan.ss)}">
+                        <span class="superscript">${selectedPlan.ss}</span>
+                    </isif>
+                </span>
+                <span class="text-uppercase text-nowrap">
+                    ${Resource.msg("label.total.total", "cart", null)}
+                    <isprint value="${selectedPlan.totalPayment}" encoding="on" />
+                </span>
+            </div>
+            <div class="label-disclaimer financing-plan-disclaimer">
+                <isif condition="${selectedPlan.type === 'deferred'}">
+                    <isprint value="${Util.getDisClosureContentAssetBody('td-finance-deferred-disclosure', selectedPlan)}" encoding="off" />
+                <iselseif condition="${selectedPlan.type === 'apr'}">
+                    <isprint value="${Util.getDisClosureContentAssetBody('td-finance-apr-disclosure', selectedPlan)}" encoding="off" />
+                <iselseif condition="${selectedPlan.type === 'standard'}">
+                    <isprint value="${Util.getDisClosureContentAssetBody('td-finance-standard-disclosure', selectedPlan)}" encoding="off" />
+                <iselseif condition="${plan.type === 'deferred-promoFee'}">
+                    <isprint value="${Util.getDisClosureContentAssetBody('td-finance-deferred-promoFee-disclosure', selectedPlan)}" encoding="off" />
+                </isif>
+                <a href="javascript:void(0)" data-url="${URLUtils.url('FinancingApplication-Disclosure')}" data-title="${Resource.msg('finance.details.title','checkout',null)}" class="td-payment-details">
+                    ${Resource.msg('finance.see.details','checkout',null)}
+                </a>
+            </div>
+        </div>
+    </div>
+</isif>
+<div class="form-nav billing-nav payment-information"
+    data-payment-method-id="${currentPaymentMethod}"
+    data-is-new-payment="${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? false : true}"
+>
+    <isif condition="${pdict.isFinanceCreditAvailable}">
+        <ul class="nav nav-pills content-switcher payment-options" role="tablist">
+            <isinclude template="checkout/billing/paymentOptions/paymentOptionsTabs" />
+        </ul>
+    </isif>
+</div>
+<iscomment> THIS IS THE FORM FOR THE OPTIONS </iscomment>
+<div class="credit-card-selection-new" >
+    <div class="tab-content">
+        <isinclude template="checkout/billing/paymentOptions/paymentOptionsContent" />
+    </div>
+</div>

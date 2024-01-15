@@ -1,0 +1,23 @@
+<isif condition="${pdict.content.image || pdict.content.video}" >
+    <div class="blog-post-slider">
+        <isscript>
+            var assetImage = pdict.content.image;
+            var assetVideo = pdict.content.video;
+            var mobileURL = assetImage.getImageURL({scaleWidth: 800});
+            var tabletURL = assetImage.getImageURL({scaleWidth: 950});
+            var desktopURL = assetImage.getImageURL({scaleWidth: 1116});
+        </isscript>
+        <isif condition="${assetVideo}" >
+            <div class="embed-video-wrapper">
+                <div id="player" data-aspectratio="16/9" data-id="${assetVideo}" class="js-embed-video-link"></div>
+            </div>
+        <iselse/>
+            <picture>
+                <source media="(max-width: 575px)" srcset="${mobileURL}">
+                <source media="(min-width: 576px) and (max-width: 991px)" srcset="${tabletURL}">
+                <source media="(min-width: 992px)" srcset="${desktopURL}">
+                <img src="null" srcset="${desktopURL}" alt="${pdict.content.name}" />
+            </picture>
+        </isif>
+    </div>
+</isif>

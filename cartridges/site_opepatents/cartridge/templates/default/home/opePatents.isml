@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/css/ope-patents.css')}" />
+<isinclude template="components/gtmDataLayer"/>
+<isinclude template="components/gtmNoScript"/>
+
+<isslot id="ope-patents-page" description="OPE Patents content page" context="global" />

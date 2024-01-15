@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="seo-assets">
+        <display-name xml:lang="x-default">Category SEO assets</display-name>
+        <description xml:lang="x-default">These assets can be included in the Category Landing pages by assigning them to a content slot.</description>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <page-attributes/>
+    </folder>
+
+    <content content-id="seo-belts">
+        <display-name xml:lang="x-default">Belts Category SEO text</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;MTD Mower Belts and Snow Blower Belts&#13;
+MTD offers a wide selection of lawn mower belts designed for MTD mowers. Browse our wide selection of lawn mower belts, or if you already know the part number, use our quick order option to easily find the MTD belts you are looking for. Whether you're looking for drive belts or deck belts, you'll find them here. Don't overlook your snowblower belts, either. As your snowblower powers through snow and ice in the winter, it can wear on the belts. Before winter hits, examine your snowblower belts and look for frays, cracks or other signs of wear. If you spot those, use our Part Finder to locate the proper replacement belts. Also, if you need advice on how to repair or maintain your equipment, review our lawn mower repair tips.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="seo-assets"/>
+        </folder-links>
+    </content>
+
+	<content content-id="tracking_hint"></content>
+
+</library>

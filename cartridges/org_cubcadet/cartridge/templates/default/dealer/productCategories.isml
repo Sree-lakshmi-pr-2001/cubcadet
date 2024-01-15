@@ -1,0 +1,23 @@
+<isif condition="${pdict.productCategories.size() > 0}">
+    <div class="dealer-aboutus-card">
+        <h5 class="dealer-aboutus-subheading">
+            ${Resource.msg('dealer.home.aboutUs.weProvideService', 'dealer', null)}:
+        </h5>
+        <ul class="dealer-aboutus-list">
+            <isloop items="${pdict.productCategories}" var="productCategory">
+                <li>${productCategory}</li>
+            </isloop>
+        </ul>
+    </div>
+
+    <div class="dealer-aboutus-card">
+        <h5 class="dealer-aboutus-subheading">
+            ${Resource.msg('dealer.home.aboutUs.productsWeOffer', 'dealer', null)}
+        </h5>
+        <ul class="dealer-aboutus-list">
+            <isloop items="${pdict.productCategories}" var="productCategory">
+                <li>${productCategory}</li>
+            </isloop>
+        </ul>
+    </div>
+</isif>

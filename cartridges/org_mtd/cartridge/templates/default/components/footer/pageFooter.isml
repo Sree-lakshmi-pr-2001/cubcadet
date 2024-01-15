@@ -1,0 +1,48 @@
+<isinclude template="components/modules" />
+
+<div class="footer-email-signup">
+    <iscontentasset aid="email-signup-form" />
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-item collapsible-sm">
+                <iscontentasset aid="footer-products" />
+            </div>
+            <div class="footer-item collapsible-sm">
+                <iscontentasset aid="footer-knowledge-center" />
+            </div>
+            <div class="footer-item collapsible-sm">
+                <iscontentasset aid="footer-support" />
+            </div>
+            <div class="footer-item collapsible-sm">
+                <iscontentasset aid="footer-about" />
+            </div>
+            <div class="footer-item collapsible-sm">
+                <iscontentasset aid="footer-account" />
+            </div>
+        </div>
+        <hr class="hidden-sm-down footer-hr" />
+        <div class="row">
+            <div class="col-md-4 push-md-8 social">
+                <isslot id="footer-column" description="Content in column 1 of the Footer" context="global" />
+                <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}"><issvg icon="arrow-up-round" image="true" altText="" /></button>
+            </div>
+            <div class="col-md-8 pull-md-4 copyright-notice">
+                <iscontentasset aid="footer-copy" />
+            </div>
+        </div>
+        <isinclude template="monetate/monetatefooter" />
+    </div>
+    
+    <iscomment>Print Live Agent Chat Code </iscomment>
+    <isinclude url="${URLUtils.url('LiveAgent-Show')}" />
+</footer>
+<isif condition="${!('pageContext' in this) || empty(pageContext)}">
+    <isscript>pageContext = new Object();</isscript>
+</isif>
+<isscript>pageContext.locale = request.locale</isscript>
+<script>pageContext = <isprint value="${JSON.stringify(pageContext)}" encoding="off"/>;</script>
+<isinclude template="monetate/monetateuserinfo" />
+

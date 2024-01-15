@@ -1,0 +1,76 @@
+<!--- TEMPLATENAME: content.isml --->
+<isdecorate template="common/layout/page">
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customerService.css');
+    assets.addJs('/js/contactUs.js');
+</isscript>
+    <isif condition="${!empty(pdict.sucess)}">
+        <div class="container">
+            <div class="confirmation-message">
+                <h1>${Resource.msg('contactus.messagesent','forms',null)}</h1>
+                <h4>${Resource.msg('contactus.messagerequires','forms',null)}</h4>
+            </div>
+        </div>
+    <iselse/>
+        <h1 class="page-title simple-title col-md-12 col-lg-8 mx-auto">${Resource.msg('global.contactus','forms',null)}</h1>
+        <form action="${URLUtils.url('CustomerService-Submit')}" class="registration col-md-12 col-lg-8 mx-auto" id ="applyBtn" method="POST" name="${pdict.contactUsForm.htmlName}">
+            <div class="form-group
+            <isif condition=" ${!!pdict.contactUsForm.firstname.mandatory===true} ">required</isif>">
+                <label class="form-control-label" for="registration-form-fname">
+                    <isprint value="${pdict.contactUsForm.firstname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="registration-form-fname" name="firstname" <isprint value=${pdict.contactUsForm.firstname.attributes} encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group
+            <isif condition=" ${!!pdict.contactUsForm.lastname.mandatory===true} ">required</isif>">
+                <label class="form-control-label" for="registration-form-lname">
+                    <isprint value="${pdict.contactUsForm.lastname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="registration-form-lname" name="lastname" <isprint value=${pdict.contactUsForm.lastname.attributes} encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group
+            <isif condition=" ${!!pdict.contactUsForm.email.mandatory===true} ">required</isif>">
+                <label class="form-control-label" for="registration-form-email">
+                    <isprint value="${pdict.contactUsForm.email.label}" encoding="htmlcontent" />
+                </label>
+                <input type="email" class="form-control" data-pattern-mismatch="${Resource.msg('error.email.mismatch','forms',null)}" id="registration-form-email" name="email" <isprint value=${pdict.contactUsForm.email.attributes} encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group
+            <isif condition=" ${!!pdict.contactUsForm.myquestion.mandatory===true} ">required</isif>">
+                <label class="form-control-label" for="registration-form-myquestion">
+                    <isprint value="${pdict.contactUsForm.myquestion.label}" encoding="htmlcontent" />
+                </label>
+                <select class="form-control shippingState custom-select" id="registration-form-myquestion" name="myquestion" <isprint value=${pdict.contactUsForm.myquestion.attributes} encoding="off" /> autocomplete="shipping address-level1">
+                    <isloop items=${pdict.contactUsForm.myquestion.options} var="myquestion">
+                        <option id="${myquestion.id}" value="${myquestion.htmlValue}" name="${myquestion.id}" ${myquestion.id===pdict.contactUsForm.myquestion.attributes ? 'selected' : ''}>${myquestion.label || ' '}</option>
+                    </isloop>
+                </select>
+                <div class="invalid-feedback">
+                    <isprint value="${pdict.contactUsForm.myquestion.error}">
+                </div>
+            </div>
+
+            <div class="form-group
+            <isif condition=" ${!!pdict.contactUsForm.comment.mandatory===true} ">required</isif>">
+                <label class="form-control-label" for="registration-form-comment">
+                    <isprint value="${pdict.contactUsForm.comment.label}" encoding="htmlcontent" />
+                </label>
+                <textarea type="textarea" class="form-control" id="registration-form-comment" name="comment" rows="4" cols="50" <isprint value=${pdict.contactUsForm.comment.attributes} encoding="off" />></textarea>
+                <div class="invalid-feedback"></div>
+            </div>
+
+             <div class="recaptch-content">
+                <isinclude template="content/renderRecaptcha"/>
+            </div>
+            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+            <button type="submit" id="applyBtn" class="btn contact-us btn-block btn-primary">${Resource.msg('contactus.submit.label','forms',null)}</button>
+        </form>
+    </isif>
+</isdecorate>

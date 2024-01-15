@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="ope-symbol-landing-page" context="global" configuration-id="header-and-language-selection-grid" default="true" assigned-to-site="true">
+        <description>Includes the OPE Symbol landing header and a grid of buttons for choosing the site's language</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-landing-page"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-back-to-top-button" context="global" configuration-id="ope-symbol-back-to-top-button" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-pages-cz" context="global" configuration-id="ope-symbol-content-pages-cz" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-snow-cz"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-pages-en" context="global" configuration-id="ope-symbol-content-pages-en" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-zt-en"/>
+                <content-asset content-id="ope-symbol-felt-en"/>
+                <content-asset content-id="ope-symbol-som-en"/>
+                <content-asset content-id="ope-symbol-snow-en"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-pages-es" context="global" configuration-id="ope-symbol-content-pages-es" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-zt-es"/>
+                <content-asset content-id="ope-symbol-felt-es"/>
+                <content-asset content-id="ope-symbol-som-es"/>
+                <content-asset content-id="ope-symbol-snow-es"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-pages-fr" context="global" configuration-id="ope-symbol-content-pages-fr" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-zt-fr"/>
+                <content-asset content-id="ope-symbol-felt-fr"/>
+                <content-asset content-id="ope-symbol-snow-fr"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-hu" context="global" configuration-id="ope-symbol-content-welcome-page" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-hu"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-cs" context="global" configuration-id="ope-symbol-content-welcome-page-cs" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-cs"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-cz" context="global" configuration-id="ope-symbol-content-welcome-page-cz" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-cz"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-da" context="global" configuration-id="ope-symbol-content-welcome-page-da" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-da"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-de" context="global" configuration-id="ope-symbol-content-welcome-page-de" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-de"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-en" context="global" configuration-id="ope-symbol-content-welcome-page-en" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-welcome-page-en"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-es" context="global" configuration-id="ope-symbol-content-welcome-page-es" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-welcome-page-es"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-et" context="global" configuration-id="ope-symbol-content-welcome-page-et" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-et"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-fi" context="global" configuration-id="ope-symbol-content-welcome-page-fi" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-fi"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-fr" context="global" configuration-id="ope-symbol-content-welcome-page-fr" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-welcome-page-fr"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-hr" context="global" configuration-id="ope-symbol-content-welcome-page-hr" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-hr"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-lt" context="global" configuration-id="ope-symbol-content-welcome-page-lt" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-lt"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-lv" context="global" configuration-id="ope-symbol-content-welcome-page-lv" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-lv"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-nl" context="global" configuration-id="ope-symbol-content-welcome-page-nl" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-nl"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-no" context="global" configuration-id="ope-symbol-content-welcome-page-no" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-no"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-pl" context="global" configuration-id="ope-symbol-content-welcome-page-pl" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-pl"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-ru" context="global" configuration-id="ope-symbol-content-welcome-page-ru" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-ru"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-scr" context="global" configuration-id="ope-symbol-content-welcome-page-scr" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-scr"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-sk" context="global" configuration-id="ope-symbol-content-welcome-page-sk" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-sk"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-sl" context="global" configuration-id="ope-symbol-content-welcome-page-sl" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-sl"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-content-welcome-page-uk" context="global" configuration-id="ope-symbol-content-welcome-page-uk" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-back-to-top-button"/>
+                <content-asset content-id="skip-to-main-content-button"/>
+                <content-asset content-id="ope-symbol-content-page-language-selection-header"/>
+                <content-asset content-id="ope-symbol-snow-uk"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ope-symbol-en" context="global" configuration-id="ope-symbol-english-full-page" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="ope-symbol-english"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

@@ -1,0 +1,28 @@
+
+<isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/homePage.js');
+        assets.addCss('/css/homePage.css');
+</isscript>
+
+<iscomment> <isinclude template="/components/modules"/> </iscomment>
+
+<p>This is being loaded via /templates/default/home/homePage.isml</p>
+
+<h1>hello, derp</h1>
+
+<p>A content slot declaring its content asset's name in a short, italicized message should appear in the box below. The slot is named <strong>ope-symbol-en</strong>.
+<p>The slot configuration is named <strong>ope-symbol-en-landing</strong>.</p>
+<p>Its content asset is named <strong>Content asset TEST</strong> (id = content-asset-test).</p>
+<p>Its template, as listed in the slot configuration, is <strong>slots/content/contentAssetBody.isml</strong></p>
+
+<div class="home-main homepage"style="border:2px solid black; padding:2em;">
+    <iscomment> slot goes here </iscomment>
+</div>
+
+<p>This box should contain a directly-injected content asset named <strong>Content asset test</strong>.</p>
+<div class="home-main homepage"style="border:2px solid black; padding:2em;">
+    <iscomment> <iscontent id="content-asset-test" description="This is a scoffin test (derp)." /> </iscomment>
+</div>
+
+<iscomment> <ismonetatetrackpage pagename="main" /> </iscomment>

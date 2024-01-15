@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<extensions xmlns="http://www.demandware.com/xml/bmmodules/2007-12-11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.demandware.com/xml/bmmodules/2007-12-11 bmext.xsd">
+	<menuaction id="mtd-epcot" menupath="orders" position="200" site="true">
+		<name xml:lang="x-default">EPCOT Replacement</name>
+		<short_description xml:lang="x-default">Place orders for Customers</short_description>
+		<description xml:lang="x-default">Place Orders By Call Center</description>
+		<exec pipeline="Epcot" node="Start"/>
+		<sub-pipelines>
+			<pipeline name="Epcot-Start" />
+			<pipeline name="Epcot-Login" />
+			<pipeline name="Epcot-Welcome" />
+			<pipeline name="EpcotOrderInquiry-Home" />
+			<pipeline name="EpcotOrderInquiry-AJAXOrderSearch" />
+			<pipeline name="EpcotOrderConsumer-ChooseBrand" />
+			<pipeline name="EpcotOrderInquiry-AJAXGetSelectedOrder" />
+			<pipeline name="EpcotOrderConsumer-StartBasket" />
+			<pipeline name="EpcotOrderConsumer-ReturnToStartBasket" />
+			<pipeline name="EpcotOrderConsumer-StartCheckout" />
+			<pipeline name="EpcotOrderConsumer-AddressView" />
+			<pipeline name="EpcotOrderConsumer-AddressSubmit"/>
+			<pipeline name="EpcotOrderConsumer-EstimateAddressSubmit" />
+			<pipeline name="EpcotOrderConsumer-AjaxProductSearch" />
+			<pipeline name="EpcotOrderConsumer-AjaxAddToBasket" />
+			<pipeline name="EpcotOrderConsumer-AjaxGetBasket" />
+			<pipeline name="EpcotOrderConsumer-AjaxGetOrder" />
+			<pipeline name="EpcotOrderConsumer-AjaxAddCoupon" />
+			<pipeline name="EpcotOrderConsumer-AjaxRemoveCoupon" />
+			<pipeline name="EpcotOrderConsumer-AjaxAssignShippingMethod" />
+			<pipeline name="EpcotOrderConsumer-AjaxPriceAdjustment" />
+			<pipeline name="EpcotOrderConsumer-AjaxRemovePriceAdjustment" />
+			<pipeline name="EpcotOrderConsumer-AjaxRemoveBasketItem" />
+			<pipeline name="EpcotOrderConsumer-AjaxUpdateBasketItem" />
+			<pipeline name="EpcotOrderConsumer-AjaxUpdateBasketWithNoChargeReasonCodes" />
+			<pipeline name="EpcotOrderConsumer-AJAXAddressValidate" />
+			<pipeline name="EpcotOrderConsumer-PaymentsAndDiscounts" />
+			<pipeline name="EpcotOrderConsumer-OrderSubmitNoCharge" />
+			<pipeline name="EpcotOrderConsumer-OrderView" />
+			<pipeline name="EpcotOrderConsumer-AJAXCustomerSearch" />
+			<pipeline name="EpcotOrderConsumer-SubmitCheckout" />
+			<pipeline name="EpcotOrderConsumer-AjaxNoChargeItem" />
+			<pipeline name="EpcotOrderConsumer-AjaxNoChargeBasket" />
+			<pipeline name="EpcotOrderConsumer-AjaxUpdateChargeOrder" />
+			<pipeline name="EpcotOrderConsumer-AjaxAddNoChargeBasketOrItem" />
+			<pipeline name="EpcotOrderConsumer-AjaxRemoveNoChargeBasketOrItem" />
+			<pipeline name="EpcotOrderConsumer-AjaxAddNotesToBasket" />
+			<pipeline name="EpcotOrderConsumer-AjaxAddNotesToOrder" />
+			<pipeline name="PCIPal-StartPayment" />
+			<pipeline name="PCIPal-ShowPaymentPage" />
+			<pipeline name="PCIPal-CompletePayment" />
+			<pipeline name="PCIPal-ReturnToDiscounts" />
+			<pipeline name="EpcotAdmin-ManageUsers" />
+			<pipeline name="EpcotAdmin-ManageRoles" />
+			<pipeline name="EpcotAdmin-AjaxGetSfccUser" />
+			<pipeline name="EpcotAdmin-AjaxGetSfccRoles" />
+			<pipeline name="EpcotAdmin-AjaxPostSfccUser" />
+			<pipeline name="EpcotAdmin-AjaxPutSfccUser" />
+			<pipeline name="EpcotAdmin-AjaxPutRole" />
+			<pipeline name="EpcotAdmin-NoChargeAudit" />
+			<pipeline name="EpcotOrderConsumer-OrderProcessedByReviewer" />
+			<pipeline name="EpcotOrderConsumer-AJAXGetSfdcCaseDetails" />
+			<pipeline name="EpcotOrderConsumer-UpdateCaseNumberTOBasket" />
+			<pipeline name="EpcotOrderConsumer-VerifyAddressByGoogle" />
+		</sub-pipelines>
+		<icon>/icons/open_orders_ico.gif</icon>
+	</menuaction>
+</extensions>

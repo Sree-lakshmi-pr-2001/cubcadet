@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="consumer-data-request-form-test">
+        <display-name xml:lang="x-default">
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style type=&quot;text/css&quot;&gt;.page-title {
+            
+            display: none;
+            
+            }
+            
+            .content-page-image {
+            
+            display: none;
+            
+            }
+            
+            .required-label {
+            
+            color: red;
+            font-size: 0.875rem;
+            font-style: italic;
+            
+            }
+            
+            .privacy-form {
+            
+            text-transform: none !important;
+            font-weight: 400 !important;
+            
+            }
+            
+            label {
+            
+            text-transform: none !important;
+            font-weight: 400 !important;
+            font-size: 1.0rem;
+            
+            }
+            
+            .optional-label {
+            
+            font-weight: 400 !important;
+            font-size: 1.0rem;
+            
+            }
+            
+            .grey-bg {
+            
+            border: 2px red solid;
+            padding: 15px;
+            
+            }
+            
+            .header-text {
+            
+            font-size: 1.1rem;
+            
+            }
+            
+            label .boolean {
+            
+            font-size: 1.1rem;
+            
+            }
+            &lt;/style&gt;
+            
+            &lt;div&gt;
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+            
+            &lt;h3&gt;Consumer Privacy Information Request Form&lt;/h3&gt;
+            &lt;/div&gt;
+            
+            &lt;form action=&quot;$httpsUrl('CustomerService-FormHandler')$&quot; name=&quot;_request_form&quot; method=&quot;post&quot;&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;subject&quot; value=&quot;Consumer Privacy Information Request Form&quot;/&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;emailTo&quot; value=&quot;support&quot;/&gt;
+            &lt;h6&gt;1. What is the nature of your request?&lt;span class=&quot;required-label&quot;&gt;&amp;nbsp;(Required)&lt;/span&gt;&lt;/h6&gt;
+            
+            &lt;div class=&quot;form-check privacy-form&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;delete-personal-information&quot; id=&quot;delete-personal-information&quot; value=&quot;option1&quot;&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;delete-personal-information&quot;&gt;
+            I want you to delete my personal information*
+            &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;br /&gt;
+            &lt;div class=&quot;form-check privacy-form&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;request-personal-information&quot; id=&quot;request-personal-information&quot; value=&quot;option1&quot;&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;request-personal-information&quot;&gt;
+            I want to know what information you maintain about me
+            &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;br /&gt;
+            &lt;p&gt;*For more information, please review our &lt;a href=&quot;$url('Page-Show','cid','privacy-policy')$&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
+            
+            &lt;h6&gt;2. We must verify your identity and/or confirm that you have authority to make this information request. Therefore, please confirm the following information:&lt;span class=&quot;required-label&quot;&gt;&amp;nbsp;(Required)&lt;/span&gt;&lt;/h6&gt;
+            
+            &lt;div class=&quot;grey-bg&quot;&gt;
+            
+            &lt;p class=&quot;header-text&quot;&gt;I am making this request on behalf of another consumer&lt;/p&gt;
+            
+            &lt;div class=&quot;form-check privacy-form&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;request-for-other&quot; id=&quot;request-for-customer-or-other&quot; value=&quot;request-for-customer-yes&quot; required&gt;
+            &lt;label class=&quot;form-check-label boolean&quot; for=&quot;request-for-customer-or-other&quot;&gt;
+            Yes
+            &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;br /&gt;
+            &lt;div class=&quot;form-check privacy-form&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;request-for-other&quot; id=&quot;request-for-customer-or-other&quot; value=&quot;request-for-customer-no&quot; required&gt;
+            &lt;label class=&quot;form-check-label boolean&quot; for=&quot;request-for-customer-or-other&quot;&gt;
+            No
+            &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;name&quot;&gt;Name of Person Making Request&lt;span class=&quot;optional-label&quot;&gt; (optional):&lt;/span&gt;&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;name-of-requestor&quot; type=&quot;text&quot; /&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;name&quot;&gt;Relationship to the consumer&lt;span class=&quot;optional-label&quot;&gt; (optional):&lt;/span&gt;&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;relationship-to-consumer&quot; type=&quot;text&quot; /&gt;
+            
+            &lt;/div&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;name&quot; type=&quot;text&quot; required /&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;address&quot;&gt;Address:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;address&quot; type=&quot;text&quot; required /&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;email&quot; type=&quot;email&quot; required /&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;phone-number&quot;&gt;Phone Number(s):&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;phone-number&quot; type=&quot;text&quot; required /&gt;
+            &lt;br /&gt;
+            &lt;h6&gt;3. Product Information &lt;span class=&quot;optional-label&quot;&gt;(optional):&lt;/span&gt;&lt;/h6&gt;
+            
+            
+            &lt;label class=&quot;form-check-label&quot; for=&quot;model-number&quot;&gt;Model Number:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;model-number&quot; type=&quot;text&quot; /&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;serial-number&quot;&gt;Serial Number:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;serial-number&quot; type=&quot;text&quot; /&gt;
+            &lt;br /&gt;
+            &lt;h6&gt;4. Other Information&lt;span class=&quot;optional-label&quot;&gt; (optional):&lt;/span&gt;&lt;/h6&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;social-media-handle&quot;&gt;Social Media Handle:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;social-media-handle&quot; type=&quot;text&quot; /&gt;
+            &lt;br /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;user-id&quot;&gt;Do you have an account with us? Please provide your User ID:&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; name=&quot;user-id&quot; type=&quot;text&quot; /&gt;&lt;br /&gt;
+            
+            &lt;script src='https://www.google.com/recaptcha/api.js' async defer&gt;&lt;/script&gt;
+            &lt;div id=&quot;recaptcha&quot; class=&quot;g-recaptcha&quot; data-sitekey=&quot;6Le6hIEUAAAAACNuchJ4xHgLB1iD3gEor1no4CtN&quot;&gt;&amp;nbsp;&lt;/div&gt;
+            &lt;div class=&quot;invalid-feedback&quot;&gt;ReCaptcha validation failed&lt;/div&gt;
+            &lt;br /&gt;
+            &lt;button type=&quot;submit&quot; name=&quot;submit-button&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+            
+            &lt;/form&gt;
+            
+            &lt;p&gt;&amp;nbsp;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

@@ -1,0 +1,33 @@
+<div class="container-fluid compare-bar-wrapper">
+    <div class="row">
+        <div class="container compare-bar"
+            data-max-slots="${pdict.maxSlots}"
+            data-max-mobile-slots="${pdict.maxMobileSlots}"
+            data-min-products-msg="${Resource.msg('text.productcompare.select2', 'product', null)}"
+            data-remove-text="${Resource.msg('text.remove', 'product', null)}">
+            <form method="GET" class="compare-products-form" name="compare-products" action="${URLUtils.url('Compare-Show')}">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="compare-bar-title">
+                            ${Resource.msg('label.compareproducts', 'product', null)}<span class="selected-products"></span>
+                            <div class="action d-lg-none">
+                                <button type="submit" class="compare btn btn-link">${Resource.msg('button.compareitems', 'product', null)}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 col-xl-8">
+                        <div class="row product-slots no-gutters"></div>
+                    </div>
+                    <div class="col-12 col-lg-3 offset-xl-1 action d-none d-lg-block">
+                        <button type="submit" class="compare btn btn-primary">${Resource.msg('button.compareitems', 'product', null)}</button>
+                        <a href="${'#'}" class="clear-all">${Resource.msg('link.clearall', 'product', null)}</a>
+                    </div>
+                </div>
+                <input type="hidden" name="cgid" />
+                <input type="hidden" name="backUrl" />
+            </form>
+        </div>
+    </div>
+</div>

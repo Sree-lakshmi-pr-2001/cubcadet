@@ -1,0 +1,16 @@
+<div class="line-item-availability availability-${lineItem.UUID}">
+    <isif condition="${'mtdAvailability' in lineItem}">
+        <isloop items="${lineItem.mtdAvailability.messages}" var="message">
+            <p class="line-item-attributes">${message}</p>
+        </isloop>
+    <iselseif condition="${'availability' in lineItem}">
+        <isloop items="${lineItem.availability.messages}" var="message">
+            <p class="line-item-attributes">${message}</p>
+        </isloop>
+        <isif condition="${lineItem.availability.inStockDate}">
+            <p class="line-item-attributes line-item-instock-date">
+                ${lineItem.availability.inStockDate}
+            </p>
+        </isif>
+    </isif>
+</div>

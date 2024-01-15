@@ -1,0 +1,22 @@
+<isif condition="${pdict.product.relatedContent.length > 0}">
+    <div class="product-related-content container">
+        <div class="product-related-content-title h1">
+            ${Resource.msg('blog.postpage.checkoutmoreblogposts', 'blog', null)}
+        </div>
+        <isset name="assets" value="${pdict.product.relatedContent}" scope="pdict" />
+        <div class="product-related-content-tile-caro row">
+            <isloop items="${pdict.assets}" var="asset">
+                <div class="product-related-content-tile">
+                    <iscomment> Image </iscomment>
+                    <isinclude template="content/components/contentTileImage" />
+
+                    <iscomment> Category </iscomment>
+                    <isinclude template="content/components/contentTileCategory" />
+
+                    <iscomment> CTA Title </iscomment>
+                    <isinclude template="content/components/contentTileCTATitle" />
+                </div>
+            </isloop>
+        </div>
+    </div>
+</isif>

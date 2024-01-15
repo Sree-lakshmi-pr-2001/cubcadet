@@ -1,0 +1,11 @@
+<!--- TEMPLATENAME: warning.isml --->
+<isinclude template="/components/modules" sf-toolkit="off" />
+<div class="card-body">
+    <iscontentasset aid="prop65-warning" />
+    <div class="form-group custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="acknowledgeProp65" name="acknowledgeProp65" <isif condition="${pdict.order.prop65Ackowledged}">checked="checked"</isif>>
+        <label class="custom-control-label" for="acknowledgeProp65">
+            ${Resource.msg('label.checkbox.acknowledgeProp65', 'prop65', null)}
+        </label>
+    </div>
+</div>

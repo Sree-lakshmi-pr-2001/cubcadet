@@ -1,0 +1,6 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<div class="gallery-caro">
+    <isloop items="${pdict.product.raw.custom['pdp-content']}" var="contentAsset" status="loopstate">
+        <iscontentasset aid="${contentAsset}" nowrap="true" />
+    </isloop>
+</div>

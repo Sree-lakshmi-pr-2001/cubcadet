@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Store">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="paid-dealer-search-snow">
+                <display-name xml:lang="x-default">Paid Dealer Search Snow</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="CubCadet">
+                <display-name xml:lang="x-default">Cub Cadet</display-name>
+                <attribute attribute-id="cubcadet"/>
+                <attribute attribute-id="cubcadetcare"/>
+                <attribute attribute-id="customernumber"/>
+                <attribute attribute-id="product_categories"/>
+                <attribute attribute-id="sells_products"/>
+                <attribute attribute-id="paid-dealer-search-snow"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

@@ -1,0 +1,72 @@
+<isif condition="${pdict.product}">
+    <isset name="productSchema" value="${dw.catalog.ProductMgr.getProduct(pdict.product.id)}" scope="page" />
+
+    <isscript>
+		var imgs = [];
+		for each (var img in productSchema.getImages('large')) {
+		var url = img.getURL().toString();
+			imgs.push(url);
+		}
+	</isscript>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+		"@id": "https://${dw.system.Site.current.getHttpsHostName() + pdict.product.selectedProductUrl.split("?")[0]}",
+        "name": "${productSchema.name}<isif condition="${productSchema.custom.productName2}"> - ${productSchema.custom.productName2} </isif>",
+        "image":  "${imgs.toString()}",
+        "description": "${productSchema.longDescription}",
+        "sku": "${productSchema.ID}",
+        "gtin13": "${productSchema.UPC}",
+        "brand": {
+            "@type": "Brand",
+            "name": "${productSchema.brand}"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://${dw.system.Site.current.getHttpsHostName() + pdict.product.selectedProductUrl.split("?")[0]}",
+            "priceCurrency": "${pdict.product.price.sales.currency}",
+            "price": "${pdict.product.price.sales.decimalPrice}",
+            "priceValidUntil": "???",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": <isif condition="${pdict.product.available}">"http://schema.org/InStock"<iselse>"http://schema.org/OutOfStock"</isif>,
+            "itemOffered": "${pdict.product.isBuyable}",
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                    "@type": "definedRegion",
+                    "addressCountry": "${dw.system.Site.getCurrent().getDefaultLocale().split("_")[1]}"
+                },
+                "deliveryTime": {
+                    "@type": "shippingDeliveryTime",
+                    "businessDays": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": [
+                            "https://schema.org/Monday",
+                            "https://schema.org/Tuesday",
+                            "https://schema.org/Wednesday",
+                            "https://schema.org/Thursday",
+                            "https://schema.org/Friday"
+                        ],
+                        "cutOffTime": "12:00-05:00",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "4"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": "1",
+                            "maxValue": "4"
+                        }
+                    },
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "currency": "${pdict.product.price.sales.currency}"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</isif>

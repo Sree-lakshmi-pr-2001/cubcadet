@@ -1,0 +1,14 @@
+<div class="utility-nav">
+<isset name="isMobileView" value="${session.custom.deviceType}" scope="page" />
+    <ul class="utility-list">
+        <isif condition="${dw.system.Site.current.getCustomPreferenceValue('mtdLiveChatEnabled')}">
+            <li><a href="javascript:void(0)" id="header-live-chat" class="icon-chat"><span>${Resource.msg('global.livechat', 'common', null)}</span></a></li>
+        </isif>
+        <li><a href="${URLUtils.https('Stores-FindService')}" class="icon-find-service"><span>${Resource.msg('global.findservice', 'common', null)}</span></a></li>
+        <li><a href="${URLUtils.url('Page-Show', 'cid', 'registration')}" class="icon-registration"><span>${Resource.msg('global.registration', 'common', null)}</span></a></li>
+        <isinclude url="${URLUtils.url('Account-Header')}" />
+       <isif condition="${isMobileView === 'mobile'}">
+            <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />  
+        </isif>
+    </ul>
+</div>

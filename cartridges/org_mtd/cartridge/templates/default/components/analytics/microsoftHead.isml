@@ -1,0 +1,24 @@
+<isscript>
+    var Site = require('dw/system/Site');
+    var microsoftTrackingEnabled = Site.current.getCustomPreferenceValue('microsoftTrackingEnabled');
+    var microsoftTagId = Site.current.getCustomPreferenceValue('microsoftTrackingTagID') || '';
+    var nameSpace = ('pageContext' in this && !empty(pageContext) && !empty(pageContext.ns)) ? pageContext.ns : '';
+</isscript>
+<isif condition="${microsoftTrackingEnabled}">
+    <!--BEGIN: Microsoft Advertising UET Javascript tag.-->
+    <script>(function (w, d, t, r, u) { var f, n, i; w[u] = w[u] || [], f = function () { var o = { ti: "${microsoftTagId}" }; o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad") }, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () { var s = this.readyState; s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null) }, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i) })(window, document, "script", "//bat.bing.com/bat.js", "uetq");</script>
+    <!--END: Microsoft Advertising UET Javascript tag-->
+    <isif condition="${nameSpace === 'orderconfirmation'}">
+        <isscript>
+            var MicrosoftHelper = require('*/cartridge/scripts/util/MicrosoftHelper');
+            var orderRevenue = MicrosoftHelper.getOrderRevenue(pdict);
+        </isscript>
+        <script>
+            var varRevenue = ${orderRevenue};
+        </script>
+        <!--END: JS to set variable revenue-->
+        <!--BEGIN: Custom code to report variable revenue for Destination URL type goal. In this sample we are reading dynamic value for the variable revenue from a JS variable. You can just as easily send static values or read from a JS function or from HTML elements etc.   -->
+        <script> window.uetq = window.uetq || []; window.uetq.push({ 'gv': varRevenue });</script>
+        <!--END: Custom code to report variable revenue-->
+    </isif>
+</isif>

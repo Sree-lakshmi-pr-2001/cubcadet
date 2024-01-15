@@ -1,0 +1,51 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<div class="modal fade enterSerialNumber-modal" id="enterSerialNumberModal" tabindex="-1" role="dialog" aria-labelledby="enterSerialNumber" action-get-delivery-zipcode="${URLUtils.url('ExtendedWarranty-EnterSerialNumber')}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <div class="block block-1">
+                    <div class="circle bg-white">
+                      <img src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty-minicart.png')}" alt="">
+                    </div>
+                  </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body">
+                <center>
+                     <div class="form-group required">
+                        <div class="pagination-steps mt-4 mb-3 ">
+                            <div class="pagination-step step-1 active"> 
+                                1
+                            </div>
+
+                            <div class="pagination-step step-2"> 
+                                2
+                            </div>
+
+                            <div class="pagination-step step-3"> 
+                                3
+                            </div>
+                        </div>   
+                        <form action="${URLUtils.url('ExtendedWarranty-LookupSerialNumber')}" id="submitSerialNumber" method="POST" name="${pdict.enterSerialNumberForm.htmlName}">
+                            <h6>${dw.web.Resource.msg('dialog1.header', 'eligibilitycheck', null)}</h6>
+                            <div class="container">
+                                <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                                    <input autofocus required type="text" class="form-control" id="serialNumber" name="serialNumber" value="" autocomplete="nofill" <isprint value=${pdict.enterSerialNumberForm.serialNumber.attributes} encoding="off" />>
+                                    <button type="submit" class="btn btn-secondary">${dw.web.Resource.msg('dialog1.button', 'eligibilitycheck', null)}</button>
+                                </div>
+                            </div>
+
+                            <div class="showHowToFind"> ${dw.web.Resource.msg('dialog1.howtofind', 'eligibilitycheck', null)}</div>
+
+                            <div id="moreSerialInfo" class="hide">
+                                <div class="hideHowToFind"></div>
+                                <iscontentasset aid="EW-ECM-How-Find-Serial-Number" />
+                            </div>
+                        </form>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>

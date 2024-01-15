@@ -1,0 +1,10 @@
+    <div class="text-center ew-error-text">
+        <div>
+            <img class="error-img" src="${dw.web.URLUtils.httpsStatic('/images/error-icon.svg')}" /><br>
+            <h6>${pdict.errorTitle}</h6>
+            <div class="ew-info-text">
+                <isprint encoding="off" value="${pdict.warrantyInfo}" />
+            </div>
+            <a id="notMyProduct" class="btn btn-secondary" data-url="${URLUtils.url('ExtendedWarranty-EnterSerialNumber')}">${dw.web.Resource.msg('dialog4.button', 'eligibilitycheck', null)}</a><br>
+        </div>
+    </div>

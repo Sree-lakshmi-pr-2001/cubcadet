@@ -1,0 +1,32 @@
+<!--- TEMPLATENAME: infinitescrolltags.isml --->
+<iscomment>
+    This provides scrapable pagination data for infinite scroll
+</iscomment>
+<isset name="currentPage" value="${pdict.productSearch.pageNumber === 0 ? 1 : pdict.productSearch.pageNumber + 1}" scope="page"/>
+<isset name="maxPage" value="${pdict.productSearch.count / pdict.productSearch.pageSize}" scope="page">
+
+<link rel="canonical" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid)}"/>
+<isif condition="${!empty(pdict.productSearch)}">
+
+    <iscomment>first page, only page</iscomment>
+    <isif condition="${currentPage === 1 && (pdict.productSearch.count / pdict.productSearch.pageSize) === 1}">
+
+    <iscomment> first page of many</iscomment>
+    <iselseif condition="${currentPage == 1}">
+        <link rel="next" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid,'start', currentPage * pdict.productSearch.pageSize)}"/>
+
+    <iscomment> middle pages</iscomment>
+    <iselseif condition="${currentPage == 2 && currentPage < maxPage + 1}">
+        <link rel="prev" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid)}"/>
+        <link rel="next" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'start', currentPage * pdict.productSearch.pageSize)}"/>
+
+    <iscomment> middle pages</iscomment>
+    <iselseif condition="${currentPage > 2 && currentPage < maxPage + 1}">
+        <link rel="prev" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'start', (currentPage - 2) * pdict.productSearch.pageSize)}"/>
+        <link rel="next" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'start', currentPage * pdict.productSearch.pageSize)}"/>
+
+    <iscomment> last page</iscomment>
+    <iselse/>
+        <link rel="prev" href="${URLUtils.abs('Search-Show', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'start', (currentPage - 2) * pdict.productSearch.pageSize)}"/>
+    </isif>
+</isif>

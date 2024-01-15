@@ -1,0 +1,14 @@
+<isset name="productImageSize" value="${isQuickView ? product.images['quickview'] : product.images['large']}" scope="page" />
+
+<div class="primary-images col-12 col-sm-6">
+    <div id="pdpCarousel-${product.id}" class="product-carousel" role="listbox">
+        <isloop items="${productImageSize}" var="image" status="loopStatus">
+            <div class="slide">
+                <span class="slide-link ${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? 'zoom-hires' : 'zoom-disabled'}"
+                    data-src="${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? product.imagesZoom['hi-res'][loopStatus.index].url : image.url}">
+                    <img src="${image.url}" class="slide-img" alt="${image.alt}" />
+                </span>
+            </div>
+        </isloop>
+    </div>
+</div>

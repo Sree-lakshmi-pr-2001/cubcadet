@@ -1,0 +1,16 @@
+<div class="content-tile-title body-l card-body">
+    <isset name="tileURL" value="${asset.hasOwnProperty('url') && asset.url !== null ? asset.url : URLUtils.url('Page-Show', 'cid', asset.ID)}" scope="page"/>
+    <div class="card-title-container">
+        <a class="content-tile-title-link" href="${tileURL}">
+            <h6 class="card-title"><isprint value="${asset.name}"/></h6>
+        </a>
+    </div>
+
+    <div class="card-text">
+        <p>${asset.description}</p>
+    </div>
+
+    <a href="${tileURL}" class="article-link">
+        ${Resource.msg('blog.readmore', 'blog', null)}
+    </a>
+</div>

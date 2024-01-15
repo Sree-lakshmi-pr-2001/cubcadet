@@ -1,0 +1,358 @@
+//////////////////////////////////////////
+// Homepage
+// Global Styles
+//////////////////////////////////////////
+
+[class^="home-slot"] {
+    > div {
+        margin-bottom: rem(25px); // 40px total
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(30px); // 60px
+        }
+
+        &.product-carousel-slot {
+            margin-bottom: rem(40px);
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: rem(60px);
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////
+// Category, Product Line Landing & Product Line Browse
+// Global Styles
+//////////////////////////////////////////
+
+.cat-landing > div {
+    margin-bottom: rem(15px);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: rem(30px);
+    }
+
+    // no padding when breadcrumbs present
+    &.hero,
+    .hero {
+        padding-top: 0;
+    }
+}
+
+.card-group-heading {
+    margin: 0 0 rem(7px); // 15px total
+    text-align: center;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+        width: 60%;
+        margin: 0 auto rem(20px);
+    }
+}
+
+.pl-browse > div {
+    margin-bottom: rem(40px);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: rem(60px);
+    }
+
+    // no padding when breadcrumbs present
+    &.hero,
+    .hero {
+        padding-top: 0;
+    }
+}
+
+.pl-browse {
+    > .container:first-child:not(.product-carousel-slot) {
+        margin-bottom: rem(10px);
+    }
+
+    //custom side margins on these pages only
+    > .container-fluid {
+        @include media-breakpoint-up(lg) {
+            padding-left: rem(30px);
+            padding-right: rem(30px);
+        }
+    }
+}
+
+// above the footer
+.pl-browse-5 > div,
+.cat-landing-4 > div {
+    margin-bottom: rem(60px);
+}
+
+.landing-gallery {
+    margin-bottom: 0;
+}
+
+//////////////////////////////////////////
+// productCarouselSlot.isml
+//////////////////////////////////////////
+
+.product-carousel-slot {
+    margin: rem(15px) auto;
+    padding: 0 rem(7px);
+
+    @include media-breakpoint-up(lg) {
+        margin: rem(30px) auto rem(15px);
+    }
+
+    .carousel-title {
+        text-align: center;
+        margin-bottom: rem(15px);
+
+        @include media-breakpoint-up(lg) {
+            margin: rem(30px) 0 rem(15px);
+        }
+    }
+
+    .product-tile-caro {
+        .product-tile {
+            @include media-breakpoint-down(md) {
+                margin: 0 7px;
+            }
+        }
+
+        .image-container {
+            @include media-breakpoint-down(md) {
+                padding: rem(10px);
+            }
+        }
+    }
+}
+
+
+//////////////////////////////////////////
+// Shop Category Tiles Carousel
+// Global Styles
+//////////////////////////////////////////
+
+.slot-callout {
+    text-align: center;
+
+    h2 {
+        margin-bottom: rem(20px);
+    }
+}
+
+.icon-list {
+    display: flex;
+    padding-bottom: rem(20px);
+
+    .icon-container {
+        text-align: center;
+        padding-right: rem(15px);
+
+        &:last-child {
+            padding: 0;
+        }
+
+        .icon-element {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.product-support {
+    padding-bottom: rem(30px);
+
+    .icon-container {
+        @include media-breakpoint-up(md) {
+            position: relative;
+        }
+
+        .link-chevron {
+            @include media-breakpoint-up(md) {
+                @include centerElement(horizontal, absolute);
+
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.shop-category-container {
+    background: $accent-3;
+
+    @include media-breakpoint-up(md) {
+        margin: 0 rem(15px);
+    }
+
+    .img-container {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .cat-badge {
+            @include label-1;
+
+            display: block;
+            width: 200px;
+            padding: rem(15px);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            line-height: 1;
+            background: $primary;
+
+            @include media-breakpoint-up(md) {
+                width: 240px;
+                padding: rem(15px) rem(20px);
+            }
+        }
+    }
+
+    .shop-category-body {
+        position: relative;
+        padding: rem(15px);
+        background: $accent-3;
+
+        @include media-breakpoint-up(md) {
+            padding: rem(15px) rem(20px);
+        }
+    }
+
+    .shop-category-text {
+        display: inline-block;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            width: calc(100% - #{rem(85px)});
+            padding-right: rem(20px);
+            border-right: $border;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    .shop-category-link {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 rem(30px);
+        }
+    }
+}
+
+//////////////////////////////////////////
+// categoryListNav.isml
+//////////////////////////////////////////
+
+.category-list-nav {
+    h2 {
+        margin-bottom: rem(5px);
+    }
+}
+
+.home-category-tiles {
+    margin: rem(20px) 0 0;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+
+        &-thumb {
+            border-radius: 10px;
+            border: 5px solid $white; /* should match background, can't be transparent */
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        margin: rem(30px) rem(15px) 0;
+    }
+
+    .list-inline {
+        white-space: nowrap;
+
+        > li {
+            display: inline-block;
+            padding: rem(20px);
+            text-align: center;
+            border-right: $border;
+
+            &:last-child {
+                border: 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto rem(10px);
+            }
+
+            .link-chevron {
+                display: inline-block;
+                margin-right: rem(17px);
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////
+// Cart Marketing Banner - full width banner
+// Global Styles
+//////////////////////////////////////////
+
+.dealer-banner {
+    img {
+        max-width: 100%;
+
+        @include media-breakpoint-up(md) {
+            @include centerElement(center);
+        }
+    }
+}
+
+//////////////////////////////////////////
+// Ask Troy Carousel Slot
+//////////////////////////////////////////
+
+.ask-troy-slot {
+    padding-top: rem(20px);
+    padding-bottom: rem(30px);
+    background-color: $secondary;
+
+    @include media-breakpoint-up(md) {
+        padding-top: rem(80px);
+        padding-bottom: rem(80px);
+    }
+
+    .ask-troy-header {
+        text-align: center;
+
+        .icon.ask-troy-red {
+            margin-bottom: rem(10px);
+
+            @include media-breakpoint-up(md) {
+                width: 265px;
+            }
+        }
+    }
+
+    .blog-tile-caro {
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 0 rem(45px);
+            margin-bottom: rem(15px);
+        }
+    }
+}

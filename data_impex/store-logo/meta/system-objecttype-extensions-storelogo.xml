@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="defaultStoreLogoImage">
+                <display-name xml:lang="x-default">Default logo for store</display-name>
+                <description xml:lang="x-default">Default logo for store is used in case if we didn't select one for store in BM</description>
+                <type>image</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Store">
+                <display-name xml:lang="x-default">Store</display-name>
+                <attribute attribute-id="defaultStoreLogoImage"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Store">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="logoImage">
+                <display-name xml:lang="x-default">Image for logo</display-name>
+                <type>image</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Basic">
+                <display-name xml:lang="x-default">Basic Attributes</display-name>
+                <attribute attribute-id="ID" system="true"/>
+                <attribute attribute-id="name" system="true"/>
+                <attribute attribute-id="website"/>
+                <attribute attribute-id="sells_products"/>
+                <attribute attribute-id="services_products"/>
+                <attribute attribute-id="product_categories"/>
+                <attribute attribute-id="customernumber"/>
+                <attribute attribute-id="cubcadet"/>
+                <attribute attribute-id="cubcadetcare"/>
+                <attribute attribute-id="inventoryListID" system="true"/>
+                <attribute attribute-id="retailer_id"/>
+                <attribute attribute-id="logoImage"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

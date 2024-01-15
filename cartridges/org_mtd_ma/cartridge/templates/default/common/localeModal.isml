@@ -1,0 +1,6 @@
+<span class="locale-change"
+    data-acceptText="${Resource.msg('button.locale.continue', 'common', null)}"
+    data-rejectText="${Resource.msg('button.locale.cancel', 'common', null)}"
+    data-heading="${Resource.msg('modal.locale.title', 'common', null)}"
+    data-body="${Resource.msg('modal.locale.body', 'common', null)}"
+    ></span>

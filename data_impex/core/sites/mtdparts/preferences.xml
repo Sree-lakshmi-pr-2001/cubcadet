@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="SiteCurrencies">USD</preference>
+            <preference preference-id="SiteCustomerList">mtdparts</preference>
+            <preference preference-id="SiteDefaultLocale">en_US</preference>
+            <preference preference-id="SiteLibrary">mtdparts</preference>
+            <preference preference-id="SiteLocales">en_US</preference>
+            <preference preference-id="StorefrontURLsEnabled">true</preference>
+            <preference preference-id="TaxKey">JurisdictionMappings</preference>
+            <preference preference-id="TaxKey1">Zip</preference>
+        </all-instances>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="chaseMerchantId">010232</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="mapAPI">AIzaSyDPVcBVePe3uOtYSbu-i9UaU1ET-wveUps</preference>
+        </development>
+        <staging>
+            <preference preference-id="chaseMerchantId">010232</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="mapAPI">AIzaSyDPVcBVePe3uOtYSbu-i9UaU1ET-wveUps</preference>
+        </staging>
+        <production/>
+    </custom-preferences>
+</preferences>
+

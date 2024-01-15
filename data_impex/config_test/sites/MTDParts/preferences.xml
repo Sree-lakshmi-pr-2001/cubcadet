@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="SiteCatalog">site-catalog-mtdparts-us</preference>
+            <preference preference-id="SiteInventoryList">inventory-mtd</preference>
+            <preference preference-id="SitePriceBooks">mtdparts-usd-list:mtdparts-usd-sale</preference>
+        </all-instances>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development/>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+  <type-extension type-id="SitePreferences">
+    <custom-attribute-definitions>
+      <attribute-definition attribute-id="OMSPushService_Username">
+        <display-name xml:lang="x-default">OMS Push Service Username</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="OMSPushService_Password">
+        <display-name xml:lang="x-default">OMS Push Service Password</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+      </attribute-definition>
+    </custom-attribute-definitions>
+    <group-definitions>
+        <attribute-group group-id="Order_History_Status_Import">
+          <display-name xml:lang="x-default">OMS Push Service Credentials</display-name>
+          <attribute attribute-id="OMSPushService_Username"/>
+          <attribute attribute-id="OMSPushService_Password"/>
+        </attribute-group>
+    </group-definitions>
+  </type-extension>
+  <type-extension type-id="ProductLineItem">
+    <custom-attribute-definitions>
+      <attribute-definition attribute-id="pos_qtyShipped">
+        <display-name xml:lang="x-default">OMS Push Service Quantity Shipped</display-name>
+        <type>int</type>
+        <localizable-flag>false</localizable-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="pos_trackingNumbers">
+        <display-name xml:lang="x-default">OMS Push Service Tracking Numbers</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+      </attribute-definition>
+    </custom-attribute-definitions>
+    <group-definitions>
+        <attribute-group group-id="Order_History_Status_Import_LineItems">
+          <display-name xml:lang="x-default">OMS Push Service Product Line Items</display-name>
+          <attribute attribute-id="pos_qtyShipped"/>
+          <attribute attribute-id="pos_trackingNumbers"/>
+        </attribute-group>
+    </group-definitions>
+  </type-extension>
+</metadata>

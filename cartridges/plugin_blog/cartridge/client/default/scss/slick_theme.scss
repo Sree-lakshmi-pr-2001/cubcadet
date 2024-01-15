@@ -1,0 +1,61 @@
+@import "~org/variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.product-tile-caro,
+.blog-tile-caro,
+.category-subfolder-tile-caro,
+.product-related-content-tile-caro {
+    .slick-prev,
+    .slick-next {
+        top: 35%;
+    }
+
+    .slick-prev {
+        left: 15px;
+    }
+
+    .slick-next {
+        right: 15px;
+    }
+
+    .product-tile {
+        padding: 15px;
+    }
+}
+
+.blog-tile-caro,
+.product-related-content-tile-caro {
+    .slick-prev,
+    .slick-next {
+        top: 40%;
+    }
+}
+
+.category-subfolder-tile-caro {
+    .slick-prev,
+    .slick-next {
+        top: 45%;
+
+        @include media-breakpoint-down(sm) {
+            top: 30%;
+        }
+    }
+
+    .slick-prev {
+        left: -16px;
+
+        @include media-breakpoint-up(md) {
+            left: -32px;
+        }
+    }
+
+    .slick-next {
+        right: -16px;
+
+        @include media-breakpoint-up(md) {
+            right: -32px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.OrderStatusNotify",
+                "description": "Retrieve, process, and send JSON data to update order status",
+                "module": "int_orderstatus/cartridge/scripts/OrderStatusWorkflow.js",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "WARN",
+                            "description": "Used when small, but acceptable problems occurred."
+                        }
+                    ]
+                },
+                "parameters": {
+                    "parameter": [{
+                        "@name": "file_location",
+                        "@type": "string",
+                        "@required": "true",
+                        "description": "A required parameter of the absolute route to the file to be imported. ex. \"IMPEX/upload/myimport/example.json\" "
+                    }]
+            	}
+            }
+        ]
+    }
+}

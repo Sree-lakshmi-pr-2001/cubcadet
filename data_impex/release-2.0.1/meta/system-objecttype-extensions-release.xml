@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="googleGeocodingAPIKey">
+                <display-name xml:lang="x-default">Google Geocoding API Key</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>AIzaSyCRY5nRYhf3dJbFKwJKfoiKUxKBgURDkt8</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="microsoftTrackingEnabled">
+                <display-name xml:lang="x-default">Mircrosoft Tracking Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="microsoftTrackingTagID">
+                <display-name xml:lang="x-default">Microsoft Tracking Tag ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="productTileA2CProductTypes">
+                <display-name xml:lang="x-default">Product Tile Add to Cart button Product Types</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Parts</display>
+                        <value>PARTS</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Whole Good</display>
+                        <value>WholeGood</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Accessory</display>
+                        <value>ACCESSORY</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Extended Warranty</display>
+                        <value>ExtendedWarranty</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="productTilePartReplacesEnabled">
+                <display-name xml:lang="x-default">Product Tile Part Replaces Widget Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="productTileStockMsgEnabled">
+                <display-name xml:lang="x-default">Product Tile Stock Message Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="cartAccessoryRecommendationsCount">
+                <display-name xml:lang="x-default">Cart Accessory Recommendation Scroller Max Product Count</display-name>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>15</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="cartSlotType">
+                <display-name xml:lang="x-default">Cart Slot Type</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Generic Global Recommendations</display>
+                        <value>fixed</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Dynamic Recommendations based on Cart Contents</display>
+                        <value>dynamic</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Google Configs">
+                <display-name xml:lang="x-default">Google Configs</display-name>
+                <attribute attribute-id="googleTagManagerId"/>
+                <attribute attribute-id="pageContextMap"/>
+                <attribute attribute-id="GoogleVerificationTag"/>
+                <attribute attribute-id="mapAPI"/>
+                <attribute attribute-id="googleGeocodingAPIKey"/>
+            </attribute-group>
+            <attribute-group group-id="Microsoft Tracking">
+                <display-name xml:lang="x-default">Microsoft Tracking</display-name>
+                <attribute attribute-id="microsoftTrackingEnabled"/>
+                <attribute attribute-id="microsoftTrackingTagID"/>
+            </attribute-group>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="youtubeImageURL"/>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+                <attribute attribute-id="enablePDPWhereToBuy"/>
+                <attribute attribute-id="enableProductBadges"/>
+                <attribute attribute-id="maxOrderQty"/>
+                <attribute attribute-id="enableConsentTracking"/>
+                <attribute attribute-id="productTileA2CProductTypes"/>
+                <attribute attribute-id="productTileStockMsgEnabled"/>
+                <attribute attribute-id="productTilePartReplacesEnabled"/>
+                <attribute attribute-id="cartSlotType"/>
+                <attribute attribute-id="cartAccessoryRecommendationsCount"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="ProductLineItem">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="product-type">
+                <display-name xml:lang="x-default">Product Type</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+</metadata>

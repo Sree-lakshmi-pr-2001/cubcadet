@@ -1,0 +1,20 @@
+<isif condition="${pdict.productSearch.selectedFilters.length > 1 || (pdict.productSearch.selectedFilters.length === 1 && !(pdict.productSearch.selectedFilters[0].type === 'category'))}">
+    <span class="filter-title">${Resource.msg('refinement.filteredby', 'search', null)}:</span>
+    <ul>
+        <isloop items="${pdict.productSearch.selectedFilters}" var="refinement">
+            <isif condition="${refinement.type === 'color'}">
+                <li class="swatch-filter swatch-filter-${refinement.presentationId}" title="${refinement.title}">
+                    <span class="filter-title">${refinement.refinementName}:</span>
+                    <a href="${refinement.url}"></a>
+                </li>
+            <iselseif condition="${refinement.type != 'category'}">
+                <li class="filter-value" title="${refinement.title}">
+                    <span class="filter-title">${refinement.refinementName}:</span>
+                    <a href="${refinement.url}">
+                        ${refinement.displayValue}
+                    </a>
+                </li>
+            </isif>
+        </isloop>
+    </ul>
+</isif>

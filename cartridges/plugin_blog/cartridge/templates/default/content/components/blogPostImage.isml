@@ -1,0 +1,35 @@
+<isif condition="${pdict.content.image || pdict.content.video}" >
+    <div class="blog-post-slider">
+        <isscript>
+            var assetImage = pdict.content.image;
+            var assetVideo = pdict.content.video;
+            var mobileURL = assetImage.getImageURL({scaleWidth: 800});
+            var tabletURL = assetImage.getImageURL({scaleWidth: 950});
+            var desktopURL = assetImage.getImageURL({scaleWidth: 1116});
+        </isscript>
+        <isif condition="${assetImage && assetVideo}" >
+            <a href="${'//www.youtube.com/watch?v=' + assetVideo}" data-id="${assetVideo}" class="js-video-link video-with-icon" title="${pdict.content.name}">
+                <picture>
+                    <source alt="${pdict.content.name}" media="(max-width: 575px)" srcset="${mobileURL}" title="${pdict.content.name}">
+                    <source alt="${pdict.content.name}" media="(min-width: 576px) and (max-width: 991px)" srcset="${tabletURL}" title="${pdict.content.name}">
+                    <source alt="${pdict.content.name}" media="(min-width: 992px)" srcset="${desktopURL}" title="${pdict.content.name}">
+                    <img src="null" srcset="${desktopURL}" alt="${pdict.content.name}" />
+                </picture>
+            </a>
+        <iselseif condition="${!assetImage && assetVideo}" />
+            <a href="${'//www.youtube.com/watch?v=' + assetVideo}" data-id="${assetVideo}" class="js-video-link video-with-icon" title="${pdict.content.name}">
+                <picture>
+                    <source srcset="${'//img.youtube.com/vi/' + assetVideo + '/maxresdefault.jpg'}" media="(min-width: 768px)" />
+                    <img srcset="${'//img.youtube.com/vi/' + assetVideo + '/sddefault.jpg'}" alt="${pdict.content.name}" />
+                </picture>
+            </a>
+        <iselse/>
+            <picture>
+                <source alt="${pdict.content.name}" media="(max-width: 575px)" srcset="${mobileURL}" title="${pdict.content.name}">
+                <source alt="${pdict.content.name}" media="(min-width: 576px) and (max-width: 991px)" srcset="${tabletURL}" title="${pdict.content.name}">
+                <source alt="${pdict.content.name}" media="(min-width: 992px)" srcset="${desktopURL}" title="${pdict.content.name}">
+                <img src="null" srcset="${desktopURL}" alt="${pdict.content.name}" />
+            </picture>
+        </isif>
+    </div>
+</isif>

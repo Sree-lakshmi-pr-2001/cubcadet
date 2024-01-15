@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="OMSPushService">
+        <url/>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">+JO8bibq0RU+ueeX6eBSZVqk4gstBDv3F20WUVlbRzI=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="chase.soap.newOrder">
+        <url>https://wsvar1.chasepaymentech.com/PaymentechGateway</url>
+        <user-id>TESTMTD32</user-id>
+        <password encrypted="true" encryption-type="common.export">4PpAUtrqDuATMD/f5s5IIz9VXqPCICEcZbpLEKiodcJPYtckjz5GUsdp5tuNMxbk</password>
+    </service-credential>
+    
+    <service-credential service-credential-id="marketingcloud.rest">
+        <url>https://www.exacttargetapis.com</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">ctGSg5kC8fI2DFUb4sTS4JFWmHVPyCNPBWOo3PZd/SE=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.rest.auth-mtdparts">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>2aivwnysvwla1zebj8ufno9n</user-id>
+        <password encrypted="true" encryption-type="common.export">QjO8mVhMh45w/vyzph5jHOhDyCxpF6Qwel9zSIPfWsLWTPL7rc7VsuMj8payr5u7rhL1NSvFbE91Optr4yY0hg==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.rest.auth-mtdpartsca">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>rnt36hm4x6tgwfcjk5vlvr2v</user-id>
+        <password encrypted="true" encryption-type="common.export">/aka/1qNtrwfTUXhFQpZv7xJExDUW/cbCwg+6+QY/5GdAaPVCzafH2JkpIldrXF+3A5tB9bTlA9+K4egrbXm1A==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-mtdparts">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10959294</user-id>
+        <password encrypted="true" encryption-type="common.export">Hs2jk+egifx6G8qBBgkHci6TTMCsuzrvMCUjDLmlJFcQ1R8NEQgXjyQpEn3LBZ/6</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-mtdpartsca">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10968355</user-id>
+        <password encrypted="true" encryption-type="common.export">ioCYXBiB4d6E2WRR4akACeOdr9eRPwShtLazlzcM9dVlh1CWVioRpv/A8nmEwRfU</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.soap">
+        <url>https://webservice.exacttarget.com/Service.asmx</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">eBBjBs2L0YZ5YAGzgwpCwQ8sQWAg9/sVRLnGVWDb/Rw=</password>
+    </service-credential>
+    
+    <service-credential service-credential-id="mtd.rest.oauth">
+        <url>https://sso-t.ext.mtdproducts.com/as/token.oauth2</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">moxeFqyulTlSdNuzOHY3f1ecJ8LyKZwzgP6fY4NRipc=</password>
+    </service-credential>
+    
+    <service-credential service-credential-id="mtd.rest.salestax">
+        <url>https://api-t.mtdproducts.com/salestax/api/v4/calculate</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">n9JjDwjH525521/vM1/GkZQbwtpei+4O/GobMoVsPgY=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="mtd.rest.address">
+        <url>https://api-t.mtdproducts.com/rest/addressvalidation/</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">K113ojAUR1JWSg5yxkx7bFpiSzXEfUae/90wmuI3EFE=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="mtd.manuals">
+        <url>https://api-t.mtdproducts.com/rest/svc/manual/v2</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">8c+mBdXmieSkyjByyb5pwWI3qU/qwHGBzd7c8I0/7u8=</password>
+    </service-credential>
+    
+    <service-profile service-profile-id="OMSPushService">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="chase.soap.newOrder">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="marketingcloud.rest">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="marketingcloud.sftp">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="marketingcloud.soap">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+    
+    <service-profile service-profile-id="mtd.rest.oauth">
+        <timeout-millis>3000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+    
+    <service-profile service-profile-id="mtd.rest.salestax">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+    
+    <service-profile service-profile-id="mtd.manuals">
+        <timeout-millis>3000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+    
+    <service-profile service-profile-id="mtd.rest.address">
+        <timeout-millis>3000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service service-id="OMSPushService">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix/>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>OMSPushService</profile-id>
+        <credential-id>OMSPushService</credential-id>
+    </service>
+
+    <service service-id="bazaarvoice.http">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_http</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id/>
+        <credential-id/>
+    </service>
+
+    <service service-id="bazaarvoice.http.bot">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_http</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id/>
+        <credential-id/>
+    </service>
+
+    <service service-id="bazaarvoice.sftp">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_sftp</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id/>
+        <credential-id/>
+    </service>
+
+    <service service-id="chase.soap.newOrder">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>chasePayment</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>chase.soap.newOrder</profile-id>
+        <credential-id>chase.soap.newOrder</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.rest.auth">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_rest</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.rest</profile-id>
+        <credential-id>marketingcloud.rest.auth-mtdparts</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.rest.messaging.send">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_rest</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.rest</profile-id>
+        <credential-id>marketingcloud.rest</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.sftp">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_sftp</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.sftp</profile-id>
+        <credential-id>marketingcloud.sftp-mtdparts</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.soap.create">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_soap</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.soap</profile-id>
+        <credential-id>marketingcloud.soap</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.soap.retrieve">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_soap</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.soap</profile-id>
+        <credential-id>marketingcloud.soap</credential-id>
+    </service>
+
+    <service service-id="mtd.form.webtolead">
+        <service-type>HTTP Form</service-type>
+        <enabled>true</enabled>
+        <log-prefix>MTDwebtolead</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id/>
+        <credential-id/>
+    </service>
+
+    <service service-id="mtd.rest.address">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>MTDaddress</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>mtd.rest.address</profile-id>
+        <credential-id>mtd.rest.address</credential-id>
+    </service>
+
+    <service service-id="mtd.rest.dealerservice">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>MTDdealerservice</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id/>
+        <credential-id/>
+    </service>
+
+    <service service-id="mtd.rest.salestax">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>MTDsalestax</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>mtd.rest.salestax</profile-id>
+        <credential-id>mtd.rest.salestax</credential-id>
+    </service>
+
+    <service service-id="tdbank.soap.broker">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>TDBankBroker</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id/>
+        <credential-id/>
+    </service>
+    
+    <service service-id="mtd.rest.oauth">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>mtdOAuth</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>mtd.rest.oauth</profile-id>
+        <credential-id>mtd.rest.oauth</credential-id>
+    </service>
+    
+    <service service-id="mtd.manuals">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>mtdManuals</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>mtd.manuals</profile-id>
+        <credential-id>mtd.manuals</credential-id>
+    </service>
+
+</services>

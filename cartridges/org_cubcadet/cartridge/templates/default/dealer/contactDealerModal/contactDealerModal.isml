@@ -1,0 +1,27 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/contactDealerModal.js');
+    assets.addCss('/css/contactDealerModal.css');
+</isscript>
+
+<div class="modal fade contact-dealer-modal" id="contactDealerModal" tabindex="-1" role="dialog" aria-labelledby="contactDealerModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title dealer-selector-title">&nbsp;</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <iscomment>It will be populated via ajax call</iscomment>
+                        <div class="dealer-product-placeholder"></div>
+
+                        <isinclude url="${URLUtils.url('Dealer-ContactDealerFormModal')}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

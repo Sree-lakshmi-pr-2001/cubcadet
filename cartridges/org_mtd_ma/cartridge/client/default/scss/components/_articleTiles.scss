@@ -1,0 +1,135 @@
+@import "~org/utilities/ellipsis";
+@import "~org/utilities/underlineUtils";
+
+.card-articles {
+    > .row:first-child {
+        margin: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 0 rem(5px);
+        }
+    }
+
+    .card-container {
+        @include media-breakpoint-only(sm) {
+            @include even() {
+                padding-right: 0;
+                padding-left: rem(10px);
+            }
+
+            @include odd() {
+                padding-left: 0;
+                padding-right: rem(10px);
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: 0 rem(10px);
+        }
+    }
+
+    .card {
+        padding: rem(30px) rem(20px);
+        margin-bottom: rem(15px);
+        background: $accent-3;
+
+        @include media-breakpoint-up(sm) {
+            margin-bottom: rem(20px);
+        }
+    }
+
+    .card-title {
+        height: 44px;
+        margin-bottom: rem(5px);
+
+        > a {
+            @include card-name;
+            @include ellipsis(22px, 44px, $accent-3);
+            @include webkit-ellipsis();
+
+            margin: 0;
+            padding-right: rem(16px);
+            text-align: left;
+            text-decoration: none;
+        }
+    }
+
+    .card-body {
+        height: 60px;
+        padding: 0;
+
+        > p {
+            @include ellipsis(20px, 60px, $accent-3);
+            @include webkit-ellipsis(3);
+
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    .card-footer {
+        background: $trans;
+        border: 0;
+    }
+}
+
+.kc-article {
+    .content-tile {
+        margin-bottom: rem(30px);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(60px);
+        }
+    }
+
+    .content-tile-image {
+        .img-fluid {
+            width: 100%;
+        }
+    }
+
+    .content-tile-category {
+        padding: rem(15px) 0;
+    }
+
+    .content-tile-category-link {
+        @include underline($secondary, left);
+
+        text-decoration: none;
+    }
+
+    .content-tile-title {
+        .card-title-container {
+            height: 44px;
+            margin-bottom: rem(5px);
+
+            > a {
+                @include card-name;
+                @include ellipsis(22px, 44px, $white);
+                @include webkit-ellipsis();
+
+                margin: 0;
+                padding-right: rem(16px);
+                text-align: left;
+                text-decoration: none;
+            }
+        }
+
+        .card-text {
+            height: 60px;
+            margin-bottom: rem(15px);
+
+            > p {
+                @include ellipsis(20px, 60px, $white);
+                @include webkit-ellipsis(3);
+
+                margin: 0;
+                text-align: left;
+            }
+        }
+
+        .article-link {
+            @include link-primary();
+        }
+    }
+}

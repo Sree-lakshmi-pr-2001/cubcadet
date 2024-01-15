@@ -1,0 +1,13 @@
+<div class="primary-images col-12 col-sm-6">
+    <div id="pdpCarousel-${product.id}" class="product-carousel" role="listbox">
+        <isloop items="${product.images['large']}" var="image" status="loopStatus">
+            <div class="slide">
+                <a class="slide-link ${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? 'zoom-hires' : 'zoom-disabled'}"
+                    href="${(product.imagesZoom && product.imagesZoom['hi-res'][loopStatus.index]) ? product.imagesZoom['hi-res'][loopStatus.index].url : image.url}"
+                    title="${image.alt}">
+                    <img src="${image.url}" class="slide-img" alt="${image.alt}">
+                </a>
+            </div>
+        </isloop>
+    </div>
+</div>

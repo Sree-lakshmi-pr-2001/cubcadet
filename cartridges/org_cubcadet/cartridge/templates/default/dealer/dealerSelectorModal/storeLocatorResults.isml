@@ -1,0 +1,5 @@
+<isloop items="${!empty(pdict.stores) ? pdict.stores.stores : []}" var="store" status="loopstate">
+    <div class="store-result dealer-selector-result <isif condition="${loopstate.last}">last</isif>" id="${store.ID}">
+        <isinclude template="dealer/dealerSelectorModal/storeDetails" />
+    </div>
+</isloop>

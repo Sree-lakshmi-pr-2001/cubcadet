@@ -1,0 +1,125 @@
+<isif condition="${!pdict.licensedProduct}">
+    <isif condition="${product.longDescription || product.attributes}">
+        <isif condition="${product.longDescription}">
+            <div class="col-12">
+                <div class="product-description">
+                    <isif condition="${product.longDescription}">
+                        <div class="long-description">
+                            <isprint value="${product.longDescription}" encoding="off" />
+                        </div>
+                    </isif>
+                </div>
+            </div>
+        </isif>
+
+        <isif condition="${product.attributes}">
+            <div class="product-features col-12">
+                <isloop items="${product.attributes}" var="attrGroup" status="loopstate">
+                    <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                        <isloop items="${attrGroup.attributes}" var="attr" status="loopstate">
+                            <ul class="pdp-list">
+                                <isloop items="${attr.value}" var="value" status="loopstate" begin="0" end="2">
+                                    <li class="attribute-values">
+                                        ${value}
+                                    </li>
+                                </isloop>
+                            </ul>
+                            <isif condition="${attr.value.length > 3}">
+                                <button class="collapsible">${Resource.msg('pdp.feature.readmore', 'product', null)}</button>
+                                <div class="collapsible-content">
+                                    <ul class="pdp-list">
+                                        <isloop items="${attr.value}" var="value" status="loopstate" begin="3">
+                                            <li class="attribute-values">
+                                                ${value}
+                                            </li>
+                                        </isloop>
+                                    </ul>
+                                </div>
+                            </isif>
+                        </isloop>
+                    </isif>
+                </isloop>
+            </div>
+        </isif>
+
+        <div class="col-12">
+            <hr/>
+        </div>
+    </isif>
+<iselse/>
+<isif condition="${product.longDescription || product.attributes}">
+        <isif condition="${product.longDescription && product.attributes}">
+            <div class="product-features col-12">
+                <isloop items="${product.attributes}" var="attrGroup" status="loopstate">
+                    <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                        <isloop items="${attrGroup.attributes}" var="attr" status="loopstate">
+                            <ul class="pdp-list">
+                                <isloop items="${attr.value}" var="value" status="loopstate" begin="0" end="2">
+                                    <li class="attribute-values">
+                                        ${value}
+                                    </li>
+                                </isloop>
+                            </ul>
+                            <isif condition="${attr.value.length > 3}">
+                                <button class="collapsible">${Resource.msg('pdp.feature.readmore', 'product', null)}</button>
+                                <div class="collapsible-content">
+                                    <ul class="pdp-list">
+                                        <isloop items="${attr.value}" var="value" status="loopstate" begin="3">
+                                            <li class="attribute-values">
+                                                ${value}
+                                            </li>
+                                        </isloop>
+                                    </ul>
+                                </div>
+                            </isif>
+                        </isloop>
+                    </isif>
+                </isloop>
+            </div>
+        <iselseif condition="${product.longDescription && !product.attributes}"/>
+            <div class="col-12">
+                <div class="product-description licensedProduct">
+                        <div class="long-description">
+                            <isprint value="${product.longDescription}" encoding="off" />
+                        </div>
+                </div>
+            </div>
+        <iselse/>
+            <isif condition="${!product.longDescription && product.attributes}">
+                <div class="product-features col-12">
+                    <isloop items="${product.attributes}" var="attrGroup" status="loopstate">
+                        <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                            <isloop items="${attrGroup.attributes}" var="attr" status="loopstate">
+                                <ul class="pdp-list">
+                                    <isloop items="${attr.value}" var="value" status="loopstate" begin="0" end="2">
+                                        <li class="attribute-values">
+                                            ${value}
+                                        </li>
+                                    </isloop>
+                                </ul>
+                                <isif condition="${attr.value.length > 3}">
+                                    <button class="collapsible">${Resource.msg('pdp.feature.readmore', 'product', null)}</button>
+                                    <div class="collapsible-content">
+                                        <ul class="pdp-list">
+                                            <isloop items="${attr.value}" var="value" status="loopstate" begin="3">
+                                                <li class="attribute-values">
+                                                    ${value}
+                                                </li>
+                                            </isloop>
+                                        </ul>
+                                    </div>
+                                </isif>
+                            </isloop>
+                        </isif>
+                    </isloop>
+                </div>
+            </isif>
+        </isif>
+
+        <div class="col-12">
+            <hr/>
+        </div>
+    </isif>
+</isif>
+
+    

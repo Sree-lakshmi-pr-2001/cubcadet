@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="blog-subfolder-title">
+        <display-name xml:lang="x-default">Blog Subfolder - Title</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h1&gt;Explore by Category&lt;/h1&gt;&#13;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit nteger tincidunt faucibus lorem, eget commodo libero imperdiet id aenean vel urna&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="page-includes"/>
+        </folder-links>
+    </content>
+</library>

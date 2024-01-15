@@ -1,0 +1,5 @@
+<iscomment>Print out product data for click events</iscomment>
+<isscript>
+    var tagManager = require('*/cartridge/scripts/google/TagManagerModel.js');
+</isscript>
+data-gtmdata='<isprint value="${JSON.stringify(tagManager.getProductData(product.id))}" encoding="off"/>'

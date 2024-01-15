@@ -1,0 +1,13 @@
+<li class="nav-item col-12" data-method-id="${paymentOption.ID}">
+    <a class="nav-link finance-card-tab <isif condition="${currentPaymentMethod === paymentOption.ID}">active</isif>" data-toggle="tab" href="#finance-card-content" aria-controls="finance-card-content" role="tab" aria-selected="false">
+        <span class="payment-input finance-card">
+            ${paymentOption.name}
+        </span>
+        <iscomment> <span class="cc-imgs"> </iscomment>
+            <iscomment> <img class="icon cub-card" src="${URLUtils.staticURL('images/cc-td-card.jpg')}" alt=""> </iscomment>
+        <iscomment> </span> </iscomment>
+
+
+        <span class="instore-note"><isprint value="${Resource.msg('finance.instore.offers','checkout',null)}" encoding="off" /></span>
+    </a>
+</li>

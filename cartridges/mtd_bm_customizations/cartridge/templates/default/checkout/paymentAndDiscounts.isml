@@ -1,0 +1,105 @@
+<isdecorate template="common/layout/epcot">
+<script>
+    document.getElementById('pageName').value= 'discounts';
+</script>
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/epcot-payment.js');
+    assets.addJs('/js/epcot-minicart.js');
+</isscript>
+    <isinclude template="checkout/include/accordions.isml"/>
+    <div class="row">
+        <div class="col-md-12">
+            <isif condition="${pdict.pciPalError != null && pdict.pciPalError != ''}">
+                <div class="paymentError">PCI Pal Error - '${pdict.pciPalError}'</div>
+            </isif>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <isinclude template="checkout/include/mini_cart.isml" />
+        </div>
+    </div>
+    <isif condition="${empty(pdict.shippingMethods)}">
+    <div class="row">
+        <div class="col-md-12">
+        <h2>No shipping methods available. If this is a remote Canada Postal code, we might not be able to ship the contents of the cart to the customer</h2>
+        </div>
+    </div>
+    <iselse>
+
+<div class="row">
+        <div class="col-md-12">
+                <h2>Select shipping method:</h2>
+
+                <select id="shippingMethod" name="shippingMethod" class="form-control">
+                    <option value="">Select Shipping Method</option>
+                     <isloop iterator="${pdict.shippingMethods}" alias="ship" status="loopStatus">
+                        <isif condition="${pdict.siteId === 'epcotus'}">
+                            <isif condition="${pdict.isExpedited === true}">
+                            <option 
+                                <isif condition="${pdict.selectedShippingMethod != null && pdict.selectedShippingMethod == ship.id}">
+                                    selected
+                                </isif>
+                                value="${ship.id}" width="100%">${ship.name} - Cost: $${ship.price} - Estimated Arrival Time:
+                                ${ship.c_estimatedArrivalTime}
+                            </option>
+                            <iselse/>
+                                <isif condition="${loopStatus.index == 0}">
+                                    <option 
+                                        <isif condition="${pdict.selectedShippingMethod != null && pdict.selectedShippingMethod == ship.id}">
+                                            selected
+                                        </isif>
+                                        value="${ship.id}" width="100%">${ship.name} - Cost: $${ship.price} - Estimated Arrival Time:
+                                        ${ship.c_estimatedArrivalTime}
+                                    </option>
+                                </isif>
+                            </isif>
+                        <iselse/>
+                            <option 
+                                <isif condition="${pdict.selectedShippingMethod != null && pdict.selectedShippingMethod == ship.id}">
+                                    selected
+                                </isif>
+                                value="${ship.id}" width="100%">${ship.name} - Cost: $${ship.price} - Estimated Arrival Time:
+                                ${ship.c_estimatedArrivalTime}
+                            </option>
+                        </isif>
+                    </isloop>
+
+                </select>
+
+                <select id="shippingMethodNoCharge" name="shippingMethod" class="form-control" style="display:none">
+                    <option value="">Select Shipping Method</option>
+                    <isloop iterator="${pdict.shippingMethods}" alias="ship">
+                        <option 
+                            <isif condition="${pdict.selectedShippingMethod != null && pdict.selectedShippingMethod == ship.id}">
+                                selected
+                            </isif>
+                            value="${ship.id}" width="100%">${ship.name} - Cost: $0.00 - Estimated Arrival Time:
+                            ${ship.c_estimatedArrivalTime}
+                        </option>
+                    </isloop>
+
+                </select>
+
+                <div id="shippingStatus" class="shippingStatus"></div>
+                <div id="noChargeReasonCodeOnOrderStatus" class="noChargeReasonCodeOnOrderStatus"></div>
+        </div>
+    </div>
+
+
+    <div id="paymentDiv" style="display:none">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="${URLUtils.url('EpcotOrderConsumer-SubmitCheckout')}" method="post" id="paymentForm" name="paymentForm">
+                    <input type="hidden" name="basketId" value="${pdict.basketId}" />
+                    <input type="hidden" name="commerceStore" value="${pdict.commerceStore}"/>
+                    <button type="button" class="btn-danger btn-block paymentCheckoutButton btn-large" id="paymentCheckoutButton">Continue Checkout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </isif>
+
+    <isinclude template="checkout/include/return_to_product_search.isml"/>
+</isdecorate>

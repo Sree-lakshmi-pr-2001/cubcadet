@@ -1,0 +1,20 @@
+{
+    "hooks": [
+        {
+            "name": "dw.order.calculate",
+            "script": "./cartridge/scripts/hooks/cart/calculate.js"
+        },
+        {
+            "name": "dw.order.calculateTax",
+            "script": "./cartridge/scripts/hooks/cart/calculate.js"
+        },
+        {
+            "name": "dw.order.calculateShipping",
+            "script": "./cartridge/scripts/hooks/cart/calculate.js"
+        },
+        {
+            "name": "dw.system.request.onRequest",
+            "script": "./cartridge/scripts/hooks/onRequest.js"
+        }
+    ]
+}

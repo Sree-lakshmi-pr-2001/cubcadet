@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="td-authorization-error">
+        <display-name xml:lang="x-default">TD Authorization Error Message</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-authorization-error&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-account-lookup">
+        <display-name xml:lang="x-default">TD Account Lookup Message Body</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-account-lookup&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-account-lookup-success">
+        <display-name xml:lang="x-default">TD Account Lookup Success Response Message Body</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-account-lookup-success&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-account-lookup-error">
+        <display-name xml:lang="x-default">TD Account Lookup Error Response Message</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-account-lookup-error&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure">
+        <display-name xml:lang="x-default">TD Plan Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;Content Asset ID: &lt;strong&gt;td-plan-disclosure&lt;/strong&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43438">
+        <display-name xml:lang="x-default">TD Plan 43438 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43438&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43439">
+        <display-name xml:lang="x-default">TD Plan 43439 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43439&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43440">
+        <display-name xml:lang="x-default">TD Plan 43440 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43440&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-plan-disclosure-43441">
+        <display-name xml:lang="x-default">TD Plan 43441 Disclosure</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Content Asset ID: &lt;strong&gt;td-plan-disclosure-43441&lt;/strong&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-standard">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP Standard</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Standard Revolving Financing with &lt;strong&gt;{apr}%&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See details&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-deferred">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    &lt;strong&gt;{monthlypayment}/mo&lt;/strong&gt; No interest if paid in full within &lt;strong&gt;{termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See details&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-apr">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    &lt;strong&gt;${monthlypayment}/mo&lt;/strong&gt; | &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt; | &lt;strong&gt;{termlength}Mo&lt;/strong&gt; with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See details&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-standard">
+        <display-name xml:lang="x-default">TD Estimated Payment Cart Standard</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Work Now, Pay Later&lt;/h3&gt;&#13;
+&lt;div&gt;&#13;
+Your Order is eligible for Cub Cadet Financing.&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    Standard Revolving Financing with &lt;strong&gt;{apr}%&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance btn btn-outline-secondary"&gt;Apply Now&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-deferred">
+        <display-name xml:lang="x-default">TD Estimated Payment Cart Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Work Now, Pay Later&lt;/h3&gt;&#13;
+&lt;div&gt;&#13;
+Your Order is eligible for Cub Cadet Financing.&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;strong&gt;${monthlypayment}/mo&lt;/strong&gt; No interest if paid in full within &lt;strong&gt;{termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance btn btn-outline-secondary"&gt;Apply Now&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-apr">
+        <display-name xml:lang="x-default">TD Estimated Payment PDP APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3&gt;Work Now, Pay Later&lt;/h3&gt;&#13;
+&lt;div&gt;&#13;
+Your Order is eligible for Cub Cadet Financing.&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;strong&gt;${monthlypayment} Per Month, &lt;/strong&gt;&lt;strong&gt;{termlength} months&lt;/strong&gt; &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;sup&gt;3&lt;/sup&gt; &lt;/strong&gt;financing with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}&lt;/strong&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div&gt;&#13;
+    &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance btn btn-outline-secondary"&gt;Apply Now&lt;/a&gt;&#13;
+ &lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-billing-standard">
+        <display-name xml:lang="x-default">TD Estimated Payment Billing Standard</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Your order is eligible for Cub Cadet Financing. Standard Revolving Financing with &lt;strong&gt;{apr}%&lt;/strong&gt;&#13;
+    &lt;span class="td-links"&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance"&gt;Apply Now&lt;/a&gt;&#13;
+        &lt;span class="vertical-divider"&gt; | &lt;/span&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+    &lt;/span&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-billing-deferred">
+        <display-name xml:lang="x-default">TD Estimated Payment Billing Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Your order is eligible for Cub Cadet Financing.&#13;
+    &lt;strong&gt;${monthlypayment}/mo&lt;/strong&gt; No interest if paid in full within &lt;strong&gt;{termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;
+    &lt;span class="td-links"&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance"&gt;Apply Now&lt;/a&gt;&#13;
+        &lt;span class="vertical-divider"&gt; | &lt;/span&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+    &lt;/span&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-billing-apr">
+        <display-name xml:lang="x-default">TD Estimated Payment Billing APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+    Your order is eligible for Cub Cadet Financing. &#13;
+    &lt;strong&gt;${monthlypayment} Per Month&lt;/strong&gt;, &lt;strong&gt;{termlength} months&lt;/strong&gt; &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt; financing with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}.&lt;/strong&gt;&#13;
+    &lt;span class="td-links"&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-GetURL')$" class="td-apply-finance"&gt;Apply Now&lt;/a&gt;&#13;
+        &lt;span class="vertical-divider"&gt; | &lt;/span&gt;&#13;
+        &lt;a href="javascript:void(0)" data-url="$url('FinancingApplication-Disclosure')$" data-title="Details &amp; Disclosures" class="td-payment-details"&gt;See Details&lt;/a&gt;&#13;
+    &lt;/span&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

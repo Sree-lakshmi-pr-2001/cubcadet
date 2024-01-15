@@ -1,0 +1,79 @@
+<div class="product-line-item warranty-info <isif condition=${miniCart}> product-info </isif>" data-product-line-item="${lineItem.UUID}">
+
+    <div class="product-line-item-row row">
+        <div class="item-image col-4 <isif condition=${miniCart}> warranty-image </isif>">
+            <isif condition="${miniCart}">
+                <img class="product-image" src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty-minicart.png')}">
+            <iselse>
+                <img class="product-image" src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty-minicart.png')}" >
+            </isif>
+        </div>
+        <div class="product-line-item-details col-8 ">
+            <h6>Extended Warranty</h6>
+            <isif condition="${!lineItem.isBonusProductLineItem && miniCart}"/>
+                <div class="remove-line-item">
+                    <button type="button" class="remove-btn remove-product btn btn-light" data-toggle="modal"
+                            data-target="#removeProductModal" data-pid="${lineItem.id}"
+                            data-name="${lineItem.productName}"
+                            data-action="${pdict.actionUrls.removeProductLineItemUrl}"
+                            data-uuid="${lineItem.UUID}"
+                            aria-label="remove ${lineItem.productName}">
+                    </button>
+                </div>
+                <isinclude template="cart/cartRemoveProductModal"/>
+            </isif>
+
+            <div class="item-attributes">
+                <isloop items="${lineItem.variationAttributes}" var="attribute">
+                    <p class="line-item-attributes"><span class="font-bold">${attribute.displayName}:</span> ${attribute.displayValue}</p>
+                </isloop>
+
+                <div class="item-options">
+                    <isloop items="${lineItem.options}" var="option">
+                        <div class="line-item-option">${option.displayName}</div>
+                    </isloop>
+                </div>
+
+                <isif condition="${((pdict.order && !pdict.order.orderStatus) || !miniCart) && (lineItem.productAttributeType && (lineItem.productAttributeType.toLowerCase() == 'parts' || lineItem.productAttributeType.toLowerCase() == 'accessories'))}">
+                    <isinclude template="cart/productCard/cartProductCardAvailability" />
+                <iselse>
+                    <isinclude template="cart/productCard/productShippingInfo" />
+                </isif>
+            </div>
+            ${lineItem.ew['model']}<br>
+            ${lineItem.ew['productName']}<br>
+            ${dw.web.Resource.msg('dialog2.serialNumber', 'eligibilitycheck', null)} <b>${lineItem.ew['serialNumber']}</b><br>
+            ${dw.web.Resource.msg('dialog2.factoryNumber', 'eligibilitycheck', null)} <b>${lineItem.ew['factoryNumber']}</b><br>
+            <div class="coverage-wrapp mb-1 text-uppercase"> <span class="done-mark ${lineItem.ew.coverage ? '' : 'd-none'}"></span> <isprint value="${lineItem.ew.coverage}" encoding="off"></div>
+             <isif condition="${!miniCart}">
+                <isinclude template="checkout/productCard/productCardQtyPrice" />
+            </isif>  
+            <div class="item-prop65-msg half-width <isif condition="${'prop65Warning' in lineItem && !lineItem.prop65Warning}">d-none invisible</isif>">
+                <isprint value="${pdict.itemProp65WarningMsg}" encoding="off" />
+            </div>
+        </div>
+        <div class="item-prop65-msg full-width <isif condition="${'prop65Warning' in lineItem && !lineItem.prop65Warning}">d-none invisible</isif>">
+            <isprint value="${pdict.itemProp65WarningMsg}" encoding="off" />
+        </div>
+    </div>
+
+
+    <isif condition=${miniCart}>
+        <div class="line-item-promo item-${lineItem.UUID}">
+            <isinclude template="checkout/productCard/productCardProductPromotions" />
+        </div>
+    </isif>
+
+    <isif condition="${lineItem.isExistExtendedWarranty}">
+        <isinclude template="cart/newSales-minicart" />
+    </isif>  
+    <isif condition="${miniCart}">
+      <div class="row warranty-minicart-footer">
+        <div class="col 1">
+        </div>
+        <div class="col 1">
+          ${lineItem.price.sales.formatted}
+        </div>
+      </div>   
+    </isif>  
+</div>

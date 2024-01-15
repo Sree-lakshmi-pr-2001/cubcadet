@@ -1,0 +1,24 @@
+<label for="productType">
+    ${Resource.msg('field.product.type','storeLocator',null)}
+    <span class="sl-product-type-tooltip">
+        <iscontentasset aid="sl-product-type-tooltip"/>
+    </span>
+</label>
+<div class="custom-radio product-type-list" data-action-url="${pdict.stores.actionUrl}" data-missing-error="${Resource.msg('error.message.required', 'login', null)}">
+    <isloop items="${pdict.productTypes}" var="option" status="loopstate">
+        <isif condition="${loopstate.first}">
+            <div class="form-check">
+                <input id="productType-ALL" name="productType" type="radio" class="custom-control-input form-check-input" value="" checked/>
+                <label class="custom-control-label product-type-option" for="productType-ALL">
+                    <span class="font-weight-normal">${Resource.msg('option.default.all','storeLocator',null)}</span>
+                </label>
+            </div>
+        </isif>
+        <div class="form-check">
+            <input id="${'productType-' + option.value}" name="productType" type="radio" class="custom-control-input form-check-input" value="${option.value}"/>
+            <label class="custom-control-label product-type-option" for="${'productType-' + option.value}">
+                <span class="font-weight-normal">${option.displayValue}</span>
+            </label>
+        </div>
+    </isloop>
+</div>

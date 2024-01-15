@@ -1,0 +1,19 @@
+<div class="site-search">
+    <form role="search" action="${URLUtils.url('Search-Show')}" method="get" name="simpleSearch">
+        <span class="search-icon"><issvg icon="icon-search" image="true" altText="${Resource.msg('label.header.banner', 'search', null)}" /></span>
+        <input class="form-control search-field"
+               type="search"
+               name="q"
+               value=""
+               placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}"
+               autocomplete="off"
+               aria-label="${Resource.msg('label.header.searchwatermark', 'common', null)}" />
+        <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
+        <input type="hidden" value="${pdict.locale}" name="lang">
+    </form>
+</div>
+<a href="#" class="search-button">
+    <issvg icon="icon-close" image="true" altText="${Resource.msg('button.close', 'search', null)}" />
+    <issvg icon="icon-search" image="true" altText="${Resource.msg('label.header.banner', 'search', null)}" />
+    <span class="search-button-label">${Resource.msg('label.header.banner', 'search', null)}</span>
+</a>

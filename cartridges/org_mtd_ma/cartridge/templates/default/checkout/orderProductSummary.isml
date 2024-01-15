@@ -1,0 +1,43 @@
+<isset name="miniCart" value="${false}" scope="page" />
+<div class="row order-product-summary">
+
+    <div class="col product-summary-block">
+        <isloop items="${pdict.order.shipping}" var="shippingModel" status="shipmentLoopState">
+            <isif condition="${pdict.order.shipping.length > 1}">
+                <div class="shipment-block">
+            </isif>
+
+            <isif condition="${pdict.order.isEpcotOrder === true}">
+                <isloop items="${pdict.order.items}" var="lineItem" status="loopState">
+                    <isinclude template="checkout/productCard/productCardHistory" />
+                </isloop>
+            <iselse>
+                <isloop items="${shippingModel.productLineItems.items}" var="lineItem" status="loopState">
+                    <isif condition="${lineItem.bonusProductLineItemUUID === 'bonus'}">
+                        <isif condition="${miniCart}">
+                            <div class="card bonus-product-line-item uuid-${lineItem.UUID}">
+                                <div class="card-body">
+                                    <isinclude template="checkout/productCard/bonusProductCard" />
+                                </div>
+                            </div>
+                        <iselse>
+                            <isinclude template="checkout/productCard/bonusProductCard" />
+                        </isif>
+                    <iselseif condition="${lineItem.productAttributeType === 'ExtendedWarranty' && lineItem.ew.type === 'EW_AFT'}" />
+                        <isinclude template="checkout/EwProductCard" />
+                    <iselseif condition="${lineItem.productAttributeType !== 'ExtendedWarranty'}" />
+
+                        <isinclude template="checkout/productCard/productCard" />
+
+                    </isif>
+                </isloop>
+            </isif>
+
+
+            <isif condition="${pdict.order.shipping.length > 1}">
+                <isinclude template="checkout/shipping/shippingCard" />
+                </div>
+            </isif>
+        </isloop>
+    </div>
+</div>

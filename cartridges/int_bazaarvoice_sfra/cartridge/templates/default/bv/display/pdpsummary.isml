@@ -1,0 +1,48 @@
+<!--- TEMPLATENAME: pdpsummary.isml --->
+<isif condition="${pdict.bvDisplay.showSummary}">
+	<!-- Reviews Summary -->
+
+	<div class="d-none" data-bv-show="rating_summary" data-bv-productId="${pdict.bvDisplay.bvPid}" <isif condition="${removeBVSchema}">data-bv-seo="false"</isif>>
+        <isif condition="${pdict.bvDisplay.rr.seo && pdict.bvDisplay.rr.seo.aggregateRating && !removeBVSchema}">
+            <isprint value="${pdict.bvDisplay.rr.seo.aggregateRating}" encoding="off" />
+        <iselse>
+            <iscomment>the modified rating has the seo schema attributes on the top level div stripped out</iscomment>
+            <isprint value="${pdict.bvDisplay.rr.seo.modifiedAggregateRating}" encoding="off" />
+        </isif>
+	</div>
+
+	<script type="text/javascript" language="javascript">
+	window.bvCallback = function() {
+		$BV.configure('global', {
+			events : {
+				bvRender : function (data) {
+					if (!data || !data.Id || !"TotalContentCount" in data || ("TotalContentCount" in data && data.TotalContentCount > 0)) {
+						$("[data-bv-show='rating_summary']").removeClass("d-none");
+						return;
+					}
+					var $container = $("[data-bv-productid='" + data.Id + "'] .bv_main_container");
+
+					if ($container) {
+						$container.remove();
+					}
+				}
+			}
+		});
+
+		BV.reviews.on('show', function () {
+
+			//This line assumes SFRA collapsible panels and is called when clicking on the review summary
+			$('.row.reviews:not(.active)').toggleClass('active');
+
+        });
+
+	    BV.questions.on('show', function () {
+
+	    	//This line assumes SFRA collapsible panels and is called when clicking on the Q&A summary
+	    	$('.row.questions:not(.active)').toggleClass('active');
+
+        });
+	};
+	</script>
+	<!-- End Reviews Summary -->
+</isif>

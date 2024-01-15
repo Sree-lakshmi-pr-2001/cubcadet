@@ -1,0 +1,26 @@
+<div class="modal fade shop-dealer-change" id="storeChangeDealerModal-${store.ID}" tabindex="-1" role="dialog" aria-labelledby="cartChangeDealerModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group">
+                    <isscript>
+                        var seoURLForDealer = require('*/cartridge/scripts/helpers/seoURLHelpers').createUrlForDealer(store);
+                    </isscript>
+                    <button type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">${Resource.msg('storelocator.dealer.cancel','storeLocator',null)}</button>
+                    <a class="btn btn-outline-secondary btn-store-link" target='_blank' href="${seoURLForDealer}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.dealer.shopThisStore', 'storeLocator', null))}" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('storelocator.dealer.link', 'storeLocator', null))}">
+                        ${Resource.msg('storelocator.dealer.shopThisStore', 'storeLocator', null)}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<isif condition="${pdict.content.tags.length > 0}" >
+    <div class="blog-post-tags">
+        <h4>${Resource.msg('blog.tags', 'blog', null)}</h4>
+        <isloop items="${pdict.content.tags}" var="tag">
+            <span class="tag h4">
+                <isif condition="${pdict.content.classificationFolder}" >
+                    <a class="tag-link" href="${URLUtils.url('Search-ShowContent','fdid', pdict.content.classificationFolder.ID ,'crefn1', 'tags', 'crefv1', tag)}">
+                        <isprint value="${tag}" encoding="on" />
+                    </a>
+                </isif>
+            </span>
+        </isloop>
+    </div>
+</isif>

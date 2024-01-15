@@ -1,0 +1,6 @@
+<isif condition="${pdict.content.body !== null}">
+    <iscomment>don't remove or rename DIV and Marker, necessary for mark and editing, no css attributes defined</iscomment>
+    <isprint value="${pdict.content.body}" encoding="off"/>
+<iselse/>
+    ${Resource.msg('global.nocontent','common',null)}
+</isif>

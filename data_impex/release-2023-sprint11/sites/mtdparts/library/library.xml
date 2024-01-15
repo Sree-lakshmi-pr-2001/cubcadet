@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="part-fitment-component-title-default">
+        <display-name xml:lang="x-default">part-fitment-component-title-default</display-name>
+        <description xml:lang="x-default">Defaut message displayed on Part Fitment component</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Have a Model Number?</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-description-fit">
+        <display-name xml:lang="x-default">part-fitment-component-description-fit</display-name>
+        <description xml:lang="x-default">Description displayed when the part fitment search matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Enter your &lt;a class="find-model" data-target="#modal-will-fit" data-toggle="modal" href="" title="Find my model number"&gt;model number&lt;/a&gt; to confirm fit.</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-title-fit">
+        <display-name xml:lang="x-default">part-fitment-component-title-fit</display-name>
+        <description xml:lang="x-default">Message displayed when the part fitment search matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+          <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h4&gt;Verified, Will Fit Model&lt;/h4&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+      </content>
+
+    <content content-id="part-fitment-component-description-fit-view-products">
+        <display-name xml:lang="x-default">part-fitment-component-description-no-fit</display-name>
+        <description xml:lang="x-default">Description displayed when the showing the results of the part fitment search</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Viewing products that fit model:</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-title-no-fit">
+        <display-name xml:lang="x-default">part-fitment-component-title-no-fit</display-name>
+        <description xml:lang="x-default">Message displayed when the part fitment search doesn't match with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+          <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h4&gt;Will NOT Fit&lt;/h4&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+      </content>
+
+    <content content-id="part-fitment-component-description-no-fit">
+        <display-name xml:lang="x-default">part-fitment-component-description-no-fit</display-name>
+        <description xml:lang="x-default">Description displayed when the part fitment search doesn't matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">This part is &lt;strong&gt;NOT&lt;/strong&gt; expected to fit your equipment.</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>

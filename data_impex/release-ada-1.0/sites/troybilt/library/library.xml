@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+
+    <content content-id="10-off-tillers">
+        <display-name xml:lang="x-default">10% off Tillers</display-name>
+        <description xml:lang="x-default">2019 Labor Day promotion. 10% off Tillers. 8/28/19-9/4-19.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/homepage/GardenTiller_ProdLineBrow_Hero_RT65_Desktop_1015x630.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/homepage/GardenTiller_ProdLineBrow_Hero_RT65_Mobile_805x540.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/homepage/GardenTiller_ProdLineBrow_Hero_RT65_Mobile_805x540.jpg?$staticlink$" /&gt;&lt;img alt="tiller tilling up soil" class="img-fluid" data-type="defaultimage" src="images/homepage/GardenTiller_ProdLineBrow_Hero_RT65_Desktop_1015x630.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+&lt;div class="bg-secondary text-primary"&gt;&#13;
+&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-primary text-capitalize"&gt;LABOR DAY SAVINGS&lt;/span&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="display-1 text-primary"&gt;10% Off Tillers&lt;/div&gt;&#13;
+&#13;
+&lt;div class="p text-primary"&gt;&#13;
+&lt;div&gt;From August 28 through September 4th, save 10% on all garden tillers.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;a class="btn btn-primary" href="$url('Search-Show','cgid','garden-tillers')$" target="_self" title="Learn More" aria-label="Shop Garden Tillers"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="promotional-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="100-off-lawn-tractors">
+        <display-name xml:lang="x-default">100 off select lawn tractors</display-name>
+        <description xml:lang="x-default">2019 Labor Day promotion. $100 off select lawn tractors. 8/28/19-9/4/19.&#13;
+(LT42, LT42 EFI, LX42)</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/homepage/CC_LaborDayPromo_XT1_Carousel-desktop_1015x630.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/homepage/CC_LaborDayPromo_XT1_Carousel-mobile_805x630.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/homepage/CC_LaborDayPromo_XT1_Carousel-mobile_805x630.jpg?$staticlink$" /&gt;&lt;img alt="woman riding lawn mower" class="img-fluid" data-type="defaultimage" src="images/homepage/CC_LaborDayPromo_XT1_Carousel-desktop_1015x630.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+&lt;div class="bg-secondary text-primary"&gt;&#13;
+&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-primary text-capitalize"&gt;LABOR DAY SAVINGS&lt;/span&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="display-1 text-primary"&gt;$100 Off Select Lawn Tractors&lt;/div&gt;&#13;
+&#13;
+&lt;div class="p text-primary"&gt;From August 28 through September 4, save $100 on the XT1 LT42, XT1 LT42 EFI and XT2 LX42.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;a class="btn btn-primary" href="$url('Search-Show','cgid','lawn-and-garden-tractors')$" target="_self" title="Learn More" aria-label="Shop Lawn and Garden Tractors"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="promotional-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="100-off-snow-blowers">
+        <display-name xml:lang="x-default">100 off select snow blowers</display-name>
+        <description xml:lang="x-default">1st snow promotion. $100 off select snow blowers $899 and above. 9/29/19-10/20/19.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/promo-cards/SnowCarousel-lifestyle-desktop_1015x630.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/promo-cards/SnowCarousel-lifestyle-mobile_805x540.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/promo-cards/SnowCarousel-lifestyle-mobile_805x540.jpg?$staticlink$" /&gt;&lt;img alt="man-blowing-snow" class="img-fluid" data-type="defaultimage" src="images/promo-cards/SnowCarousel-lifestyle-desktop_1015x630.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+&lt;div class="bg-secondary text-primary"&gt;&#13;
+&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-primary text-capitalize"&gt;SEIZE THE SEASON&lt;/span&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="display-1 text-primary"&gt;Save $100 On Select Snow Blowers&lt;/div&gt;&#13;
+&#13;
+&lt;div class="p text-primary"&gt;&#13;
+&lt;div&gt;Promo valid on models $899 or more, 9/29/19-10/20/19 only.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;a class="btn btn-primary" href="$url('Search-Show','cgid','snow-blowers')$" target="_self" title="Learn More" aria-label="Shop Snow Blowers"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="promotional-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="100-off-snow-blowers-v2">
+        <display-name xml:lang="x-default">100 off select snow blowers v2</display-name>
+        <description xml:lang="x-default">1st snow promotion. $100 off select snow blowers $899 and above. 9/29/19-10/20/19. Second version of carousel.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/promo-cards/SnowCarousel-studio-desktop_1015x630.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/promo-cards/SnowCarousel-studio-mobile_805x540.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/promo-cards/SnowCarousel-studio-mobile_805x540.jpg?$staticlink$" /&gt;&lt;img alt="x-series-snow-blowers" class="img-fluid" data-type="defaultimage" src="images/promo-cards/SnowCarousel-studio-desktop_1015x630.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+&lt;div class="bg-secondary text-primary"&gt;&#13;
+&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-primary text-capitalize"&gt;SEIZE THE SEASON&lt;/span&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="display-1 text-primary"&gt;Save $100 On Select Snow Blowers&lt;/div&gt;&#13;
+&#13;
+&lt;div class="p text-primary"&gt;&#13;
+&lt;div&gt;Promo valid on models $899 or more, 9/29/19-10/20/19 only.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;a class="btn btn-primary" href="$url('Search-Show','cgid','snow-blowers')$" target="_self" title="Learn More" aria-label="Shop Snow Blowers"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="promotional-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="category-card-group-cub">
+        <display-name xml:lang="x-default">Homepage Category Cards</display-name>
+        <description xml:lang="x-default">Group of Category tiles with heading</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="card-group category-tile-group"&gt;&#13;
+	&lt;!-- Headers --&gt;&#13;
+	&lt;div class="card-group-heading"&gt;&#13;
+		&lt;h2&gt;Explore Our Product Lineup&lt;/h2&gt;&#13;
+	&lt;/div&gt;&#13;
+	&lt;!-- row 1 - 3 columns --&gt;&#13;
+	&lt;div class="row"&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card c242"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Lawn Mowers&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;A full lineup of innovative zero-turn mowers, riding lawn mowers and push mowers, all designed to give you unmatched strength and durability every cut, every time.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source srcset="" media="(min-width: 1024px)" data-type="desktopimge" /&gt;&#13;
+						&lt;source srcset="" media="(min-width: 767px)" data-type="tabletimage" /&gt;&#13;
+						&lt;source srcset="" media="(min-width: 480px)" data-type="mobileimage" /&gt;&#13;
+						&lt;img alt="lawn mower category" src="images/homepage/category-cards/Home_CC_LawnMowers_XT1-LT46EFI_desktop_435x240_v1.jpg?$staticlink$" title="" class="primary-tile-image" data-type="defaultimage" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="link-primary" aria-label="Shop Lawn Mowers"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card c540"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Snow Blowers&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Three tiers of snow-clearing power engineered so winter never stands in your way.&lt;/p&gt;&#13;
+					&lt;img alt="Image Description" src="images/homepage/category-cards/Home_CC_Snow_3X-30-ProH_desktop_435x240_v1.jpg?$staticlink$" title="" class="primary-tile-image" /&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', 'snow-blowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Snow Blowers"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card c712"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Utility Vehicles&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Setting a new standard with industry-leading features for utility vehicles that can handle it all.&lt;/p&gt;&#13;
+					&lt;img alt="Image Description" src="images/homepage/category-cards/Home_CC_UTV_Challenger550_desktop_435x240_v1.jpg?$staticlink$" title="" class="primary-tile-image" /&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', '')$" target="" class="btn btn-outline-secondary btn-sm"&gt;Explore&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;!-- intentionally left empty --&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card c874"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Lawn &amp; Garden Equipment&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Experience a range of yard and lawn equipment, from string trimmers to leaf blowers and more, that helps keep yards looking their best&lt;/p&gt;&#13;
+					&lt;img alt="Image Description" src="images/homepage/category-cards/Home_CC_LawnEquip_RT65_desktop_435x240_v1.jpg?$staticlink$" title="" class="primary-tile-image" /&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', '')$" target="" class="btn btn-outline-secondary btn-sm" aria-label="Shop All Products"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', '')$" target="_self" class="link-primary" aria-label="Shop All Products"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card c1046"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Commercial Equipment&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Top-quality at high speeds. Remarkable durability. Built, designed and engineered entirely with professionals in mind.&lt;/p&gt;&#13;
+					&lt;img alt="Commercial Equipment" src="images/homepage/category-cards/Home_CC_CommEquip_ProZ900-Dual_desktop_435x240_v1.jpg?$staticlink$" title="" class="primary-tile-image" /&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', '')$" target="" class="btn btn-outline-secondary btn-sm" aria-label="Shop All Products"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', '')$" target="" class="link-primary" aria-label="Shop All Products"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card c1218"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Accessories&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Optimize your equipment with a full line of accessories and attachments such as baggers, snow blades and mulch kits.&lt;/p&gt;&#13;
+					&lt;img alt="Accessories" src="images/homepage/category-cards/Home_CC_Accessories_ZT-Bagger_desktop_435x240_v1.jpg?$staticlink$" title="" class="primary-tile-image" /&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;a href="$url('Search-Show', 'cgid', '')$" target="" class="btn btn-outline-secondary btn-sm" aria-label="Shop All Products"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="homepage-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="category-card-group-cub-1">
+        <display-name xml:lang="x-default">Homepage Category Cards</display-name>
+        <description xml:lang="x-default">Group of Category tiles with heading</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="card-group  category-tile-group"&gt;&lt;!-- Headers --&gt;&#13;
+&lt;div class="card-group-heading"&gt;&#13;
+&lt;h2&gt;Explore Our Product Lineup&lt;/h2&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- row 1 - 3 columns --&gt;&#13;
+&#13;
+&lt;div class="row"&gt;&lt;!-- CARD 1 --&gt;&#13;
+&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+&lt;div class="card category-card" style="background-image: url('images/homepage/category-cards/Home_CC_LawnMowers_hover_desktop_500x495_v1.jpg?$staticlink$')"&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h3 class="card-title"&gt;Lawn Mowers&lt;/h3&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;Innovative&amp;nbsp;zero-turn mowers, riding lawn mowers and push mowers,&amp;nbsp;all designed to give you unmatched strength and durability.&lt;/p&gt;&#13;
+&lt;picture&gt; &lt;source media="(min-width: 1024px)" srcset="images/homepage/category-cards/Home_CC_LawnMowers_XT1-LT46EFI_desktop_435x240_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 767px)" srcset="images/homepage/category-cards/Home_CC_LawnMowers_XT1-LT46EFI_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 480px)" srcset="images/homepage/category-cards/Home_CC_LawnMowers_XT1-LT46EFI_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;img alt="lawn mower category" class="primary-tile-image" src="images/homepage/category-cards/Home_CC_LawnMowers_XT1-LT46EFI_desktop_435x240_v1.png?$staticlink$" title="" /&gt; &lt;/picture&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;a class="btn btn-outline-secondary btn-sm" href="$url('Search-Show', 'cgid', 'lawn-mowers')$" id="category-lawn-mower-shop-now" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 2 --&gt;&#13;
+&#13;
+&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+&lt;div class="card category-card" style="background-image: url('images/homepage/category-cards/Home_CC_Snow_hover_desktop_500x495_v1.jpg?$staticlink$')"&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h3 class="card-title"&gt;Snow Blowers&lt;/h3&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;Three tiers of snow-clearing power engineered so winter never stands in your way.&lt;/p&gt;&#13;
+&lt;picture&gt; &lt;source media="(min-width: 1024px)" srcset="images/homepage/category-cards/Home_CC_Snow_3X-30-ProH_desktop_435x240_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 767px)" srcset="images/homepage/category-cards/Home_CC_Snow_3X-30-ProH_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 480px)" srcset="images/homepage/category-cards/Home_CC_Snow_3X-30-ProH_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;img alt="snow blower category tile" class="primary-tile-image" src="images/homepage/category-cards/Home_CC_Snow_3X-30-ProH_desktop_435x240_v1.png?$staticlink$" title="" /&gt; &lt;/picture&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;a class="btn btn-outline-secondary btn-sm" href="$url('Search-Show', 'cgid', 'snow-blowers')$" id="category-snow-blowers-shop-now" aria-label="Shop Snow Blowers"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 3 --&gt;&#13;
+&#13;
+&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+&lt;div class="card category-card" style="background-image: url('images/homepage/category-cards/Home_CC_UTV_hover_desktop_500x495_v1.jpg?$staticlink$')"&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h3 class="card-title"&gt;UTVs&lt;/h3&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;Setting a new standard with industry-leading features for utility vehicles that can handle it all.&lt;/p&gt;&#13;
+&lt;picture&gt; &lt;source media="(min-width: 1024px)" srcset="images/homepage/category-cards/Home_CC_UTV_Challenger550_desktop_435x240_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 767px)" srcset="images/homepage/category-cards/Home_CC_UTV_Challenger550_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 480px)" srcset="images/homepage/category-cards/Home_CC_UTV_Challenger550_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;img alt="Cub Cadet UTV" class="primary-tile-image" src="images/homepage/category-cards/Home_CC_UTV_Challenger550_desktop_435x240_v1.png?$staticlink$" title="" /&gt; &lt;/picture&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;a class="btn btn-outline-secondary btn-sm" href="$url('Search-Show', 'cgid', 'utility-vehicles')$" id="category-utv-explore"&gt;Explore&lt;/a&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;!-- intentionally left empty --&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 4 --&gt;&#13;
+&#13;
+&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+&lt;div class="card category-card" style="background-image: url('images/homepage/category-cards/Home_CC_LawnEquip_hover_desktop_500x495_v1.jpg?$staticlink$')"&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h3 class="card-title"&gt;Lawn &amp;amp; Garden Equipment&lt;/h3&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;Experience a range of yard and lawn equipment, from string trimmers to leaf blowers and more, that helps&amp;nbsp;keep yards looking their best.&lt;/p&gt;&#13;
+&lt;picture&gt; &lt;source media="(min-width: 1024px)" srcset="images/homepage/category-cards/Home_CC_LawnEquip_RT65_desktop_435x240_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 767px)" srcset="images/homepage/category-cards/Home_CC_LawnEquip_RT65_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 480px)" srcset="images/homepage/category-cards/Home_CC_LawnEquip_RT65_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;img alt="Cub Cadet garden tiller" class="primary-tile-image" src="images/homepage/category-cards/Home_CC_LawnEquip_RT65_desktop_435x240_v1.png?$staticlink$" title="" /&gt; &lt;/picture&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;a class="btn btn-outline-secondary btn-sm" href="$url('Search-Show', 'cgid', 'lawn-and-garden-equipment')$" id="category-lawn-and-garden-shop-now" aria-label="Shop Lawn and Garden Equipment"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 5 --&gt;&#13;
+&#13;
+&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+&lt;div class="card category-card" style="background-image: url('images/homepage/category-cards/Home_CC_CommercialEquip_hover_desktop_500x495_v1.jpg?$staticlink$')"&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h3 class="card-title"&gt;Commercial Equipment&lt;/h3&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;We started from scratch by designing every element of our commercial line with the professional in mind.&lt;/p&gt;&#13;
+&lt;picture&gt; &lt;source media="(min-width: 1024px)" srcset="images/homepage/category-cards/Home_CC_CommEquip_ProZ900-Dual_desktop_435x240_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 767px)" srcset="images/homepage/category-cards/Home_CC_CommEquip_ProZ900-Dual_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 480px)" srcset="images/homepage/category-cards/Home_CC_CommEquip_ProZ900-Dual_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;img alt="commercial riding mower" class="primary-tile-image" src="images/homepage/category-cards/Home_CC_CommEquip_ProZ900-Dual_desktop_435x240_v1.png?$staticlink$" title="" /&gt; &lt;/picture&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;a class="btn btn-outline-secondary btn-sm" href="$url('Search-Show', 'cgid', 'commercial-equipment')$" id="category-commcerial-shop-now" aria-label="Shop Commercial Equipment"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 6 --&gt;&#13;
+&#13;
+&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+&lt;div class="card category-card" style="background-image: url('images/homepage/category-cards/Home_CC_Accessories_hover_desktop_500x495_v1.jpg?$staticlink$')"&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h3 class="card-title"&gt;Accessories&lt;/h3&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;Optimize your equipment with a full line of accessories and attachments such as baggers, snow blades and&amp;nbsp;mulch kits.&lt;/p&gt;&#13;
+&lt;picture&gt; &lt;source media="(min-width: 1024px)" srcset="images/homepage/category-cards/Home_CC_Accessories_ZT-Bagger_desktop_435x240_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 767px)" srcset="images/homepage/category-cards/Home_CC_Accessories_ZT-Bagger_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;source media="(min-width: 480px)" srcset="images/homepage/category-cards/Home_CC_Accessories_ZT-Bagger_mobile_476x263_v1.png?$staticlink$" /&gt; &lt;img alt="accessories category" class="primary-tile-image" src="images/homepage/category-cards/Home_CC_Accessories_ZT-Bagger_desktop_435x240_v1.png?$staticlink$" title="" /&gt; &lt;/picture&gt;&#13;
+&#13;
+&lt;div class="category-cta"&gt;&lt;a class="btn btn-outline-secondary btn-sm" href="$url('Search-Show', 'cgid', 'riding-mower-accessories')$" id="category-accessories-shop-now" aria-label="Shop Riding Mower Accessories"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- /.row --&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <folder-link folder-id="homepage-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="category-card-group-homepage">
+        <display-name xml:lang="x-default">Sample Category Cards</display-name>
+        <description xml:lang="x-default">Group of Category tiles with heading</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="card-group  category-tile-group"&gt;&#13;
+	&lt;!-- Headers --&gt;&#13;
+	&lt;div class="card-group-heading"&gt;&#13;
+		&lt;h2&gt;Explore Our Product Lineup&lt;/h2&gt;&#13;
+	&lt;/div&gt;&#13;
+&#13;
+	&lt;!-- row 1 - 3 columns --&gt;&#13;
+	&lt;div class="row"&gt;&#13;
+		&#13;
+		&lt;!-- CARD 1 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Lawn Mowers&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Our lawn mowers are designed to give you unmatched strength and durability along with the industry’s best warranty. &lt;/p&gt;&#13;
+					&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '420')$"/&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '426')$"/&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '585')$"/&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '315')$" alt="lawn mower category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="link-primary" aria-label="Shop Lawn Mowers"&gt;Learn More&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+&#13;
+		&lt;!-- CARD 2 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Snow Blowers&lt;/h3&gt;&#13;
+&#13;
+					&lt;p class="card-text"&gt;When you have a Cub Cadet snow blower, winter weather never gets in your way.&lt;/p&gt;&#13;
+&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '420')$"/&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '426')$"/&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '585')$"/&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'snow-blowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Snow Blowers"&gt;Shop Now&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'snow-blowers')$" class="link-primary" aria-label="Shop Snow Blowers"&gt;Learn More&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+				&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&#13;
+		&lt;!-- CARD 3 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Utility Vehicles&lt;/h3&gt;&#13;
+&#13;
+					&lt;p class="card-text"&gt;Our utility vehicles offer a wide range of customization possibilities and industry-leading features.&lt;/p&gt;&#13;
+&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '420')$"/&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '426')$"/&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '585')$"/&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'utility-vehicles')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Utility Vehicles"&gt;Shop Now&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+					&#13;
+					&lt;div class="category-cta"&gt;&#13;
+					&lt;!-- intentionally left empty --&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+&#13;
+		&lt;!-- CARD 4 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Yard and Lawn Tools&lt;/h3&gt;&#13;
+&#13;
+					&lt;p class="card-text"&gt;From trimmers to log splitters, tillers to leaf blowers, and everything in between, our line of products gets the job done.&lt;/p&gt;&#13;
+&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '420')$"/&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '426')$"/&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '585')$"/&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'yard-and-lawn-equipment')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Yard and Lawn Equipment"&gt;Shop Now&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'yard-and-lawn-equipment')$" class="link-primary" aria-label="Shop Yard and Lawn Equipment"&gt;Learn More&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&#13;
+		&lt;!-- CARD 5 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Commercial Equipment&lt;/h3&gt;&#13;
+&#13;
+					&lt;p class="card-text"&gt;We started from scratch by designing every element of our commercial line with the professional in mind.&lt;/p&gt;&#13;
+&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '420')$"/&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '426')$"/&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '585')$"/&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'commercial-equipment')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Commercial Equipment"&gt;Shop Now&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'commercial-equipment')$" class="link-primary" aria-label="Shop Commercial Equipment"&gt;Learn More&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&#13;
+		&lt;!-- CARD 5 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Attachments&lt;/h3&gt;&#13;
+&#13;
+					&lt;p class="card-text"&gt;Order replacement parts or download a copy of your machine's operator's manual.&lt;/p&gt;&#13;
+&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '420')$"/&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '426')$"/&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '585')$"/&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="link-primary" aria-label="Shop Lawn Mowers"&gt;Learn More&lt;/a&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt; &lt;!-- /.row --&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="sample-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="category-card-group-nine-tiles-homepage">
+        <display-name xml:lang="x-default">Sample Category Cards -- 9 tiles</display-name>
+        <description xml:lang="x-default">Group of Category tiles with heading</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="card-group  category-tile-group"&gt;&#13;
+	&lt;!-- Headers --&gt;&#13;
+	&lt;div class="card-group-heading"&gt;&#13;
+		&lt;h2&gt;Explore Our Product Lineup&lt;/h2&gt;&#13;
+	&lt;/div&gt;&#13;
+	&lt;!-- row 1 - 3 columns --&gt;&#13;
+	&lt;div class="row"&gt;&#13;
+		&lt;!-- CARD 1 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Lawn Mowers&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Our lawn mowers are designed to give you unmatched strength and durability along with the industry’s best warranty.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/mowers_tile_main.jpg', 'scaleWidth', '315')$" alt="lawn mower category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="link-primary" aria-label="Shop Lawn Mowers"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 2 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Snow Blowers&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;When you have a Cub Cadet snow blower, winter weather never gets in your way.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/snow_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'snow-blowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Snow Blowers"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'snow-blowers')$" class="link-primary" aria-label="Shop Snow Blowers"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 3 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Utility Vehicles&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Our utility vehicles offer a wide range of customization possibilities and industry-leading features.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/utility_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'utility-vehicles')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Utility Vehicles"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;&#13;
+						&lt;!-- intentionally left empty --&gt;&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 4 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Yard and Lawn Tools&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;From trimmers to log splitters, tillers to leaf blowers, and everything in between, our line of products gets the job done.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'yard-and-lawn-equipment')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Yard and Lawn Equipment"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'yard-and-lawn-equipment')$" class="link-primary" aria-label="Shop Yard and Lawn Equipment"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 5 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Commercial Equipment&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;We started from scratch by designing every element of our commercial line with the professional in mind.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'commercial-equipment')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Commercial Equipment"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'commercial-equipment')$" class="link-primary" aria-label="Shop Commercial Equipment"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 6 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Attachments&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Order replacement parts or download a copy of your machine's operator's manual.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="link-primary" aria-label="Shop Lawn Mowers"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 7 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Yard and Lawn Tools&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;From trimmers to log splitters, tillers to leaf blowers, and everything in between, our line of products gets the job done.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/yard_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'yard-and-lawn-equipment')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Yard and Lawn Equipment"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'yard-and-lawn-equipment')$" class="link-primary" aria-label="Shop Yard and Lawn Equipment"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 8 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Commercial Equipment&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;We started from scratch by designing every element of our commercial line with the professional in mind.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/commercial_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'commercial-equipment')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Commercial Equipment"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'commercial-equipment')$" class="link-primary" aria-label="Shop Commercial Equipment"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+		&lt;!-- CARD 9 --&gt;&#13;
+		&lt;div class="col-12 col-md-6 col-lg-4"&gt;&#13;
+			&lt;div class="card category-card" style="background-image: url('images/category-tiles/utility_tile_hover.jpg?$staticlink$')"&gt;&#13;
+				&lt;div class="card-body"&gt;&#13;
+					&lt;h3 class="card-title"&gt;Attachments&lt;/h3&gt;&#13;
+					&lt;p class="card-text"&gt;Order replacement parts or download a copy of your machine's operator's manual.&lt;/p&gt;&#13;
+					&lt;picture&gt;&#13;
+						&lt;source media="(min-width: 1024px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '420')$" /&gt;&#13;
+						&lt;source media="(min-width: 767px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '426')$" /&gt;&#13;
+						&lt;source media="(min-width: 480px)" srcset="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '585')$" /&gt;&#13;
+						&lt;img class="primary-tile-image" src="$include('DIS-GetURL', 'context', 'content', 'src', 'images/category-tiles/accessories_tile_main.jpg', 'scaleWidth', '315')$" alt="category" /&gt;&#13;
+					&lt;/picture&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="btn btn-outline-secondary btn-sm" aria-label="Shop Lawn Mowers"&gt;Shop Now&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="category-cta"&gt;	&lt;a href="$url('Search-Show', 'cgid', 'lawn-mowers')$" class="link-primary" aria-label="Shop Lawn Mowers"&gt;Learn More&lt;/a&gt;&#13;
+&#13;
+					&lt;/div&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt;&#13;
+	&lt;!-- /.row --&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="sample-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="email-signup-form">
+        <display-name xml:lang="x-default">Email Signup Form</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container"&gt;&#13;
+    &lt;form id="email-subscribe-form" data-url="$url('MCSubscription-FooterSubscribe')$" role="form" autocomplete="on"&gt;&#13;
+        &lt;div class="row"&gt;&#13;
+            &lt;div class="col-sm-12"&gt;&#13;
+                &lt;div class="form-group"&gt;&#13;
+                    &lt;label for="email-signup"&gt;Have a questions in the yard? Just Ask Troy.&lt;/label&gt;&#13;
+                    &lt;p class="signup-text"&gt;Sign up for our monthly eNewsletter to get all of your lawn and gardening questions answered with articles full of tips and tricks, instructive videos and more. You may unsubscribe at any time. Please refer to our &lt;a class="footer-link" href="$url('Page-Show','cid','privacy-policy')$"&gt;Privacy Policy&lt;/a&gt;.&lt;/p&gt;&#13;
+                    &lt;div class="input-group"&gt;&#13;
+                        &lt;input aria-label="Join our Email List" class="form-control" id="email-signup" name="hpEmailSignUp" pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" placeholder="Enter Your Email Address" type="email" data-missing-type="Required Field:" data-missing-msg="Please fill out this field."  autocomplete="email"/&gt;&#13;
+                        &lt;span class="input-group-btn"&gt;&#13;
+                            &lt;button class="btn btn-primary" type="submit"&gt;Go&lt;/button&gt;&#13;
+                        &lt;/span&gt;&#13;
+                        &lt;div class="invalid-feedback"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/form&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="footer"/>
+        </folder-links>
+    </content>
+
+    <content content-id="hero-home-mydealerdirect-test">
+        <display-name xml:lang="x-default">Product Line Riding Mowers Carousel 1</display-name>
+        <description xml:lang="x-default">1st image in the Riding Lawn Mowers landing page carousel. Located in the product line landing folder.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&lt;div class="container-fluid"&gt;&lt;div class="row"&gt;&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source srcset="images/homepage/Home_Hero_MyDealerDirect_desktop_1015x630_v2.jpg?$staticlink$" media="(min-width: 1025px)" data-type="desktopimage"/&gt;&lt;source srcset="images/homepage/Home_Hero_MyDealerDirect_mobile_805x540_v2.jpg?$staticlink$" media="(min-width: 768px)" data-type="tabletimage"/&gt;&lt;source srcset="images/homepage/Home_Hero_MyDealerDirect_mobile_805x540_v2.jpg?$staticlink$" media="(max-width: 767px)" data-type="mobileimage"/&gt;&lt;img src="images/homepage/Home_Hero_MyDealerDirect_desktop_1015x630_v2.jpg?$staticlink$" alt="man shaking hands with salesman in front of store building" data-type="defaultimage" class="img-fluid"/&gt;&lt;/picture&gt;&lt;/div&gt;&lt;!-- text block --&gt;&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&lt;div class="bg-secondary text-primary"&gt;&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-primary text-capitalize"&gt;Labour Day Savings&lt;/span&gt;&lt;/div&gt;&lt;div class="display-1 text-primary"&gt;10% off Walk-Behind Mowers&lt;/div&gt;&lt;div class="p text-primary"&gt;&lt;div&gt;Valid from August 28 to September 4, 2019.&lt;/div&gt;&lt;/div&gt;&lt;div class="copy-block"&gt;&lt;/div&gt;&lt;a href="$url('Page-Show', 'cid', 'my-dealer-direct')$" target="_self" title="Learn More" class="btn btn-primary" aria-label="Shop My Dealer Direct"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="pll-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="plb-hero-snowblower-2">
+        <display-name xml:lang="x-default">Introducing the smartest way to clear snow - Product Line Browse-Hero Carousel Snow Blowers</display-name>
+        <display-name xml:lang="fr-CA">Le moyen le plus efficace de vous débarrasser de la neige</display-name>
+        <description xml:lang="x-default">2nd carousel image on the top carousel on the Snow blower page. Located in the product line browse folder.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt; &lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_desktop_1015x630_v2.jpg?$staticlink$" /&gt; &lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_mobile_805x540_v2.jpg?$staticlink$" /&gt; &lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_mobile_805x540_v2.jpg?$staticlink$" /&gt; &lt;img alt="Man snow blowing his driveway" class="img-fluid" data-type="defaultimage" src="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_desktop_1015x630_v2.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+&lt;div class="bg-secondary"&gt;&#13;
+&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;SNOW BLOWERS&lt;/span&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="display-1"&gt;&lt;span class="c1067"&gt;Introducing the smartest way to clear snow.&lt;/span&gt;&#13;
+&#13;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&#13;
+&lt;div class="p"&gt;Cub Cadet engines with EFI provide you a reliable start while IntelliPower™ technology* provides more power when you need it most. &lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="fr-CA">&lt;div class="hero"&gt;&lt;div class="container-fluid"&gt;&lt;div class="row"&gt;&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt; &lt;source srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_desktop_1015x630_v2.jpg?$staticlink$" media="(min-width: 1025px)" data-type="desktopimage"/&gt; &lt;source srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_mobile_805x540_v2.jpg?$staticlink$" media="(min-width: 768px)" data-type="tabletimage"/&gt; &lt;source srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_mobile_805x540_v2.jpg?$staticlink$" media="(max-width: 767px)" data-type="mobileimage"/&gt; &lt;img src="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_desktop_1015x630_v2.jpg?$staticlink$" alt="Man snow blowing his driveway" data-type="defaultimage" class="img-fluid"/&gt; &lt;/picture&gt;&lt;/div&gt;&lt;!-- text block --&gt;&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&lt;div class="bg-secondary"&gt;&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;SOUFFLEUSES À NEIGE&lt;/span&gt;&lt;/div&gt;&lt;div class="display-1"&gt;&lt;span class="c1067"&gt;Le moyen le plus efficace de vous débarrasser de la neige&lt;/span&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="copy-block"&gt;&lt;div class="p"&gt;La perspective de devoir recommencer à déneiger ne vous enchante pas du tout ? Nous avons la solution pour vous. Notre souffleuse 2X possède un moteur à injection électronique associé à la technologie IntelliPowerMC, ce qui lui donne 18 % de puissance de plus qu’un moteur classique.    &lt;/div&gt;&lt;/div&gt;&lt;a target="_self" href="#product-search-results" title="COMPAREZ NOS MODÈLES" class="btn btn-primary d-flex justify-content-around"&gt;COMPAREZ NOS MODÈLES &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;div class="hero"&gt;&lt;div class="container-fluid"&gt;&lt;div class="row"&gt;&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt; &lt;source srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_desktop_1015x630_v2.jpg?$staticlink$" media="(min-width: 1025px)" data-type="desktopimage"/&gt; &lt;source srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_mobile_805x540_v2.jpg?$staticlink$" media="(min-width: 768px)" data-type="tabletimage"/&gt; &lt;source srcset="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_mobile_805x540_v2.jpg?$staticlink$" media="(max-width: 767px)" data-type="mobileimage"/&gt; &lt;img src="images/product-line-browse/Main-Carousel/SnowBlow_ProdLineBrow_Hero_2X_Front_House_02_desktop_1015x630_v2.jpg?$staticlink$" alt="Man snow blowing his driveway" data-type="defaultimage" class="img-fluid"/&gt; &lt;/picture&gt;&lt;/div&gt;&lt;!-- text block --&gt;&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&lt;div class="bg-secondary"&gt;&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;SOUFFLEUSES À NEIGE&lt;/span&gt;&lt;/div&gt;&lt;div class="display-1"&gt;&lt;span class="c1067"&gt;Le moyen le plus efficace de vous débarrasser de la neige.&lt;/span&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="copy-block"&gt;&lt;div class="p"&gt;La perspective de devoir recommencer à déneiger ne vous enchante pas du tout ? Nous avons la solution pour vous. Notre souffleuse 2X possède un moteur à injection électronique associé à la technologie IntelliPowerMC, ce qui lui donne 18 % de puissance de plus qu’un moteur classique.    &lt;/div&gt;&lt;/div&gt;&lt;a target="_self" href="#product-search-results" title="COMPAREZ NOS MODÈLES" class="btn btn-primary d-flex justify-content-around"&gt;SHOP NOW &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="plb-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="pll-commercial-carousel">
+        <display-name xml:lang="x-default">Product Line Landing-Commercial Carousel</display-name>
+        <description xml:lang="x-default">1st content slot on the commercial product line landing page. Content carousel. Located in the product line landing page folder.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&lt;div class="container-fluid"&gt;&lt;div class="row"&gt;&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&lt;picture&gt;&lt;source srcset="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_PROZ972SD_01_desktop_1015x630_v1.jpg?$staticlink$" media="(min-width: 1025px)" data-type="desktopimage"/&gt;&lt;source srcset="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_PROZ972SD_01_mobile_805x540_v1.jpg?$staticlink$" media="(min-width: 768px)" data-type="tabletimage"/&gt;&lt;source srcset="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_PROZ972SD_01_mobile_805x540_v1.jpg?$staticlink$" media="(max-width: 767px)" data-type="mobileimage"/&gt;&lt;img src="images/product-line-landing/Main-Carousel/ComEquip_ProdLineLand_Hero_PROZ972SD_01_desktop_1015x630_v1.jpg?$staticlink$" alt="" data-type="defaultimage" class="img-fluid"/&gt;&lt;/picture&gt;&lt;/div&gt;&lt;!-- text block --&gt;&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&lt;div class="bg-accent-5 text-light"&gt;&lt;div class="intro-block d-none d-lg-block"&gt;&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&lt;span class="intro2 label-1 text-secondary"&gt;Commercial Equipment&lt;/span&gt;&lt;/div&gt;&lt;div class="display-1"&gt;Made to make the grade.&lt;/div&gt;&lt;div class="copy-block"&gt;&lt;div class="p"&gt;The new PRO Z™ 972 SD is a dual-wheel commercial zero-turn engineered to dominate steep hills up to 25 degrees (46% grade). It’s an innovative solution for municipalities and properties with varying terrain. &lt;/div&gt;&lt;/div&gt;&lt;a href="$url('Search-Show', 'cgid', 'commercial-zero-turn-mowers')$" target="" title="Shop Now" class="btn btn-secondary" aria-label="Shop Commercial Zero Turn Mowers"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="plp-riders-zero-turn-shop-now">
+        <display-name xml:lang="x-default">Paid Landing Page - Riders &amp; Zero-Turns - Shop Now at Retailers</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+&lt;div class="hero-caro-container hero-content-left"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" src="images/landing/Header_Hero_Desktop_1540x630.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" src="images/landing/Header_Hero_Mobile_805x540.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" src="images/landing/Header_Hero_Mobile_805x540.jpg?$staticlink$" /&gt;&lt;img alt="man riding riding lawn mower over concrete" class="img-fluid" data-type="defaultimage" src="images/landing/Header_Hero_Desktop_1540x630.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&#13;
+&lt;div class="text-block bg-primary"&gt;&#13;
+&lt;div class="card-title"&gt;&#13;
+&lt;h1 class="display-1"&gt;Reliable Troy-Bilt Riding Mowers&lt;/h1&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&#13;
+&lt;div class="hero-body"&gt;Troy-Bilt riding mowers are designed, built and tested to make yardwork less of a chore.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="hero-cta"&gt;&lt;a class="btn btn-outline-primary modal-link video-modal" data-content="#ctaModal" data-link="$url('Page-Show', 'cid', 'video-over-tested-riding-mowers-tb')$" data-toggle="modal" enable-title="false" large-modal="true" tabindex="0" target="modal" title="See it in action"&gt;Watch the tests&lt;span class="icon icon-video-brand" data-highlightable="1"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="card-group product-line-banner-group lifestyle"&gt;&#13;
+&lt;div class="col-12"&gt;&#13;
+&lt;div class="card product-line-card lifestyle"&gt;&#13;
+&lt;div align="left" class="card-body order-2"&gt;&#13;
+&lt;h3 style="text-align: left;"&gt;From March 25 to May 26, save $50 on the reliable Pony 42 riding mower.&lt;/h3&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+	&lt;li style="text-align: left;"&gt;Built with reliable engines and rugged, durable materials&lt;/li&gt;&#13;
+	&lt;li style="text-align: left;"&gt;Designed to make yardwork better with helpful features like effortless shifting, deck wash and comfortable seats&lt;/li&gt;&#13;
+	&lt;li style="text-align: left;"&gt;Tested for thousands of hours to ensure they work when you need them&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;p class="card-text" style="text-align: left;"&gt;&lt;strong&gt;Shop now at:&lt;/strong&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;div align="left" class="hero-cta"&gt;&lt;a href="https://www.homedepot.com/p/Troy-Bilt-Pony-42-in-439-cc-Auto-Choke-Engine-7-Speed-Manual-Drive-Gas-Riding-Lawn-Tractor-with-Mow-in-Reverse-Pony-42/311264920"&gt;&lt;img alt="home depot logo button" src="images/landing/THD_Button_168x52.jpg?$staticlink$" style="padding-left: 10px; padding-right: 10px;" title="" /&gt;&lt;/a&gt; &lt;a href="https://www.tractorsupply.com/tsc/product/troy-bilt-troy-bilt-pony-42x-riding-lawn-mower-13a877bs066?solr=1&amp;cm_vc=-10005&amp;st=pony%2042"&gt;&lt;img alt="TSC logo button" src="images/landing/TSC_Button_192x52.jpg?$staticlink$" style="padding-left: 10px; padding-right: 10px;" title="" /&gt;&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="card-img"&gt;&lt;picture src="images/landing/Pony42X_770x610.jpg?$staticlink$"&gt; &lt;source data-type="desktopimage" media="(min-width: 1024px)" src="images/landing/Pony42X_770x610.jpg?$staticlink$" /&gt; &lt;source data-type="tabletimage" media="(min-width: 767px)" src="images/landing/Pony42X_1024x899.jpg?$staticlink$" /&gt; &lt;source data-type="mobileimage" media="(min-width: 480px)" src="images/landing/Pony42X_1024x899.jpg?$staticlink$" /&gt; &lt;img alt="riding lawn mower on grass" class="primary-tile-image" data-type="defaultimage" src="images/landing/Pony42X_770x610.jpg?$staticlink$" title="" /&gt; &lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-12"&gt;&#13;
+&lt;p&gt;&lt;i&gt;$50 off the Pony&amp;reg; 42/Pony 42X riding mowers at participating retailers. Offer valid for a limited time, between March 25-May 26, 2020, and is not applicable for other models. Specifications and programs are subject to change without notice.&lt;/i&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- / .row --&gt;&#13;
+&lt;style type="text/css"&gt;.container {&#13;
+padding-left: 0px !important;&#13;
+padding-right: 0px !important;&#13;
+}&#13;
+&#13;
+.content-page-image {&#13;
+display: none;&#13;
+}&#13;
+&lt;/style&gt;&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="seasonal-offers-tb">
+        <display-name xml:lang="x-default">Seasonal Offers</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container-fluid"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12"&gt;&#13;
+&lt;div class="search-breadcrumb"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col"&gt;&#13;
+&lt;ol class="breadcrumb"&gt;&#13;
+	&lt;li class="breadcrumb-item"&gt;&lt;a href="$url('Page-Show','cid','home-show')$"&gt;Home&lt;/a&gt;&lt;/li&gt;&#13;
+	&lt;li aria-current="page" class="breadcrumb-item active"&gt;Special Offers&lt;/li&gt;&#13;
+&lt;/ol&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="special-offers" id="special-offers" style="margin-bottom: 3rem;"&gt;&#13;
+&lt;div class="wrap"&gt;&#13;
+&lt;div class="container top"&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-12 col-lg-8 offset-lg-2 text-center"&gt;&#13;
+&lt;h1&gt;Special Offers from Troy-Bilt&lt;/h1&gt;&#13;
+&#13;
+&lt;p&gt;Exclusive savings on Troy-Bilt products.&lt;/p&gt;&#13;
+&lt;/br&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;!-- ROW #1 --&gt;&#13;
+&lt;div class="row"&gt;&#13;
+&lt;div class="col-sm-4"&gt;&#13;
+&lt;div class="card" style="height:100%"&gt;&lt;img alt="snow blower" class="card-img-top" src="images/offers/SpecialOffer_Squall208EX_690x386.jpg?$staticlink$" title="" /&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h5 class="card-title"&gt;10% Off Squall&amp;trade; 208EX Single-Stage Snow Blower. Now only $494.99&lt;/h5&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+	&lt;li&gt;10% Off Squall&amp;trade; 208EX is 10% off regular price of product.&lt;/li&gt;&#13;
+	&lt;li&gt;Not eligible on other models.&lt;/li&gt;&#13;
+	&lt;li&gt;Offer cannot be combined with other discounts or promotions.&lt;/li&gt;&#13;
+	&lt;li&gt;Offer valid at participating retailers.&lt;/li&gt;&#13;
+	&lt;li&gt;Offer expires 2/9/20 @ 11:59 PM.&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Posted January 27, 2020&lt;/small&gt;&lt;/p&gt;&#13;
+&lt;a class="btn btn-secondary" href="$url('Product-Show','pid','31PM2T7G723')$" aria-label="Shop 208EX Single-Stage Snow Blower"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="col-sm-4"&gt;&#13;
+&lt;div class="card" style="height:100%"&gt;&lt;img alt="snow blower" class="card-img-top" src="images/offers/SpecialOffer_Storm2840_690x386.jpg?$staticlink$" title="" /&gt;&#13;
+&lt;div class="card-body"&gt;&#13;
+&lt;h5 class="card-title"&gt;$100 Off Storm&amp;trade; 2860 Two-Stage Snow Blower. Now only $899.99&lt;/h5&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&lt;ul&gt;&#13;
+	&lt;li&gt;$100 off Storm&amp;trade; 2860 is $100 off regular price of product.&lt;/li&gt;&#13;
+	&lt;li&gt;Not eligible on other models.&lt;/li&gt;&#13;
+	&lt;li&gt;Offer cannot be combined with other discounts or promotions.&lt;/li&gt;&#13;
+	&lt;li&gt;Offer valid at participating retailers.&lt;/li&gt;&#13;
+	&lt;li&gt;Offer expires 2/9/20 @ 11:59 PM.&lt;/li&gt;&#13;
+&lt;/ul&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Posted January 27, 2020 &lt;/small&gt;&lt;/p&gt;&#13;
+&lt;a class="btn btn-secondary" href="$url('Product-Show','pid','31AM6CP4766')$" aria-label="Shop 2860 Two-Stage Snow Blower"&gt;Shop Now&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#13;
+&#13;
+&#13;
+&lt;style type="text/css"&gt;.container {&#13;
+padding-left: 0px !important;&#13;
+padding-right: 0px !important;&#13;
+}&#13;
+&#13;
+.content-page-image {&#13;
+display: none;&#13;
+}&#13;
+&lt;/style&gt;&#13;
+&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="special-offers-sample">
+        <display-name xml:lang="x-default">Sample "Special Offers" card group</display-name>
+        <description xml:lang="x-default">Group of cards with heading and CTA</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="card-group container offer-card-group"&gt;&lt;!-- Headers --&gt;&#13;
+&lt;div class="card-group-heading"&gt;&#13;
+&lt;h2 class="h2"&gt;Special Offers From Cub Cadet&lt;/h2&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- row 1 - 2 columns --&gt;&#13;
+&#13;
+&lt;div class="row"&gt;&lt;!-- CARD 1 --&gt;&#13;
+&lt;div class="d-flex flex-column flex-md-row col-12 col-md-6"&gt;&#13;
+&lt;div class="row no-gutters offer-card"&gt;&#13;
+&lt;div class="d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/homepage/CC_RatingReview_2X26HP_Promo_300x396-desktop.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/homepage/CC_RatingReview_2X26HP_Promo_768x483-mobile.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/homepage/CC_RatingReview_2X26HP_Promo_768x483-mobile.jpg?$staticlink$" /&gt;&lt;img alt="ratings-reviews" class="img-fluid" data-type="defaultimage" src="images/homepage/CC_RatingReview_2X26HP_Promo_300x396-desktop.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&#13;
+&lt;div class="bg-secondary"&gt;&#13;
+&lt;div class="h3"&gt;Let us know what you think.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&#13;
+&lt;div class="p"&gt;How is your Cub Cadet working out for you? Share your review with us and you could win $100.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="cta-container"&gt;&lt;a class="link-primary" data-type="ctatext" href="http://app.viralsweep.com/sweeps/full/d4f20b-53644&amp;amp;framed=1" role="button" target="_self"&gt;SHARE YOUR REVIEW&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 2 --&gt;&#13;
+&#13;
+&lt;div class="d-flex flex-column flex-md-row col-12 col-md-6"&gt;&#13;
+&lt;div class="row no-gutters offer-card"&gt;&#13;
+&lt;div class="d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/homepage/offers_mower.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/offer-images/offers_mower.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/offer-images/offers_mowers_mobile.png?$staticlink$" /&gt;&lt;img alt="" class="img-fluid" data-type="defaultimage" src="images/offer-images/offers_mowers_mobile.png?$staticlink$" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&#13;
+&lt;div class="bg-secondary"&gt;&#13;
+&lt;div class="h3"&gt;Save Up to $950 On Select Pro Z Series Models.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&#13;
+&lt;div class="p"&gt;Offer valid for the Cub Cadet PRO Z 148 L, PRO Z 560 L AND PRO Z 760 S. Not valid on other models. Offer valid at participating dealers.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="cta-container"&gt;&lt;a class="link-primary" data-type="ctatext" href="$url('Page-Show', 'cid', 'seasonal-offers')$" role="button" target="_self" aria-label="See More Details on Seasonal Offers"&gt;See More Details &lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- /.row --&gt;&#13;
+&#13;
+&lt;div class="cta-container group-cta"&gt;&lt;a class="btn btn-outline-secondary" data-type="ctatext" href="$url('Page-Show', 'cid', 'seasonal-offers')$" role="button" target="_self"&gt;See More Special Offers &lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="sample-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="special-offers-sample-more-offers-removed">
+        <display-name xml:lang="x-default">Sample "Special Offers" card group with the More offers button removed</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="card-group container offer-card-group"&gt;&lt;!-- Headers --&gt;&#13;
+&lt;div class="card-group-heading"&gt;&#13;
+&lt;h2 class="h2"&gt;Special Offers From Cub Cadet&lt;/h2&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- row 1 - 2 columns --&gt;&#13;
+&#13;
+&lt;div class="row"&gt;&lt;!-- CARD 1 --&gt;&#13;
+&lt;div class="d-flex flex-column flex-md-row col-12 col-md-6"&gt;&#13;
+&lt;div class="row no-gutters offer-card"&gt;&#13;
+&lt;div class="d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/homepage/CC_RatingReview_2X26HP_Promo_300x396-desktop.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/homepage/CC_RatingReview_2X26HP_Promo_768x483-mobile.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/homepage/CC_RatingReview_2X26HP_Promo_768x483-mobile.jpg?$staticlink$" /&gt;&lt;img alt="review-to-win" class="img-fluid" data-type="defaultimage" src="images/homepage/CC_RatingReview_2X26HP_Promo_300x396-desktop.jpg?$staticlink$" title="" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&#13;
+&lt;div class="bg-secondary"&gt;&#13;
+&lt;div class="h3"&gt;Let us know what you think.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&#13;
+&lt;div class="p"&gt;How is your Cub Cadet working out for you? Share your review with us and you could win $100.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="cta-container"&gt;&lt;a class="link-primary" data-type="ctatext" href="https://app.viralsweep.com/sweeps/full/d4f20b-53644&amp;amp;framed=1" role="button" target="_self"&gt;SHARE YOUR REVIEW&lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- CARD 2 --&gt;&#13;
+&#13;
+&lt;div class="d-flex flex-column flex-md-row col-12 col-md-6"&gt;&#13;
+&lt;div class="row no-gutters offer-card"&gt;&#13;
+&lt;div class="d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&lt;picture&gt;&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/offer-images/offers_mower.jpg?$staticlink$" /&gt;&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/offer-images/offers_mower.jpg?$staticlink$" /&gt;&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/offer-images/offers_mowers_mobile.png?$staticlink$" /&gt;&lt;img alt="" class="img-fluid" data-type="defaultimage" src="images/offer-images/offers_mowers_mobile.png?$staticlink$" /&gt;&lt;/picture&gt;&lt;/div&gt;&#13;
+&lt;!-- text block --&gt;&#13;
+&#13;
+&lt;div class="text-block d-flex flex-column flex-sm-row col-12 col-sm-6"&gt;&#13;
+&lt;div class="bg-secondary"&gt;&#13;
+&lt;div class="h3"&gt;Save Up to $950 On Select Pro Z Series Models.&lt;/div&gt;&#13;
+&#13;
+&lt;div class="copy-block"&gt;&#13;
+&lt;div class="p"&gt;Offer valid for the Cub Cadet PRO Z 148 L, PRO Z 560 L AND PRO Z 760 S. Not valid on other models. Offer valid at participating dealers.&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;div class="cta-container"&gt;&lt;a class="link-primary" data-type="ctatext" href="$url('Page-Show', 'cid', 'offer')$" role="button" target="_self" aria-label="See More Details on This Offer"&gt;See More Details &lt;/a&gt;&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- /.row --&gt;&lt;/div&gt;&#13;
+&#13;
+&lt;div class="cta-container group-cta"&gt;&amp;nbsp;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="sample-assets"/>
+        </folder-links>
+    </content>
+
+</library>

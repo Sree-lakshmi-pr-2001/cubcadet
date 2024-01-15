@@ -1,0 +1,91 @@
+<ul class="dropdown-menu" role="menu" aria-hidden="true">
+    <isset name="categoryLayout" value="${parentCatLayout}" scope="page" />
+    <isset name="parentCat" value="${menuItem}" scope="page" />
+    <isloop items="${menuItem.subCategories}" var="category" status="loopStatus">
+        <isif condition="${category.subCategories && (categoryLayout === 'layout1')}">
+            <li class="dropdown-item dropdown second-level-menu-heading" role="none">
+                <a role="menuitem" href="${category.url}" id="${category.id}" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${category.name}</a>
+                <isset name="menuItem" value="${category}" scope="page" />
+                <isinclude template="components/header/menuItemTertiary" />
+            </li>
+        <iselse/>
+            <isscript>
+                var servicePartsImg = '';
+                var servicePartsLink = '';
+
+                switch (category.id) {
+                    case 'find-part':
+                        servicePartsImg = category.menuCardSVG !== '' ? category.menuCardSVG : 'icon-find-a-part';
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.findpart';
+                        break;
+                    case 'owners-manuals':
+                        servicePartsImg = category.menuCardSVG !== '' ? category.menuCardSVG : 'icon-owners-manual';
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.learnmore';
+                        break;
+                    case 'service-centers':
+                        servicePartsImg = category.menuCardSVG !== '' ? category.menuCardSVG : 'icon-location-nav';
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.findservice';
+                        break;
+                    case 'customer-support':
+                        servicePartsImg = category.menuCardSVG !== '' ? category.menuCardSVG : 'icon-customer-support';
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.learnmore';
+                        break;
+                    case 'how-to-articles':
+                        servicePartsImg = category.menuCardSVG !== '' ? category.menuCardSVG : 'icon-how-to-articles';
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.learnmore';
+                        break;
+                    case 'parts-diagrams':
+                        servicePartsImg = category.menuCardSVG !== '' ? category.menuCardSVG : 'icon-maintenance';
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.findpart';
+                        break;
+                    default:
+                        servicePartsImg = category.menuCardSVG;
+                        servicePartsLink = category.menuCardLinkText !== '' ? category.menuCardLinkText : 'navigation.shopnow';
+                };
+            </isscript>
+
+            <isset name="tileDescription" value="${category.menuCardText}" scope="page" />
+
+            <isset name="tileImage" value="${('image' in category && category.image) ? category.image.getURL() : null}" scope="page" />
+
+            <isif condition="${(categoryLayout == 'layout2') || (typeof menuTile !== 'undefined' && menuTile)}">
+                <li class="dropdown-item menu-tile second-level-menu-heading-tile" role="menuitem">
+                    <a href="${category.url}" id="${category.id}" role="button" class="dropdown-link">
+                        <span class="tile-title">${category.name}</span>
+                        <isif condition="${tileDescription}">
+                            <span class="tile-description">${tileDescription}</span>
+                        </isif>
+                        <isif condition="${tileImage}">
+                            <img src="${tileImage}" class="tile-img"/>
+
+                        <!-- // TODO The category ID name will need to be updated when the actual catalog taxonomy is given. -->
+                        <iselseif condition="${parentCat.id === 'service-and-parts'}">
+                            <issvg icon="${servicePartsImg}" image="true" classes="tile-img" altText="" />
+
+                        <iselse>
+                            <span class="no-img-placeholder"></span>
+                        </isif>
+                        <div class="card-link">
+                            <span class="d-none d-lg-block">${Resource.msg(servicePartsLink,'common',null)}</span>
+                            <span class="d-block d-lg-none">${category.name}</span>
+                        </div>
+                    </a>
+                </li>
+                <isif condition="${loopStatus.last}">
+                    <isif condition="${categoryPromo}">
+                        <li class="promo-tile">
+                            <iscontentasset aid="${categoryPromo}" />
+                        </li>
+                    </isif>
+                </isif>
+            <iselse/>
+                <li class="dropdown-item" role="menuitem">
+                    <a href="${category.url}" id="${category.id}" role="button" class="dropdown-link">${category.name}</a>
+                </li>
+            </isif>
+        </isif>
+    </isloop>
+    <li class="category-link">
+        <a href="${parentCat.url}" id="${parentCat.id}" role="button" class="dropdown-link">${Resource.msgf('navigation.seeall','common',null, parentCat.name)}</a>
+    </li>
+</ul>

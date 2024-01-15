@@ -1,0 +1,109 @@
+/* Bootstrap Typography Overrides */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.display-1,
+.display-2,
+.display-3 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+.h1 {
+    color: $primary;
+
+    @include media-breakpoint-down(md) {
+        font-size: $h1-mobile-font-size;
+    }
+}
+
+h2,
+.h2 {
+    color: $primary;
+
+    @include media-breakpoint-down(md) {
+        font-size: $h2-mobile-font-size;
+    }
+}
+
+h3,
+.h3 {
+    color: $primary;
+
+    @include media-breakpoint-down(md) {
+        font-size: $h3-mobile-font-size;
+    }
+}
+
+h4,
+.h4 {
+    color: $primary;
+
+    @include media-breakpoint-down(md) {
+        font-size: $h4-mobile-font-size;
+    }
+}
+
+.display-1 {
+    color: $white;
+    line-height: rem(50px);
+
+    @include media-breakpoint-down(md) {
+        font-size: $display1-mobile-size;
+        line-height: rem(40px);
+    }
+}
+
+.display-2 {
+    @include media-breakpoint-down(md) {
+        font-size: $display2-mobile-size;
+    }
+}
+
+// Used in "More From" content tiles
+.display-3 {
+    @include media-breakpoint-down(md) {
+        font-size: $display3-mobile-size;
+    }
+
+    @include media-breakpoint-only(lg) {
+        font-size: $display3-tablet-size;
+    }
+}
+
+#skip a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip a:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.d-none-qty,
+.d-none-shipment {
+    display: block !important;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

@@ -1,0 +1,9 @@
+<div class="line-item-name">
+    <span>${lineItem.productName}</span>
+    <isif condition="${lineItem.extendedName}">
+        <p class="extended-name <isif condition="${lineItem.productType === 'bundle'}">d-none invisible</isif>">${lineItem.extendedName}</p>
+    </isif>
+</div>
+<isif condition="${!miniCart}">
+    <p class="item-number <isif condition="${lineItem.productType === 'bundle'}">d-none invisible</isif>"><strong>${Resource.msg('label.itemnumber', 'cart', null)}:</strong> ${lineItem.id}</p>
+</isif>

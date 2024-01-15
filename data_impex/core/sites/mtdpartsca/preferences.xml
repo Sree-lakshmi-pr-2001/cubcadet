@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="SiteCurrencies">CAD</preference>
+            <preference preference-id="SiteCustomerList">mtdpartsca</preference>
+            <preference preference-id="SiteDefaultLocale">en_CA</preference>
+            <preference preference-id="SiteLibrary">mtdpartsca</preference>
+            <preference preference-id="SiteLocales">en_CA:fr_CA</preference>
+        </all-instances>
+        <development>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </development>
+        <staging>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </staging>
+        <production>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </production>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="chaseMerchantId">317664</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="mapAPI">AIzaSyDPVcBVePe3uOtYSbu-i9UaU1ET-wveUps</preference>
+        </development>
+        <staging>
+            <preference preference-id="chaseMerchantId">317664</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="mapAPI">AIzaSyDPVcBVePe3uOtYSbu-i9UaU1ET-wveUps</preference>
+        </staging>
+        <production/>
+    </custom-preferences>
+</preferences>
+

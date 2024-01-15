@@ -1,0 +1,120 @@
+@import "variables";
+@import "./variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~org_ma/utilities/typeUtils";
+
+.contact-dealer-modal {
+    .modal-dialog {
+        max-width: 860px;
+    }
+
+    .dealer-product {
+        display: flex;
+        max-width: 94%;
+        margin: 0 auto 30px;
+        border-bottom: $border2;
+
+        .dealer-product__img-wrap {
+            flex: 0 1 130px;
+            text-align: center;
+        }
+
+        .dealer-product__img {
+            max-width: 100%;
+        }
+
+        .dealer-product__info {
+            flex: 1 1 auto;
+            padding-left: 20px;
+        }
+
+        .dealer-product__info__extended-name {
+            @include media-breakpoint-up(md) {
+                font-size: rem(19px);
+            }
+        }
+    }
+
+    .contact-dealer-form-wrap {
+        margin: 0 auto 30px;
+
+        @include media-breakpoint-up(md) {
+            max-width: 90%;
+        }
+
+        .contact-dealer-form-head {
+            padding: 0 10px;
+            margin-bottom: 40px;
+            text-align: center;
+
+            .title {
+                @include media-breakpoint-up(md) {
+                    font-size: rem(36px);
+                }
+            }
+
+            .msg {
+                @include media-breakpoint-up(md) {
+                    font-size: rem(19px);
+                    font-size: $font-weight-bold;
+                }
+            }
+        }
+
+        .form-group-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+
+            .form-group {
+                flex: 1 0 100%;
+
+                @include media-breakpoint-up(md) {
+                    flex-basis: 50%;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .form-actions-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @include media-breakpoint-up(md) {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            .recaptcha-content,
+            .form-group-cta {
+                flex: 1 0 100%;
+                padding: 0 10px;
+
+                @include media-breakpoint-up(md) {
+                    flex-basis: auto;
+                }
+            }
+
+            .recaptcha-content {
+                margin-bottom: 20px;
+                text-align: center;
+
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+
+                .g-recaptcha {
+                    display: inline-block;
+                }
+            }
+
+            .form-group-cta {
+                max-width: 260px;
+            }
+        }
+    }
+}

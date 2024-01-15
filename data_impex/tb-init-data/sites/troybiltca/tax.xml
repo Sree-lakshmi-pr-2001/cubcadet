@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tax xmlns="http://www.demandware.com/xml/impex/tax/2007-02-14">
+    <tax-classes>
+        <tax-class class-id="standard" default="true">
+            <display-name>Standard</display-name>
+            <description/>
+        </tax-class>
+
+    </tax-classes>
+    <tax-jurisdictions>
+        <tax-jurisdiction jurisdiction-id="Canada">
+            <display-name>Saskatchewan</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Saskatchewan"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="alberta">
+            <display-name>Alberta</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Alberta"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="british-columbia">
+            <display-name>British Columbia</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="British Columbia"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="manitoba">
+            <display-name>Manitoba</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Manitoba"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="new-brunswick">
+            <display-name>New Brunswick</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="New Brunswick"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="newfoundland">
+            <display-name>Newfoundland &amp; Labrador</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="NL"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="northwest-territories">
+            <display-name>Northwest Territories</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Northwest Territories"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="nova-scotia">
+            <display-name>Nova Scotia</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Nova Scotia"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="nunavut">
+            <display-name>Nunavut</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Nunavut"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="ontario" default="true">
+            <display-name>Ontario</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Ontario"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="prince-edward-island">
+            <display-name>Prince Edward Island</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Prince Edward Island"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="quebec">
+            <display-name>Quebec</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Quebec"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+        <tax-jurisdiction jurisdiction-id="yukon">
+            <display-name>Yukon</display-name>
+            <address-mappings>
+                <address-mapping key1="Canada" key2="Yukon"/>
+            </address-mappings>
+        </tax-jurisdiction>
+
+    </tax-jurisdictions>
+    <tax-rates>
+        <tax-rate jurisdiction-id="yukon" class-id="standard">0.05</tax-rate>
+
+        <tax-rate jurisdiction-id="nunavut" class-id="standard">0.05</tax-rate>
+
+        <tax-rate jurisdiction-id="manitoba" class-id="standard">0.12</tax-rate>
+
+        <tax-rate jurisdiction-id="quebec" class-id="standard">0.14975</tax-rate>
+
+        <tax-rate jurisdiction-id="new-brunswick" class-id="standard">0.15</tax-rate>
+
+        <tax-rate jurisdiction-id="nova-scotia" class-id="standard">0.15</tax-rate>
+
+        <tax-rate jurisdiction-id="newfoundland" class-id="standard">0.15</tax-rate>
+
+        <tax-rate jurisdiction-id="alberta" class-id="standard">0.05</tax-rate>
+
+        <tax-rate jurisdiction-id="ontario" class-id="standard">0.13</tax-rate>
+
+        <tax-rate jurisdiction-id="british-columbia" class-id="standard">0.12</tax-rate>
+
+        <tax-rate jurisdiction-id="Canada" class-id="standard">0.11</tax-rate>
+
+        <tax-rate jurisdiction-id="northwest-territories" class-id="standard">0.05</tax-rate>
+
+        <tax-rate jurisdiction-id="prince-edward-island" class-id="standard">0.15</tax-rate>
+
+    </tax-rates>
+</tax>

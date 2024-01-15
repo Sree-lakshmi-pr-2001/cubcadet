@@ -1,0 +1,459 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/dealerHome.js');
+        assets.addCss('/css/dealerHomePage.css');
+    </isscript>
+
+    <isinclude template="/components/modules"/>
+
+    <isset name="dealer" value="${pdict.dealer}" scope="page"/>
+
+    <div class="dealer-home">
+
+        <div class="dealer-home-head">
+            <div class="dealer-container">
+                <div class="row">
+                    <div class="col-12 col-md-5 col-lg-6 col-xl-5 ml-auto">
+                        <isif condition="${!empty(dealer.custom.dealerYoutubeVideoId)}">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/${dealer.custom.dealerYoutubeVideoId}" allowfullscreen></iframe>
+                            </div>
+                        <iselse/>
+                            <div class="dealer-image-wrap">
+                                <isif condition="${!empty(dealer.custom.dealerImage)}">
+                                    <img src="${dealer.custom.dealerImage}" alt="${Resource.msg('dealer.home.dealerImage.alt', 'dealer', null)}">
+                                </isif>
+                            </div>
+                        </isif>
+                    </div>
+                    <div class="col-md-7 col-lg-6 col-xl-7 order-md-first">
+                        <div class="dealer-details-col">
+                            <isif condition="${dealer.custom.isEliteDealer}">
+                                <div class="elite-dealer-badge-wrap">
+                                    <isif condition="${dealer.custom.isEliteDealer}">
+                                        <div class="elite-dealer-badge">
+                                            <span>>>></span>
+                                            <p>${Resource.msg('dealer.home.cubCadetRecognizedEliteDealer', 'dealer', null)}</p>
+                                            <span><<<</span>
+                                        </div>
+                                    </isif>
+                                </div>
+                            </isif>
+                            <div class="dealer-details">
+                                <div class="row no-gutters dealer-details-attic">
+                                    <div class="col-auto dealer-details-logo-col">
+                                        <div class="dealer-details-logo-wrap">
+                                            <isif condition="${!empty(dealer.custom.dealer_specific_logo_url)}">
+                                                <img src="${dealer.custom.dealer_specific_logo_url}" alt="${Resource.msg('dealer.home.dealerLogo.alt', 'dealer', null)}">
+                                            <iselse/>
+                                                <img src="${dealer.custom.logoImage}" alt="${Resource.msg('dealer.home.dealerLogo.alt', 'dealer', null)}">
+                                            </isif>
+                                        </div>
+                                    </div>
+
+                                    <div class="col dealer-details-general-col">
+                                        <div class="dealer-details-general">
+                                            <isif condition="${dealer.name}">
+                                                <h1 class="dealer-details-name">
+                                                    <isprint value="${dealer.name}" />
+                                                </h1>
+                                            </isif>
+                                            <isif condition="${dealer.phone}">
+                                                <div class="dealer-details-phone">
+                                                    <isprint value="${dealer.phone}" />
+                                                </div>
+                                            </isif>
+                                            <div class="dealer-details-address d-none d-md-block">
+                                                <span>
+                                                    <isif condition="${dealer.address1}">
+                                                        <isprint value="${dealer.address1}" />,
+                                                    </isif>
+                                                    <isif condition="${dealer.city}">
+                                                        <isprint value="${dealer.city}" />,
+                                                    </isif>
+                                                    <isif condition="${dealer.stateCode}">
+                                                        <isprint value="${dealer.stateCode}" />
+                                                    </isif>
+                                                    <isif condition="${dealer.postalCode}">
+                                                        <isprint value="${dealer.postalCode}" />
+                                                    </isif>
+                                                </span>
+                                                <isif condition="${dealer.latitude && dealer.longitude}">
+                                                    <a href="https://maps.google.com/?daddr=${dealer.latitude},${dealer.longitude}"
+                                                       target="_blank"
+                                                       title="${Resource.msg('dealer.home.getDirections.title', 'dealer', null)}"
+                                                       aria-label="${Resource.msg('dealer.home.getDirections.title', 'dealer', null)}"
+                                                    >
+                                                        ${Resource.msg('dealer.home.getDirections', 'dealer', null)}
+                                                    </a>
+                                                </isif>
+                                            </div>
+                                            <isif condition="${!empty(dealer.custom.dealerWebsiteUrl)}">
+                                                <div class="dealer-details-website d-none d-md-block">
+                                                    <span>${Resource.msg('dealer.home.website', 'dealer', null)}:</span>
+                                                    <a href="${dealer.custom.dealerWebsiteUrl}"
+                                                       target="_blank"
+                                                       title="${Resource.msg('dealer.home.website.title', 'dealer', null)}"
+                                                       aria-label="${Resource.msg('dealer.home.website.title', 'dealer', null)}"
+                                                    >
+                                                        ${dealer.custom.dealerWebsiteUrl}
+                                                    </a>
+                                                </div>
+                                            </isif>
+                                            <isif condition="${!empty(dealer.custom.googleReviewsAve) && !empty(dealer.custom.googleReviewsTotal) && !empty(dealer.custom.googleReviewsUrl)}">
+                                                <div class="dealer-details-website-reviews d-none d-md-block">
+                                                    <span class="dealer-review-avg">${dealer.custom.googleReviewsAve}</span>
+                                                    <span class="dealer-review-star">${dealer.custom.googleReviewsAve}</span>
+                                                    <a class="dealer-website-link" href="${dealer.custom.googleReviewsUrl}"
+                                                    target="_blank"
+                                                    title="${Resource.msg('dealer.home.googlereviews.link', 'dealer', null)}"
+                                                    aria-label="${Resource.msg('dealer.home.googlereviews.link', 'dealer', null)}"
+                                                    >
+                                                        ${Resource.msgf('dealer.home.googlereviews.link', 'dealer', null, dealer.custom.googleReviewsTotal)}
+                                                    </a>
+                                                </div>
+                                            </isif>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-md-none">
+                                    <div class="col">
+                                        <div class="dealer-details-address">
+                                            <isif condition="${dealer.latitude && dealer.longitude}">
+                                                <a href="https://maps.google.com/?daddr=${dealer.latitude},${dealer.longitude}"
+                                                   target="_blank"
+                                                   title="${Resource.msg('dealer.home.getDirections.title', 'dealer', null)}"
+                                                   aria-label="${Resource.msg('dealer.home.getDirections.title', 'dealer', null)}"
+                                                >
+                                            </isif>
+                                                    <isif condition="${dealer.address1}">
+                                                        <isprint value="${dealer.address1}" />,
+                                                    </isif>
+                                                    <isif condition="${dealer.city}">
+                                                        <isprint value="${dealer.city}" />,
+                                                    </isif>
+                                                    <isif condition="${dealer.stateCode}">
+                                                        <isprint value="${dealer.stateCode}" />
+                                                    </isif>
+                                                    <isif condition="${dealer.postalCode}">
+                                                        <isprint value="${dealer.postalCode}" />
+                                                    </isif>
+                                            <isif condition="${dealer.latitude && dealer.longitude}">
+                                                </a>
+                                            </isif>
+                                        </div>
+                                        <isif condition="${!empty(dealer.custom.dealerWebsiteUrl)}">
+                                            <div class="dealer-details-website">
+                                                <span>${Resource.msg('dealer.home.website', 'dealer', null)}:</span>
+                                                <a href="${dealer.custom.dealerWebsiteUrl}"
+                                                   target="_blank"
+                                                   title="${Resource.msg('dealer.home.website.title', 'dealer', null)}"
+                                                   aria-label="${Resource.msg('dealer.home.website.title', 'dealer', null)}"
+                                                >
+                                                    ${dealer.custom.dealerWebsiteUrl}
+                                                </a>
+                                            </div>
+                                        </isif>
+                                        <isif condition="${!empty(dealer.custom.googleReviewsAve) && !empty(dealer.custom.googleReviewsTotal) && !empty(dealer.custom.googleReviewsUrl)}">
+                                            <div class="dealer-details-website-reviews">
+                                                <span class="dealer-review-avg">${dealer.custom.googleReviewsAve}</span>
+                                                <span class="dealer-review-star">${dealer.custom.googleReviewsAve}</span>
+                                                <a class="dealer-website-link" href="${dealer.custom.dealerWebsiteUrl}"
+                                                target="_blank"
+                                                title="${Resource.msg('dealer.home.googlereviews.link', 'dealer', null)}"
+                                                aria-label="${Resource.msg('dealer.home.googlereviews.link', 'dealer', null)}"
+                                                >
+                                                    ${Resource.msgf('dealer.home.googlereviews.link', 'dealer', null, dealer.custom.googleReviewsTotal)}
+                                                </a>
+                                            </div>
+                                        </isif>
+                                    </div>
+                                </div>
+                            </div>
+                            <isif condition="${Boolean(dealer.custom.instaLink) || Boolean(dealer.custom.twitterLink) || Boolean(dealer.custom.facebookLink) || Boolean(dealer.custom.youtubeLink)}">
+                                <div class="social-media-tab">
+                                    <div class="row no-gutters dealer-details-attic">
+                                        <div class="col-auto">
+                                            <span class="social-media-heading">${Resource.msgf('dealer.home.socialMedia.links', 'dealer', null)}</span>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="social-links">
+                                                <isif condition="${Boolean(dealer.custom.instaLink)}">
+                                                    <li><a class="social-icon instragram" title="Go to Instagram" href="${dealer.custom.instaLink}" target="_blank"></a></li>
+                                                </isif>
+                                                <isif condition="${Boolean(dealer.custom.twitterLink)}">
+                                                    <li><a class="social-icon twitter" title="Go to Twitter" href="${dealer.custom.twitterLink}" target="_blank"></a></li>
+                                                </isif>
+                                                <isif condition="${Boolean(dealer.custom.facebookLink)}">
+                                                    <li><a class="social-icon facebook" title="Go to Facebook" href="${dealer.custom.facebookLink}" target="_blank"></a></li>
+                                                </isif>
+                                                <isif condition="${Boolean(dealer.custom.youtubeLink)}">
+                                                    <li><a class="social-icon youtube" title="Go to YouTube" href="${dealer.custom.youtubeLink}" target="_blank"></a></li>
+                                                </isif>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </isif>
+                            <isif condition="${!empty(dealer.storeHours)}">
+                                <div class="dealer-hours">
+                                    <a class="dealer-hours-head collapsed"
+                                       href="#dealerHoursBody"
+                                       data-toggle="collapse"
+                                       aria-expanded="false"
+                                    >
+                                        <span>${Resource.msg('dealer.home.hours', 'dealer', null)}</span>
+                                        <i class="dealer-hours-toggle-icon"></i>
+                                    </a>
+                                    <div class="dealer-hours-body collapse" id="dealerHoursBody">
+                                        <isprint value="${dealer.storeHours}" encoding="off" />
+                                    </div>
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <isset name="activeTab" value="" scope="page" />
+        <div class="dealer-tabs">
+            <div class="dealer-tabs-head-container dealer-container">
+                <div class="dealer-tabs-head-wrap">
+                    <div class="dealer-tabs-head">
+                        <i class="dealer-tab-heading-active-bg"></i>
+
+                        <!-- @PRODUCTS -->
+                        <isif condition="${!empty(pdict.categories)}">
+                            <isif condition="${empty(activeTab)}">
+                                <isset name="activeTab" value="products" scope="page" />
+                            </isif>
+                            <a class="dealer-tab-heading ${activeTab === 'products' ? 'active' : ''}"
+                               data-tab-heading="products"
+                               aria-expanded="true"
+                               href="#"
+                            >
+                                <span class="dealer-tab-heading-copy">
+                                    ${Resource.msg('dealer.home.tab.heading.products', 'dealer', null)}
+                                </span>
+                            </a>
+                        </isif>
+
+                        <!-- @LEARN MORE -->
+                        <isif condition="${empty(activeTab)}">
+                            <isset name="activeTab" value="learn-more" scope="page" />
+                        </isif>
+                        <a class="dealer-tab-heading ${activeTab === 'learn-more' ? 'active' : ''}"
+                           data-tab-heading="learn-more"
+                           aria-expanded="false"
+                           href="#"
+                        >
+                            <span class="dealer-tab-heading-copy">
+                                ${Resource.msg('dealer.home.tab.heading.learnMore', 'dealer', null)}
+                            </span>
+                        </a>
+
+                        <!-- @SCHEDULE A TEST DRIVE -->
+                        <isif condition="${empty(activeTab)}">
+                            <isset name="activeTab" value="schedule-test-drive" scope="page" />
+                        </isif>
+                        <a class="dealer-tab-heading ${activeTab === 'schedule-test-drive' ? 'active' : ''}"
+                           data-tab-heading="schedule-test-drive"
+                           aria-expanded="false"
+                           href="#"
+                        >
+                            <span class="dealer-tab-heading-copy">
+                                ${Resource.msg('dealer.home.tab.heading.scheduleTestDrive', 'dealer', null)}
+                            </span>
+                        </a>
+
+                        <!-- @SEE PROMOTIONS -->
+                        <isif condition="${empty(activeTab)}">
+                            <isset name="activeTab" value="see-promotions" scope="page" />
+                        </isif>
+                        <a class="dealer-tab-heading ${activeTab === 'see-promotions' ? 'active' : ''}"
+                           data-tab-heading="see-promotions"
+                           aria-expanded="false"
+                           href="#"
+                        >
+                            <span class="dealer-tab-heading-copy">
+                                ${Resource.msg('dealer.home.tab.heading.seePromotions', 'dealer', null)}
+                            </span>
+                        </a>
+
+                        <!-- @CONTACT US -->
+                        <isif condition="${empty(activeTab)}">
+                            <isset name="activeTab" value="contact-us" scope="page" />
+                        </isif>
+                        <a class="dealer-tab-heading ${activeTab === 'contact-us' ? 'active' : ''}"
+                           data-tab-heading="contact-us"
+                           aria-expanded="false"
+                           href="#"
+                        >
+                            <span class="dealer-tab-heading-copy">
+                                ${Resource.msg('dealer.home.tab.heading.contactUs', 'dealer', null)}
+                            </span>
+                        </a>
+
+                        <!-- @NEWS -->
+                        <isif condition="${empty(activeTab)}">
+                            <isset name="activeTab" value="news" scope="page" />
+                        </isif>
+                        <a class="dealer-tab-heading ${activeTab === 'news' ? 'active' : ''}"
+                           data-tab-heading="news"
+                           aria-expanded="false"
+                           href="#"
+                        >
+                            <span class="dealer-tab-heading-copy">
+                                ${Resource.msg('dealer.home.tab.heading.news', 'dealer', null)}
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dealer-tabs-body">
+                <!-- @PRODUCTS -->
+                <isif condition="${!empty(pdict.categories)}">
+                    <a class="dealer-tab-heading dealer-tab-heading--mobile ${activeTab === 'products' ? 'active' : ''}"
+                       data-tab-heading="products"
+                       aria-expanded="true"
+                       href="#"
+                    >
+                        <span class="dealer-tab-heading-copy">
+                            ${Resource.msg('dealer.home.tab.heading.products', 'dealer', null)}
+                        </span>
+                        <i class="dealer-tab-heading-icon"></i>
+                    </a>
+                    <div class="dealer-tab-content ${activeTab === 'products' ? 'active' : ''}"
+                         data-tab-content="products"
+                    >
+                        <div class="dealer-products-container dealer-container">
+                            <h3 class="dealer-products-title">
+                                ${Resource.msg('dealer.home.products.title', 'dealer', null)}
+                            </h3>
+                            <isinclude template="/dealer/products"/>
+                        </div>
+                    </div>
+                </isif>
+
+                <!-- @LEARN MORE -->
+                <a class="dealer-tab-heading dealer-tab-heading--mobile ${activeTab === 'learn-more' ? 'active' : ''} "
+                   data-tab-heading="learn-more"
+                   aria-expanded="false"
+                   href="#"
+                >
+                    <span class="dealer-tab-heading-copy">
+                        ${Resource.msg('dealer.home.tab.heading.learnMore', 'dealer', null)}
+                    </span>
+                    <i class="dealer-tab-heading-icon"></i>
+                </a>
+                <div class="dealer-tab-content ${activeTab === 'learn-more' ? 'active' : ''}"
+                     data-tab-content="learn-more"
+                >
+                    <div class="dealer-container dealer-learn-more-container">
+                        <isprint value="${dealer.custom.learnMore}" encoding="off"/>
+                    </div>
+                </div>
+
+                <!-- @SCHEDULE A TEST DRIVE -->
+                <a class="dealer-tab-heading dealer-tab-heading--mobile ${activeTab === 'schedule-test-drive' ? 'active' : ''}"
+                   data-tab-heading="schedule-test-drive"
+                   aria-expanded="false"
+                   href="#"
+                >
+                    <span class="dealer-tab-heading-copy">
+                        ${Resource.msg('dealer.home.tab.heading.scheduleTestDrive', 'dealer', null)}
+                    </span>
+                    <i class="dealer-tab-heading-icon"></i>
+                </a>
+                <div class="dealer-tab-content ${activeTab === 'schedule-test-drive' ? 'active' : ''}"
+                     data-tab-content="schedule-test-drive"
+                >
+                    <div class="dealer-testdrive-container dealer-container">
+                        <isinclude template="/content/testdrivetab"/>
+                    </div>
+                </div>
+
+                <!-- @SEE PROMOTIONS -->
+                <a class="dealer-tab-heading dealer-tab-heading--mobile ${activeTab === 'see-promotions' ? 'active' : ''}"
+                   data-tab-heading="see-promotions"
+                   aria-expanded="false"
+                   href="#"
+                >
+                    <span class="dealer-tab-heading-copy">
+                        ${Resource.msg('dealer.home.tab.heading.seePromotions', 'dealer', null)}
+                    </span>
+                    <i class="dealer-tab-heading-icon"></i>
+                </a>
+                <div class="dealer-tab-content ${activeTab === 'see-promotions' ? 'active' : ''}"
+                     data-tab-content="see-promotions"
+                >
+                    <isslot id="dealer-home-see-promotions" description="Dealer home - See promotions tab" context="global" />
+                </div>
+
+                <!-- @CONTACT US -->
+                <a class="dealer-tab-heading dealer-tab-heading--mobile ${activeTab === 'contact-us' ? 'active' : ''}"
+                   data-tab-heading="contact-us"
+                   aria-expanded="false" href="#"
+                >
+                    <span class="dealer-tab-heading-copy">
+                        ${Resource.msg('dealer.home.tab.heading.contactUs', 'dealer', null)}
+                    </span>
+                    <i class="dealer-tab-heading-icon"></i>
+                </a>
+                <div class="dealer-tab-content ${activeTab === 'contact-us' ? 'active' : ''}"
+                     data-tab-content="contact-us"
+                >
+                    <div class="dealer-contactus-container dealer-container">
+                        <isinclude template="dealer/content/contactustab"/>
+                    </div>
+                </div>
+
+                <!-- @NEWS -->
+                <a class="dealer-tab-heading dealer-tab-heading--mobile ${activeTab === 'news' ? 'active' : ''} "
+                   data-tab-heading="news"
+                   aria-expanded="false"
+                   href="#"
+                >
+                    <span class="dealer-tab-heading-copy">
+                        ${Resource.msg('dealer.home.tab.heading.news', 'dealer', null)}
+                    </span>
+                    <i class="dealer-tab-heading-icon"></i>
+                </a>
+                <div class="dealer-tab-content ${activeTab === 'news' ? 'active' : ''}"
+                     data-tab-content="news"
+                >
+                    <div class="dealer-container">
+                        <div class="news-items-heading">
+                            ${Resource.msg('dealer.home.heading.news', 'dealer', null)}
+                        </div>
+                        <div class="news-item-cards container">
+                            <isloop items="${dealer.custom.newsAssetList}" var="newsAssetId">
+                                <div class="news-item-card">
+                                    <div class="news-item-card-inner">
+                                        <div class="news-item-card-body">
+                                            <iscontentasset aid="${newsAssetId}" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </isloop>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us -->
+        <isif condition="${!empty(dealer.custom.aboutUs)}">
+            <div class="dealer-aboutus">
+                <div class="dealer-aboutus-container dealer-container">
+                    <isprint value="${dealer.custom.aboutUs}" encoding="off"/>
+                </div>
+            </div>
+        </isif>
+
+    </div>
+
+</isdecorate>

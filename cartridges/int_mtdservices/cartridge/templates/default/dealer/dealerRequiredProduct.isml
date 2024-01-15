@@ -1,0 +1,13 @@
+<!--- TEMPLATENAME: dealerRequiredProduct.isml --->
+<isif condition="${'dealerRequiredProductsMsg' in pdict}">
+    <div class="container mt-3">
+        <div class="alert brand-warning">
+            <div class="font-bold">
+                <isprint value="${pdict.dealerRequiredProductsMsg}" encoding="off" />
+            </div>
+            <isloop items=${pdict.requiredDealerProductNames} var="productName">
+                <div class="alert-item">${productName}</div>
+            </isloop>
+        </div>
+    </div>
+</isif>

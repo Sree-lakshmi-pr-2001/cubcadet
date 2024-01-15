@@ -1,0 +1,19 @@
+<isinclude template="components/modules" />
+
+<isif condition="${pdict.name === null}">
+    <li class="icon-account user">
+        <a href="${URLUtils.https('Login-Show')}">
+            <span class="user-message">${Resource.msg('link.header.account', 'account', null)}</span>
+        </a>
+    </li>
+<iselse/>
+    <li class="icon-account user" tabindex="0">
+        <a href="javascript:void(0)">
+            <span class="user-message">${pdict.name}</span>
+        </a>
+        <div class="popover popover-bottom">
+            <a href="${URLUtils.https('Account-Show')}">${Resource.msg('link.header.myaccount', 'account', null)}</a>
+            <a href="${URLUtils.url('Login-Logout')}">${Resource.msg('link.header.logout', 'account', null)}</a>
+        </div>
+    </li>
+</isif>

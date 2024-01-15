@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="homepage-banners-spring-season-2020" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-home-dealer-delivery-or-pickup-V2"/>
+                <content-asset content-id="EW-Rotating-Content"/>
+                <content-asset content-id="home-hero-online-financing"/>
+                <content-asset content-id="hero-home-lawnual-report-v2"/>
+                <content-asset content-id="home-hero-ultima-ztx-new-product-launch"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="extended-warranty-serial-number" context="global" configuration-id="New Slot Configuration - 2021-09-17 17:12:01" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="EW-ECM-How-Find-Serial-Number"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+</slot-configurations>

@@ -1,0 +1,26 @@
+<isinclude template="/components/modules" />
+
+<isif condition="${slotcontent != null && slotcontent.content.length > 0}">
+
+    <div class="product-carousel-slot">
+
+        <isif condition="${slotcontent != null && slotcontent.getCalloutMsg()}">
+            <div class="carousel-title">
+                <isprint value="${slotcontent.getCalloutMsg()}" encoding="off"/>
+            </div>
+        </isif>
+
+        <div class="product-tile-caro row">
+            <isloop items="${slotcontent.content}" var="product" status="loopstate">
+                <isif condition="${product.availabilityModel.availability !== 0}">
+                    <isobject object="${product}" view="recommendation">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', false, 'swatches', true, 'showQuickView', false)}"/>
+                    </isobject>
+                </isif>
+            </isloop>
+
+        </div>
+
+    </div>
+
+</isif>

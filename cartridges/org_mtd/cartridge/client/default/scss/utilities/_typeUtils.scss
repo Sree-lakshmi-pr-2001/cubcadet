@@ -1,0 +1,48 @@
+//////////////////////
+// Type Utils - to allow typography includes in media $grid-breakpoints
+//////////////////////
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+            font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+            font-size: $max-font-size;
+        }
+    }
+}
+
+@mixin main-nav {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: $link-decoration;
+    }
+}
+
+@mixin type-oauth-links {
+    font-size: rem(12px);
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $link-color;
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    white-space: nowrap;
+}

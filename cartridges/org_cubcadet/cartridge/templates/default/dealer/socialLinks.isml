@@ -1,0 +1,21 @@
+<isif condition="${!empty(pdict.instagramUrl) || !empty(pdict.facebookUrl) || !empty(pdict.twitterUrl) || !empty(pdict.youtubeUrl)}">
+    <div class="dealer-aboutus-social">
+        <h5 class="dealer-aboutus-subheading">
+            ${Resource.msg('dealer.home.aboutUs.followUsOnSocial', 'dealer', null)}
+        </h5>
+        <ul class="dealer-aboutus-social-links">
+            <isif condition="${!empty(pdict.instagramUrl)}">
+                <li><a class="dealer-aboutus-social-link instragram" href="${pdict.instagramUrl}" target="_blank" title="Go to Instagram"></a></li>
+            </isif>
+            <isif condition="${!empty(pdict.facebookUrl)}">
+                <li><a class="dealer-aboutus-social-link facebook" href="${pdict.facebookUrl}" target="_blank" title="Go to Facebook"></a></li>
+            </isif>
+            <isif condition="${!empty(pdict.twitterUrl)}">
+                <li><a class="dealer-aboutus-social-link twitter" href="${pdict.twitterUrl}" target="_blank" title="Go to Twitter"></a></li>
+            </isif>
+            <isif condition="${!empty(pdict.youtubeUrl)}">
+                <li><a class="dealer-aboutus-social-link youtube" href="${pdict.youtubeUrl}" target="_blank" title="Go to YouTube"></a></li>
+            </isif>
+        </ul>
+    </div>
+</isif>

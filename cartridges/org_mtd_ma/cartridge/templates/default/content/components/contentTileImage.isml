@@ -1,0 +1,18 @@
+<isset name="isVideo" value="${asset.custom.video != null && !empty(asset.custom.video)}" scope="page"/>
+<isscript>
+    var getContentTileImageURLs = require('*/cartridge/scripts/helpers/contentTileHelpers').getContentTileImageURLs;
+
+    var videoClass = asset.custom.video ? 'video-with-icon' : '';
+    var assetURL = asset.hasOwnProperty('url') && asset.url !== null ? asset.url : URLUtils.url('Page-Show', 'cid', asset.ID);
+    var imageURLs = getContentTileImageURLs(asset);
+</isscript>
+<div class="content-tile-image">
+    <a class="content-tile-image-link ${videoClass}" href="${assetURL}" title="${asset.name}">
+        <picture>
+            <source media="(max-width: 575px)" srcset="${imageURLs.mobile}">
+            <source media="(min-width: 576px) and (max-width: 991px)" srcset="${imageURLs.tablet}">
+            <source media="(min-width: 992px)" srcset="${imageURLs.desktop}">
+            <img class="img-fluid" src="null" srcset="${imageURLs.mobile}" alt="${asset.name}" />
+        </picture>
+    </a>
+</div>

@@ -1,0 +1,25 @@
+<isif condition="${!pdict.productSearch.isCategorySearch}">
+    <h1 class="search-results-text <isif condition="${pdict.partfinderquery}">mt-0 mb-1</isif>">
+        <isif condition="${pdict.productSearch.productIds.length > 0}">
+            <isif condition="${pdict.partfinderquery}">
+                <span class="part-finder-title">
+                    ${Resource.msgf('label.parts', 'search', null, pdict.partfinderquery.name)}
+                </span>
+            <iselse>
+                <span>
+                    ${Resource.msgf('label.resultsfor', 'search', null, pdict.productSearch.count)}
+                </span>
+            </isif>
+        <iselse>
+            <span>
+                ${Resource.msg('label.noresultsfor', 'search', null)}
+            </span>
+        </isif>
+        <span class="search-keywords">
+            ${pdict.productSearch.searchKeywords ? pdict.productSearch.searchKeywords : ''}
+        </span>
+    </h1>
+</isif>
+<isif condition="${!pdict.productSearch.productIds.length}">
+    <isinclude template="search/noResultsProduct" />
+</isif>

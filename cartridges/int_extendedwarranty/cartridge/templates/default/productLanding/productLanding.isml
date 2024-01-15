@@ -1,0 +1,134 @@
+<isscript> var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+
+<isinclude template="components/modules" />
+
+<isscript>
+    var products = new dw.util.ArrayList();
+    products.add( pdict.product );
+    products.add( pdict.warranty );
+</isscript>
+
+<div class="product-quickview product-${product.productType} product-wrapper product-detail" data-pid="${product.id}" >
+
+    <isloop items="${products}" var="product" status="loopstate">
+        <div class="row product-wrapper">
+            <!-- Product Image -->
+            <div class="image-container col-2">
+                <isif condition="${product.isWarranty}">
+                    <img class="product-image" src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty-minicart.png')}">
+                    <a href="${URLUtils.url('Page-Show', 'cid', 'EW-Learn-More')}" class="btn btn-sm btn-primary text-nowrap learn-more">
+                        <span style="font-size:smaller;">${Resource.msg('button.warranty.learn.more', 'form', null)}</span>
+                    </a>
+                <iselse/>
+                    <img class="product-image" src="${product.images.quickview[0].url}" alt="${product.images.quickview[0].alt}" title="${product.images.quickview[0].title}">
+                </isif>
+            </div>
+
+            <!-- Product Name and Description -->
+            <div class="product-description col-8">
+                <div>
+                    <!-- Product Name -->
+                    <div class="h3">${product.isWarranty ? product.productName : "Added to Cart"}</div>
+                    <isif condition="${product.extendedName !== null}">
+                        <!-- Product Extended Name -->
+                        <div class="product-extended-name">
+                            ${product.extendedName}
+                        </div>
+                    </isif>
+                    <isif condition="${!product.isWarranty}">
+                        <div class="product-number ${product.isWholeGood ? 'invisible d-none' : ''}">
+                            <isinclude template="product/components/productNumber" />
+                        </div>
+                    </isif>
+                    <div>
+                      <isif condition="${product.isWarranty && !empty(product.raw.custom['years-of-coverage-text'])}">
+                        <b>${product.raw.custom['years-of-coverage-text']}</b>
+                      </isif>
+                      <isif condition="${product.isWarranty}">
+                        <isinclude template="product/components/description" />
+                      </isif>
+                   </div>
+                </div>
+            </div>
+            <!-- Product Price -->
+            <div class="col-2 d-flex justify-content-end">
+                <div>
+                    <!-- Prices -->
+                    <div class="prices">
+                        <isif condition="${!product.isWarranty}">
+                            <b>${Resource.msg('label.total.totalprice','cart',null)}</b>
+                        </isif>
+                        <isset name="price" value="${product.price}" scope="page" />
+                        <isinclude template="product/components/pricing/main" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row btn-container">
+            <div class="col-2">
+                <isif condition="${product.isWarranty}">
+                    <a href="${URLUtils.url('Page-Show', 'cid', 'EW-Learn-More')}" class=" learn-more btn btn-sm btn-primary text-nowrap">
+                        <span style="font-size:smaller;">${Resource.msg('button.warranty.learn.more', 'form', null)}</span>
+                    </a>
+                </isif>
+            </div>
+            <div class="col-10 add-to-cart-warranty container">
+                <isif condition="${product.isWarranty}">
+                    <button class="add-to-cart-warranty btn btn-secondary"
+                        data-pid="${pdict.warranty.id}"
+                        data-add-to-cart-url="${pdict.addToCartUrl}"
+                        data-parent-pid="${pdict.product.id}"
+                        data-parent-product-name="${pdict.product.productName}"
+                        data-redirect-url="${URLUtils.url('Cart-Show')}"
+                        data-gtmdata="${JSON.stringify(tagManager.getProductData(pdict.warranty.id))}"
+                        ${!pdict.warranty.readyToOrder || !pdict.warranty.available || !pdict.warranty.priceAvailability ? "disabled" : ""}>
+                            ${Resource.msg('button.warranty.addtocart', 'form', null)}
+                    </button>
+                </isif>
+            </div>
+        </div>    
+    </isloop>
+
+    <hr/>
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+            <div>  
+                <table id="estimatedTotal" class="table border-0">
+                    <tbody> 
+                        <tr>
+                            <td class="border-top p-0 align-middle">
+                                <div class="d-flex align-items-center mr-1"><span>${Resource.msg('warranty.estimated.total.title', 'form', null)}</span></div>
+                            </td>
+                            <td class="border-top p-0 align-middle">
+                                <!-- Product Price -->
+                                <div class="">
+                                    <isset name="price" value="${product.price}" scope="page" />
+                                    ${pdict.estimatedTotalPrice}
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                    <div class="row main-action-container">
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-secondary text-nowrap keep-shopping" data-dismiss="modal">
+                                ${Resource.msg('button.warranty.keep.shopping', 'form', null)}
+                            </button>
+                        </div>
+
+                        <div class="col">
+                            <a href="${URLUtils.url('Cart-Show')}" class="btn btn-block btn-secondary text-nowrap">
+                                ${Resource.msg('button.warranty.cart', 'form', null)}
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr/>
+
+    <isproductrec recommendationType="3" title="${Resource.msg('recommendation.modal.other.title', 'product', null)}" subtitle="${Resource.msg('recommendation.other.subtitle', 'product', null)}" />
+
+</div>

@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="root">
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </folder>
+
+    <content content-id="ope-emissions">
+        <display-name xml:lang="x-default">OPE Emissions page</display-name>
+        <description xml:lang="x-default">OPE Emissions chart</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container"&gt;&#13;
+&lt;div class="header"&gt;&#13;
+	&lt;h1&gt;CO&lt;sub&gt;2&lt;/sub&gt; Values for Type Approved Engines&lt;/h1&gt;&#13;
+	&lt;p class="hdr-desc"&gt;&#13;
+		The CO&lt;sub&gt;2&lt;/sub&gt; measurements listed below result from testing over a fixed test cycle under laboratory conditions an engine representative of the engine type and shall not imply or express any guarantee of the performance of a particular engine:&#13;
+	&lt;/p&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div class="main"&gt;&#13;
+	&lt;table&gt;&#13;
+		&lt;thead&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;th class="emission-header"&gt;Type-Approval&lt;/th&gt;&#13;
+				&lt;th class="emission-header"&gt;CO&lt;sub&gt;2&lt;/sub&gt; Value(g/kWh)&lt;/th&gt;&#13;
+				&lt;th class="emission-header"&gt;Test Cycle&lt;/th&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;/thead&gt;&#13;
+		&lt;tbody&gt;&#13;
+		&lt;!-- Row 1 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYA1/P*1020*00&lt;/td&gt;&#13;
+				&lt;td&gt;969.18&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 2 --&gt;    &#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYA1/P*1021*00&lt;/td&gt;&#13;
+				&lt;td&gt;828.09&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 3 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYA1/P*1024*00&lt;/td&gt;&#13;
+				&lt;td&gt;854.37&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		 &lt;!-- Row 4 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB1/P*1025*00&lt;/td&gt;&#13;
+				&lt;td&gt;753.67&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 5 --&gt;    &#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB1/P*1029*00&lt;/td&gt;&#13;
+				&lt;td&gt;738.72&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 6 --&gt;   &#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB1/P*1041*00&lt;/td&gt;&#13;
+				&lt;td&gt;739.72&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 7 --&gt;    &#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB1/P*1042*00&lt;/td&gt;&#13;
+				&lt;td&gt;779.16&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 8 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB2/P*1043*00&lt;/td&gt;&#13;
+				&lt;td&gt;828.71&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 9 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB1/P*1064*00&lt;/td&gt;&#13;
+				&lt;td&gt;722.21&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 10 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656SYB2/P*1073*00&lt;/td&gt;&#13;
+				&lt;td&gt;787.61&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 11 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2017/656TYB1/P*1074*00&lt;/td&gt;&#13;
+				&lt;td&gt;742.96&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 12 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e2*2016/1628*2016/1628SHB2/P*17294*00&lt;/td&gt;&#13;
+				&lt;td&gt;704.94&lt;/td&gt;&#13;
+				&lt;td&gt;G3&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 13 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2016/1628SYA1/P*1124*00&lt;/td&gt;&#13;
+				&lt;td&gt;875.06&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 14 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2016/1628SYA1/P*1130*00&lt;/td&gt;&#13;
+				&lt;td&gt;886.82&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 15 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2016/1628TYA1/P*1151*00&lt;/td&gt;&#13;
+				&lt;td&gt;863&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 16 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2016/1628TYB1/P*1152*00&lt;/td&gt;&#13;
+				&lt;td&gt;828&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 17 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2016/1628TYA1/P*1231*00&lt;/td&gt;&#13;
+				&lt;td&gt;809&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;!-- Row 18 --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;e9*2016/1628*2016/1628TYB1/P*1232*00&lt;/td&gt;&#13;
+				&lt;td&gt;872&lt;/td&gt;&#13;
+				&lt;td&gt;G1&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&#13;
+&lt;/div&gt;&#13;
+&lt;div class="footer"&gt;&#13;
+&#13;
+	&lt;div class="footer-main"&gt;&#13;
+		&lt;p&gt;Current as of January 03, 2020&lt;/p&gt;&#13;
+	&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;a id="ope-patents-button" href="$HttpsUrl('Home-Show')$"&gt;&lt;button&gt;OPE Patents&lt;/button&gt;&lt;/a&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-application-equipment">
+        <display-name xml:lang="x-default">OPE Patents - Application Equipment section</display-name>
+        <description xml:lang="x-default">Application equipment patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN application equipment section ("ope-patents-application-equipment" content asset) ---&gt;&#13;
+&lt;div id="application-equipment" name="application-equipment" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Application Equipment&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two pieces of application equipment" src="/images/application-equipment.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,419,106&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-autonomous-mower">
+        <display-name xml:lang="x-default">OPE Patents - Autonomous Mower section</display-name>
+        <description xml:lang="x-default">Robot mower patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN autonomous mower section ("ope-patents-autonomous-mower" content asset) ---&gt;&#13;
+&lt;div id="autonomous-mower" name="autonomous-mower" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Autonomous Mower&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two autonomous mowers" src="/images/autonomous-mower.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,731,295&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,349,187&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,829,891&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,157,334&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,212,880&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,281,922&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D758,455&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D760,649&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D760,806&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D776,054&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D776,169&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D781,349&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D792,198&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D794,089&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D795,299&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D795,300&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D797,530&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D799,555&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D821,444&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D821,454&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D822,061&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D822,062&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D822,063&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D822,068&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D826,985&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D848,488&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-battery-electric">
+        <display-name xml:lang="x-default">OPE Patents - Battery/Electric section</display-name>
+        <description xml:lang="x-default">Battery and electric-powered equipment patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN battery/electric section ("ope-patents-battery-electric" content asset) ---&gt;&#13;
+&lt;div id="battery-electric" name="battery-electric" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Battery / Electric&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="An electric string trimmer and an electric chainsaw" src="/images/battery-electric.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,109,625&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,152,328&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,743,513&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,992,308&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,001,694&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,076,873&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,136,254&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,220,166&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,595,943&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D513,574&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D545,157&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D547,630&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D560,456&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D566,505&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D569,055&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D582,224&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D582,225&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D582,735&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-blowers">
+        <display-name xml:lang="x-default">OPE Patents - Blowers section</display-name>
+        <description xml:lang="x-default">Leaf blower patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN blowers section ("ope-patents-blowers" content asset) ---&gt;&#13;
+&lt;div id="blowers" name="blowers" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Blowers&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two leaf blowers" src="/images/blowers.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,539,637&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,375,901&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D597,708&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-chainsaws">
+        <display-name xml:lang="x-default">OPE Patents - Chainsaws section</display-name>
+        <description xml:lang="x-default">Chainsaw patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN chainsaws section ("ope-patents-chainsaws" content asset) ---&gt;&#13;
+&lt;div id="chainsaws" name="chainsaws" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Chainsaws&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two chainsaws" src="/images/chainsaws.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,834,633&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-chipper-shredder-vacuum-logsplitter">
+        <display-name xml:lang="x-default">OPE Patents - Chipper Shredder Vacuum / Logsplitter section</display-name>
+        <description xml:lang="x-default">CSV and logsplitter patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN chipper shredder vac (csv) / logsplitters section ("ope-patents-chipper-shredder-vacuum-logsplitter" content asset) ---&gt;&#13;
+&lt;div id="chipper-shredder-vacuum-logsplitter" name="chipper-shredder-vacuum-logsplitter" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2" class="section-heading"&gt;&#13;
+					&lt;h2&gt;Chipper Shredder Vacuum / Logsplitter&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="A chipper shredder vacuum and a logsplitter" src="/images/chipper-shredder-vacuum-log-splitter.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,494,027&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,519,805&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,782,582&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;10,299,642&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-disclaimer">
+        <display-name xml:lang="x-default">OPE Patents - disclaimer</display-name>
+        <description xml:lang="x-default">Disclaimer on bottom of page</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN disclaimer ("ope-patents-disclaimer" content asset) ---&gt;&#13;
+&lt;div id="disclaimer" name="disclaimer" class="page"&gt;&#13;
+	&lt;p&gt;The foregoing list reflects only current patents held by the original equipment manufacturer of the products in question.&lt;/p&gt;&#13;
+	&lt;p&gt;The above list does not contain (and is not intended to be) an exhaustive list of patents applicable to the products identified, or to disclose any patents held by others.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-edgers-and-cultivators">
+        <display-name xml:lang="x-default">OPE Patents - Edgers and Cultivators section</display-name>
+        <description xml:lang="x-default">Edger and cultivator patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN edgers and cultivators section ("ope-patents-edgers-and-cultivators" content asset) ---&gt;&#13;
+&lt;div id="edgers-and-cultivators" name="edgers-and-cultivators" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Edgers and Cultivators&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="An edger and a cultivator" src="/images/edgers-and-cultivators.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,782,863&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,834,633&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,837,335&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,157,407&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-hand-tools">
+        <display-name xml:lang="x-default">OPE Patents - Hand Tools section</display-name>
+        <description xml:lang="x-default">Hand tools patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN hand tools section ("ope-patents-hand-tools" content asset) ---&gt;&#13;
+&lt;div id="hand-tools" name="hand-tools" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Hand Tools&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two hand tools" src="/images/hand-tools.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,351,447&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,820,444&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-header">
+        <display-name xml:lang="x-default">OPE Patents header</display-name>
+        <description xml:lang="x-default">Heading and machine category selection options</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN heading and navigation section ("ope-patents-header" content asset) * * * ---&gt;&#13;
+&lt;div id="top-page" name="top-page" class="page"&gt;&#13;
+	&lt;!--- Header --&gt;&#13;
+	&lt;table id="header-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;!-- Title and navigation --&gt;&#13;
+			&lt;tr style="border-bottom: thick solid"&gt;&#13;
+				&lt;td colspan="8"&gt;&#13;
+					&lt;h1 id="site-heading" class="patents"&gt;OPE PATENTS&lt;/h1&gt;&#13;
+					&lt;hr&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;!-- Machine category section links --&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#chipper-shredder-vacuum-logsplitter"&gt;CSV / LOGSPLITTER&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#mower"&gt;MOWER&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#rider"&gt;RIDER&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#snow-thrower"&gt;SNOW THROWER&lt;/a&gt;&lt;/td&gt;&#13;
+			&lt;/tr&gt;	&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#tiller"&gt;TILLER&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#utility-vehicle"&gt;UTILITY VEHICLE&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#zero-turn-rider"&gt;ZERO TURN RIDER&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#application-equipment"&gt;APPLICATION EQUIPMENT&lt;/a&gt;&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#trimmers"&gt;TRIMMERS&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#blowers"&gt;BLOWERS&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#chainsaws"&gt;CHAINSAWS&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#battery-electric"&gt;BATTERY / ELECTRIC&lt;/a&gt;&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#edgers-and-cultivators"&gt;EDGERS &amp; CULTIVATORS&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#autonomous-mower"&gt;AUTONOMOUS MOWER&lt;/a&gt;&lt;/td&gt;&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#specialty-turf"&gt;SPECIALTY TURF&lt;/a&gt;&lt;/td&gt;		&#13;
+				&lt;td&gt;&lt;a class="category-link" href="#hand-tools"&gt;HAND TOOLS&lt;/a&gt;&lt;/td&gt;						&#13;
+			&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+	&lt;!--- Link to OPE Emissions page ---&gt;&#13;
+	&lt;a id="ope-emissions-button" href="$HttpsUrl('Home-Emissions')$"&gt;&#13;
+		&lt;button&gt;&#13;
+			EMISSIONS INFORMATION&#13;
+		&lt;/button&gt;&#13;
+	&lt;/a&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-mower">
+        <display-name xml:lang="x-default">OPE Patents - Mower section</display-name>
+        <description xml:lang="x-default">Mower patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN mower section ("ope-patents-mower" content asset) ---&gt;&#13;
+&lt;div id="mower" name="mower" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Mower&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two push mowers" src="/images/mower.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,175,012&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,479,754&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,482,768&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;7,728,534&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;7,741,793&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;7,884,560&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;8,732,896&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,163,707&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,175,756&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,651,138&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,663,159&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,787,225&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,791,037&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,930,829&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;9,961,829&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;10,183,707&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;10,485,167&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;D581,951&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;D685,822&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;D727,361&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;D733,188&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;D756,417&lt;/p&gt; &#13;
+					&lt;p class="patent"&gt;D756,418&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-rider">
+        <display-name xml:lang="x-default">OPE Patents - Rider section</display-name>
+        <description xml:lang="x-default">Rider patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN rider section ("ope-patents-rider" content asset) ---&gt;&#13;
+&lt;div id="rider" name="rider" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Rider&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two riding mowers" src="/images/rider.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,437,458&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,523,796&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,798,939&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,891,448&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,011,458&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,474,841&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,661,795&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,307,697&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,326,446&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,338,942&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,656,788&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,738,311&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,815,494&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,872,438&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,123,479&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,257,976&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,299,431&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,362,730&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,368,491&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,433,480&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,512,213&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D719,981&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D777,220&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D816,445&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;	&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-section-template">
+        <display-name xml:lang="x-default">OPE Patents - ___ section</display-name>
+        <description xml:lang="x-default">___ patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+    </content>
+
+    <content content-id="ope-patents-snow-thrower">
+        <display-name xml:lang="x-default">OPE Patents - Snow Thrower section</display-name>
+        <description xml:lang="x-default">Snow thrower patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN snow section ("ope-patents-snow-thrower" content asset) ---&gt;&#13;
+&lt;div id="snow-thrower" name="snow-thrower" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Snow Thrower&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two snow throwers" src="/images/snow-thrower.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,844,172&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,266,388&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,365,989&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,605,396&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,663,911&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,982,405&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,087,592&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,179,983&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,208,443&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,407,856&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,428,477&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D705,271&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D705,272&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D705,820&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D737,335&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D782,391&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D784,917&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D785,558&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D792,332&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D792,333&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;	&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-specialty-turf">
+        <display-name xml:lang="x-default">OPE Patents - Specialty Turf section</display-name>
+        <description xml:lang="x-default">Specialty Turf product patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN specialty turf section ("ope-patents-specialty-turf" content asset) ---&gt;&#13;
+&lt;div id="specialty-turf" name="specialty-turf" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Specialty turf&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="A specialty turf mower" src="/images/specialty-turf.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,661,257&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,853,373&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,918,077&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,958,709&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,157,030&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,301,325&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,387,350&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,132,647&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D826,849&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D850,964&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-tiller">
+        <display-name xml:lang="x-default">OPE Patents - Tiller section</display-name>
+        <description xml:lang="x-default">Tiller patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN tiller section ("ope-patents-tiller" content asset) ---&gt;&#13;
+&lt;div id="tiller" name="tiller" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Tiller&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two tillers" src="/images/tiller.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,367,561&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,523,618&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,739,403&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,237,620&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,867,117&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,480,196&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,924,622&lt;/p&gt;	&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-trimmers">
+        <display-name xml:lang="x-default">OPE Patents - Trimmers section</display-name>
+        <description xml:lang="x-default">String trimmer patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN trimmers section ("ope-patents-trimmers" content asset) ---&gt;&#13;
+&lt;div id="trimmers" name="trimmers" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Trimmers&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two string trimmers" src="/images/trimmers.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,782,863&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,837,335&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,667,648&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,157,407&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,591,809&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,130,030&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,517,210&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D669,326&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D735,546&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D735,547&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D735,548&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-utility-vehicle">
+        <display-name xml:lang="x-default">OPE Patents - Utility Vehicles section</display-name>
+        <description xml:lang="x-default">UV patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN utility vehicle (UV) section ("ope-patents-utility-vehicle" content asset) ---&gt;&#13;
+&lt;div id="utility-vehicle" name="utility-vehicle" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Utility Vehicle&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two utility vehicles" src="/images/utility-vehicle.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,365,094&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,586,634&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,688,324&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,828,047&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,884,662&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,902,441&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,155,537&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,155,554&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,202,154&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,202,155&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,427,735&lt;/p&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="ope-patents-zero-turn-rider">
+        <display-name xml:lang="x-default">OPE Patents - Zero Turn Rider section</display-name>
+        <description xml:lang="x-default">ZT patents</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;!--- * * * BEGIN zero turn rider (zt) section ("ope-patents-zero-turn-rider" content asset) ---&gt;&#13;
+&lt;div id="zero-turn-rider" name="zero-turn-rider" class="page"&gt;&#13;
+	&lt;table class="section-table"&gt;&#13;
+		&lt;tbody&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td colspan="2"&gt;&#13;
+					&lt;h2&gt;Zero Turn Rider&lt;/h2&gt;&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&#13;
+				&lt;td class="img-td"&gt;&#13;
+					&lt;img alt="Two zero turn riding mowers" src="/images/zero-turn-rider.jpg?$staticlink$"&gt;&#13;
+				&lt;/td&gt;&#13;
+				&lt;td&gt;&#13;
+					&lt;p class="patent-heading"&gt;PATENT NUMBER&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,662,538&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;6,962,219&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,302,789&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,320,299&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,506,494&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,578,117&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,631,477&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,914,022&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;7,992,659&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,136,613&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,695,734&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,855,861&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,919,464&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,931,248&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,935,909&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;8,944,191&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,197,058&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,197,151&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,214,803&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,254,865&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,313,953&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,327,553&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,365,236&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,409,596&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,537,436&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;9,944,316&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;10,046,797&lt;/p&gt;&#13;
+					&lt;p class="patent"&gt;D590,844&lt;/p&gt;		&#13;
+				&lt;/td&gt;&#13;
+			&lt;/tr&gt;&#13;
+			&lt;tr&gt;&lt;td&gt;&lt;a href="#top-page"&gt;&lt;button&gt;Back to top&lt;/button&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#13;
+		&lt;/tbody&gt;&#13;
+	&lt;/table&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>

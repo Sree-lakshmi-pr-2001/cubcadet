@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site xmlns="http://www.demandware.com/xml/impex/site/2007-04-30" site-id="mtdparts">
+    <name>MTD Parts</name>
+    <currency>USD</currency>
+    <taxation>net</taxation>
+    <custom-cartridges>int_prop65:site_mtdparts:org_mtd:plugin_dis:plugin_productcompare:int_mtdservices:int_chase:int_googleFeed:int_googletags:int_orderstatus:int_ari:app_lyonscg_mfra:app_corrections:app_storefront_base:bc_job_components:int_marketing_cloud:int_handlerframework:app_demo:app_test</custom-cartridges>
+    <storefront-status>protected</storefront-status>
+    <storefront-password>mtd2019</storefront-password>
+</site>

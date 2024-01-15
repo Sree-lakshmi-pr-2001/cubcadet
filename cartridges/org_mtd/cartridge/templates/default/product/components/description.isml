@@ -1,0 +1,15 @@
+<isif condition="${product.shortDescription || product.longDescription}">
+    <div class="product-description">
+        <isif condition="${product.shortDescription}">
+            <div class="short-description">
+                <isprint value="${product.shortDescription}" encoding="off" />
+            </div>
+        </isif>
+
+        <isif condition="${product.longDescription}">
+            <div class="long-description">
+                <isprint value="${product.longDescription}" encoding="off" />
+            </div>
+        </isif>
+    </div>
+</isif>

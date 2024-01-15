@@ -1,0 +1,32 @@
+<div class="text-center">
+    <div class="pagination-steps mt-4 mb-3">
+        <div class="pagination-step step-1 done"></div>
+
+        <div class="pagination-step step-2 done"></div>
+
+        <div class="pagination-step step-3 active">3</div>
+    </div>
+    <h6>${dw.web.Resource.msg('dialog3.header', 'eligibilitycheck', null)}</h6>
+    <div class="serialnumber-wrapper">
+        <div class="serial-number">${pdict.productInfo.model}</div>
+        <div class="mb-1">${pdict.productInfo.itemDescription}</div>
+        <div class="mb-1">${dw.web.Resource.msg('dialog3.serialNumber', 'eligibilitycheck', null)} <b>${pdict.productInfo.serialNumber}</b></div>
+        <div class="mb-1">${dw.web.Resource.msg('dialog3.factoryNumber', 'eligibilitycheck', null)} <b>${pdict.productInfo.itemNumber}</b></div>
+        <div class="coverage-wrapp mb-1 text-uppercase"> <span class="done-mark"></span> <b>2-yr coverage</b></div>
+        <div class="modal-price"><b>${pdict.productInfo.warrantyPrice}</b></div>
+    </div>
+   </div>
+
+<div class="text-center">
+    <a id="addWarrantyToCart" class="btn btn-secondary" href="${URLUtils.url('ExtendedWarranty-AddToCart', 
+        'warrantyPid', pdict.productInfo.warrantyPid, 
+        'pid', pdict.productInfo.warrantyPid,
+        'model', pdict.productInfo.model, 
+        'itemDescription', pdict.productInfo.itemDescription, 
+        'serialNumber', pdict.productInfo.serialNumber, 
+        'ewAftermarketPurchaseDate', pdict.productInfo.ewAftermarketPurchaseDate,
+        'registered', pdict.productInfo.ewRegistered,
+        'ewPurchasedFrom', pdict.productInfo.ewPurchasedFrom,
+        'ewType', "EW_AFT",
+        'itemNumber', pdict.productInfo.itemNumber)}">${dw.web.Resource.msg('dialog3.button', 'eligibilitycheck', null)}</a>
+</div>

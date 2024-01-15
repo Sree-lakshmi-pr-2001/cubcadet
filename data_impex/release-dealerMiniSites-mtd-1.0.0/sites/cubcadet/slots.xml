@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+
+    <slot-configuration slot-id="dealer-home-see-promotions" context="global" configuration-id="New Slot Configuration - 2021-01-05 15:20:03" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="dealer-home-see-promotions"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="TestDriveSuccess" context="global" configuration-id="placeholderForMessage" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="alert alert-success text-center" role="alert"&gt;
+  Your message is successfully sent.
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="TestDriveFailed" context="global" configuration-id="placeholderForMessage" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="alert alert-danger text-center" role="alert"&gt;
+    Your message wasn't sent due to technical problem. Our team is working on it.
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ContactUsFailed" context="global" configuration-id="placeholderForMessage" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="alert alert-danger text-center" role="alert"&gt;
+    Your message wasn't sent due to technical problem. Our team is working on it.
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="ContactUsSuccess" context="global" configuration-id="placeholderForMessage" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="alert alert-success text-center" role="alert"&gt;
+  Your message is successfully sent.
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

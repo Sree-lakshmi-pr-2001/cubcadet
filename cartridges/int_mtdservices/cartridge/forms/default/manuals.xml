@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+    <field 
+        formid="modelnumber" 
+        label="label.input.model.number"
+        mandatory="true"
+        min-length="8"
+        max-length="255"
+        range-error="error.message.8_255characters"
+        type="string" />
+        <!-- TODO value-error -->
+
+    <field 
+        formid="serialnumber"
+        label="label.input.serial.number"
+        type="string"
+        mandatory="false"
+        min-length="8"
+        max-length="255"
+        range-error="error.message.8_255characters"/>
+        <!-- TODO value-error -->
+</form>

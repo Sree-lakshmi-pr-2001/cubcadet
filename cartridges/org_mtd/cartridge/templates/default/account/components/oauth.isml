@@ -1,0 +1,17 @@
+<isinclude template="components/modules" />
+
+<form action="" class="login-oauth" method="post" name="login-oauth-form">
+    <isset name="siteId" value="${dw.system.Site.current.ID}" scope="page" />
+    <div class="form-group">
+        <a href="${URLUtils.https('Login-OAuthLogin', 'oauthProvider', 'Google-' + siteId, 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}" class="oauth-google"
+           role="button">
+            ${Resource.msg('button.text.oauth.google', 'login', null)}
+        </a>
+    </div>
+    <div class="form-group">
+        <a href="${URLUtils.https('Login-OAuthLogin', 'oauthProvider', 'Facebook-' + siteId, 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}" class="oauth-facebook"
+           role="button">
+            ${Resource.msg('button.text.oauth.facebook', 'login', null)}
+        </a>
+    </div>
+</form>

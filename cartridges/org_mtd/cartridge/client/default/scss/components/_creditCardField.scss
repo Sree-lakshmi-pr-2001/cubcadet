@@ -1,0 +1,30 @@
+.card-number-wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 3px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 48px;
+        height: 30px;
+        top: 5px;
+    }
+
+    &[data-type="visa"]::after {
+        background-image: url('../../images/svg-icons/visa.svg');
+    }
+
+    &[data-type="mastercard"]::after {
+        background-image: url('../../images/svg-icons/master.svg');
+    }
+
+    &[data-type="amex"]::after {
+        background-image: url('../../images/svg-icons/amex.svg');
+    }
+
+    &[data-type="discover"]::after {
+        background-image: url('../../images/svg-icons/discover.svg');
+    }
+}

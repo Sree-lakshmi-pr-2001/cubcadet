@@ -1,0 +1,40 @@
+<isscript>
+    var bsHelper = require('org_mtd_ma/cartridge/scripts/utils/ButtonStateHelper'); 
+    var buttonStates = bsHelper.getStates(pdict.product.id);
+</isscript>
+
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="partlinkTab" value="${false}" scope="page" />
+<isif condition="${product.isWholeGood && !(isProductSet || isBundle)}">
+    <isset name="partlinkTab" value="${true}" scope="page" />
+</isif>
+<isif condition="${pdict.product.productType === 'variant' || pdict.product.productType === 'variationGroup'}">
+    <isset name="modelNo" value="${pdict.product.raw.masterProduct.ID}" scope="page" />
+<iselse/>
+    <isset name="modelNo" value="${pdict.product.id}" scope="page" />
+</isif>
+<isset name="pfname" value="${pdict.product.productName}" scope="page" />
+
+<div class="container row marginCustom" id="navbar">
+    <div class="nav-links">
+        <span class="pdp-product-name">${product.productName}</span>
+        <isif condition="${product.raw.custom['pdp-features'].length > 0}">
+            <a class="pdp-feature-link active" href="#feature-cards" data-scroll="feature-cards">${Resource.msg('feature.title', 'product', null)}</a>
+        </isif>
+        <isif condition="${product.specification && product.specification.length > 0}">
+            <a class="pdp-specs-link" href="#pdp-specs" data-scroll="pdp-specs">${Resource.msg('specs.title', 'product', null)}</a>
+        </isif>
+        <isif condition="${partlinkTab}">
+            <a class="pdp-parts-link" href="#pdp-parts-link" data-scroll="pdp-parts-link">${Resource.msg('parts.title', 'product', null)}</a>
+            <iscomment> <a class="pdp-parts-link" href="${URLUtils.url('Search-Show', 'q', modelNo, 'ispartfinder', true, 'pfname', pfname)}" target="_blank" aria-label="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('product.partlink.title', 'product', null))}" title="${Resource.msgf('opens.new.window', 'common', null, Resource.msg('product.partlink.title', 'product', null))}"><span>${Resource.msg('product.partlink.title', 'product', null)}</span></a> </iscomment>
+        </isif>
+        <isif condition="${pdict.bvDisplay.rr.enabled}">
+            <a class="pdp-reviews-link" href="#pdp-reviews" data-scroll="pdp-reviews">${Resource.msg('reviews.title', 'product', null)}</a>
+        </isif>
+        <isif condition="${!buttonStates.outOfStock && !buttonStates.unavailable && !pdict.licensedProduct}">
+            <div class="add-to-cart add-to-cart-container hidden-xs-down ">
+                <isinclude template="product/components/tileButtonState" />
+            </div>
+        </isif>
+    </div>
+</div>

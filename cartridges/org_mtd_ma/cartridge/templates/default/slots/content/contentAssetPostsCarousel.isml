@@ -1,0 +1,10 @@
+<isinclude template="/components/modules" />
+
+<isif condition="${slotcontent != null && slotcontent.content.length > 0}">
+    <isset name="assets" value="${slotcontent.content}" scope="pdict" />
+    <div class="kc-article row blog-tile-caro">
+        <isloop items="${pdict.assets}" var="asset" status="loopstatus" end="2">
+            <isinclude template="content/components/blogPostTile" />
+        </isloop>
+    </div>
+</isif>

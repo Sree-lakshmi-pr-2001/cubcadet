@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header clearfix">
+        <h4 class="pull-left">${Resource.msg('label.payment.savedpayments','account',null)}</h4>
+    </div>
+    <div class="card-body card-info-group">
+        <isif condition="${pdict.account.payment}">
+            <dl>
+                <dt>${Resource.msg('label.payment.creditcardtype','account',null)}:</dt>
+                <dd>
+                    <isif condition="${pdict.account.payment.creditCardType.toUpperCase() === 'MASTER'}">
+                        ${Resource.msg('msg.payment.type.credit.master', 'confirmation', null)}
+                    <iselse>
+                        ${pdict.account.payment.creditCardType}
+                    </isif>
+                </dd>
+            </dl>
+            <dl>
+                <dt>${Resource.msg('label.payment.creditcardnumber', 'account', null)}:</dt>
+                <dd>${pdict.formattedMaskedCard}</dd>
+            </dl>
+            <dl>
+                <dt>${Resource.msg('label.payment.expdate','account',null)}:</dt>
+                <isif condition="${String(pdict.account.payment.creditCardExpirationYear).length === 4}">
+                    <isset name="formattedYear" value="${String(pdict.account.payment.creditCardExpirationYear).substr(2)}" scope="page"/>
+                <iselse>
+                    <isset name="formattedYear" value="${pdict.account.payment.creditCardExpirationYear}" scope="page"/>
+                </isif>
+                <dd>${pdict.account.payment.creditCardExpirationMonth}/${formattedYear}</dd>
+            </dl>
+        <iselse>
+            ${Resource.msg('msg.no.saved.payments', 'payment', null)}
+        </isif>
+    </div>
+    <div class="card-footer">
+        <isif condition="${pdict.account.payment}">
+            <a href="${URLUtils.url('PaymentInstruments-List')}" class="btn btn-outline-secondary btn-account">${Resource.msg('link.seepayments','account',null)}</a>
+        </isif>
+    </div>
+</div>

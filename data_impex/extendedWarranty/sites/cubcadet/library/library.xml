@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+
+    <content content-id="EW-Contact">
+        <display-name xml:lang="x-default">EW Contact Info</display-name>
+        <description xml:lang="x-default">EW Contact Info</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Contact-Info​​">
+        <display-name xml:lang="x-default">EW Contact Info​
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Contact Info​</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-ECM-Count-Step1">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal Count of Step 1
+        </display-name>
+        <description xml:lang="x-default">EW Eligibility Check Modal Count of Step 1</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal Count of Step 1</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-ECM-Count-Step2">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal Count of Step 2
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal Count of Step 2</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-ECM-Count-Step3">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal Count of Step 3
+        </display-name>
+        <description xml:lang="x-default">EW Eligibility Check Modal Count of Step 3</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal Count of Step 3</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-ECM-How-Find-Serial-Number">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal How to Find Serial Number</display-name>
+        <description xml:lang="x-default">EW Eligibility Check Modal How to Find Serial Number</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="row"&gt;&#13;
+&lt;div class="col 6"&gt;&#13;
+&lt;img src='https://mtdproducts.secure.force.com/ProductRegistration/resource/1619086108000/CmsTemp/ProductRegistration/img/cub-cadet-US-model-plate.jpg' &gt;&#13;
+&lt;/div&gt;&#13;
+&lt;div class="col 6"&gt;&#13;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. &#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-End-use">
+        <display-name xml:lang="x-default">EW End Use</display-name>
+        <description xml:lang="x-default">EW End Use</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. &#13;&lt;div class=&quot;row&quot;&gt;&#13;   &lt;div class=&quot;col-12&quot;&gt;&#13;      &lt;h6 class=&quot;checkout-registration-continue&quot;&gt;&lt;input class=&quot;registration-continue&quot; id=&quot;registration-continue&quot; type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;Curabitur pharetra, mauris sit amet efficitur iaculis, tellus nisi molestie massa&quot;/&gt;&#13;&lt;label for=&quot;registration-continue&quot;&gt;Curabitur pharetra, mauris sit amet efficitur iaculis, tellus nisi molestie massa&lt;/label&gt;&#13;&lt;/h6&gt;&#13;   &lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-FAQ">
+        <display-name xml:lang="x-default">EW FAQ’s</display-name>
+        <description xml:lang="x-default">EW FAQ’s</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Imagery-Key Points">
+        <display-name xml:lang="x-default">EW Imagery and Key Points</display-name>
+        <description xml:lang="x-default">EW Imagery and Key Points</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Info-Intermediate-Page">
+        <display-name xml:lang="x-default">EW Info Intermediate Page</display-name>
+        <description xml:lang="x-default">EW Info Intermediate Page</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style type=&quot;text/css&quot;&gt;&#13;footer{margin-top: 0;}&#13;#ce-20{padding-left:0;padding-right:0;}&#13;small{&#13;font-size: 18px;&#13;    &#13;      position: relative;&#13;    top: -13px;&#13;}&#13;.footer {margin-top: 0;}&#13;      .cta-sec {&#13;    background: #efefef;&#13;}&#13;.container.content-asset-container {&#13;    margin-top:15px;&#13;    width:100%;&#13;    max-width: none;&#13;    padding: 0;&#13;    }&#13;    &#13;    .hero.slant-down.content-page-image  {display: none;}&#13;      .small-image-holder-pic.text-center img {max-width: 200px;}&#13;@media (max-width:1024px) {&#13;.mobile-hidden{display: none;}&#13;}&#13;.ffaqs {&#13;    padding: 2rem 1rem;&#13;    margin-bottom: 3rem;&#13;  }&#13;      &#13;  .ffaqs h3 {&#13;    text-align: center;&#13;  }&#13;  &#13;      .ffaqs dl, .ffaqs dt, .ffaqs dd {&#13;    margin: 0;&#13;    padding: 0;&#13;  }&#13;  &#13;      .ffaqs dl {&#13;    max-width: 640px;&#13;    margin: 0px auto;&#13;  }&#13;  &#13;      .ffaqs dt {&#13;    color: #000;&#13;    font-size: 1.25rem;&#13;    line-height: 1.5rem;&#13;    text-transform: none;&#13;    padding: 1rem 2rem 1rem 0;&#13;    border-bottom: 1px solid #d9d9d9;&#13;    position: relative;&#13;  }&#13;  &#13;      .ffaqs dt:hover,&#13;  .ffaqs dt.show {&#13;    cursor: pointer;&#13;    color: #979797;&#13;  }&#13;  &#13;      .ffaqs dt.show {&#13;    border-color: #fff;&#13;  }&#13;  &#13;      .ffaqs dt::after {&#13;    content: '';&#13;    position: absolute;&#13;    width: 32px;&#13;    height: 32px;&#13;    top: .75rem;&#13;    right: -.25rem;&#13;    background: url(https://d1dy019watpwba.cloudfront.net/images/financing/icon-plus.png) no-repeat center center;&#13;    background-size: 17px 17px;&#13;    transform: rotateZ(0deg);    &#13;    -webkit-animation: rotateback 300ms;&#13;       -moz-animation: rotateback 300ms;&#13;         -o-animation: rotateback 300ms;&#13;            animation: rotateback 300ms; &#13;  }&#13;  .ffaqs dt.show::after {&#13;    transform: rotateZ(45deg);    &#13;    -webkit-animation: rotate 300ms;&#13;       -moz-animation: rotate 300ms;&#13;         -o-animation: rotate 300ms;&#13;            animation: rotate 300ms;&#13;  }&#13;  .ffaqs dd {&#13;    padding: 0 1rem 1rem;&#13;    display: none;&#13;    opacity: 0;&#13;    font-size: 1rem;&#13;    line-height: 1.5rem;  &#13;    border-bottom: 1px solid #fff; &#13;  }&#13;  .ffaqs dd.show {&#13;    display: block;&#13;    opacity: 1; &#13;    border-bottom-color: #d9d9d9;        &#13;    -webkit-animation: fade 1000ms;&#13;       -moz-animation: fade 1000ms;&#13;         -o-animation: fade 1000ms;&#13;            animation: fade 1000ms;&#13;  }&#13;  .ffaqs dd * {&#13;    color: #000;&#13;  }&#13;  .ffaqs dd p {&#13;    line-height: 1.5rem;&#13;  }&#13;  .ffaqs dd p:last-child {&#13;    margin-bottom: 0;&#13;  }&#13;  @-webkit-keyframes fade {&#13;    from { opacity: 0; }&#13;    to { opacity: 1; }&#13;  }&#13;  @-moz-keyframes fade {&#13;    from { opacity: 0; }&#13;    to { opacity: 1; }&#13;  }&#13;  @-o-keyframes fade {&#13;    from { opacity: 0; }&#13;    to { opacity: 1; }&#13;  }&#13;  @keyframes fade {&#13;    from { opacity: 0; }&#13;    to { opacity: 1; }&#13;  }&#13;  @-webkit-keyframes rotate {&#13;    0%   { -webkit-transform: rotate(0deg); }&#13;    100% { -webkit-transform: rotate(45deg); }&#13;  }&#13;  @-moz-keyframes rotate {&#13;    0%   { -moz-transform: rotate(0deg); }&#13;    100% { -moz-transform: rotate(45deg); }&#13;  }&#13;  @keyframes rotate {&#13;    0%   { transform: rotate(0deg); }&#13;    100% { transform: rotate(45deg); }&#13;  }&#13;  @-webkit-keyframes rotateback {&#13;    0%   { -webkit-transform: rotate(45deg); }&#13;    100% { -webkit-transform: rotate(0deg); }&#13;  }&#13;  @-moz-keyframes rotateback {&#13;    0%   { -moz-transform: rotate(45deg); }&#13;    100% { -moz-transform: rotate(0deg); }&#13;  }&#13;  @keyframes rotateback {&#13;    0%   { transform: rotate(45deg); }&#13;    100% { transform: rotate(0deg); }&#13;  }&#13;@media (min-width: 58.75em) {&#13;.ffaqs dl {&#13;    max-width: 840px;&#13;}&#13;}&#13;@media (min-width:768px){&#13;.warrananty-page-items {&#13;    background: url(https://d1dy019watpwba.cloudfront.net/images/certified-engines/icon-yellow-check.png) no-repeat 0 9px;&#13;    padding-left: 36px;&#13;    background-size: 29px;&#13;}&#13;.center-element .small-image-holder-pic {margin-top: 43px;&#13;    margin-bottom: 81px;}&#13;}&#13;&lt;/style&gt;&#13;&lt;div&gt;&#13;&lt;div class=&quot;col-12 bg-secondary d-flex&quot;&gt;&#13;&lt;div class=&quot;container&quot;&gt;&#13;&lt;div class=&quot;row&quot;&gt;&#13;&lt;div class=&quot;col-sm-12 col-md-6 col-lg-4 text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty.png?$staticlink$&quot; title=&quot;&quot; width=&quot;310&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;col-md-6 col-lg-7 d-flex flex-wrap justify-content-center&quot;&gt;&#13;&lt;h2 class=&quot;page-title mt-2&quot;&gt;Cub Cadet&lt;small&gt;&amp;reg;&lt;/small&gt; Extended Warranty&lt;/h2&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentia&lt;/p&gt;&#13;&lt;div class=&quot;btn mb-3 text-center btn-primary&quot; id=&quot;enterSerialNumber&quot; target=&quot;_self&quot; title=&quot;Check Your Product Eligibility&quot; aria-label=&quot;Check Your Product Eligibility&quot;&gt;Check Your Product Eligibility&lt;/div&gt;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;container mt-4&quot;&gt;&#13;&lt;h2 class=&quot;text-center&quot;&gt;Why Purchase an Extended Warranty&lt;/h2&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Here are the benefits and features of the new extended warranty plan.&lt;/p&gt;&#13;&lt;div class=&quot;row&quot;&gt;&#13;&lt;div class=&quot;col-md-4&quot;&gt;&#13;&lt;div class=&quot;small-image-holder&quot;&gt;&#13;&lt;div class=&quot;small-image-holder-pic text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-page-1.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;small-image-holder-text&quot;&gt;&#13;&lt;h3 class=&quot;text-center&quot;&gt;Worry-Free Protection&lt;/h3&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;col-md-4 center-element&quot;&gt;&#13;&lt;div class=&quot;small-image-holder&quot;&gt;&#13;&lt;div class=&quot;small-image-holder-pic text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-page-2.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;small-image-holder-text&quot;&gt;&#13;&lt;h3 class=&quot;text-center&quot;&gt;Worry-Free Protection&lt;/h3&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;col-md-4&quot;&gt;&#13;&lt;div class=&quot;small-image-holder&quot;&gt;&#13;&lt;div class=&quot;small-image-holder-pic text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-page-3.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;small-image-holder-text&quot;&gt;&#13;&lt;h3 class=&quot;text-center&quot;&gt;Worry-Free Protection&lt;/h3&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;hr /&gt;&#13;&lt;div class=&quot;row mt-4 pt-4&quot;&gt;&#13;&lt;div class=&quot;col-6 mobile-hidden text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-4.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;col-12 col-md-6&quot;&gt;&#13;&lt;div class=&quot;warrananty-page-items&quot;&gt;&#13;&lt;h4&gt;Transferrable Warranty&lt;/h4&gt;&#13;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;warrananty-page-items&quot;&gt;&#13;&lt;h4&gt;Transferrable Warranty&lt;/h4&gt;&#13;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;warrananty-page-items&quot;&gt;&#13;&lt;h4&gt;Transferrable Warranty&lt;/h4&gt;&#13;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;container-fluid text-center cta-sec mt-4 pt-5 pb-5&quot;&gt;&#13;        &lt;h2&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;&#13;        &lt;a class=&quot;btn btn-secondary text-uppercase&quot; href=&quot;/cart&quot;&gt;Return to cart&lt;/a&gt;&#13;    &lt;/div&gt;&#13;&lt;div class=&quot;container-fluid&quot; id=&quot;ce-20&quot;&gt;&#13;&lt;section class=&quot;tab-intellipower show-tab&quot; id=&quot;tab-intellipower&quot;&gt;&#13;&lt;div class=&quot;ffaqs&quot;&gt;&#13;&lt;div class=&quot;row&quot;&gt;&#13;&lt;div class=&quot;col text-center&quot;&gt;&#13;&lt;h2&gt;IntelliPower FAQs&lt;/h2&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;dl&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;What is IntelliPower?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;This engine technology electronically controls engine speed to create consistent mowing performance for users that might be challenged to cut through thick, wet heavy grass by delivering more power from the engine to the blades resulting in a Signature Cut&amp;trade; every time.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;How does IntelliPower work?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;IntelliPower technology has various electronic inputs that measure engine speed and temperature, which allows an onboard computer to digitally control the throttle position to maintain engine speed without the operator noticing. This prevents the engine from bogging down in challenging conditions, improving performance in heavy, wet grass, while mulching, bagging, or side discharging.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;How does IntelliPower benefit me?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;A decrease in engine speed means a decrease in blade speed, which leads to an uneven cut, or the unit stalling out. When you engage IntelliPower, you are digitally maintaining your engine speed, giving you up to 20% more available power* that you can feel and hear.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;How do I know if my unit has electronic governing?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;Just look for IntelliPower, which is exclusive to Cub Cadet and featured on our snow blowers and walk behind/ride-on mowers.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;Where is the throttle cable?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;An engine with IntelliPower is controlled with an electronic speed selector that allows the user to pick any speed that they require. Say goodbye to physical choke and throttle cables.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;Does the IntelliPower feature require any maintenance?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;No. The IntelliPower feature is controlled by an onboard computer that requires no additional maintenance throughout the life of the engine. In fact, this feature requires less components than a standard mechanical governed engine.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;Do Cub Cadet IntelliPower engines accept E85?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;No. E85 is a blend of gasoline containing mostly ethanol (85% ethanol and 15% gasoline). Operating the engine with E15 or E85 fuel may result in damage to your engine&amp;rsquo;s carburetor.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;	&lt;dt class=&quot;question&quot;&gt;Do Cub Cadet IntelliPower engines accept diesel fuel?&lt;/dt&gt;&#13;	&lt;dd&gt;&#13;	&lt;p&gt;No. Use automotive gasoline (unleaded or low leaded to minimize combustion chamber deposits) with a minimum of 87 octane.&lt;/p&gt;&#13;	&lt;/dd&gt;&#13;&lt;/dl&gt;&#13;&lt;/div&gt;&#13;&lt;/section&gt;&#13;&lt;div class=&quot;container&quot;&gt;&#13;&lt;div class=&quot;col-12 text-center&quot;&gt;&lt;a class=&quot;btn btn-secondary text-uppercase text-uppercase&quot; href=&quot;/cart&quot;&gt;Return To cart&lt;/a&gt;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;bg-secondary warranty-bottom-block mt-4 pt-4 pb-4 &quot;&gt;&#13;&lt;div class=&quot;container text-center&quot;&gt;&#13;&lt;h3&gt;Still Have Extended Warranty Questions?&lt;/h3&gt;&#13;&lt;h5&gt;We're happy to help! Call a customer service specialist at 877-428-2349 8am-5pm EST&lt;/h5&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;script&gt;&#13;document.addEventListener('DOMContentLoaded', function() {&#13;  var $CE = document.getElementById('ce-20'),&#13;      questionClass = 'question',&#13;      showClass = 'show',&#13;      activeClass = 'active',&#13;      showTabClass = 'show-tab',&#13;      urlHash = location.hash || false,&#13;      state = {&#13;        selectedTab: 'nav-tab-intellipower',&#13;        selectedTabContent: 'tab-intellipower'&#13;      },&#13;      tabObject = {&#13;        tabintellipower: {&#13;          tab: &quot;nav-tab-intellipower&quot;,&#13;          content: &quot;tab-intellipower&quot;&#13;        },&#13;        tabefi: {&#13;          tab: &quot;nav-tab-efi&quot;,&#13;          content: &quot;tab-efi&quot;&#13;        }&#13;      };&#13;  var render = function(state) {&#13;    var $activeTab = $CE.getElementsByClassName(activeClass)[0];&#13;    $activeTab.classList.remove(activeClass);  &#13;    document.getElementById(state.selectedTab).classList.add(activeClass);&#13;    $CE.getElementsByClassName(showTabClass)[0].classList.remove(showTabClass);&#13;    document.getElementById(state.selectedTabContent).classList.add(showTabClass);  &#13;  }&#13;  if (urlHash) {&#13;    cleanHash = urlHash.replace('#', '').replace(/-/g, '');&#13;    var findSelected = Object.keys(tabObject).filter(function(key) {&#13;      return key.indexOf(cleanHash) !== -1&#13;    })&#13;    if (findSelected.length &gt; 0) {&#13;      var selectedTab = tabObject[findSelected];&#13;      state.selectedTab = selectedTab.tab;&#13;      state.selectedTabContent = selectedTab.content&#13;      render(state);&#13;    }&#13;  } &#13;  history.replaceState(state, '', '')&#13;  $CE.addEventListener('click', function(event) {&#13;    if (event.target.className === 's-tab') {&#13;      event.preventDefault();&#13;      var $activeTab = event.target.closest('ul').getElementsByClassName(activeClass)[0];&#13;      $activeTab.classList.remove(activeClass);&#13;      event.target.classList.add(activeClass);&#13;      var showTab = event.target.getAttribute('data-show-tab');&#13;      $CE.getElementsByClassName(showTabClass)[0].classList.remove(showTabClass);&#13;      document.getElementById(showTab).classList.add(showTabClass);&#13;      state.selectedTab = event.target.getAttribute('id');&#13;      state.selectedTabContent = showTab;&#13;      history.pushState(state, '', event.target.href);&#13;    }&#13;    if (event.target.classList.contains(questionClass)) {&#13;      var $question = event.target;&#13;      var $answer = event.target.nextElementSibling;&#13;      if ($question.classList.contains(showClass)) {&#13;        $question.classList.remove(showClass);&#13;        $answer.classList.remove(showClass);&#13;      } else {&#13;        $question.classList.add(showClass);&#13;        $answer.classList.add(showClass);&#13;      }&#13;    }&#13;  })&#13;  window.onpopstate = function(event) {&#13;    if (event.state) {&#13;      render(event.state)&#13;    }&#13;  }&#13;});&#13;&lt;/script&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Info-Intermediate-Page​​">
+        <display-name xml:lang="x-default">EW Info Intermediate Page
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">
+                &lt;div&gt;&#13;&lt;div class=&quot;col-12 bg-secondary d-flex&quot;&gt;&#13;&lt;div class=&quot;container&quot;&gt;&#13;&lt;div class=&quot;row&quot;&gt;&#13;&lt;div class=&quot;col-sm-12 col-md-6 col-lg-4 text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty.png?$staticlink$&quot; title=&quot;&quot; width=&quot;310&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;col-md-6 col-lg-7 d-flex flex-wrap justify-content-center&quot;&gt;&#13;&lt;h2 class=&quot;page-title mt-2&quot;&gt;Cub Cadet&lt;small&gt;&amp;reg;&lt;/small&gt; Extended Warranty&lt;/h2&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentia&lt;/p&gt;&#13;&lt;a class=&quot;btn btn-primary mb-2&quot; href=&quot;$url('Cart-Show')$&quot;&gt;Return to cart&lt;/a&gt;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;container mt-4&quot;&gt;&#13;&lt;h2 class=&quot;text-center&quot;&gt;Why Purchase an Extended Warranty&lt;/h2&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Here are the benefits and features of the new extended warranty plan.&lt;/p&gt;&#13;&lt;div class=&quot;row&quot;&gt;&#13;&lt;div class=&quot;col-md-4&quot;&gt;&#13;&lt;div class=&quot;small-image-holder&quot;&gt;&#13;&lt;div class=&quot;small-image-holder-pic text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-page-1.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;small-image-holder-text&quot;&gt;&#13;&lt;h3 class=&quot;text-center&quot;&gt;Worry-Free Protection&lt;/h3&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;col-md-4 center-element&quot;&gt;&#13;&lt;div class=&quot;small-image-holder&quot;&gt;&#13;&lt;div class=&quot;small-image-holder-pic text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-page-2.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;small-image-holder-text&quot;&gt;&#13;&lt;h3 class=&quot;text-center&quot;&gt;Worry-Free Protection&lt;/h3&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;col-md-4&quot;&gt;&#13;&lt;div class=&quot;small-image-holder&quot;&gt;&#13;&lt;div class=&quot;small-image-holder-pic text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-page-3.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;small-image-holder-text&quot;&gt;&#13;&lt;h3 class=&quot;text-center&quot;&gt;Worry-Free Protection&lt;/h3&gt;&#13;&lt;p class=&quot;text-center&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;hr /&gt;&#13;&lt;div class=&quot;row mt-4 pt-4&quot;&gt;&#13;&lt;div class=&quot;col-6 mobile-hidden text-center&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;extended-warranty-4.png?$staticlink$&quot; title=&quot;&quot; /&gt;&lt;/div&gt;&#13;&lt;div class=&quot;col-12 col-md-6&quot;&gt;&#13;&lt;div class=&quot;warrananty-page-items&quot;&gt;&#13;&lt;h4&gt;Transferrable Warranty&lt;/h4&gt;&#13;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;warrananty-page-items&quot;&gt;&#13;&lt;h4&gt;Transferrable Warranty&lt;/h4&gt;&#13;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;warrananty-page-items&quot;&gt;&#13;&lt;h4&gt;Transferrable Warranty&lt;/h4&gt;&#13;&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters&lt;/p&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;container-fluid text-center cta-sec mt-4 pt-5 pb-5&quot;&gt;&#13;        &lt;h2&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;&#13;        &lt;a class=&quot;btn btn-secondary text-uppercase&quot; href=&quot;$url('Cart-Show')$&quot;&gt;Return to cart&lt;/a&gt;&#13;    &lt;/div&gt;&#13;&lt;div class=&quot;container-fluid&quot; id=&quot;ce-20&quot;&gt;&#13;&lt;section class=&quot;tab-intellipower show-tab&quot; id=&quot;tab-intellipower&quot;&gt;&#13;&lt;div class=&quot;ffaqs&quot;&gt;&#13;&lt;div class=&quot;row&quot;&gt;&#13;&lt;div class=&quot;col text-center&quot;&gt;&#13;&lt;h2&gt;IntelliPower FAQs&lt;/h2&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;dl&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;What is IntelliPower?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;This engine technology electronically controls engine speed to create consistent mowing performance for users that might be challenged to cut through thick, wet heavy grass by delivering more power from the engine to the blades resulting in a Signature Cut&amp;trade; every time.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;How does IntelliPower work?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;IntelliPower technology has various electronic inputs that measure engine speed and temperature, which allows an onboard computer to digitally control the throttle position to maintain engine speed without the operator noticing. This prevents the engine from bogging down in challenging conditions, improving performance in heavy, wet grass, while mulching, bagging, or side discharging.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;How does IntelliPower benefit me?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;A decrease in engine speed means a decrease in blade speed, which leads to an uneven cut, or the unit stalling out. When you engage IntelliPower, you are digitally maintaining your engine speed, giving you up to 20% more available power* that you can feel and hear.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;How do I know if my unit has electronic governing?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;Just look for IntelliPower, which is exclusive to Cub Cadet and featured on our snow blowers and walk behind/ride-on mowers.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;Where is the throttle cable?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;An engine with IntelliPower is controlled with an electronic speed selector that allows the user to pick any speed that they require. Say goodbye to physical choke and throttle cables.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;Does the IntelliPower feature require any maintenance?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;No. The IntelliPower feature is controlled by an onboard computer that requires no additional maintenance throughout the life of the engine. In fact, this feature requires less components than a standard mechanical governed engine.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;Do Cub Cadet IntelliPower engines accept E85?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;No. E85 is a blend of gasoline containing mostly ethanol (85% ethanol and 15% gasoline). Operating the engine with E15 or E85 fuel may result in damage to your engine&amp;rsquo;s carburetor.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;    &lt;dt class=&quot;question&quot;&gt;Do Cub Cadet IntelliPower engines accept diesel fuel?&lt;/dt&gt;&#13;    &lt;dd&gt;&#13;    &lt;p&gt;No. Use automotive gasoline (unleaded or low leaded to minimize combustion chamber deposits) with a minimum of 87 octane.&lt;/p&gt;&#13;    &lt;/dd&gt;&#13;&lt;/dl&gt;&#13;&lt;/div&gt;&#13;&lt;/section&gt;&#13;&lt;div class=&quot;container&quot;&gt;&#13;&lt;div class=&quot;col-12 text-center&quot;&gt;&lt;button class=&quot;btn btn-secondary text-uppercase text-uppercase&quot; href=&quot;$url('Cart-Show')$&quot;&gt;Return To cart&lt;/button&gt;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;bg-secondary warranty-bottom-block mt-4 pt-4 pb-4 &quot;&gt;&#13;&lt;div class=&quot;container text-center&quot;&gt;&#13;&lt;h3&gt;Still Have Extended Warranty Questions?&lt;/h3&gt;&#13;&lt;h5&gt;We're happy to help! Call a customer service specialist at 877-428-2349 8am-5pm EST&lt;/h5&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;
+            </custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Learn-More">
+        <display-name xml:lang="x-default">EW Learn More</display-name>
+        <description xml:lang="x-default">EW Learn More</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Overview">
+        <display-name xml:lang="x-default">EW Overview</display-name>
+        <description xml:lang="x-default">EW Overview</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+           <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style&gt;&#13;.ew-info-learn-more {&#13;span {display:block;padding: 5px;}&#13;text-decoration: none;&#13;}&#13;&lt;/style&gt;&#13;&lt;a class=&quot;ew-info-learn-more&quot; href=&quot;/EW-Info-Intermediate-Page.html&quot;&gt;&#13;&lt;img alt=&quot;&quot; src=&quot;CC_ExtWarranty_Shield_Logo318x180.jpg?$staticlink$&quot; title=&quot;&quot; /&gt;&#13;&lt;span&gt;Learn More&lt;/span&gt;&#13;&lt;/a&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Rotating-Content">
+        <display-name xml:lang="x-default">Rotating Content Block for EW</display-name>
+        <description xml:lang="x-default">Rotating Content Block for EW</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="hero"&gt;&#13;
+	&lt;div class="container-fluid"&gt;&#13;
+		&lt;div class="row"&gt;&#13;
+			&lt;div class="col d-flex col-12 col-lg-8 order-lg-2 order-1"&gt;&#13;
+				&lt;picture&gt;&#13;
+					&lt;source data-type="desktopimage" media="(min-width: 1025px)" srcset="images/homepage/Home_Hero_MyDealerDirect_desktop_1015x630_v2.jpg?$staticlink$" /&gt;&#13;
+					&lt;source data-type="tabletimage" media="(min-width: 768px)" srcset="images/homepage/Home_Hero_MyDealerDirect_mobile_805x540_v2.jpg?$staticlink$" /&gt;&#13;
+					&lt;source data-type="mobileimage" media="(max-width: 767px)" srcset="images/homepage/Home_Hero_MyDealerDirect_mobile_805x540_v2.jpg?$staticlink$" /&gt;&#13;
+					&lt;img alt="man shaking hands with salesman in front of store building" class="img-fluid lazyload" data-type="defaultimage" data-src="images/homepage/Home_Hero_MyDealerDirect_desktop_1015x630_v2.jpg?$staticlink$" /&gt;&#13;
+				&lt;/picture&gt;&#13;
+			&lt;/div&gt;&#13;
+			&lt;!-- text block --&gt;&#13;
+			&lt;div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1"&gt;&#13;
+				&lt;div class="bg-secondary text-primary"&gt;&#13;
+					&lt;div class="intro-block d-none d-lg-block"&gt;&#13;
+						&lt;span class="intro1 label-1"&gt;&lt;/span&gt;&#13;
+						&lt;span class="intro2 label-1 text-primary text-capitalize"&gt;DEALER DELIVERY OR PICK-UP&lt;/span&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="display-1 text-primary"&gt;Extended Warranty&lt;/div&gt;&#13;
+					&lt;div class="p text-primary"&gt;&#13;
+						&lt;div&gt;Our extended warranty adds another two years of coverage after the original factory warranty expires-keeping you covered longer so you can spend more time enjoying your yard&lt;/div&gt;&#13;
+					&lt;/div&gt;&#13;
+					&lt;div class="copy-block"&gt;&amp;nbsp;&lt;/div&gt;&#13;
+&lt;a href="$url('Page-Show','cid','EW-Info-Intermediate-Page')$" class="btn btn-primary" id="enterSerialNumber" target="_self" title="Find Your Warranty Plan" aria-label="Find Your Warranty Plan"&gt;Find Your Warranty Plan&lt;/a&gt;&#13;
+&lt;!-- href="$url('ExtendedWarranty-EnterSerialNumber')$"  --&gt;&#13;
+				&lt;/div&gt;&#13;
+			&lt;/div&gt;&#13;
+		&lt;/div&gt;&#13;
+	&lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW-Why-Purchase">
+        <display-name xml:lang="x-default">EW Why Purchase</display-name>
+        <description xml:lang="x-default">EW Why Purchase</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis ligula non mi faucibus facilisis. Vestibulum a sem sed ligula faucibus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et tellus et urna rutrum rutrum vel ultrices lacus. </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW_ELIG_ERROR">
+        <display-name xml:lang="x-default">EW Eligible Error</display-name>
+        <description xml:lang="x-default">Technical Error</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligible Error
+                EW_ELIG_AFTER_MARKET_DIRECT_TO_ERROR
+
+                EW_ELIG_AFTER_MARKET_SERIAL_NUMBER_NOT_FOUND
+
+                EW_ELIG_AFTER_MARKET_CANNOT_DETERMINE_ELIG
+
+                EW_ELIG_AFTER_MARKET_REASON_CODE_NOT_DEFINED</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW_ENTITLEMENT_ALREADY_EXISTS">
+        <display-name xml:lang="x-default">Serial number found</display-name>
+        <description xml:lang="x-default">Serial number found; EW entitlement already exists</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW entitlement already exists</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+    <content content-id="EW_NOT_ELIGIBLE">
+        <display-name xml:lang="x-default">EW Not Eligible Error</display-name>
+        <description xml:lang="x-default">Serial number found; EW not offered for model</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Not Eligible Error
+                EW_ELIG_AFTER_MARKET_EW_NOT_OFFERED_FOR_FACTORY_MODEL
+
+                EW_ELIG_AFTER_MARKET_FACTORY_MODEL_TOO_OLD</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="ew-assets"/>
+        </folder-links>
+    </content>
+
+</library>

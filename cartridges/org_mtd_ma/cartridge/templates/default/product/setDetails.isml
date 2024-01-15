@@ -1,0 +1,66 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/productDetail.js');
+        assets.addCss('/css/product/detail.css');
+    </isscript>
+
+    <iscomment>
+        It is necessary to set both "set" and "product" to pdict.product here as the downstream.
+    </iscomment>
+
+    <isset name="product" value="${pdict.product}" scope="page" />
+    <isset name="productCopy" value="${pdict.product}" scope="page" />
+    <isset name="productSetCopy" value="${pdict.product}" scope="page" />
+    <isset name="isBonusProduct" value="${false}" scope="page" />
+    <isset name="isBundle" value="${false}" scope="page" />
+    <isset name="isBundleItem" value="${false}" scope="page" />
+    <isset name="isProductSet" value="${true}" scope="page" />
+    <isset name="isQuickView" value="${false}" scope="page" />
+    <isobject object="${product.raw}" view="detail" />
+
+    <div class="container-fluid product-detail product-set-detail" data-pid="${product.id}">
+        <div class="container no-container-gutters-lg-down">
+            <div class="row">
+                <div class="col-12">
+                    <!---Breadcrumbs--->
+                    <div class="product-breadcrumb">
+                        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+                    </div>
+                    <!-- Product Name -->
+                    <div class="row">
+                        <div class="col-sm-12 mt-4">
+                            <h1 class="product-name">${product.productName}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row mb-3">
+                 <div class="col-12">
+                     <h5>${Resource.msg('label.set.contains', 'product', null)}</h5>
+                 </div>
+            </div>
+        </div>
+        <isinclude template="product/components/setItems" />
+        <div class="container no-container-gutters-lg-down">
+            <div class="d-none d-sm-block">
+                <hr>
+            </div>
+            <div class="col-12 col-sm-6 offset-sm-6 bundle-footer">
+                <!-- Quantity -->
+                <div class="col-12 prices-add-to-cart-actions">
+                    <isset name="product" value="${productSetCopy}" scope="page" />
+                    <!-- Prices -->
+                    <isinclude template="product/components/pricing/setPrice" />
+                    <!-- Cart and [Optionally] Apple Pay -->
+                    <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                        <isinclude template="product/components/addToCartGlobal" />
+                    </isif>
+                </div>
+            </div>
+        </div>
+    </div>
+    <isinclude url="${URLUtils.url('Monetate-GetProductID', 'pid', pdict.product.id, 'type', 'variant')}" />
+</isdecorate>

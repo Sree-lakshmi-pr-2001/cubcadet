@@ -1,0 +1,55 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "account";
+@import "../utilities/delete-card-button";
+@import "../utilities/functions";
+@import "../utilities/layout";
+
+.card-header {
+    h4 {
+        width: 85%;
+        margin: 0;
+
+        @include media-breakpoint-only(xs) {
+            font-size: $font-size-base;
+        }
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+        }
+    }
+}
+
+.back-to-account-link {
+    margin-bottom: rem(10px);
+
+    @include media-breakpoint-up(md) {
+        position: relative;
+        top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.card-body-positioning {
+    position: relative;
+}
+
+.make-default-payment {
+    margin-bottom: 1rem;
+}
+
+.masked-card-number {
+    margin-top: 1rem;
+}
+
+.payment-to-remove {
+    font-weight: bold;
+}
+
+.remove-btn {
+    @include delete-card-button();
+
+    width: 3rem;
+    font-size: 0;
+}

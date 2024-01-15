@@ -1,0 +1,26 @@
+<isinclude template="components/modules" />
+
+<div class="bonus-quantity">
+    <div class="quantity-form">
+        <label class="d-none" for="quantity">${Resource.msg('label.quantity', 'common', null)}</label>
+
+        <iscomment>Group input and svg into label so they are associate together</iscomment>
+        <label class="minus">
+            <input type="button" name="minus" value="-"/>
+            <issvg icon="icon-qty-minus"/>
+        </label>
+
+        <input id="quantity" type="text" name="quantity-input" class="quantity-input quantity-select form-control"
+            value="${product.selectedQuantity.toFixed()}"
+            min="${product.minOrderQuantity.toFixed()}"
+            max="${product.maxOrderQuantity.toFixed()}"
+            data-url="${URLUtils.url('Product-Variation', 'pid', product.id, 'quantity', product.selectedQuantity.toFixed())}"
+            />
+
+            <iscomment>Group input and svg into label so they are associate together</iscomment>
+            <label class="plus">
+                <input type="button" name="plus" value="+"/>
+                <issvg icon="icon-qty-plus"/>
+            </label>
+    </div>
+</div>

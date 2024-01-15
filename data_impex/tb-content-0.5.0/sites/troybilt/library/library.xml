@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="home-product-support">
+        <display-name xml:lang="x-default">Homepage - Product Support Section</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container text-center product-support"&gt;&#13;
+    &lt;div class="row mb-3"&gt;&#13;
+        &lt;div class="col"&gt;&#13;
+            &lt;h2&gt;Product Support&lt;/h2&gt;&#13;
+            &lt;span class="hero-body text-dark"&gt;Questions about your Troy Bilt? We're here to help.&lt;/span&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+    &lt;div class="row"&gt;&#13;
+        &lt;div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 d-flex justify-content-between flex-wrap"&gt;&#13;
+            &lt;div class="icon-container"&gt;&#13;
+                &lt;a href="#" class="text-decoration-none"&gt;&#13;
+                    &lt;span class="icon-circle parts-support"&gt;&lt;/span&gt;&#13;
+                    &lt;span class="link-chevron"&gt;Find Parts&lt;/span&gt;&#13;
+                &lt;/a&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="icon-container"&gt;&#13;
+                &lt;a href="#" class="text-decoration-none"&gt;&#13;
+                    &lt;span class="icon-circle service-center"&gt;&lt;/span&gt;&#13;
+                    &lt;span class="link-chevron"&gt;Find Service&lt;/span&gt;&#13;
+                &lt;/a&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="icon-container"&gt;&#13;
+                &lt;a href="#" class="text-decoration-none"&gt;&#13;
+                    &lt;span class="icon-circle manual"&gt;&lt;/span&gt;&#13;
+                    &lt;span class="link-chevron"&gt;Download Manuals&lt;/span&gt;&#13;
+                &lt;/a&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;div class="icon-container"&gt;&#13;
+                &lt;a href="#" class="text-decoration-none"&gt;&#13;
+                    &lt;span class="icon-circle smart-assistant-white"&gt;&lt;/span&gt;&#13;
+                    &lt;span class="link-chevron"&gt;Smart Assistants&lt;/span&gt;&#13;
+                &lt;/a&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="homepage-assets"/>
+        </folder-links>
+    </content>
+</library>

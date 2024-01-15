@@ -1,0 +1,78 @@
+@import "~org/variables";
+@import "~org/utilities/layout";
+@import "~org/utilities/iconUtils";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~base/components/categoryTiles";
+
+.hp-category-message,
+.hp-promotion-message {
+    position: absolute;
+    bottom: 0.9375em;
+    left: 1.875em;
+    color: $body-color;
+}
+
+.half-height {
+    min-height: 23.125em;
+
+    @include media-breakpoint-down(sm) {
+        min-height: 19.275em;
+    }
+}
+
+.full-height {
+    min-height: 51.85em;
+
+    @include media-breakpoint-down(sm) {
+        min-height: 34.65em;
+    }
+
+    @include media-breakpoint-only(xs) {
+        min-height: 27.875em;
+    }
+}
+
+.tall-tile {
+    background-position: center;
+    background-size: cover;
+}
+
+.square-tile {
+    background-position: center;
+    background-size: cover;
+}
+
+.wide-tile {
+    background-position: center;
+    background-size: cover;
+    min-height: 28.65em;
+
+    @include media-breakpoint-down(sm) {
+        min-height: 15.375em;
+    }
+}
+
+.home-main-categories {
+    margin-left: -5px;
+    padding-top: rem(10px);
+    padding-bottom: rem(55px);
+    width: calc(100% + 10px);
+
+    @include media-breakpoint-up(md) {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-bottom: 0;
+        padding-top: rem(45px);
+        padding-bottom: rem(65px);
+    }
+}
+
+.category-tile {
+    border: 5px solid white;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(md) {
+        border: 15px solid white;
+    }
+}

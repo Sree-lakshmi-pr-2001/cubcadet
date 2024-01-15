@@ -1,0 +1,238 @@
+@import "~org/utilities/shapes";
+
+.nav-link {
+    margin-right: $spacer;
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+    border: none;
+    border-bottom: $border;
+
+    .nav-item {
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(sm) {
+            width: 50%;
+
+            @include nth(2) {
+                border-color: inherit;
+            }
+        }
+    }
+
+    .nav-link {
+        @include tab-list;
+
+        margin: 0;
+        padding: $nav-link-padding-y $nav-link-padding-x;
+        color: $nav-tabs-link-color;
+        border: 0;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-bottom: $nav-tabs-border-bottom-width solid $nav-tabs-border-color;
+        }
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+        color: $nav-tabs-link-active-color;
+        font-weight: $font-weight-bold;
+        background-color: $trans;
+        border-color: $trans;
+        border-bottom: $nav-tabs-border-bottom-width solid $nav-tabs-border-color;
+    }
+
+    &.pdp-specs-nav {
+        display: block;
+        border: none;
+
+        a {
+            color: $primary;
+            text-decoration: none;
+        }
+
+        .nav-item {
+            padding: rem(20px) 0 rem(20px) rem(50px);
+            border-bottom: $border;
+
+            &:first-child {
+                border-top: $border;
+            }
+
+            > ul {
+                padding: rem(18px) 0 0 0;
+                list-style: none;
+
+                > li {
+                    padding-bottom: rem(10px);
+                }
+            }
+        }
+
+        .nav-link {
+            @include product-name-1;
+
+            line-height: normal;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            cursor: pointer;
+
+            &:hover,
+            &:active,
+            &:focus {
+                border: 0;
+            }
+
+            &.collapsed {
+                ~ ul {
+                    display: none;
+                }
+            }
+
+            &.icon {
+                &::before {
+                    @include centerElement(vertical);
+
+                    top: 50%;
+                }
+
+                &.specs {
+                    @include icon($svg-specs, left, 30px, before);
+
+                    &::before {
+                        left: -45px;
+                    }
+                }
+
+                &.manuals {
+                    @include icon($svg-manual, left, 30px, before);
+
+                    &::before {
+                        left: -45px;
+                    }
+                }
+
+                &.pledge {
+                    @include icon($svg-pledge, left, 30px, before);
+
+                    &::before {
+                        left: -45px;
+                    }
+                }
+
+                &.maintenance {
+                    @include icon($svg-maintenance, left, 30px, before);
+
+                    &::before {
+                        left: -45px;
+                    }
+                }
+
+                &.fits-model {
+                    @include icon($svg-fits-model, left, 30px, before);
+
+                    &::before {
+                        left: -45px;
+                    }
+                }
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: $trans;
+            }
+        }
+    }
+}
+
+//
+// Pills
+//
+
+.nav-pills {
+    .nav-item:not(:first-child) {
+        .nav-link {
+            border-left: 1px solid $white;
+        }
+    }
+
+    .nav-link {
+        @include tab-pills;
+
+        padding: rem(10px) $nav-link-padding-x;
+        margin: 0;
+        background-color: $nav-pills-link-bg;
+        color: $nav-pills-link-color;
+        border: $border;
+        border-radius: 0;
+        text-decoration: none;
+
+        @include media-breakpoint-down(sm) {
+            padding: $nav-link-padding-y rem(10px);
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: $nav-link-padding-y $nav-link-padding-x;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $nav-pills-link-active-bg !important;
+            border-color: $nav-pills-link-active-bg;
+        }
+
+        &.active {
+            font-weight: $font-weight-bold;
+            border: 1px solid $nav-pills-link-active-bg;
+        }
+
+        &.disabled {
+            color: $nav-link-disabled-color;
+            background-color: $trans;
+            border-color: $trans;
+        }
+    }
+
+    &.content-switcher {
+        .nav-item {
+            display: table;
+            text-align: center;
+            width: 50%;
+
+            &:first-child {
+                .nav-link:not(.active) {
+                    border-right: 1px solid $trans;
+                }
+            }
+        }
+
+        .nav-link {
+            display: flex;
+            position: relative;
+            height: 55px;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+
+                    @include centerElement(horizontal);
+                    @include triangle(10px, down, $secondary);
+                }
+            }
+        }
+    }
+}

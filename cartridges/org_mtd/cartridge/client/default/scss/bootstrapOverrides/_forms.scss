@@ -1,0 +1,121 @@
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label,
+.custom-control-input[type="checkbox"]:checked ~ .custom-control-label,
+.custom-control-input[type="radio"]:checked ~ .custom-control-label {
+    font-weight: $font-weight-bold;
+
+    &::before {
+        border-color: $brand-main;
+    }
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label,
+.custom-control-input[type="checkbox"] ~ .custom-control-label,
+.custom-control-input[type="radio"] ~ .custom-control-label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+    &::before {
+        border-color: $gray-800;
+    }
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.form-control {
+    font-size: $font-size-body;
+    height: auto;
+}
+
+.invalid-feedback {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+}
+
+select {
+    display: inline-block;
+    width: 100%;
+    line-height: 18px;
+    vertical-align: middle;
+    background: #fff $custom-select-indicator no-repeat right 0.75rem center;
+    background-size: 22px 22px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+select,
+.custom-select {
+    height: auto;
+
+    &.form-control:focus {
+        color: $brand-second;
+    }
+
+    option:disabled {
+        font-style: italic;
+        color: $gray-200;
+    }
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: 40px;
+}
+
+.custom-control-input {
+    ~ .custom-control-label::before {
+        border: $border;
+    }
+
+    &:checked ~ .custom-control-label::before {
+        color: $custom-control-indicator-checked-color;
+        @include gradient-bg($custom-control-indicator-checked-bg);
+        @include box-shadow($custom-control-indicator-checked-box-shadow);
+    }
+
+    &:active ~ .custom-control-label::before {
+        color: $custom-control-indicator-active-color;
+        background-color: $custom-control-indicator-active-bg;
+    }
+}
+
+.custom-control-label {
+    &::before {
+        top: 0;
+        background-color: $trans;
+        border-color: $trans;
+    }
+
+    &::after {
+        top: 0;
+        background-size: 100%;
+    }
+}
+
+.custom-checkbox {
+    .custom-control-input ~ .custom-control-label::after {
+        background-image: $checkbox-unselected-svg;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::after {
+        background-image: $checkbox-selected-svg;
+    }
+}
+
+.custom-radio {
+    .custom-control-input ~ .custom-control-label::after {
+        background-image: $radio-unselected-svg;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::after {
+        background-image: $radio-selected-svg;
+    }
+}

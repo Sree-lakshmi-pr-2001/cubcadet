@@ -1,0 +1,88 @@
+<!--- TEMPLATENAME: content.isml --->
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customerService.css');
+    assets.addJs('/js/contactUs.js');
+</isscript>
+
+<iscontentasset aid="store-info-testdrive" />
+
+<div id="testDriveFormSuccessMessage" class="w-100" style="display: none;">
+    <isslot id="TestDriveSuccess" context="global" description="Test Drive Success Message" />
+</div>
+<div id="testDriveFormErrorMessage" class="w-100" style="display: none;">
+    <isslot id="TestDriveFailed" context="global" description="Test Drive Failed Message" />
+</div>
+
+<form action="${pdict.testDriveForm.actionUrl}" class="col-md-12 col-lg-8 mx-auto" id="testDriveForm" method="POST" name="${pdict.testDriveForm.htmlName}">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group ${!!pdict.testDriveForm.firstname.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="testdrive-form-firstname">
+                    <isprint value="${pdict.testDriveForm.firstname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="testdrive-form-firstname" name="firstname" <isprint value=${pdict.testDriveForm.firstname.attributes} encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group ${!!pdict.testDriveForm.lastname.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="testdrive-form-lastname">
+                    <isprint value="${pdict.testDriveForm.lastname.label}" encoding="htmlcontent" />
+                </label>
+                <input type="text" class="form-control" id="testdrive-form-lastname" name="lastname" <isprint value=${pdict.testDriveForm.lastname.attributes} encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group form-group-phone ${!!pdict.testDriveForm.phone.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="testdrive-form-phone">
+                    <isprint value="${pdict.testDriveForm.phone.label}" encoding="htmlcontent" />
+                </label>
+                <input type="tel" class="form-control" id="testdrive-form-phone" name="phone"
+                       data-range-error="${Resource.msg('error.message.between10and20', 'forms', null)}"
+                       data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'forms', null)}"
+                       placeholder="${Resource.msg('example.phone','forms',null)}"
+                       <isprint value=${pdict.testDriveForm.phone.attributes} encoding="off" />
+                >
+                <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group ${!!pdict.testDriveForm.email.mandatory ? 'required' : ''}">
+                <label class="form-control-label" for="testdrive-form-email">
+                    <isprint value="${pdict.testDriveForm.email.label}" encoding="htmlcontent" />
+                </label>
+                <input type="email" class="form-control" data-pattern-mismatch="${Resource.msg('error.email.mismatch','forms',null)}" id="testdrive-form-email" name="email" <isprint value=${pdict.testDriveForm.email.attributes} encoding="off" />>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+        <div class="col-md-5 ml-auto">
+            <div class="form-group available-products-group">
+                <label class="form-control-label">
+                    ${Resource.msg('scheduletestdrive.checkbox.label','forms',null)}
+                </label>
+                <div class="available-products-list">
+                    <isloop items="${pdict.testDriveForm.productTypes}" var="type" status="loopstatus">
+                        <div class="form-group custom-control custom-checkbox">
+                            <input type="checkbox" name="EquipmentTypes[${loopstatus.index}]" value="${type.value}" id="testdrive-product-${loopstatus.index}" class="custom-control-input">
+                            <label class="custom-control-label" for="testdrive-product-${loopstatus.index}">
+                                <isprint value="${type}" encoding="htmlcontent" />
+                            </label>
+                        </div>
+                    </isloop>
+                </div>
+                <div class="custom-invalid-feedback">
+                    ${Resource.msg('scheduletestdrive.checkbox.error.required','forms',null)}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recaptch-content">
+        <div id="testDriveRecaptcha" class="g-recaptcha"></div>
+        <div class="invalid-feedback">${Resource.msg('captcha.error','forms',null)}</div>
+    </div>
+    <div class="form-group-cta">
+        <button type="submit" id="sendTestDrive" class="btn btn-block btn-secondary">${Resource.msg('scheduletestdrive.submit.label','forms',null)}</button>
+    </div>
+    <input type="hidden" name="CompanyId" value="${pdict.contactUsForm.dealerId}"/>
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+</form>

@@ -1,0 +1,23 @@
+<div class="line-item-header">
+    <isif condition="${miniCart}">
+        <isinclude template="checkout/productCard/productCardProductNameAndRemove" />
+    <iselse>
+            <isif condition="${!lineItem.isBonusProductLineItem}">
+                    <div class="remove-line-item d-block ">
+                        <isif condition="${!miniCart && lineItem.CARBCompliantItem && shippingModel.shippingAddress.stateCode == 'CA'}">
+                            <a href="#" class="remove-product" data-toggle="modal"
+                                    data-target="#removeProductModal" data-pid="${lineItem.id}"
+                                    data-name="${lineItem.productName}"
+                                    data-action="${lineItem.removeCARBProductUrl}"
+                                    data-uuid="${lineItem.UUID}"
+                                    aria-label="remove ${lineItem.productName}" data-removecheckoutproduct="true">
+                                <span aria-hidden="true"></span>
+                                Remove
+                            </a>
+                        </isif>
+                    </div>
+            </isif>
+        <isinclude template="checkout/productCard/productCardProductName" />
+        <isinclude template="cart/cartRemoveProductModal"/>
+    </isif>
+</div>

@@ -1,0 +1,12 @@
+<isinclude template="components/modules" />
+<isinclude template="monetate/monetateaddcartrows" />
+<div class="minicart-total">
+    <a class="minicart-link" href="${URLUtils.https('Cart-Show')}" title="${Resource.msg('minicart.viewcart','common',null)}">
+        <issvg icon="cart" image="true" altText="" />
+        <span class="minicart-quantity">
+            <isprint value="${pdict.quantityTotal}" formatter="##" />
+        </span>
+    </a>
+</div>
+
+<div class="popover popover-bottom"></div>

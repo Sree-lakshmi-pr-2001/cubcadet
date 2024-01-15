@@ -1,0 +1,101 @@
+<isobject object="${product.raw}" view="detail">
+    <div class="container-fluid product-detail product-wrapper" data-pid="${product.id}">
+        <div class="product-info container no-container-gutters-lg-down">
+            <div class="row">
+                <div class="col-12">
+                    <!---Breadcrumbs--->
+                    <div class="product-breadcrumb">
+                        <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+                    </div>
+
+                    <!-- Product Name -->
+                    <div class="row">
+                        <div class="d-sm-none col-12 mt-2">
+                            <div class="product-name-block">
+                                <h1 class="product-name">
+                                    ${product.productName}
+                                </h1>
+                            </div>
+                            <!-- Prices -->
+                            <div class="prices">
+                                <isset name="price" value="${product.price}" scope="page" />
+                                <isinclude template="product/components/pricing/mainNoSchema" />
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-info container no-container-gutters-lg-down mt-4">
+            <div class="row">
+                <!-- Product Images Carousel -->
+                <isinclude template="product/components/imageCarousel" />
+
+                <div class="col-12 col-sm-5 col-lg-5 order-sm-0">
+                    <div class="hidden-xs-down">
+                        <!-- Product Name -->
+                        <div class="h1 product-name">${product.productName}</div>
+
+                        <!-- Prices -->
+                        <div class="d-flex">
+                            <div class="prices">
+                                <isset name="price" value="${product.price}" scope="page" />
+                                <isinclude template="product/components/pricing/main" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr />
+
+                    <div class="row justify-content-center">
+                        <isinclude template="product/components/description" />
+
+                        <div class="product-features col-12">
+                            <isinclude template="components/modules" />
+                            <iscontentasset aid="licencedProductDisclaimer" />
+                        </div>
+
+                        <div class="col-12 d-none d-lg-block">
+                            <hr />
+                        </div>
+                        <div class="col-12">
+                            <div class="prices-add-to-cart-actions qty-atc">
+                                <div
+                                    class="row cart-and-ipay atc-product justify-content-center justify-content-sm-start">
+                                    <div class="col-12">
+                                        <div class="where-to-buy-wrap--pdp-sticky">
+                                            <button class="where-to-buy__button btn btn-secondary" onclick="window.open('${pdict.lPFindStoreUrl}')"  ${pdict.lPFindStoreUrl ? '' : 'disabled'}>
+                                                ${Resource.msg('find.a.store.licensed', 'common',null)}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attachments & Accessories Slider -->
+        <isif condition="${recProducts.size() > 0}">
+            <div class="recommendations-selected container">
+                <isproductrec recommendationType="3"
+                    title="${Resource.msg('recommendation.other.title', 'product', null)}"
+                    subtitle="${Resource.msg('recommendation.other.subtitle', 'product', null)}" />
+            </div>
+        </isif>
+
+        <!-- Specifications -->
+        <section id="pdp-specs" data-anchor="pdp-specs">
+            <isinclude template="product/components/descriptionAndDetails" />
+        </section>
+    </div>
+</isobject>

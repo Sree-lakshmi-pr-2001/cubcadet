@@ -1,0 +1,122 @@
+$arrow-height: 1.25em; /* 20/16 */
+
+.info-icon {
+    display: inline;
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+        position: absolute;
+        display: inline-block;
+        background: $svg-help no-repeat center center;
+        background-color: $trans;
+        width: rem(20px);
+        height: rem(20px);
+        margin-left: rem(5px);
+    }
+
+    &:hover .tooltip {
+        display: block;
+    }
+
+    .tooltip {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        padding: rem(5px);
+        border-radius: $border-radius;
+        background-color: $primary;
+        color: $white;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        text-align: left;
+        max-width: rem(240px);
+        transform: translate(-50%, -$arrow-height/2);
+        left: 50%;
+        margin-left: 4px;
+        animation: fade-in 0.5s linear forwards;
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        &::before {
+            content: " ";
+            position: absolute;
+            display: block;
+            height: $arrow-height; /* 20/16 */
+            left: 0;
+            bottom: -$arrow-height;
+            width: 100%;
+        }
+
+        &::after {
+            border-left: solid transparent $arrow-height/2; /* 10/16 */
+            border-right: solid transparent $arrow-height/2; /* 10/16 */
+            border-top: solid $gray-100 $arrow-height/2;
+            bottom: -$arrow-height/2;
+            content: " ";
+            height: 0;
+            left: 50%;
+            margin-left: -13px;
+            position: absolute;
+            width: 0;
+        }
+    }
+
+    &.msrp-info {
+        .content-asset {
+            display: contents;
+        }
+    }
+}
+
+.tooltip {
+    &.bs-tooltip-right,
+    &.bs-tooltip-auto[x-placement^="right"],
+    &.bs-tooltip-left,
+    &.bs-tooltip-auto[x-placement^="left"] {
+        margin: 0 rem(5px);
+    }
+
+    &.bs-tooltip-top,
+    &.bs-tooltip-auto[x-placement^="top"],
+    &.bs-tooltip-bottom,
+    &.bs-tooltip-auto[x-placement^="bottom"] {
+        margin: rem(5px) 0;
+    }
+
+    &[role="tooltip"] .tooltip-inner {
+        box-shadow: $shadow;
+        text-align: left !important;
+        pointer-events: none; // prevents flickering
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+// fix for flickering hide/show
+.tooltip {
+    pointer-events: none !important;
+    cursor: default;
+}
+
+.bs-popover-top {
+    .arrow {
+        &::after {
+            border-top-color: #000;
+        }
+    }
+
+    .popover-body {
+        max-width: 380px;
+        padding: 0.9375rem;
+        color: #fff;
+        text-align: center;
+        background-color: #000;
+    }
+}

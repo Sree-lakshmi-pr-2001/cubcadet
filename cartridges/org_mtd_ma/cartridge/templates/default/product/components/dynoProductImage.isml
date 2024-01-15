@@ -1,0 +1,5 @@
+<div class="primary-image">
+    <a href="${URLUtils.url('Product-Show', 'pid', product.id)}">
+        <img src="${product.images['large'][0].url}" class="dyno-image" alt="${product.images['large'][0].alt}" />
+    </a>
+</div>

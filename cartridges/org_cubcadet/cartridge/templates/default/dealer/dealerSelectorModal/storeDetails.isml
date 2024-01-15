@@ -1,0 +1,75 @@
+<div class="store-details" data-store-id="${store.ID}">
+    <div class="row no-gutters d-flex flex-md-row">
+        <div class="store-logo-container">
+            <div class="store-logo tsc">
+                <isif condition = "${store.custom.isEliteDealer}">
+                    <img src="${URLUtils.staticURL(URLUtils.CONTEXT_LIBRARY,'','/Dealer/elite-dealer/cub-cadet-elite-dealer.svg')}" alt="${Resource.msg('tsc.logo.alt', 'storeLocator', null)}" />
+                <iselse>
+                    <img src="${store.custom.logoImage}" alt="${Resource.msg('tsc.logo.alt', 'storeLocator', null)}" />
+                </isif>
+            </div>
+        </div>
+        <div class="store-dealer-distance-container">
+            <iscomment> Retailers and Dealers have unique markers </iscomment>
+            <div class="map-marker ${store.custom.DealerType}"><span>${loopstate.count}</span></div>
+            <isif condition="${store.googleDistance}">
+                <isif condition="${store.googleDistance.split(' ')[1] === 'ft'}">
+                    <p class="store-distance h6">${Resource.msg('storelocator.dealer.distance', 'storeLocator', null)}</p>
+                <iselse/>
+                    <isif condition="${require('dw/util/Locale').getLocale(request.getLocale()).getID() === 'fr_CA'}">
+                        <p class="store-distance h6">${store.googleDistance.replace(".", ",")}</p>
+                    <iselse/>
+                        <p class="store-distance h6">${store.googleDistance}</p>
+                    </isif>
+                </isif>
+            </isif>
+        </div>
+        <div class="store-dealer-address-container">
+            <div class="store-name h6">${store.name}</div>
+            <address class="store-dealer-address">
+                ${store.address1}, <br>
+                <isif condition="${store.address2}">
+                    ${store.address2}, <br>
+                </isif>
+                <isif condition="${store.city}">
+                    ${store.city},
+                </isif>
+                <isif condition="${store.stateCode}">
+                    ${store.stateCode}
+                </isif>
+                ${store.postalCode}
+
+                <p class="m-0">
+                    <isif condition="${store.phone}">
+                        <span><a class="storelocator-phone font-weight-bold" href="tel:${store.phone}" title="${Resource.msg('storelocator.phone.title', 'storeLocator', null)}">${store.phone}</a></span>
+                    </isif>
+                </p>
+            </address>
+        </div>
+        <div class="store-dealer-pickup-info-container">
+            <div class="store-dealer-estimated-pickup">
+                <isif condition="${store.estimatedPickup}">
+                    <span class="font-weight-bold">${Resource.msg('dealer.selectormodal.estimatedpickup.label','dealer',null)}</span>
+                    <isset name="estimatedPickup" value="${dw.content.ContentMgr.getContent(store.estimatedPickup)}" scope="page" />
+                    <isif condition="${estimatedPickup != null}">
+                        <span class="font-weight-bold">${estimatedPickup.custom.body}</span>
+                    </isif>
+                </isif>
+            </div>
+            <div class="store-dealer-estimated-delivery">
+                <isif condition="${store.estimatedDelivery}">
+                    <span class="font-weight-bold">${Resource.msg('dealer.selectormodal.estimateddelivery.label','dealer',null)}</span>
+                    <isset name="estimatedDelivery" value="${dw.content.ContentMgr.getContent(store.estimatedDelivery)}" scope="page" />
+                    <isif condition="${estimatedDelivery != null}">
+                        <span class="font-weight-bold">${estimatedDelivery.custom.body}</span>
+                    </isif>
+                </isif>
+            </div>
+
+            <button type="button" class="btn btn-secondary w-100" data-event-type="selectDealer"
+                data-action="${URLUtils.url('Dealer-Select')}">
+                ${Resource.msg('dealer.selectormodal.button.select','dealer',null)}
+            </button>
+        </div>
+    </div>
+</div>

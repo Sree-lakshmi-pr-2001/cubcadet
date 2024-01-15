@@ -1,0 +1,48 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+
+        if(pdict.bvScout) {
+            assets.addJs(pdict.bvScout);
+        }
+    </isscript>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!---Breadcrumbs--->
+                <div class="search-breadcrumb">
+                    <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cat-landing-1 cat-landing">
+        <isslot id="cat-landing-1" description="First slot on Category/Product Line Landing" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="cat-landing-2 cat-landing">
+        <isslot id="cat-landing-2" description="Second slot on Category/Product Line Landing" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="cat-landing-3 cat-landing">
+        <isslot id="cat-landing-3" description="Third slot on Category/Product Line Landing" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="cat-landing-4 cat-landing">
+        <isslot id="cat-landing-4" description="Fourth slot on Category/Product Line Landing" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <div class="cat-landing-5 cat-landing">
+        <isslot id="cat-landing-5" description="Fifth slot on Category/Product Line Landing" context="category" context-object="${pdict.category}" />
+    </div>
+
+    <isinclude template="dealer/dealerSelectorModal/dealerSelectorModal"/>
+
+    <isinclude template="dealer/contactDealerModal/contactDealerModal"/>
+
+</isdecorate>

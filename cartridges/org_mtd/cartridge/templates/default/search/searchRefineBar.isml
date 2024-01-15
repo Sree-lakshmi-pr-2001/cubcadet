@@ -1,0 +1,69 @@
+<isinclude template="components/modules" />
+<!--- Close button --->
+<div class="filter-header">
+    <div class="header-bar d-md-none clearfix">
+        <div class="pull-left d-md-none result-count">
+            <isinclude template="search/resultsCount" />
+        </div>
+        <button class="pull-right close">
+            <span class="close-text">${Resource.msg('button.close', 'search', null)}</span>
+            <span aria-hidden="true"><issvg icon="close-dark" image="true" altText="" /></span>
+        </button>
+    </div>
+</div>
+
+<!--- Results count and Reset button --->
+<isif condition="${pdict.productSearch.productIds.length > 0}">
+    <div class="row">
+        <div class="secondary-bar pb-0 col-12 col-sm-6 d-md-none">
+            <span class="apply btn btn-block btn-primary mb-sm-1">
+                ${Resource.msg('link.apply', 'search', null)}
+            </span>
+        </div>
+        <div class="secondary-bar col-12 col-sm-6 col-md-12 d-md-none">
+            <a class="reset btn btn-outline-secondary btn-block" href="${pdict.productSearch.resetLink}">
+                ${Resource.msg('link.reset', 'search', null)}
+            </a>
+        </div>
+    </div>
+</isif>
+<isset name="isDynosite" value="${pdict.CurrentHttpParameterMap.fitsOnModel.submitted}" scope="page" />
+<div>
+    <div class="refinements">
+        <isloop items="${pdict.productSearch.refinements}" var="refinement">
+            <isif condition="${isDynosite && refinement.isCategoryRefinement}">
+                <iscontinue/>
+            </isif>
+            <isif condition="${!(refinement.values.length > 0 && refinement.values[0].id === pdict.mtdValue.PRODUCT_TYPE_REFINEMENT)}">
+                <div class="card collapsible-xl refinement refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
+                    <div class="card-header">
+                        ${refinement.displayName}
+                    </div>
+                    <div class="card-body">
+                        <!--- CATEGORY REFINEMENTS --->
+                        <isif condition="${refinement.isCategoryRefinement}">
+                            <isset name="categories" value="${refinement.values}" scope="page" />
+                            <isinclude template="search/refinements/categories" />
+                        </isif>
+
+                        <!--- ATTRIBUTE REFINEMENTS --->
+                        <isif condition="${refinement.isAttributeRefinement}">
+                            <isinclude template="search/refinements/attributes" />
+                        </isif>
+
+                        <!--- PRICE REFINEMENTS --->
+                        <isif condition="${refinement.isPriceRefinement}">
+                            <isinclude template="search/refinements/prices" />
+                        </isif>
+                    </div>
+                </div>
+            </isif>
+        </isloop>
+    </div>
+
+    <div class="secondary-bar col-12 col-sm-6 col-md-12 d-none d-md-block px-md-0">
+        <a class="reset btn btn-outline-secondary btn-block" href="${pdict.productSearch.resetLink}">
+            ${Resource.msg('link.reset', 'search', null)}
+        </a>
+    </div>
+</div>

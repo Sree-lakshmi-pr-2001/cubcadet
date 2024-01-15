@@ -1,0 +1,70 @@
+{
+    "creditCard": {
+        "valid": {
+            "VISA": {
+                "fullName": "Tester Payer",
+                "number": "4111111111111111",
+                "expiration": "05/22",
+                "cvv": "123"
+            },
+            "MC": {
+                "fullName": "Tester Payer",
+                "number": "5555555555554444",
+                "expiration": "05/22",
+                "cvv": "123"
+            }
+        },
+        "invalid": {
+            "VISA": {
+                "fullName": "Tester Payer",
+                "number": "4111111111111112",
+                "expiration": "05/22",
+                "cvv": "758"
+            },
+            "MC": {
+                "fullName": "Tester Payer",
+                "number": "5555555555554442",
+                "expiration": "05/22",
+                "cvv": "758"
+            }
+        }
+       
+    },
+    "savedCard": {
+        "valid": {
+            "VISA": {
+                "fullName": "Tester Payer",
+                "token": "41111xvISiek111111",
+                "expiration": "05/22",
+                "cvv": "123"
+            },
+            "MC": {
+                "fullName": "Tester Payer",
+                "token": "55555DkeisC554442",
+                "expiration": "05/22",
+                "cvv": "758"
+            }
+        },
+        "invalid": {
+            "VISA": {
+                "fullName": "Tester Payer",
+                "token": "41111xvISiek111111",
+                "expiration": "05/18",
+                "cvv": "123"
+            },
+            "MC": {
+                "fullName": "Tester Payer",
+                "token": "55555DkeisC554442",
+                "expiration": "05/18",
+                "cvv": "758"
+            }
+        }
+    },
+    "giftCard": [
+        {
+            "number": "12822737373737",
+            "pin": "2823",
+            "balance": 50.00
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+<div class="card product-info mb-2 warranty-info ${bonusproductlineitem} uuid-${lineItem.UUID} <isif condition="${status.last}"> last</isif>">
+  <div class="row">
+      <div class="col-3 warranty-image"><img src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty-minicart.png')}" /></div> 
+      <div class="col-9"><h6>Extended Warranty</h6>
+        ${lineItem.ew['model']}<br>
+        ${lineItem.ew['productName']}<br>
+        ${dw.web.Resource.msg('dialog2.serialNumber', 'eligibilitycheck', null)} <b>${lineItem.ew['serialNumber']}</b><br>
+        ${dw.web.Resource.msg('dialog2.factoryNumber', 'eligibilitycheck', null)} <b>${lineItem.ew['factoryNumber']}</b><br>
+        <div class="coverage-wrapp mb-1 text-uppercase"> <span class="done-mark ${lineItem.extendedWarranty.displayAddWarranty ? '' : 'd-none'}"></span>
+          <isprint value="${lineItem.ew.coverage}" encoding="off">
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            
+          </div>
+          <div class="col-9 line-item-pricing-info row no-gutters">
+              <div><b>Price:</b> <span class="ml-1">${lineItem.price.sales.formatted} </span> </div> 
+              <div><b>Qty: </b><span class="ml-1">${lineItem.quantity}</span> </div>
+              <div><b>Total:</b><span class="ml-1">${lineItem.price.sales.formatted} </span> </div> 
+            </div>
+        </div>  
+      </div>
+  </div>
+  <div class="row">
+      <div class="col 1">
+                    <div class="col-auto d-flex align-items-end pb-3">
+                        <isinclude template="cart/productCard/cartRemoveProductCardLink" />
+                    </div>
+      </div>
+  </div>  
+</div> 

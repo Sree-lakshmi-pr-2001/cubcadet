@@ -1,0 +1,46 @@
+@import "../variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+$sm-max: map-get($container-max-widths, sm) - $grid-gutter-width;
+$md-max: map-get($container-max-widths, md) - $grid-gutter-width;
+$lg-max: map-get($container-max-widths, lg) - $grid-gutter-width;
+$xl-max: map-get($container-max-widths, xl) - $grid-gutter-width;
+
+@mixin simple-hero() {
+    background-image: none;
+    height: 115px;
+    margin-top: 20px;
+
+    @include media-breakpoint-up(sm) {
+        margin-top: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 150px;
+    }
+
+    h1.page-title {
+        top: auto;
+        bottom: 1em;
+        left: 15px;
+        margin: 0;
+        color: $brand-second;
+
+        @include media-breakpoint-up(sm) {
+            left: calc((100% - #{$sm-max}) / 2);
+        }
+
+        @include media-breakpoint-up(md) {
+            left: calc((100% - #{$md-max}) / 2);
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: calc((100% - #{$lg-max}) / 2);
+        }
+
+        @include media-breakpoint-up(xl) {
+            left: calc((100% - #{$xl-max}) / 2);
+        }
+    }
+}

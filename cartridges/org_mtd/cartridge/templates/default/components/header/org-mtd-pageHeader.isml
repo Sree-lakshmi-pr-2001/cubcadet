@@ -1,0 +1,62 @@
+<isscript>
+    var siteDisableCommerceFunctionality = dw.system.Site.getCurrent().getCustomPreferenceValue("siteDisableCommerceFunctionality");
+</isscript>
+<div class="header-banner slide-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <nav role="navigation">
+        <div class="header container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbar-header brand">
+                        <a href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <issvg icon="logo" image="true" altText="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="pull-left">
+                            <div class="hidden-md-down">
+                                <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                                    <isinclude url="${URLUtils.url('Account-Header')}" />
+                                </isif>
+                                    <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />
+                            </div>
+                            <button class="navbar-toggler d-lg-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                <issvg icon="mobile-menu" image="true" altText="" />
+                            </button>
+                        </div>
+                        <div class="pull-right">
+                            <div class="search hidden-md-down">
+                                <isinclude template="components/header/search" />
+                            </div>
+                            <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                                <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                                    <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-md menu-toggleable-left multilevel-dropdown" id="sg-navbar-collapse">
+            <div class="container-fluid">
+                <div class="row">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                </div>
+            </div>
+        </div>
+        <div class="search-mobile d-lg-none">
+            <isinclude template="components/header/search" />
+        </div>
+    </nav>
+</header>

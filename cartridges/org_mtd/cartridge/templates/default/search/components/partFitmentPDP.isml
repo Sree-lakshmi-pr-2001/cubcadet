@@ -1,0 +1,54 @@
+<isset name="willNotFitPDP" value="${!fitsOnModelPDP.isVerified && fitsOnModelPDP.message === 'willNotFit'}" scope="page" />
+
+<div class="d-flex flex-column flex-sm-row justify-content-between border-top border-bottom py-3">
+    <div class="d-flex align-items-center justify-content-center stock-availability-wrapper mb-2 pb-3 mb-md-0 pb-md-0">
+        <span>
+            <isinclude url="${URLUtils.url('Tile-Availability', 'pid', product.id, 'pdp', true)}" />
+        </span>
+    </div>
+    <div class="part-fitment-wrapper pdp text-center <isif condition="${!fitsOnModelPDP.isVerified && fitsOnModelPDP.message === 'willNotFit'}">not-fit</isif>">
+        <div class="part-fitment-icon pdp <isif condition="${willNotFitPDP}">not-fit</isif> <isif condition="${fitsOnModelPDP.isVerified}">verified</isif>"></div>
+            <isif condition="${fitsOnModelPDP.isVerified}">
+                <h6 class="h4 font-bold"><iscontentasset aid="part-fitment-component-title-fit" /></h6>
+            <iselse/>
+            <isif condition="${willNotFitPDP}">
+                <h6 class="does-not-fit-title h4 font-bold"><iscontentasset aid="part-fitment-component-title-no-fit" /></h6>
+            <iselse/>
+                <h6><iscontentasset aid="part-fitment-component-title-default" /></h6>
+            </isif>
+        </isif>
+        <isif condition="${willNotFitPDP}">
+            <div class="text-center disclaimer">
+                <p><iscontentasset aid="part-fitment-component-description-no-fit" /></p>
+            </div>
+        </isif>
+
+        <form action="${URLUtils.url('Search-Show', 'cgid', 'all-parts')}" class="need-validation" method="get" role="search">
+            <div class="input-group text-center d-flex flex-column">
+                <input
+                    name="fitsOnModel"
+                    type="search" class="form-control text-center part-fitment-input mb-1 w-100 ${(fitsOnModelPDP && fitsOnModelPDP.fitsOnModel) ? 'has-number' : ''}"
+                    value="${fitsOnModelPDP && !empty(fitsOnModelPDP.fitsOnModel) ? fitsOnModelPDP.fitsOnModel : ''}" ${fitsOnModelPDP.isVerified || fitsOnModelPDP.message === 'willNotFit' ? 'readonly': ''}
+                    required
+                />
+                <isif condition="${!fitsOnModelPDP}">
+                    <button class="btn btn-secondary content-search w-100 py-1" type="submit">${Resource.msg('fits.on.model.button.submit', 'partFitment', null)}</button>
+                </isif>
+                <input type="hidden" name="pid" value="${product.id}" />
+            </div>
+        </form>
+        <isif condition="${fitsOnModelPDP.isVerified || fitsOnModelPDP.message === 'willNotFit'}">
+            <div class="m-1">
+                <a class="reset" href="${fitsOnModelPDP.resetURL}">
+                    ${Resource.msg('fits.on.model.reset.text', 'partFitment', null)}
+                </a>
+            </div>
+        <iselse/>
+            <div class="m-1">
+                <a class="find-model text-decoration-none" data-target="#modal-will-fit" data-toggle="modal" href="" title="${Resource.msg('fits.on.model.find.number.title', 'partFitment', null)}">
+                    ${Resource.msg('fits.on.model.find.number.question', 'partFitment', null)}
+                </a>
+            </div>
+        </isif>
+    </div>
+</div>

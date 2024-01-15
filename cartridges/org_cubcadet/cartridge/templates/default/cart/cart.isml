@@ -1,0 +1,172 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/cart.css');
+        assets.addJs('/js/search.js');
+        assets.addJs('/js/newSales.js');
+    </isscript>
+
+    <isinclude template="components/modules" />
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <isinclude template="abandonedCart/cart/startOfBody" />
+
+    <div class="cart-error-messaging cart-error">
+        <isif condition="${'valid' in pdict && pdict.valid.error && pdict.items.length !== 0}">
+            <div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+                ${pdict.valid.message}
+            </div>
+        </isif>
+    </div>
+
+    <isinclude template="dealer/dealerRequiredProduct" />
+
+    <div class="container">
+    <isset name="seeDetails" value="${pdict.seeDetails}" scope="page" />
+        <div class="row cart-header">
+            <h1 class="page-title col-12 col-lg-6">${Resource.msg('title.cart','cart',null)}</h1>
+            <div class="col-12 col-lg-6 text-left text-lg-right need-help">
+                <div>
+                    <span><strong>${Resource.msg('info.need.help','cart',null)}</strong> ${Resource.msg('info.call','cart',null)}</span>
+                    <span><a class="help-phone-number" href="tel:${Resource.msg('info.phone.number','common',null)}">${Resource.msg('info.phone.number','common',null)}</a></span>
+                </div>
+            </div>
+            <div class="sr-only sr-only-focusable">
+                <span class="number-of-items">${Resource.msgf('label.number.items.in.cart','cart', null, pdict.numItems)}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col cart-top-banner-slot">
+                <isslot id="cart-top-banner" description="Slot at top of cart page" context="global"/>
+            </div>
+        </div>
+    </div>
+
+    <isif condition="${pdict.items.length === 0}">
+        <div class="container cart-empty">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>${Resource.msg('info.cart.empty.msg','cart',null)}</h1>
+                </div>
+            </div>
+        </div>
+    <iselse/>
+
+        <div class="container cart cart-page">
+            <div class="row">
+                <!---product cards--->
+                <div class="col-lg-8 cart-product-cards">
+                    <isif condition="${pdict.isShowDealerSection}">
+                        <isinclude url="${URLUtils.url('Dealer-ShowSelectedDealer', 'region', 'Cart')}" />
+                    </isif>
+                    <isloop items="${pdict.items}" var="lineItem" status="status">
+                        <isif condition="${lineItem.productType === 'bundle'}">
+                            <isinclude template="cart/productCard/cartBundleCard" />
+                        <iselseif condition="${lineItem.productAttributeType === 'ExtendedWarranty' && lineItem.ew.type === 'EW_AFT'}" /> 
+                            <isinclude template="cart/aftermarket" />
+                        <iselseif condition="${lineItem.productAttributeType !== 'ExtendedWarranty'}" />
+                            <isinclude template="cart/productCard/cartProductCard" />
+                        </isif>
+
+                        <isinclude template="abandonedCart/cart/updateFullCart" />
+                    </isloop>
+                    <isinclude template="cart/cartApproachingDiscount" />
+
+                    <iscomment>Finance Payment Estimation</iscomment>
+                    <isscript>
+                        var financeUtil = require('int_financing_app/cartridge/scripts/helpers/Util');
+                        var isFinancePlaneDisplay = financeUtil.financeEnabled() && financeUtil.isCertainPlanDisplayOnCart();
+                    </isscript>
+                    <div id="financeInfoCart" ${isFinancePlaneDisplay === true ? 'style=display:block' : 'style=display:none'}>
+                        <div class="estimation-finance-info" data-url="${URLUtils.url('FinancingApplication-UpdateCartEstimation', 'pageType', 'cart').toString()}">
+                            <div class="row">
+                                <div class="cc-container col-lg-2">
+                                    <img src="${URLUtils.staticURL('images/cc-td-card.jpg')}" alt="">
+                                </div>
+                                <div class="col-lg-10">
+                                    <isinclude url="${URLUtils.url('FinancingApplication-Estimation', 'pageType', 'cart')}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---totals, and checkout actions--->
+                <div class="col-lg-4 totals">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>${Resource.msg('heading.order.summary', 'checkout', null)}</h6>
+                        </div>
+                        <div class="card-body">
+                            <iscomment>REMOVED: carShippingMethodSlection</iscomment>
+                            <isinclude template="cart/cartTotals" />
+                            <isinclude template="cart/cartPromoCode" />
+                            <div class="coupons-and-promos">
+                                <isinclude template="cart/cartCouponDisplay" />
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="checkout-continue-wrap">
+                                        <div class="checkout-continue">
+                                            <isinclude template="cart/checkoutButtons" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <isinclude template="cart/cartRemoveProductModal"/>
+        <isinclude template="cart/cartRemoveCouponModal"/>
+        <isinclude template="cart/cartChangeDealerModal"/>
+        <isinclude template="dealer/dealerSelectorModal/dealerSelectorModal"/>
+        <isinclude template="dealer/seeDetailsModal"/>
+    </isif>
+    <div class="container">
+        <isif condition="${pdict.hasWholeGoodProduct}">
+            <div class="product-carousel-slot">
+                <div class="carousel-title">
+                    <h4>${Resource.msgf('label.wholegoodproduct.recommendations', 'cart', null, pdict.firstWholeGoodProduct.name)}</h4>
+                </div>
+                <div class="product-tile-caro row">
+                    <isloop items="${pdict.recommedationProductIdList}" var="product">
+                        <isobject object="${product}" view="recommendation">
+                            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product, 'pview', 'tile', 'ratings', true, 'promos', false, 'swatches', false, 'showQuickView', false, 'isSliderTile', true, 'bvSeo', false)}"/>
+                        </isobject>
+                    </isloop>
+                </div>
+            </div>
+        <iselseif condition="${pdict.cartSlotType === 'dynamic'}">
+            <isscript>
+                var lineItemProductsArray = new Array();
+                var i = 0;
+                var productCollection : dw.util.Collection = new dw.util.ArrayList();
+            </isscript>
+
+            <isloop items="${Shipment.items}" alias="FormLi" status="loopstate">
+                <isset name="lineItem" value="${FormLi.object}" scope="page" />
+                <isscript>
+                  if (lineItem.catalogProduct)
+                  {
+                     lineItemProductsArray[i++] = lineItem.product;
+                     productCollection.add(lineItem.product);
+                  }
+                </isscript>
+            </isloop>
+
+            <isslot id="cart-recommendations-einstein" description="Cart Recommendations - Einstein" context="global" context-object="${productCollection}"/>
+        <iselse>
+            <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
+        </isif>
+    </div>
+    <ismonetatetrackpage pagename="cart" />
+
+    <isinclude template="abandonedCart/cart/endOfBody" />
+</isdecorate>

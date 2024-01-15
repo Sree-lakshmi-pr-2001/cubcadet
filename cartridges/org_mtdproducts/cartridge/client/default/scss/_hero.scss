@@ -1,0 +1,59 @@
+.hero {
+    height: 350px;
+    width: 100%;
+    background-position: 70%;
+    background-size: cover;
+
+    &.locations {
+        height: auto;
+    }
+}
+
+.hero-banner {
+    height: 68px;
+    background-color: $button-grey;
+    width: 80%;
+
+    span {
+        font-size: 20px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #fff;
+    }
+
+    .align-self-center::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.jumbotron {
+    padding: 0;
+    margin: 0;
+    background-color: $button-grey;
+}
+
+@include media-breakpoint-up(md) {
+    .hero {
+        height: 450px;
+    }
+
+    .hero-banner {
+        span {
+            font-size: 35px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .hero {
+        height: 450px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .hero {
+        height: 450px;
+    }
+}

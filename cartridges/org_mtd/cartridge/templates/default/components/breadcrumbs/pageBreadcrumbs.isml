@@ -1,0 +1,24 @@
+<isif condition="${pdict.breadcrumbs}">
+    <isset name="breadcrumbsSchema" value="${require('*/cartridge/scripts/helpers/structuredDataHelper').getBreadcrumbsSchema(pdict.breadcrumbs)}" scope="page" />
+
+    <isif condition="${breadcrumbsSchema}">
+        <script type="application/ld+json">
+            <isprint value="${JSON.stringify(breadcrumbsSchema)}" encoding="htmlsinglequote" />
+        </script>
+    </isif>
+</isif>
+
+<div class="row hidden-xs-down">
+    <div class="col">
+        <ol class="breadcrumb">
+            <isloop items="${pdict.breadcrumbs}" var="breadcrumbValue">
+                <li class="breadcrumb-item">
+                    <a href="${breadcrumbValue.url}">
+                        ${breadcrumbValue.htmlValue}
+                    </a>
+                </li>
+            </isloop>
+        </ol>
+    </div>
+</div>
+<isinclude template="monetate/monetatebreadcrumbs" />

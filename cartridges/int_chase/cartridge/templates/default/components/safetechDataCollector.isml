@@ -1,0 +1,12 @@
+<isscript>
+    var Util = require('~/cartridge/scripts/helpers/Util');
+</isscript>
+ 
+<isif condition="${Util.VALUE.SAFETECH_ENABLED}">
+    <script type="text/javascript" src="${Util.VALUE.SAFETECH_COLLECTOR_HOST}/collect/sdk?m=${Util.VALUE.SAFETECH_MERCHANT_ID}&amp;s=${Util.generateKaptchaSessionID()}"></script>
+ 
+    <script type="text/javascript">
+        var client = new ka.ClientSDK();
+        client.autoLoadEvents();
+    </script>
+</isif>

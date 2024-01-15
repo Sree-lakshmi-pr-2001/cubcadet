@@ -1,0 +1,270 @@
+/* Typography Styles */
+
+//--------------------------
+// Font Weights
+//--------------------------
+
+%font-light {
+    font-weight: $font-weight-light !important;
+}
+
+%font-regular {
+    font-weight: $font-weight-regular !important;
+}
+
+%font-bold {
+    font-weight: $font-weight-bold !important;
+}
+
+.font-light {
+    @extend %font-light;
+}
+
+.font-regular {
+    @extend %font-regular;
+}
+
+.font-bold {
+    @extend %font-bold;
+}
+
+//----------------------------
+// Base Elements
+//----------------------------
+
+p {
+    line-height: $paragraph-mobile-line-height;
+
+    &.small,
+    .small,
+    small {
+        line-height: $paragraph-small-line-height;
+    }
+
+    @include media-breakpoint-up(lg) {
+        line-height: $paragraph-line-height;
+    }
+}
+
+b,
+strong {
+    @extend %font-bold;
+}
+
+label {
+    .custom-checkbox &,
+    .custom-radio & {
+        text-transform: none;
+        font-weight: $font-weight-regular;
+    }
+}
+
+ul {
+    &.product-tile-list {
+        padding-left: rem(20px);
+        line-height: rem(20px);
+
+        > li {
+            font-size: $font-size-sm;
+            margin-bottom: rem(8px);
+        }
+    }
+
+    &.pdp-list {
+        padding-left: rem(20px);
+        line-height: rem(18px);
+        margin-bottom: 0;
+
+        > li {
+            margin-bottom: rem(15px);
+        }
+    }
+}
+
+//----------------------------
+// Headings
+//----------------------------
+
+.kc-article-title {
+    @include kc-article-title;
+}
+
+.kc-article-grid-title {
+    @include kc-article-grid-title;
+}
+
+//----------------------------
+// Body
+//----------------------------
+
+.hero-body {
+    @include hero-body;
+}
+
+.display-body {
+    @include display-body;
+}
+
+//----------------------------
+// Labels
+//----------------------------
+
+.label-xl {
+    font-size: $label-xl;
+    font-weight: $font-weight-bold;
+}
+
+.label-sm {
+    font-size: $label-sm;
+    font-weight: $font-weight-bold;
+}
+
+.label-xs {
+    font-size: $label-xs;
+    font-weight: $font-weight-regular;
+    text-transform: none;
+}
+
+.label-1 {
+    @include label-1;
+}
+
+.label-2 {
+    @include label-2;
+}
+
+.label-3 {
+    @include label-3;
+}
+
+.label-4 {
+    @include label-4;
+}
+
+//-----------------------------
+// Links
+//-----------------------------
+a,
+a.normal {
+    color: $link-color;
+    text-decoration: $link-decoration-alt;
+    font-size: $link-font-size;
+    font-weight: $font-weight-regular;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration-alt;
+    }
+}
+
+div.pdp-link a.link {
+    color: $black;
+}
+
+.main-nav {
+    @include main-nav;
+}
+
+.pdp-section-link {
+    @include pdp-section-link;
+}
+
+.utility-nav-link {
+    @include utility-nav-link;
+}
+
+.footer-link {
+    @include footer-link;
+}
+
+.link-primary {
+    @include link-primary;
+}
+
+.link-chevron {
+    @include link-chevron;
+}
+
+//----------------------------
+// Price
+//----------------------------
+
+.strike-through span {
+    color: $accent-1;
+    text-decoration: line-through;
+}
+
+.pdp-price {
+    @include pdp-price;
+}
+
+.product-tile-price {
+    @include product-tile-price;
+}
+
+.checkout-price {
+    @include checkout-price;
+}
+
+//----------------------------
+// Card Titles
+//----------------------------
+
+.accordion-title {
+    @include accordion-title;
+}
+
+//----------------------------
+// Product Name
+//----------------------------
+
+.product-name-1 {
+    @include product-name-1;
+}
+
+.product-name-2 {
+    @include product-name-2;
+}
+
+//----------------------------
+// Misc Titles
+//----------------------------
+
+.simple-title {
+    padding: rem(24px) rem(15px);
+
+    @include media-breakpoint-up(md) {
+        padding: rem(40px) rem(15px);
+    }
+}
+
+.condensed-header-title {
+    padding: rem(9px) rem(15px);
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        padding: rem(24px) rem(15px);
+    }
+
+    @include media-breakpoint-only(xl) {
+        max-width: map-get($container-max-widths, xl);
+    }
+
+    @include media-breakpoint-only(lg) {
+        max-width: map-get($container-max-widths, lg);
+    }
+
+    @include media-breakpoint-only(md) {
+        max-width: map-get($container-max-widths, md);
+    }
+
+    @include media-breakpoint-only(sm) {
+        max-width: map-get($container-max-widths, sm);
+    }
+}
+
+.disclaimer-text {
+    @include disclaimer-text();
+}

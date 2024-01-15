@@ -1,0 +1,20 @@
+<isloop items="${product.specification}" var="attrGroup" status="loopstate">
+    <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+        <h4 class="attribute-name">
+            ${attrGroup.name}
+        </h4>
+        <ul>
+            <isloop items="${attrGroup.attributes}" var="attr" status="loopstate">
+                <isif condition="${!attr.value}">
+                    <iscontinue/>
+                </isif>
+                <li class="attribute-values">
+                    <span>${attr.label}</span>
+                    <isloop items="${attr.value}" var="value" status="loopstate">
+                        ${value}
+                    </isloop>
+                </li>
+            </isloop>
+        </ul>
+    </isif>
+</isloop>

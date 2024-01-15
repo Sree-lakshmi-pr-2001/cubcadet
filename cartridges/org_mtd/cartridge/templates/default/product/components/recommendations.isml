@@ -1,0 +1,58 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<!--- TEMPLATENAME: recommendation.isml --->
+
+<iscomment>
+    Product Recommendation Module
+    Purpose: this module outputs the Product Recommendation into a carousel based on the orderable recommendation type
+</iscomment>
+
+<isif condition="${!empty(pdict.product.raw)}">
+    <isscript>
+        // If no recommendation type is defined (default: Cross Sell - 1)
+        var productRecType = !empty(pdict.recommendationtype) ? pdict.recommendationtype : 1;
+
+        var recommendations = pdict.product.raw.getOrderableRecommendations(productRecType).iterator();
+        var recProducts = new dw.util.ArrayList();
+
+        // display 20 recommendations at maximum
+        var maxRecs = 20, counter = 0;
+
+        while (recommendations.hasNext()) {
+            var recommendation = recommendations.next();
+            var recommendedProduct = recommendation.getRecommendedItem();
+
+            recProducts.add( recommendedProduct );
+
+            if(++counter >= maxRecs) {
+                break;
+            }
+        }
+    </isscript>
+
+    <isif condition="${recProducts.size() > 0}">
+        <iscomment>Preserve the Product instance</iscomment>
+        <isset name="mainProduct" value="${pdict.product}" scope="pdict"/>
+
+        <div class="recommendation-carousel">
+            <isif condition="${!empty(pdict.title) && pdict.title}">
+                <div class="carousel-title">
+                    <h3>${pdict.title}</h3>
+                    <isif condition="${!empty(pdict.subtitle) && pdict.subtitle}">
+                        <span class="label-xl">${pdict.subtitle}</span>
+                    </isif>
+                </div>
+            </isif>
+            <div class="product-tile-caro row">
+                <isloop items="${recProducts}" var="product">
+                    <isif condition="${product.availabilityModel.availability !== 0}">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', false, 'swatches', true, 'showQuickView', false)}"/>
+                    </isif>
+                </isloop>
+            </div>
+        </div>
+
+        <iscomment>Restore the Product instance</iscomment>
+        <isset name="product" value="${pdict.mainProduct}" scope="pdict"/>
+    </isif>
+</isif>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences/>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="EW-Purchase-From">{
+                "en_US": {
+                            "ACE Hardware", 
+                            "Blain Supply", 
+                            "Do it Best", 
+                            "Farmers Furniture", 
+                            "Independent Dealer",
+                            "Lowes",
+                            "Mills Fleet Farm",
+                            "True Value",
+                            "www.troy-bilt.com",
+                            "Other"
+                          }
+              }
+              </preference>
+              <preference preference-id="EW-Dummy-Shipping-Address">{
+    "firstName": "Aftermarket1",
+    "lastName": "Warranty1",
+    "address1": "5965 Grafton Rd1",
+    "country": "US",
+    "city": "Valley City1",
+    "stateCode": "OH",
+    "postalCode": "44280"
+}</preference>
+        </development>
+        <staging>
+            <preference preference-id="EW-Purchase-From">{
+                "en_US": {
+                            "ACE Hardware", 
+                            "Blain Supply", 
+                            "Do it Best", 
+                            "Farmers Furniture", 
+                            "Independent Dealer",
+                            "Lowes",
+                            "Mills Fleet Farm",
+                            "True Value",
+                            "www.troy-bilt.com",
+                            "Other"
+                          }
+              }
+              </preference>
+              <preference preference-id="EW-Dummy-Shipping-Address">{
+    "firstName": "Aftermarket1",
+    "lastName": "Warranty1",
+    "address1": "5965 Grafton Rd1",
+    "country": "US",
+    "city": "Valley City1",
+    "stateCode": "OH",
+    "postalCode": "44280"
+}</preference>
+        </staging>
+        <production/>
+    </custom-preferences>
+</preferences>

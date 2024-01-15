@@ -1,0 +1,23 @@
+<isif condition="${slotcontent != null && slotcontent.content.length > 0}">
+    <div class="container landing-gallery">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                <div class="slot-callout">
+                    <isprint value="${slotcontent.getCalloutMsg()}" encoding="off"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="landing-gallery-caro">
+        <isloop items="${slotcontent.content}" var="contentAsset">
+            <isprint value="${contentAsset.custom.body}" encoding="off"/>
+        </isloop>
+    </div>
+    <isif condition="${slotcontent.content.length > 1}">
+        <div class="landing-gallery-slider-controls slider-controls controls-center">
+            <span class="slide-prev"></span>
+            <div class="slide-dots"></div>
+            <span class="slide-next"></span>
+        </div>
+    </isif>
+</isif>

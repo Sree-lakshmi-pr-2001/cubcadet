@@ -1,0 +1,9 @@
+<isscript>
+var assets = require('*/cartridge/scripts/assets');
+if(pdict.bvScout) {
+    assets.addJs(pdict.bvScout);
+}
+</isscript>
+<isif condition="${product.isWholeGood || product.isAccessory}">
+    <isinclude template="bv/display/pdpsummary"/>
+</isif>

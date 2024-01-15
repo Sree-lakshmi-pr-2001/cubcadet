@@ -1,0 +1,11 @@
+<div class="remove-line-item">
+    <isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+    <button type="button" class="remove-product btn-link" data-toggle="modal" data-target="#removeProductModal"
+        data-pid="${lineItem.extendedWarranty.id}" data-name="${lineItem.extendedWarranty.name}"
+        data-action="${pdict.actionUrls.removeProductLineItemUrl}" data-uuid="${lineItem.extendedWarranty.UUID}"
+        data-gtmdata="${JSON.stringify(tagManager.getProductData(lineItem.extendedWarranty.id))}" data-qty="${lineItem.extendedWarranty.quantity}"
+        aria-label="remove ${lineItem.extendedWarranty.name}">
+        <span aria-hidden="true"></span>
+        ${Resource.msg('cart.link.remove', 'cart', null)}
+    </button>
+</div>

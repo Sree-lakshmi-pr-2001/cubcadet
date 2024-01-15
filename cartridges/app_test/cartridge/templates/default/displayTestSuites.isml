@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<isinclude template="includes"/>
+	</head>
+	<body>
+		<div class="title">
+			My Test Suites
+		</div>
+		<div>
+			<div class="box">
+				<table class="table table-bordered table-hover"
+					   id="testSuitesTable"
+					   data-meta-suite="${pdict.CurrentHttpParameterMap.suite.stringValue}">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Module Path</th>
+						</tr>
+					</thead>
+					<tbody>
+						<isloop alias="test" iterator="${pdict.ListOfTestSuites}" status="loopstate">
+							<tr>
+								<td>
+									<a class="" href='${URLUtils.http("Tester-DisplaySuite", "suite", test.name)}'>${test.name}</a>
+								</td>
+								<td>
+									<isprint value="${test.modulePath}" encoding="off">
+								</td>
+							</tr>
+						</isloop>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

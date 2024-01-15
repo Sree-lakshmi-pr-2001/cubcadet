@@ -1,0 +1,29 @@
+<isinclude template="monetate/modules" />
+<isset name="monetateObject" value="${require('~/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+<isif condition="${monetateObject.getMonetateEnabled()}">
+    <!-- Begin Monetate ExpressTag Async v6.1. Place at start of document head. DO NOT ALTER.-->
+    <script type="text/javascript">
+    var monetateT = new Date().getTime();
+    (function() {
+        var p = document.location.protocol;
+        if (p == "http:" || p == "https:") {
+            var m = document.createElement('script'); m.type = 'text/javascript'; m.async = true; m.src = "${monetateObject.getMonetateJSUrl()}";
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(m, s);
+        }
+    })();
+    </script>
+    <!-- End Monetate tag. -->
+    
+    <script type="text/javascript">
+    	/*
+    	*	Global Monetate array for tracking
+    	*/
+    	window.monetateQ = window.monetateQ || [];
+    	
+    	/*
+    	*	Temporary storage for data: cartrows, breadcrumbs, products on the plp/clp/search pages
+    	*/
+    	window.monetateData = window.monetateData || {};
+    	window.monetateData.setPageType = "unknown";
+    </script>
+</isif>

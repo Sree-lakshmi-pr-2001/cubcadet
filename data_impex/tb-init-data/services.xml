@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+
+    <service-credential service-credential-id="Monetate.SFTP.credentials-troybilt">
+        <url>sftp://download.monetate.net</url>
+        <user-id>ftp90051196</user-id>
+        <password encrypted="true" encryption-type="common.export">ip8nCG/QNgVNlmJwUCfq8IHswwOCQbjNiep/kUYDTRpvI1PcpRatswzAQeekBJJv</password>
+    </service-credential>
+
+    <service-credential service-credential-id="Monetate.SFTP.credentials-troybiltca">
+        <url>sftp://download.monetate.net</url>
+        <user-id>ftp99317000</user-id>
+        <password encrypted="true" encryption-type="common.export">7Ai+9UFXxWU0K5fpEFBjlcMDCYK2aK1ss05gvjKkoCJ9Oh+ur0W8021Poc2v3h2N</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.prd.troybilt">
+        <url>sftp.bazaarvoice.com</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">jMb0Qk/VlJQclZUGUow9f4lezbECAxI67vP1+mC5nms=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.prd.troybiltca">
+        <url>sftp.bazaarvoice.com</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">c3rcIGcBKWRcyYTB4KtzoHor80JqITSuhO/C+Trvoq4=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.stg.troybilt">
+        <url>sftp-stg.bazaarvoice.com</url>
+        <user-id>troybilt</user-id>
+        <password encrypted="true" encryption-type="common.export">lk4LJzVEUT37D4/YMFIkzXc1f3A7MH6y9dEG/spJw23j1TY1UW8vE7mwGtPMnvl9</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.stg.troybiltca">
+        <url>sftp-stg.bazaarvoice.com</url>
+        <user-id>troybilt</user-id>
+        <password encrypted="true" encryption-type="common.export">5kvk9jPPvPkkNNdG3Jbwf5PQdfjdEJjEoxdMR3Kgy7XMo8fOEwwcXyVH2Bi83Gqa</password>
+    </service-credential>
+
+
+    <service-credential service-credential-id="marketingcloud.rest.auth-troybilt">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>oopa727xaljz8xbffgc25ypy</user-id>
+        <password encrypted="true" encryption-type="common.export">hD316JjeOt0AdcJEtQKElR4BS2T8JxzXUSfYN5EynLEOo7pJj3PV1TLdo4XIArNSOn22dXksEj5FuuWO2G91vw==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.rest.auth-troybiltca">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>rnt36hm4x6tgwfcjk5vlvr2v</user-id>
+        <password encrypted="true" encryption-type="common.export">BFiDx3Fn5KSlVUIxn3YvVrxJExDUW/cbCwg+6+QY/5HdOvlSbmIIeJBecKTSW6CKj4IlyiD+mVHh9uTStwK7xg==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-troybilt">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10959299</user-id>
+        <password encrypted="true" encryption-type="common.export">kHVlIBfoQSNeisZBX4LW1X//D7I9haGKK8VXLpXr32fRaSTdS0DCT8cs9RvqxS4t</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-troybiltca">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10968355</user-id>
+        <password encrypted="true" encryption-type="common.export">by8HOu6WcLYF5suG9laNfbWCMQs2bjomRGUOiKIUxP+Dgdd/4wki92qEXt3gxz9h</password>
+    </service-credential>
+
+</services>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+    <pricebook>
+        <header pricebook-id="mtdparts-usd-list">
+            <currency>USD</currency>
+            <display-name xml:lang="x-default">Base testing pricebook for mtdparts</display-name>
+            <online-flag>true</online-flag>
+        </header>
+        <price-tables>
+            <price-table product-id="00003067">
+                <amount quantity="1">300.99</amount>
+            </price-table>
+            <price-table product-id="00003107">
+                <amount quantity="1">30.99</amount>
+            </price-table>
+        </price-tables>
+    </pricebook>
+</pricebooks>

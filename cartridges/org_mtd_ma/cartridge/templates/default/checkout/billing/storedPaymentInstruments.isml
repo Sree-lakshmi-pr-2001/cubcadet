@@ -1,0 +1,58 @@
+<div class="row">
+    <isloop items="${pdict.customer.customerPaymentInstruments}" var="paymentInstrument" status="loopSate">
+        <div class="col-12 col-lg-6">
+            <div class="row no-gutters saved-payment-instrument ${loopSate.first ? 'selected-payment' : ''}" data-uuid="${paymentInstrument.UUID}">
+                <div class="col-5">
+                    <iscomment>fake radio selectors</iscomment>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="${paymentInstrument.UUID}" name="customRadio" class="custom-control-input" ${loopSate.first ? 'checked' : ''}>
+                        <label class="custom-control-label" for="${paymentInstrument.UUID}">
+                            <img class="card-image"
+                                src="${paymentInstrument.cardTypeImage.src}"
+                                alt="${paymentInstrument.cardTypeImage.alt}"
+                            />
+                        </label>
+                    </div>
+
+                </div>
+                <div class="saved-payment-information col-7">
+                    <div class="saved-credit-card-type label-2">
+                        <span>
+                            ${Resource.msg('msg.payment.type.credit', 'confirmation', null)}
+                            <iscomment>
+                                TODO: create helper to match instrument type to payment card name
+                            </iscomment>
+                            <isif condition="${paymentInstrument.creditCardType.toUpperCase() === 'MASTER'}">
+                                ${Resource.msg('msg.payment.type.credit.master', 'confirmation', null)}
+                            <iselse>
+                                ${paymentInstrument.creditCardType}
+                            </isif>
+                        </span>
+                    </div>
+                    <div class="saved-credit-card-number">
+                        ${paymentInstrument.formattedCreditCardNumber}
+                    </div>
+                    <div class="saved-credit-card-expiration-date">
+                        <span>
+                            ${Resource.msg('msg.card.type.ending', 'confirmation', null)}
+                            ${paymentInstrument.creditCardExpirationMonth}/${paymentInstrument.creditCardExpirationYear}
+                        </span>
+                    </div>
+
+                    <div class="form-group required saved-security-code">
+                        <div class="security-code-input ${loopSate.first ? '' : 'checkout-hidden'}">
+                            <label class="form-control-label" for="saved-payment-security-code">${Resource.msg('label.credit.card-security.code','checkout',null)}</label>
+                            <input type="text" class="form-control saved-payment-security-code" id="saved-payment-security-code" maxlength="4"
+                            pattern="^[0-9]{3,4}$" data-pattern-mismatch="${Resource.msg('error.card.info.range.securityCode', 'forms', null)}"
+                            data-missing-error="${Resource.msg('error.message.security.code.required', 'checkout', null)}" ${loopSate.first ? 'required' : ''}/>
+                            <div class="invalid-feedback"></div>
+                            <span class="info-icon ">
+                                <img class="icon" src="${URLUtils.staticURL('images/svg-icons/icon-help.svg')}" alt="${Resource.msg('tooltip.img.alt','common',null)}" data-toggle="popover" tabindex="0" data-placement="top" title="${Resource.msg('tooltip.security.code','creditCard',null)}" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </isloop>
+</div>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<isscript>
+    var URLUtils = require('dw/web/URLUtils');
+</isscript>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+   xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="x-apple-disable-message-reformatting">
+</head>
+
+<body style="display:flex; align-items:center">
+   <div style="font-size: 1px; display: none !important">${Resource.msg('email.msg.newAccount', 'email', null)}</div>
+   <center style="width: 100%; text-align: left">
+      <div style="margin: auto">
+         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+            <tbody>
+            <!-- header start -->
+               <tr>
+                  <td>
+
+                     <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%"
+                        style="max-width: 600px">
+                        <tbody>
+                           <tr>
+                              <td align="center" valign="top"
+                                 style="padding: 20px 25px; text-align: left; background-color: #FFC20F">
+                                 <a href="${URLUtils.abs('Home-Show')}" target="_blank"
+                                    style="text-decoration: none; color: #333333">
+                                    <img
+                                       src="http://image.mktgmtdcanada.ca/lib/fe5a15707c620c7e7011/m/1/a84f059b-0320-414f-bb73-7871565b2612.png"
+                                       alt="Cub Cadet" border="0" width="165" height="23"
+                                       style="border: 0; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; color: #333333; display: block; width: 165px !important; height: 23px !important">
+                                 </a>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                  </td>
+               </tr>
+            <!-- header end -->
+
+               <tr>
+                  <td>
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 30px 0 0 25px">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table align="center" border="0" cellpadding="0"
+                                                            cellspacing="0"
+                                                            style="border-collapse: collapse; font-size: medium"
+                                                            width="100%">
+
+                                                            <tbody>
+                                                               <tr>
+                                                               </tr>
+                                                               <tr>
+                                                                  <td align="center" style="border-collapse: collapse"
+                                                                     valign="top">
+                                                                     <table align="center" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse; width: 600px"
+                                                                        width="600">
+
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td align="center"
+                                                                                 style="border-collapse: collapse"
+                                                                                 valign="middle" width="100%">
+                                                                                 <table cellpadding="0" cellspacing="0"
+                                                                                    style="border-collapse: collapse; min-width: 100%"
+                                                                                    width="100%">
+
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td
+                                                                                             style="border-collapse: collapse">
+                                                                                             <div
+                                                                                                style="text-align: left">
+                                                                                                <span
+                                                                                                   style="font-size: 30px"><span
+                                                                                                      style="border-collapse: collapse; color: rgba(38, 38, 38, 1)"><span
+                                                                                                         style="border-collapse: collapse; font-family: arial, helvetica, sans-serif"><span
+                                                                                                            style="border-collapse: collapse"><b>${Resource.msg('email.msg.welcome', 'email', null)}</b></span></span></span></span>
+                                                                                             </div>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 20px 0 0">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table align="center" border="0" cellpadding="0"
+                                                            cellspacing="0"
+                                                            style="border-collapse: collapse; font-size: medium"
+                                                            width="100%">
+
+                                                            <tbody>
+                                                               <tr>
+                                                               </tr>
+                                                               <tr>
+                                                                  <td align="center" style="border-collapse: collapse"
+                                                                     valign="top">
+                                                                     <table align="center" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse; width: 576px"
+                                                                        width="576">
+
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td align="center" bgcolor="#ffffff"
+                                                                                 style="border-collapse: collapse"
+                                                                                 valign="middle" width="100%">
+                                                                                 <table cellpadding="0" cellspacing="0"
+                                                                                    style="border-collapse: collapse; min-width: 100%"
+                                                                                    width="100%">
+
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td
+                                                                                             style="border-collapse: collapse">
+                                                                                             <span
+                                                                                                style="font-size: 14px"><span
+                                                                                                   style="border-collapse: collapse"><span
+                                                                                                      style="border-collapse: collapse; font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.thankYou', 'email', null)}<br>
+                                                                                                      &nbsp;<br>
+                                                                                                      ${Resource.msg('email.msg.viewItem', 'email', null)}</span></span><br>
+                                                                                                <span
+                                                                                                   style="border-collapse: collapse"><span
+                                                                                                      style="border-collapse: collapse; font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.securely', 'email', null)}<br>
+                                                                                                      ${Resource.msg('email.msg.save', 'email', null)}<br>
+                                                                                                      ${Resource.msg('email.msg.speedCheckout', 'email', null)}<br>
+                                                                                                      ${Resource.msg('email.msg.viewHistory', 'email', null)}</span></span></span>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 20px 0">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                               <tr>
+                                                                  <td align="center">
+                                                                     <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td bgcolor="#FFC20F"
+                                                                                 style="border-radius: 0; background-color: #FFC20F">
+                                                                                 <a target="_blank"
+                                                                                    style="font-size: 12px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color:#000000; text-align: center; text-decoration: none; display: block; font-weight: 900; background-color: #FFC20F; border: 1px solid #FFC20F; padding: 10px 15px; border-radius: 0"
+                                                                                    href="${URLUtils.abs('Login-Show')}"
+                                                                                    title="View My Account">${Resource.msg('email.msg.accessAccount', 'email', null)}</a></td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 0 0 20px">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table align="center" border="0" cellpadding="0"
+                                                            cellspacing="0"
+                                                            style="border-collapse: collapse; font-size: medium"
+                                                            width="100%">
+
+                                                            <tbody>
+                                                               <tr>
+                                                               </tr>
+                                                               <tr>
+                                                                  <td align="center" style="border-collapse: collapse"
+                                                                     valign="top">
+                                                                     <table align="center" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse; width: 576px"
+                                                                        width="576">
+
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td align="center" bgcolor="#ffffff"
+                                                                                 style="border-collapse: collapse"
+                                                                                 valign="middle" width="100%">
+                                                                                 <table cellpadding="0" cellspacing="0"
+                                                                                    style="border-collapse: collapse; min-width: 100%"
+                                                                                    width="100%">
+
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td
+                                                                                             style="border-collapse: collapse">
+                                                                                             <span
+                                                                                                style="font-size: 14px"><span
+                                                                                                   style="border-collapse: collapse"><span
+                                                                                                      style="border-collapse: collapse; font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.contact', 'email', null)}</span></span></span>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 30px 0 0 25px">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table align="center" border="0" cellpadding="0"
+                                                            cellspacing="0"
+                                                            style="border-collapse: collapse; font-size: medium"
+                                                            width="100%">
+
+                                                            <tbody>
+                                                               <tr>
+                                                               </tr>
+                                                               <tr>
+                                                                  <td align="center" style="border-collapse: collapse"
+                                                                     valign="top">
+                                                                     <table align="center" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse; width: 600px"
+                                                                        width="600">
+
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td align="center"
+                                                                                 style="border-collapse: collapse"
+                                                                                 valign="middle" width="100%">
+                                                                                 <table cellpadding="0" cellspacing="0"
+                                                                                    style="border-collapse: collapse; min-width: 100%"
+                                                                                    width="100%">
+
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td
+                                                                                             style="border-collapse: collapse">
+                                                                                             <div
+                                                                                                style="text-align: left">
+                                                                                                <span
+                                                                                                   style="font-size: 30px"><span
+                                                                                                      style="border-collapse: collapse; color: rgba(38, 38, 38, 1)"><span
+                                                                                                         style="border-collapse: collapse; font-family: arial, helvetica, sans-serif"><span
+                                                                                                            style="border-collapse: collapse"><b>${Resource.msg('email.msg.Bienvenue', 'email', null)}</b></span></span></span></span>
+                                                                                             </div>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 20px 0 0">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table align="center" border="0" cellpadding="0"
+                                                            cellspacing="0"
+                                                            style="border-collapse: collapse; font-size: medium"
+                                                            width="100%">
+
+                                                            <tbody>
+                                                               <tr>
+                                                               </tr>
+                                                               <tr>
+                                                                  <td align="center" style="border-collapse: collapse"
+                                                                     valign="top">
+                                                                     <table align="center" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse; width: 576px"
+                                                                        width="576">
+
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td align="center" bgcolor="#ffffff"
+                                                                                 style="border-collapse: collapse"
+                                                                                 valign="middle" width="100%">
+                                                                                 <table cellpadding="0" cellspacing="0"
+                                                                                    style="border-collapse: collapse; min-width: 100%"
+                                                                                    width="100%">
+
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td
+                                                                                             style="border-collapse: collapse">
+                                                                                             <span
+                                                                                                style="font-size: 14px"><span
+                                                                                                   style="border-collapse: collapse"><span
+                                                                                                      style="border-collapse: collapse; font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.Votre', 'email', null)}<br>
+                                                                                                      &nbsp;<br>
+                                                                                                      ${Resource.msg('email.msg.Voir', 'email', null)}</span></span><br>
+                                                                                                <span
+                                                                                                   style="border-collapse: collapse"><span
+                                                                                                      style="border-collapse: collapse; font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.Enregistrer', 'email', null)}<br>
+                                                                                                      ${Resource.msg('email.msg.Enregistrer.des', 'email', null)}<br>
+                                                                                                      ${Resource.msg('email.msg.Payer', 'email', null)}<br>
+                                                                                                      ${Resource.msg('email.msg.Consulter', 'email', null)}</span></span></span>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 20px 0">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                               <tr>
+                                                                  <td align="center">
+                                                                     <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td bgcolor="#FFC20F"
+                                                                                 style="border-radius: 0; background-color: #FFC20F">
+                                                                                 <a target="_blank"
+                                                                                    style="font-size: 12px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color:#000000; text-align: center; text-decoration: none; display: block; font-weight: 900; background-color: #FFC20F; border: 1px solid #FFC20F; padding: 10px 15px; border-radius: 0"
+                                                                                    href="${URLUtils.abs('Login-Show')}"
+                                                                                    title="View My Account">${Resource.msg('email.msg.ACCÉDER', 'email', null)}</a></td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 0 0 20px">
+                                             <table cellpadding="0" cellspacing="0" width="100%"
+                                                style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 0">
+                                                         <table align="center" border="0" cellpadding="0"
+                                                            cellspacing="0"
+                                                            style="border-collapse: collapse; font-size: medium"
+                                                            width="100%">
+
+                                                            <tbody>
+                                                               <tr>
+                                                               </tr>
+                                                               <tr>
+                                                                  <td align="center" style="border-collapse: collapse"
+                                                                     valign="top">
+                                                                     <table align="center" border="0" cellpadding="0"
+                                                                        cellspacing="0"
+                                                                        style="border-collapse: collapse; width: 576px"
+                                                                        width="576">
+
+                                                                        <tbody>
+                                                                           <tr>
+                                                                              <td align="center" bgcolor="#ffffff"
+                                                                                 style="border-collapse: collapse"
+                                                                                 valign="middle" width="100%">
+                                                                                 <table cellpadding="0" cellspacing="0"
+                                                                                    style="border-collapse: collapse; min-width: 100%"
+                                                                                    width="100%">
+
+                                                                                    <tbody>
+                                                                                       <tr>
+                                                                                          <td
+                                                                                             style="border-collapse: collapse">
+                                                                                             <span
+                                                                                                style="font-size: 14px"><span
+                                                                                                   style="border-collapse: collapse"><span
+                                                                                                      style="border-collapse: collapse; font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.Si.vous', 'email', null)}</span></span></span>
+                                                                                          </td>
+                                                                                       </tr>
+                                                                                    </tbody>
+                                                                                 </table>
+                                                                              </td>
+                                                                           </tr>
+                                                                        </tbody>
+                                                                     </table>
+                                                                  </td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </td>
+               </tr>
+
+
+
+               <tr>
+                  <td>
+                     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                           <tr>
+                              <td align="center" valign="top" width="100%" style="padding: 40px 0 0">
+
+                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%"
+                                    style="background-color: #FFC20F; max-width: 600px">
+                                    <tbody>
+                                       <tr>
+                                          <td align="center" valign="top" style="padding: 35px 0 25px">
+
+                                             <div
+                                                style="display: inline-block; margin: 0 -2px; width: 100%; max-width: 155px; vertical-align: top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td style="padding: 5px 10px 20px; text-align: center">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="135">
+                                                                        <a href="${URLUtils.abs('Home-Show')}"
+                                                                           target="_blank"
+                                                                           style="text-decoration: none; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           <img
+                                                                              src="http://image.mktgmtdcanada.ca/lib/fe5a15707c620c7e7011/m/1/a84f059b-0320-414f-bb73-7871565b2612.png"
+                                                                              alt="Cub Cadet" border="0" width="135"
+                                                                              height="19"
+                                                                              style="border: 0; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; color: #333333; display: block; margin: 0 auto; width: 135px !important; height: 19px !important">
+                                                                        </a>
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+
+                                             <div
+                                                style="display: inline-block; margin: 0 -2px; width: 100%; max-width: 198px; vertical-align: top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td width="198" height="0" style="font-size: 0">
+                                                            &nbsp;
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+
+                                             <div
+                                                style="display: inline-block; margin: 0 -2px; width: 100%; max-width: 217px; vertical-align: top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td style="padding: 0 10px 20px; text-align: center">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td width="16" style="padding: 0 15px 0 0">
+                                                                        <a href="http://click.mktgmtdcanada.ca/?qs=e37487e56d597b26f452933a17f181346836e7fa233fd5824f8ef5c73b35a8cd344655750da22094dc3ccc3271b17a0f3a52c2b0efa721f8"
+                                                                           target="_blank"
+                                                                           style="text-decoration: none; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           <img
+                                                                              src="http://image.exct.net/lib/fe6115707c610d7e7517/m/1/3713713b-6178-4b25-a26c-10c60897a973.png"
+                                                                              alt="FB" border="0" width="16" height="30"
+                                                                              style="order: 0; font-family: Helvetica, Arial, sans-serif; display: block; width: 16px !important; height: 30px !important">
+                                                                        </a>
+                                                                     </td>
+                                                                     <td width="30" style="padding: 0 15px">
+                                                                        <a href="http://click.mktgmtdcanada.ca/?qs=ad7fc520921bf6e4db9191b0fef24359843ae1a292bf589641a8de9daf14c0fec4e3ecaa37c514521f47d1728e8db306a9106ff61b0aa5c5"
+                                                                           target="_blank"
+                                                                           style="text-decoration: none; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           <img
+                                                                              src="http://image.exct.net/lib/fe6115707c610d7e7517/m/1/03c9853b-956e-4592-9b2c-dcef24e28fc0.png"
+                                                                              alt="TW" border="0" width="30" height="25"
+                                                                              style="border: 0; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; color: #333333; display: block; width: 30px !important; height: 25px !important">
+                                                                        </a>
+                                                                     </td>
+                                                                     <td width="30" style="padding: 0 15px">
+                                                                        <a href="http://click.mktgmtdcanada.ca/?qs=c4f694f43cc11d7cfb7db66b056c6f0c7665478f3a85123bbd6e76b9ad14c621c462fd3bf80d805a8fa19957c178f98db021c421c59d7def"
+                                                                           target="_blank"
+                                                                           style="text-decoration: none; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           <img
+                                                                              src="http://image.exct.net/lib/fe6115707c610d7e7517/m/1/74893217-dcef-48fc-87df-88e47a40d414.png"
+                                                                              alt="IG" border="0" width="30" height="30"
+                                                                              style="border: 0; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; color: #333333; display: block; width: 30px !important; height: 30px !important">
+                                                                        </a>
+                                                                     </td>
+                                                                     <td width="31" style="padding: 0 0 0 15px">
+                                                                        <a href="http://click.mktgmtdcanada.ca/?qs=5aafc917e6cf8dfec8fa7e581959c783e7fbc57510e4711315a24d0537b8b753f79daf072dac5c9d1fc7e25f8d222622936b8575b8064626"
+                                                                           target="_blank"
+                                                                           style="text-decoration: none; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           <img
+                                                                              src="http://image.exct.net/lib/fe6115707c610d7e7517/m/1/2ccae776-a189-4f97-b529-a7ebd6939549.png"
+                                                                              alt="YT" border="0" width="31" height="30"
+                                                                              style="border: 0; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; color: #333333; display: block; width: 31px !important; height: 30px !important">
+                                                                        </a>
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+
+
+                                             <div
+                                                style="display: inline-block; margin: 0 -2px; width: 100%; vertical-align: top; max-width: 420px">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td
+                                                            style="padding-top: 0 !important; padding-right: 10px; padding-bottom: 0 !important; padding-left: 10px">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td>
+
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td
+                                                            style="padding-top: 0 !important; padding-right: 10px; padding-bottom: 0 !important; padding-left: 10px">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <p
+                                                                           style="font-family: Helvetica, Arial, sans-serif; margin: 10px 0 0; padding: 0; font-weight: 400; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           © ${Resource.msg('email.msg.right', 'email', null)} ® or ™
+                                                                           ${Resource.msg('email.msg.copy', 'email', null)}
+                                                                        </p>
+                                                                        <p
+                                                                           style="font-family: Helvetica, Arial, sans-serif; margin: 10px 0 0; padding: 0; font-weight: 400; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           ${Resource.msg('email.msg.address', 'email', null)}
+                                                                        </p>
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+                                             <div
+                                                style="display: inline-block; margin: 0 -2px; width: 100%; vertical-align: top; max-width: 420px">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                   <tbody>
+                                                      <tr>
+                                                         <td
+                                                            style="padding-top: 0 !important; padding-right: 10px; padding-bottom: 0 !important; padding-left: 10px">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td>
+
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td
+                                                            style="padding-top: 0 !important; padding-right: 10px; padding-bottom: 0 !important; padding-left: 10px">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                               width="100%">
+                                                               <tbody>
+                                                                  <tr>
+                                                                     <td>
+                                                                        <p
+                                                                           style="font-family: Helvetica, Arial, sans-serif; margin: 10px 0 0; padding: 0; font-weight: 400; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           © ${Resource.msg('email.msg.right.fr', 'email', null)} ® ou <sup>MC</sup>
+                                                                           ${Resource.msg('email.msg.sont', 'email', null)}
+                                                                        </p>
+                                                                        <p
+                                                                           style="font-family: Helvetica, Arial, sans-serif; margin: 10px 0 0; padding: 0; font-weight: 400; color: #333333; font-size: 10px; line-height: 16px; text-align: center">
+                                                                           ${Resource.msg('email.msg.address', 'email', null)}
+                                                                        </p>
+                                                                     </td>
+                                                                  </tr>
+                                                               </tbody>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </td>
+               </tr>
+
+            </tbody>
+         </table>
+      </div>
+   </center>
+
+</body>
+
+</html>

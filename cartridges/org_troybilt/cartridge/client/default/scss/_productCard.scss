@@ -1,0 +1,120 @@
+@import "variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.item-attributes {
+    vertical-align: top;
+    padding-left: 0;
+}
+
+.line-item-attributes {
+    font-size: $font-size-body;
+    margin: 0;
+}
+
+.line-item-option {
+    font-size: $font-size-sm;
+    margin: 0;
+}
+
+.line-item-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $black;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+
+    span {
+        font-weight: $font-weight-bold;
+    }
+}
+
+.line-item-availability {
+    margin-top: rem(10px);
+}
+
+.line-item-pricing-info {
+    margin-bottom: 0;
+
+    + .price {
+        font-size: 1em;
+        font-weight: bolder;
+    }
+}
+
+.line-item-price-quantity-info {
+    margin-top: 0.625em;
+    border-top: 1px solid $horizontal-rule-grey;
+}
+
+.flex {
+    display: flex;
+}
+
+.line-item-total-text {
+    font-size: 0.813em;
+}
+
+.pricing {
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.product-image {
+    max-width: 115px;
+    margin-right: 0.938em;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.non-adjusted-price {
+    display: none;
+}
+
+.line-item-promo {
+    color: $primary;
+    font-size: 0.813em;
+}
+
+.line-item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bundled-line-item + .bundled-line-item {
+    margin-top: 0.625em;
+}
+
+.bundle-includes {
+    font-size: 0.813em;
+    margin-bottom: 0.625em;
+}
+
+.line-item-divider {
+    margin: 0.625em -1.225em 0.625em -1.325em;
+}
+
+.line-item-availability {
+    font-size: 0.813rem;
+}
+
+.product-line-item-details {
+    overflow-y: visible;
+    padding-left: rem(22px);
+    padding-right: rem(10px);
+}
+
+.line-item-quantity {
+    width: 50%;
+
+    &-info {
+        display: inline;
+    }
+}
+
+.product-line-item-results {
+    margin-top: 15px;
+}

@@ -1,0 +1,14 @@
+            <footer>
+                <div class="footer-nav container-fluid">
+                    <div class="row">
+                        <div class="col-lg-2">
+                        </div>
+                        <isinclude url="${URLUtils.url('Page-IncludeFooterMenu', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'pid', pdict.CurrentHttpParameterMap.pid)}"/>
+                        <iscontentasset aid="mtdproducts-footer-linkedin" />
+                    </div>
+                </div>
+
+                <div class="footer-util container-fluid">
+                    <iscontentasset aid="mtdproducts-footer-util" />
+                </div>
+            </footer>

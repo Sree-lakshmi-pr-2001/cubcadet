@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="blog">
+        <display-name xml:lang="x-default">Knowledge Center</display-name>
+        <description xml:lang="x-default">Description: Main blog folder</description>
+        <online-flag>true</online-flag>
+        <template>rendering/folder/blogLanding</template>
+        <parent>root</parent>
+        <page-attributes/>
+        <attribute-groups>
+            <attribute-group group-id="Blog">
+                <display-name xml:lang="x-default">Blog</display-name>
+                <attribute attribute-id="image" system="false"/>
+                <attribute attribute-id="relatedContent" system="false"/>
+                <attribute attribute-id="author" system="false"/>
+                <attribute attribute-id="postedDate" system="false"/>
+                <attribute attribute-id="productType" system="false"/>
+                <attribute attribute-id="relatedProducts" system="false"/>
+                <attribute attribute-id="tags" system="false"/>
+                <attribute attribute-id="video" system="false"/>
+            </attribute-group>
+        </attribute-groups>
+        <refinement-definitions>
+            <refinement-definition type="folder" bucket-type="none">
+                <display-name xml:lang="x-default">Category</display-name>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="tags" system="false">
+                <display-name xml:lang="x-default">Tags</display-name>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+        </refinement-definitions>
+    </folder>
+
+    <content content-id="test-blog-article">
+        <display-name xml:lang="x-default">Test Blog Article</display-name>
+        <description xml:lang="x-default">Bacon ipsum dolor amet t-bone andouille tail flank, biltong tri-tip ham meatloaf burgdoggen swine porchetta. Flank bacon pig pancetta buffalo ham hock tail bresaola tongue swine alcatra chicken burgdoggen filet mignon rump. Hamburger sausage tongue brisket boudin, meatball landjaeger pork loin turkey sirloin flank pork belly prosciutto burgdoggen. Ham cow meatball flank kevin shank boudin chicken bacon.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Test Page Title</page-title>
+            <page-description xml:lang="x-default">Test Page Description</page-description>
+            <page-keywords xml:lang="x-default">Test Page Keywords</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="author" xml:lang="x-default">Testy Tester</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+&lt;p&gt;Bacon ipsum dolor amet t-bone andouille tail flank, biltong tri-tip ham meatloaf burgdoggen swine porchetta.  Flank bacon pig pancetta buffalo ham hock tail bresaola tongue swine alcatra chicken burgdoggen filet mignon rump.  Hamburger sausage tongue brisket boudin, meatball landjaeger pork loin turkey sirloin flank pork belly prosciutto burgdoggen.  Ham cow meatball flank kevin shank boudin chicken bacon.&lt;/p&gt;&lt;p&gt;Landjaeger ball tip kevin meatball strip steak short ribs.  Tenderloin bresaola pork leberkas, beef salami shank.  Cow strip steak turkey shankle brisket, ham hock prosciutto bresaola pork belly fatback ribeye salami shoulder.  Pancetta tenderloin kielbasa salami, ground round pastrami pig tail strip steak rump landjaeger shoulder jerky.  Prosciutto pork belly buffalo burgdoggen filet mignon shankle landjaeger doner chicken drumstick.  Beef ribs beef pig swine alcatra chuck shoulder shank hamburger boudin porchetta bresaola.&lt;/p&gt;&#13;
+&lt;p&gt;Short ribs fatback buffalo ground round swine filet mignon andouille brisket chuck meatball tongue sausage ham frankfurter.  Short loin tenderloin hamburger strip steak pork chop spare ribs ground round.  Bacon flank ham hock tenderloin tri-tip bresaola corned beef venison beef ribs pancetta turkey ham.  Flank cupim swine cow kevin, chuck jerky rump pork pork belly.&lt;/p&gt;&#13;
+&lt;p&gt;Andouille biltong pig burgdoggen chuck.  Drumstick flank filet mignon leberkas bacon sausage tongue sirloin rump turducken bresaola shoulder frankfurter.  T-bone ham swine kielbasa.  Burgdoggen pancetta shank kielbasa venison.  Fatback strip steak flank salami, rump ball tip meatloaf leberkas pancetta.  Pork loin swine biltong venison shank t-bone rump jowl ham hamburger beef tongue drumstick spare ribs bacon.&lt;/p&gt;&lt;p&gt;Shankle ribeye flank, beef meatball spare ribs brisket ground round bacon.  Shank turducken beef ribs pork loin, spare ribs boudin ground round.  Bresaola kielbasa ribeye tenderloin cupim doner rump bacon.  Tenderloin pork swine, andouille capicola salami beef meatball frankfurter buffalo flank filet mignon ham.  Meatloaf andouille cupim flank burgdoggen venison chicken bresaola alcatra tail tri-tip hamburger.  Sausage chicken swine ham hock tenderloin t-bone.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="image">images/homepage/test-hero-01.jpg</custom-attribute>
+            <custom-attribute attribute-id="relatedContent">
+                <value>test-blog-article-no-image</value>
+                <value>test-blog-article-video</value>
+                <value>knowledge-changing-lawn-mower-blade</value>
+                <value>knowledge-changing-spark-plugs</value>
+                <value>knowledge-chipper-shredder-maintenance-schedule-and-tips</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="relatedProducts">
+                <value>39A70090100</value>
+                <value>39A70102100</value>
+                <value>39A70106100</value>
+                <value>39A70119100</value>
+                <value>634-04145-0911</value>
+                <value>634-04147A-0931</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="tags">
+                <value>popular</value>
+            </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="blog"/>
+            <folder-link folder-id="gardening-blog"/>
+        </folder-links>
+    </content>
+
+    <content content-id="test-blog-article-no-image">
+        <display-name xml:lang="x-default">Benefits of Amending Soil in the Fall</display-name>
+        <description xml:lang="x-default">Although it seems too soon to start thinking about next spring during fall, it's an ideal time to prepare soil for next season's garden now. Amending soil in the fall is one of the best ways to reinvigorate your soil and make sure it is in prime condition next spring. You'll have better and prepped soil in spring as it recuperates over the winter.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Benefits of Amending Soil in the Fall</page-title>
+            <page-description xml:lang="x-default">Although it seems too soon to start thinking about next spring during fall, it's an ideal time to prepare soil for next season's garden now. Amending soil in the fall is one of the best ways to reinvigorate your soil and make sure it is in prime condition next spring. You'll have better and prepped soil in spring as it recuperates over the winter.</page-description>
+            <page-keywords xml:lang="x-default">Test Page Keywords</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="author" xml:lang="x-default">Testy Tester</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img class="d-none d-sm-block float-right ml-3 mb-3" alt="" src="images/blog/posts/amending-soil-oct-310-x-460-v-01-ar-20171002.jpg?$staticlink$" title="" /&gt;&#13;
+&#13;
+&lt;p&gt;Although it seems too soon to start thinking about next spring during fall, it's an ideal time to prepare soil for next season's garden now. Amending soil in the fall is one of the best ways to reinvigorate your soil and make sure it is in prime condition next spring. You'll have better and prepped soil in spring as it recuperates over the winter.&lt;/p&gt;&#13;
+&#13;
+&lt;p class="font-weight-bold"&gt;Even though you can add amendments to soil during springtime, there are a few reasons why you should consider doing this task in the fall.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;It's easier to amend soil in the fall. The earth is still workable and warm in the fall, making it easier to till and add oxygen which encourages root growth and nutrient flow. Use a tiller like the Colt FT Garden Tiller to help you to break apart the soil and turn it over, allowing it to breathe.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Your soil will be much healthier when spring arrives. When adding compost or amendments to soil in the fall, you are giving it time to break down and soak in all the nutrients, so it repairs itself and is ready and strong for planting.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;You'll save time during the busy planting season. By the time spring arrives, you'll have a long laundry list of to-do's to get the garden back in shape - weeding, mulching, inspecting garden beds, upgrading garden tools and seeding to name a few. Save time next year, prep garden soil now and it will be refreshed and renewed by the time spring rolls around.&lt;/p&gt;&#13;
+&#13;
+&lt;p class="font-weight-bold"&gt;If you've never amended soil before or need a refresher on how it's done, follow these simple tips:&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;span class="font-weight-bold"&gt;1)&lt;/span&gt; Pull all weeds from your garden beds to prevent them from germinating in the winter and taking over in the spring. While you're clearing the weeds out, gather all plant debris and fallen leaves to prevent insects and diseases that could grow and harm plants. Remember, you can save leaves and use them as an insulator for your soil during the winter, incorporate into compost or use as mulch in the spring.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;span class="font-weight-bold"&gt;2)&lt;/span&gt; Next, conduct a soil test. Send a sample of your soil to a lab to uncover detailed levels of PH and macronutrients. This way you'll know if your soil has any deficiencies that can be addressed to restore the soil composition.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;&lt;span class="font-weight-bold"&gt;3)&lt;/span&gt; Whether you use additives, manure or compost to amend, remember to spread it evenly and apply one to two inches to the top of beds to resupply the soil with nutrients. If you have a generous amount of material, use a garden tiller to help incorporate the matter it into your soil more evenly.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Talk to any experienced gardener and they'll tell you how important healthy soil is, as it allows your garden to thrive and support your plants in the spring. By amending soil in the fall, you'll be set up for a successful spring planting season.&lt;/p&gt;</custom-attribute>
+            <custom-attribute attribute-id="relatedContent">
+                <value>test-blog-article</value>
+                <value>test-blog-article-video</value>
+                <value>knowledge-changing-lawn-mower-blade</value>
+                <value>knowledge-changing-spark-plugs</value>
+                <value>knowledge-chipper-shredder-maintenance-schedule-and-tips</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="relatedProducts">
+                <value>39A70090100</value>
+                <value>39A70102100</value>
+                <value>39A70106100</value>
+                <value>39A70119100</value>
+                <value>634-04145-0911</value>
+                <value>634-04147A-0931</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="tags">
+                <value>popular</value>
+            </custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="blog"/>
+            <folder-link folder-id="gardening-blog"/>
+        </folder-links>
+    </content>
+
+    <content content-id="test-blog-article-video">
+        <display-name xml:lang="x-default">Test Blog Article Video</display-name>
+        <description xml:lang="x-default">Bacon ipsum dolor amet t-bone andouille tail flank, biltong tri-tip ham meatloaf burgdoggen swine porchetta. Flank bacon pig pancetta buffalo ham hock tail bresaola tongue swine alcatra chicken burgdoggen filet mignon rump. Hamburger sausage tongue brisket boudin, meatball landjaeger pork loin turkey sirloin flank pork belly prosciutto burgdoggen. Ham cow meatball flank kevin shank boudin chicken bacon.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">Test Page Title</page-title>
+            <page-description xml:lang="x-default">Test Page Description</page-description>
+            <page-keywords xml:lang="x-default">Test Page Keywords</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="author" xml:lang="x-default">Testy Tester</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+&lt;p&gt;Bacon ipsum dolor amet t-bone andouille tail flank, biltong tri-tip ham meatloaf burgdoggen swine porchetta.  Flank bacon pig pancetta buffalo ham hock tail bresaola tongue swine alcatra chicken burgdoggen filet mignon rump.  Hamburger sausage tongue brisket boudin, meatball landjaeger pork loin turkey sirloin flank pork belly prosciutto burgdoggen.  Ham cow meatball flank kevin shank boudin chicken bacon.&lt;/p&gt;&lt;p&gt;Landjaeger ball tip kevin meatball strip steak short ribs.  Tenderloin bresaola pork leberkas, beef salami shank.  Cow strip steak turkey shankle brisket, ham hock prosciutto bresaola pork belly fatback ribeye salami shoulder.  Pancetta tenderloin kielbasa salami, ground round pastrami pig tail strip steak rump landjaeger shoulder jerky.  Prosciutto pork belly buffalo burgdoggen filet mignon shankle landjaeger doner chicken drumstick.  Beef ribs beef pig swine alcatra chuck shoulder shank hamburger boudin porchetta bresaola.&lt;/p&gt;&#13;
+&lt;p&gt;Short ribs fatback buffalo ground round swine filet mignon andouille brisket chuck meatball tongue sausage ham frankfurter.  Short loin tenderloin hamburger strip steak pork chop spare ribs ground round.  Bacon flank ham hock tenderloin tri-tip bresaola corned beef venison beef ribs pancetta turkey ham.  Flank cupim swine cow kevin, chuck jerky rump pork pork belly.&lt;/p&gt;&#13;
+&lt;p&gt;Andouille biltong pig burgdoggen chuck.  Drumstick flank filet mignon leberkas bacon sausage tongue sirloin rump turducken bresaola shoulder frankfurter.  T-bone ham swine kielbasa.  Burgdoggen pancetta shank kielbasa venison.  Fatback strip steak flank salami, rump ball tip meatloaf leberkas pancetta.  Pork loin swine biltong venison shank t-bone rump jowl ham hamburger beef tongue drumstick spare ribs bacon.&lt;/p&gt;&lt;p&gt;Shankle ribeye flank, beef meatball spare ribs brisket ground round bacon.  Shank turducken beef ribs pork loin, spare ribs boudin ground round.  Bresaola kielbasa ribeye tenderloin cupim doner rump bacon.  Tenderloin pork swine, andouille capicola salami beef meatball frankfurter buffalo flank filet mignon ham.  Meatloaf andouille cupim flank burgdoggen venison chicken bresaola alcatra tail tri-tip hamburger.  Sausage chicken swine ham hock tenderloin t-bone.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+            <custom-attribute attribute-id="relatedContent">
+                <value>test-blog-article</value>
+                <value>test-blog-article-no-image</value>
+                <value>knowledge-changing-lawn-mower-blade</value>
+                <value>knowledge-changing-spark-plugs</value>
+                <value>knowledge-chipper-shredder-maintenance-schedule-and-tips</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="relatedProducts">
+                <value>39A70090100</value>
+                <value>39A70102100</value>
+                <value>39A70106100</value>
+                <value>39A70119100</value>
+                <value>634-04145-0911</value>
+                <value>634-04147A-0931</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="tags">
+                <value>popular</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="video">DQQOMSaYQqI</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="blog"/>
+            <folder-link folder-id="gardening-blog"/>
+        </folder-links>
+    </content>
+</library>

@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+
+<job job-id="Export: Catalog and Pricebooks to MTD SFTP" priority="0">
+        <description>Export Catalogs and Pricebooks to MTD SFTP</description>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Export mtd-master-catalog" type="ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtd-master-catalog</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="CatalogID">mtd-master-catalog</parameter>
+                    <parameter name="ExportCategories">true</parameter>
+                    <parameter name="ExportProducts">true</parameter>
+                    <parameter name="ExportCategoryAssignments">true</parameter>
+                    <parameter name="ExportProductOptions">true</parameter>
+                    <parameter name="ExportRecommendations">true</parameter>
+                    <parameter name="ExportVariationAttributes">true</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export mtdparts-sales-catalog" type="ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtdparts-sales-catalog</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="CatalogID">mtdparts-sales-catalog</parameter>
+                    <parameter name="ExportCategories">true</parameter>
+                    <parameter name="ExportProducts">true</parameter>
+                    <parameter name="ExportCategoryAssignments">true</parameter>
+                    <parameter name="ExportProductOptions">true</parameter>
+                    <parameter name="ExportRecommendations">true</parameter>
+                    <parameter name="ExportVariationAttributes">true</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export mtdpartsca-sales-catalog" type="ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtdpartsca-sales-catalog</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="CatalogID">mtdpartsca-sales-catalog</parameter>
+                    <parameter name="ExportCategories">true</parameter>
+                    <parameter name="ExportProducts">true</parameter>
+                    <parameter name="ExportCategoryAssignments">true</parameter>
+                    <parameter name="ExportProductOptions">true</parameter>
+                    <parameter name="ExportRecommendations">true</parameter>
+                    <parameter name="ExportVariationAttributes">true</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export cubcadet-sales-catalog" type="ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/cubcadet-sales-catalog</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="CatalogID">cubcadet-sales-catalog</parameter>
+                    <parameter name="ExportCategories">true</parameter>
+                    <parameter name="ExportProducts">true</parameter>
+                    <parameter name="ExportCategoryAssignments">true</parameter>
+                    <parameter name="ExportProductOptions">true</parameter>
+                    <parameter name="ExportRecommendations">true</parameter>
+                    <parameter name="ExportVariationAttributes">true</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export cubcadetca-sales-catalog" type="ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/cubcadetca-sales-catalog</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="CatalogID">cubcadetca-sales-catalog</parameter>
+                    <parameter name="ExportCategories">true</parameter>
+                    <parameter name="ExportProducts">true</parameter>
+                    <parameter name="ExportCategoryAssignments">true</parameter>
+                    <parameter name="ExportProductOptions">true</parameter>
+                    <parameter name="ExportRecommendations">true</parameter>
+                    <parameter name="ExportVariationAttributes">true</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Export mtdparts-usd-list-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtdparts-usd-list-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">mtdparts-usd-list-prices</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export mtdparts-usd-sale-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtdparts-usd-sale-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">mtdparts-usd-sale-prices</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export mtdpartsca-cad-list-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtdpartsca-cad-list-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">mtdpartsca-cad-list-prices</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export mtdpartsca-cad-sale-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/mtdpartsca-cad-sale-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">mtdpartsca-cad-sale-prices</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            
+            <step step-id="Export cubcadet-usd-list-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/cubcadet-usd-list-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">cubcadet-usd-list-prices </parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export cubcadet-usd-sale-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/cubcadet-usd-sale-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">cubcadet-usd-sale-prices</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export cubcadetca-cad-list-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/cubcadetca-cad-list-prices</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">cubcadetca-cad-list-prices</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="Export cubcadetca-cad-sale-prices" type="ExportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">/upload/sfccdata/cubcadetca-cad-sale-prices </parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="PriceBookID">cubcadetca-cad-sale-prices </parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Upload SFCC Data" type="custom.CSComponents.FtpUpload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+.xml$</parameter>
+                    <parameter name="SourceFolder">src/upload/sfccdata/</parameter>
+                    <parameter name="TargetFolder">/commerceshared/staging/sfccdata</parameter>
+                    <parameter name="ArchiveFolder">src/upload/sfccdata/archive</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-02-12Z</date-from>
+                    <start-time>11:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Export: Orders CubCadet CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="cubcadetca"/>
+            <step step-id="Order-Export CubCadet CA" type="ExportOrders" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">upload/orders/cubcadetca/</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="Created">true</parameter>
+                    <parameter name="New">true</parameter>
+                    <parameter name="Open">true</parameter>
+                    <parameter name="Completed">true</parameter>
+                    <parameter name="Failed">true</parameter>
+                    <parameter name="Canceled">true</parameter>
+                    <parameter name="Replaced">true</parameter>
+                    <parameter name="Use Order Export Delay">true</parameter>
+                    <parameter name="Confirmation Status">All</parameter>
+                    <parameter name="Shipment Status">All</parameter>
+                    <parameter name="Payment Status">All</parameter>
+                    <parameter name="Export Status">Ready for Export</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Order-Upload" type="custom.CSComponents.FtpUpload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+.xml$</parameter>
+                    <parameter name="SourceFolder">src/upload/orders/cubcadetca/</parameter>
+                    <parameter name="TargetFolder">/commerceshared/staging/orders/cubcadetca</parameter>
+                    <parameter name="ArchiveFolder">src/upload/orders/cubcadetca/archive</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-11-12Z</date-from>
+                    <start-time>20:01:19.000Z</start-time>
+                    <interval>5m</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Export: Orders CubCadet US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="cubcadet"/>
+            <step step-id="Order-Export CubCadet US" type="ExportOrders" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="FileNamePrefix">upload/orders/cubcadet/</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                    <parameter name="Created">true</parameter>
+                    <parameter name="New">true</parameter>
+                    <parameter name="Open">true</parameter>
+                    <parameter name="Completed">true</parameter>
+                    <parameter name="Failed">true</parameter>
+                    <parameter name="Canceled">true</parameter>
+                    <parameter name="Replaced">true</parameter>
+                    <parameter name="Use Order Export Delay">true</parameter>
+                    <parameter name="Confirmation Status">All</parameter>
+                    <parameter name="Shipment Status">All</parameter>
+                    <parameter name="Payment Status">All</parameter>
+                    <parameter name="Export Status">Ready for Export</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Order-Upload" type="custom.CSComponents.FtpUpload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+.xml$</parameter>
+                    <parameter name="SourceFolder">src/upload/orders/cubcadet/</parameter>
+                    <parameter name="TargetFolder">/commerceshared/staging/orders/cubcadet</parameter>
+                    <parameter name="ArchiveFolder">src/upload/orders/cubcadet/archive</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-01-22Z</date-from>
+                    <start-time>13:45:00.000Z</start-time>
+                    <interval>5m</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+    
+    <job job-id="Import: Catalog CubCadet CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Catalog Files CubCadet CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/catalog/cubcadetca/</parameter>
+                    <parameter name="TargetFolder">src/download/catalogs/cubcadetca</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Catalog File(s) CubCadet CA" type="ImportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/catalogs/cubcadetca</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/catalogs/cubcadetca/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Catalog CubCadet US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Catalog Files CubCadet US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/catalog/cubcadet/</parameter>
+                    <parameter name="TargetFolder">src/download/catalogs/cubcadet</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Catalog File(s)" type="ImportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/catalogs/cubcadet</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/catalogs/cubcadet/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:00:00.000Z</start-time>
+                    <interval>15m</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Inventory CubCadet CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Inventory CubCadet CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/inventory/cubcadetca/</parameter>
+                    <parameter name="TargetFolder">src/download/inventory/cubcadetca</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Inventory C CA" type="custom.CSComponents.ImportInventoryLists" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SourceFolder">src/download/inventory/cubcadetca</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="FileAction">ARCHIVE</parameter>
+                    <parameter name="ImportMode">MERGE</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                    <parameter name="OnError">CONTINUE</parameter>
+                    <parameter name="ArchivePath">src/download/inventory/cubcadetca/archive</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-11-12Z</date-from>
+                    <start-time>20:15:58.000Z</start-time>
+                    <interval>1h</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Inventory CubCadet US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Inventory File(s) CubCadet US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/inventory/cubcadet/</parameter>
+                    <parameter name="TargetFolder">src/download/inventory/cubcadet</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Inventory CubCadet US" type="custom.CSComponents.ImportInventoryLists" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SourceFolder">src/download/inventory/cubcadet</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="FileAction">ARCHIVE</parameter>
+                    <parameter name="ImportMode">MERGE</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                    <parameter name="OnError">CONTINUE</parameter>
+                    <parameter name="ArchivePath">src/download/inventory/cubcadet/archive</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-11-12Z</date-from>
+                    <start-time>20:15:12.000Z</start-time>
+                    <interval>1h</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Order Status Updates - CubCadet CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="cubcadetca"/>
+            <step step-id="download-orders" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+json$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/orderstatus/cubcadetca/</parameter>
+                    <parameter name="TargetFolder">src/download/orderstatus/cubcadetca</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR,NO_FILE_FOUND">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="import-order-status" type="custom.OrderStatusNotify" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="file_location">src/download/orderstatus/cubcadetca</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-03-13Z</date-from>
+                    <start-time>20:37:10.000Z</start-time>
+                    <interval>15m</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Order Status Updates - CubCadet US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="cubcadet"/>
+            <step step-id="download-orders" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+json$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/orderstatus/cubcadet/</parameter>
+                    <parameter name="TargetFolder">src/download/orderstatus/cubcadet/</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR,NO_FILE_FOUND,OK">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+            <step step-id="import-order-status" type="custom.OrderStatusNotify" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="file_location">src/download/orderstatus/cubcadet/</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-03-13Z</date-from>
+                    <start-time>20:33:52.000Z</start-time>
+                    <interval>15m</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Pricebooks CubCadet CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Pricebook Files CubCadet CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/pricebooks/cubcadetca/</parameter>
+                    <parameter name="TargetFolder">src/download/pricebooks/cubcadetca</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Pricebook File(s) CubCadet CA" type="ImportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/pricebooks/cubcadetca</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/pricebooks/cubcadetca/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:15:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Pricebooks CubCadet US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Pricebook Files CubCadet US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">^.+xml$</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/pricebooks/cubcadet/</parameter>
+                    <parameter name="TargetFolder">src/download/pricebooks/cubcadet</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Pricebook File(s) CubCadet US" type="ImportPriceBook" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">download/pricebooks/cubcadet</parameter>
+                    <parameter name="FileNamePattern">^.+xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">WARN</parameter>
+                    <parameter name="ImportFailedHandling">ERROR</parameter>
+                    <parameter name="AfterImportFileHandling">Archive Zipped</parameter>
+                    <parameter name="ArchiveFolder">src/download/pricebooks/cubcadet/archive</parameter>
+                    <parameter name="ImportMode">merge</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                    <on-exit status="WARN">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-10-23Z</date-from>
+                    <start-time>04:15:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Stores CubCadet CA" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Store Data CubCadet CA" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/stores/cubcadetca/</parameter>
+                    <parameter name="TargetFolder">src/download/stores/cubcadetca</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="cubcadetca"/>
+            <step step-id="Import Stores CubCadet CA" type="custom.CSComponents.ImportStores" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SourceFolder">src/download/stores/cubcadetca</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="FileAction">ARCHIVE</parameter>
+                    <parameter name="ImportMode">MERGE</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                    <parameter name="OnError">CONTINUE</parameter>
+                    <parameter name="ArchivePath">src/download/stores/cubcadetca/archive</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-03-09Z</date-from>
+                    <start-time>07:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import: Stores CubCadet US" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Download Store Data CubCadet US" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ServiceID">mtd.sftp</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="SourceFolder">/commerceshared/staging/stores/cubcadet/</parameter>
+                    <parameter name="TargetFolder">src/download/stores/cubcadet</parameter>
+                    <parameter name="DeleteRemoteFiles">true</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <continue/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="cubcadet"/>
+            <step step-id="Import Stores CubCadet US" type="custom.CSComponents.ImportStores" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SourceFolder">src/download/stores/cubcadet</parameter>
+                    <parameter name="FilePattern">.*\.xml</parameter>
+                    <parameter name="FileAction">ARCHIVE</parameter>
+                    <parameter name="ImportMode">MERGE</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                    <parameter name="OnError">CONTINUE</parameter>
+                    <parameter name="ArchivePath">src/download/stores/cubcadet/archive</parameter>
+                </parameters>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="20m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>staging-jobs@mtdproducts.com</from>
+                    <to>CommerceSupport@mtdproducts.com</to>
+                    <cc>michael.spaly@capgemini.com</cc>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2019-03-09Z</date-from>
+                    <start-time>07:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Monday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+    
+    <job job-id="Bazaarvoice Inline Ratings Import" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="cubcadet"/>
+                <template-ref template-id="template_704"/>
+            </flow>
+            <flow>
+                <context site-id="cubcadetca"/>
+                <template-ref template-id="template_704"/>
+            </flow>
+            <flow-template template-id="template_704">
+                <step step-id="Download Rating Feed" type="custom.Bazaarvoice-Download" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="Enabled">true</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <split sequential="false">
+            <flow>
+                <context site-id="cubcadet"/>
+                <template-ref template-id="template_61"/>
+            </flow>
+            <flow>
+                <context site-id="cubcadetca"/>
+                <template-ref template-id="template_61"/>
+            </flow>
+            <flow-template template-id="template_61">
+                <step step-id="Import Ratings" type="custom.Bazaarvoice-Rating-Import" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="Enabled">true</parameter>
+                    </parameters>
+                    <rules>
+                        <on-exit status="ERROR">
+                            <stop-job/>
+                        </on-exit>
+                    </rules>
+                </step>
+            </flow-template>
+        </split>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>jobs@yourdomain.com</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>jobs@yourdomain.com</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>jobs@yourdomain.com</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-once enabled="true">
+                <date>2018-11-18Z</date>
+                <time>01:40:33.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="Bazaarvoice Product Feed" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="cubcadet"/>
+                <template-ref template-id="template_3926"/>
+            </flow>
+            <flow>
+                <context site-id="cubcadetca"/>
+                <template-ref template-id="template_3926"/>
+            </flow>
+            <flow-template template-id="template_3926">
+                <step step-id="Site Specific Feed" type="custom.Bazaarvoice-Product-Feed-Export" enforce-restart="true">
+                    <description/>
+                    <parameters>
+                        <parameter name="Enabled">true</parameter>
+                    </parameters>
+                    <rules>
+                        <on-exit status="ERROR">
+                            <continue/>
+                        </on-exit>
+                    </rules>
+                </step>
+            </flow-template>
+        </split>
+        <split sequential="false">
+            <flow>
+                <context site-id="cubcadet"/>
+                <template-ref template-id="template_123"/>
+            </flow>
+            <flow>
+                <context site-id="cubcadetca"/>
+                <template-ref template-id="template_123"/>
+            </flow>
+            <flow-template template-id="template_123">
+                <step step-id="Upload Product Feeds" type="custom.Bazaarvoice-Upload" enforce-restart="false">
+                    <description>Product Feed Upload</description>
+                    <parameters>
+                        <parameter name="Enabled">true</parameter>
+                        <parameter name="FeedType">Product</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>jobs@bazaarvoice02.tech-prtnr-na01.dw.demandware.net</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>jobs@bazaarvoice02.tech-prtnr-na01.dw.demandware.net</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>jobs@bazaarvoice02.tech-prtnr-na01.dw.demandware.net</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-once enabled="true">
+                <date>2018-11-18Z</date>
+                <time>01:40:33.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="Bazaarvoice Purchase Feed" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="cubcadet"/>
+                <template-ref template-id="template_44"/>
+            </flow>
+            <flow>
+                <context site-id="cubcadetca"/>
+                <template-ref template-id="template_44"/>
+            </flow>
+            <flow-template template-id="template_44">
+                <step step-id="Generate Site PIE feed" type="custom.Bazaarvoice-Purchase-Feed-Export" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="Enabled">true</parameter>
+                        <parameter name="PurchaseFeedWaitDays">0</parameter>
+                        <parameter name="PurchaseFeedNumDays">14</parameter>
+                    </parameters>
+                    <rules>
+                        <on-exit status="ERROR">
+                            <continue/>
+                        </on-exit>
+                    </rules>
+                </step>
+            </flow-template>
+        </split>
+        <split sequential="false">
+            <flow>
+                <context site-id="cubcadet"/>
+                <template-ref template-id="template_48"/>
+            </flow>
+            <flow>
+                <context site-id="cubcadetca"/>
+                <template-ref template-id="template_48"/>
+            </flow>
+            <flow-template template-id="template_48">
+                <step step-id="Upload PIE feed" type="custom.Bazaarvoice-Upload" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="Enabled">true</parameter>
+                        <parameter name="FeedType">Purchase</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>jobs@bazaarvoice02.tech-prtnr-na01.dw.demandware.net</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>jobs@bazaarvoice02.tech-prtnr-na01.dw.demandware.net</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-retry>
+            <on-exit status="ERROR" enabled="true">
+                <send-mail>
+                    <from>jobs@bazaarvoice02.tech-prtnr-na01.dw.demandware.net</from>
+                    <to>jobadmin@yourdomain.com</to>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-once enabled="true">
+                <date>2018-11-18Z</date>
+                <time>01:40:33.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+</jobs>

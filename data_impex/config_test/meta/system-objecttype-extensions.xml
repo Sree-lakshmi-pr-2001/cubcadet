@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+<!-- 
+    This file should only contain System Object Extensions for attributes 
+    with enum values that will be changed directly on Staging environment.
+    
+    The initial definition for Staging should be in the versions folder
+    
+    No attribute groups should be maintained here
+-->
+</metadata>

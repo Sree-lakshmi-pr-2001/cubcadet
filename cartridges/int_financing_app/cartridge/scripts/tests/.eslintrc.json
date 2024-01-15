@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "no-unused-expressions": 0,
+        "guard-for-in": 0,
+        "no-restricted-syntax": ["error", "ForOfStatement", "LabeledStatement", "WithStatement"]
+    }
+}

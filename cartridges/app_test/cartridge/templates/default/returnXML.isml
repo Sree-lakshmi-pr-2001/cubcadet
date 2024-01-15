@@ -1,0 +1,27 @@
+<iscontent type="text/xml" charset="UTF-8" compact="false"/>
+<isscript>
+var testsuites = <testsuites />,
+	index = 0;
+	
+// TODO add support for multiple test suites
+testsuites.testsuite += <testsuite/>;
+testsuites.testsuite.@name = pdict.TestSuite.name;
+testsuites.testsuite.@failures = pdict.TestSuite.failures;
+testsuites.testsuite.@time = pdict.TestSuite.totalElapsed;
+testsuites.testsuite.@tests = pdict.TestSuite.tests.length;
+	
+for each(let test in pdict.TestSuite.tests) {
+	testsuites.testsuite.testcase += <testcase/>;
+	testsuites.testsuite.testcase[index].@classname = test.category;
+	testsuites.testsuite.testcase[index].@name = test.name;
+	testsuites.testsuite.testcase[index].@time = test.elapsed;
+	if (test.exception) {
+	    testsuites.testsuite.testcase[index] += <failure />;
+	    testsuites.testsuite.testcase[index].failure.@message = test.exception.message;
+	    testsuites.testsuite.testcase[index].failure.@type = test.exception.name;
+	};
+	index++;	
+}
+
+out.print(testsuites)
+</isscript>

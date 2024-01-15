@@ -1,0 +1,10 @@
+/* Bootstrap Typography Overrides */
+
+.alert {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+.alert-warning {
+    color: darken($warning, 25%);
+}

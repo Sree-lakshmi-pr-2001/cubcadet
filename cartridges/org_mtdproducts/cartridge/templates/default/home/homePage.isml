@@ -1,0 +1,30 @@
+<isdecorate template="common/layout/page">
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+<isinclude template="/components/modules"/>
+
+<div class="homepage">
+        <div class="jumbotron jumbotron-fluid p-0">
+            <isslot id="home-main-m" description="Main home hero slot." context="global" />
+        </div>
+
+        <div class="content group one container-fluid">
+            <isslot id="home-slot-1" description="first slot below hero." context="global" />
+        </div>
+
+        <div class="content group two container-fluid">
+            <isslot id="home-slot-2" description="second slot below hero." context="global" />
+        </div>
+
+        <div class="content group three container-fluid">
+            <isslot id="home-slot-3" description="third slot below hero." context="global" />
+        </div>
+
+        <div class="content group four container-fluid text-center">
+            <isslot id="home-slot-4" description="four slot below hero." context="global" />
+        </div>
+</div>
+
+<ismonetatetrackpage pagename="main" />
+</isdecorate>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="SiteGenesisSharedLibrary">
+    <content content-id="home-cycle">
+        <display-name xml:lang="x-default">Home Cycle Data</display-name>
+        <display-name xml:lang="fr-FR">Accueil Données de cycle</display-name>
+        <display-name xml:lang="it-IT">Dati dinamici pagina principale</display-name>
+        <display-name xml:lang="ja-JP">ホームサイクルデータ</display-name>
+        <display-name xml:lang="zh-CN">主页周期数据</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;ul id=&quot;homepage-slides&quot;&gt;&#13;
+    &lt;li class=&quot;slide slide1&quot;&gt;&#13;
+        &lt;a href=&quot;$url(&apos;Search-Show&apos;,&apos;cgid&apos;,&apos;mens-clothing-suits&apos;)$&quot;&gt;&#13;
+            &lt;div class=&quot;banner-message&quot;&gt;&#13;
+                &lt;div class=&quot;banner-text2&quot;&gt;Mens&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text1&quot;&gt;Suits&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text3&quot;&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;picture&gt;&#13;
+               &lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR LARGE VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 1025px)&quot; srcset=&quot;images/homepage/car-suit.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!-- IMAGE FOR MEDIUM VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;images/homepage/car-suit-1024.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR SMALL VIEWPORTS --&gt;&#13;
+               &lt;img alt=&quot;Placeholder Image&quot; srcset=&quot;images/homepage/car-suit-768.jpg?$staticlink$&quot;&gt;&#13;
+            &lt;/picture&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class=&quot;slide slide2&quot;&gt;&#13;
+        &lt;a href=&quot;$url(&apos;Search-Show&apos;,&apos;cgid&apos;,&apos;womens-accessories&apos;)$&quot;&gt;&#13;
+            &lt;div class=&quot;banner-message&quot;&gt;&#13;
+                &lt;div class=&quot;banner-text2&quot;&gt;The&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text1&quot;&gt;Perfect Companion&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text3&quot;&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;picture&gt;&#13;
+               &lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR LARGE VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 1025px)&quot; srcset=&quot;images/homepage/car-accessories.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!-- IMAGE FOR MEDIUM VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;images/homepage/car-accessories-1024.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR SMALL VIEWPORTS --&gt;&#13;
+               &lt;img alt=&quot;Placeholder Image&quot; srcset=&quot;images/homepage/car-accessories-768.jpg?$staticlink$&quot;&gt;&#13;
+            &lt;/picture&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class=&quot;slide slide3&quot;&gt;&#13;
+        &lt;a href=&quot;$url(&apos;Search-Show&apos;,&apos;cgid&apos;,&apos;womens-accessories-shoes&apos;)$&quot;&gt;&#13;
+            &lt;div class=&quot;banner-message&quot;&gt;&#13;
+                &lt;div class=&quot;banner-text2&quot;&gt;Womens&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text1&quot;&gt;Shoes&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text3&quot;&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;picture&gt;&#13;
+               &lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR LARGE VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 1025px)&quot; srcset=&quot;images/homepage/car-shoes.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!-- IMAGE FOR MEDIUM VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;images/homepage/car-shoes-1024.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR SMALL VIEWPORTS --&gt;&#13;
+               &lt;img alt=&quot;Placeholder Image&quot; srcset=&quot;images/homepage/car-shoes-768.jpg?$staticlink$&quot;&gt;&#13;
+            &lt;/picture&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class=&quot;slide slide4&quot;&gt;&#13;
+        &lt;a href=&quot;$url(&apos;Search-Show&apos;,&apos;cgid&apos;,&apos;womens-clothing-dresses&apos;)$&quot;&gt;&#13;
+            &lt;div class=&quot;banner-message&quot;&gt;&#13;
+                &lt;div class=&quot;banner-text2&quot;&gt;Womens&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text1&quot;&gt;Dresses&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text3&quot;&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;picture&gt;&#13;
+               &lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR LARGE VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 1025px)&quot; srcset=&quot;images/homepage/car-dresses.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!-- IMAGE FOR MEDIUM VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;images/homepage/car-dresses-1024.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR SMALL VIEWPORTS --&gt;&#13;
+               &lt;img alt=&quot;Placeholder Image&quot; srcset=&quot;images/homepage/car-dresses-768.jpg?$staticlink$&quot;&gt;&#13;
+            &lt;/picture&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+    &lt;li class=&quot;slide slide5&quot;&gt;&#13;
+&lt;a href=&quot;$url(&apos;Search-Show&apos;,&apos;cgid&apos;,&apos;newarrivals-womens&apos;)$&quot;&gt;&#13;
+            &lt;div class=&quot;banner-message&quot;&gt;&#13;
+                &lt;div class=&quot;banner-text1&quot;&gt;Spring&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text2&quot;&gt;New Arrivals&lt;/div&gt;&#13;
+                &lt;div class=&quot;banner-text3&quot;&gt;Shop Now&lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;picture&gt;&#13;
+               &lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR LARGE VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 1025px)&quot; srcset=&quot;images/homepage/car-spring.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!-- IMAGE FOR MEDIUM VIEWPORTS --&gt;&#13;
+               &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;images/homepage/car-spring-1024.jpg?$staticlink$&quot;&gt;&#13;
+            &#13;
+               &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;&#13;
+               &lt;!-- IMAGE FOR SMALL VIEWPORTS --&gt;&#13;
+               &lt;img alt=&quot;Placeholder Image&quot; srcset=&quot;images/homepage/car-spring-768.jpg?$staticlink$&quot;&gt;&#13;
+            &lt;/picture&gt;&#13;
+        &lt;/a&gt;&#13;
+    &lt;/li&gt;&#13;
+&lt;/ul&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

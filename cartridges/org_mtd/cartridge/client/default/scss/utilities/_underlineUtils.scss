@@ -1,0 +1,29 @@
+
+//  Custom Underline - Specify color, position and size
+//---------------------------------------
+
+@mixin underline($color: inherit, $lineposition: center, $width: 50px, $height: 2px) {
+    position: relative;
+    margin-bottom: rem(15px);
+    padding-bottom: rem(15px);
+
+    &::after {
+        content: "";
+        display: inline-block;
+        background: $color;
+        width: $width;
+        height: $height;
+        position: absolute;
+        bottom: 0;
+        @if $lineposition == center {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @if $lineposition == left {
+            left: 0;
+        }
+        @if $lineposition == right {
+            right: 0;
+        }
+    }
+}

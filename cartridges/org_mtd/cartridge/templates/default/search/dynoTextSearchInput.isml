@@ -1,0 +1,23 @@
+<div class="dynosite-search">
+    <form role="search" action="${pdict.productSearch.resetLink}" method="get" name="dynositeSearch">
+        <input class="form-control dyno-search-field"
+               name="q"
+               id=""
+               value="${pdict.CurrentHttpParameterMap.q.value || ''}"
+               placeholder="${Resource.msg('label.header.dyno.searchwatermark', 'common', null)}"
+               autocomplete="off"
+               aria-label="${Resource.msg('label.header.dyno.searchwatermark', 'common', null)}" />
+         <button type="submit" name="save" class="btn btn-save btn-block btn-outline-secondary">${Resource.msg('button.search','storeLocator',null)}</button>
+    </form>
+
+    <div class="dynosite-search-results">
+        <isif condition="${pdict.CurrentHttpParameterMap.q.value.length > 0}">
+            <span>
+                ${Resource.msgf('label.resultsfor', 'search', null, pdict.productSearch.count)}
+            </span>
+            <span class="search-keywords">
+                ${pdict.CurrentHttpParameterMap.q.value}
+            </span>
+        </isif>
+    </div>
+</div>

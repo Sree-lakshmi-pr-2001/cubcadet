@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-objects xmlns="http://www.demandware.com/xml/impex/customobject/2006-10-31">
+    <custom-object type-id="TDFinancePlans" object-id="43442">
+        <object-attribute attribute-id="APR">0.0</object-attribute>
+        <object-attribute attribute-id="displayCart">true</object-attribute>
+        <object-attribute attribute-id="displayPDP">true</object-attribute>
+        <object-attribute attribute-id="eligibleProducts">
+            <value>47RSAAA8010</value>
+            <value>47RIAHA8010</value>
+            <value>47RIAHA6010</value>
+            <value>47RIAHA7010</value>
+            <value>47RSAAA7010</value>
+            <value>47RSAAA6010</value>
+            <value>47RIAAA8010</value>
+            <value>47RIAAA7010</value>
+            <value>47RIAAA6010</value>
+        </object-attribute>
+        <object-attribute attribute-id="enabled">true</object-attribute>
+        <object-attribute attribute-id="isPlanProductSpecific">true</object-attribute>
+        <object-attribute attribute-id="minimumSpend">5199.0</object-attribute>
+        <object-attribute attribute-id="planName" xml:lang="x-default">0% APR for 60 Months with Equal Payments</object-attribute>
+        <object-attribute attribute-id="processFee">125.0</object-attribute>
+        <object-attribute attribute-id="repaymentFactor">.01667</object-attribute>
+        <object-attribute attribute-id="superscriptNumber">5</object-attribute>
+        <object-attribute attribute-id="termLength">60</object-attribute>
+    </custom-object>
+
+</custom-objects>

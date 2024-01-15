@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="login-privacy-policy">
+        <display-name xml:lang="x-default">Login - Privacy Policy Content</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h5&gt;PLEASE READ&lt;/h5&gt;&#13;
+&#13;
+&lt;p class="small"&gt;MTD Parts takes your privacy very seriously. We collect personal information to better serve our customers and to provide information about our products and services. By engaging in transactions with MTD Parts , completing on-line or other forms, by entering contests, you consent to the collection, use, storage outside of Canada and the disclosure of your personal information in accordance with &lt;a class="link-secondary" href="$url('Page-Show','cid','privacy-policy')$"&gt;MTD Parts privacy policy&lt;/a&gt;.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

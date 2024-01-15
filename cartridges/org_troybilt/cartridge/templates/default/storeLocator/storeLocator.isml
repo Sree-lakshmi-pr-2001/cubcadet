@@ -1,0 +1,76 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        if (pdict.stores.googleMapsApi) {
+            assets.addJs(pdict.stores.googleMapsApi);
+        }
+        assets.addJs('/js/storeLocator.js');
+        assets.addCss('/css/storeLocator.css');
+    </isscript>
+
+    <isinclude template="/components/modules" />
+
+    <div class="container store-locator-container <isif condition="${!pdict.isServiceLocator}">dealer-locator</isif>"
+        data-geocoding-url="${pdict.stores.googleGeoCodingUrl}"
+    >
+
+        <isif condition="${pdict.isServiceLocator}">
+            <isif condition="${pdict.isLandingPage}">
+                <h1 class="page-title h2">${Resource.msg('title.hero.service.landing.text','storeLocator',null)}</h1>
+            <iselse>
+                <h1 class="page-title h2">${Resource.msg('title.hero.service.text','storeLocator',null)}</h1>
+            </isif>
+        <iselse>
+            <h1 class="page-title h2">
+                <isif condition="${'productName' in pdict && pdict.productName}">
+                    ${Resource.msgf('title.hero.text.product','storeLocator', null, pdict.productName)}
+                <iselse>
+                    ${Resource.msg('title.hero.text','storeLocator',null)}
+                </isif>
+            </h1>
+        </isif>
+        <div class="row">
+            <isinclude template="storeLocator/storeLocatorNoDecorator" />
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 order-2 order-md-1">
+                <isif condition="${!(pdict.isServiceLocator && pdict.isLandingPage)}">
+                    <div class="results-message">
+                        <isset name="count" value="${pdict.stores.stores.length}" scope="page" />
+                        <isset name="radius" value="${pdict.stores.radius}" scope="page" />
+                        <isprint value="${Resource.msgf('storelocator.results.count', 'storeLocator', null, count, radius)}" encoding="off"/>
+                    </div>
+
+                    <div class="store-locator-no-results">
+                        <iscontentasset aid="store-locator-no-results" />
+                    </div>
+
+                    <div class="results" data-search-key="${JSON.stringify(pdict.stores.searchKey)}" data-radius="${pdict.stores.radius}" data-has-results="${pdict.stores.stores.length > 0}">
+                        <isinclude template="storeLocator/storeLocatorResults" />
+                    </div>
+                </isif>
+
+                <isif condition="${!(pdict.isServiceLocator && pdict.isLandingPage)}">
+                    <iscontentasset aid="trademark-disclaimer" />
+                </isif>
+            </div>
+
+            <div class="col-12 col-md-6 order-1 order-md-2">
+                <isif condition="${pdict.showMap === 'true'}">
+                    <div class="jumbotron map-canvas"
+                    data-has-google-api="${pdict.stores.googleMapsApi ? true : false}"
+                    data-locations="${pdict.stores.locations}"
+                    data-retail-marker="${URLUtils.staticURL('images/svg-icons/icon-location-pin-black.svg')}"
+                    data-dealer-marker="${URLUtils.staticURL('images/svg-icons/icon-location-pin-red.svg')}">
+                        <div class="container">
+                            <div class="row">
+                                <p class="store-locator-no-apiKey alert alert-danger">${Resource.msg('error.no.api.key','storeLocator',null)}</p>
+                            </div>
+                        </div>
+                    </div>
+                </isif>
+            </div>
+        </div>
+    </div>
+
+</isdecorate>

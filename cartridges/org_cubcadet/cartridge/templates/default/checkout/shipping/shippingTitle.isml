@@ -1,0 +1,13 @@
+<isset name="currentShippingMethodId" value="${shippingModel.selectedShippingMethod.ID}" scope="page"/>
+<p class="summary-section-label shipping-addr-label
+    <isif condition="${currentShippingMethodId != '' && (currentShippingMethodId == dealerDeliveryMethodId || currentShippingMethodId == dealerPickupMethodId)}">hidden</isif>">
+    ${pdict.shippingAddressHeader}
+</p>
+<p class="summary-section-label dealer-delivery-addr-label
+    <isif condition="${currentShippingMethodId == '' || currentShippingMethodId != dealerDeliveryMethodId}">hidden</isif>">
+    ${Resource.msg('heading.checkout.shipping.address.dealer', 'checkout', null)}
+</p>
+<p class="summary-section-label dealer-pickup-addr-label
+    <isif condition="${currentShippingMethodId == '' || currentShippingMethodId != dealerPickupMethodId}">hidden</isif>">
+    ${Resource.msg('heading.checkout.shipping.address.dealer', 'checkout', null)}
+</p>

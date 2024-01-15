@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="safetech-declined-order-message">
+        <display-name xml:lang="x-default">Safetech declined order message</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Your payment could not be processed at this time. Please contact Troybilt customer service at 800-668-1238.</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>

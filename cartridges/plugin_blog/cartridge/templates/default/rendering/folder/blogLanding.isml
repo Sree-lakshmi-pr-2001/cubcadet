@@ -1,0 +1,73 @@
+<!--- TEMPLATENAME: landingPage.isml --->
+<isdecorate template="common/layout/page">
+<isinclude template="/components/modules"/>
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/blog.css');
+    </isscript>
+
+    <div class="blog-landing-page">
+        <iscomment>Hero Carousel on Blog Landing Page, asset id: blog-landing-hero-example</iscomment>
+        <div class="blog-landing-page-hero-carousel">
+            <isslot id="blog-landing-hero-carousel" description="Blog Landing Page Hero Carousel" context="folder" context-object="${pdict.rootBlogFolder}">
+        </div>
+
+        <iscomment>Category (subfolder) carousel</iscomment>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <isinclude template="search/components/subFolderNav" />
+                </div>
+            </div>
+        </div>
+
+        <iscomment>Blog post carousel</iscomment>
+        <div class="blog-landing-post-carousel container">
+            <div class="blog-landing-header h1">
+                ${Resource.msg('blog.landing.blogpost.carousel', 'blog', null)}
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <isslot id="blog-landing-content-carousel" description="Blog Landing Page Content Carousel" context="folder" context-object="${pdict.rootBlogFolder}">
+                </div>
+            </div>
+        </div>
+
+        <iscomment>Latest blog post grid</iscomment>
+        <div class="blog-landing-latest-posts container">
+            <div class="blog-landing-header h1">
+                ${Resource.msg('blog.landing.latest', 'blog', null)}
+            </div>
+            <div class="blog-landing row">
+                <isloop items="${pdict.contentSearch.contents}" var="asset" status="loopstatus">
+                    
+                    <isif condition="${asset != null}">
+                        <isif condition="${loopstatus.count > 6}">
+                            <isbreak>
+                        </isif>
+
+                        <isinclude template="content/contentTile"/>
+                    </isif>
+                </isloop>
+
+                <iscomment>View All Button to Redirect to Article Search Page </iscomment>
+                <div class="col-12 blog-landing-load-more">
+                    <div class="text-center">
+                        <a class="btn btn-primary col-12 col-sm-4" href="${URLUtils.url('Search-ShowContent', 'fdid', pdict.contentSearch.folder.ID, 'showMore', 'true')}">
+                            ${Resource.msg('button.viewall', 'search', null)}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <iscomment>Product carousel</iscomment>
+        <div class="blog-landing-product-carousel container">
+            <div class="blog-landing-header h1">
+                ${Resource.msg('blog.featured', 'blog', null)}
+            </div>
+            <isslot id="blog-landing-product-carousel" description="Blog Landing Product Carousel" context="folder" context-object="${pdict.rootBlogFolder}" />
+        </div>
+    </div>
+</isdecorate>

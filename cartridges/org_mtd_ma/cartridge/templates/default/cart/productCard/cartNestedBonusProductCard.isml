@@ -1,0 +1,77 @@
+<div class="bundled-line-item clearfix <isif condition="${loopstate.last}">last</isif>">
+    <div class="row no-gutters">
+        <div class="col-5 col-md-2 col-lg-4 col-xl-3">
+            <div class="item-image">
+                <img class="product-image"
+                    src="${productLineItem.images['line-item'][0].url}"
+                    alt="${productLineItem.images['line-item'][0].alt}"
+                    title="${productLineItem.images['line-item'][0].title}"
+                >
+            </div>
+        </div>
+
+        <div class="col-7 col-md-10 col-lg-8 col-xl-9">
+            <div class="item-attributes d-flex flex-column flex-md-row flex-lg-column flex-xl-row">
+                <div class="product-card-body">
+                    <div class="line-item-header">
+                        <div class="line-item-name"><h6>${productLineItem.productName}</h6></div>
+                    </div>
+                    <isif condition="${productLineItem.extendedName}">
+                        <p class="extended-name">${productLineItem.extendedName}</p>
+                    </isif>
+                    <p><strong>${Resource.msg('label.itemnumber', 'cart', null)}:</strong> ${productLineItem.id}</p>
+                    <isloop items="${productLineItem.variationAttributes}" var="attribute">
+                        <p class="line-item-attributes">${attribute.displayName}: ${attribute.displayValue}</p>
+                    </isloop>
+                    <isloop items="${productLineItem.options}" var="option">
+                        <isif condition="${!!option}" />
+                            <div class="lineItem-options-values" data-option-id="${option.optionId}" data-value-id="${option.selectedValueId}">
+                                <p class="line-item-attributes">${option.displayName}</p>
+                            </div>
+                        </isif>
+                    </isloop>
+                </div>
+                <div class="product-card-footer">
+                    <div class="row bonus-footer-info">
+                        <iscomment>REMOVED: item price</iscomment>
+                        <!--- quantity --->
+                        <div class="col-12 col-md-6 line-item-quantity">
+                            <p class="line-item-price-info">${Resource.msg('field.selectquantity','cart',null)}<span class="d-md-none">:</span>
+                            </p>
+                            <p><isprint value="${productLineItem.quantity}" formatter="#"/></p>
+                        </div>
+                        <div class="col-12 col-md-6 line-item-total-price">
+                            <p class="line-item-price-info">
+                                <span class="d-md-none">${Resource.msg('label.total.price','cart',null)}:</span>
+                                <span class="d-none d-md-inline">${Resource.msg('label.total.totalprice','cart',null)}</span>
+                            </p>
+                            <div class="price">
+                                <div class="pricing line-item-total-price-amount item-total-${productLineItem.UUID}">
+                                    ${productLineItem.priceTotal.price}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iscomment> Moving update button into line item</iscomment>
+    <isloop items="${lineItem.discountLineItems}" var="discountLineItem" status="loopstatus">
+        <isif condition="${loopstate.index == loopstatus.index}">
+            <div
+                class="card bonus-product-button"
+                data-duuid="${discountLineItem.uuid}"
+                data-pliuuid="${discountLineItem.pliuuid}"
+                data-maxpids="${discountLineItem.maxpids}"
+                data-pageStart="0"
+                data-pageSize="0"
+                data-url="${discountLineItem.url}"
+            >
+                <button class="btn btn-outline-secondary">${discountLineItem.msg}</button>
+            </div>
+        </isif>
+    </isloop>
+</div>

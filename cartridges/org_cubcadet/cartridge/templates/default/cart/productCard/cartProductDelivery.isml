@@ -1,0 +1,161 @@
+<isset name="productId" value="${pdict.productId}" scope="page" />
+<isscript>
+    var bsHelper = require('org_mtd_ma/cartridge/scripts/utils/ButtonStateHelper');
+    var storeMgr = require('dw/catalog/StoreMgr');
+    var dealerId = storeMgr.getStoreIDFromSession();
+    var dealer = storeMgr.getStore(dealerId);
+    var buttonStates = bsHelper.getDeliveryStates(dealer, productId, 1, true, false);
+    var dealerDeliveryCost = buttonStates.dealerDeliveryCost;
+    // Get Content Assets
+    var dealerDeliveryTime = dw.content.ContentMgr.getContent(buttonStates.dealerDeliveryTime);
+    var pickUpTime = dw.content.ContentMgr.getContent(buttonStates.pickUpTime);
+    var shiptoHomeTime = dw.content.ContentMgr.getContent(buttonStates.shiptoHomeTime);
+    var shiptoHomeCost = buttonStates.shiptoHomeCost;
+</isscript>
+<!--   scenarioID = ${buttonStates.scenarioID} -->
+<div class="where-to-buy where-to-buy--cart-page" data-product-id="${productId}">
+    <div class="where-to-buy__availability">
+        <div class="row no-gutters">
+            <div class="col-auto mr-1">
+                <span class="where-to-buy__availability__title">
+                    ${Resource.msg('dealer.wheretobuy.availability', 'dealer', null)}:
+                </span>
+            </div>
+            <div class="col">
+                <isif condition="${buttonStates.isDealerDeliverySelected}">
+                    <span class="where-to-buy__availability__time">
+                        ${Resource.msg('dealer.wheretobuy.DeliveryIn', 'dealer', null)}
+                        <isprint value="${dealerDeliveryTime.custom.body}" encoding="off" />
+                    </span>
+                    <isif condition="${buttonStates.findDelivery}">
+                        <button type="button" class="btn-link where-to-buy__availability__dealer-find" data-toggle="modal" data-target="#dealerSelectorModal" data-event-type="findDeliveryOption">
+                            ${Resource.msg('dealer.tagline.finddeliveryoptions.msg', 'dealer', null)}
+                        </button>
+                    </isif>
+                <iselseif condition="${buttonStates.isStorePickupSelected}">
+                    <span class="where-to-buy__availability__time">
+                        ${Resource.msg('dealer.wheretobuy.pickUpIn', 'dealer', null)}
+                        <isprint value="${pickUpTime.custom.body}" encoding="off" />
+                    </span>
+                    <isif condition="${buttonStates.findDelivery}">
+                        <button type="button" class="btn-link where-to-buy__availability__dealer-find" data-toggle="modal" data-target="#dealerSelectorModal" data-event-type="findDeliveryOption">
+                            ${Resource.msg('dealer.tagline.finddeliveryoptions.msg', 'dealer', null)}
+                        </button>
+                    </isif>
+                <iselseif condition="${buttonStates.isShiptoHomeSelected}">
+                    <span class="where-to-buy__availability__time">
+                        ${Resource.msg('dealer.wheretobuy.shipToHomeIn', 'dealer', null)}
+                        <isprint value="${shiptoHomeTime.custom.body}" encoding="off" />
+                    </span>
+                    <isif condition="${buttonStates.seeDetailsLink}">
+                        <div class="where-to-buy__availability__more">
+                            <span class="where-to-buy__availability__more__info">
+                                ${Resource.msg('dealer.wheretobuy.noteSomeAssemblyRequired', 'dealer', null)}
+                            </span>
+                            <a class="where-to-buy__availability__more__link" data-toggle="modal" data-target="#seeDetailsModal" href="#">
+                                ${Resource.msg('dealer.wheretobuy.seeDetails', 'dealer', null)}
+                            </a>
+                        </div>
+                    </isif>
+                </isif>
+            </div>
+        </div>
+    </div>
+
+    <div class="where-to-buy__options" id="deliveryMethods">
+        <div id="dealer-delivery"
+            class="where-to-buy__option where-to-buy__option--dealer-delivery ${buttonStates.dealerDeliveryClasses}"
+            data-set-shipping-method-url="${URLUtils.https('Dealer-CartSetShippingMethod', 'method', 'dealer-delivery')}"
+        >
+            <div class="where-to-buy__option__icon-wrap">
+                <i class="where-to-buy__option__icon"></i>
+            </div>
+            <div class="where-to-buy__option__title">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.dealerDelivery', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__subtitle">
+                <span class="where-to-buy__option__subtitle__available">
+                    ${Resource.msg('dealer.wheretobuy.arrivesIn', 'dealer', null)}
+                    <isprint value="${dealerDeliveryTime.custom.body}" encoding="off" />
+                </span>
+                <span class="where-to-buy__option__subtitle__unavailable">
+                    ${Resource.msg('dealer.wheretobuy.unavailable', 'dealer', null)}
+                </span>
+            </div>
+            <isif condition="${dealerDeliveryCost > 0}">
+                <div class="where-to-buy__option__cost">
+                    <span>
+                        <isprint value="${Resource.msg('dealer.home.delivery.dollar', 'dealer', null)}" /><isprint value="${dealerDeliveryCost}" formatter="#" />
+                    </span>
+                </div>
+            </isif>
+            <div class="where-to-buy__option__badge">
+                <i class="where-to-buy__option__badge__icon"></i>
+            </div>
+        </div>
+
+        <div id="in-store-pickup"
+            class="where-to-buy__option where-to-buy__option--in-store-pickup ${buttonStates.storePickupDeliveryClasses}"
+            data-set-shipping-method-url="${URLUtils.https('Dealer-CartSetShippingMethod', 'method', 'dealer-pickup')}"
+        >
+            <div class="where-to-buy__option__icon-wrap">
+                <i class="where-to-buy__option__icon"></i>
+            </div>
+            <div class="where-to-buy__option__title">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.inStorePickUp', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__subtitle">
+                <span class="where-to-buy__option__subtitle__available">
+                    ${Resource.msg('dealer.wheretobuy.availableIn', 'dealer', null)}
+                    <isprint value="${pickUpTime.custom.body}" encoding="off" />
+                </span>
+                <span class="where-to-buy__option__subtitle__unavailable">
+                    ${Resource.msg('dealer.wheretobuy.unavailable', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__cost">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.free', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__badge">
+                <i class="where-to-buy__option__badge__icon"></i>
+            </div>
+        </div>
+
+        <div id="ship-to-home"
+            class="where-to-buy__option where-to-buy__option--ship-to-home ${buttonStates.shiptoHomeDeliveryClasses}"
+            data-set-shipping-method-url="${URLUtils.https('Dealer-CartSetShippingMethod', 'method', 'standard')}"
+        >
+            <div class="where-to-buy__option__icon-wrap">
+                <i class="where-to-buy__option__icon"></i>
+            </div>
+            <div class="where-to-buy__option__title">
+                <span>
+                    ${Resource.msg('dealer.wheretobuy.shipToHome', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__subtitle">
+                <span class="where-to-buy__option__subtitle__available">
+                    ${Resource.msg('dealer.wheretobuy.shipsIn', 'dealer', null)}
+                    <isprint value="${shiptoHomeTime.custom.body}" encoding="off" />
+                </span>
+                <span class="where-to-buy__option__subtitle__unavailable">
+                    ${Resource.msg('dealer.wheretobuy.unavailable', 'dealer', null)}
+                </span>
+            </div>
+            <div class="where-to-buy__option__cost">
+                <span>
+                    <isprint value="${shiptoHomeCost}" encoding="off" />
+                </span>
+            </div>
+            <div class="where-to-buy__option__badge">
+                <i class="where-to-buy__option__badge__icon"></i>
+            </div>
+        </div>
+    </div>
+</div>

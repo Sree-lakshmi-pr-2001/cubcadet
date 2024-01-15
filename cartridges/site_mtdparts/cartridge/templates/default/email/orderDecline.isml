@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<isscript>
+    var URLUtils = require('dw/web/URLUtils');
+</isscript>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x-apple-disable-message-reformatting">
+</head>
+
+<body>
+  <table  style="max-width: 640px" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff">
+    <tr>
+      <td align="center" valign="top">
+        <table width="640" style="width: 640px" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tbody>
+            <tr>
+              <td width="100%" valign="middle" align="center" bgcolor="#ffffff">
+
+                <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td align="center"><a href="${pdict.homePageUrl}" title="MTD Parts">
+                                  <img
+                                    src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/ef1d92ef-c881-4052-af41-044184493e8d.png"
+                                    alt="MTD Parts" height="120" width="640"
+                                    style="padding: 0; text-align: center; height: 120px; width: 750px; border: 0"></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+
+
+
+
+
+    <tr>
+      <td align="center" valign="top" style="padding-bottom: 5px; padding-top: 14px; background-color: #E2E2E2">
+        <table width="640" style="width: 640px" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tbody>
+            <tr>
+              <td align="center" valign="top">
+                <table width="640" style="width: 640px" border="0" cellspacing="0" cellpadding="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td width="100%" valign="middle" align="center" bgcolor="#e2e2e2">
+
+                        <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div style="text-align: center">
+                                  <span style="color: rgba(38, 38, 38, 1)"><span
+                                      style="font-family: arial, helvetica, sans-serif"><span
+                                        style="font-size: 22px"><b>${Resource.msg('email.order.decline.process', 'email', null)}</b></span></span></span></div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" valign="top" style="padding: 32px; background-color: rgba(255, 255, 255, 1)">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tbody>
+            <tr>
+
+            </tr>
+
+
+
+            <tr>
+              <td align="center" valign="top">
+                <table width="576" style="width: 576px" border="0" cellspacing="0" cellpadding="0" align="center">
+                  <tbody>
+                    <tr>
+                      <td width="100%" valign="middle" align="center" bgcolor="#ffffff">
+
+                        <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div
+                                  style="font-family: Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 1); text-align: left; margin: 18px 0 0; font-weight: 700; font-size: 28px; line-height: 32px; text-transform: uppercase; padding-bottom: 0">
+                                  ${Resource.msgf('email.msg.order.decline.notprocess', 'email', null, pdict.orderNo)}
+                                </div>
+                                <p
+                                  style="font-family: Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 1) !important; text-align: left; margin: 0; padding: 0; font-weight: 400; font-size: 17px; line-height: 24px">
+                                  <br>
+                                  ${Resource.msgf('email.msg.order.decline.fullname', 'email', null, pdict.customerFirstName)}<br>
+                                  <br>
+                                  ${Resource.msg('email.msg.order.decline.contentone', 'email', null)}<br>
+                                  <br>
+                                  ${Resource.msg('email.msg.order.decline.contenttwo', 'email', null)}
+                                </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 10px">
+                                <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                          <tbody>
+                                            <tr>
+                                              <td valign="top" style="width: 100%; padding-bottom: 3px">
+                                                <table cellpadding="0" cellspacing="0" width="100%"
+                                                  style="min-width: 100%">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td style="padding: 20px 0 0">
+                                                        <table cellpadding="0" cellspacing="0" width="100%"
+                                                          style="background-color: #199422; min-width: 100%">
+                                                          <tbody>
+                                                            <tr>
+                                                              <td style="padding: 20px 20px 10px">
+                                                                <p
+                                                                  style="font-family: Helvetica, Arial, sans-serif; margin: 0; padding: 0; font-weight: 400; font-size: 17px; line-height: 24px; text-align: center; color: #FFFFFF">
+                                                                  <b>${Resource.msg('email.msg.order.decline.support', 'email', null)}</b></p>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                                <table cellpadding="0" cellspacing="0" width="100%"
+                                                  style="background-color: #199422; min-width: 100%">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td style="padding: 4px 20px 20px">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                          <tbody>
+                                                            <tr>
+                                                              <td align="center">
+                                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      <td bgcolor="#000000"
+                                                                        style="border-radius: 0; background-color: #000000">
+                                                                        <a target="_blank"
+                                                                          style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; background-color: #000000; border: 0 solid rgba(0, 0, 0, 0); padding: 12px 20px; border-radius: 0"
+                                                                          href="https://support.mtdparts.com/s/"
+                                                                          title="">${Resource.msg('email.msg.order.decline.help', 'email', null)}</a></td>
+                                                                    </tr>
+                                                                  </tbody>
+                                                                </table>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <table cellspacing="0" cellpadding="0" style="width: 100%">
+                                          <tbody>
+                                            <tr>
+                                              <td valign="top" style="width: 100%; padding-top: 3px"></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" valign="top" style="padding: 0 0 10px 32px; background-color: #E2E2E2">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tbody>
+            <tr>
+              <td height="20" style="font-size: 1px; line-height: 1px">&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td align="center" valign="top">
+                <table width="576" style="width: 576px" border="0" cellspacing="0" cellpadding="0" align="left">
+                  <tbody>
+                    <tr>
+                      <td width="100%" valign="middle" align="center" bgcolor="#e2e2e2">
+
+                        <table cellpadding="0" cellspacing="0" width="100%"
+                          style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 0"><span style="font-size: 9px"><span
+                                    style="font-family: arial, helvetica, sans-serif">${Resource.msg('email.msg.order.decline.noreply', 'email', null)} <a
+                                      href="https://click.mtdgenuineparts.com/?qs=6f8869bac95ff5b444c361baa8926d407f790b80a0823f4e433410b4617e4bba71878e7cdb90d249a7d85312eaeccc06ddbe2a17128b5b36"
+                                      style="color: rgba(0, 0, 0, 1); text-decoration: underline"
+                                      title="send a message">click here</a>
+                                    ${Resource.msg('email.msg.order.decline.phone', 'email', null)} <a
+                                      href="tel:8002696215" title="Call 1-800-269-6215">1-800-269-6215</a>.<br>
+                                    &nbsp;<br>
+                                    ${Resource.msgf('email.msg.order.decline.norepling', 'email', null)}&nbsp;${pdict.customerEmail}${Resource.msgf('email.msg.order.decline.noreplingone', 'email', null)}<br>
+                                    <br>
+                                    ${Resource.msg('email.msg.order.decline.copyright', 'email', null)}<br>
+                                    <br>
+                                    ${Resource.msg('email.msg.order.decline.right', 'email', null)} <a
+                                      href="https://click.mtdgenuineparts.com/?qs=a993fa035865d46355bdafe295fdf58936c3c42e3a4d7ed436c985b4df34bfa263a752fc8a3ab0a5de4df080d52eb3827aaccfad1c4a7dca"
+                                      style="color: rgba(0, 0, 0, 1); text-decoration: underline" target="_blank"
+                                      title="Privacy Policy"><span
+                                        style="color: rgba(0, 0, 0, 1)">PRIVACY</span></a><span
+                                      style="color: rgba(0, 0, 0, 1)"> | </span><a
+                                      href="https://click.mtdgenuineparts.com/?qs=9b8505190d88d8282f7378e2bc06f08e8f3a6c9068405816bc868cee2a6e21831158b783c06b31271267b3c3602d9b04d2c411cfab72d713"
+                                      style="color: rgba(0, 0, 0, 1); text-decoration: underline" target="_blank"
+                                      title="View My Account"><span style="color: rgba(0, 0, 0, 1)">MY
+                                        ACCOUNT</span></a><span style="color: rgba(0, 0, 0, 1)"> | </span><a
+                                      href="https://click.mtdgenuineparts.com/?qs=6f8869bac95ff5b409ea285b44feddac299cf4d6362a60d2ec36650e799acd69b402fac851ea3a1ea561605b891ab6738c368af7c6e504e9"
+                                      style="color: rgba(0, 0, 0, 1); text-decoration: underline" target="_blank"
+                                      title="Visit www.mtdparts.com">
+                                      <span style="color: rgba(0, 0, 0, 1)">MTDPARTS.COM </span></a><span
+                                      style="color: rgba(0, 0, 0, 1)"> | </span><a
+                                      href="https://click.mtdgenuineparts.com/?qs=a993fa035865d4636bc0c86a64e8a42058cdde1fc6314268d870610e31c72df46e7a2d7d482e658343e51b7cea216235e8c7db0ca5195fa2"
+                                      style="color: rgba(0, 0, 0, 1); text-decoration: underline" target="_blank"
+                                      title="unsubscribe"><span
+                                        style="color: rgba(0, 0, 0, 1)">CONTACT</span></a></span></span><br>
+                                &nbsp;</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" width="100%"
+                          style="background-color: rgba(0, 0, 0, 0); min-width: 100%">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 0">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 180px">
+
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <b style="font-size: 11px"><span
+                                            style="font-family: arial, helvetica, sans-serif">CONNECT:&nbsp;</span></b>
+                                      </td>
+                                      <td>
+                                        <a href="https://click.mtdgenuineparts.com/?qs=a993fa035865d4632018e095cc231d78a2454c1c629d4d5244bfeadc881b2059cad45473a2fdad37db1542d42b8d9274773fbfb2e97ada07"
+                                          title="Facebook"><img alt="Facebook" height="25"
+                                            src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/42db170c-9eeb-4e6e-8ebb-fb1884a4feb8.png"
+                                            style="padding: 0; text-align: center; height: 25px; width: 25px; border: 0"
+                                            width="25"></a></td>
+                                      <td>
+                                        <a href="https://click.mtdgenuineparts.com/?qs=a993fa035865d463e87834e48e10b08af962fd0faf916c1ca2c8f1dc61675c1f6c3e08b5c34fc83ebf4ab91f403fc341cdea48669a6ecd46"
+                                          title="Twitter"><img alt="Twitter" height="25"
+                                            src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/40cbb412-f370-42d4-9235-c746b9bdda39.png"
+                                            style="padding: 0; text-align: center; height: 25px; width: 25px; border: 0"
+                                            width="25"></a></td>
+                                      <td>
+                                        <a href="https://click.mtdgenuineparts.com/?qs=a993fa035865d46392f5e97e016027ed0aa51be4a97eb6ad9549ff7e48c429817019ac065c7e9e13e2698b887b7b1ffff8ed7037826ca5ba"
+                                          title="YouTube"><img alt="YouTube" height="25"
+                                            src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/e949fba4-f396-4aa2-b8a2-8174bb50514b.png"
+                                            style="padding: 0; text-align: center; height: 25px; width: 25px; border: 0"
+                                            width="25"></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+              </td>
+
+            </tr>
+
+
+
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

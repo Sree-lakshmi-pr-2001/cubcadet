@@ -1,0 +1,48 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/content.css');
+        assets.addJs('/js/paidDealers.js');
+        var bannerImg = dw.content.ContentMgr.getContent('content-page-banner');
+    </isscript>
+    <isinclude template="/components/modules" />
+
+    <div id="featuredDealer" class="paid-dealers" data-alert-msg="${Resource.msg('paiddealer.alertmessage', 'storeLocator', null)}" data-url="${URLUtils.url('Stores-FeaturedDealer')}" data-featured-dealer="${pdict.featuredDealer}">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!---Breadcrumbs--->
+                    <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+                </div>
+            </div>
+        </div>
+        <div class="hero-caro">
+            <div class="hero">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col d-flex col-12 col-lg-8 order-lg-2 order-1">
+                            <iscontentasset aid="featured-local-dealers-hero" />
+                        </div>
+                        <div class="text-block col d-flex col-12 col-lg-4 order-1 order-lg-1">
+                        <div class="bg-secondary">
+                            <div class="intro-block d-none d-lg-block"><span class="intro1 label-1" id="dealerMsg">${Resource.msg('paiddealer.loadingtext', 'storeLocator', null)}</span></div>
+                            <div class="display-1 card-title underline-left-light">
+                                <h2 id="dealerName"></h2>
+                            </div>
+                            <div class="copy-block">
+                                <div class="p"><a id="dealerPhone" href=""></a></div>
+                                <div class="p" id="address1"></div>
+                                <div class="p" id="address2"></div>
+                            </div>
+                            <button class="btn btn-primary" id="dealerWebsite" data-target="#survey-modal" data-toggle="modal" id="btn-survey-modal" type="button">${Resource.msg('button.viewdealer', 'storeLocator', null)}</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container content-asset-container">
+            <iscontentasset aid="featured-local-dealers" />
+        </div>
+    </div>
+</isdecorate>

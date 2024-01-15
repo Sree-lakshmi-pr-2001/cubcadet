@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="implementation-homepage-hero-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetHeroCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-hero-left-troybilt-sample"/>
+                <content-asset content-id="home-hero-center-troybilt-sample"/>
+                <content-asset content-id="home-hero-right-troybilt-sample"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+    <slot-configuration slot-id="home-slot-1" context="global" configuration-id="implementation-sample-category-cards-home" assigned-to-site="true">
+        <template>slots/category/categoryListNav.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Shop Our Products&lt;/h2&gt;
+&lt;p&gt;Every Troy-Bilt® product is tested for thousands of hours so it works every time you need it.&lt;/p&gt;</callout-msg>
+        <content>
+            <categories>
+                <category category-id="lawn-and-garden-tractors"/>
+                <category category-id="zero-turn-mowers"/>
+                <category category-id="walk-behind-mowers"/>
+                <category category-id="self-propelled-mowers"/>
+                <category category-id="wide-area-mowers"/>
+                <category category-id="tillers"/>
+                <category category-id="cultivators"/>
+                <category category-id="pressure-washers"/>
+                <category category-id="generators"/>
+                <category category-id="trimmers"/>
+                <category category-id="leaf-blowers"/>
+                <category category-id="edgers"/>
+            </categories>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="implementation-sample-promo-product-support" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-promo-right-troybilt-sample"/>
+                <content-asset content-id="home-product-support"/>
+                <content-asset content-id="home-product-support-service"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="ask-troy-slot" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-secondary p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;p&gt;Ask Troy Slot&lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="implementation-shop-category-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Make Fall Clean-Up A Breeze&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="homepage-shop-category-tile-troybilt-sample-01"/>
+                <content-asset content-id="homepage-shop-category-tile-troybilt-sample-02"/>
+                <content-asset content-id="homepage-shop-category-tile-troybilt-sample-01"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+    <slot-configuration slot-id="home-slot-5" context="global" configuration-id="implementation-promo-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-promo-left-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="gardening" configuration-id="implementation-hero-carousel-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetHeroCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-promo-right-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="lawn-mowers" configuration-id="implementation-hero-carousel-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetHeroCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-promo-right-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="riding-lawn-mowers" configuration-id="implementation-hero-carousel-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetHeroCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="hero-promo-right-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-mowers" configuration-id="implementation-subcategory-lifestyle-group-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Show Lawn Mowers&lt;/h2&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="gardening" configuration-id="implementation-subcategory-lifestyle-group-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-mowers" configuration-id="implementation-subcategory-tile-group-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="pll-product-line-group-troybilt-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-05-14 07:42:07" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 bg-secondary text-white p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;p&gt;Ask Troy Slot&lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-and-garden-equipment" configuration-id="Content Card Group" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="26B-FFH5710"/>
+                <product product-id="24A-67M4710"/>
+                <product product-id="24BG55M1710"/>
+                <product product-id="25B-262J710"/>
+                <product product-id="21A-62M8710"/>
+                <product product-id="21B-34M8710"/>
+                <product product-id="41ADZ27C912"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="Content Card Group" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="33AA27JD710"/>
+                <product product-id="17AIEAC5010"/>
+                <product product-id="12ABB2MW710"/>
+                <product product-id="22BSBDAE710"/>
+                <product product-id="13A6A1CT056"/>
+                <product product-id="12ACW62R710"/>
+                <product product-id="14A-3JM-010"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="riding-lawn-mowers" configuration-id="implementation-product-recommendations" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <products>
+                <product product-id="13A6A1BS066"/>
+                <product product-id="13A277BS066"/>
+                <product product-id="13A726JD066"/>
+                <product product-id="13A721JD066"/>
+                <product product-id="13AJA1BZ066"/>
+                <product product-id="13AJA1BT066"/>
+                <product product-id="17ANDALD066"/>
+                <product product-id="17ARCBDT066"/>
+                <product product-id="17ANDALD066"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="lawn-mowers" configuration-id="implementation-recommendations-sample" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="13A6A1BS066"/>
+                <product product-id="13A277BS066"/>
+                <product product-id="13A726JD066"/>
+                <product product-id="13A721JD066"/>
+                <product product-id="13AJA1BZ066"/>
+                <product product-id="13AJA1BT066"/>
+                <product product-id="17ANDALD066"/>
+                <product product-id="17ARCBDT066"/>
+                <product product-id="17ANDALD066"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="gardening" configuration-id="implementation-recommendations-sample" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Featured Products&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="13A6A1BS066"/>
+                <product product-id="13A277BS066"/>
+                <product product-id="13A726JD066"/>
+                <product product-id="13A721JD066"/>
+                <product product-id="13AJA1BZ066"/>
+                <product product-id="13AJA1BT066"/>
+                <product product-id="17ANDALD066"/>
+                <product product-id="17ARCBDT066"/>
+                <product product-id="17ANDALD066"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="lawn-mowers" configuration-id="product-support" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-product-support-service"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+</slot-configurations>

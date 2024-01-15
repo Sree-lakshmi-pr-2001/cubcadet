@@ -1,0 +1,27 @@
+<isloop items="${lineItem.bundledProductLineItems}" var="bundledLineItem" status="loopstatus">
+    <div class="bundled-line-item clearfix">
+
+        <div class="bundle-line-item-details">
+            <div class="item-attributes">
+                <div class="line-item-name">
+                    <span>${bundledLineItem.productName}</span>
+                </div>
+                <isif condition="${bundledLineItem.extendedName}">
+                    <p class="extended-name">${bundledLineItem.extendedName}</p>
+                </isif>
+                <p><strong>${Resource.msg('label.itemnumber', 'cart', null)}:</strong> ${bundledLineItem.id}</p>
+                <isloop items="${bundledLineItem.variationAttributes}" var="attribute">
+                    <p class="line-item-attributes">${attribute.displayName}: ${attribute.displayValue}</p>
+                </isloop>
+                <div class="item-options">
+                    <isloop items="${bundledLineItem.options}" var="option">
+                        <div class="line-item-option">${option}</div>
+                    </isloop>
+                </div>
+            </div>
+        </div>
+    </div>
+    <isif condition="${loopstatus.last && (miniCart || pdict.currentStage.length > 0)}">
+        <isinclude template="checkout/productCard/productCardQtyPrice"/>
+    </isif>
+</isloop>

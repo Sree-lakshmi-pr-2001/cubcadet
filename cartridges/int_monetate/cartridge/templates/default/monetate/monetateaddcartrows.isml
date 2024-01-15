@@ -1,0 +1,21 @@
+<isinclude template="/components/modules"/>
+<isset name="monetateObject" value="${require('~/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+<isif condition="${monetateObject.getMonetateEnabled()}">
+    <script type="text/javascript">
+        /*
+        *   Writing cart rows to the temporary storage
+        */
+        var cartRowsJson = '<isprint value="${JSON.stringify(require('~/cartridge/scripts/monetate/libMonetate').getCartRows())}" encoding="jssource" />';
+        window.monetateData.addCartRows = JSON.parse(cartRowsJson);
+    </script>
+    
+    <isif condition="${pdict.ajax}">
+        <iscomment>Tracking PDP and CLP/PLP/Search pages after the add to cart event</iscomment>    
+        <script type="text/javascript">
+            if(["search", "index"].indexOf(monetateData.setPageType) != -1) monetateData.trackPLPPage();
+            if(monetateData.setPageType == "category") monetateData.trackCLPPage();
+            if(monetateData.setPageType == "product") monetateData.trackPDPPage();
+            if(monetateData.setPageType == "unknown") monetateData.trackUnknownPage();
+        </script>
+    </isif>
+</isif>

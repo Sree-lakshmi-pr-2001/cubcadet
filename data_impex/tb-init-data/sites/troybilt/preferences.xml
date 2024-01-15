@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="AccountNumberRetentionDays">30</preference>
+            <preference preference-id="AddProductToBasketBehavior">IncrementQuantities</preference>
+            <preference preference-id="CouponGeneratorIncludeDashes">true</preference>
+            <preference preference-id="CouponGeneratorIncludeVowels">true</preference>
+            <preference preference-id="EnableSiteOrderNumbers">true</preference>
+            <preference preference-id="IntegrationOrderCenterIncludeSite">true</preference>
+            <preference preference-id="SiteCatalog">troybilt-sales-catalog</preference>
+            <preference preference-id="SiteCurrencies">USD</preference>
+            <preference preference-id="SiteCustomerList">troybilt</preference>
+            <preference preference-id="SiteDefaultLocale">default</preference>
+            <preference preference-id="SiteInventoryList">inventory_troybilt_US</preference>
+            <preference preference-id="SiteLibrary">troybilt</preference>
+            <preference preference-id="SiteLocales">default</preference>
+            <preference preference-id="SitePriceBooks">troybilt-usd-list-prices:troybilt-usd-sale-prices</preference>
+            <preference preference-id="SiteTimezone">Etc/UTC</preference>
+            <preference preference-id="StorefrontOrderAccess">customer_or_session_match</preference>
+            <preference preference-id="StorefrontOrderFiltering">true</preference>
+            <preference preference-id="StorefrontURLsEnabled">true</preference>
+        </all-instances>
+        <development>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </development>
+        <staging>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </staging>
+        <production>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </production>
+    </standard-preferences>
+      <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="bvAdminEmail_C2013">avolosogar@lyonscg.com</preference>
+            <preference preference-id="bvCloudSEOKey_C2013">cubcadet-12ce0062347ed7f40b4bd4e86eca342c</preference>
+            <preference preference-id="bvCustomerName_C2013">cubcadet</preference>
+            <preference preference-id="bvDeploymentZone_C2013">copy_for_staging</preference>
+            <preference preference-id="bvEnableAA_C2013">false</preference>
+            <preference preference-id="bvEnableBVPixel_C2013">true</preference>
+            <preference preference-id="bvEnableCloudSEO_C2013">true</preference>
+            <preference preference-id="bvEnableInlineRatings_C2013">hosted</preference>
+            <preference preference-id="bvEnableRR_C2013">true</preference>
+            <preference preference-id="bvEnvironment_C2013">Staging</preference>
+            <preference preference-id="bvLocaleMapping_C2013">
+                <value>en_US:en_US</value>
+                <value>default:en_US</value>
+            </preference>
+            <preference preference-id="bvQuickViewRatingsType_C2013">inlineratings</preference>
+            <preference preference-id="cartfulSolutionsEnabled">true</preference>
+            <preference preference-id="chaseMerchantId">010234</preference>
+            <preference preference-id="enablePromoCalloutMessagesProductTile">true</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="googleTagManagerId">GTM-T9P4SN</preference>
+            <preference preference-id="mapAPI">AIzaSyDPVcBVePe3uOtYSbu-i9UaU1ET-wveUps</preference>
+            <preference preference-id="mcMID">10959299</preference>
+            <preference preference-id="monetateEnabled">true</preference>
+            <preference preference-id="monetateImageEndCapSelector">small</preference>
+            <preference preference-id="monetateImageProductSelector">large</preference>
+            <preference preference-id="monetateImageSearchSelector">medium</preference>
+            <preference preference-id="monetateJSUrl">https://se.monetate.net/js/2/a-7a982b2a/p/cubcadet.com/custom.js</preference>
+            <preference preference-id="monetatePriceBookId">troybilt-usd-list-prices</preference>
+            <preference preference-id="mtdAddressValidationEnabled">true</preference>
+            <preference preference-id="mtdDealerFulfillmentEnabled">true</preference>
+            <preference preference-id="mtdLiveChatEnabled">true</preference>
+            <preference preference-id="mtdManualsBrandCode">02</preference>
+            <preference preference-id="mtdSuppressDealerConfirmationEmail">true</preference>
+            <preference preference-id="numTilePromos">4</preference>
+            <preference preference-id="pageContextMap">{
+    "Product-Show": {
+        "ns": "product",
+        "type": "product",
+        "title": "Product Detail"
+    },
+    "Home-Show": {
+        "ns": "storefront",
+        "type": "storefront",
+        "title": "Storefront"
+    },
+    "Cart-Show": {
+        "ns": "cart",
+        "type": "Cart",
+        "title": "Cart"
+    },
+    "Search-Show": {
+        "ns": "search",
+        "type": "search",
+        "title": "Search"
+    },
+    "Order-Confirm": {
+        "ns": "orderconfirmation",
+        "type": "orderconfirmation",
+        "title": "Order Confirmation"
+    },
+    "Checkout-Begin": {
+        "ns": "checkout",
+        "type": "checkout",
+        "title": "Checkout"
+    }
+}</preference>
+        </development>
+        <staging>
+          <preference preference-id="bvCloudSEOKey_C2013">cubcadet-12ce0062347ed7f40b4bd4e86eca342c</preference>
+          <preference preference-id="bvCustomerName_C2013">cubcadet</preference>
+          <preference preference-id="bvDeploymentZone_C2013">copy_for_staging</preference>
+          <preference preference-id="bvEnableAA_C2013">false</preference>
+          <preference preference-id="bvEnableBVPixel_C2013">true</preference>
+          <preference preference-id="bvEnableCloudSEO_C2013">true</preference>
+          <preference preference-id="bvEnableInlineRatings_C2013">hosted</preference>
+          <preference preference-id="bvEnableRR_C2013">true</preference>
+          <preference preference-id="bvEnvironment_C2013">Staging</preference>
+          <preference preference-id="bvLocaleMapping_C2013">
+              <value>en_US:en_US</value>
+              <value>default:en_US</value>
+          </preference>
+          <preference preference-id="bvQuickViewRatingsType_C2013">inlineratings</preference>
+          <preference preference-id="cartfulSolutionsEnabled">true</preference>
+          <preference preference-id="chaseMerchantId">010234</preference>
+          <preference preference-id="enablePromoCalloutMessagesProductTile">true</preference>
+          <preference preference-id="enableStorePickUp">false</preference>
+          <preference preference-id="googleMerchantFileName">googleFeed</preference>
+          <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+          <preference preference-id="googleTagManagerId">GTM-T9P4SN</preference>
+          <preference preference-id="mcMID">10959299</preference>
+          <preference preference-id="monetateEnabled">true</preference>
+          <preference preference-id="monetateImageEndCapSelector">small</preference>
+          <preference preference-id="monetateImageProductSelector">large</preference>
+          <preference preference-id="monetateImageSearchSelector">medium</preference>
+          <preference preference-id="monetateJSUrl">https://se.monetate.net/js/2/a-7a982b2a/p/cubcadet.com/custom.js</preference>
+          <preference preference-id="monetatePriceBookId">troybilt-usd-list-prices</preference>
+          <preference preference-id="mtdAddressValidationEnabled">true</preference>
+          <preference preference-id="mtdDealerFulfillmentEnabled">true</preference>
+          <preference preference-id="mtdLiveChatEnabled">true</preference>
+          <preference preference-id="mtdManualsBrandCode">02</preference>
+          <preference preference-id="mtdSuppressDealerConfirmationEmail">true</preference>
+          <preference preference-id="numTilePromos">4</preference>
+          <preference preference-id="pageContextMap">{
+  "Product-Show": {
+      "ns": "product",
+      "type": "product",
+      "title": "Product Detail"
+  },
+  "Home-Show": {
+      "ns": "storefront",
+      "type": "storefront",
+      "title": "Storefront"
+  },
+  "Cart-Show": {
+      "ns": "cart",
+      "type": "Cart",
+      "title": "Cart"
+  },
+  "Search-Show": {
+      "ns": "search",
+      "type": "search",
+      "title": "Search"
+  },
+  "Order-Confirm": {
+      "ns": "orderconfirmation",
+      "type": "orderconfirmation",
+      "title": "Order Confirmation"
+  },
+  "Checkout-Begin": {
+      "ns": "checkout",
+      "type": "checkout",
+      "title": "Checkout"
+  }
+}</preference>
+        </staging>
+        <production>
+            <preference preference-id="OrderVelocityEngineEmail">CommerceSupport@mtdproducts.com</preference>
+            <preference preference-id="OrderVelocityEngineJSON">{
+  "brandedDomain": false,
+  "splitByProcessor": false,
+  "default": {
+    "default": {
+      "0": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "1": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "2": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "3": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "4": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "5": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "6": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "7": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "8": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "9": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "10": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "11": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "12": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "13": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "14": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "15": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "16": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "17": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "18": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "19": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "20": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "21": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "22": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "23": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      }
+    }
+  }
+}</preference>
+            <preference preference-id="OrderVelocityEngineSendingEmail">production-jobs@cubcadet.com</preference>
+            <preference preference-id="bvAdminEmail_C2013">avolosogar@lyonscg.com</preference>
+            <preference preference-id="bvCloudSEOKey_C2013">cubcadet-12ce0062347ed7f40b4bd4e86eca342c</preference>
+            <preference preference-id="bvCustomerName_C2013">cubcadet</preference>
+            <preference preference-id="bvDeploymentZone_C2013">copy_for_staging</preference>
+            <preference preference-id="bvEnableAA_C2013">false</preference>
+            <preference preference-id="bvEnableBVPixel_C2013">true</preference>
+            <preference preference-id="bvEnableCloudSEO_C2013">true</preference>
+            <preference preference-id="bvEnableInlineRatings_C2013">hosted</preference>
+            <preference preference-id="bvEnableRR_C2013">true</preference>
+            <preference preference-id="bvEnvironment_C2013">Staging</preference>
+            <preference preference-id="bvLocaleMapping_C2013">
+                <value>en_US:en_US</value>
+                <value>default:en_US</value>
+            </preference>
+            <preference preference-id="bvQuickViewRatingsType_C2013">inlineratings</preference>
+            <preference preference-id="cartfulSolutionsEnabled">true</preference>
+            <preference preference-id="chaseMerchantId">010234</preference>
+            <preference preference-id="enablePromoCalloutMessagesProductTile">true</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="googleTagManagerId">GTM-T9P4SN</preference>
+
+            <preference preference-id="mcMID">10959299</preference>
+            <preference preference-id="monetateEnabled">true</preference>
+            <preference preference-id="monetateImageEndCapSelector">small</preference>
+            <preference preference-id="monetateImageProductSelector">large</preference>
+            <preference preference-id="monetateImageSearchSelector">medium</preference>
+            <preference preference-id="monetateJSUrl">https://se.monetate.net/js/2/a-7a982b2a/p/cubcadet.com/custom.js</preference>
+            <preference preference-id="monetatePriceBookId">troybilt-usd-list-prices</preference>
+            <preference preference-id="mtdAddressValidationEnabled">true</preference>
+            <preference preference-id="mtdDealerFulfillmentEnabled">true</preference>
+            <preference preference-id="mtdLiveChatEnabled">true</preference>
+            <preference preference-id="mtdManualsBrandCode">02</preference>
+            <preference preference-id="mtdSuppressDealerConfirmationEmail">true</preference>
+            <preference preference-id="numTilePromos">4</preference>
+            <preference preference-id="pageContextMap">{
+    "Product-Show": {
+        "ns": "product",
+        "type": "product",
+        "title": "Product Detail"
+    },
+    "Home-Show": {
+        "ns": "storefront",
+        "type": "storefront",
+        "title": "Storefront"
+    },
+    "Cart-Show": {
+        "ns": "cart",
+        "type": "Cart",
+        "title": "Cart"
+    },
+    "Search-Show": {
+        "ns": "search",
+        "type": "search",
+        "title": "Search"
+    },
+    "Order-Confirm": {
+        "ns": "orderconfirmation",
+        "type": "orderconfirmation",
+        "title": "Order Confirmation"
+    },
+    "Checkout-Begin": {
+        "ns": "checkout",
+        "type": "checkout",
+        "title": "Checkout"
+    }
+  }</preference>
+        </production>
+    </custom-preferences>
+</preferences>
+

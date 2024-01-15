@@ -1,0 +1,45 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="components/modules" />
+    <isscript>
+        var ContentMgr = dw.content.ContentMgr;
+        var bannerImg = ContentMgr.getContent('error-banner');
+        var promoContent = ContentMgr.getContent('error-page-content');
+    </isscript>
+
+    <iscomment>
+        content asset inserts a style tag to bring in a configurable image
+    </iscomment>
+    <isif condition="${!empty(bannerImg.custom.body) && bannerImg.online}">
+        <isprint value="${bannerImg.custom.body}" encoding="off" />
+        <div class="content-banner">
+            <div class="hero main-banner">
+                <div class="hero-text hero-text-left">
+                    <h1 class="display-1">${Resource.msg('heading.error.general', 'error', null)}</h1>
+                </div>
+            </div>
+        </div>
+        <iselse>
+            <div class="hero error-hero">
+                <h1 class="page-title">${Resource.msg('heading.error.general', 'error', null)}</h1>
+            </div>
+    </isif>
+
+    <div class="container">
+        <h2 class='text-center error-message'>${Resource.msg('message.page.not.found', 'error', null)}</h2>
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <a href="${URLUtils.url('Home-Show')}" class="btn btn-primary btn-block error continue-shopping" role="button"
+                   >
+                    ${Resource.msg('button.continue.shopping', 'confirmation', null)}
+                </a>
+            </div>
+        </div>
+
+
+        <isif condition="${!empty(promoContent.custom.body) && promoContent.online}">
+            <div class="error-page-content">
+                <isprint value="${promoContent.custom.body}" encoding="off" />
+            </div>
+        </isif>
+    </div>
+</isdecorate>

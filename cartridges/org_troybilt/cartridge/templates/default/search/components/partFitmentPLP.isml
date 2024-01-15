@@ -1,0 +1,69 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addCss('/css/_partFitment.css');
+
+    var enableModelFilterOnSearchPage = dw.system.Site.getCurrent().getCustomPreferenceValue('enableModelFilterOnSearchPage');
+</isscript>
+<isinclude template="/components/modules" sf-toolkit="off" />
+<isset name="fitsOnModelCategoryEnable" value="${pdict.productSearch.apiProductSearch.category && pdict.productSearch.apiProductSearch.category.custom.fitsOnModelEnable || false}" scope="page"/>
+
+<isif condition="${fitsOnModelCategoryEnable}">
+    <isset name="searchCategoryURL" value="${URLUtils.url('Search-Show', 'cgid', pdict.productSearch.category.id)}" scope="page" />
+</isif>
+
+<div class="${fitsOnModelCategoryEnable || enableModelFilterOnSearchPage && !pdict.productSearch.apiProductSearch.category && pdict.productSearch.searchKeywords.length > 0 ? "col-12 px-0 sbn" : "d-none"}">
+    <div class="part-fitment-wrapper d-flex flex-column align-items-center ${pdict.CurrentHttpParameterMap.willNotFit.value ? 'not-fit' : ''} ${pdict.willFitsOnModel ? "will-fit" : ""}">
+        <div class="part-fitment-title">
+            <h6>
+                <iscontentasset aid="part-fitment-component-title-default" />
+            </h6>
+        </div>
+
+        <form class="part-fitment-forms need-validation w-100 mt-2" action="${fitsOnModelCategoryEnable ? searchCategoryURL : URLUtils.url('Search-Show')}" method="get" role="search">
+            <div class="part-fitment-label ${willFitsOnModel || pdict.CurrentHttpParameterMap.willNotFit.value ? 'text-center' : ''}">
+                <isif condition="${willFitsOnModel || pdict.CurrentHttpParameterMap.willNotFit.value}">
+                    <span class="part-fitment-label-text">${Resource.msg('viewing.products.that.fits', 'partFitment', null)}</span>
+                <iselse/>
+                    <iscontentasset aid="part-fitment-component-description-fit" />
+                </isif>
+            </div>
+            <div class="input-group part-fitment-input-group text-center mt-1">
+                <input
+                    name="fitsOnModel"
+                    type="search"
+                    class="part-fitment-input form-control text-center p-1 ${pdict.CurrentHttpParameterMap.willNotFit.value && 'is-invalid'}"
+                    value="${pdict.willFitsOnModel && pdict.CurrentHttpParameterMap.fitsOnModel.value ? "#" + pdict.CurrentHttpParameterMap.fitsOnModel.value
+                                : pdict.CurrentHttpParameterMap.willNotFit.value ?  pdict.CurrentHttpParameterMap.willNotFit.value
+                                : ''}"
+                    ${willFitsOnModel || pdict.CurrentHttpParameterMap.willNotFit.value ? 'readonly': ''}
+                    required
+                />
+                <isif condition="${!fitsOnModelCategoryEnable}">
+                    <input name="q" value="${pdict.productSearch.searchKeywords}" type="hidden" scope="page"/>
+                </isif>
+
+                <isif condition="${!willFitsOnModel}">
+                    <span class="ml-1">
+                        <button class="btn btn-secondary content-search d-flex align-items-center" type="submit">${Resource.msg('fits.on.model.button.submit', 'partFitment', null)}</button>
+                    </span>
+                </isif>
+                <div class="${pdict.CurrentHttpParameterMap.willNotFit.value ? 'invalid-feedback text-danger' : 'd-none'}">
+                    ${Resource.msg('fits.on.model.not.verified', 'partFitment', null)}
+                </div>
+                <isif condition="${willFitsOnModel || pdict.CurrentHttpParameterMap.willNotFit.value}">
+                    <div class="my-1 w-100 text-center">
+                        <a class="find-model" href="${pdict.fitsOnModelResetURL}">
+                            ${Resource.msg('fits.on.model.reset.text', 'partFitment', null)}
+                        </a>
+                    </div>
+                <iselse/>
+                    <div class="my-1 w-100 text-center">
+                        <a class="find-model" data-target="#modal-will-fit" data-toggle="modal" href="" title="${Resource.msg('fits.on.model.find.number.title', 'partFitment', null)}">
+                            ${Resource.msg('fits.on.model.find.number.question', 'partFitment', null)}
+                        </a>
+                    </div>
+                </isif>
+            </div>
+        </form>
+    </div>
+</div>

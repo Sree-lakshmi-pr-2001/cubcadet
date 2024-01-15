@@ -1,0 +1,19 @@
+<iscomment>Start of body in cart page</iscomment>
+<isscript>
+    var mtdHelper = require('*/cartridge/scripts/util/MTDHelper');
+    var isUsSite = mtdHelper.isUsSite();
+</isscript>
+
+<isif condition="${isUsSite}" >
+    <isif condition="${!empty(dw.order.BasketMgr.getCurrentBasket())}" >
+        <isset name="basketIdSession" value="${dw.order.BasketMgr.getCurrentBasket().UUID}" scope="session" />
+    </isif>
+
+    <script type="text/javascript">
+        let fullCart = {};
+        fullCart.user = "${session.custom.userEmailSession}";
+        fullCart.basket = "${session.custom.basketIdSession}";
+        fullCart.date = new Date();
+        fullCart.cart = [];
+    </script>
+</isif>

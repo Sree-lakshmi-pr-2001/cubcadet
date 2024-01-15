@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Store">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="elite_dealer">
+                <display-name xml:lang="x-default">Elite Dealer</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer_fulfillment_enabled">
+                <display-name xml:lang="x-default">Enable dealer fulfillment</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer_minisite_enabled">
+                <display-name xml:lang="x-default">Enable dealer minisite</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="dewalt_service_center">
+                <display-name xml:lang="x-default">Dewalt service center</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="delivery_radius">
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="store_inventory_id">
+                <display-name xml:lang="x-default">Store Inventory ID</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="elite_badge_url">
+                <display-name xml:lang="x-default">Elite Badge url</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer_picture_url">
+                <display-name xml:lang="x-default">Dealer Picture URL</display-name>
+                <type>image</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="elite_dealer_video_url">
+                <display-name xml:lang="x-default">Elite Dealer only video url</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer_specific_logo_url">
+                <display-name xml:lang="x-default">Dealer Specific Logo</display-name>
+                <type>image</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="customernumber">
+                <display-name xml:lang="x-default">Customer Number</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="website">
+                <display-name xml:lang="x-default">Dealer Mini Site URL</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer_website_url">
+                <display-name xml:lang="x-default">Dealer Actual Website URL</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="facebook_url">
+                <display-name xml:lang="x-default">Facebook URL</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="twitter_url">
+                <display-name xml:lang="x-default">Twitter URL</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="instagram_url">
+                <display-name xml:lang="x-default">Instagram URL</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="youtube_url">
+                <display-name xml:lang="x-default">Dealer Youtube page</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="google_place_id">
+                <display-name xml:lang="x-default">Google Reviews Dealer Place ID</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="actual-business-hours">
+                <display-name xml:lang="x-default">Actual Business Hours</display-name>
+                <description xml:lang="x-default">Store hours will be sent as text will formatting based on aach column is separated by a comma, and each row is separated by a pipe | character. Ex:&#13;
+&#13;
+Monday - Friday,7:30am-5:00pm|Saturday,7:30am-Noon</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="holiday_hours">
+                <display-name xml:lang="x-default">Dealer Holiday Hours</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="about_us">
+                <display-name xml:lang="x-default">About Us Page HTML</display-name>
+                <type>html</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="about_us_products">
+                <display-name xml:lang="x-default">About Us Page Product Category List</display-name>
+                <type>html</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="learnmore_url">
+                <display-name xml:lang="x-default">Learn More Page</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealer-image">
+                <display-name xml:lang="x-default">Dealer Picture URL</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="minisite_product_categories">
+                <display-name xml:lang="x-default">Dealer Product Category</display-name>
+                <description xml:lang="x-default">Define which category codes are mapped as Dealler Categories for the purposes of dealer homepage.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">lawn-and-garden-equipment</display>
+                        <value>lawn-and-garden-equipment</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">lawn-and-garden-tractors</display>
+                        <value>lawn-and-garden-tractors</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">zero-turn-mowers</display>
+                        <value>zero-turn-mowers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">snow-blowers</display>
+                        <value>snow-blowers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">push-mowers</display>
+                        <value>push-mowers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">leaf-blowers</display>
+                        <value>leaf-blowers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">chipper-shredders</display>
+                        <value>chipper-shredders</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">edgers-and-trenchers</display>
+                        <value>edgers-and-trenchers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">log-splitters</display>
+                        <value>log-splitters</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">trimmers</display>
+                        <value>trimmers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">garden-tillers-main</display>
+                        <value>garden-tillers-main</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">pressure-washers</display>
+                        <value>pressure-washers</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">commercial-equipment</display>
+                        <value>commercial-equipment</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">trimmer-accessories</display>
+                        <value>trimmer-accessories</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">utility-vehicles</display>
+                        <value>utility-vehicles</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="pageDescription">
+                <display-name xml:lang="x-default">Page Description</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="pageTitle">
+                <display-name xml:lang="x-default">Page Title</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Basic">
+                <display-name xml:lang="x-default">Basic Attributes</display-name>
+                <attribute attribute-id="ID" system="true"/>
+                <attribute attribute-id="name" system="true"/>
+                <attribute attribute-id="website"/>
+                <attribute attribute-id="sells_products"/>
+                <attribute attribute-id="dealer_fulfillment_enabled"/>
+                <attribute attribute-id="dealer_minisite_enabled"/>
+                <attribute attribute-id="dewalt_service_center"/>
+                <attribute attribute-id="services_products"/>
+                <attribute attribute-id="product_categories"/>
+                <attribute attribute-id="customernumber"/>
+                <attribute attribute-id="cubcadet"/>
+                <attribute attribute-id="cubcadetcare"/>
+                <attribute attribute-id="inventoryListID" system="true"/>
+                <attribute attribute-id="retailer_id"/>
+                <attribute attribute-id="logoImage"/>
+            </attribute-group>
+            <attribute-group group-id="Address">
+                <display-name xml:lang="x-default">Address</display-name>
+                <attribute attribute-id="address1" system="true"/>
+                <attribute attribute-id="address2" system="true"/>
+                <attribute attribute-id="postalCode" system="true"/>
+                <attribute attribute-id="city" system="true"/>
+                <attribute attribute-id="stateCode" system="true"/>
+                <attribute attribute-id="countryCode" system="true"/>
+                <attribute attribute-id="longitude" system="true"/>
+                <attribute attribute-id="latitude" system="true"/>
+            </attribute-group>
+            <attribute-group group-id="Contact">
+                <display-name xml:lang="x-default">Contact Details</display-name>
+                <attribute attribute-id="phone" system="true"/>
+                <attribute attribute-id="fax" system="true"/>
+                <attribute attribute-id="email" system="true"/>
+            </attribute-group>
+            <attribute-group group-id="Details">
+                <display-name xml:lang="x-default">Store Details</display-name>
+                <attribute attribute-id="actual-business-hours"/>
+                <attribute attribute-id="holiday_hours"/>
+                <attribute attribute-id="storeHours" system="true"/>
+                <attribute attribute-id="storeEvents" system="true"/>
+                <attribute attribute-id="image" system="true"/>
+                <attribute attribute-id="posEnabled" system="true"/>
+                <attribute attribute-id="entity_number"/>
+                <attribute attribute-id="about_us"/>
+                <attribute attribute-id="dealer_id"/>
+                <attribute attribute-id="instagram_url"/>
+                <attribute attribute-id="erp_ship_to_number"/>
+                <attribute attribute-id="youtube_url"/>
+                <attribute attribute-id="twitter_url"/>
+                <attribute attribute-id="google_place_id"/>
+                <attribute attribute-id="facebook_url"/>
+                <attribute attribute-id="minisite_product_categories"/>
+            </attribute-group>
+            <attribute-group group-id="CubCadet">
+                <display-name xml:lang="x-default">Cub Cadet</display-name>
+                <attribute attribute-id="cubcadet"/>
+                <attribute attribute-id="cubcadetcare"/>
+                <attribute attribute-id="customernumber"/>
+                <attribute attribute-id="product_categories"/>
+                <attribute attribute-id="sells_products"/>
+                <attribute attribute-id="paid-dealer-search-snow"/>
+                <attribute attribute-id="dealer_specific_logo_url"/>
+                <attribute attribute-id="elite_dealer_video_url"/>
+                <attribute attribute-id="elite_dealer"/>
+                <attribute attribute-id="dealer_minisite_url"/>
+                <attribute attribute-id="elite_badge_url"/>
+                <attribute attribute-id="about_us"/>
+                <attribute attribute-id="dealer_website_url"/>
+                <attribute attribute-id="dealer_picture_url"/>
+                <attribute attribute-id="pageTitle"/>
+                <attribute attribute-id="pageDescription"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="enableGoogleDrivingDistance">
+                <display-name xml:lang="x-default">Enable Google Driving Distance</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleDrivingDistanceUnits">
+                <display-name xml:lang="x-default">Google Driving Distance</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">metric</display>
+                        <value>metric</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">imperial</display>
+                        <value>imperial</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        	<attribute-definition attribute-id="mtdDealerFoundTypeView">
+                <display-name xml:lang="x-default">Found Dealers Type View</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">List View</display>
+                        <value>listView</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Map View</display>
+                        <value>mapView</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="mtdDealerInventoryListID">
+                <display-name xml:lang="x-default">MTD Dealer Inventory List Id</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="customerServiceURL">
+                <display-name xml:lang="x-default">Customer Service URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://forms.cubcadetondemandmarketing.com/contact</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="scheduleTestdriveURL">
+                <display-name xml:lang="x-default">Schedule TestDrive URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://forms.cubcadetondemandmarketing.com/tde</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="testdriveProductTypes">
+                <display-name xml:lang="x-default">Types of product on Schedule Tesdrive tab</display-name>
+                <description xml:lang="x-default">Types of product on Schedule Tesdrive tab on Dealer page.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <select-multiple-flag>true</select-multiple-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Ultima Series</display>
+                        <value>Ultima_Series</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">XT Enduro Series™</display>
+                        <value>XT_Enduro_Series</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">CC 30 H Rider</display>
+                        <value>CC_30_H_Rider</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">RZT® SX Series</display>
+                        <value>RZT_SX_Series</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Z-FORCE® LX Series</display>
+                        <value>Z-FORCE_LX_Series</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Z-FORCE® S/SX Series</display>
+                        <value>Z-FORCE_S/SX_Series</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">PRO Z™ Series</display>
+                        <value>PRO_Z_Series</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Other</display>
+                        <value>other</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="defaultStoreHeroImage">
+                <display-name xml:lang="x-default">Default hero image for store</display-name>
+                <description xml:lang="x-default">Default hero image for store is used in case if we didn't select one for store in BM</description>
+                <type>image</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="see-details-link">
+                <display-name xml:lang="x-default">See Details</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Store">
+                <display-name xml:lang="x-default">Store</display-name>
+                <attribute attribute-id="defaultStoreLogoImage"/>
+                <attribute attribute-id="defaultStoreHeroImage"/>
+                <attribute attribute-id="dealerSearchRefinements"/>
+                <attribute attribute-id="residentialProductsMapping"/>
+            </attribute-group>
+            <attribute-group group-id="Storefront Configs">
+                <display-name xml:lang="x-default">Storefront Configurations</display-name>
+                <attribute attribute-id="listPriceDefault"/>
+                <attribute attribute-id="buildNotificationEmailList"/>
+                <attribute attribute-id="enableStorePickUp"/>
+                <attribute attribute-id="countryCode"/>
+                <attribute attribute-id="customerServiceEmail"/>
+                <attribute attribute-id="customerServiceURL"/>
+                <attribute attribute-id="scheduleTestdriveURL"/>
+                <attribute attribute-id="testdriveProductTypes"/>
+                <attribute attribute-id="siteDisableCommerceFunctionality"/>
+                <attribute attribute-id="prop65Enabled"/>
+                <attribute attribute-id="enablePromoCalloutMessagesProductTile"/>
+                <attribute attribute-id="numTilePromos"/>
+                <attribute attribute-id="enablePDPWhereToBuy"/>
+                <attribute attribute-id="enableProductBadges"/>
+                <attribute attribute-id="maxOrderQty"/>
+                <attribute attribute-id="enableConsentTracking"/>
+                <attribute attribute-id="youtubeImageURL"/>
+                <attribute attribute-id="productTileA2CProductTypes"/>
+                <attribute attribute-id="productTileStockMsgEnabled"/>
+                <attribute attribute-id="productTilePartReplacesEnabled"/>
+                <attribute attribute-id="cartSlotType"/>
+                <attribute attribute-id="cartAccessoryRecommendationsCount"/>
+                <attribute attribute-id="formHandlerEmailsTo"/>
+                <attribute attribute-id="dynositeEnable"/>
+                <attribute attribute-id="dynositeAllPartsCategoryId"/>
+                <attribute attribute-id="see-details-link"/>
+            </attribute-group>
+            <attribute-group group-id="MTD Dealer Fulfillment">
+                <display-name xml:lang="x-default">MTD Dealer Fulfillment</display-name>
+                <attribute attribute-id="mtdDealerFulfillmentEnabled"/>
+                <attribute attribute-id="mtdDealerRetailerBrand"/>
+                <attribute attribute-id="mtdDealerConsumerProximity"/>
+                <attribute attribute-id="mtdDealerNumberAllowed"/>
+                <attribute attribute-id="mtdShowDealerRequiredProducts"/>
+                <attribute attribute-id="mtdDealerPickupMethodId"/>
+                <attribute attribute-id="mtdDealerDeliveryMethodId"/>
+                <attribute attribute-id="mtdSuppressDealerConfirmationEmail"/>
+                <attribute attribute-id="mtdDealerInventoryListID"/>
+                <attribute attribute-id="mtdDealerFoundTypeView"/>
+            </attribute-group>
+            <attribute-group group-id="Google Configs">
+                <display-name xml:lang="x-default">Google Configs</display-name>
+                <attribute attribute-id="googleTagManagerId"/>
+                <attribute attribute-id="pageContextMap"/>
+                <attribute attribute-id="GoogleVerificationTag"/>
+                <attribute attribute-id="mapAPI"/>
+                <attribute attribute-id="googleGeocodingAPIKey"/>
+                <attribute attribute-id="enableGoogleDrivingDistance"/>
+                <attribute attribute-id="googleDrivingDistanceUnits"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="dealer_id">
+                <display-name xml:lang="x-default">Dealer ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="erp_shipto">
+                <display-name xml:lang="x-default">ERP Shipto</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="dealer_id">
+                <display-name xml:lang="x-default">Dealer ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="erp_shipto">
+                <display-name xml:lang="x-default">ERP Shipto</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+    <type-extension type-id="Category">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="dealerImage">
+                <display-name xml:lang="x-default">Product view for Dealer page</display-name>
+                <description xml:lang="x-default">Image displayed on the Dealer page in desktop viewports. </description>
+                <type>image</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealerBackgroundImage">
+                <display-name xml:lang="x-default">Babckground for category view on Dealer page</display-name>
+                <description xml:lang="x-default"> Image displayed on the Dealer page as background</description>
+                <type>image</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealerSectionOnCategory">
+                <display-name xml:lang="x-default">Dealer Section on CLP</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="customAttributes">
+                <display-name xml:lang="x-default">Custom</display-name>
+                <attribute attribute-id="sizeChartID"/>
+                <attribute attribute-id="showInMenu"/>
+                <attribute attribute-id="enableCompare"/>
+                <attribute attribute-id="alternativeUrl"/>
+                <attribute attribute-id="slotBannerImageMobile"/>
+                <attribute attribute-id="slotBannerImage"/>
+                <attribute attribute-id="seoText"/>
+                <attribute attribute-id="layoutType"/>
+                <attribute attribute-id="menuCardText"/>
+                <attribute attribute-id="menuCardLinkText"/>
+                <attribute attribute-id="menuCardSVG"/>
+                <attribute attribute-id="promoAsset"/>
+                <attribute attribute-id="disableBreadcrumbs"/>
+                <attribute attribute-id="dealerImage"/>
+                <attribute attribute-id="dealerBackgroundImage"/>
+            </attribute-group>
+            <attribute-group group-id="CubCadet">
+                <display-name xml:lang="x-default">Cub Cadet Options</display-name>
+                <attribute attribute-id="dealerSectionOnCategory"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Shipment">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="companyName">
+                <display-name xml:lang="x-default">Company Name</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dealerAddress">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="erpShipToNumber">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+</metadata>

@@ -1,0 +1,335 @@
+/* * * OPESymbol.com site styles * * */
+
+html body {
+    background-color: #a7a9ac;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html body div.page {
+    background-color: white;
+    margin: 1.5em auto;
+    padding: 2em;
+    width: 90%;
+}
+
+html body div.page#landing-page {
+    margin-top: 2em;
+}
+
+/* * * Landing page styles * * */
+
+h1#header-text {
+    border-bottom: 0.1em solid black;
+    margin: 0.2em auto;
+    padding: 0 0 0.25em 0;
+    text-align: center;
+    width: 30%;
+}
+
+div#language-options {
+    margin: auto;
+    text-align: center;
+}
+
+#ope-symbol-site-logo.landing:hover {
+	border-color: white;
+}
+
+/* * * Back to top button styles * * */
+
+div#back-to-top-fixed {
+	position: fixed;
+	text-align: right;
+	top: 95%;
+	width: 100%;
+	z-index: 1000;
+}
+
+div#back-to-top-fixed > a#back-to-top-link {
+	background: lightgrey;
+	border: 0.1em solid black;
+	border-right: none;
+	display: block;
+	margin-right: 0.5em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+div#back-to-top-fixed > a#back-to-top-link:hover {
+	background: hsl(120, 100%, 90%);
+}
+
+div#back-to-top-fixed > a#back-to-top-link > button#back-to-top-button,
+div#back-to-top-fixed > a#back-to-top-link > button#back-to-top-button:active {
+	background:none;
+	border:none;
+	outline: none;
+}
+
+/* * * Skip to main content button styles * * */
+#skip-to-main-content-button {
+	background: none;
+	border: none;
+	color: white;
+	margin-bottom: -1em;
+}
+#skip-to-main-content-button:active {
+	outline: none;
+}
+
+/* * * Language selector widget header (content page header) styles * * */
+
+#language-selector-widget-header,
+#landing-page-header,
+.content-page-header {
+	border-bottom: 2px solid black;
+	height: 3.5em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	position: relative;
+}
+
+#language-selector-widget-header > img,
+#language-selector-widget-header > select,
+.content-page-header > img,
+.content-page-header > a,
+.page-header > h1 {
+	bottom: 0.45em;
+	display: inline-block;
+	position: absolute;	
+}
+
+.page-header > h1 {
+	bottom: 0;
+	right: 0;
+	top: -0.15em;
+}
+
+#language-selector-widget-header > select:hover {
+	background: hsl(120, 100%, 90%);
+}
+
+#ope-symbol-site-logo {
+	border: 0.15em solid white;
+	height: 3em;
+}
+
+#ope-symbol-site-logo:hover {
+	border-bottom: 0.15em solid hsl(120, 100%, 90%);
+}
+
+#language-selector-widget {
+	height: 2em;
+	min-width: 5em;
+	padding: 0.25em;
+	right: 0;
+}
+
+#language-selector-widget-placeholder {
+	display: none;
+}
+
+/* * * Content page styles * * */
+
+#skip-to-main-content {
+	color: black;
+	text-decoration: none;
+}
+#skip-to-main-content:hover {
+	text-decoration: underline;
+}
+
+a.language-option,
+a.machine-category {
+    display: inline-block;
+    height: 3.5em;
+    width: auto;
+    margin: 1em;
+    min-height: 4em;
+    min-width: 6em;
+    padding: 1% 5%;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+    border-radius: 1em;
+}
+
+a.language-option {
+	width: 8.5em;
+}
+
+a.machine-category {
+	border-radius: 0;
+	height: 10em;
+}
+
+a.machine-category {
+	border-radius: 0;
+	height: 10em;
+}
+
+a.language-option p,
+a.machine-category p {
+	font-weight: bold;
+}
+
+a.language-option p span {
+	font-weight: normal;
+}
+
+a.machine-category p {
+	padding: 0.5em;
+	text-transform: uppercase;
+}
+
+a.language-option:hover {
+    background: hsl(120, 100%, 90%);
+}
+
+button.language-option-button,
+button.language-option-button:focus,
+button.machine-category-button,
+button.machine-category-button:focus {
+    border: none;
+    background: none;
+	height: 100%;
+    outline: none;
+}
+
+div.language-option a {
+	padding: 1% 5%;
+    text-decoration: none;
+}
+
+.flag-icon {
+    border: 0.1em solid black;
+	height: 2em;
+    width: 3em;
+}
+
+.machine-category-image {
+	height: 5em;
+	width: auto;
+}
+
+#machine-types {
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+	border: 2px solid black;
+}
+
+#machine-types td {
+	width: 33.3333333333%;
+	padding-bottom: 0.5em;
+}
+
+.machine-category {
+	text-transform: uppercase;
+}
+
+#machine-types .machine-img {
+	max-height: 10em;
+	filter: grayscale(100%);
+	width: auto;
+}
+
+td.machine-col:hover {
+	outline: 0.25em solid hsl(120, 100%, 90%);
+	outline-offset: -0.5em;
+}
+
+.left-col,
+.machine-col {
+	padding: 10px;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.category-select {
+	padding: 0.25em;
+	z-index: 500;
+	color: black;
+	text-decoration: none;
+	font-size: 75%;
+}
+
+.landing-page-whitespace {
+	height: 5em;
+	width: 100%;
+}
+
+.machine-category {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h1.content-page-heading-text,
+h2.subheading-text {
+	text-align: center;
+}
+.symbol-table {
+	border: 1px solid black;
+	width: 100%;
+}
+.left-column {
+	padding: 10px;
+	border-right: 1px solid black;
+}
+th.symbol-table-header {
+	color: white;
+	font-size: 20px;
+	background-color: black;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+}
+
+.symbol-table tr td {
+	border-bottom: 1px solid black;
+}
+
+p.symbol-description {
+	padding:8px;
+}
+
+.left-column > img {
+	max-height: 10em;
+	max-width: 20em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.5em;
+}
+
+.inline-symbol {
+	max-height: 1.5em;
+	width: auto;
+}
+	
+/* * * Mobile styles * * */
+@media only screen and (max-width: 768px) { /* tablet */
+	img#back-to-top-icon {
+		display: none;
+	}
+	img#back-to-top-mobile-icon {
+		height: 3em;
+		margin-bottom: 0.5em;
+		width: auto;
+		display:inline;
+		z-index: 1000;
+	}
+	#back-to-top-fixed {
+		display: fixed;
+		top: 93%;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 425px) { /* mobile S-L */
+	img#back-to-top-mobile-icon {
+		height: 4em;
+	}
+	#back-to-top-fixed {
+		top: 95%;
+	}
+}

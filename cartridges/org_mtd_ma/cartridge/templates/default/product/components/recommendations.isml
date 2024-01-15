@@ -1,0 +1,99 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<!--had to include this here, can't get webpack to include the js file. it doesn't seem to work on slot templates-->
+<script>
+    /**
+ * ajax call to load dealer tile
+ */
+function loadTile() {
+    $('.product-tile-caro .loader').each(function () {
+        var $this = $(this);
+        var dealerInventoryUrl = $this.data('dealer-inventory-url');
+        $.ajax({
+            url: dealerInventoryUrl,
+            type: 'get',
+            dataType: 'json',
+            global: false,
+            success: function (data) {
+                if (data && data.success) {
+                    $this.fadeOut('slow');
+                    $this.replaceWith(data.dealerInventoryHTML);
+                }
+            }
+        }).always(function () {
+        });
+    });
+}
+
+/**
+ * recursive fucntion to load slot tiles
+ */
+function checkContainer() {
+    if ($('.product-tile-caro').is(':visible')) {
+        loadTile();
+    } else {
+        setTimeout(checkContainer, 50);
+    }
+}
+
+$(function () {
+    checkContainer();
+});
+</script>
+<!--- TEMPLATENAME: recommendation.isml --->
+
+<iscomment>
+    Product Recommendation Module
+    Purpose: this module outputs the Product Recommendation into a carousel based on the orderable recommendation type
+</iscomment>
+
+<isif condition="${!empty(pdict.product.raw)}">
+    <isscript>
+        // If no recommendation type is defined (default: Cross Sell - 1)
+        var productRecType = !empty(pdict.recommendationtype) ? pdict.recommendationtype : 1;
+
+        var recommendations = pdict.product.raw.getOrderableRecommendations(productRecType).iterator();
+        var recProducts = new dw.util.ArrayList();
+
+        // display 20 recommendations at maximum
+        var maxRecs = 20, counter = 0;
+
+        while (recommendations.hasNext()) {
+            var recommendation = recommendations.next();
+            var recommendedProduct = recommendation.getRecommendedItem();
+
+            recProducts.add( recommendedProduct );
+
+            if(++counter >= maxRecs) {
+                break;
+            }
+        }
+    </isscript>
+
+    <isif condition="${recProducts.size() > 0}">
+        <iscomment>Preserve the Product instance</iscomment>
+        <isset name="mainProduct" value="${pdict.product}" scope="pdict"/>
+
+        <div class="recommendation-carousel">
+            <isif condition="${!empty(pdict.title) && pdict.title}">
+                <div class="carousel-title">
+                    <h2>${pdict.title}</h2>
+                    <isif condition="${!empty(pdict.subtitle) && pdict.subtitle}">
+                        <span class="label-xl">${pdict.subtitle}</span>
+                    </isif>
+                </div>
+            </isif>
+            <div class="product-tile-caro row">
+                <isloop items="${recProducts}" var="product">
+                    <isif condition="${product.availabilityModel.availability !== 0}">
+                        <isobject object="${product}" view="recommendation">
+                            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'promos', false, 'swatches', false, 'showQuickView', false, 'isSliderTile', true, 'bvSeo', false)}"/>
+                        </isobject>
+                    </isif>
+                </isloop>
+            </div>
+        </div>
+
+        <iscomment>Restore the Product instance</iscomment>
+        <isset name="product" value="${pdict.mainProduct}" scope="pdict"/>
+    </isif>
+</isif>

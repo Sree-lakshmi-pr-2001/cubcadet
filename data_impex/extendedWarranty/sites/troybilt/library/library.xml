@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="EW-End-Use">
+        <display-name xml:lang="x-default">EW End Use</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW End Use</custom-attribute>
+        </custom-attributes>
+    </content>
+    <content content-id="EW_ELIG_ERROR">
+        <display-name xml:lang="x-default">EW Eligible Error</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligible Error
+                EW_ELIG_AFTER_MARKET_DIRECT_TO_ERROR
+
+                EW_ELIG_AFTER_MARKET_SERIAL_NUMBER_NOT_FOUND
+                
+                EW_ELIG_AFTER_MARKET_CANNOT_DETERMINE_ELIG
+                
+                EW_ELIG_AFTER_MARKET_REASON_CODE_NOT_DEFINED
+
+            </custom-attribute>
+        </custom-attributes>
+    </content>
+    <content content-id="EW_NOT_ELIGIBLE">
+        <display-name xml:lang="x-default">EW Not Eligible Error</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Not Eligible Error
+                EW_ELIG_AFTER_MARKET_EW_NOT_OFFERED_FOR_FACTORY_MODEL
+
+                EW_ELIG_AFTER_MARKET_FACTORY_MODEL_TOO_OLD
+            </custom-attribute>
+        </custom-attributes>
+    </content>
+    <content content-id="EW_ENTITLEMENT_ALREADY_EXISTS">
+        <display-name xml:lang="x-default">Serial number found</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW entitlement already exists</custom-attribute>
+        </custom-attributes>
+    </content>
+    
+    <content content-id="EW-ECM-Count-Step1">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal Count of Step 1
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal Count of Step 1</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-ECM-Count-Step2">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal Count of Step 2
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal Count of Step 2</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-ECM-Count-Step3">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal Count of Step 3
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal Count of Step 3</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-ECM-How-Find-Serial-Number​">
+        <display-name xml:lang="x-default">EW Eligibility Check Modal How to Find Serial Number
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Eligibility Check Modal How to Find Serial Number</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Overview​​">
+        <display-name xml:lang="x-default">EW Overview​
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Overview​</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Why-Purchase​">
+        <display-name xml:lang="x-default">EW Why Purchase
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Why Purchase</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Imagery-Key-Points​​">
+        <display-name xml:lang="x-default">EW Imagery and Key Points
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Imagery and Key Points​​</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-FAQ​">
+        <display-name xml:lang="x-default">EW FAQ’s​
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW FAQ’s​</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Contact-Info​​">
+        <display-name xml:lang="x-default">EW Contact Info​
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Contact Info​</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Rotating-Content​​">
+        <display-name xml:lang="x-default">Rotating Content Block for EW
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Rotating Content Block for EW</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="EW-Learn-More​​">
+        <display-name xml:lang="x-default">EW Learn More
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Learn More</custom-attribute>
+        </custom-attributes>
+    </content>
+    
+    <content content-id="EW-Info-Intermediate-Page​​">
+        <display-name xml:lang="x-default">EW Info Intermediate Page
+        </display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">EW Info Intermediate Page</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>

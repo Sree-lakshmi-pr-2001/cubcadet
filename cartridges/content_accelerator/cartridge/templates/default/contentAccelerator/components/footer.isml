@@ -1,0 +1,23 @@
+<isinclude template="contentAccelerator/components/assetBrowserModal" />
+<isinclude template="contentAccelerator/components/saveAssetModal" />
+<isinclude template="contentAccelerator/components/fileBrowserModal" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.9.2/ckeditor.js"></script>
+<iscomment>
+Version 0.15.03 is not compatible with our image picker trait; rolling back to 0.14.62 until fixes can be applied
+<script src="https://unpkg.com/grapesjs"></script>
+</iscomment>
+
+<iscomment>JJS: Need to use v0.14.62 so our image_picker trait works properly</iscomment>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.14.62/grapes.min.js"></script>
+
+
+<iscomment>
+We are not pulling in this editor at this time but have the option
+<script src="https://unpkg.com/grapesjs-plugin-ckeditor"></script>
+</iscomment>
+
+<iscomment>
+Below is the Bootstrap plugin, to add it back in - uncomment the script, and add 'grapesjs-blocks-bootstrap4' to the plugins array in grapesInit.js
+<script src="${URLUtils.staticURL('/lib/grapesjs-blocks-bootstrap4.min.js')}"></script>
+</iscomment>

@@ -1,0 +1,45 @@
+<!--- TEMPLATENAME: dealerInfo.isml --->
+<div class="col col-12 col-md-6">
+    <div class="${dealerShippingType === 'delivery' ? 'dealer-option' : 'pickup-option'} ${dealerSelectedOption === dealer.dealerId ? 'active' : ''}">
+        <div class="form-check custom-control custom-radio">
+            <input
+                id="${dealerShippingType === 'delivery' ? 'dealer-delivery' : 'dealer-pickup'}-${dealer.dealerId}"
+                name="dealer-${dealerShippingType}"
+                type="radio"
+                class="custom-control-input"
+                value="${JSON.stringify(dealer)}"
+                ${dealerSelectedOption === dealer.dealerId ? 'checked' : ''}
+                >
+            <label class="custom-control-label" for="${dealerShippingType === 'delivery' ? 'dealer-delivery' : 'dealer-pickup'}-${dealer.dealerId}">${dealer.dealerAddress.companyName}</label>
+        </div>
+
+        <div class="dealer-addy dealer-info">
+            ${dealer.dealerAddress.address1}, ${dealer.dealerAddress.city} ${dealer.dealerAddress.state} ${dealer.dealerAddress.postalCode} <br />
+            ${dealer.dealerAddress.phone}
+        </div>
+        <div class="dealer-distance dealer-info pt-2">
+            <isif condition="${dealer.proximityToConsumerUnit == 'm'}">
+                ${Resource.msgf('dealer.away.m', 'dealer', null, dealer.proximityToConsumer.toFixed())}
+            <iselse>
+                ${Resource.msgf('dealer.away.km', 'dealer', null, dealer.proximityToConsumer.toFixed())}
+            </isif>
+
+            <div class="font-weight-bold">
+                <isif condition="${dealerShippingType === 'delivery'}">
+                    <isif condition="${pdict.hasPartsAndAccessories || dealer.mtdInventoryRequired}">
+                        <isprint value="${pdict.dealerDeliveryDropshipMsg}" encoding="off" />
+                    <iselse>
+                        <isprint value="${pdict.dealerDeliveryDirectMsg}" encoding="off" />
+                    </isif>
+                <iselse>
+                    <isif condition="${pdict.hasPartsAndAccessories || dealer.mtdInventoryRequired}">
+                        <isprint value="${pdict.dealerPickupDropshipMsg}" encoding="off" />
+                    <iselse>
+                        <isprint value="${pdict.dealerPickupDirectMsg}" encoding="off" />
+                    </isif>
+                </isif>
+            </div>
+        </div>
+
+    </div>
+</div>

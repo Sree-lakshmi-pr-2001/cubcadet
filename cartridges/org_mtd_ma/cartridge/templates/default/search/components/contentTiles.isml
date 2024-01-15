@@ -1,0 +1,25 @@
+<isloop items="${pdict.contentSearch.contents}" var="contentAsset">
+    <div class="card-container col-12 col-sm-6 col-md-4">
+        <div class="card">
+            <div class="clearfix">
+                <h6 class="card-title"><a href="${contentAsset.url}">${contentAsset.name}</a></h6>
+            </div>
+            <div class="card-body card-info-group card-text">
+                <p>${contentAsset.description}</p>
+            </div>
+            <div class="card-footer">
+                <a class="link-primary" href="${contentAsset.url}">${Resource.msg('button.readmore', 'search', null)}</a>
+            </div>
+        </div>
+    </div>
+</isloop>
+
+<isif condition="${pdict.contentSearch.moreContentUrl}">
+    <div class="col show-more-content">
+        <div class="text-center">
+            <button class="btn btn-secondary col-12" data-url="${pdict.contentSearch.moreContentUrl}">
+                ${Resource.msg('button.morearticles', 'search', null)}
+            </button>
+        </div>
+    </div>
+</isif>

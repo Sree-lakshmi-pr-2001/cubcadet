@@ -1,0 +1,70 @@
+<div class="product-line-item" data-product-line-item="${lineItem.UUID}">
+    <isif condition="${lineItem.productType === 'bundle'}">
+        <div class="row <isif condition=${!miniCart}> no-gutters </isif>">
+            <div class="item-image <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-4 <iselse> col-6 </isif>">
+                <isif condition=${miniCart}>
+                    <img class="product-image" src="${lineItem.images['mini-line-item'][0].url}" alt="${lineItem.images['mini-line-item'][0].alt}" title="${lineItem.images['mini-line-item'][0].title}">
+                <iselse>
+                    <img class="product-image" src="${lineItem.images['line-item'][0].url}" alt="${lineItem.images['line-item'][0].alt}" title="${lineItem.images['line-item'][0].title}">
+                </isif>
+            </div>
+            <div class="product-line-item-details <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-8 <iselse> col-6 </isif>">
+                <div class="bundle-line-item-head">
+                    <isinclude template="checkout/productCard/productCardLineItemHeader" />
+                </div>
+                <div class="bundle-includes">${Resource.msg('msg.bundle.includes','cart',null)}</div>
+                <!--- individual bundled line items --->
+                <isinclude template="cart/productCard/cartProductCardBundledItems" />
+            </div>
+        </div>
+    <iselse/>
+        <div class="row <isif condition=${!miniCart}> no-gutters </isif>">
+            <div class="item-image <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-4 <iselse> col-6 </isif>">
+                <isif condition=${miniCart}>
+                    <img class="product-image" src="${lineItem.images['mini-line-item'][0].url}" alt="${lineItem.images['mini-line-item'][0].alt}" title="${lineItem.images['mini-line-item'][0].title}">
+                <iselse>
+                    <img class="product-image" src="${lineItem.images['line-item'][0].url}" alt="${lineItem.images['line-item'][0].alt}" title="${lineItem.images['line-item'][0].title}">
+                </isif>
+            </div>
+            <div class="product-line-item-details <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-8 <iselse> col-6 </isif>">
+                <isinclude template="checkout/productCard/productCardLineItemHeader"/>
+                <div class="item-attributes">
+                    <isloop items="${lineItem.variationAttributes}" var="attribute">
+                        <p class="line-item-attributes"><span class="font-bold">${attribute.displayName}:</span> ${attribute.displayValue}</p>
+                    </isloop>
+
+                    <div class="item-options">
+                        <isloop items="${lineItem.options}" var="option">
+                            <div class="line-item-option">${option.displayName}</div>
+                        </isloop>
+                    </div>
+
+                    <isif condition="${((pdict.order && !pdict.order.orderStatus) || !miniCart) && (lineItem.productAttributeType && (lineItem.productAttributeType.toLowerCase() == 'parts' || lineItem.productAttributeType.toLowerCase() == 'accessories'))}">
+                        <isinclude template="cart/productCard/cartProductCardAvailability" />
+                    <iselse>
+                        <isinclude template="cart/productCard/productShippingInfo" />
+                    </isif>
+                </div>
+                <isinclude template="checkout/productCard/productCardQtyPrice" />
+
+                <div class="item-prop65-msg half-width <isif condition="${'prop65Warning' in lineItem && !lineItem.prop65Warning}">d-none invisible</isif>">
+                    <isprint value="${pdict.itemProp65WarningMsg}" encoding="off" />
+                </div>
+            </div>
+            <div class="item-prop65-msg full-width <isif condition="${'prop65Warning' in lineItem && !lineItem.prop65Warning}">d-none invisible</isif>">
+                <isprint value="${pdict.itemProp65WarningMsg}" encoding="off" />
+            </div>
+            
+        </div>
+    </isif>
+
+
+
+    <isif condition=${miniCart}>
+        <div class="line-item-promo item-${lineItem.UUID}">
+            <isinclude template="checkout/productCard/productCardProductPromotions" />
+        </div>
+    </isif>
+
+
+</div>

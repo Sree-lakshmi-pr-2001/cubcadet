@@ -1,0 +1,75 @@
+.modal-content {
+    background-clip: padding-box;
+    border-radius: 0;
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+    border-bottom: $modal-header-border-width solid $modal-header-border-color;
+    border-top: $modal-border-top;
+    border-radius: 0;
+    padding: rem(50px) rem(48px) rem(10px);
+
+    @include media-breakpoint-only(xs) {
+        padding-left: rem(15px);
+        padding-right: rem(15px);
+    }
+
+    h6 {
+        margin-bottom: 0;
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: rem(24px);
+        margin: 0;
+        opacity: 1;
+        color: $trans;
+
+        &:hover {
+            color: $trans;
+        }
+    }
+}
+
+.modal-body {
+    max-height: 75vh;
+    overflow-y: auto;
+    padding-top: rem(10px);
+
+    @include media-breakpoint-only(xs) {
+        padding: 0 rem(15px);
+    }
+}
+
+.modal-footer {
+    padding: rem(24px);
+    justify-content: center;
+    background-color: $gray-100;
+
+    > :not(:last-child) {
+        margin-right: rem(8px);
+        @include media-breakpoint-up(sm) {
+            margin-right: rem(20px);
+        }
+    }
+
+    > :not(:first-child) {
+        margin-left: rem(8px);
+        @include media-breakpoint-up(sm) {
+            margin-left: rem(20px);
+        }
+    }
+
+    .btn {
+        min-width: 100px;
+    }
+}
+
+.modal-open {
+    position: fixed;
+    width: 100%;
+}

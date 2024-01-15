@@ -1,0 +1,18 @@
+<isinclude template="components/modules" />
+
+<footer class="checkout-footer">
+    <div class="footer-info container">
+        <div class="col checkout-copyright">
+            <iscontentasset aid="footer-copy" />
+        </div>
+        <isinclude template="monetate/monetatefooter" />
+    </div>
+
+    <isinclude url="${URLUtils.url('LiveAgent-Show')}" />
+</footer>
+<isif condition="${!('pageContext' in this) || empty(pageContext)}">
+    <isscript>pageContext = new Object();</isscript>
+</isif>
+<isscript>pageContext.locale = request.locale</isscript>
+<script>pageContext = <isprint value="${JSON.stringify(pageContext)}" encoding="off"/>;</script>
+<isinclude template="monetate/monetateuserinfo" />

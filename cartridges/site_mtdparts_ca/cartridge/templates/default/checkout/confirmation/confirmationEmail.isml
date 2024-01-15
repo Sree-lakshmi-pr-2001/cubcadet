@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<isscript>
+    var URLUtils = require('dw/web/URLUtils');
+</isscript>
+<html lang="en" style="height:100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x-apple-disable-message-reformatting">
+</head>
+
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" align="center"
+        bgcolor="#ffffff">
+        <tr>
+            <td align="center" valign="top">
+                <table width="640" style="width:640px; table-layout:fixed;" border="0" cellspacing="0" cellpadding="0"
+                    align="center" class="em_main_table">
+                    <!--Header section-->
+                    <tr>
+                        <td align="center" valign="top" bgcolor="#000000">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td align="center" valign="top" style="padding: 0px; background-color:#ffffff;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="640" style="width:640px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#ffffff">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <table role="presentation" width="100%"
+                                                                                cellspacing="0" cellpadding="0">
+                                                                                <tr>
+                                                                                    <td align="center"><a
+                                                                                            href="${URLUtils.abs('Home-Show')}"
+                                                                                            title="MTD Parts"
+                                                                                            data-linkto="https://"><img
+                                                                                                data-assetid="84238"
+                                                                                                src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/ef1d92ef-c881-4052-af41-044184493e8d.png"
+                                                                                                alt="MTD Parts"
+                                                                                                style="display: block; padding: 0px; text-align: center; height: 120px; width: 640px; border: 0px none transparent;"
+                                                                                                width="640"
+                                                                                                height="120">
+                                                                                        </a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" valign="top"
+                                        style="padding-bottom:5px; padding-top:14px; background-color:#e2e2e2;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#e2e2e2">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <div style="text-align: center;">
+                                                                                <span style="color:#262626;"><span
+                                                                                        style="font-family:arial,helvetica,sans-serif;"><span
+                                                                                            style="font-size:22px;"><b>${Resource.msg('email.msg.order.confirmation', 'email', null)}</b></span></span></span>
+                                                                            </div>
+                                                                            <div style="display:none;">
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            <!-- header end-->
+                                <tr>
+                                    <td align="center" valign="top" style="padding:32px 32px; background-color:#ffffff;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+                                            </tr>
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#ffffff">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <span style="font-size:12px;"><span
+                                                                                    style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.thank', 'email', null)} &ndash;
+                                                                                    ${Resource.msg('email.msg.order.placing1', 'email', null)}<br>
+                                                                                    <br>
+                                                                                    </span></span></td>
+                                                                    </tr>
+                                                                </table>
+                                                                <table role="presentation"
+                                                                    class="stylingblock-content-wrapper"
+                                                                    style="min-width: 100%; " width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td class="stylingblock-content-margin-cell"
+                                                                            style="padding: 6px 0px 0px; ">
+                                                                            <table role="presentation"
+                                                                                style="background-color: transparent; min-width: 100%; "
+                                                                                class="stylingblock-content-wrapper"
+                                                                                width="100%" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                                <tr>
+                                                                                    <td style="padding: 0px; "
+                                                                                        class="stylingblock-content-wrapper camarker-inner">
+                                                                                        <table width="100%"
+                                                                                            cellspacing="0"
+                                                                                            cellpadding="0" border="0">
+                                                                                            <tr>
+                                                                                                <td align="center">
+                                                                                                    <table
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0"
+                                                                                                        border="0">
+                                                                                                        <tr>
+                                                                                                            <td class="innertd buttonblock"
+                                                                                                                style=" border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; width: 185px; text-align: center; background-color: #199422;"
+                                                                                                                bgcolor="#199422">
+                                                                                                                <a target="_blank"
+                                                                                                                    class="buttonstyles"
+                                                                                                                    style=" font-size: 14px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; width: 185px; background-color: #199422; border-radius: 0px; border: 1px solid #199422; padding: 8px 10px; -moz-border-radius: 0px; -webkit-border-radius: 0px;"
+                                                                                                                    href="${URLUtils.abs('Login-Show')}"
+                                                                                                                    title="Check My Order Status"
+                                                                                                                    data-linkto="https://">${Resource.msg('email.msg.order.checkOrderStatus', 'email', null)}</a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top"
+                                        style="padding-bottom:5px; padding-top:14px; background-color:#e2e2e2;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#e2e2e2">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <div style="text-align: center;">
+                                                                                <span style="color:#262626;"><span
+                                                                                        style="font-family:arial,helvetica,sans-serif;"><span
+                                                                                            style="font-size:22px;"><b>${Resource.msg('email.msg.order.orderDetails', 'email', null)}</b></span></span></span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top" style="padding:32px 32px; background-color:#ffffff;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#ffffff">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+
+                                                                            <span style="font-size:12px;"><span
+                                                                                    style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.orderNo', 'email', null)} ${pdict.orderNo}<br>
+                                                                                    ${Resource.msg('email.msg.order.creationData', 'email', null)}
+                                                                                    ${pdict.orderDate}<br>
+                                                                                    ${Resource.msg('email.msg.order.paymentMethod', 'email', null)}
+                                                                                    ${pdict.payment.paymentMethodName}<br>
+                                                                                    ${Resource.msg('email.msg.order.amountPaid', 'email', null)}
+                                                                                    ${pdict.payment.orderTotalAmount}</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top"
+                                        style="padding-bottom:5px; padding-top:14px; background-color:#e2e2e2;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#e2e2e2">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation"
+                                                                    style="background-color: transparent; min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td style="padding: 0px; "
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <table style="width: 100%;" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table style="width: 100%;"
+                                                                                            cellspacing="0"
+                                                                                            cellpadding="0">
+                                                                                            <tr>
+                                                                                                <td class="responsive-td"
+                                                                                                    style="width: 50%; padding-right: 3px;"
+                                                                                                    valign="top">
+                                                                                                    <table
+                                                                                                        role="presentation"
+                                                                                                        style="min-width: 100%; "
+                                                                                                        class="stylingblock-content-wrapper"
+                                                                                                        width="100%"
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                class="stylingblock-content-wrapper camarker-inner">
+                                                                                                                <span
+                                                                                                                    style="color:#262626;"><span
+                                                                                                                        style="font-size:22px;"><b><span
+                                                                                                                                style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.shippingAddress', 'email', null)}</span></b></span></span>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                                <td class="responsive-td"
+                                                                                                    style="width: 50%; padding-left: 3px;"
+                                                                                                    valign="top">
+                                                                                                    <table
+                                                                                                        role="presentation"
+                                                                                                        style="min-width: 100%; "
+                                                                                                        class="stylingblock-content-wrapper"
+                                                                                                        width="100%"
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                class="stylingblock-content-wrapper camarker-inner">
+                                                                                                                <span
+                                                                                                                    style="color:#262626;"><span
+                                                                                                                        style="font-size:22px;"><b><span
+                                                                                                                                style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.billingAddress', 'email', null)}</span></b></span></span>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top" style="padding:32px 32px; background-color:#ffffff;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#ffffff">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td style="padding: 10px; "
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <table style="width: 100%;" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table style="width: 100%;"
+                                                                                            cellspacing="0"
+                                                                                            cellpadding="0">
+                                                                                            <tr>
+                                                                                                <td class="responsive-td"
+                                                                                                    style="width: 50%; padding-right: 3px;"
+                                                                                                    valign="top">
+                                                                                                    <table
+                                                                                                        role="presentation"
+                                                                                                        style="min-width: 100%; "
+                                                                                                        class="stylingblock-content-wrapper"
+                                                                                                        width="100%"
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                class="stylingblock-content-wrapper camarker-inner">
+                                                                                                                <span
+                                                                                                                    style="color:#000000;"><span
+                                                                                                                        style="font-size:12px;"><span
+                                                                                                                            style="font-family:arial,helvetica,sans-serif;">${pdict.shippingAddress.fullName}
+                                                                                                                            Naughton<br>
+                                                                                                                            ${pdict.shippingAddress.address1}<br>
+                                                                                                                            ${pdict.shippingAddress.city},
+                                                                                                                            ${pdict.shippingAddress.stateCode}
+                                                                                                                            ${pdict.shippingAddress.postalCode}<br>
+                                                                                                                            ${pdict.shippingAddress.phone}</span></span></span>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                                <td class="responsive-td"
+                                                                                                    style="width: 50%; padding-left: 3px;"
+                                                                                                    valign="top">
+                                                                                                    <table
+                                                                                                        role="presentation"
+                                                                                                        style="min-width: 100%; "
+                                                                                                        class="stylingblock-content-wrapper"
+                                                                                                        width="100%"
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                class="stylingblock-content-wrapper camarker-inner">
+                                                                                                                <span
+                                                                                                                    style="color:#000000;"><span
+                                                                                                                        style="font-size:12px;"><span
+                                                                                                                            style="font-family:arial,helvetica,sans-serif;">${pdict.billingAddress.fullName}<br>
+                                                                                                                            ${pdict.billingAddress.address1}<br>
+                                                                                                                            ${pdict.billingAddress.city},
+                                                                                                                            ${pdict.billingAddress.stateCode}
+                                                                                                                            ${pdict.billingAddress.postalCode}<br>
+                                                                                                                            ${pdict.billingAddress.phone}</span></span></span>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top"
+                                        style="padding:0px 0px 10px 32px; background-color:#e2e2e2;" class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+                                                <td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="left" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#e2e2e2">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <div style="text-align: center;">
+                                                                                <span style="color:#262626;"><span
+                                                                                        style="font-family:arial,helvetica,sans-serif;"><span
+                                                                                            style="font-size:22px;"><b>${Resource.msg('email.msg.deliver.method', 'email', null)}:</b></span></span></span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+
+                                                </td>
+
+                                            </tr>
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top" style="padding:32px 32px; background-color:#ffffff;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#ffffff">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <span style="font-size:12px;"><span
+                                                                                    style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.deliver.method', 'email', null)}:
+                                                                                    ${pdict.shippingMethod}</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top"
+                                        style="padding:0px 0px 10px 32px; background-color:#e2e2e2;" class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+                                                <td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="left" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#e2e2e2">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <div style="text-align: center;">
+                                                                                <span style="color:#262626;"><span
+                                                                                        style="font-family:arial,helvetica,sans-serif;"><span
+                                                                                            style="font-size:22px;"><b>${Resource.msg('email.msg.order.orderSummary', 'email', null)}</b></span></span></span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+
+                                                </td>
+
+                                            </tr>
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top" style="padding:32px 32px; background-color:#ffffff;"
+                                        class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+
+                                            </tr>
+
+
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="center" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#ffffff">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation" style="min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <table cellspacing="0" cellpadding="0"
+                                                                                border="0">
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;"><b>${Resource.msg('email.msg.item', 'email', null)}
+                                                                                                </b></span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;"><b>${Resource.msg('email.msg.unit.price', 'email', null)}
+                                                                                                </b></span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;"><b>${Resource.msg('email.msg.quantity', 'email', null)}
+                                                                                                </b></span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;"><b>${Resource.msg('email.msg.item.total', 'email', null)}
+                                                                                                </b></span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <isloop items="${pdict.products}"
+                                                                                    var="product" status="loopstatus">
+                                                                                    <tr>
+                                                                                        <td style="width:282px;">
+                                                                                            <span
+                                                                                                style="font-size:12px;"><span
+                                                                                                    style="font-family:arial,helvetica,sans-serif;">&nbsp;${product.productName}
+                                                                                                </span></span>
+                                                                                            <br>
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td style="width:84px;">
+                                                                                            <span
+                                                                                                style="font-size:12px;"><span
+                                                                                                    style="font-family:arial,helvetica,sans-serif;">&nbsp;${product.productSalePrice}</span></span>
+                                                                                            <br>
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td style="width:108px;">
+                                                                                            <span
+                                                                                                style="font-size:12px;"><span
+                                                                                                    style="font-family:arial,helvetica,sans-serif;">&nbsp;${product.quantity}</span></span>
+                                                                                            <br>
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td style="width:102px;">
+                                                                                            <span
+                                                                                                style="font-size:12px;"><span
+                                                                                                    style="font-family:arial,helvetica,sans-serif;">&nbsp;$ ${product.price}
+                                                                                                </span></span>
+                                                                                            <br>
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </isloop>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;"><b>${Resource.msg('email.msg.order.subTotal', 'email', null)}
+                                                                                                </b></span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${pdict.subTotal}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.discount', 'email', null)}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${pdict.orderLevelDiscount}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.shipping', 'email', null)}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${pdict.shippingCost}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;
+                                                                                            </span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.order.salesTax', 'email', null)}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${pdict.salesTax}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width:282px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:84px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">&nbsp;</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:108px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;"><b>${Resource.msg('email.msg.order.orderTotal', 'email', null)}
+                                                                                                </b></span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                    <td style="width:102px;">
+                                                                                        <span
+                                                                                            style="font-size:12px;"><span
+                                                                                                style="font-family:arial,helvetica,sans-serif;">${pdict.payment.orderTotalAmount}</span></span>
+                                                                                        <br>
+                                                                                        &nbsp;
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- footer section start -->
+                                <tr>
+                                    <td align="center" valign="top"
+                                        style="padding:0px 0px 10px 32px; background-color:#e2e2e2;" class="em_aside">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tr>
+                                                <td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table width="576" style="width:576px;" border="0" cellspacing="0"
+                                                        cellpadding="0" align="left" class="em_wrapper">
+                                                        <tr>
+                                                            <td width="100%" valign="middle" align="center"
+                                                                bgcolor="#e2e2e2">
+                                                                <!-- VARIABLE CONTENT ROW -->
+                                                                <table role="presentation"
+                                                                    style="background-color: transparent; min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td style="padding: 0px; "
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <span style="font-size:9px;"><span
+                                                                                    style="font-family:arial,helvetica,sans-serif;">${Resource.msg('email.msg.donot.replay', 'email', null)} <a data-linkto="https://"
+                                                                                        href=""
+                                                                                        style="color:#000000;text-decoration:underline;"
+                                                                                        title="Contact MTD Genuine Parts">click
+                                                                                        here</a> to send a message or
+                                                                                    call <a href="tel:8002696215"
+                                                                                        title="Call 1-800-269-6215">1-800-269-6215</a>.<br>
+                                                                                    <br>
+                                                                                    ${Resource.msg('email.msg.note', 'email', null)}<br>
+                                                                                    <br>
+                                                                                    ${Resource.msg('email.msg.email.was', 'email', null)}${pdict.customerEmail}${Resource.msg('email.msg.to.ensure', 'email', null)}<br>
+                                                                                    <br>
+                                                                                    &copy;${Resource.msg('email.msg.address', 'email', null)}<br>
+                                                                                    <br>
+                                                                                    ${Resource.msg('email.msg.all.right', 'email', null)} <a href="#"
+                                                                                        style="color: #000000; text-decoration: underline;"
+                                                                                        target="_blank"
+                                                                                        title="Privacy Policy"><span
+                                                                                            style="color:#000000;">${Resource.msg('email.msg.privacy', 'email', null)}</span></a><span
+                                                                                        style="color:#000000;"> |
+                                                                                    </span><a
+                                                                                        href="${URLUtils.abs('Login-Show')}"
+                                                                                        style="color: #000000; text-decoration: underline;"
+                                                                                        target="_blank"
+                                                                                        title="View My Account"><span
+                                                                                            style="color:#000000;">${Resource.msg('email.msg.my.account', 'email', null)}</span></a><span
+                                                                                        style="color:#000000;"> |
+                                                                                    </span><a
+                                                                                        href="${URLUtils.abs('Home-Show')}"
+                                                                                        style="color: #000000; text-decoration: underline;"
+                                                                                        target="_blank"
+                                                                                        title="Visit mtdparts.com">
+                                                                                        <span
+                                                                                            style="color:#000000;">${Resource.msg('email.msg.mtd.parts.com', 'email', null)}</span></a><span
+                                                                                        style="color:#000000;"> |
+                                                                                    </span><a href="#"
+                                                                                        style="color: #000000; text-decoration: underline;"
+                                                                                        target="_blank"
+                                                                                        title="Contact MTD Genuine Parts"><span
+                                                                                            style="color:#000000;">${Resource.msg('email.msg.contact', 'email', null)}</span></a></span></span><br>
+                                                                            &nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                                <table role="presentation"
+                                                                    style="background-color: transparent; min-width: 100%; "
+                                                                    class="stylingblock-content-wrapper" width="100%"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td style="padding: 0px; "
+                                                                            class="stylingblock-content-wrapper camarker-inner">
+                                                                            <table style="width:180px;" cellspacing="0"
+                                                                                cellpadding="0" border="0" align="left">
+
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <b style="font-size: 11px;"><span
+                                                                                                style="font-family: arial, helvetica, sans-serif;">${Resource.msg('email.msg.contact', 'email', null)}:&nbsp;</span></b>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <a data-linkto="https://"
+                                                                                            href="https://click.mtdgenuineparts.com/?qs=593d655e15469bb70304f3e13d1567d8c6a476105e101ef473d81055c0ed61fd3c90b4f8b6c5be6a326601f3aa2e094e3785230fd2bb5b58"
+                                                                                            title="Facebook"><img
+                                                                                                alt="Facebook"
+                                                                                                data-assetid="83224"
+                                                                                                src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/42db170c-9eeb-4e6e-8ebb-fb1884a4feb8.png"
+                                                                                                style="padding: 0px; text-align: center; height: 25px; width: 25px; border: 0px;"
+                                                                                                width="25"
+                                                                                                height="25"></a></td>
+                                                                                    <td>
+                                                                                        <a data-linkto="https://"
+                                                                                            href="https://click.mtdgenuineparts.com/?qs=f1bdb313a4bc95e54198d353133241c71272fb99c1ae436547549fc4d797a6cae67ca71d63168c21134157b44f83e07cb9deac0d03366bba"
+                                                                                            title="Twitter"><img
+                                                                                                alt="Twitter"
+                                                                                                data-assetid="83226"
+                                                                                                src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/40cbb412-f370-42d4-9235-c746b9bdda39.png"
+                                                                                                style="padding: 0px; text-align: center; height: 25px; width: 25px; border: 0px;"
+                                                                                                width="25"
+                                                                                                height="25"></a></td>
+                                                                                    <td>
+                                                                                        <a data-linkto="https://"
+                                                                                            href="https://click.mtdgenuineparts.com/?qs=c7284b6ba13d8e12c325e939dd7c5a48512c4290141b6f78d5e8083e4b29891434a66cdf26f233be70c466e85ab8bdcef4e617b3082a952d"
+                                                                                            title="YouTube"><img
+                                                                                                alt="YouTube"
+                                                                                                data-assetid="83225"
+                                                                                                src="https://image.mtdgenuineparts.com/lib/fe5815707c610d7f7c10/m/1/e949fba4-f396-4aa2-b8a2-8174bb50514b.png"
+                                                                                                style="padding: 0px; text-align: center; height: 25px; width: 25px; border: 0px;"
+                                                                                                width="25"
+                                                                                                height="25"></a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </table>
+
+                                                </td>
+
+                                            </tr>
+
+
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- footer section end -->
+                            </table>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header clearfix">
+        <h4 class="pull-left">${Resource.msg('label.address.myaddresses','account',null)}</h4>
+    </div>
+    
+    <div class="card-body">
+        <isif condition="${pdict.account.preferredAddress}">
+            <div>
+                <div class="dashboard-cards-block-title">${Resource.msg('label.addressbook.defaultaddress','account',null)}</div>
+                <div class="dashboard-info">${pdict.account.preferredAddress.address.ID}</div>
+                <div>${pdict.account.preferredAddress.address.firstName} ${pdict.account.preferredAddress.address.lastName}</div>
+                <div>${pdict.account.preferredAddress.address.address1}</div>
+                <div>${pdict.account.preferredAddress.address.city}, ${pdict.account.preferredAddress.address.stateCode} ${pdict.account.preferredAddress.address.postalCode}</div>
+                <div>${pdict.formattedPhone.address}</div>
+            </div>
+        <iselse>
+            ${Resource.msg('msg.no.saved.addresses', 'address', null)}
+        </isif>
+    </div>
+    
+    <div class="card-footer">
+        <a href="${URLUtils.url('Address-AddAddress')}" class="btn btn-outline-secondary btn-account">${Resource.msg('label.addressbook.addnewaddress','account',null)}</a>
+        <isif condition="${pdict.account.preferredAddress}">
+            <a href="${URLUtils.url('Address-List')}" class="link-primary">${Resource.msg('label.address.myaddresses','account',null)}</a>
+        </isif>
+    </div>
+</div>

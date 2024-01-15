@@ -1,0 +1,15 @@
+<!--- TEMPLATENAME: part.isml --->
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/content.css');
+    </isscript>
+    <div id="ari-container" class="container" data-add-to-cart-url="${URLUtils.url('Cart-AddProduct')}">
+       <script type="text/javascript" id="aripartstream" src="${pdict.jsUrl}?appKey=${pdict.appKey}"></script>
+    </div>
+    <script type="text/javascript">
+        function addARIItem(params) {
+            $('#ari-container').trigger('ari:addToCart', params);
+         }
+    </script>
+</isdecorate>

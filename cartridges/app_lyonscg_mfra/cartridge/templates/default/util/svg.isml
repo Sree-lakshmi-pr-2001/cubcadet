@@ -1,0 +1,25 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<!--- TEMPLATENAME: svghelper.isml --->
+
+<iscomment>
+    SVG Helper Module
+    Purpose: this module outputs the SVG markup used for the icons
+</iscomment>
+<isset name="useImage" value="${pdict.image ? pdict.image : 'false'}" scope="page" />
+<isset name="imageAlt" value="${pdict.alttext ? pdict.alttext : ''}" scope="page" />
+
+<isif condition="${pdict.showbackground}">
+    <span class="icon-background">
+</isif>
+
+<isif condition="${useImage === 'true'}">
+    <img class="icon ${pdict.icon} ${pdict.classes || ''}" src="${URLUtils.staticURL('images/svg-icons/' + pdict.icon + '.svg')}" alt="${imageAlt}" />
+<iselse/>
+    <object type="image/svg+xml" data="${URLUtils.absStatic('images/svg-icons/' + pdict.icon + '.svg')}" class="icon ${pdict.icon} ${pdict.classes || ''}">
+        No icon name was supplied or your browser does not support SVG
+    </object>
+</isif>
+
+<isif condition="${pdict.showbackground}">
+    </span>
+</isif>

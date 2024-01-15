@@ -1,0 +1,10 @@
+/* Bootstrap Flag Base Overrides */
+
+.flag-icon {
+    width: rem(20px);
+    height: rem(20px);
+    margin-right: rem(10px);
+    border-radius: 50%;
+    border: $border;
+    line-height: rem(20px);
+}

@@ -1,0 +1,80 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/financeHelper.js');
+    var Util = require('*/cartridge/scripts/helpers/Util');
+</isscript>
+
+<isset name="stringUtils" value="${require('dw/util/StringUtils')}" scope="page" />
+
+ <isif condition="${'billingForm' in pdict.forms && pdict.forms.billingForm}">
+    <isset name="financeFields" value="${pdict.forms.billingForm.financeCardFields}" scope="page"/>
+ </isif>
+
+ <isset name="firstApplicablePlan" value="${true}" scope="page" />
+
+ <isloop items="${pdict.financePlans}" var="plan">
+    <isif condition="${plan.isPlanApplicable}">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <div class="custom-control custom-radio financing-radio">
+                        <input type="radio" class="form-control custom-control-input" id="financePlanId_${plan.planId}"
+                                value="${plan.planId}"
+                                name="${financeFields.planId.htmlName}"
+                                <isif condition="${firstApplicablePlan == true && (!pdict.selectedFinancePlanId || (pdict.selectedFinancePlanId && plan.planId == pdict.selectedFinancePlanId))}">
+                                    <isset name="firstApplicablePlan" value="${false}" scope="page" />
+                                    data-is-default-plan="true"
+                                    checked
+                                </isif>
+                                encoding="off"
+                        />
+                        <label class="form-control-label custom-control-label finance-radio" for="financePlanId_${plan.planId}">
+                            <div class="label-text-plan">
+                                <div class="label-title financing-plan-title">
+                                    <span class="position-relative mr-2">
+                                        ${plan.monthlyPayment ? plan.monthlyPayment + " " + Resource.msg("label.and", "cart", null) : ""}
+                                        ${plan.name}
+                                        <isif condition="${!empty(plan.ss)}">
+                                            <span class="superscript">${plan.ss}</span>
+                                        </isif>
+                                    </span>
+                                    <span class="text-uppercase text-nowrap">
+                                        ${Resource.msg("label.total.total", "cart", null)}
+                                        <isprint value="${plan.totalPayment}" encoding="on" />
+                                    </span>
+                                </div>
+                                <div
+                                    class="label-disclaimer financing-plan-disclaimer"
+                                    data-disclaimer="<isif condition="${plan.type === 'deferred'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-deferred-disclosure', plan)}" encoding="off" />
+                                    <iselseif condition="${plan.type === 'apr'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-apr-disclosure', plan)}" encoding="off" />
+                                    <iselseif condition="${plan.type === 'standard'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-standard-disclosure', plan)}" encoding="off" />
+                                    <iselseif condition="${plan.type === 'deferred-promoFee'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-deferred-promoFee-disclosure', plan)}" encoding="off" />
+                                    </isif>"
+                                    data-plan-type="<isprint value=${plan.type} encoding="off" />"
+                                    data-fee="${plan.type === 'apr' ? Resource.msgf('finance.plan.apr.fee', 'checkout', null, plan.processFee) : ''}"
+                                >
+                                    <isif condition="${plan.type === 'deferred'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-deferred-disclosure', plan)}" encoding="off" />
+                                    <iselseif condition="${plan.type === 'apr'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-apr-disclosure', plan)}" encoding="off" />
+                                    <iselseif condition="${plan.type === 'standard'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-standard-disclosure', plan)}" encoding="off" />
+                                    <iselseif condition="${plan.type === 'deferred-promoFee'}">
+                                        <isprint value="${Util.getDisClosureContentAssetBody('td-finance-deferred-promoFee-disclosure', plan)}" encoding="off" />
+                                    </isif>
+                                    <a href="javascript:void(0)" data-url="${URLUtils.url('FinancingApplication-Disclosure')}" data-title="${Resource.msg('finance.details.title','checkout',null)}" class="td-payment-details">
+                                        ${Resource.msg('finance.see.details','checkout',null)}
+                                    </a>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </isif>
+</isloop>

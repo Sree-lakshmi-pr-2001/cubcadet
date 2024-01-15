@@ -1,0 +1,3 @@
+<isif condition="${pdict.content && pdict.content !== ''}">
+    <isprint value="${pdict.content}" encoding="off" />
+</isif>

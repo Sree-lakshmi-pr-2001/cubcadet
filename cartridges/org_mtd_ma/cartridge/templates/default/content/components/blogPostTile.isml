@@ -1,0 +1,7 @@
+<div class="content-tile card col">
+    <iscomment> Image </iscomment>
+    <isinclude template="content/components/contentTileImage" />
+
+    <iscomment> CTA Title </iscomment>
+    <isinclude template="content/components/contentTileCTATitle" />
+</div>

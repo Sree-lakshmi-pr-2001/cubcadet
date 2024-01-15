@@ -1,0 +1,139 @@
+<!--- TEMPLATENAME: tileButtonState.isml --->
+<isset name="product" value="${pdict.product}" scope="page" />
+<isscript>
+    var bsHelper = require('org_mtd_ma/cartridge/scripts/utils/ButtonStateHelper');
+    var buttonStates = bsHelper.getStates(product.id);
+    var availableShippingMethod = '';
+    if (buttonStates && buttonStates.dealerDelivery) {
+        availableShippingMethod = 'dealer-delivery';
+    } else if (buttonStates && buttonStates.pickUp) {
+        availableShippingMethod = 'dealer-pickup';
+    } else if (buttonStates && buttonStates.shipToHome) {
+        availableShippingMethod = 'standard';
+    }
+    var currentProduct;
+    if (typeof product !== 'undefined') {
+        currentProduct = product;
+    } else if (typeof pdict.product !== 'undefined') {
+        currentProduct = pdict.product;
+    }
+</isscript>
+<!-- scenarioID = ${buttonStates.scenarioID} -->
+<isif condition="${(!product.isParts || dw.system.Site.getCurrent().ID === 'cubcadetca') && dw.system.Site.getCurrent().getCustomPreferenceValue('enablePDPWhereToBuy')}">
+    <div class="dealer-tile-area" data-available-shipping-method="${availableShippingMethod}" data-area="search">
+
+        <isif condition="${buttonStates.dealerDelivery}">
+            <p class="dealer-tile-area__msg dealer-tile-area__msg--delivery-icon">
+                ${Resource.msg('dealer.tagline.deliveryavailable.msg', 'dealer', null)}
+            </p>
+        </isif>
+        <isif condition="${buttonStates.shipToHome}">
+            <p class="dealer-tile-area__msg dealer-tile-area__msg--ship-to-home">
+                ${Resource.msg('dealer.tagline.shiptohomeavailable.msg', 'dealer', null)}
+            </p>
+        </isif>
+        <isif condition="${buttonStates.pickUp}">
+            <p class="dealer-tile-area__msg dealer-tile-area__msg--pickup-icon">
+                ${Resource.msg('dealer.tagline.pickupavailable.msg', 'dealer', null)}
+            </p>
+        </isif>
+        <isif condition="${buttonStates.findDelivery}">
+            <button type="button" class="btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-event-type="findDeliveryOption" data-backdrop="static">
+                ${Resource.msg('dealer.tagline.finddeliveryoptions.msg', 'dealer', null)}
+            </button>
+        </isif>
+        <isif condition="${buttonStates.unavailable}">
+            <p class="dealer-tile-area__msg">
+                ${Resource.msg('dealer.tagline.cannotsell.msg', 'dealer', null)}
+            </p>
+        </isif>
+        <isif condition="${buttonStates.outOfStock}">
+            <isif condition="${dw.system.Site.getCurrent().ID === 'cubcadetca' && product.productAttributeType == 'WholeGood' && buttonStates.dealerIsSelected}">
+                <p class="dealer-tile-area__msg">
+                    ${Resource.msg('dealer.tagline.contactDealer.msg', 'dealer', null)}
+                </p>
+            <iselse/>
+                <p class="dealer-tile-area__msg text-red">
+                    ${Resource.msg('dealer.tagline.temporaryunavailable.msg', 'dealer', null)}
+                </p>
+            </isif>
+        </isif>
+
+        <isif condition="${buttonStates.addToCart}">
+            <isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+            <button class="add-to-cart-tile btn btn-secondary"
+                data-pid="${product.id}"
+                data-add-to-cart-url="${URLUtils.url('Cart-AddProduct')}"
+                data-gtmdata="${JSON.stringify(tagManager.getProductData(product.id))}"
+            >
+                ${Resource.msg('dealer.tile.button.addToCart', 'dealer', null)}
+            </button>
+        <iselseif condition="${buttonStates.outOfStock}">
+            <isif condition="${buttonStates.dealerIsSelected}">
+                <button class="where-to-buy__button btn btn-secondary js-contact-dealer-modal"
+                    data-product-id="${currentProduct.id}"
+                    data-product-name="${currentProduct.name}"
+                    data-contact-dealer-modal-update-url="${URLUtils.url('Dealer-ContactDealerModalUpdate')}"
+                >
+                    ${Resource.msg('button.contactDealer', 'common', null)}
+                </button>
+            <iselse/>
+                <button class="btn btn-secondary" disabled>
+                    ${Resource.msg('dealer.tile.button.outOfStock', 'dealer', null)}
+                </button>
+            </isif>
+        <iselseif condition="${buttonStates.unavailable}">
+            <isif condition="${buttonStates.dealerIsSelected}">
+                <button class="where-to-buy__button btn btn-secondary js-contact-dealer-modal"
+                    data-product-id="${currentProduct.id}"
+                    data-product-name="${currentProduct.name}"
+                    data-contact-dealer-modal-update-url="${URLUtils.url('Dealer-ContactDealerModalUpdate')}"
+                >
+                    ${Resource.msg('button.contactDealer', 'common', null)}
+                </button>
+            <iselse/>
+                <button class="btn btn-secondary" disabled>
+                    ${Resource.msg('dealer.tile.button.unavailable', 'dealer', null)}
+                </button>
+            </isif>
+        <iselseif condition="${buttonStates.addToCartNoDealer}">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                ${Resource.msg('dealer.tile.button.addToCart', 'dealer', null)}
+            </button>
+        <iselseif condition="${buttonStates.contactDealer}">
+            <isif condition="${!pdict.isQuickView}">
+                <button class="where-to-buy__button btn btn-secondary js-contact-dealer-modal"
+                    data-product-id="${currentProduct.id}"
+                    data-product-name="${currentProduct.name}"
+                    data-contact-dealer-modal-update-url="${URLUtils.url('Dealer-ContactDealerModalUpdate')}"
+                >
+                    ${Resource.msg('button.contactDealer', 'common', null)}
+                </button>
+            <iselse>
+                <button class="where-to-buy__button btn btn-secondary" data-button-event="findDealerEvent" data-find-dealer-url="${URLUtils.url('Stores-Find')}">
+                ${Resource.msg('find.a.dealer', 'common', null)}
+                </button>
+            </isif>
+        <iselseif condition="${buttonStates.findDealer}">
+            <button class="where-to-buy__button btn btn-secondary" data-button-event="findDealerEvent" data-find-dealer-url="${URLUtils.url('Stores-Find')}">
+                ${Resource.msg('find.a.dealer', 'common', null)}
+            </button>
+        <iselse>
+            <isif condition="${!pdict.isQuickView}">
+                <button type="button" class="where-to-buy__button btn btn-secondary" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                   ${Resource.msg('find.a.dealer', 'common', null)}
+                </button>
+            <iselse>
+                <button class="where-to-buy__button btn btn-secondary" data-button-event="findDealerEvent" data-find-dealer-url="${URLUtils.url('Stores-Find')}">
+                ${Resource.msg('find.a.dealer', 'common', null)}
+                </button>
+            </isif>
+        </isif>
+        <isif condition="${buttonStates.checkAnotherDealer}">
+            <button type="button" class="btn-link" data-toggle="modal" data-target="#dealerSelectorModal" data-backdrop="static">
+                 ${Resource.msg('dealer.tagline.checkanotherdealerinventory.msg', 'dealer', null)}
+            </button>
+        </isif>
+
+    </div>
+</isif>

@@ -1,0 +1,30 @@
+<ul class="values content">
+    <isloop items="${categories}" var="category">
+        <isif condition="${category.displayValue}">
+            <li>
+                <a href="${category.url}">
+                    <!--- Radio button --->
+                    <isif condition="${category.selected}">
+                        <issvg icon="icon-checkbox-selected" image="true" altText="" />
+                    <iselse>
+                        <issvg icon="icon-checkbox-unselected" image="true" altText="" />
+                    </isif>
+
+                    <!--- Label --->
+                    <span title="${category.title}" class="${category.selected ? 'selected' : ''}">
+                        ${category.displayValue}
+                    </span>
+                </a>
+                <!--- Process subcategories --->
+                <isset name="categories" value="${category.subCategories}" scope="page" />
+                <isinclude template="search/refinements/categories" />
+            </li>
+        <iselse>
+            <li>
+                <!--- Process subcategories --->
+                <isset name="categories" value="${category.subCategories}" scope="page" />
+                <isinclude template="search/refinements/categories" />
+            </li>
+        </isif>
+    </isloop>
+</ul>

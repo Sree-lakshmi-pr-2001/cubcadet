@@ -1,0 +1,84 @@
+<style type="text/css">
+	.dis-examples {
+		padding: 0 20px;
+	}
+
+	.dis-examples div {
+		margin-bottom: 20px;
+	}
+
+	.dis-examples h1 {
+		padding-bottom: 5px;
+		border-bottom: 1px solid #DADADA;
+	}
+
+	.dis-examples h2 {
+		margin-bottom: 5px;
+	}
+
+	.dis-examples img {
+		border: 1px solid #DADADA;
+		box-shadow: 1px 1px 2px #777777;
+	}
+</style>
+
+<isdecorate template="content/home/pt_storefront">
+
+<isscript>
+	var imageryUtil				= require('~/cartridge/scripts/utils/ImageryUtil.js'),
+		productImages			= imageryUtil.getImagery(pdict.Product),
+		variationImages			= imageryUtil.getImagery(pdict.Variant),
+		variationModelImages	= imageryUtil.getImagery(pdict.Product.getVariationModel()),
+		variationValue			= imageryUtil.getImagery(pdict.VariationValue);
+</isscript>
+
+<div class="dis-examples">
+	<h1>Demandware Image Service Examples</h1>
+
+	<div>
+		<h2>Product Master - Default (Large)</h2>
+		<img src="${productImages.getImage().url}" alt="${productImages.getImage().alt}" title="${productImages.getImage().title}"/>
+	</div>
+
+	<div>
+		<h2>Product Master - Medium, Index 1</h2>
+		<img src="${productImages.getImage('medium',1).url}" alt="${productImages.getImage('medium',1).alt}" title="${productImages.getImage('medium',1).title}"/>
+	</div>
+
+	<div>
+		<h2>Product Master - Small</h2>
+		<isset name="image" value="${productImages.getImage('small')}" scope="page"/>
+		<img src="${image.url}" alt="${image.alt}" title="${image.title}"/>
+	</div>
+
+	<div>
+		<h2>Product Variant - Large</h2>
+		<img src="${variationImages.getImage('large').url}" alt="${variationImages.getImage('large').alt}" title="${variationImages.getImage('large').title}"/>
+	</div>
+
+	<div>
+		<h2>Product Variant - Swatch</h2>
+		<img src="${variationImages.getImage('swatch').url}" alt="${variationImages.getImage('swatch').alt}" title="${variationImages.getImage('swatch').title}"/>
+	</div>
+
+	<div>
+		<h2>Product Master Collection - Small</h2>
+		<isloop iterator="${productImages.getImages('small')}" alias="image">
+			<img src="${image.url}" alt="${image.alt}" title="${image.title}"/>
+		</isloop>
+	</div>
+
+	<div>
+		<h2>Variation Model Collection - Small</h2>
+		<isloop items="${variationModelImages.getImages('small')}" alias="image">
+			<img src="${image.url}" alt="${image.alt}" title="${image.title}"/>
+		</isloop>
+	</div>
+
+	<div>
+		<h2>Variation Value - Small</h2>
+		<img src="${variationValue.getImage('small').url}" alt="${variationValue.getImage().alt}" title="${variationValue.getImage().title}"/>
+	</div>
+</div>
+
+</isdecorate>

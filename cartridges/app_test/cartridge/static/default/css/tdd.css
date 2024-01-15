@@ -1,0 +1,89 @@
+body {
+	/*font-family: 'trebuchet MS' , 'Lucida sans' , Arial;*/
+	font-size: 12px;
+	/*line-height: 1.42857143;*/
+	color: #333;
+	background-color: #fff; }
+
+.box {
+	position: relative;
+	padding: 45px;
+	margin: 0 -15px 15px;
+	/* border-color: #e5e5e5 #eee #eee; */
+	border-style: solid;
+	border-width: 1px 0;
+	/* -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+	box-shadow: inset 0 3px 6px rgba(0,0,0,.05); */ }
+
+/* Overrides */
+table.table {
+	font-size: 14px; }
+	
+table.table thead tr th {
+	border-bottom-width: 0px; }
+
+table.table thead tr th a {
+	padding: 8px; }
+	
+table.table thead tr th span.startImage,
+table.table thead tr th span.stopImage {
+	color: #000; }
+
+table.table tbody tr td span.startImage,
+table.table tbody tr td span.stopImage {
+	color: #000; }
+
+table.table thead tr {
+    /*background-color: #f0f0f0;*/
+    background-color: #60676d;
+    color: #fff; }
+    
+table.table tr.row-disable-hover {
+	background: none; }
+	
+table.table tr.collapse td,
+table.table tr.collapsing td {
+	padding: 0px; }
+	
+table.table tr.collapse td div.panel,
+table.table tr.collapsing td div.panel {
+	margin: 0px 0px 0px 0px;
+	border-radius: 0px; }
+	
+table.table tr td button {
+	padding: 0px 6px; 
+	font-size: 12px;
+	line-height: 1.4;
+	border-color: white; 
+	text-decoration: none;
+	color: #6d8e99 !important;
+	background-color: #e8f9ff;
+	border: 1px solid #c9dee5; }
+
+table.table tr td button:hover,
+table.table tr td button:focus {
+	background-color: #f7fdff; 
+	color: #fff; 
+	border: 1px solid #c0d4db; }
+	
+table.table tbody td div.panel-info {
+	border-color: #fff; }
+
+table.table tbody td div.panel-info div.panel-heading {
+	background-color: #f4f9fb; }
+	
+table.table tr.highlight td:first-child {
+	border-left: 1px solid red; }
+
+table.table tr.highlight td {
+	background-color: #fcf8e3; }
+
+/*table th { text-align: center; font-weight: bold; }*/
+
+/*tr:hover {background-color:yellow;}*/
+
+/*td:hover {background-color:white;}*/
+
+.title { text-align: center; font-weight: bold; font-size: 36px}
+
+.secondTitle { text-align: center; font-weight: bold; font-size: 18px}

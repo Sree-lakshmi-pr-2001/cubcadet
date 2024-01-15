@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Content">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="blogArticleTemplate">
+                <display-name xml:lang="x-default">Blog Article Page Template</display-name>
+                <description xml:lang="x-default">Choose a template for your blog article page.</description>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Default article template</display>
+                        <value>default-template</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Editorial article template</display>
+                        <value>editorial-template</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">How To article template</display>
+                        <value>howto-template</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">How To article template 2</display>
+                        <value>howto-template-2</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="tools">
+                <display-name>Tools</display-name>
+                <description></description>
+                <type>set-of-string</type>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="time">
+                <display-name xml:lang="x-default">Time</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+
+            <attribute-definition attribute-id="difficulty">
+                <display-name xml:lang="x-default">Difficulty</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+
+        <group-definitions>
+            <attribute-group group-id="Blog">
+                <attribute attribute-id="blogArticleTemplate"/>
+                <attribute attribute-id="postedDate"/>
+                <attribute attribute-id="tools"/>
+                <attribute attribute-id="time"/>
+                <attribute attribute-id="difficulty"/>
+                <attribute attribute-id="tags"/>
+                <attribute attribute-id="author"/>
+                <attribute attribute-id="productType"/>
+                <attribute attribute-id="relatedProducts"/>
+                <attribute attribute-id="image"/>
+                <attribute attribute-id="video"/>
+                <attribute attribute-id="relatedContent"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="popularCategories">
+                <display-name xml:lang="x-default">List of folder ids</display-name>
+                <description xml:lang="x-default">List of folders - one id per line</description>
+                <type>text</type>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Blog">
+                <display-name xml:lang="x-default">Blog</display-name>
+                <attribute attribute-id="blogRootFolder"/>
+                <attribute attribute-id="contentTileFallbackImage"/>
+                <attribute attribute-id="popularCategories"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

@@ -1,0 +1,47 @@
+<isinclude template="components/modules" />
+<div>
+    <div class="card order-confirm-create-account">
+        <div class="card-header">
+            <h6>${Resource.msg('title.save.customer.information', 'confirmation', null)}</h6>
+        </div>
+        <div class="card-body">
+            <form
+                action="${URLUtils.url('Order-CreateAccount', 'ID', pdict.order.orderNumber, 'UUID', pdict.orderUUID)}"
+                class="checkout-registration"
+                method="POST"
+                name="checkout-register-form" ${pdict.passwordForm.attributes} novalidate>
+                <iscontentasset aid="confirmation-create-account-text" />
+                <div class="form-group
+                    <isif condition="${pdict.passwordForm.newpassword.mandatory === true}">required</isif>">
+                    <label class="form-control-label" for="newPassword">
+                        ${Resource.msg('field.password','confirmation',null)}
+                    </label>
+                    <input
+                       type="password"
+                       class="form-control"
+                       id="newPassword"
+                       <isprint value="${pdict.passwordForm.newpassword.attributes}" encoding="off" />>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group
+                    <isif condition="${pdict.passwordForm.newpasswordconfirm.mandatory === true}">required</isif>">
+                    <label class="form-control-label" for="newPasswordConfirm">
+                        ${Resource.msg('field.confirm.password','confirmation',null)}
+                    </label>
+                    <input
+                       type="password"
+                       class="form-control"
+                       id="newPasswordConfirm"
+                       <isprint value="${pdict.passwordForm.newpasswordconfirm.attributes}" encoding="off" />>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+
+                <button class="btn btn-secondary btn-block">
+                    ${Resource.msg('button.create.account','confirmation',null)}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

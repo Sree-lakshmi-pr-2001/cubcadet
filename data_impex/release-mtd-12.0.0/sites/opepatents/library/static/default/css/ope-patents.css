@@ -1,0 +1,89 @@
+body {
+	background: rgb(167, 169, 172);
+	font-family: Arial;
+}
+
+.page {
+	background: #f1f2f2;
+	margin: 1em auto;
+	padding: 1em;
+	width: 75%;
+}
+
+table {
+	border: none;
+	margin: auto;
+	width: 90%;
+}
+
+#header-table {
+	border-spacing: 0.3em;
+}
+
+table td {
+	font-size: 8pt;
+	vertical-align: top;
+}
+
+#header-table td {
+	padding: 0.2em;
+}
+
+.section-table td {
+	padding: 0.5em;
+}
+
+.img-td {
+	width: 25%;
+}
+
+#ope-emissions-button {
+	margin-left: 5.8%;
+}
+
+#ope-emissions-button button {
+	margin-top: 0.5em;
+}
+
+hr {
+	border-top: 0.5em solid gray;
+	margin-bottom: 0.25em;
+	margin: 0.5em auto;
+}
+
+h1, 
+h2 {
+	font-weight: heavy;
+	font-size: 25pt;
+	margin: 0.25em 0;
+}
+
+h2 {
+	font-size: 20pt;
+}
+
+.category-link {
+	text-transform: uppercase;
+}
+
+img {
+	height: auto;
+	width: 15em;
+}
+
+.patent-heading {
+	border-bottom: 5px solid gray;
+	font-size: 12pt;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.25em;
+	text-transform: uppercase;
+}
+
+.patent {
+	font-size: 12pt;
+	margin: 0;
+}
+#disclaimer p {
+	font-size: 10pt;
+}

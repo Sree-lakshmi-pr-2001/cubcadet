@@ -1,0 +1,13 @@
+<!--- TEMPLATENAME: renderRecaptcha.isml --->
+<iscomment>Injecting Google Recaptcha</iscomment>
+<isscript> 
+    var enableGoogleRecaptcha = dw.system.Site.getCurrent().getCustomPreferenceValue('enableGoogleRecaptcha');
+    var googleRecaptchaSiteKey = dw.system.Site.getCurrent().getCustomPreferenceValue('googleRecaptchaSiteKey');
+</isscript>
+<isif condition="${!empty(enableGoogleRecaptcha) && enableGoogleRecaptcha && !empty(googleRecaptchaSiteKey)}">
+
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+
+<div id="recaptcha" class="g-recaptcha" data-sitekey="${googleRecaptchaSiteKey}"></div>
+<div class="invalid-feedback">${Resource.msg('captcha.error','forms',null)}</div>
+</isif>

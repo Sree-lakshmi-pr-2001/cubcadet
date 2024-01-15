@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="ari-iframe-dyno">
+        <display-name xml:lang="x-default">ARI Partstream iframe Dynosite</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="container" data-add-to-cart-url="$url('Cart-AddProduct')$" id="ari-container"&gt;&lt;script type="text/javascript" id="aripartstream" src="https://services.arinet.com/PartStream/?appkey=ytHYzLwru2CXhs07AcWD"&gt;&lt;/script&gt;&lt;/div&gt;&#13;
+&lt;script type="text/javascript"&gt;&#13;
+    function addARIItem(params) {&#13;
+        $('#ari-container').trigger('ari:addToCart', params);&#13;
+    }&#13;
+&lt;/script&gt;</custom-attribute>
+        </custom-attributes>
+        <sitemap-included-flag>false</sitemap-included-flag>
+    </content>
+</library>

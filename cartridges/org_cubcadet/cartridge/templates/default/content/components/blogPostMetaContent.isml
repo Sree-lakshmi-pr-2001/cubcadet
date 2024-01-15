@@ -1,0 +1,39 @@
+<div class="blog-post-meta-content d-flex flex-row row">
+    <div class="blog-post-data col-12 col-md-4">
+        <div class="post-instruction-time">
+            <span class="label">
+                <isprint value="${Resource.msg('blog.post.time', 'blog', null)}" encoding="off" />
+            </span>
+            <span class="value">
+                <isprint value="${pdict.content.instructionTime}" />
+            </span>
+        </div>
+
+        <div class="post-instruction-difficulty">
+            <span class="label">
+                <isprint value="${Resource.msg('blog.post.difficulty', 'blog', null)}" encoding="off" />
+            </span>
+            <span class="value">
+                <isprint value="${pdict.content.difficulty}" />
+            </span>
+        </div>
+
+        <div class="post-instruction-tools-list">
+            <span class="label">
+                <isprint value="${Resource.msg('blog.post.tools', 'blog', null)}" encoding="off" />
+            </span>
+            <isif condition="${pdict.content.toolsList.length > 0}">
+                <ul>
+                    <isloop items="${pdict.content.toolsList}" var="toolItem" status="loopstate">
+                        <li>
+                            <isprint value="${toolItem}" encoding="off" />
+                        </li>
+                    </isloop>
+                </ul>
+            </isif>
+        </div>
+    </div>
+    <div class="blog-post-description col">
+        <isprint value="${pdict.content.assetDescription}" />
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+<div class="pdp-link">
+    <a class="link" href="${pdict.urls.product}" data-gtmdata="${JSON.stringify(tagManager.getProductData(product.id))}">${product.productName}</a>
+</div>
+<div class="product-extended-name">
+    <span class="name">${product.id}</span>
+</div>

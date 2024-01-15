@@ -1,0 +1,76 @@
+<!--- TEMPLATENAME: content.isml --->
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/customerService.css');
+    assets.addJs('/js/contactUs.js');
+</isscript>
+<iscontentasset aid="store-info-contact-us" />
+
+<div id="contactUsFormSuccessMessage" class="w-100 px-sm-1" style="display: none;">
+    <isslot id="ContactUsSuccess" context="global" description="Contact Us Success Message" />
+</div>
+<div id="contactUsFormErrorMessage" class="w-100 px-sm-1" style="display: none;">
+    <isslot id="ContactUsFailed" context="global" description="Contact Us Failed Message" />
+</div>
+
+<form action="${pdict.contactUsForm.actionUrl}" class="col-md-12 col-lg-8 mx-auto" id="contactUsForm" method="POST" name="${pdict.contactUsForm.htmlName}">
+
+    <div class="form-group ${!!pdict.contactUsForm.firstname.mandatory ? 'required' : ''}">
+        <label class="form-control-label" for="registration-form-firstname">
+            <isprint value="${pdict.contactUsForm.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="registration-form-firstname" name="firstname" <isprint value=${pdict.contactUsForm.firstname.attributes} encoding="off" /> >
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group ${!!pdict.contactUsForm.lastname.mandatory ? 'required' : ''}">
+        <label class="form-control-label" for="registration-form-lastname">
+            <isprint value="${pdict.contactUsForm.lastname.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="registration-form-lastname" name="lastname" <isprint value=${pdict.contactUsForm.lastname.attributes} encoding="off" /> >
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group ${!!pdict.contactUsForm.phone.mandatory ? 'required' : ''}">
+        <label class="form-control-label" for="registration-form-phone">
+            <isprint value="${pdict.contactUsForm.phone.label}" encoding="htmlcontent" />
+        </label>
+        <input type="tel" class="form-control" id="registration-form-phone" name="phone"
+               data-range-error="${Resource.msg('error.message.between10and20', 'forms', null)}"
+               data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'forms', null)}"
+               <isprint value=${pdict.contactUsForm.phone.attributes} encoding="off" />
+        >
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group ${!!pdict.contactUsForm.email.mandatory ? 'required' : ''}">
+        <label class="form-control-label" for="registration-form-email">
+            <isprint value="${pdict.contactUsForm.email.label}" encoding="htmlcontent" />
+        </label>
+        <input type="email" class="form-control" data-pattern-mismatch="${Resource.msg('error.email.mismatch','forms',null)}" id="registration-form-email" name="email" <isprint value=${pdict.contactUsForm.email.attributes} encoding="off" /> >
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group ${!!pdict.contactUsForm.message.mandatory ? 'required' : ''}">
+        <label class="form-control-label" for="registration-form-message">
+            <isprint value="${pdict.contactUsForm.message.label}" encoding="htmlcontent" />
+        </label>
+        <textarea class="form-control" id="registration-form-message" name="message"
+                  placeholder="${Resource.msg('contactus.message.placeholder', 'forms', null)}"
+                  <isprint value=${pdict.contactUsForm.message.attributes} encoding="off" />
+        ></textarea>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="recaptcha-content">
+        <div id="contactUsRecaptcha" class="g-recaptcha"></div>
+        <div class="invalid-feedback">${Resource.msg('captcha.error','forms',null)}</div>
+    </div>
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+    <input type="hidden" name="CompanyId" value="${pdict.contactUsForm.dealerId}"/>
+    <div class="form-group-cta">
+        <button type="submit" id="sendContactUs" class="btn contact-us btn-block btn-secondary">${Resource.msg('contactus.submit.label','forms',null)}</button>
+    </div>
+</form>
+
+<isinclude template="content/dealerRecaptcha"/>

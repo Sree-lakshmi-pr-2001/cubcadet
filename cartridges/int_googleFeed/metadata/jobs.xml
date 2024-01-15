@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="Google Feed 2.0" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="madewellUS"/>
+            <step step-id="generate" type="custom.GenerateGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+            <step step-id="upload" type="custom.UploadGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+            <step step-id="archive" type="custom.ArchiveGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+            <step step-id="cleanup archive" type="custom.CleanupGoogleProductFeed" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2018-03-10Z</date-from>
+                    <start-time>00:15:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Friday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+</jobs>

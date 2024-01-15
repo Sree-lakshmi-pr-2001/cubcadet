@@ -1,0 +1,19 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/header.js');
+</isscript>
+<div class="epcotHeader d-flex flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom box-shadow" id="epcotHeader">
+  <h5 class="my-0 mr-md-auto font-weight-normal">EPCOT - ${dw.system.Site.getCurrent().getName()}</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2" href="${URLUtils.url('Epcot-Start')}">Start New Order</a>
+  </nav>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2" href="${URLUtils.url('ViewApplication-DisplayWelcomePage')}" target="_blank">Return to Business
+      Manager</a>
+  </nav>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb arr-right" id='breadCrumbList'>
+    <!--<li class="breadcrumb-item" aria-current="page"><a href="Epcot-Welcome">Home</a></li>-->
+  </ol>
+</nav>

@@ -1,0 +1,13 @@
+<li class="nav-item" data-method-id="${paymentOption.ID}">
+    <a class="nav-link credit-card-tab <isif condition="${currentPaymentMethod === paymentOption.ID}">active</isif>" data-toggle="tab" href="#credit-card-content" aria-controls="credit-card-content" role="tab" aria-selected="true">
+        <span class="payment-input credit-card">
+            ${Resource.msg('payment.option.credit', 'payment', null)}
+        </span>
+        <span class="cc-imgs credit-card-option">
+            <iscomment>Loop through configured cardTypes to display icons of accepted cards</iscomment>
+            <isloop items="${pdict.order.billing.payment.applicablePaymentCards}" var="card" status="loopSate">
+                    <issvg icon="${card.cardType.toLowerCase()}" image="true" altText="${card.name + ' Accepted'}" />
+            </isloop>
+        </span>
+    </a>
+</li>

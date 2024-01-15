@@ -1,0 +1,174 @@
+@import "../variables";
+
+// helpers
+.hero-label {
+    @include hero-label();
+}
+
+.hero-caro.slick-dotted.slick-slider {
+    margin-bottom: rem(10px);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
+}
+
+.hero-caro .slick-dots {
+    text-align: left;
+    bottom: 15px;
+    left: 15px;
+    width: 25%;
+
+    @include media-breakpoint-up(lg) {
+        left: 20px;
+        bottom: 30px;
+    }
+
+    li.pause {
+        background-color: $trans;
+
+        .pause-button {
+            background-image: $svg-pause-black-path;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 8px;
+            position: relative;
+            top: 10px;
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &.dark {
+        li button::before {
+            border-color: $brand-main;
+            background-color: $trans;
+        }
+
+        li.slick-active button::before {
+            background-color: $brand-main;
+            color: $brand-main;
+        }
+
+        li .pause-button {
+            content: $svg-pause-yellow-path;
+        }
+    }
+}
+
+.hero {
+    padding: rem(15px);
+    user-select: text;
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(30px);
+    }
+
+    .row {
+        position: relative;
+    }
+
+    .col {
+        padding: 0; // override boostrap
+    }
+
+    .p {
+        @include herop();
+    }
+
+    // Using one image as a CSS background image
+    .hero-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 50%; // maintains aspect ratio
+    }
+
+    picture {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100vw;
+        width: 100%;
+    }
+
+    .text-block {
+        @include media-breakpoint-down(md) {
+            height: 100%;
+        }
+    }
+
+    .text-block > div {
+        padding: 8%;
+        padding-bottom: 12%;
+        width: 100%;
+        height: 100%;
+
+        @include media-breakpoint-up(lg) {
+            // vertical align text block contents
+            padding: 0 15% 0 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include media-breakpoint-down(lg) {
+            // so white text will show on body
+            &.bg-trans {
+                background-color: $black;
+            }
+        }
+
+        .intro-block,
+        .display-1,
+        .copy-block,
+        .p {
+            margin-bottom: 8%;
+        }
+
+        .hero-bullet {
+            font-size: 1rem;
+            padding-left: rem(15px);
+            line-height: 1.25;
+            margin-left: 0;
+
+            &::before {
+                @include heroBullets();
+            }
+        }
+
+        ul {
+            @include herop();
+
+            padding-left: rem(15px);
+            line-height: 1.25;
+            list-style-type: none;
+
+            @include media-breakpoint-up(lg) {
+                line-height: calc(1.25rem + 0.9vw);
+            }
+
+            li::before {
+                @include heroBullets();
+            }
+        }
+
+        .cta-container {
+            text-align: center;
+
+            + .cta-container {
+                .btn-text,
+                .btn-link,
+                .breadcrumb-item,
+                .btn-video-black-ol,
+                .btn-video-white-ol,
+                .btn-video-yellow-ol,
+                a {
+                    margin-top: rem(20px);
+                }
+            }
+        }
+    }
+}

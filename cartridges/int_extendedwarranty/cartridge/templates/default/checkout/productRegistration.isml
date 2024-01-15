@@ -1,0 +1,30 @@
+<isset name="warrantyHelper" value="factories/warranty" scope="page"></isset>
+
+<iscontentasset aid="EW-End-use" />
+
+<isif condition="${pdict.isAftermarketInBasket}">
+   <isloop items="${pdict.warranties}" var="warranty" status="loopstate">
+      <isif condition="${!warranty.registered}">
+         <hr>
+         ${warranty.model}<br>
+         ${warranty.productName}<br>
+            ${dw.web.Resource.msg('dialog2.serialNumber', 'eligibilitycheck', null)} <b> ${warranty.serialNumber}</b><br>
+            ${dw.web.Resource.msg('dialog2.factoryNumber', 'eligibilitycheck', null)} <b> ${warranty.factoryNumber}</b><br>
+            <div class="row">
+               <div class="col-4">
+                  ${Resource.msg('productregistration.purchasedFrom', 'productregistration', null)}
+               </div>
+               <div class="col-8">
+                  <select class="warrantyPurchasedFrom"
+                     data-product-id="${warranty.productID}"
+                     >
+                     <option value="None">None</option>
+                     <isprint value="${warranty.purchaseFrom}" encoding="off" />
+                  </select>
+               </div>
+            </div>
+         <hr>
+      </isif>
+   </isloop>
+</isif>
+

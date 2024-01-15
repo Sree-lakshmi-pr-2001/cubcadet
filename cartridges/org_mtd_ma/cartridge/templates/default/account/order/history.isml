@@ -1,0 +1,47 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/orderHistory.js');
+        assets.addCss('/css/account/profile.css');
+        var bannerImg = dw.content.ContentMgr.getContent('account-banner');
+    </isscript>
+    <isinclude template="/components/modules"/>
+
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <div class="account-page-header">
+            <h2 class="pull-left">${Resource.msg('label.orderhistory','account',null)}</h3>
+            <a href="${URLUtils.url('Account-Show')}" class="link-primary pull-right">
+                ${Resource.msg('link.profile.backtoaccount','account',null)}
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <div class="form-group">
+                    <div class="select-wrapper">
+                        <select class="form-control custom-select order-history-select">
+                            <isloop items="${pdict.filterValues}" var="filterValue">
+                                <option
+                                    value="${filterValue.optionValue}"
+                                    <isif condition="${pdict.orderFilter === filterValue.displayValue
+                                        || pdict.filterValues === Resource.msg('orderhistory.sixmonths.option','order',null)
+                                        || pdict.filterValues === Resource.msg('orderhistory.twelvemonths.option','order',null)}"> selected</isif>>
+                                        ${Resource.msg('label.sortby', 'order', null)}
+                                        ${filterValue.displayValue}
+                                </option>
+                            </isloop>
+                        </select>
+                        <span class="selector"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="container order-list-container">
+                <isinclude template="account/order/orderList"/>
+            </div>
+        </div>
+    </div>
+    <ismonetatetrackpage pagename="orderstatus" />
+</isdecorate>

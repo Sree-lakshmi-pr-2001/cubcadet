@@ -1,0 +1,7 @@
+<b> ${Resource.msg("order_watcher.email.title", "order_watcher")} </b>
+<br>
+${Resource.msgf("order_watcher.email.line_1", "order_watcher", null, pdict.startTime, pdict.endTime, pdict.numberOfOrdersByDomain, pdict.domainName, pdict.siteID )}
+<br>
+${Resource.msgf("order_watcher.email.line_2", "order_watcher", null, pdict.minNumberOfOrders, pdict.processorName)}
+<br>
+${Resource.msgf("order_watcher.email.line_3", "order_watcher", null, pdict.numberOfFailedOrders)}

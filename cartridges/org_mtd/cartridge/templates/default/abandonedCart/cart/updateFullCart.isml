@@ -1,0 +1,27 @@
+<iscomment>Track cart on cart page</iscomment>
+<isscript>
+    var mtdHelper = require('*/cartridge/scripts/util/MTDHelper');
+    var isUsSite = mtdHelper.isUsSite();
+
+    var imageUrl = null;
+    if (lineItem.images) {
+        if (lineItem.images['line-item'] && lineItem.images['line-item'].length > 0) {
+            imageUrl = lineItem.images['line-item'][0].url;
+        } else if (lineItem.images.small && lineItem.images.small.length > 0){
+            imageUrl = lineItem.images.small[0].url;
+        }
+    }
+</isscript>
+
+<isif condition="${isUsSite}" >
+    <script>
+        fullCart.cart.push({
+            "item" : <isprint value="${JSON.stringify(lineItem.productName)}" encoding="off"/>,
+            "quantity":  "${lineItem.quantity.toString()}",
+            "price" : "${lineItem.price.sales.value}",
+            "unique_id" : "${lineItem.id}",
+            "productUrl" : "${URLUtils.abs('Product-Show', 'pid', lineItem.id)}",
+            "imageUrl" : "${imageUrl}"
+        });
+    </script>
+</isif>

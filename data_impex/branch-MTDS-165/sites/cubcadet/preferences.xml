@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances/>
+        <development/>
+        <staging/>
+        <production/>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances>
+            <preference preference-id="dealerSearchRefinements">{
+    "UTV " : "Utility Vehicles",
+    "PRO" : "Professional Products",
+    "SNO" : "Snow Blowers",
+    "ROB" : "Robotic Mowers",
+    "RP" : "Residential products"
+}</preference>
+            <preference preference-id="residentialProductsMapping">
+                <value>RZT</value>
+                <value>LGT</value>
+                <value>WBM</value>
+                <value>LOG</value>
+                <value>STR</value>
+                <value>CHS</value>
+                <value>PRW</value>
+                <value>TNC</value>
+                <value>TAT</value>
+                <value>HNC</value>
+                <value>LED</value>
+                <value>BLO</value>
+            </preference>
+        </all-instances>
+        <development/>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>

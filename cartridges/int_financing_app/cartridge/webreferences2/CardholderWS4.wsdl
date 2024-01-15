@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/2004-08-24.xsd" targetNamespace="http://www.shopperscharge.com/CardholderWS4" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:serviceSchema="http://www.shopperscharge.com/CardholderWS4">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.shopperscharge.com/CardholderWS4">
+
+
+      <!-- Types: Simple -->
+      <s:simpleType name="UserID">
+        <s:restriction base="s:string">
+          <s:minLength value="1" />
+          <s:maxLength value="20" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="XmitSignOnID">
+        <s:restriction base="s:string">
+          <s:minLength value="1" />
+          <s:maxLength value="30" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="Password">
+        <s:restriction base="s:string">
+          <s:minLength value="8" />
+          <s:maxLength value="20" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="AccessToken">
+        <s:restriction base="s:string">
+          <s:minLength value="36" />
+          <s:maxLength value="36" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="LanguageCode">
+        <s:restriction base="s:string">
+          <s:pattern value="(en|fr|sp)?" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="Location">
+        <s:restriction base="s:string">
+          <s:minLength value="0" />
+          <s:maxLength value="50" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="ExternalID">
+        <s:restriction base="s:string">
+          <s:minLength value="0" />
+          <s:maxLength value="4000" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="IPAddress">
+        <s:restriction base="s:string">
+          <s:minLength value="1" />
+          <s:maxLength value="39" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="ExternalDateTime">
+        <s:restriction base="s:dateTime">
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="AccountNumber">
+        <s:restriction base="s:string">
+          <s:minLength value="16" />
+          <s:maxLength value="16" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="SSN4">
+        <s:restriction base="s:string">
+          <s:minLength value="4" />
+          <s:maxLength value="4" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="PostalCode5">
+        <s:restriction base="s:string">
+          <s:minLength value="5" />
+          <s:maxLength value="5" />
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="TransactionLink">
+        <s:restriction base="s:long">
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="Amount">
+        <s:restriction base="s:decimal">
+        </s:restriction>
+      </s:simpleType>
+
+      <s:simpleType name="Msg">
+        <s:restriction base="s:string">
+          <s:minLength value="1" />
+          <s:maxLength value="4000" />
+        </s:restriction>
+      </s:simpleType>
+
+      <!-- Types: Validation, ValidationResponse
+           Either UserID+Password or AccessToken is required.
+           Response elements Link and LogLink uniquely identify the request, and are useful for documentation.
+      -->
+
+      <s:complexType name="Validation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="serviceSchema:UserID" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="serviceSchema:Password" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="serviceSchema:AccessToken" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="serviceSchema:LanguageCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="serviceSchema:Location" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+        </s:sequence>
+      </s:complexType>
+
+      <s:complexType name="ValidationResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+          <!--  1 - Successful
+                  202 - Error: Invalid UserID
+                  203 - Error: Invalid UserID for WebService
+                  205 - Error: Invalid Password
+                  9 - Error: Element Validation Error
+                  ? - Error: Other
+            -->
+          <s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogLink" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+
+
+      <!-- Types: CustCareT1Get -->
+
+      <s:complexType name="ArrayOfCustCareT1GetRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="CustCareT1GetRequests" nillable="true" type="serviceSchema:CustCareT1GetRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustCareT1GetRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionLanguageCode" type="serviceSchema:LanguageCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="serviceSchema:Location" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="serviceSchema:AccountNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSN4" type="serviceSchema:SSN4" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode5" type="serviceSchema:PostalCode5" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionLink" type="serviceSchema:TransactionLink" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalDateTime" type="serviceSchema:ExternalDateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalIPAddress" type="serviceSchema:IPAddress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustCareT1GetResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ValidationResponse" type="serviceSchema:ValidationResponse" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustCareT1GetResponses" type="serviceSchema:ArrayOfCustCareT1GetResponse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCustCareT1GetResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="CustCareT1GetResponses" nillable="true" type="serviceSchema:CustCareT1GetResponse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustCareT1">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DateTimeNow" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimeRefresh" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardholderLink" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StoreLink" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StoreID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountNumber" type="serviceSchema:AccountNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpenToBuy" type="serviceSchema:Amount" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustCareT1GetResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:int" />
+          <!--  1 -   Successful
+                2 -   Error:    Service Not Permitted
+                5 -   Error:    Transaction Not Found
+                6 -   Error:    ExternalIDTarget Not Unique
+                8 -   Error:    Transaction Not Permitted
+                9 -   Error:    Element Validation Error
+                11 -  Warning:  DateOfBirth does not match
+                12 -  Error:    ExternalIDTarget Mismatch
+                13 -  Error:    TransactionLink does not match
+                ? -   Error:    Other
+            -->
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustCares" type="serviceSchema:CustCareT1" />
+          <s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalID" type="serviceSchema:ExternalID" />
+        </s:sequence>
+      </s:complexType>
+
+
+
+      <!-- Top-level Elements -->
+
+      <s:element name="CustCareT1Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validation" type="serviceSchema:Validation" />
+            <s:element minOccurs="1" maxOccurs="1" name="requests" type="serviceSchema:ArrayOfCustCareT1GetRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustCareT1GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="results" type="serviceSchema:CustCareT1GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+
+    </s:schema>
+  </wsdl:types>
+
+
+
+  <!-- SOAP Messages -->
+
+  <wsdl:message name="CustCareT1GetSoapIn">
+    <wsdl:part name="parameters" element="serviceSchema:CustCareT1Get" />
+  </wsdl:message>
+  <wsdl:message name="CustCareT1GetSoapOut">
+    <wsdl:part name="parameters" element="serviceSchema:CustCareT1GetResponse" />
+  </wsdl:message>
+
+
+
+  <!-- SOAP Operations -->
+
+  <wsdl:portType name="CardholderWS4Soap">
+
+    <wsdl:operation name="CustCareT1Get">
+      <wsdl:input message="serviceSchema:CustCareT1GetSoapIn" />
+      <wsdl:output message="serviceSchema:CustCareT1GetSoapOut" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+
+
+  <!-- SOAP Bindings -->
+
+  <wsdl:binding name="CardholderWS4Soap" type="serviceSchema:CardholderWS4Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+
+    <wsdl:operation name="CustCareT1Get">
+      <soap:operation soapAction="http://www.shopperscharge.com/CardholderWS4/CustCareT1Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+
+
+  <!-- Service Definition -->
+
+  <wsdl:service name="CardholderWS4">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="CardholderWS4Soap" binding="serviceSchema:CardholderWS4Soap">
+      <soap:address location="http://www.shopperscharge.com/CardholderWS4/CardholderWS4.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

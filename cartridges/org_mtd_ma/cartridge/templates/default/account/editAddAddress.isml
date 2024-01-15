@@ -1,0 +1,35 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/profile.css');
+        assets.addJs('/js/addressBook.js');
+    </isscript>
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <div class="account-page-header">
+            <h2 class="pull-left">${Resource.msg('label.address.myaddresses','account',null)}</h2>
+
+            <a href="${URLUtils.url('Account-Show')}" class="link-primary pull-right">
+                ${Resource.msg('link.profile.backtoaccount','account',null)}
+            </a>
+        </div>
+        <div class="row justify-content-sm-center justify-content-lg-start address-form-container">
+            <div class="col-sm-12 col-lg-9">
+                <div class="card">
+                    <div class="card-header">
+                    <isif condition="${pdict.addressId}">
+                        <h5>${Resource.msg('label.addressbook.editaddress','account',null)}</h5>
+                    <iselse>
+                        <h5>${Resource.msg('label.addressbook.addnewaddress','account',null)}</h5>
+                    </isif>
+                    </div>
+                    <div class="card-body">
+                        <isinclude template="account/addressForm"/>
+                    </div>
+                </div>
+                <a href="${URLUtils.url('Address-List')}" class="btn btn-outline-secondary btn-account">${Resource.msg('button.back.address', 'account', null)}</a>
+            </div>
+        </div>
+    </div>
+</isdecorate>

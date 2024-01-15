@@ -1,0 +1,6 @@
+<isif condition="${pdict.product.isWholeGood}">
+    ${Resource.msg('label.model', 'product', null)}
+<iselse>
+    ${Resource.msg('label.item', 'product', null)}
+</isif>
+<span class="product-id">${product.id}</span>

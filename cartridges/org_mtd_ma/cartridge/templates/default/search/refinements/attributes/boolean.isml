@@ -1,0 +1,26 @@
+<li title="${refinementValue.title}" class="col-sm-4 col-md-12 ${!refinementValue.selectable ? 'disabled' : ''}">
+    <a href="${refinementValue.url}" 
+    role="checkbox" 
+    id="${refinementValue.presentationID}" 
+    class="${(!refinementValue.selectable ? 'disabled' : '') + refinementValue.id}" 
+    aria-checked= '<isif condition="${refinementValue.selected && refinementValue.selectable}">true<iselse>false</isif>'
+    <isif condition="${!refinementValue.selectable}">disabled</isif> >
+        <iscomment>Checkbox</iscomment>
+        <isif condition="${refinementValue.selected && refinementValue.selectable}">
+            <issvg icon="icon-checkbox-selected" image="true" altText="" />
+            <iselse>
+                <issvg icon="icon-checkbox-unselected" image="true" altText="" />
+            </isif>
+        <iscomment>Label</iscomment>
+        <span class="<isif condition="${refinementValue.selected && refinementValue.selectable}">selected</isif> ${refinementValue.id === 'bvAverageRating' ? 'visually-hidden' : ''}">
+            ${refinementValue.displayValue}
+            <span class="count d-none">${'(' + refinementValue.hitCount + ')'}</span>
+        </span>
+        <isif condition="${refinementValue.id === 'bvAverageRating'}">
+            <span class="rating">
+                <span class="${refinementValue.presentationID}"></span>
+                <span class="count">${'(' + refinementValue.hitCount + ')'}</span>
+            </span>
+        </isif>
+    </a>
+</li>

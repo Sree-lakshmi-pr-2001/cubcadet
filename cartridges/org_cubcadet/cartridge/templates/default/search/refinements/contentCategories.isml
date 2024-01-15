@@ -1,0 +1,34 @@
+<ul class="values content">
+<isscript>
+    var Site = require('dw/system/Site');
+    var categoriesTxt = Site.current.getCustomPreferenceValue('popularCategories');
+    var folders = [];
+    var folderIds = categoriesTxt.split('\n');
+    for (var i = 0; i < folderIds.length; i++) {
+        var ContentMgr = require('dw/content/ContentMgr');
+        var folder = ContentMgr.getFolder(folderIds[i]);
+        if(folder){
+            folders.push(folder);
+        }
+    };
+</isscript>
+    <isloop items="${folders}" var="category">
+        <isif condition="${category.displayName}">
+            <li>
+                <a href="${URLUtils.url('Search-ShowContent', 'fdid', category.ID)}" title="${category.displayName}">
+                    <!--- Radio button --->
+                    <isif condition="${category.selected}">
+                        <issvg icon="icon-checkbox-selected" image="true" altText="" />
+                    <iselse>
+                        <issvg icon="icon-checkbox-unselected" image="true" altText="" />
+                    </isif>
+
+                    <!--- Label --->
+                    <span title="${category.displayName}" class="${category.selected ? 'selected' : ''}">
+                        ${category.displayName}
+                    </span>
+                </a>
+            </li>
+        </isif>
+    </isloop>
+</ul>

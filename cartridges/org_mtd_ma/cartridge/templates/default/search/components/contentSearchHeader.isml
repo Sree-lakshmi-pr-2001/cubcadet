@@ -1,0 +1,54 @@
+<div class="blog-post-header content-grid-header container">
+    <div class="blog-post-header-inner">
+        <div class="row align-items-end">
+            <div class="col-12 col-md-10">
+                <isif condition="${pdict.currentFolder}" >
+                    <isif condition="${pdict.currentFolder}" >
+                        <div class="blog-post-header-bottom">
+                            <h1 class="blog-post-title">
+                                <isprint value="${pdict.currentFolder.displayName}" />
+                            </h1>
+                        </div>
+                    </isif>
+                <iselse/>
+                    <div class="blog-post-category h4">
+                        ${Resource.msg('global.storename', 'common', null)}
+                    </div>
+
+                    <isif condition="${pdict.rootBlogFolder}">
+                        <div class="blog-post-header-bottom">
+                            <h1 class="blog-post-title">
+                                <isprint value="${pdict.rootBlogFolder.displayName}" />
+                            </h1>
+                        </div>
+                    </isif>
+                </isif>
+            </div>
+
+            <iscomment>
+            <div class="category-description col-12 col-md-7 body-l">
+                <isif condition="${pdict.currentFolder}" >
+                    <isif condition="${pdict.currentFolder.description}" >
+                        <isprint value="${pdict.currentFolder.description}" encoding="off" />
+                    </isif>
+                <iselse/>
+                    <isif condition="${pdict.rootBlogFolder.description}" >
+                        <isprint value="${pdict.rootBlogFolder.description}" encoding="off" />
+                    </isif>
+                </isif>
+            </div>
+            </iscomment>
+
+            <div class="col-6 d-md-none text-center">
+                <button type="button" class="btn btn-filter filter-results content-filter-results col-12 d-md-none">
+                    ${Resource.msg('blog.filter', 'blog', null)}
+                    <i><issvg icon="icon-filter" image="true" altText="" /></i>
+                </button>
+            </div>
+
+            <div class="col-6 col-md-2">
+                <div class="blog-search-count">${Resource.msgf('blog.items', 'blog', null, pdict.contentSearch.contentCount, pdict.contentSearch.contentCount > 1 ? 's' : '')}</div>
+            </div>
+        </div>
+    </div>
+</div>

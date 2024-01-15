@@ -1,0 +1,13 @@
+<isset name="product" value="${pdict.product}" scope="page" />
+
+<isif condition="${product.isLicensedProduct}">
+    <isinclude template="product/components/licensedProductFindStore" />
+<iselse/>
+    <isif condition="${pdict.showAddToCartButton && !pdict.isPdp}">
+        <isinclude template="product/components/addToCartProductTile" />
+    </isif>
+
+    <isif condition="${pdict.showStockMessage}">
+        <isinclude template="product/components/productTileAvailability" />
+    </isif>
+</isif>

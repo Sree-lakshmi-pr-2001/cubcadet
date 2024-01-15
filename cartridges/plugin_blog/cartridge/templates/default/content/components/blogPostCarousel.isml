@@ -1,0 +1,14 @@
+<div class="blog-tile-caro row">
+    <isloop items="${pdict.assets}" var="asset">
+        <div class="blog-tile">
+            <iscomment> Image </iscomment>
+            <isinclude template="content/components/contentTileImage" />
+
+            <iscomment> Category </iscomment>
+            <isinclude template="content/components/contentTileCategory" />
+
+            <iscomment> CTA Title </iscomment>
+            <isinclude template="content/components/contentTileCTATitle" />
+        </div>
+    </isloop>
+</div>

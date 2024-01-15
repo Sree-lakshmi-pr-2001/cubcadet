@@ -1,0 +1,83 @@
+<!--- TEMPLATENAME: dealerSection.isml --->
+<isset name="dealerDeliveryMethodId" value="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.deliveryMethodId : ''}" scope="page"/>
+<isset name="dealerPickupMethodId" value="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.pickupMethodId : ''}" scope="page"/>
+<isif condition="${pdict.isDealer}">
+    <isset name="dealer" value="${pdict.dealer}" scope="page"/>
+
+    <fieldset>
+        <legend><h6 class="mb-0">${pdict.shippingDealerHeader}</h6></legend>
+    </fieldset>
+    <div>
+        <div class="row dealer-section-container">
+            <div class="col-sm-6 mb-2 mb-sm-0">
+                <div class="dealer-details-info">
+                    <isif condition="${dealer.name}">
+                        <div class="dealer-details-name">
+                            <isprint value="${dealer.name}" />
+                        </div>
+                    </isif>
+                    <div class="dealer-details-address">
+                        <div>
+                            <span>
+                                <isif condition="${dealer.address1}">
+                                    <isprint value="${dealer.address1}" />,
+                                </isif>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <isif condition="${dealer.city}">
+                                    <isprint value="${dealer.city}" />,
+                                </isif>
+                                <isif condition="${dealer.stateCode}">
+                                    <isprint value="${dealer.stateCode}" />
+                                </isif>
+                                <isif condition="${dealer.postalCode}">
+                                    <isprint value="${dealer.postalCode}" />
+                                </isif>
+                            </span>
+                        </div>
+                    </div>
+                    <isif condition="${dealer.phone}">
+                        <div class="dealer-details-phone">
+                            <isprint value="${dealer.phone}" />
+                        </div>
+                    </isif>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <isif condition="${pdict.isDealerPickup}">
+                    <div class="checkout-callout">
+                        <p class="title">
+                            ${Resource.msg('checkout.dealerPickup.title', 'checkout', null)}:
+                            ${pdict.deliveryEstimate}
+                        </p>
+                        <iscontentasset aid="checkout-delivery-estimate-pickup" />
+                    </div>
+                <iselseif condition="${pdict.isDealerDelivery}"/>
+                    <div class="checkout-callout">
+                        <p class="title">
+                            ${Resource.msg('checkout.dealerDeliveryEstimate.title', 'checkout', null)}:
+                            ${pdict.deliveryEstimate}
+                        </p>
+                        <iscontentasset aid="checkout-delivery-estimate-dealerdelivery" />
+                    </div>
+                </isif>
+            </div>
+        </div>
+    </div>
+
+    <div class="dealer-shipping-block"
+        data-hide-shipping-item="${pdict.needToHideShippingItem}"
+        data-carb-enabled="${pdict.carbEnabled}"
+        data-carb-compliance="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.carbCompliance : ''}"
+        data-delivery-method="${dealerDeliveryMethodId}"
+        data-pickup-method="${dealerPickupMethodId}"
+        data-dealer-zip-code="${pdict.dealer.postalCode}"
+        data-delivery-pickup-firstName="${Resource.msg('dealer.pickup.firstname', 'dealer', null)}"
+        data-delivery-pickup-lastName="${Resource.msg('dealer.pickup.lastname', 'dealer', null)}">
+        <fieldset>
+            <input type="hidden" name="${pdict.forms.shippingForm.shippingAddress.shippingMethodID.htmlName}" id="dealerShippingMethod" value="${shippingModel.selectedShippingMethod.ID}" />
+	    </fieldset>
+    </div>
+</isif>

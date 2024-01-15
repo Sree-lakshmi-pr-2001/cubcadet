@@ -1,0 +1,122 @@
+.newsArticle {
+    .content {
+        &.group {
+            .image {
+                height: 450px;
+                width: 100%;
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .btn {
+                width: 200px;
+                background-color: $button-green;
+                border-color: $button-green;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+
+        &.one {
+            padding-top: 50px;
+
+            .button {
+                text-align: center;
+                padding-bottom: 25px;
+            }
+
+            .img {
+                padding: 25px 0;
+            }
+
+            .article {
+                .title,
+                .main {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                .main {
+                    height: 50px;
+                }
+
+                .date {
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .synopsis {
+                    padding: 25px 0;
+                    height: 425px;
+                }
+
+                .body {
+                    h2 {
+                        padding-top: 50px;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        padding-top: 50px;
+                    }
+                }
+
+                .btn {
+                    background-color: #808285;
+                    border-color: #808285;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .content {
+            &.one {
+                .article {
+                    .main {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .content {
+            &.one {
+                width: 80%;
+
+                .button {
+                    text-align: left;
+                }
+
+                .img {
+                    padding: 25px 15px;
+                }
+
+                .details {
+                    padding-left: 100px;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .content {
+            &.one {
+                width: 80%;
+
+                .article {
+                    padding-right: 100px;
+
+                    .main {
+                        height: 95px;
+                    }
+                }
+            }
+        }
+    }
+}

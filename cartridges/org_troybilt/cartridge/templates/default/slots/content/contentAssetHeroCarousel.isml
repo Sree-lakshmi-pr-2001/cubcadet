@@ -1,0 +1,15 @@
+<isif condition="${slotcontent != null && slotcontent.content.length > 0}">
+    <div class="hero-caro">
+        <isloop items="${slotcontent.content}" var="contentAsset">
+            <isprint value="${contentAsset.custom.body}" encoding="off"/>
+        </isloop>
+    </div>
+    <isif condition="${slotcontent.content.length > 1}">
+        <div class="hero-slider-controls slider-controls controls-right">
+            <span class="slide-prev"></span>
+            <div class="slide-dots"></div>
+            <span class="slide-next"></span>
+            <span class="slide-pause"><div tabindex="0" class="pause-button"></div></span>
+        </div>
+    </isif>
+</isif>

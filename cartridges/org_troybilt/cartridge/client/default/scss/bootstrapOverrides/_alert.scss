@@ -1,0 +1,63 @@
+/* Bootstrap Typography Overrides */
+
+.alert {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+
+    &.brand-warning {
+        @include brand-warning-text;
+        @include icon($svg-warning, left, 29px);
+
+        position: relative;
+        padding: rem(10px) rem(10px) rem(10px) rem(50px);
+        background: $primary;
+
+        @include media-breakpoint-up(md) {
+            padding: rem(10px) rem(57px);
+        }
+
+        &::after {
+            left: 10px;
+
+            @include media-breakpoint-up(md) {
+                left: 15px;
+            }
+        }
+    }
+
+    &.alert-sm {
+        &.brand-warning {
+            @include brand-warning-text-sm;
+
+            padding: rem(13px) rem(30px) rem(13px) rem(48px);
+
+            &::after {
+                left: 12px;
+            }
+        }
+    }
+}
+
+.alert-success.add-to-basket-alert {
+    background: $light;
+    width: 100%;
+    height: 280px;
+    color: $dark;
+    border: none;
+    margin-top: 50px;
+
+    .atc-success-icon {
+        background: $svg-added-to-cart-path no-repeat 0 0;
+        height: 43px;
+        width: 43px;
+        margin: 38px auto 35px;
+    }
+
+    span {
+        @include atc-product-name();
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 620px;
+    }
+}

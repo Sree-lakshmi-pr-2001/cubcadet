@@ -1,0 +1,25 @@
+<isif condition="${slotcontent}">
+    <div class="container-fluid category-list-nav">
+        <div class="slot-callout">
+            <isprint value="${slotcontent.calloutMsg}" encoding="off"/>
+        </div>
+
+        <div class="home-category-tiles scroll-pane">
+            <ul class="list-inline">
+                <isloop items="${slotcontent.content}" var="category">
+                    <isif condition="${category.image}">
+                        <li>
+                            <a href="${category.custom && 'alternativeUrl' in category.custom && category.custom.alternativeUrl
+                                ? category.custom.alternativeUrl
+                                : URLUtils.url('Search-Show', 'cgid', category.getID()).toString()}">
+                                <img src="${category.image.getURL()}" class="tile-img" alt="${category.displayName}"/>
+                                <span class="link-chevron">${category.displayName}</span>
+                            </a>
+                        </li>
+                    </isif>
+                </isloop>
+            </ul>
+        </div>
+    </div>
+
+</isif>

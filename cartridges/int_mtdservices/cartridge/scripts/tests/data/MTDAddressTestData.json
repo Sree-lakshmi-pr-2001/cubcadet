@@ -1,0 +1,31 @@
+{
+    "mtdparts": {
+        "valid": {
+            "address1": "1913 Sherman Ave",
+            "address2": "",
+            "cityOrMunicipality": "Evanston",
+            "country": "US",
+            "language": "en",
+            "postalCode": "60201",
+            "stateOrProvince": "IL"
+        },
+        "incorrect": {
+            "address1": "5411 Leavitt Rd",
+            "address2": "",
+            "cityOrMunicipality": "Lorain",
+            "country": "US",
+            "language": "en",
+            "postalCode": "44001",
+            "stateOrProvince": "OH"
+        },
+        "failed": {
+            "address1": "1913 Sherman Ave",
+            "address2": "",
+            "cityOrMunicipality": "Chicago",
+            "country": "US",
+            "language": "en",
+            "postalCode": "00000",
+            "stateOrProvince": "IL"
+        }
+    }
+}

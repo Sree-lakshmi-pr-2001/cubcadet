@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+  <content content-id="td-estimated-payment-billing-apr">
+    <display-name xml:lang="x-default">Cub Cadet TD Estimated Payment Billing APR</display-name>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;
+        Your order is eligible for Cub Cadet Financing.
+        &lt;strong&gt;${monthlypayment} Per Month&lt;/strong&gt;, &lt;strong&gt;{termlength} months&lt;/strong&gt; &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt; financing with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: &lt;strong&gt;${totalpayment}&lt;/strong&gt;
+        &lt;span class=&quot;td-links&quot;&gt;
+        &lt;a href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-GetURL')$&quot; class=&quot;td-apply-finance&quot;&gt;Apply Now&lt;/a&gt;
+        &lt;span class=&quot;vertical-divider&quot;&gt; | &lt;/span&gt;
+        &lt;a href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-Disclosure')$&quot; data-title=&quot;Details &amp; Disclosures&quot; class=&quot;td-payment-details&quot;&gt;See Details&lt;/a&gt;
+        &lt;/span&gt;
+        &lt;/div&gt;</custom-attribute>
+      </custom-attributes>
+    </content>
+</library>

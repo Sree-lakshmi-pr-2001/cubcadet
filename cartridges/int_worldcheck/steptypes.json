@@ -1,0 +1,42 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.ProcessOrdersGTCStatus",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "module": "int_worldcheck/cartridge/scripts/jobs/ProcessOrderGTCStatus.js",
+                "function": "execute",
+                "transactional": "true",
+                "parameters": {
+                    "parameter": [
+                        {
+                            "@name":"StartDate",
+                            "@type":"string",
+                            "@required":"false",
+                            "@trim":"true",
+                            "description":"YYYY/MM/DD , Start date from which the orders will be processed"
+                        },
+                        {
+                            "@name":"DaysOffset",
+                            "@type":"long",
+                            "@required":"false",
+                            "description":"Number of days the job will look back to get the orders"
+                        }
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR"
+                        },
+                        {
+                            "@code": "OK"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+<isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+<div class="row cart-and-ipay atc-product justify-content-center justify-content-sm-start">
+    <div class="col-12">
+        <isif condition="${product.productType !== 'master'}">
+            <button class="add-to-cart-tile btn btn-secondary"
+                data-pid="${product.id}"
+                data-add-to-cart-url="${pdict.urls.addToCart}"
+                data-gtmdata="${JSON.stringify(tagManager.getProductData(product.id))}"
+                ${!product.readyToOrder || !product.available || !product.priceAvailability ? "disabled" : ""}>
+                    ${Resource.msg('button.addtocart', 'common', null)}
+            </button>
+        <iselse>
+            <a class="btn btn-secondary" href="${pdict.urls.product}">
+                ${Resource.msg('button.addtocart', 'common', null)}
+            </a>
+        </isif>
+    </div>
+</div>

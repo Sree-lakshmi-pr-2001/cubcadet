@@ -1,0 +1,16 @@
+<isdecorate template="common/layout/epcot">
+    <script>
+        document.getElementById('pageName').value= 'productSearch';
+    </script>
+    <div class="row">
+        <div class="col-md-12">
+            Cart is empty, please start a new order
+
+			<form action="${URLUtils.url('Epcot-Start')}">
+				<button class="btn btn-primary checkout-button">Create New Order</button>
+			</form>
+        </div>
+    </div>
+
+
+</isdecorate>

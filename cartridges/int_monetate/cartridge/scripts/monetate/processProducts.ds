@@ -1,0 +1,224 @@
+'use strict';
+
+var URLUtils = require('dw/web/URLUtils');
+
+var ProductXMLGenerator = function(){
+	var monetateObject : Object = require('./libMonetate');
+	return {
+		/**
+		 * Generate XML based on Product object
+		 *
+		 * @param product : dw.catalog.Product
+		 * @param config : Object plain object contains configuration 
+		 *                 fields "useVariation", "productImage", "searchImage", "endCapImage",
+		 *                 which is got from site preferences
+		 */
+		createProductXML: function(product, config){
+			var rule : Boolean = false;
+
+	   		if (config.useVariation == "variant"){
+	   			rule = product.online && product.searchable;
+	   		} else if (config.useVariation == "master"){
+			   	rule = product.online && product.searchable && !product.variant;
+		 	};
+    
+		    if(rule){
+				
+				/*
+				*	Define data about product and categories for feed generating
+				*/
+				var categories = (!empty(product.getVariationModel().getVariants())) ? product.getVariationModel().getMaster().getOnlineCategories().iterator() : product.getOnlineCategories().iterator(),
+					productID = (!empty(product.getID()) ? product.getID() : ""),
+					productName = (!empty(product.getName()) ? product.getName() : ""),
+					productDescription = (!empty(product.getShortDescription()) ? product.getShortDescription().toString() : ""),
+					productBrandName = (!empty(product.getBrand()) ? product.getBrand() : ""),
+					productUrl = URLUtils.https("Product-Show", "pid", product.getID()),
+					altPrice = (product.productSet) ? monetateObject.getProductSetPrice(product.getProductSetProducts()).altPrice : ((!empty(product.getVariationModel().getVariants()) && product.isMaster()) ? product.getVariationModel().getDefaultVariant().getPriceModel().getPriceBookPrice(monetateObject.getMonetatePriceBookId()).getValue() : product.getPriceModel().getPriceBookPrice(monetateObject.getMonetatePriceBookId()).getValue()),
+					price = (product.productSet) ? monetateObject.getProductSetPrice(product.getProductSetProducts()).price : ((!empty(product.getVariationModel().getVariants()) && product.isMaster()) ? product.getVariationModel().getDefaultVariant().getPriceModel().getPriceBookPrice(monetateObject.getMonetateSalePriceBookId()).getValue() : product.getPriceModel().getPriceBookPrice(monetateObject.getMonetateSalePriceBookId()).getValue()),
+					productAltPrice = ((altPrice > 0) ? altPrice : price).toFixed(2),
+					productPrice = ((price > 0) ? price : altPrice).toFixed(2),
+					productSKU = (!empty(product.getManufacturerSKU()) ? product.getManufacturerSKU() : ""),
+		        	productImageUrl : String = (!empty(product.getImages(config.productImage)) ? product.getImages(config.productImage)[0].getHttpURL() : URLUtils.absStatic('/images/noimagelarge.png')),
+		            endcapImageUrl : String = (!empty(product.getImages(config.endCapImage)) ? product.getImages(config.endCapImage)[0].getHttpURL() : ""),
+		            searchImageUrl : String = (!empty(product.getImages(config.searchImage)) ? product.getImages(config.searchImage)[0].getHttpURL() : ""),
+					availability : String = (product.getAvailabilityModel().isInStock()) ? "In Stock" : "Out of Stock",
+					ats : String = (!empty(product.getAvailabilityModel().getInventoryRecord()) ? product.getAvailabilityModel().getInventoryRecord().getATS().getValue() : ""), //available to sell 
+					allocation : String = (!empty(product.getAvailabilityModel().getInventoryRecord()) ? product.getAvailabilityModel().getInventoryRecord().getAllocation().getValue() : ""), //all products to sell
+					productVariationModel : ProductVariationModel = product.getVariationModel(),
+					variationAttributes : Collection = productVariationModel.getProductVariationAttributes(),
+					variationAttributesIterator : Iterator = variationAttributes.iterator(),
+					rating : String = ('StarRatingCount' in product.custom) ? product.custom.StarRatingCount : ""; //power reviews raiting
+					
+				var productXML = <product>
+					  <product_id>{productID}</product_id>
+					  <product_name>{productName}</product_name>
+					  <product_description>{productDescription}</product_description>
+					  <skus>
+					    <sku>{productSKU}</sku>
+					  </skus>
+					  <brand_name>{productBrandName}</brand_name>
+					  <categories />
+					  <price>{productPrice}</price>
+					  <alt_price>{productAltPrice}</alt_price>
+					  <url>{productUrl}</url>
+					  <product_image_url>{productImageUrl}</product_image_url>
+					  <endcap_image_url>{endcapImageUrl}</endcap_image_url>
+					  <search_image_url>{searchImageUrl}</search_image_url>
+					  <availability>{availability}</availability>
+					  <ats>{ats}</ats>
+					  <allocation>{allocation}</allocation>
+					  <variations />
+					  <rating>{rating}</rating>
+					</product>;
+					
+					
+				while (!empty(categories) && categories.hasNext()) {
+					var category = categories.next();
+					while (!empty(category.parent)) {
+						if(category.online && !category.isRoot()){
+							var categoryXML = <category>
+								<category_id>{category.getID()}</category_id>
+								<category_name>{category.getDisplayName()}</category_name>
+							</category>;
+							productXML.categories.appendChild(categoryXML);
+						}
+						category = category.parent;
+					}
+				}
+				
+				while (!empty(variationAttributesIterator) && variationAttributesIterator.hasNext()) {
+					var variation = variationAttributesIterator.next(),
+						variationAttributeID = variation.getAttributeID(),
+						variationAttributeValues = productVariationModel.getAllValues(variation).iterator();
+					
+					var vaElementXML = <{variationAttributeID}/>;
+					while (variationAttributeValues.hasNext()) {
+						vaElementXML.appendChild(<option>{variationAttributeValues.next().getDisplayValue()}</option>);
+					}
+					productXML.variations.appendChild(vaElementXML);
+				}
+					
+				return productXML;
+			} else {
+				return "";
+			}
+		},
+        /**
+		 * Generate CSV string based on Product object
+		 *
+		 * @param product : dw.catalog.Product
+		 * @param config : Object, plain object contains configuration 
+		 *                 "productImage", "searchImage", "endCapImage", is read from site preferences
+                           "csvFields" is a list of fields in the required order, defined in exportMonetateProductCSV.js
+		 */
+        createProductCSV: function (product, config) {
+
+            var rule = false,
+                altPrice,
+                price,
+                category,
+                variationMaster,
+                pvModel,
+                pvColor,
+                pvSize,
+                productProps = {},
+                productRecord = [];
+
+
+            /**
+             *  Apply filtering to the list of products, products must be:
+             *  - online,
+             *  - searchable
+             *  - simple product, that can be ordered 
+             *  - variation product
+             *  - option product
+             *  - bundle product
+             *  Type of products excluded from list:
+                - variation master
+                - variation group
+                - product set
+             */
+            if (product.online && product.searchable && !product.master && !product.productSet && !product.variationGroup) {
+
+                /*
+                 * REQUIRED Fields
+                 */
+
+                if (product.isVariant()) {
+                    /**
+                     * According to letter from Kylie Hauber (Aug 27, 2018)
+                     * Send Variation Master in the 'item_group_id' field
+                     * Send Variation Product in the 'id' field
+                     */
+                    variationMaster = product.getMasterProduct();
+
+                    productProps.item_group_id = (!empty(variationMaster.getID()) ? variationMaster.getID() : "");
+                    productProps.id = (!empty(product.getID()) ? product.getID() : "");
+                    productProps.product_type = getCategoryPath(variationMaster.getPrimaryCategory());
+
+                } else {
+                    productProps.item_group_id = (!empty(product.getID()) ? product.getID() : ""); //productID
+                    productProps.id = productProps.item_group_id;
+                    productProps.product_type = getCategoryPath(product.getPrimaryCategory());
+                }
+
+                altPrice = (product.productSet) ? monetateObject.getProductSetPrice(product.getProductSetProducts()).altPrice : ((!empty(product.getVariationModel().getVariants()) && product.isMaster()) ? product.getVariationModel().getDefaultVariant().getPriceModel().getPriceBookPrice(monetateObject.getMonetatePriceBookId()).getValue() : product.getPriceModel().getPriceBookPrice(monetateObject.getMonetatePriceBookId()).getValue()),
+                price = (product.productSet) ? monetateObject.getProductSetPrice(product.getProductSetProducts()).price : ((!empty(product.getVariationModel().getVariants()) && product.isMaster()) ? product.getVariationModel().getDefaultVariant().getPriceModel().getPriceBookPrice(monetateObject.getMonetateSalePriceBookId()).getValue() : product.getPriceModel().getPriceBookPrice(monetateObject.getMonetateSalePriceBookId()).getValue()),
+                
+                productProps.title = (!empty(product.getName()) ? product.getName() : ""); // name
+                productProps.image_link = (!empty(product.getImages(config.endCapImage)) ? product.getImages(config.endCapImage)[0].getHttpURL() : "");
+                productProps.link = URLUtils.https("Product-Show", "pid", product.getID());
+                productProps.description = (!empty(product.getShortDescription()) ? product.getShortDescription().toString() : "");
+                
+                // Your product’s price
+                productProps.price = ((price > 0) ? price : altPrice).toFixed(2);
+
+                /*
+                 * OPTIONAL Fields
+                 * You can safely remove any of this fields if you do not use them
+                 */
+                productProps.additional_image_link = (!empty(product.getImages(config.searchImage)) ? product.getImages(config.searchImage)[0].getHttpURL() : "");
+                productProps.availability = (product.getAvailabilityModel().isInStock()) ? "In Stock" : "Out of Stock";
+                productProps.brand = (!empty(product.getBrand()) ? product.getBrand() : "");
+
+                // color
+                pvModel = product.getVariationModel();
+                pvColor = pvModel.getProductVariationAttribute('color');
+                productProps.color = empty(pvColor) ? "" : pvModel.getSelectedValue(pvColor).displayValue;
+
+                // size
+                pvSize = pvModel.getProductVariationAttribute('size');
+                productProps.size = empty(pvSize) ? "" : pvModel.getSelectedValue(pvSize).displayValue;
+
+                // use the predefined array of fields names to guatantee the order
+                config.csvFields.forEach(function (field) {
+                    productRecord.push(productProps[field]);
+                });
+
+                return productRecord;
+            } else {
+                return "";
+            }
+        }
+
+	}
+}
+
+function getCategoryPath(category) {
+    var name = [],
+        currentCategory;
+
+    if (empty(category)) return "";
+
+    currentCategory = category;    
+    name.push(currentCategory.displayName);
+
+    while (!currentCategory.topLevel && !currentCategory.root) {
+        currentCategory = currentCategory.parent;
+        name.push(currentCategory.displayName);
+    }
+    name.reverse();
+    return name.join('>');
+}
+
+module.exports = new ProductXMLGenerator();

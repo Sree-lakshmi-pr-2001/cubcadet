@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sort xmlns="http://www.demandware.com/xml/impex/sort/2009-05-15">
+    <sorting-rule rule-id="Featured">
+        <sorting-attributes>
+            <category-position/>
+        </sorting-attributes>
+    </sorting-rule>
+
+    <sorting-rule rule-id="Prices: High to Low">
+        <sorting-attributes>
+            <price>
+                <direction>descending</direction>
+            </price>
+        </sorting-attributes>
+    </sorting-rule>
+
+    <sorting-rule rule-id="Prices: Low to High">
+        <sorting-attributes>
+            <price>
+                <direction>ascending</direction>
+            </price>
+        </sorting-attributes>
+    </sorting-rule>
+
+    <sorting-rule-assignment category-id="root" rule-id="Featured"/>
+
+    <sorting-options>
+        <sorting-option option-id="Featured">
+            <rule-id>Featured</rule-id>
+            <display-name xml:lang="x-default">Featured</display-name>
+        </sorting-option>
+        <sorting-option option-id="Prices High to Low">
+            <rule-id>Prices: High to Low</rule-id>
+            <display-name xml:lang="x-default">Prices: High to Low</display-name>
+        </sorting-option>
+        <sorting-option option-id="Prices Low to High">
+            <rule-id>Prices: Low to High</rule-id>
+            <display-name xml:lang="x-default">Prices: Low to High</display-name>
+        </sorting-option>
+    </sorting-options>
+
+    <keyword-search-sorting-rule-assignment rule-id="Featured"/>
+
+</sort>

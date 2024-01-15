@@ -1,0 +1,134 @@
+@import "../variables";
+
+.price {
+    color: $body-color;
+
+    .strike-through:not(.non-adjusted-price) {
+        @include product-tile-price-sale;
+
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+            display: inline;
+            margin-left: rem(10px);
+        }
+
+        ~ .pricing,
+        ~ .sales span {
+            display: block;
+            float: left;
+
+            @include media-breakpoint-up(lg) {
+                display: inline;
+            }
+        }
+    }
+
+    .starting,
+    .range,
+    .sales {
+        font-weight: $font-weight-regular;
+    }
+
+    .tiered {
+        color: $gray-100;
+
+        table {
+            border-top: 1px solid $gray-300;
+            margin: 0 auto;
+
+            tr {
+                &:nth-child(odd) {
+                    background-color: $gray-400;
+                }
+            }
+        }
+
+        td,
+        span.price {
+            font-size: rem(14px);
+            font-weight: bold;
+        }
+
+        td {
+            padding: rem(5px);
+
+            &.quantity {
+                font-weight: normal;
+                text-align: right;
+            }
+
+            &.value {
+                text-align: left;
+            }
+        }
+
+        .table-header {
+            font-size: rem(18px);
+            padding: rem(5px);
+        }
+
+        .column-header {
+            font-size: rem(16px);
+            padding: rem(5px);
+            font-weight: normal;
+        }
+
+        .column-header.quantity {
+            text-align: right;
+        }
+    }
+
+    // Product Card pricing
+    .line-item-total-price-amount {
+        @include product-card-price();
+
+        .strike-through:not(.non-adjusted-price) {
+
+            @include product-card-price-sale();
+        }
+    }
+
+    // PDP Prices
+
+    .product-detail .product-info & {
+        .sales {
+            @include pdp-price;
+        }
+
+        .list {
+            @include pdp-price-sale;
+        }
+    }
+
+    // PDP Set Price
+
+    .product-set-detail .prices-add-to-cart-actions & {
+        @include media-breakpoint-down(xs) {
+            margin-top: 0;
+        }
+
+        .starting {
+            @include pdp-price;
+        }
+    }
+
+    // Quickview and Modals
+
+    .quick-view-dialog &,
+    .choose-bonus-product-dialog & {
+        text-align: left;
+
+        .sales {
+            @include pdp-price;
+        }
+
+        .list {
+            @include pdp-price-sale;
+        }
+    }
+
+    .quickview-set-footer & {
+        text-align: center;
+    }
+}

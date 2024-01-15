@@ -1,0 +1,84 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('https://maps.googleapis.com/maps/api/js?key='+dw.system.Site.getCurrent().getCustomPreferenceValue('mapAPI'));
+    assets.addJs('/js/dealerSelectorModal.js');
+    assets.addCss('/css/dealerSelector.css');
+</isscript>
+
+<isset name="selectedDealerModel" value="${require('*/cartridge/scripts/dealer/dealerHelpers').getSelectedDealer()}" scope="page" />
+<isset name="modalViewData" value="${require('*/cartridge/scripts/dealer/dealerHelpers').getDealerSelectorModalViewData()}" scope="page" />
+
+<div class="modal fade dealer-selector-modal" id="dealerSelectorModal" tabindex="-1" role="dialog" aria-labelledby="dealerSelectorModal" action-get-delivery-zipcode="${URLUtils.url('Dealer-GetDeliveryZipCode')}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title dealer-selector-title">${Resource.msg('dealer.selectormodal.header','dealer',null)}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container store-locator-container dealer-locator" data-geocoding-url="https://maps.googleapis.com/maps/api/geocode/json?key=${dw.system.Site.getCurrent().getCustomPreferenceValue('googleGeocodingAPIKey')}">
+                    <div class="row">
+                        <isinclude template="dealer/dealerSelectorModal/storeLocatorNoDecorator" />
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="contentListView" class="tab-pane dealer-selector-list-view">
+                            <div class="row">
+                                <div class="col-12 col-md-12 order-2 order-md-1 p-0">
+                                    <div class="store-locator-no-results">
+                                        <iscontentasset aid="store-locator-no-results" />
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">${Resource.msg('dealer.selectormodal.button.ok','dealer',null)}</button>
+                                    </div>
+
+                                    <div class="results dealer-selector-results"
+                                        data-search-key="${!empty(pdict.stores) ? JSON.stringify(pdict.stores.searchKey) : ''}"
+                                        data-radius="${!empty(pdict.stores) ? pdict.stores.radius : ''}"
+                                        data-has-results="${!empty(pdict.stores) ? pdict.stores.stores.length > 0: false}">
+                                        <isinclude template="dealer/dealerSelectorModal/storeLocatorResults" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="contentMapView" class="tab-pane active dealer-selector-map-view">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 order-2 order-md-1 p-0">
+                                    <div class="store-locator-no-results">
+                                        <iscontentasset aid="store-locator-no-results" />
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">${Resource.msg('dealer.selectormodal.button.ok','dealer',null)}</button>
+                                    </div>
+
+                                    <div class="results dealer-selector-results"
+                                        data-search-key="${!empty(pdict.stores) ? JSON.stringify(pdict.stores.searchKey) : ''}"
+                                        data-radius="${!empty(pdict.stores) ? pdict.stores.radius : ''}"
+                                        data-has-results="${!empty(pdict.stores) ? pdict.stores.stores.length > 0: false}">
+                                        <isinclude template="dealer/dealerSelectorModal/storeLocatorResults" />
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 order-1 order-md-2 p-0">
+                                    <div class="jumbotron map-canvas"
+                                        data-has-google-api="true"
+                                        data-locations="[]"
+                                        data-retail-marker="${URLUtils.staticURL('images/svg-icons/icon-location-pin-grey.svg')}"
+                                        data-dealer-marker="${URLUtils.staticURL('images/svg-icons/icon-location-pin-yellow.svg')}"
+                                        data-elite-marker="${URLUtils.staticURL('images/svg-icons/icon-location-pin-black.svg')}">
+                                    >
+                                        <div class="container">
+                                            <div class="row">
+                                                <p class="store-locator-no-apiKey alert alert-danger">${Resource.msg('error.no.api.key','storeLocator',null)}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

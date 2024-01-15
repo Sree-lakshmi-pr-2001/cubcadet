@@ -1,0 +1,8 @@
+<div class="pricing line-item-total-price-amount item-total-${lineItem.UUID}">
+    <isprint value="${lineItem.formattedSales}" style="MONEY_LONG" />
+</div>
+<isif condition="${lineItem.price.list}">
+    <div class="strike-through">
+        <isprint value="${lineItem.formattedList}" style="MONEY_LONG" />
+    </div>
+</isif>

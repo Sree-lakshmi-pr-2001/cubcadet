@@ -1,0 +1,84 @@
+<div class="card shipping-summary">
+    <div class="card-header">
+        <isset name="dealerDeliveryMethodId" value="${pdict.dealerDeliveryMethodId}" scope="page"/>
+        <isset name="dealerPickupMethodId" value="${pdict.dealerPickupMethodId}" scope="page"/>
+        <isset name="currentShippingMethod" value="${pdict.order.shipping[0].selectedShippingMethod}" scope="page"/>
+        <h4>
+            <isif condition="${pdict.order.isEpcotOrder === true }">
+                 ${Resource.msg(pdict.order.shipping[0].methodProperty, 'checkout', null)}
+            <iselse>
+                ${Resource.msg('checkout.delivery', 'checkout', null)}:
+                <span class="factory-delivery-header
+                    <isif condition="${currentShippingMethod.ID != '' && (currentShippingMethod.ID == dealerDeliveryMethodId || currentShippingMethod.ID == dealerPickupMethodId)}">hidden</isif>">
+                    ${currentShippingMethod.displayName}
+                </span>
+                <span class="dealer-delivery-header
+                    <isif condition="${currentShippingMethod.ID == '' || currentShippingMethod.ID != dealerDeliveryMethodId}">hidden</isif>">
+                    ${Resource.msg('checkout.dealer.delivery.details', 'checkout', null)}
+                </span>
+                <span class="dealer-pickup-header
+                    <isif condition="${currentShippingMethod.ID == '' || currentShippingMethod.ID != dealerPickupMethodId}">hidden</isif>">
+                    ${Resource.msg('checkout.dealer.pickup.details', 'checkout', null)}
+                </span>
+            </isif>
+        </h4>
+    </div>
+
+    <div class="card-body">
+        <isinclude template="checkout/shipping/shippingSummary" />
+    </div>
+</div>
+
+<div class="card payment-summary">
+    <div class="card-header clearfix">
+        <h4 class="checkout-card-header">${Resource.msg('heading.checkout.payment', 'checkout', null)}</h4>
+    </div>
+
+    <div class="card-body">
+        <isinclude template="checkout/billing/billingSummary" />
+    </div>
+</div>
+
+<div class="card review-summary">
+    <div class="card-body">
+        <div class="row">
+            <isset name="dealerInformation" value="${'dealerInfo' in pdict && (currentShippingMethodId == dealerDeliveryMethodId || currentShippingMethodId == dealerPickupMethodId)}" scope="page" />
+            <div class="col-12 order-review-products <isif condition="${dealerInformation}">col-md-8</isif>">                
+                <isinclude template="checkout/orderProductSummary" />
+            </div>
+            <isif condition="${dealerInformation}">
+                <div class="col-12 col-md-4 order-dealer-delivery-details divider">
+                    <div class="dealer-summary-block">
+                        <div class="dealer-summary-header">
+                            <h6 class="review-header" data-dealer-delivery="${Resource.msg('checkout.dealer.delivery.details', 'checkout', null)}" data-dealer-pickup="${Resource.msg('checkout.dealer.pickup.details', 'checkout', null)}">
+                                <isif condition="${currentShippingMethodId == dealerDeliveryMethodId}">
+                                    ${Resource.msg('checkout.dealer.delivery.details', 'checkout', null)}
+                                <iselseif condition="${currentShippingMethodId == dealerPickupMethodId}">
+                                    ${Resource.msg('checkout.dealer.pickup.details', 'checkout', null)}
+                                </isif>
+                            </h6>
+                        </div>
+                        <div class="dealer-address">
+                            <isset name="dealerAddress" value="${pdict.dealerInfo.dealerAddress}" scope="page"/>
+                            <strong>${dealerAddress.companyName}</strong><br/>
+                            ${dealerAddress.address1}<br/>
+                            ${dealerAddress.city}, ${dealerAddress.state} ${dealerAddress.postalCode}<br/>
+                            ${dealerAddress.phone}
+                        </div>
+                        <div class="dealer-delivery <isif condition="${currentShippingMethodId == dealerDeliveryMethodId}">d-block visible<iselse>d-none invisible</isif>">
+                            <isprint value="${pdict.dealerDeliveryInfo}" encoding="off" />
+                        </div>
+                        <div class="dealer-pickup <isif condition="${currentShippingMethodId == dealerPickupMethodId}">d-block visible<iselse>d-none invisible</isif>">
+                            <isprint value="${pdict.dealerPickupInfo}" encoding="off" />
+                        </div>
+                        <isif condition="${!pdict.isConfirmation}">
+                            <div class="shipping-status">
+                                <span class="font-weight-bold">${Resource.msg('label.orderhistory.shippingstatus','account',null) + ' ' + pdict.order.shippingStatus}</span>
+                            </div>
+                        </isif>
+                    </div>
+                </div>
+            </isif>
+        </div>
+    </div>
+</div>

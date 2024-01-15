@@ -1,0 +1,29 @@
+<isdecorate template="common/layout/epcot">
+  <div class="alert alert-primary" role="alert">
+    <isif condition="${pdict.errorMessage}">
+      ${pdict.errorMessage}
+      <iselse>
+        Please login
+    </isif>
+  </div>
+  <form action="${URLUtils.url('Epcot-Login')}" method="POST">
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email" autocomplete="false">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+</isdecorate>
+
+<script>
+        document.getElementById('pageName').value = 'WelcomePage';
+</script>

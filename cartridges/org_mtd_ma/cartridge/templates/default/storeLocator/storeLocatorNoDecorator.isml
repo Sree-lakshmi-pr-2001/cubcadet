@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row ${!(pdict.isServiceLocator && pdict.isLandingPage) ? 'no-gutters' : ''}">
+        <div class="col-12 d-flex align-items-start flex-column">
+            <div class="row no-gutters search-form">
+                <isif condition="${!pdict.isServiceLocator}">
+                    <isinclude template="storeLocator/storeLocatorFields" />
+                </isif>
+
+                <isif condition="${!pdict.isServiceLocator}">
+                    <isinclude template="storeLocator/storeLocatorFilter" />
+                </isif>
+            </div>
+        </div>
+    </div>
+
+    <isif condition="${pdict.showMap === 'false' && !pdict.isLandingPage}">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary btn-block select-store" disabled>${Resource.msg('button.select.store','storeLocator',null)}</button>
+            </div>
+        </div>
+    </isif>
+</div>

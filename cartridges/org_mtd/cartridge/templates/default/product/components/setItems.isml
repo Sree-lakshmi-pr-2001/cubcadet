@@ -1,0 +1,143 @@
+<isscript>
+    var siteDisableCommerceFunctionality = dw.system.Site.getCurrent().getCustomPreferenceValue('siteDisableCommerceFunctionality');
+</isscript>
+<div class="set-items" itemtype="http://schema.org/SomeProducts" itemid="#product">
+    <isloop items="${productCopy.individualProducts}" var="productItem" status="loopState">
+        <isset name="product" value="${productItem}" scope="page" />
+
+            <div class="container product-detail set-item" data-pid="${product.id}">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Product Name -->
+                        <div class="row">
+                            <div class="d-md-none col-sm-12">
+                                <h3 class="product-name">
+                                    <a href="${URLUtils.url('Product-Show', 'pid', product.id)}">
+                                        ${product.productName}
+                                    </a>
+                                </h3>
+                                <div class="product-number">
+                                    <iscomment>Adding product number directly instead of include because the product ID will duplicate on Add to Cart if using the same template include</iscomment>
+                                    <isif condition="${pdict.product.isWholeGood}">
+                                        ${Resource.msg('label.model', 'product', null)}
+                                    <iselse>
+                                        ${Resource.msg('label.item', 'product', null)}
+                                    </isif>
+                                    <span>${product.id}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Product Images Carousel -->
+                    <isinclude template="product/components/imageCarousel" />
+
+                    <div class="col-12 col-sm-5">
+                        <!-- Product Name -->
+                        <h3 class="product-name hidden-sm-down">
+                            <a href="${URLUtils.url('Product-Show', 'pid', product.id)}">
+                                ${product.productName}
+                            </a>
+                        </h3>
+
+                        <isinclude template="product/components/pidRating" />
+
+                        <isinclude template="product/components/description" />
+
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <isinclude template="product/components/mainAttributes" />
+
+                                <isif condition="${product.variationAttributes}">
+                                    <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                                        <div data-attr="${attr.id}" class="swatch">
+                                            <isif condition="${attributeStatus.last && !isBundle && product.options.length === 0}">
+                                                <!-- Quantity Drop Down Menu -->
+                                                <div class="quantity col-sm-6">
+                                                    <isinclude template="product/components/quantity" />
+                                                </div>
+                                            </isif>
+                                            <isinclude template="product/components/variationAttribute" />
+                                        </div>
+                                    </isloop>
+                                </isif>
+                                <isif condition="${product.options && product.options.length}">
+                                    <div class="row">
+                                        <isinclude template="product/components/options" />
+                                    </div>
+                                </isif>
+                                <isif condition="${(product.options && !product.options.length && !product.variationAttributes)}">
+                                    <div class="row">
+                                        <div class="simple-quantity col-5">
+                                            <isinclude template="product/components/quantity" />
+                                        </div>
+                                    </div>
+                                </isif>
+                            </div>
+
+                            <!-- Size Chart -->
+                            <isif condition="${product.variationAttributes && product.sizeChartId}">
+                                <span class="col-12 size-chart">
+                                    <isinclude template="product/components/sizeChart" />
+                                </span>
+                            </isif>
+
+                            <!-- Product Availability -->
+                            <isinclude template="product/components/productAvailability" />
+
+                            <!-- Applicable Promotions -->
+                            <div class="col-12 promotions">
+                                <isinclude template="product/components/promotions" />
+                            </div>
+
+                            <div class="col-12">
+                                <hr>
+                            </div>
+
+                            <div class="col-12 set-add-to-cart-actions">
+                                <!-- Prices -->
+                                <div class="prices <isif condition="${isQuickView}" >text-left</isif>">
+                                    <isset name="price" value="${product.price}" scope="page" />
+                                    <isinclude template="product/components/pricing/main" />
+                                </div>
+
+                               <isif condition="${empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality}" >
+                                    <isinclude template="product/components/addToCartProduct" />
+                               </isif>
+                            </div>
+
+                            <isif condition="${(product.raw.custom['replaces-parts'] && product.raw.custom['replaces-parts'].length > 0) || (dw.system.Site.getCurrent().getCustomPreferenceValue('pdpRightPartsPledge') && !(isQuickView))}" >
+                                <div class="col-12">
+                                    <hr/>
+                                </div>
+                            </isif>
+
+                            <isif condition="${product.raw.custom['replaces-parts'] && product.raw.custom['replaces-parts'].length > 0}" >
+
+                                <!-- Part Replaces List -->
+                                <div class="col-12 part-replaces">
+                                    <isinclude template="product/components/partReplaces" />
+                                </div>
+                            </isif>
+
+                            <isif condition="${!(isQuickView)}" >
+                                <!-- Right Parts Pledge -->
+                                <div class="col-12 parts-pledge">
+                                    <isinclude template="product/components/pdpModals" />
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <isinclude template="/product/components/descriptionAndDetails" />
+
+            <isif condition="${loopState.last === false}">
+                <hr>
+            </isif>
+        </isobject>
+    </isloop>
+</div>

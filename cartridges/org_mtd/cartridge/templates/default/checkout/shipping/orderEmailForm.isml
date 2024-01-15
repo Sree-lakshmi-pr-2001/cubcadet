@@ -1,0 +1,81 @@
+<isset name="shipping" value="${pdict.forms.shippingForm.shippingAddress.orderContactFields}" scope="page"/>
+
+<div class="card-body">
+    <h5>${Resource.msg('heading.ordercontact', 'checkout', null)}</h5>
+    <form class="shipping-contact-form" autocomplete="on" >
+        <div class="row">
+            <div class="col">
+                <div class="form-group
+                    <isif condition=${shipping.email.mandatory === true}>required</isif> ${shipping.email.htmlName}">
+                    <label class="form-control-label" for="email" id="emailLabel">${Resource.msg('label.input.email.profile','forms',null)}</label>
+                    <isif condition="${pdict.order.orderEmail}">
+                        <isset name="orderEmail" value="${pdict.order.orderEmail}" scope="page" />
+                    <iselseif condition="${pdict.customer.registeredUser && pdict.customer.profile.email}">
+                        <isset name="orderEmail" value="${pdict.customer.profile.email}" scope="page" />
+                    <iselse>
+                        <isset name="orderEmail" value="${''}" scope="page" />
+                    </isif>
+                    <input 
+                        autofocus 
+                        autocomplete="email" 
+                        aria-labeledby="emailLabel"
+                        type="email" 
+                        class="form-control" 
+                        id="email" 
+                        data-pattern-mismatch="${Resource.msg('error.email.mismatch','forms',null)}" 
+                        value="${orderEmail}" 
+                        <isprint value=${shipping.email.attributes} encoding="off"/> 
+                    />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="form-group
+	                <isif condition=${shipping.email.mandatory === true}>required</isif> ${shipping.email.htmlName}_confirm">
+	                <label class="form-control-label" id="shippingEmailConfirmLabel" for="email-confirm">${Resource.msg('label.input.emailconfirm.profile','forms',null)}</label>
+	
+	                <input 
+						onselectstart="return false" 
+						onpaste="return false" 
+						onCopy="return false" 
+						onCut="return false" 
+						onDrag="return false" 
+						onDrop="return false" 
+						autocomplete=off
+	                    autofocus type="email" 
+	                    aria-labeledby="shippingEmailConfirmLabel" 
+	                    class="form-control" id="email-confirm" 
+	                    data-pattern-mismatch="${Resource.msg('error.email.mismatch','forms',null)}"
+						data-email-not-same="${Resource.msg('error.message.mismatch.email','forms',null)}"
+	                    value="${orderEmail}" 
+	                    <isprint value=${shipping.email.attributes} encoding="off"/> 
+	                />
+	                <div class="invalid-feedback"></div>
+	            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group ${shipping.emailSignup.htmlName}">
+                    <fieldset>
+                        <div class="custom-control custom-checkbox">
+                            <input 
+                                class="custom-control-input" 
+                                id="emailSignup" 
+                                type="checkbox"
+                                aria-labeledby="emailSignupLabel" 
+                                <isprint value=${shipping.emailSignup.attributes} encoding="off"/> 
+                                <isif condition="${pdict.emailSignup}"> checked</isif>
+                            />
+                            <label class="checkout-checkbox custom-control-label" for="emailSignup" id="emailSignupLabel">
+                                ${Resource.msg('label.email.signup', 'forms', null)}
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="clearfix"><hr /></div>
+</div>

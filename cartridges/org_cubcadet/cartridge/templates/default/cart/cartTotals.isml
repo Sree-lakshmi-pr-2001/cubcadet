@@ -1,0 +1,76 @@
+<div class="cart-total-wrapper">
+
+    <!--Sub Total-->
+    <div class="row cart-total-row sub-total">
+        <div class="col-6">
+            <p class="cart-total-label">
+                ${Resource.msg('label.subtotal', 'cart', null)}
+            </p>
+        </div>
+        <div class="col-6">
+            <p class="text-right sub-total-value cart-total-value">${pdict.totals.subTotal}</p>
+        </div>
+    </div>
+
+    <!--- Shipping Cost --->
+    <div class="row cart-total-row">
+        <div class="col-6">
+            <p class="cart-total-label">${Resource.msg('label.delivery.charge','confirmation', null)}</p>
+        </div>
+        <div class="col-6">
+            <p class="text-right shipping-cost cart-total-value">${pdict.totals.totalShippingCost}</p>
+        </div>
+    </div>
+
+    <!--- Shipping Discount --->
+    <iscomment> <div class="row cart-total-row shipping-discount <isif condition="${pdict.totals.shippingLevelDiscountTotal.value === 0}">hide-shipping-discount</isif>">
+        <div class="col-6">
+            <p class="cart-total-label">${Resource.msg('label.shipping.discount', 'common', null)}</p>
+        </div>
+        <div class="col-6">
+            <p class="text-right shipping-discount-total cart-total-value">- ${pdict.totals.shippingLevelDiscountTotal.formatted}</p>
+        </div>
+    </div>  </iscomment>
+
+    <!-- Sales Tax -->
+    <div class="row cart-total-row">
+        <div class="col-6">
+            <p id="cartSalesTaxLabel" class="cart-total-label">${pdict.totals.totalTax === '-' ? Resource.msg('label.notcalculated.sales.tax', 'cart', null) : Resource.msg('label.sales.tax','cart',null)}</p>
+        </div>
+        <div class="col-6">
+            <p class="text-right tax-total cart-total-value">${pdict.totals.totalTax}</p>
+        </div>
+    </div>
+
+    <!--- Order Discount --->
+    <div class="row cart-total-row order-discount <isif condition="${pdict.totals.orderLevelDiscountTotal.value === 0}">hide-order-discount</isif>">
+        <div class="col-6">
+            <p class="cart-total-label">${Resource.msg('label.order.discount', 'common', null)}</p>
+        </div>
+        <div class="col-6">
+            <p class="text-right order-discount-total cart-total-value"> - ${pdict.totals.orderLevelDiscountTotal.formatted}</p>
+        </div>
+    </div>
+
+    <div class="row cart-total-row estimated-total">
+        <div class="col-6">
+            <p class="cart-total-label">
+                ${Resource.msg('label.estimatedtotal','cart',null)}
+            </p>
+        </div>
+        <div class="col-6">
+            <p class="text-right grand-total cart-total-value">${pdict.totals.grandTotal}</p>
+        </div>
+    </div>
+
+    <div class="row cart-total-info-row">
+        <div class="col-12">
+            <div class="tax-calculation-msg">
+                ${Resource.msg('cart.shiptaxcalc', 'cart', null)}
+            </div>
+
+            <iscontentasset aid="cart-financing-tooltip"/>
+        </div>
+    </div>
+
+</div>

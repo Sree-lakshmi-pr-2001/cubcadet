@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+          <attribute-definition attribute-id="monetateEnabled">
+                <display-name xml:lang="x-default">Monetate Tracking Enabled</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateImageEndCapSelector">
+                <display-name xml:lang="x-default">Monetate Image End Cap Selector</display-name>
+                <description xml:lang="x-default">Image type of image which will used in Product Feed for end cap image URL</description>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateImageProductSelector">
+                <display-name xml:lang="x-default">Monetate Image Product Selector</display-name>
+                <description xml:lang="x-default">Image type of image which will used in Product Feed for product image URL</description>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateImageSearchSelector">
+                <display-name xml:lang="x-default">Monetate Image Search Selector</display-name>
+                <description xml:lang="x-default">Image type of image which will used in Product Feed for search image URL</description>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetatePriceBookId">
+                <display-name xml:lang="x-default">Default List Price Book ID</display-name>
+                <description xml:lang="x-default">Id of the Price Book which contains the normal/retail prices for an item when it is not on sale.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+                <default-value>usd-list-prices</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateSalePriceBookId">
+                <display-name xml:lang="x-default">Sale List Price Book ID</display-name>
+                <description xml:lang="x-default">Id of the Price Book which contains the current prices for an item when it is on sale.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+                <default-value>usd-sale-prices</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateUserInfo">
+                <display-name xml:lang="x-default">Monetate User Info</display-name>
+                <description xml:lang="x-default">Export sign in customer data to JS variables</description>
+                <type>set-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateVariationInFeed">
+                <display-name xml:lang="x-default">ID to send to Monetate for feed</display-name>
+                <description xml:lang="x-default">ID to send to Monetate for feed</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Master</display>
+                        <value>master</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Variant</display>
+                        <value>variant</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="monetateVariationInSite">
+                <display-name xml:lang="x-default">ID to send to Monetate for tracking</display-name>
+                <description xml:lang="x-default">ID to send to Monetate for tracking</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Master</display>
+                        <value>master</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Variant</display>
+                        <value>variant</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Monetate">
+                <display-name xml:lang="x-default">Monetate</display-name>
+                <attribute attribute-id="monetateEnabled"/>
+                <attribute attribute-id="monetatePriceBookId"/>
+                <attribute attribute-id="monetateSalePriceBookId"/>
+                <attribute attribute-id="monetateVariationInFeed"/>
+                <attribute attribute-id="monetateVariationInSite"/>
+                <attribute attribute-id="monetateImageProductSelector"/>
+                <attribute attribute-id="monetateImageSearchSelector"/>
+                <attribute attribute-id="monetateImageEndCapSelector"/>
+                <attribute attribute-id="monetateUserInfo"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>   
+</metadata>

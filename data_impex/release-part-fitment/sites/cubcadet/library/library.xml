@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="model-number-modal">
+        <display-name xml:lang="x-default">How to Find Modal Number</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p&gt;&lt;span class=&quot;img-wrap&quot;&gt; &lt;img alt=&quot;model plate example with model number in the top left corner outlined in red and serial number in top right corner outlined in red&quot; src=&quot;images/model-number-label.png?$staticlink$&quot; title=&quot;&quot; /&gt; &lt;/span&gt;&lt;/p&gt;&#13;&lt;p&gt;The model number is&lt;/p&gt;&#13;&lt;ul&gt;&#13;	&lt;li&gt;11 characters long&lt;/li&gt;&#13;	&lt;li&gt;Printed on the left side of the Product Identification Label&lt;/li&gt;&#13;&lt;/ul&gt;&#13;&lt;p&gt;Characters can include numbers, letters or hyphens.&lt;/p&gt;&#13;&lt;style type=&quot;text/css&quot;&gt;.model-num-modal h4 {&#13;          margin-bottom: 1rem;&#13;        }&#13;        .model-num-modal .modal-header {&#13;          padding-bottom: 0;&#13;        }&#13;        .model-num-modal .modal-body {&#13;          clear: both;&#13;          overflow: hidden;&#13;        }&#13;        .model-num-modal .img-wrap {&#13;          width: 300px;&#13;          display: block;&#13;          float:right;&#13;          margin-bottom: 1rem;&#13;        }&#13;        .model-num-modal ul {&#13;          padding-left: 1rem;&#13;        }&#13;        .model-num-modal img {&#13;          max-width: 100%;&#13;        }&#13;&lt;/style&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="td-estimated-payment-pdp-deferred">
+        <display-name xml:lang="x-default">Cub Cadet TD Estimated Payment PDP Deffered</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;style&gt;&#13;.disclosure  {&#13;font-size: 10px;&#13;line-height: 12px;&#13;}&#13;&lt;/style&gt;&#13;&lt;div&gt;&#13;    &lt;strong&gt;${monthlypayment}/mo No interest if paid in full within {termlength} months&lt;sup&gt;{superscriptnumber}&lt;/sup&gt;&lt;/strong&gt;&#13;&lt;p class=&quot;disclosure&quot;&gt;Interest will be charged from the purchase date if the purchase balance is not paid in full at the end of the promotional period. Advertised minimum payment is greater than required minimum payment. &lt;a href=&quot;javascript:void(0)&quot; data-url=&quot;$url('FinancingApplication-Disclosure')$&quot; data-title=&quot;Details &amp; Disclosures&quot; class=&quot;td-payment-details&quot;&gt;See details&lt;/a&gt;&lt;/p&gt;&#13;    &#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+        </folder-links>
+    </content>
+
+    <content content-id="part-fitment-component-description-fit">
+        <display-name xml:lang="x-default">part-fitment-component-description-fit</display-name>
+        <description xml:lang="x-default">Description displayed when the part fitment search matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-description-no-fit">
+        <display-name xml:lang="x-default">part-fitment-component-description-no-fit</display-name>
+        <description xml:lang="x-default">Description displayed when the part fitment search doesn't matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">This part is &lt;strong&gt;NOT&lt;/strong&gt; expected to fit your equipment.</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-title-default">
+        <display-name xml:lang="x-default">part-fitment-component-title-default</display-name>
+        <description xml:lang="x-default">Defaut message displayed on Part Fitment component</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Have a Model Number?</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-title-fit">
+        <display-name xml:lang="x-default">part-fitment-component-title-fit</display-name>
+        <description xml:lang="x-default">Message displayed when the part fitment search matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Verified, Will Fit Model</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="part-fitment-component-title-no-fit">
+        <display-name xml:lang="x-default">part-fitment-component-title-no-fit</display-name>
+        <description xml:lang="x-default">Message displayed when the part fitment search doesn't matches with available products</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Will NOT Fit</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

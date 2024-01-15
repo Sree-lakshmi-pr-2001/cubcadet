@@ -1,0 +1,92 @@
+// Z-index Management
+//----------------------------------------------
+// These z-index values are accessed in SCSS using the function z(layers...).  Ex: z("minicart", "dropdown") returns 1.
+// The key word "this" is used to refer to the container of a nested map, much like JS objects  E.g. "minicart" is the
+// container for "minicart","dropdown". Ex: while the z-index value for z("minicart", "dropdown") would be 1, the value
+// for z("minicart") itself, would be 20.
+
+// Stick to the following coding conventions:
+// * Keep z-index definitions in order of highest to lowest, minding nested z-indexes whose index order should be independent of their parents.
+// * Keep all key values (the actual z-index number values) right-aligned.
+// * Always indent nested values correctly.
+// * Always use "this" as the first key in a nested list. The z() SASS function looks specific for this key.
+// * Use the following diagram as a guide to nest-levels:
+
+// $z-layers: (
+//     "[level-1-element]":                 [level-1 index],
+//     "[level-1-element]": (
+//          "this":                         [level-1 index],
+//          "[level-2-element]":            [level-2 index],
+//          "[level-2-element]": (
+//              "this":                     [level-2 index],
+//              "[level-3-element]":        [level-3 index]
+//              //etc...
+//          )
+//     )
+// );
+//----------------------------------------------
+
+//Site-wide z-index map
+$z-layers: (
+    "header": (
+        "this":                      10,
+        "navbar-header":              1
+    ),
+    "menu": (
+        "this":                       1,
+        "menu-toggleable-left":    1001,
+        "dropdown-menu":             -1,
+        "promo-tile-text":            2
+    ),
+    "site-search": (
+        "this":                       1,
+        "close-search":               1,
+        "suggestions":             1000
+    ),
+    "minicart": (
+        "this":                       1
+    ),
+    "select-wrapper": (
+        "this":                       0,
+        "selector":                   0,
+        "select":                     1
+    ),
+    "slick-theme": (
+        "this":                       0,
+        "arrows":                     1
+    ),
+    "cart": (
+        "this":                       0,
+        "checkout-continue":          1,
+        "checkout-continue-sm":    1000,
+        "remove-btn":                 1,
+        "error-msg":                  2
+    ),
+    "next-step-button":            1000,
+    "refinement-bar":                 1,
+    "error-messaging":                1,
+    "back-to-top":                    2,
+    "prices-add-to-cart-actions": (
+        "this":                       0,
+        "sm-viewport":             1000
+    ),
+    "comparison-bar":              1000,
+    "veil":                        1000
+);
+
+// Function is in this file instead of the _functions file because the Z-Layers would not be able to be edited to be site specific
+
+@function z($layers...) {
+    @if not map-has-nested-keys($z-layers, $layers...) {
+        @error "No layer found for `#{inspect($layers)}` in $z-layers map.";
+    }
+    $deepest-layer: map-deep-get($z-layers, $layers...);
+
+    @if type-of($deepest-layer) != map {
+        @return map-deep-get($deepest-layer);
+    } @else if map-has-key($deepest-layer, "this") {
+        @return map-get($deepest-layer, "this");
+    } @else {
+        @error "Key ID of 'this' not found in `#{inspect($layers)}` nested list.";
+    }
+}

@@ -1,0 +1,98 @@
+<!--- TEMPLATENAME: deliveryOptions.isml --->
+<isinclude template="components/modules" />
+<isif condition="${pdict.dealerFulfillmentData.pickupDealers.length > 0}">
+    <iscomment>If we at least have dealer pickup option</iscomment>
+
+    <iscomment>Check if we have dealer delivery</iscomment>
+    <isset name="dealerPickupMethodId" value="${pdict.dealerFulfillmentData.pickupMethodId}" scope="page" />
+    <isset name="dealerDeliveryMethodId" value="${pdict.dealerFulfillmentData.deliveryMethodId}" scope="page" />
+    <isset name="selectedDealerShipping" value="${pdict.dealerFulfillmentData.selectedShippingMethod}" scope="page" />
+    <isset name="numberOfVisibleOptions" value="${pdict.dealerFulfillmentData.numberOfVisibleOptions}" scope="page" />
+
+    <ul class="nav nav-pills content-switcher">
+        <isloop items=${pdict.dealerFulfillmentData.shippingMethods} var="method" status="loopstatus">
+            <isif condition="${method.ID === dealerPickupMethodId || (method.ID === dealerDeliveryMethodId && pdict.dealerFulfillmentData.ableToDeliver)}">
+                <li class="nav-item">
+                    <a href="${'#content-switcher-' + loopstatus.count}"
+                        class="dealer-shipping-option nav-link show ${method.ID === selectedDealerShipping ? 'selected active' : ''}"
+                        data-method-id="${method.ID}"
+                        data-toggle="tab"
+                        role="tab"
+                        aria-controls="${'#content-switcher-' + loopstatus.count}"
+                        aria-selected="${selectedDealerShipping === '' ? true : false}"
+                        >
+                        ${method.displayName} ${method.ID === dealerPickupMethodId ? '(' + Resource.msg('dealer.free', 'dealer', null) + ')' : method.shippingCost}
+                    </a>
+                </li>
+            </isif>
+        </isloop>
+        <isif condition="${!pdict.dealerFulfillmentData.ableToDeliver && pdict.dealerFulfillmentData.factoryShipping}">
+            <li class="nav-item">
+                <a href="#content-switcher-0"
+                    class="dealer-shipping-option nav-link show ${selectedDealerShipping === '' ? 'selected active' : ''}"
+                    data-method-id=""
+                    data-toggle="tab"
+                    role="tab"
+                    aria-controls="content-switcher-0"
+                    aria-selected="${selectedDealerShipping === '' ? true : false}"
+                    >
+                    ${Resource.msg('factory.delivery', 'dealer', null)}
+                </a>
+            </li>
+        </isif>
+    </ul>
+
+    <input type="hidden" name="${shippingForm.shippingMethodID.htmlName}" id="dealerShippingMethod" value="${selectedDealerShipping}" />
+
+    <isif condition="${pdict.dealerFulfillmentData.ableToDeliver}">
+        <div class="dealer-shipping-options ${dealerDeliveryMethodId} ${dealerDeliveryMethodId !== selectedDealerShipping ? 'hidden' : ''}">
+            <div class="choose-msg"><isprint value="${Resource.msgf('dealer.showing.delivery', 'dealer', null, shippingForm.dealerZipCode.value)}" encoding="off" /></div>
+            <isset name="dealerShippingType" value="${'delivery'}" scope="page" />
+            <isset name="dealerSelectedOption" value="${pdict.dealerFulfillmentData.selectedDeliveryDealer}" scope="page" />
+            <isset name="dealerList" value="${pdict.dealerFulfillmentData.deliveryDealer}" scope="page" />
+            <isinclude template="dealer/dealerOptionList" />
+        </div>
+    </isif>
+
+    <div class="dealer-shipping-options ${dealerPickupMethodId} ${dealerPickupMethodId !== selectedDealerShipping ? 'hidden' : ''}">
+        <div class="choose-msg"><isprint value="${Resource.msgf('dealer.showing.pickup', 'dealer', null, shippingForm.dealerZipCode.value)}" encoding="off" /></div>
+        <isset name="dealerShippingType" value="${'pickup'}" scope="page" />
+        <isset name="dealerSelectedOption" value="${pdict.dealerFulfillmentData.selectedPickupDealer}" scope="page" />
+        <isset name="dealerList" value="${pdict.dealerFulfillmentData.pickupDealers}" scope="page" />
+        <isinclude template="dealer/dealerOptionList" />
+    </div>
+<iselseif condition="${pdict.dealerFulfillmentData.factoryShipping}">
+    <iscomment>No dealers found, but we can have factory shipping and need to show proper message about no dealers</iscomment>
+    <div class="alert brand-warning">
+        <isprint value="${pdict.dealerNotFoundMsg}" encoding="off" />
+    </div>
+<iselse>
+    <iscomment>We cannot ship this order</iscomment>
+    <div class="alert brand-warning">
+        <isprint value="${pdict.dealerShippingNotAvailableMsg}" encoding="off" />
+    </div>
+    <iscomment>Add two buttons: Edit cart and find dealer</iscomment>
+    <div class="user-actions">
+        <div class="row no-gutters">
+            <div class="col-6 col-lg-5 col-xl-4 btn-col">
+                <a class="btn btn-outline-secondary" href="${URLUtils.url('Cart-Show', 'dealerRequired', true)}">${Resource.msg('dealer.return.cart', 'dealer', null)}</a>
+            </div>
+            <div class="col-6 col-lg-5 col-xl-4 btn-col">
+                <a class="btn btn-outline-secondary" href="${URLUtils.url('Stores-Find', 'showMap', 'true', 'horizontalView', 'true', 'isForm', 'true')}">${Resource.msg('dealer.find', 'dealer', null)}</a>
+            </div>
+        </div>
+        <div class="row customer-service-links">
+            <isif condition="${dw.system.Site.current.getCustomPreferenceValue('mtdLiveChatEnabled')}">
+                <div class="cs-link first col-12 col-lg-5 col-xl-4">
+                    <issvg icon="icon-chat-grey"/>
+                    <a id="dealer-live-chat" href="javascript:void(0)" class="label-1"><span>${Resource.msg('dealer.livechat', 'dealer', null)}</span></a>
+                </div>
+            </isif>
+            <div class="cs-link col-12 col-lg-4">
+                <issvg icon="icon-customer-service"/>
+                <iscomment> text and link in properties for number customization</iscomment>
+                <isprint value="${Resource.msg('dealer.callus.number', 'dealer', null)}" encoding="off" />
+            </div>
+        </div>
+    </div>
+</isif>

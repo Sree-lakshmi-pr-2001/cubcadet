@@ -1,0 +1,148 @@
+// Custom disabled states for buttons
+button,
+.btn {
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-primary {
+    border-color: $primary;
+    // for white text on dark backgrounds
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: $brand-dark;
+        background: $brand-dark;
+    }
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+
+    i {
+        font-size: $btn-icon-size;
+        margin-left: $btn-icon-spacing;
+    }
+}
+
+.btn-outline-primary {
+    border-color: $primary;
+    border-width: 2px;
+    background: $white;
+}
+
+.btn-outline-secondary {
+    color: $brand-light;
+    border-color: $brand-light;
+    border-width: 2px;
+    // for white text on dark backgrounds
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-secondary {
+    border-color: $brand-light;
+    background: $brand-light;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: $brand-second;
+        background: $brand-second;
+    }
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-alt-bg;
+        border-color: $btn-disabled-alt-border-color;
+        color: $btn-disabled-alt-color;
+    }
+}
+
+.btn-tertiary {
+    border-color: $tertiary;
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-alt-bg;
+        border-color: $btn-disabled-alt-border-color;
+        color: $btn-disabled-alt-color;
+    }
+}
+
+// Button text link
+.btn-text {
+    padding: 0 22px 0 0;
+    position: relative;
+    color: $btn-link-color;
+    font-size: $font-size-body;
+    font-weight: $font-weight-bold;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        background-image: $svg-arrow-right;
+        background-position: center;
+        transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $btn-link-color;
+        text-decoration: underline;
+    }
+}
+
+.remove-btn,
+.remove-btn-lg {
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 16px;
+        width: 16px;
+        position: relative;
+        margin: 0 auto;
+        background-image: $close-dark-svg;
+    }
+}
+
+.modal-header {
+    button.close {
+        text-shadow: none;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            background-image: $close-dark-svg;
+        }
+    }
+}

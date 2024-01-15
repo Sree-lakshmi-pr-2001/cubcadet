@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+        <isif condition="${!product.readyToOrder}">
+            <div class="availability-msg">${Resource.msg('info.selectforstock', 'product', 'Select Styles for Availability')}</div>
+        <iselse>
+            <isloop items="${product.availability.messages}" var="message" status="loopstate">
+                <isif condition="${pdict.isPDP}">
+                    <div class="availability-icon mr-1 ${product.availability.label[loopstate.index]}">
+                    </div>
+                </isif>
+                <div class="availability-msg ${product.availability.label[loopstate.index]}">${message}</div>
+            </isloop>
+        </isif>
+    </div>
+</div>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="header-banner-m" context="global" configuration-id="Header Banner - Test" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="font-weight-bold bg-secondary text-white pt-2 pb-2"&gt;TEST PROMO .font-weight-bold .bg-secondary .text-white .pt-2 .pb-2&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+
+    <slot-configuration slot-id="home-slot-1" context="global" configuration-id="Implementation-sample-category-cards-home" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="category-card-group-homepage"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:40:34" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: Home-main-m&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-2" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:48:09" default="true" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-2&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:49:53" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-3&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="New Slot Configuration - 2019-04-22 09:51:04" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center mt-2"&gt;
+  &lt;h6&gt;slot: Home-slot-4&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-4" context="global" configuration-id="New Slot Configuration - 2019-04-28 16:52:29" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="content-card-group-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:39:32" default="true" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-1&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:41:06" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-2&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:42:01" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:42:36" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-4&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-1" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:51:46" default="true" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-1&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:51:46" default="true" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-2&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:51:46" default="true" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-3&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="riding-lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 18:51:46" default="true" assigned-to-site="false">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cat-landing-4&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-2" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 19:11:40" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="subcategory-card-group-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-3" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 20:04:23" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-4" context="category" context-id="lawn-mowers" configuration-id="New Slot Configuration - 2019-04-28 21:02:27" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-group-lifestyle-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-1" context="category" context-id="zero-turn-mowers" configuration-id="New Slot Configuration - 2019-05-17 15:36:28" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: pl-browse-1&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-2" context="category" context-id="zero-turn-mowers" configuration-id="plb-features-cards-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-features-cards-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-3" context="category" context-id="zero-turn-mowers" configuration-id="plb-grid-header-sample" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="product-line-browse-grid-header-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="full-width hero" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="herofw"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-4" context="category" context-id="zero-turn-mowers" configuration-id="plb-gallery-carousel-sample" assigned-to-site="true">
+        <template>slots/content/galleryCarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;See It In Action&lt;/h2&gt;
+&lt;p&gt;We’ve perfected the lap bar zero turn, pioneered the advancement of steering wheel controlled mowers, and now we’re redefining the landscape again – with the all-new Ultima Series. Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus dignissim.&lt;/p&gt;</callout-msg>
+        <content>
+            <content-assets>
+                <content-asset content-id="plb-carousel-img-sample"/>
+                <content-asset content-id="plb-carousel-img-sample"/>
+                <content-asset content-id="plb-carousel-youtube-sample"/>
+                <content-asset content-id="plb-carousel-vimeo-sample"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="pl-browse-5" context="category" context-id="zero-turn-mowers" configuration-id="plb-recommendation-carousel" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Attachments &amp; Accessories&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="KH-CV732-3015"/>
+                <product product-id="MA-10302268002"/>
+                <product product-id="690-200-0009"/>
+                <product product-id="690-200-0018"/>
+                <product product-id="690-239-0016"/>
+                <product product-id="712-0290"/>
+                <product product-id="690-240-0007"/>
+                <product product-id="712-04113"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-slot-3" context="global" configuration-id="sample-product-slider" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;Slider Heading&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="00001"/>
+                <product product-id="00002406"/>
+                <product product-id="00003"/>
+                <product product-id="690-900-0041"/>
+                <product product-id="690-900-0038"/>
+                <product product-id="690-900-0010"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-recommendations-m" context="global" configuration-id="sample-product-slider" default="true" assigned-to-site="true">
+        <template>slots/product/productCarouselSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;You Might Also Like&lt;/h2&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="00001"/>
+                <product product-id="00002406"/>
+                <product product-id="00003"/>
+                <product product-id="690-900-0041"/>
+                <product product-id="690-900-0038"/>
+                <product product-id="690-900-0010"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-top-banner" context="global" configuration-id="New Slot Configuration - 2019-05-14 10:12:40" default="false" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-white bg-accent-1 p-8 text-center"&gt;
+  &lt;h6&gt;slot: cart-top-banner&lt;/h6&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+        <slot-configuration slot-id="cart-top-banner" context="global" configuration-id="cart-top-banner-sample" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="cart-top-banner-sample"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Everyone"/>
+        </customer-groups>
+    </slot-configuration>
+
+</slot-configurations>

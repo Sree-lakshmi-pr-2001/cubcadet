@@ -1,0 +1,17 @@
+{
+    "env": {
+        "jquery": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8
+    },
+    "globals": {
+        "grecaptcha": true
+    },
+    "rules": {
+        "global-require": "off",
+        "no-var": "off",
+        "prefer-const": "off"
+    }
+}

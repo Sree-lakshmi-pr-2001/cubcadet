@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<isinclude template="includes"/>
+	</head>
+	<body>
+		<div class="title">
+			${pdict.TestSuite.name}&nbsp;
+			<span id="totalElapsed"></span>
+			<span id="titleLoader" class="glyphicon glyphicon-refresh glyphicon-refresh-animate hide"></span>
+		</div>
+		<div class="secondTitle">
+			<a class="btn btn-default navbar-btn" href="${URLUtils.http('Tester-Start')}" title="Go Back To List Of Test Suites">Main</a>
+			<a id="clearResults" class="btn btn-default navbar-btn" href="#" title="Clear Results">Clear Results</a>
+		</div>
+		<div align="center">
+			<div class="box">
+				<table class="table table-bordered table-hover"
+					   id="testTable"
+					   data-meta-suite="${pdict.CurrentHttpParameterMap.suite.stringValue}">
+					<thead>
+						<tr>
+							<th colspan='2'>
+								<div class="text-center">
+									<a class="color-swatch gray-darker" id="runAllTests" href="#" title="Run All Tests">
+										<span class="startImage glyphicon glyphicon-play" aria-hidden="true"></span>
+									</a>
+									<a id="cancelAllTests" class="hide color-swatch gray-darker" href="#" title="Cancel All Tests">
+										<span class="stopImage glyphicon glyphicon-stop" aria-hidden="true"></span>
+									</a>
+								</div>
+							</th>
+							<th>Category</th>
+							<th>Test Name</th>
+							<th>Time (ms)</th>
+							<th>Result</th>
+						</tr>
+					</thead>
+					<tbody>
+						<isloop alias="test" iterator="${pdict.TestSuite.tests}" status="testStatus">
+							<tr>
+								<td>${(testStatus.count-1).toFixed(0)}</td>
+								<td class="runTest">
+									<div class="text-center">
+										<a class="color-swatch gray-darker" href="#" title="Run Test">
+											<span class="startImage glyphicon glyphicon-play" aria-hidden="true"></span>
+										</a>
+										<a class="color-swatch gray-darker" href="#" title="Cancel Test"><span class="stopImage glyphicon glyphicon-stop hide" aria-hidden="true"></span></a>
+									</div>
+								</td>
+								<td>${test.category}</td>
+								<td>${test.name}
+									<div class="errorMessageDiv" style="display:none">
+										<a href="#" title="hide/show Exception">Exception:</a><br/>
+										<pre style="display:none"></pre>
+									</div>
+									<div class="scriptLogDiv" style="display:none">
+										<a href="#" title="hide/show Scriptlog">Scriptlog:</a><br/>
+										<pre style="display:none"></pre>
+									</div>
+								</td>
+								<td align="center"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate hide"></span><span class="text"></span></td>
+								<td align="center"><span>&nbsp;</span></td>
+							</tr>
+						</isloop>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>	
+</html>

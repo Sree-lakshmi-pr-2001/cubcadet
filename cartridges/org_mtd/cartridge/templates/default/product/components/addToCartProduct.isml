@@ -1,0 +1,12 @@
+<isscript>var tagManager = require('int_googletags/cartridge/scripts/google/TagManagerModel');</isscript>
+<div class="row cart-and-ipay atc-product justify-content-center justify-content-sm-start">
+    <div class="col-11">
+        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+        <button class="add-to-cart btn btn-primary"
+            data-pid="${product.id}"
+            data-gtmdata="${JSON.stringify(tagManager.getProductData(product.id))}"
+            ${!product.readyToOrder || !product.available || !product.priceAvailability ? "disabled" : ""}>
+                ${Resource.msg('button.addtocart', 'common', null)}
+        </button>
+    </div>
+</div>

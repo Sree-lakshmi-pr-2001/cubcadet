@@ -1,0 +1,4 @@
+<iscontent type="text/javascript" charset="UTF-8" compact="true"/>
+<script>
+    dataLayer.push(<isprint value="${pdict.GTMSessionData}" encoding="off" />);
+</script>

@@ -1,0 +1,21 @@
+<isinclude template="components/modules" />
+
+<isset name="product" value="${pdict.product}" scope="page" />
+
+<div class="dealer-product">
+    <div class="dealer-product__img-wrap">
+        <isset name="productImagesLarge" value="${product.images['large']}" scope="page" />
+        <isloop items="${productImagesLarge}" var="image" status="loopStatus" begin="0" end="1">
+            <img src="${image.url}" class="dealer-product__img" alt="${image.alt}" />
+            <isbreak>
+        </isloop>
+    </div>
+    <div class="dealer-product__info">
+        <isif condition="${!empty(product.productName)}">
+            <h5 class="dealer-product__info__name">${product.productName}</h5>
+        </isif>
+        <isif condition="${!empty(product.extendedName)}">
+            <p class="dealer-product__info__extended-name">${product.extendedName}</p>
+        </isif>
+    </div>
+</div>

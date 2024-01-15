@@ -1,0 +1,67 @@
+<div class="card-body shipping-content">
+    <form class="shipping-form" autocomplete="on" novalidate
+          action="${shipmentLoopState
+          ? URLUtils.url('CheckoutAddressServices-AddNewAddress')
+          : URLUtils.url('CheckoutShippingServices-SubmitShipping')}"
+          data-address-mode="${shippingModel.matchingAddressId ? 'edit' : 'new'}"
+          data-carb-url="${URLUtils.url('Checkout-Carb')}"
+          autocomplete="on"
+          <isprint value=${pdict.forms.shippingForm.attributes} encoding="off"/>
+    >
+        <isif condition="${lineItem}">
+            <input name="productLineItemUUID" type="hidden" value="${lineItem.UUID}" />
+        </isif>
+
+        <input name="originalShipmentUUID" type="hidden" value="${shippingModel.UUID}" />
+        <input name="shipmentUUID" type="hidden" value="${shippingModel.UUID}" />
+
+        <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+
+        <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
+            <fieldset class="shipping-method-block">
+                <legend><h6>${Resource.msg('heading.shipping.method', 'checkout', null)}</h6></legend>
+                <div class="row">
+                    <div class="col-sm-6 mb-2 mb-sm-0">
+                        <isinclude template="checkout/shipping/shippingMethod" />
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="checkout-callout">
+                            <isif condition="${pdict.aftermarketOnly === true}">
+                                <iscontentasset aid="checkout-delivery-email" />
+                            <iselse>
+                                <isif condition="${pdict.isHomeDelivery}">
+                                    <isif condition="${pdict.isWholeGoodDelivery}">
+                                        <iscontentasset aid="checkout-delivery-estimate-dropship" />
+                                    <iselse>
+                                        <iscontentasset aid="checkout-parts" />
+                                    </isif> 
+                                </isif>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="clearfix mb-4 mb-sm-0"><hr class="d-none d-sm-block" /></div>
+
+            <fieldset class="shipment-selector-block ${(pdict.order.usingMultiShipping || shipmentLoopState) || (pdict.customer.addresses && pdict.customer.addresses.length > 0) ? '' : 'd-none'} ">
+
+                <isinclude template="checkout/shipping/shipmentSelector" />
+            </fieldset>
+
+            <fieldset class="shipping-address-block">
+                <legend><h6>${pdict.shippingAddressHeader}</h6></legend>
+                <isinclude template="checkout/shipping/shippingAddress" />
+            </fieldset>
+
+            <fieldset class="gift-message-block d-none">
+                <isinclude template="checkout/shipping/isGift" />
+            </fieldset>
+        </div>
+
+        <div class="view-address-block d-none">
+            <isinclude template="checkout/shipping/shippingCard" />
+        </div>
+
+    </form>
+</div>

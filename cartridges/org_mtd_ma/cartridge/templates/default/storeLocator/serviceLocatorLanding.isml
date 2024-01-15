@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <iscontentasset aid="service-locator-landing-page-text">
+
+            <div class="row no-gutters search-form">
+                <div class="col-12 service-search">
+                    <div class="alert alert-danger geocoding-error hidden"><isprint value="${pdict.storeSearchAddressErrorMessage}" encoding="off" /></div>
+
+                    <div class="row mb-2 mb-sm-3 pt-3">
+                        <div class="col-12">
+                            <form action="${pdict.stores.actionUrl}" class="store-locator service-locator-form" method="get" name="storelocator">
+                                <div class="d-flex justify-content-xs-between sl-form sl-container">
+                                    <div class="form-group required sl-zip service-locator">
+                                        <label class="form-control-label" for="store-postal-code">${Resource.msg('field.address.zip.postal.code','storeLocator',null)}</label>
+                                        <input autofocus required type="text" class="form-control" id="store-postal-code" name="address" value="" autocomplete="nofill"/>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+
+                                    <div class="sl-radius">
+                                        <isinclude template="storeLocator/storeLocatorRadius" />
+                                    </div>
+
+                                    <div class="service-locator-radio">
+                                        <div class="sl-product-from">
+                                            <isinclude template="storeLocator/storeLocatorProductFromRadio" />
+                                        </div>
+                                        <div class="sl-product-type">
+                                            <isinclude template="storeLocator/storeLocatorProductTypeRadio" />
+                                        </div>
+                                    </div>
+
+                                    <div class="sl-btn service-locator">
+                                        <button class="btn btn-secondary btn-storelocator-search" type="submit">
+                                            ${Resource.msg('button.find.service.centers','storeLocator',null)}
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <iscontentasset aid="trademark-disclaimer" />
+        </div>
+
+        <div class="col-6 d-none d-md-block">
+            <iscontentasset aid="service-locator-landing-page-image">
+        </div>
+    </div>
+</div>

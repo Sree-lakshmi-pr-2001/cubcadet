@@ -1,0 +1,70 @@
+body {
+	background-color: #a7a9ac;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	padding: 1em;
+	text-align: center;
+}
+
+.container {
+	background: #f1f2f2;
+	margin: auto;
+	min-width: 960px;
+	padding: 1em;
+	width: 80%;
+}
+
+.header {
+	padding: 0 4.5%;
+}
+
+.header h1,
+.header p {
+	text-align: center;
+}
+
+.footer {
+	padding: 0.5em 0;
+}
+
+.footer h2 {
+	border-bottom-style: solid;
+	border-top-style: solid;
+	text-align: center;
+}
+
+.footer p {
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.left-col {
+	padding-right: 10px;
+}
+
+th.emission-header {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+table {
+	margin: auto;
+	width: 90%;
+}
+
+td { 
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+}
+
+button {
+	margin-bottom: 0.5em;
+}

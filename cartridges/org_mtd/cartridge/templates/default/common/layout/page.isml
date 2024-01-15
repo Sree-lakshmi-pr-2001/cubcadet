@@ -1,0 +1,44 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isscript>
+    var pageContext = pdict.pageContext;
+    var actionParts = pdict.action.split('-');
+    var action = pdict.action;
+    if (actionParts.length != 2) {
+        action = 'Home-Show';
+    }
+</isscript>
+<isinclude template="/components/modules" sf-toolkit="off" />
+<isset name="pageStyleGuide" value="${pdict.action == 'StyleGuide-Show' ? 'pt_styleguide' : ''}" scope="page" />
+
+<!DOCTYPE html>
+<iscomment>Updated the HTML element to contain a dynamic language instead of a static 'en' (LRA-23)</iscomment>
+<html lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}">
+    <head>
+        <!--[if gt IE 9]><!-->
+            <isinclude sf-toolkit="off" template="/common/scripts" />
+        <!--<![endif]-->
+        <isinclude template="/common/htmlHead" />
+        <isactivedatahead/>
+        <isinclude template="components/gtmDataLayer"/>
+        <isinclude template="components/analytics/microsoftHead" />
+    </head>
+    <body class="${pageStyleGuide} ${(pdict.content && pdict.content.ID && pdict.content.ID.toLowerCase()) ? pdict.content.ID.toLowerCase() : ''}">
+        <isinclude template="components/gtmNoScript"/>
+        <div class="page" data-action="${action}" data-querystring="${pdict.queryString}" >
+        	<div id="skip"> <a href="#main">Skip to Main Content</a></div>
+            <isinclude template="/components/header/pageHeader" />
+            <div id="main">
+            	<isreplace/>
+            </div>
+            <isinclude template="/components/footer/pageFooter" />
+        </div>
+        <div class="error-messaging"></div>
+        <div class="modal-background"></div>
+        <iscontentasset aid="cookie_hint" />
+         <!--[if lt IE 10]>
+            <isinclude sf-toolkit="off" template="/common/scripts" />
+        <![endif]-->
+        <isinclude template="/components/pepperjamClickId" />
+        <isinclude url="${URLUtils.url('ConsentTracking-Check')}"/>
+    </body>
+</html>

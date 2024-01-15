@@ -1,0 +1,23 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addCss('/css/blog.css');
+</isscript>
+
+<div class="row">
+    <!--- Refinement bar --->
+    <div class="content-refinement-bar col-md-3">
+        <isinclude template="search/contentSearchRefineBar"/>
+    </div>
+
+    <!--- Content Grid --->
+        <div class="col-sm-12 col-md-9">
+            <div class="container">
+
+                <isif condition="${!pdict.contentSearch.contents.empty}">
+                    <div class="row content-grid">
+                        <isinclude template="search/contentGrid"/>
+                    </div>
+                </isif>
+            </div>
+        </div>
+</div>

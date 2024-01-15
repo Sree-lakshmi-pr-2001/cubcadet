@@ -1,0 +1,302 @@
+@import "../variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~org/utilities/functions";
+@import "~org/utilities/layout";
+@import "~org/utilities/ellipsis";
+
+$border-radius: 0;
+
+.compare-bar-wrapper {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: rem(15px) rem(15px);
+    z-index: z("comparison-bar");
+    background-color: $secondary;
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(15px) rem(15px) rem(35px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: rem(15px) 0 rem(35px);
+    }
+
+    .compare-bar-title {
+        @include comparison-bar-title;
+
+        position: relative;
+        padding-bottom: rem(15px);
+
+        > span:first-child {
+            font-weight: $font-weight-bold;
+            margin-left: rem(5px);
+        }
+    }
+
+    .slot {
+        position: relative;
+        border-radius: $border-radius;
+
+        img {
+            position: static;
+            display: inline-block;
+            width: 80px;
+            height: auto;
+            border-radius: $border-radius 0 0 $border-radius;
+            background-color: $white;
+
+            @include media-breakpoint-up(md) {
+                width: 90px;
+            }
+        }
+
+        .product-info {
+            position: absolute;
+            display: inline-block;
+            height: auto;
+            min-height: 100%;
+            width: calc(100% - 80px);
+            padding: 0 rem(9px);
+            vertical-align: top;
+
+            @include media-breakpoint-up(md) {
+                width: calc(100% - 90px);
+                padding: 0 rem(25px) 0 rem(10px);
+            }
+        }
+
+        .name,
+        .extended-name {
+            display: block;
+        }
+
+        .name {
+            @include comparison-product-name;
+        }
+
+        .extended-name {
+            @include comparison-product-extended-name;
+
+            padding-bottom: rem(15px);
+        }
+
+        .close {
+            @include comparison-remove-link;
+
+            float: none;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            text-shadow: none;
+            border-radius: 0 $border-radius $border-radius 0;
+            opacity: 1;
+        }
+
+        .action {
+            text-align: center;
+        }
+    }
+
+    .action {
+        text-align: center;
+
+        .btn-link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            line-height: rem(18px);
+
+            &:disabled {
+                background-color: $trans;
+                border-color: $trans;
+            }
+        }
+
+        .btn-primary {
+            width: 100%;
+            margin: rem(10px) 0;
+        }
+    }
+
+    .clear-all {
+        @include comparison-clear-link;
+    }
+
+    .min-products-msg {
+        @include comparison-product-name;
+    }
+}
+
+.product-comparison {
+    margin-top: rem(24px);
+
+    table {
+        margin-bottom: rem(65px);
+        table-layout: fixed;
+        border-color: $trans;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(75px);
+        }
+
+        colgroup > col {
+            //Couldn't use the @each loop, cannot break loop and cannot use conditionals within the loop
+            @include media-breakpoint-only(xs) {
+                min-width: calc(100vw / 2 - #{rem(17px)});
+            }
+
+            @include media-breakpoint-only(sm) {
+                min-width: calc(#{map-get($container-max-widths, sm)} / 2 - #{rem(17px)});
+            }
+
+            @include media-breakpoint-only(md) {
+                min-width: calc(#{map-get($container-max-widths, md)} / 2 - #{rem(17px)});
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 50% !important;
+
+                &:first-child {
+                    width: 0% !important;
+                    display: none;
+                }
+            }
+        }
+
+        .product-tile {
+            background: $trans;
+
+            .tile-body {
+                margin-bottom: rem(50px);
+                padding-top: rem(20px);
+                text-align: left;
+            }
+
+            .tile-attributes {
+                display: none;
+                visibility: hidden;
+            }
+
+            .color-swatches {
+                display: none;
+            }
+
+            .add-to-cart {
+                width: 100%;
+            }
+        }
+    }
+
+    .compare-columns {
+        padding: rem(15px);
+
+        @include media-breakpoint-up(lg) {
+            margin-top: rem(40px);
+        }
+    }
+
+    thead,
+    tbody {
+        tr {
+            th:first-of-type {
+                border-left-color: $trans;
+
+                @include media-breakpoint-down(md) {
+                    border-right-color: $trans;
+                    padding: 0;
+                    display: none;
+                }
+            }
+
+            td:first-of-type {
+                @include media-breakpoint-down(md) {
+                    border-left-color: $trans;
+                }
+            }
+
+            td:last-child {
+                border-right-color: $trans;
+            }
+        }
+    }
+
+    thead {
+        th,
+        td {
+            border-bottom-width: 1px;
+            border-top-color: $trans;
+        }
+    }
+
+    tbody {
+        th,
+        td {
+            padding: rem(15px) rem(20px);
+        }
+
+        th {
+            @include comparison-table-attr-label;
+        }
+
+        td {
+            //Couldn't use the @each loop, cannot break loop and cannot use conditionals within the loop
+            @include media-breakpoint-only(xs) {
+                min-width: calc(100vw / 2 - #{rem(17px)});
+            }
+
+            @include media-breakpoint-only(sm) {
+                min-width: calc(#{map-get($container-max-widths, sm)} / 2 - #{rem(17px)});
+            }
+
+            @include media-breakpoint-only(md) {
+                min-width: calc(#{map-get($container-max-widths, md)} / 2 - #{rem(17px)});
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 50% !important;
+            }
+
+            ul {
+                padding-left: rem(20px);
+            }
+
+            // inline tooltips
+            .attribute-values > div,
+            .spec-tooltips {
+                display: inline;
+            }
+        }
+    }
+
+    .back-to-results {
+        position: relative;
+        margin-bottom: rem(23px);
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                left: 15px;
+                top: 0;
+                width: auto;
+            }
+        }
+    }
+
+    .product-header {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.table-striped-column td:nth-of-type(odd) {
+    background-color: $gray-200;
+}

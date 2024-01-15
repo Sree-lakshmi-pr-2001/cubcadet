@@ -1,0 +1,102 @@
+<div class="product-line-item <isif condition="${lineItem.CARBCompliantItem && shippingModel.shippingAddress.stateCode == 'CA'}"> alert alert-danger</isif>" data-product-line-item="${lineItem.UUID}">
+    <isif condition="${lineItem.productType === 'bundle'}">
+        <div class="row <isif condition=${!miniCart}> no-gutters </isif>">
+            <div class="item-image <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-4 <iselse> col-6 </isif>">
+                <isif condition=${miniCart}>
+                    <img class="product-image" src="${lineItem.images['mini-line-item'][0].url}" alt="${lineItem.images['mini-line-item'][0].alt}" title="${lineItem.images['mini-line-item'][0].title}">
+                <iselse>
+                    <img class="product-image" src="${lineItem.images['line-item'][0].url}" alt="${lineItem.images['line-item'][0].alt}" title="${lineItem.images['line-item'][0].title}">
+                </isif>
+            </div>
+            <div class="product-line-item-details <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-8 <iselse> col-6 </isif>">
+                <div class="bundle-line-item-head">
+                    <isinclude template="checkout/productCard/productCardLineItemHeader" />
+                </div>
+                <div class="bundle-includes">${Resource.msg('msg.bundle.includes','cart',null)}</div>
+                <!--- individual bundled line items --->
+                <isinclude template="cart/productCard/cartProductCardBundledItems" />
+            </div>
+        </div>
+    <iselse/>
+        <div class="row <isif condition=${!miniCart}> no-gutters </isif>">
+            <div class="item-image <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-4 <iselse> col-6 </isif>">
+                <isif condition=${miniCart}>
+                    <img class="product-image" src="${lineItem.images['mini-line-item'][0].url}" alt="${lineItem.images['mini-line-item'][0].alt}" title="${lineItem.images['mini-line-item'][0].title}">
+                <iselse>
+                <div class="CARBWarning">
+                        <isif condition="${!miniCart && lineItem.CARBCompliantItem && shippingModel.shippingAddress.stateCode == 'CA'}">
+                            <div class="CARBIcon position-absolute w-100 flex justify-content-center align-items-center p-xl-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-100">
+                                    <path d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" class="iconPath"></path>
+                                </svg>
+                            </div>
+                        </isif>
+                </div>
+                    <img class="product-image" src="${lineItem.images['line-item'][0].url}" alt="${lineItem.images['line-item'][0].alt}" title="${lineItem.images['line-item'][0].title}">
+                </isif>
+            </div>
+            <div class="product-line-item-details <isif condition=${miniCart || confirmation || pdict.currentStage === 'placeOrder'}> col-8 <iselse> col-6 </isif>">
+                <isinclude template="checkout/productCard/productCardLineItemHeader"/>
+                <div class="item-attributes">
+                    <isloop items="${lineItem.variationAttributes}" var="attribute">
+                        <p class="line-item-attributes"><span class="font-bold">${attribute.displayName}:</span> ${attribute.displayValue}</p>
+                    </isloop>
+
+                    <div class="item-options">
+                        <isloop items="${lineItem.options}" var="option">
+                            <div class="line-item-option">${option.displayName}</div>
+                        </isloop>
+                    </div>
+
+                    <isif condition="${((pdict.order && !pdict.order.orderStatus) || !miniCart) && (lineItem.productAttributeType && (lineItem.productAttributeType.toLowerCase() == 'parts' || lineItem.productAttributeType.toLowerCase() == 'accessories'))}">
+                        <isinclude template="cart/productCard/cartProductCardAvailability" />
+                    <iselse>
+                        <isinclude template="cart/productCard/productShippingInfo" />
+                    </isif>
+                </div>
+                <isinclude template="checkout/productCard/productCardQtyPrice" />
+
+                <div class="item-prop65-msg half-width <isif condition="${'prop65Warning' in lineItem && !lineItem.prop65Warning}">d-none invisible</isif>">
+                    <isprint value="${pdict.itemProp65WarningMsg}" encoding="off" />
+                </div>
+            </div>
+            <div class="item-prop65-msg full-width <isif condition="${'prop65Warning' in lineItem && !lineItem.prop65Warning}">d-none invisible</isif>">
+                <isprint value="${pdict.itemProp65WarningMsg}" encoding="off" />
+            </div>
+            
+        </div>
+    </isif>
+
+
+
+    <isif condition=${miniCart}>
+        <div class="line-item-promo item-${lineItem.UUID}">
+            <isinclude template="checkout/productCard/productCardProductPromotions" />
+        </div>
+    </isif>
+
+    <div class="CARBCompliantItem">
+        <isif condition="${!miniCart && lineItem.CARBCompliantItem && shippingModel.shippingAddress.stateCode == 'CA'}">
+            <div class="alert CARBSuggestion">
+                <p>${Resource.msg('alert.CARB.complaint.msg', 'common', null)}<br><br>
+                    <strong class="alterPro">${Resource.msg('alert.CARB.alternative.products', 'common', null)}</strong>
+                </p>
+                <div class="alterContent">
+                    <isloop items="${lineItem.CARBProductSuggestions}" var="item" status="loopstatus">
+                        <div id="${item.id}" class="removeCARBProduct" data-mainproductid="${lineItem.id}"
+                        data-mainproductname="${lineItem.productName}" data-mainproductaction="${lineItem.removeCARBProductUrl}"
+                         data-mainproductuuid="${lineItem.UUID}" data-removecheckoutproduct="true" aria-label="${item.productName}"
+                         data-suggestionproducturl="${item.pdpUrl}">
+                            <a href="${item.pdpUrl}">
+                                <img src="${item.imageUrl}" alt="${item.name}" class = "suggestion-img">
+                                <strong>${item.name}</strong>
+                                <p>${item.name2 ? item.name2 :''}</p>
+                            </a>
+                        </div>
+                    </isloop>
+                </div>
+            </div>
+        </isif>
+    </div>
+
+</div>

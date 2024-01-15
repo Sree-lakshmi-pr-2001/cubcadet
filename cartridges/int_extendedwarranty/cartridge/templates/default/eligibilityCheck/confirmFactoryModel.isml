@@ -1,0 +1,35 @@
+        <div class="text-center">
+            <div class="pagination-steps mt-4 mb-3 ">
+                    <div class="pagination-step step-1 done"></div>
+
+                    <div class="pagination-step step-2 active"> 
+                        2
+                    </div>
+
+                    <div class="pagination-step step-3"> 
+                        3
+                    </div>
+            </div>  
+            <h6>Confirm Product and Serial Number</h6>
+            <form action="${URLUtils.url('ExtendedWarranty-ConfirmMyProduct')}" id="confirmProductForm" method="POST">
+            <div class="serialnumber-wrapper">
+                <div class="serial-number">${pdict.warrantyInfo.unit.model}</div>
+                <div class="mb-1">${pdict.warrantyInfo.unit.itemDescription}</div>
+                <div class="mb-1">${dw.web.Resource.msg('dialog2.serialNumber', 'eligibilitycheck', null)} <b>${pdict.warrantyInfo.unit.serialNumber}</b></div>
+                ${dw.web.Resource.msg('dialog2.factoryNumber', 'eligibilitycheck', null)} <b>${pdict.warrantyInfo.unit.itemNumber}</b>
+            </div>
+               
+                <input type="hidden" name="model" value="${pdict.warrantyInfo.unit.model}" />
+                <input type="hidden" name="itemDescription" value="${pdict.warrantyInfo.unit.itemDescription}" />
+                <input type="hidden" name="serialNumber" value="${pdict.warrantyInfo.unit.serialNumber}" />
+                <input type="hidden" name="itemNumber" value="${pdict.warrantyInfo.unit.itemNumber}" />
+                <input type="hidden" name="ewAftermarketPurchaseDate" value="${pdict.enterSerialNumberForm.ewAftermarketPurchaseDate.htmlValue}" />
+                <input type="hidden" name="warrantyPid" value="${pdict.warrantyInfo.extendedWarranty.itemNumber}" />
+                <input type="hidden" name="warrantyPrice" value="${pdict.warrantyPrice}" />
+                <input type="hidden" name="ewRegistered" value="${!empty(pdict.warrantyInfo.unit.registrations)}" />
+                <input type="hidden" name="ewPurchasedFrom" value="${pdict.enterSerialNumberForm.ewAftermarketPurchasedFrom ? pdict.enterSerialNumberForm.ewAftermarketPurchasedFrom.htmlValue : ''}" />
+                
+                <a id="confirmMyProduct" class="btn btn-secondary mb-1" data-url="${URLUtils.url('ExtendedWarranty-ConfirmMyProduct')}" data-warranty="${pdict.warrantyInfo.extendedWarranty.itemNumber}" data-model="${pdict.warrantyInfo.unit.model" data-itemDescription="${pdict.warrantyInfo.unit.itemDescription}"  data-serialNumber="${pdict.warrantyInfo.unit.serialNumber}" data-itemNumber="${pdict.warrantyInfo.unit.itemNumber}" }">${dw.web.Resource.msg('dialog2.button1', 'eligibilitycheck', null)}</a><br>
+                <a id="notMyProduct" class="btn" data-url="${URLUtils.url('ExtendedWarranty-EnterSerialNumber')}"><isprint value="${Resource.msg('dialog2.button2', 'eligibilitycheck', null)}" encoding="off"/></a><br>
+            </form>
+        </div>

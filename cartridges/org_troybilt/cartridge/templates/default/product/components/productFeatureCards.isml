@@ -1,0 +1,24 @@
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="productType" value="${'residential'}" scope="page" />
+<isif condition="${product.raw.custom['pdp-features'].length > 0}">
+    <isloop items="${pdict.breadcrumbs}" var="breadcrumbValue" end="0">
+        <isif condition="${breadcrumbValue.categoryID === 'commercial-equipment'}">
+            <isset name="productType" value="${'commercial'}" scope="page" />
+        </isif>
+    </isloop>
+    <div class="text-center ${productType}">
+        <div class="product-features-card-group container">
+            <h2 class="pdp-section-heading">${Resource.msgf('features.title', 'product', null, product.productName)}</h2>
+            <div class="pdp-feature-card-carousel">
+                <isloop items="${product.raw.custom['pdp-features']}" var="contentAsset" status="loopstate">
+                    <iscontentasset aid="${contentAsset}" nowrap="true"/>
+                </isloop>
+            </div>
+            <div class="pdp-feature-slider-controls slider-controls controls-center controls-light">
+                <span class="slide-prev"></span>
+                <div class="slide-dots"></div>
+                <span class="slide-next"></span>
+            </div>
+        </div>
+    </div>
+</isif>

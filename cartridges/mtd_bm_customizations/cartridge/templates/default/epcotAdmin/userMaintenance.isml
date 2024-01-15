@@ -1,0 +1,207 @@
+<isdecorate template="common/layout/epcot">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/manageUsers.js');
+</isscript>
+    <div>
+        <h1>Users List</h1>
+        <table id='pagination' width="100%" class='customDataTable'>
+            <thead>
+                <tr class="usersHeader">
+                    <td><b>Email Address</b></td>
+                    <td><b>Status</b></td>
+                    <td><b>Role</b></td>
+                    <td><b>Edit User</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <isloop iterator="${pdict.sfccUsers.users}" alias="user">
+                    <tr class="userRow">
+                        <td id="email" class="email">${user.email}</td>
+                        <td id="active" class="active">${user.active}</td>
+                        <td id="role" class="role">${user.maxRole}</td>
+                        <td><button class='btn btn-primary checkout-button editButton' type='button'
+                                id='${user.email}'>Edit</button>
+                        </td>
+                    </tr>
+                </isloop>
+            </tbody>
+        </table>
+    </div>
+    <div id='newUserDiv'>
+        <button class='btn btn-primary checkout-button editButton' type='button' id='newUser'>Create New User</button>
+    </div>
+    <br />
+    <div id='filterDataButtons'>
+        <button class='btn btn-primary checkout-button filterDataOn' type='button' id='filterDataOn'>Hide Inactive Users</button>
+        <button class='btn btn-primary checkout-button filterDataOff' type='button' id='filterDataOff' style="display:none">Show Inactive Users</button>
+    </div>
+    <div class="modal fade" id="userEditModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
+                    <iscomment> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> </iscomment>
+                </div>
+                <div class="modal-body">
+                    <div id="editUserContainer">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="closeButton"><button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button></div>
+                    <div class="submitButton" id="updateUser"><button class="btn product-search btn-primary"
+                            type="button">Submit</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="userCreationModal" tabindex="-1" aria-labelledby="userCreationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
+                    <iscomment> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button> </iscomment>
+                </div>
+                <div class="modal-body">
+                    <div id="createUserContainer">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="closeButton"><button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button></div>
+                    <div class="submitButton" id='submitNewUser'><button id="submitUser"
+                            class="btn product-search btn-primary" type="button">Submit</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>
+
+<template id="user-template">
+    <table class='table center'>
+        <thead>
+            <tr>
+                <h3 class='templateTitle center'>TITLE GOES HERE</h3>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Email:</td>
+                <td class='editEmail' id='editEmail'></td>
+            </tr>
+            <tr>
+                <td><label for="create-user-activeStatus" class="col-sm-12 col-form-label center">Active:</label></td>
+                <td>
+                    <select class='editActive form-control' id='editActive'>
+                        <option value='true'>true</option>
+                        <option value='false'>false</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id='userIdRow'>
+                <td><b>ID:</b></td>
+                <td class='userId' id='userId'>-1</td>
+            </tr>
+            <tr>
+                <td colspan='2'><b>ROLES:<b></td>
+            </tr>
+            <tr class='rolesHeader'>
+                <td><b>Has Role</b></td>
+                <td><b>Role Description<b></td>
+            </tr>
+            <tr>
+                <td colspan='2'><b>USER SETTINGS</b></td>
+            </tr>
+            <tr class='editUserSettingsHeader' id='editUserSettingsHeader'>
+                <td><b>Name<b></td>
+                <td><b>Value</b></td>
+            </tr>
+        </tbody>
+    </table>
+</template>
+
+
+<template id="create-user-template">
+    <table class='table center'>
+        <thead>
+            <tr>
+                <h3 class='create-user-templateTitle center'>TITLE GOES HERE</h3>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><label for="create-user-emailAddress" class="col-sm-12 col-form-label bold">Email:</label></td>
+                <td><input type="text" class="create-user-emailAddress form-control" id="create-user-emailAddress" placeholder="Input email here" maxlength="50"
+                        size="25" /></td>
+            </tr>
+            <tr>
+                <td><label for="create-user-activeStatus" class="col-sm-12 col-form-label bold">Active:</label></td>
+                <td>
+                    <div><select class='create-user-activeStatus form-control' id='create-user-activeStatus'>
+                        <option value='true'>true</option>
+                        <option value='false'>false</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id='create-user-userIdRow'>
+                <td><b>ID:</b></td>
+                <td class='create-user-userId' id='create-user-userId'>-1</td>
+            </tr>
+            <tr>
+                <td colspan='100%'><b>ROLES</b></td>
+            </tr>
+            <tr class='create-user-rolesHeader'>
+                <td><b>Has Role</b></td>
+                <td><b>Role Description</b></td>
+            </tr>
+            <tr>
+                <td colspan='100%'><b>USER SETTINGS</b></td>
+            </tr>
+            <tr class='create-user-settingsHeader' id='create-user-settingsHeader'>
+                <td><b>Name<b></td>
+                <td><b>Value</b></td>
+            </tr>
+        </tbody>
+    </table>
+</template>
+
+<!-- For creating users -->
+<template id="create-user-roles-template">
+    <tr class='create-user-roleId'>
+        <td><input type='checkbox' id='create-user-roleBoolean' class='create-user-roleBoolean'></td>
+        <td class='create-user-roleDescription'>Description of the role</td>
+    </tr>
+</template>
+
+<template id="create-user-settings-template">
+    <tr id='create-user-settingsList'>
+        <td><label for="create-user-settingValue" class='col-sm-12 col-form-label create-user-settingName' id='create-user-settingName'>Setting Name</label></td>
+        <td><input type="text" class="create-user-settingValue form-control" id="create-user-settingValue" placeholder="Value should be here" maxlength="50"
+                size="25" /></td>
+    </tr>
+</template>
+
+<!-- For updating users -->
+<template id="roles-template">
+    <tr class='roleId'>
+        <td><input type='checkbox' id='roleBoolean' class='roleBoolean'></td>
+        <td class='roleDescription'>Description of the role</td>
+    </tr>
+</template>
+
+<template id="user-settings-template">
+    <tr id='settingsList'>
+        <td><label for="create-user-settingValue" class='col-sm-12 col-form-label settingName' id='settingName'>Setting Name</label></td>
+        <td><input type="text" class="settingValue form-control" id="settingValue" placeholder="Value should be here" maxlength="50"
+                size="25" /></td>
+    </tr>
+</template>
+
+<script>
+        document.getElementById('pageName').value = 'ManageUsers';
+</script>

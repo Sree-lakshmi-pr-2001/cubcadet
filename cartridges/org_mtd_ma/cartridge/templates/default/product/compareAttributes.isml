@@ -1,0 +1,37 @@
+<table class="table table-bordered table-striped table-responsive-lg">
+    <colgroup>
+        <col style="width:${100/(pdict.pids.length + 1)}%" />
+        <isloop items="${pdict.pids}" var="productId">
+            <col style="width:${100/(pdict.pids.length + 1)}%" />
+        </isloop>
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <isloop items="${pdict.pids}" var="productId">
+                <td class="product-header">
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', productId, 'swatches', false, 'ratings', true, 'promos', false, 'showQuickView', true, 'badges', false, 'compare', false, 'addToCart', true)}" />
+                </td>
+            </isloop>
+        </tr>
+    </thead>
+    <tbody>
+        <isloop items="${pdict.attributes}" var="attribute" status="loopState">
+            <tr>
+                <th scope="col"><span class="d-none d-lg-block">${attribute.displayName}</span></th>
+                <isloop items="${pdict.attributes[loopState.index].values}" var="attrs">
+                    <td style="width:${100/(pdict.pids.length + 1)}%">
+                        <span class="d-lg-none font-weight-bold">${attribute.displayName}</span>
+                        <ul class="${attrs.values.length === 1 ? 'list-unstyled pl-0' : ''}">
+                            <isloop items="${attrs.values}" var="value" status="loopstate">
+                                <li class="attribute-values">
+                                    <isprint value="${value}" encoding="off" />
+                                </li>
+                            </isloop>
+                        </ul>
+                    </td>
+                </isloop>
+            </tr>
+        </isloop>
+    </tbody>
+</table>

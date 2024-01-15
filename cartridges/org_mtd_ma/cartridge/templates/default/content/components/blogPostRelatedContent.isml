@@ -1,0 +1,9 @@
+<isif condition="${pdict.content.relatedContent.length > 0}">
+    <div class="blog-related-content">
+        <div class="blog-related-content-title h1">
+            ${Resource.msg('blog.postpage.relatedarticles', 'blog', null)}
+        </div>
+        <isset name="assets" value="${pdict.content.relatedContent}" scope="pdict" />
+        <isinclude template="content/components/blogPostCarousel" />
+    </div>
+</isif>

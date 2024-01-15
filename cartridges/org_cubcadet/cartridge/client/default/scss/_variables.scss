@@ -1,0 +1,41 @@
+@import "bootstrap/scss/functions";
+@import "~org/utilities/functions";
+@import "~org_ma/variables";
+
+//--------------------------------
+//  BLOG
+//--------------------------------
+
+$blog-post-meta-content-font-size: $h3-font-size;
+$blog-post-meta-content-mobile-font-size: $h6-font-size;
+$blog-post-meta-content-description-font-size: $blog-post-body-font-size;
+$mobile-blog-subcategory-border: #939393;
+$blog-article-related-post-bg: $brand-primary;
+$alto:#d9d9d9;
+
+//--------------------------------
+//  DEALER
+//--------------------------------
+
+$dealer-elite-badge-copy: #ffc10f;
+$dealer-tab-head-bg: #efefef;
+$dealer-tab-heading-active-bg: #969696;
+
+$dealer-promotion-card-bg: #ffc10f;
+
+//--------------------------------
+//  ICONOGRAPHY
+//--------------------------------
+$icon-backorder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.1 49.1' xml:space='preserve'%3E%3Cpath d='M4.1 5.3H38c1.7 0 3.1 1.4 3.1 3.1v34.5c0 1.7-1.4 3.1-3.1 3.1H4.1C2.4 46 1 44.6 1 42.9V8.4c0-1.7 1.4-3.1 3.1-3.1z' fill='%23fec214'/%3E%3Cpath d='M18.3 46H3.5c-.9 0-1.8-.4-2.5-1.1-.6-.6-1-1.5-1-2.4V8.2c0-.9.3-1.8.9-2.5.6-.6 1.1-1 1.6-1h11.9c.7-3.2 3.8-5.2 7-4.6.9.2 1.8.6 2.5 1.2 1.1.8 1.8 2 2 3.4h11.9c.9 0 1.8.4 2.5 1.1.7.6 1.1 1.5 1.1 2.5v11.9h-3.5v-12h-6.2v7.6H9.8V8.2H3.5v34.2h14.8V46zm2.9-38c1.3 0 2.3-1 2.4-2.3v-.1c0-1.3-1.1-2.4-2.4-2.4-1.3 0-2.4 1.1-2.4 2.4 0 1.3 1 2.4 2.4 2.4-.1 0-.1 0 0 0z'/%3E%3Ccircle cx='34' cy='36' r='13' fill='%23fec214'/%3E%3Cpath d='M34.1 49.1c3.5.1 6.8-1.3 9.2-3.8 2.5-2.4 3.9-5.8 3.8-9.2.1-3.5-1.3-6.8-3.8-9.2-2.4-2.5-5.8-3.9-9.2-3.8-2.1 0-4.2.4-6.1 1.4-1.8 1-3.3 2.3-4.5 3.8V23H21v10.3h10.3v-2.4h-6.8c1-1.6 2.4-2.9 4-4 1.7-1 3.6-1.5 5.6-1.5 5.8 0 10.5 4.6 10.6 10.4v.2c0 5.8-4.6 10.5-10.4 10.6h-.2c-2.2 0-4.4-.7-6.2-1.9-1.8-1.2-3.2-3-3.9-5.1h-2.5c.7 2.8 2.4 5.2 4.7 6.9 2.2 1.7 5 2.6 7.9 2.6z'/%3E%3C/svg%3E%0A");
+$icon-in-stock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46' xml:space='preserve'%3E%3Cpath d='M4.1 46C2.4 46 1 44.6 1 42.9V8.4c0-1.7 1.4-3.1 3.1-3.1H19c0-1.9 1.6-3.4 3.5-3.4 1.8 0 3.3 1.5 3.4 3.4H38c1.7 0 3.1 1.4 3.1 3.1v34.5c0 1.7-1.4 3.1-3.1 3.1H4.1z' fill='%23fec214'/%3E%3Cpath d='M18.3 46H3.5c-.9 0-1.8-.4-2.5-1.1-.6-.6-1-1.5-1-2.4V8.2c0-.9.3-1.8.9-2.5.6-.6 1.1-1 1.6-1h11.9c.7-3.2 3.8-5.2 7-4.6.9.2 1.8.6 2.5 1.2 1.1.8 1.8 2 2 3.4h11.9c.9 0 1.8.4 2.5 1.1.7.6 1.1 1.5 1.1 2.5v11.9h-3.5v-12h-6.2v7.6H9.8V8.2H3.5v34.2h14.8V46zm11.1-1.5L20 35.1l2.5-2.5 6.9 6.9 14.1-14.1 2.5 2.5-16.6 16.6zM21.2 8c1.3 0 2.3-1 2.4-2.3v-.1c0-1.3-1.1-2.4-2.4-2.4-1.3 0-2.4 1.1-2.4 2.4 0 1.3 1 2.4 2.4 2.4-.1 0-.1 0 0 0z'/%3E%3C/svg%3E%0A");
+$icon-error-x: url("../images/svg-icons/icon-x.svg");
+$svg-radio-selected-cubcadet: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='utf-8'?%3e%3c!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3e%3csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 26 26' style='enable-background:new 0 0 26 26;' xml:space='preserve'%3e%3cg id='Path_972'%3e%3cpath style='fill:%23FFC20F;' d='M13,25.5c-3.3,0-6.5-1.3-8.8-3.7c-2.4-2.4-3.7-5.5-3.7-8.8s1.3-6.5,3.7-8.8C6.5,1.8,9.7,0.5,13,0.5 s6.5,1.3,8.8,3.7c2.4,2.4,3.7,5.5,3.7,8.8s-1.3,6.5-3.7,8.8C19.5,24.2,16.3,25.5,13,25.5z'/%3e%3cpath d='M13,1C9.8,1,6.8,2.2,4.5,4.5S1,9.8,1,13s1.2,6.2,3.5,8.5S9.8,25,13,25s6.2-1.2,8.5-3.5S25,16.2,25,13s-1.2-6.2-3.5-8.5 S16.2,1,13,1 M13,0c7.2,0,13,5.8,13,13s-5.8,13-13,13S0,20.2,0,13S5.8,0,13,0z'/%3e%3c/g%3e%3cpath id='Path_973' style='fill:none;stroke:%23000000;stroke-width:2;' d='M8.2,13.8l3.9,3.3l2.2-3.6l3.5-5.7'/%3e%3c/svg%3e ");
+$svg-accordion-open-black-path: url("../images/svg-icons/icon-accordion-open-black.svg");
+$svg-accordion-open-white-path: url("../images/svg-icons/icon-accordion-open-white.svg");
+$svg-accordion-close-black-path: url("../images/svg-icons/icon-accordion-close-black.svg");
+$svg-accordion-close-white-path: url("../images/svg-icons/icon-accordion-close-white.svg");
+$facebook-svg: url("../images/svg-icons/facebook.svg");
+$instagram-svg: url("../images/svg-icons/instagram.svg");
+$snapchat-svg: url("../images/svg-icons/snapchat.svg");
+$twitter-svg: url("../images/svg-icons/twitter.svg");
+$youtube-svg: url("../images/svg-icons/youtube.svg");

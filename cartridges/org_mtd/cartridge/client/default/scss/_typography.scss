@@ -1,0 +1,151 @@
+/* Typography Styles */
+
+//--------------------------
+// Font Weights
+//--------------------------
+
+%font-light {
+    font-weight: $font-weight-light !important;
+}
+
+%font-regular {
+    font-weight: $font-weight-regular !important;
+}
+
+%font-bold {
+    font-weight: $font-weight-bold !important;
+}
+
+.font-light {
+    @extend %font-light;
+}
+
+.font-regular {
+    @extend %font-regular;
+}
+
+.font-bold {
+    @extend %font-bold;
+}
+
+//----------------------------
+// Base Elements
+//----------------------------
+
+h3,
+.h3,
+h6,
+.h6 {
+    font-weight: $font-weight-light;
+}
+
+p {
+    line-height: $paragraph-line-height;
+
+    &.small,
+    .small,
+    small {
+        line-height: $paragraph-small-line-height;
+    }
+}
+
+b,
+strong {
+    @extend %font-bold;
+}
+
+label {
+    .custom-checkbox &,
+    .custom-radio & {
+        text-transform: none;
+        font-weight: $font-weight-regular;
+    }
+}
+
+.label-xl {
+    font-size: $label-xl;
+    font-weight: $font-weight-bold;
+}
+
+.label-sm {
+    font-size: $label-sm;
+    font-weight: $font-weight-bold;
+}
+
+.label-xs {
+    font-size: $label-xs;
+    font-weight: $font-weight-regular;
+    text-transform: none;
+}
+
+//-----------------------------
+// Links
+//-----------------------------
+a,
+a.normal {
+    text-decoration: $link-decoration;
+    font-size: $link-font-size;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: $link-decoration-alt;
+    }
+}
+
+.main-nav {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: $link-decoration;
+    }
+}
+
+.link-primary {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+}
+
+.link-secondary {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-regular;
+    text-decoration: $link-decoration-alt;
+}
+
+.simple-title {
+    padding: rem(24px) rem(15px);
+
+    @include media-breakpoint-up(md) {
+        padding: rem(40px) rem(15px);
+    }
+}
+
+.condensed-header-title {
+    padding: rem(9px) rem(15px);
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        padding: rem(24px) rem(15px);
+    }
+
+    @include media-breakpoint-only(xl) {
+        max-width: map-get($container-max-widths, xl);
+    }
+
+    @include media-breakpoint-only(lg) {
+        max-width: map-get($container-max-widths, lg);
+    }
+
+    @include media-breakpoint-only(md) {
+        max-width: map-get($container-max-widths, md);
+    }
+
+    @include media-breakpoint-only(sm) {
+        max-width: map-get($container-max-widths, sm);
+    }
+}

@@ -1,0 +1,112 @@
+<table class="address-table">
+    <tr>
+        <td class="title">First name:</td>
+        <td colspan="3">
+            <input type="text" class="form-control" colspan="2" name="${addressType}_firstName" id="${addressType}_firstName"
+                value="${pdict.addresses[addressType].firstName}" />
+        </td>
+    </tr>
+    <tr>
+        <td class="title">Last name:</td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_lastName" id="${addressType}_lastName"
+                value="${pdict.addresses[addressType].lastName}" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Address 1:
+        </td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_address1" id="${addressType}_address1"
+                value="${pdict.addresses[addressType].address1}" placeholder="" />
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Address 2:
+        </td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_address2" id="${addressType}_address2"
+                value="${pdict.addresses[addressType].address2}" />
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            City:
+        </td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_city" id="${addressType}_city" value="${pdict.addresses[addressType].city}" />
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            State / Province:
+        </td>
+        <td colspan="3">
+            <isinclude template="checkout/include/address_template_stateprov.isml"/>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Zip / Postal Code:
+        </td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_postalCode" id="${addressType}_postalCode"
+                value="${pdict.addresses[addressType].postalCode}" />
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Country (not editable):
+        </td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_countryCode" id="${addressType}_countryCode"
+                value="${pdict.addresses[addressType].countryCode}" readonly />
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Phone:
+        </td>
+        <td colspan="3">
+            <input type="text" class="form-control" name="${addressType}_phone" id="${addressType}_phone" value="${pdict.addresses[addressType].phone}" />
+
+        </td>
+    </tr>
+    <isif condition="${addressType == 'billing'}">
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td colspan="2">
+                <input type="text" class="form-control" name="${addressType}_email" id="${addressType}_email" value="${pdict.addresses[addressType].email}" />
+                
+            </td>
+            <td colspan="1">
+                <button type="button" id="noEmailButton" class="noEmailButton btn-block btn-primary">No Email Provided</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="validate-address-btn" class="btn btn-danger btn-block checkout-button" type="button">Submit / Checkout</button>
+            </td>
+        </tr>
+    </isif>
+</table>
+
+
+    <iscomment> <div class="submitRow">
+        <div class="col-md-3">
+            <button id="validate-address-btn" class="btn btn-danger checkout-button btn-sm" type="button">Submit Addresses and Checkout</button>
+        </div>
+    </div> </iscomment>

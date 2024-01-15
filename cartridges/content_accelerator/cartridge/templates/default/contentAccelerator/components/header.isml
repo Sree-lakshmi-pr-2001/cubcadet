@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" />
+<link rel="stylesheet" href="${pdict.siteCSS}" />
+<link rel="stylesheet" href="${pdict.caCSS}" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+
+<div class="ca-header">
+    <a class="fa fa-dashboard" href="Site-Site/default/ContentAccelerator-Show?SelectedMenuItem=content" title="Back to Content Accelerator Dashboard"></a>
+    <a class="fa fa-close" href="Site-Site/default/SiteNavigationBar-ShowMenuitemOverview?CurrentMenuItemId=content" title="Back to Content Tools"></a>
+
+        <iscomment><img src="${URLUtils.staticURL('/images/lyonscg.png')}" alt="Lyonscg logo" /></iscomment>
+        <h1 class="h5">${Resource.msg('header.name', 'content_accelerator', 'Content Accelerator')}</h1>
+
+</div>

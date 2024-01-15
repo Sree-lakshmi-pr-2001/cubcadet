@@ -1,0 +1,13 @@
+<!--- TEMPLATENAME: content.isml --->
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/customerService.css');
+    </isscript>
+    <div class="container">
+        <div class="confirmation-message">
+            <h1>${Resource.msg('contactus.messagesent','forms',null)}</h1>
+            <h4>${Resource.msg('contactus.messagerequires','forms',null)}</h4>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,72 @@
+<isinclude template="components/modules" />
+<isset name="confirmation" value="${false}" scope="page"/>
+<isset name="miniCart" value="${true}" scope="page" />
+<div class="container cart">
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+    <div>
+        <div class="row minicart-header">
+            <div class="col-6">
+                <h6>${Resource.msg('title.your.shopping.cart','cart',null)}</h6>
+            </div>
+            <div class="col-6 text-right">
+            </div>
+        </div>
+        <div class="minicart-error cart-error">
+            <isif condition="${pdict.valid.error && pdict.items.length !== 0}">
+                <div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    ${pdict.valid.message}
+                </div>
+            </isif>
+        </div>
+        <div class="product-summary">
+            <isloop items="${pdict.items}" var="lineItem">
+                <div class="row">
+                    <div class="col-12">
+                        <isif condition="${lineItem.bonusProductLineItemUUID === 'bonus'}">
+                            <div class="card ${miniCart ? 'bonus-product-line-item' : ''} uuid-${lineItem.UUID}">
+                                <div class="card-body">
+                                    <isinclude template="checkout/productCard/bonusProductCard" />
+                                </div>
+                            </div>
+                        <iselseif condition="${lineItem.productAttributeType === 'ExtendedWarranty' && lineItem.ew.type === 'EW_AFT'}" />
+                            <div class="card uuid-${lineItem.UUID}">
+                                <div class="card-body">
+                                    <isinclude template="checkout/EwProductCard" />
+                                </div>
+                            </div>
+                        <iselseif condition="${lineItem.productAttributeType !== 'ExtendedWarranty'}" />
+                            <div class="card uuid-${lineItem.UUID}">
+                                <div class="card-body">
+                                    <isinclude template="checkout/productCard/productCard" />
+                                </div>
+                            </div>
+                        </isif>
+                    </div>
+                </div>
+            </isloop>
+        </div>
+    </div>
+    <div class="minicart-footer">
+        <div class="estimated-total d-flex">
+            <div class="col-8">
+                <p class="sub-total-label">${Resource.msg('label.estimatedtotal','cart',null)}</p>
+            </div>
+            <div class="col-4">
+                <p class="text-right sub-total">${pdict.totals.subTotal}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 checkout-continue">
+                <isinclude template="cart/minicartButtons" />
+            </div>
+        </div>
+        <div class="minicart-banner">
+            <iscontentasset aid="miniminicart-content" />
+        </div>
+    </div>
+</div>

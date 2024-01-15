@@ -1,0 +1,45 @@
+<!--- applicable credit cards--->
+<div class="tab-pane <isif condition="${currentPaymentMethod === paymentOption.ID}">active</isif> finance-card-content" id="finance-card-content" role="tabpanel" aria-labelledby="finance-card-content">
+    <!--- payment method is credit card --->
+
+    <fieldset class="credit-card-form">
+        <isset name="financeFields" value="${pdict.forms.billingForm.financeCardFields}" scope="page"/>
+
+        <div class="financing-plans-list" data-url="${URLUtils.url('FinancingApplication-Plans', 'useNewRules', true)}">
+            <isinclude template="checkout/billing/paymentOptions/financingPlans" />
+        </div>
+
+        <div class="row financing-returning-customer py-3">
+            <div class="col-12">
+                <div class="financing-returning-customer-title">
+                    ${Resource.msg('finance.returning.customer.title', 'checkout', null)}
+                </div>
+                <div class="form-group financing-customer-links
+                    <isif condition="${financeFields.accountNumber.mandatory === true}">required</isif>
+                    ${financeFields.accountNumber.htmlName}">
+                    <label class="form-control-label" for="accountNumber">${Resource.msg('label.input.finance.account.number','forms',null)}</label>
+                    <div class="card-number-wrapper mb-2 mt-1">
+                        <input type="text" class="form-control accountNumber js-account-number" id="accountNumber"
+                            data-pattern-mismatch="${Resource.msg('error.message.financenumber.invalid', 'forms', null)}"
+                            placeholder="${Resource.msg('finance.card.placeholder', 'checkout', null)}"
+                            <isprint value="${financeFields.accountNumber.attributes}" encoding="off"/>
+                        >
+                        <div class="invalid-feedback js-account-number-invalid"></div>
+                    </div>
+                    <a href="javascript:void(0)"
+                        class="finance-account-lookup-link btn-secondary px-3"
+                        data-title="${Resource.msg('finance.find.your.account.number','checkout', null)}"
+                        data-url="${URLUtils.url('FinancingApplication-AccountLookup')}">
+                        ${Resource.msg('finance.cannot.find.your.account','checkout',null)}
+                    </a>
+
+                    <a href="javascript:void(0)" data-url="${URLUtils.url('FinancingApplication-GetURL')}"
+                        class="ml-5 finance-account-register-link td-apply-finance">
+                        ${Resource.msg('finance.registration.call', 'checkout', null)}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</div>

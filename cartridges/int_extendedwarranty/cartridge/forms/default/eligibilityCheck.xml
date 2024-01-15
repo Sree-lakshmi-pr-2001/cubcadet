@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+    <field
+        formid="serialNumber"
+        mandatory="true"
+        regexp="\d[A-Za-z][0-3]\d([A-Za-z]|\d)[A-Za-z]([A-Za-z]|\d)\d{4}"
+        parse-error="error.message.parse.serialnumber"
+        missing-error="error.message.required"
+        type="string"/>    
+
+    <field
+        formid="productType"
+        binding="product-type"
+        type="string"/> 
+    
+    <field
+        formid="ewType"
+        binding="ew-type"
+        type="string"/>    
+        
+    <field
+        formid="ewAftermarketFactoryNumber"
+        binding="ew-aftermarket-factory-number"
+        type="string"/>
+
+    <field
+        formid="ewAftermarketPurchaseDate"
+        binding="ew-aftermarket-purchase-date"
+        type="string"/>
+        
+    <field
+        formid="ewAftermarketPurchasedFrom"
+        binding="ew-aftermarket-purchased-from"
+        type="string"/>
+        
+    <field
+        formid="ewAftermarketEndUse"
+        binding="ew-aftermarket-end-use"
+        type="string"/>
+
+    <field
+        formid="ewAftermarketSerialNumber"
+        binding="ew-aftermarket-serial-number"
+        type="string"/>
+
+    <field
+        formid="ewWarrantyPid"
+        type="string"/>
+
+    <field
+        formid="ewRegistered"
+        type="boolean"/>
+    
+    <field
+        formid="ewModel"
+        type="string"/>
+
+    <!-- action for submitting the serial number -->
+    <action formid="next" label="label.next" valid-form="true"/>
+    <!-- action to confirm this is my product -->
+    <action formid="confirmed" label="label.confirmed" valid-form="true"/>
+    <!-- action to lookup another serial number -->
+    <action formid="lookup" label="label.lookup" valid-form="true"/>
+    <!-- action to add EW to cart -->
+    <action formid="add" label="label.add" valid-form="true"/>
+</form>

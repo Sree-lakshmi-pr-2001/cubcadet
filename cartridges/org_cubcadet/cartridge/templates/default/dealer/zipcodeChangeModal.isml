@@ -1,0 +1,44 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/zipcodeChangeModal.js');
+</isscript>
+
+<div class="modal fade zipcode-delivery-change" id="deliveryZipcodeChangeModal" tabindex="-1" role="dialog" aria-labelledby="zipcodeChangeDealerModal" action-get-delivery-zipcode="${URLUtils.url('Dealer-GetDeliveryZipCode')}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <iscontentasset aid="zipcode-change-modal-title" />
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12">
+                    <div class="description">
+                        <iscontentasset aid="zipcode-change-modal-description" />
+                    </div>
+                    <form action="${URLUtils.url('Dealer-SaveDeliveryZipCode')}" class="zipcode-change" method="post" name="zipcode" novalidate>
+                        <div class="d-flex justify-content-xs-between sl-form">
+                            <div class="form-group required sl-zip dealer-locator">
+                                <label class="form-control-label" for="store-postal-code">${Resource.msg('dealer.field.zip.postal.code','dealer',null)}</label>
+                                <input autofocus required type="text" class="form-control zipcode-postal-code-input" id="zipcode-postal-code" name="zipcode" value="" autocomplete="nofill"/>
+                                <div class="invalid-feedback"></div>
+                                <div class="sl-btn zipcode-change-btn">
+                                    <div class="btn-group">
+                                        <button id="zipcodeChangeCancel" type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">${Resource.msg('dealer.button.zipcode.cancel','dealer',null)}</button>
+                                        <iscomment> Removed class 'btn-storelocator-search' as it is used for deaer selector. TODO: FED part </iscomment>
+                                        <button id="zipcodeChangeSave" class="btn btn-secondary btn-zipcode-search" type="submit">
+                                            ${Resource.msg('dealer.button.zipcode','dealer',null)}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

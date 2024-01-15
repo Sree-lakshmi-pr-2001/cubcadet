@@ -1,0 +1,37 @@
+<div class="product-card-footer">
+    <isif condition="${!lineItem.isBonusProductLineItem}">
+
+            <!---item price--->
+            <div class="line-item-price line-item-price-${lineItem.UUID}">
+                <p class="line-item-price-info">${Resource.msg('label.price','cart',null)}<span class="d-md-none">:</span></p>
+                <isset name="price" value="${lineItem.price}" scope="page"/>
+                <isinclude template="/product/components/pricing/main" />
+            </div>
+
+            <!--- quantity --->
+            <div class="line-item-quantity">
+                <p class="line-item-quantity-info sr-only">${Resource.msg('label.qty', 'cart', null)}</p>
+                <isinclude template="checkout/productCard/productCardQuantitySelector" />
+            </div>
+
+            <!--- line item total price --->
+            <div class="line-item-total-price">
+                <p class="line-item-price-info d-md-none">
+                    ${Resource.msg('label.total.price','cart',null)}:
+                </p>
+                <p class="line-item-price-info d-none d-md-block">
+                    ${Resource.msg('label.total.totalprice','cart',null)}
+                </p>
+                <div class="item-total-${lineItem.UUID} price">
+                    <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+                </div>
+            </div>
+
+        <!--- promotions --->
+        <isif condition="${lineItem.appliedPromotions}">
+            <div class="line-item-promo item-${lineItem.UUID}">
+                <isinclude template="checkout/productCard/productCardProductPromotions" />
+            </div>
+        </isif>
+    </isif>
+</div>

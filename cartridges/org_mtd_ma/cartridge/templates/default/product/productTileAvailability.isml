@@ -1,0 +1,13 @@
+<isset name="product" value="${pdict.product}" scope="page" />
+
+<isif condition="${product.isLicensedProduct}">
+    <isinclude template="product/components/licensedProductFindStore" />
+<iselse/>
+    <isif condition="${pdict.showAddToCartButton}">
+        <isinclude template="product/components/addToCartProductTile" />
+    </isif>
+
+    <isif condition="${pdict.showStockMessage && (product.raw.custom['product-type'].value.toUpperCase() === 'PARTS' || product.raw.custom['product-type'].value.toUpperCase() === 'ACCESSORY')}">
+        <isinclude template="product/components/productTileAvailability" />
+    </isif>
+</isif>

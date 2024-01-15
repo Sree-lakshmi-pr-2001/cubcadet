@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+// Default Variables
+
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+
+$slick-loader-path: "../lib/slick/" !default;
+$slick-arrow-color: $black !default;
+$slick-arrow-bg-color: $white !default;
+$slick-arrow-bg-color-hover: $white !default;
+$slick-arrow-thickness: 2px !default;
+$slick-dot-color: $brand-second !default;
+$slick-dot-color-hover: $brand-second !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-dot-size: 25px !default;
+$slick-opacity-default: 0.5 !default;
+$slick-opacity-on-hover: 0.8 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@function slick-image-url($url) {
+
+    @if function-exists(image-url) {
+        @return image-url($url);
+    } @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: $white slick-image-url("../../images/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 28px;
+    width: 28px;
+    min-height: 0;
+    font-weight: initial;
+    line-height: 0;
+    font-size: 0;
+    border-radius: 0;
+    cursor: pointer;
+    background: $slick-arrow-bg-color;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    opacity: $slick-opacity-default;
+    z-index: z("slick-theme", "arrows");
+
+    @include media-breakpoint-up(md) {
+        height: 48px;
+        width: 48px;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background: $slick-arrow-bg-color-hover;
+        opacity: $slick-opacity-on-hover;
+        color: transparent;
+    }
+
+    &.slick-disabled::before {
+        opacity: $slick-opacity-not-active;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        border-style: solid;
+        border-width: $slick-arrow-thickness $slick-arrow-thickness 0 0;
+        border-color: $slick-arrow-color;
+        width: 12px;
+        height: 12px;
+        transform: rotate(-45deg);
+    }
+}
+
+.slick-prev {
+    left: 1px;
+
+    [dir="rtl"] & {
+        left: auto;
+        right: 1px;
+    }
+
+    &::before {
+        transform: rotate(-135deg);
+
+        [dir="rtl"] & {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.slick-next {
+    right: 1px;
+
+    [dir="rtl"] & {
+        left: 1px;
+        right: auto;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+
+        [dir="rtl"] & {
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: relative;
+    bottom: -10px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+        position: relative;
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 12px;
+            width: 12px;
+            outline: none;
+            line-height: 0;
+            font-size: 0;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                outline: none;
+                background-color: transparent;
+
+                &::before {
+                    opacity: $slick-opacity-on-hover;
+                    background-color: $slick-dot-color-hover;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                width: 8px;
+                height: 8px;
+                font-size: $slick-dot-size;
+                line-height: 20px;
+                text-align: center;
+                color: $slick-dot-color;
+                background-color: $slick-dot-color;
+                opacity: $slick-opacity-not-active;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        &.slick-active button::before {
+            color: $slick-dot-color-active;
+            opacity: $slick-opacity-default;
+        }
+    }
+}
+
+.slick-dark-arrows {
+    .slick-prev,
+    .slick-next {
+        height: 64px;
+        width: 24px;
+        background-color: $black;
+
+        &:hover,
+        &:focus {
+            background: $black;
+        }
+
+        &::before {
+            border-color: $white;
+        }
+    }
+}
+
+.product-detail .primary-images {
+    .slick-arrow {
+        background-color: $gray-500;
+    }
+
+    .slick-next,
+    .slick-prev {
+        width: 20px;
+        height: 30px;
+    }
+
+    .slick-next::before {
+        margin-left: -6px;
+    }
+
+    .slick-prev::before {
+        margin-right: -6px;
+    }
+}
+
+.product-tile-caro {
+    .slick-dots {
+        @include media-breakpoint-up(sm) {
+            opacity: 0;
+        }
+    }
+
+    .slick-arrow {
+        @include media-breakpoint-down(xs) {
+            opacity: 0;
+        }
+    }
+
+    .slick-prev {
+        left: 15px;
+
+        @include media-breakpoint-up(sm) {
+            left: -13px;
+        }
+
+        @include media-breakpoint-up(md) {
+            left: -25px;
+        }
+    }
+
+    .slick-next {
+        right: 15px;
+
+        @include media-breakpoint-up(sm) {
+            right: -13px;
+        }
+
+        @include media-breakpoint-up(md) {
+            right: -25px;
+        }
+    }
+
+    .product-tile {
+        margin: 0 rem(15px);
+
+        .product-extended-name,
+        .quickview {
+            display: none;
+        }
+    }
+}

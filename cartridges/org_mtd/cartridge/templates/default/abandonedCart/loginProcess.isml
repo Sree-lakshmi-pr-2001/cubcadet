@@ -1,0 +1,9 @@
+<iscomment>Session variable "userEmailSession" which will be used on cart page</iscomment>
+<isscript>
+    var mtdHelper = require('*/cartridge/scripts/util/MTDHelper');
+    var isUsSite = mtdHelper.isUsSite();
+</isscript>
+
+<isif condition="${isUsSite && !empty(pdict.account) && !empty(pdict.account.profile) && !empty(pdict.account.profile.email)}" >
+    <isset name="userEmailSession" value="${pdict.account.profile.email}" scope="session" />
+</isif>

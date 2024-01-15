@@ -1,0 +1,17 @@
+<isif condition="${pdict.localeModel.locale.localLinks.length > 0}">
+    <li class="menu-item dropdown country-selector" tabindex="0" data-url="${URLUtils.url('Page-SetLocale')}">
+        <iscomment>The tabindex was set to -1 on this element to fix menu flow for ADA enhancements - Sondra 11/2020</iscomment>
+        <button tabindex="-1" class="dropdown-toggle" id="dropdownCountrySelector" data-toggle="dropdown" data-currentcountry="${pdict.localeModel.locale.countryISO3Code}" aria-haspopup="true" aria-expanded="false" role="combobox" aria-owns="countryList">
+            <i class="flag-icon flag-icon-${pdict.localeModel.locale.countryCode.toLowerCase()}"></i>
+            ${pdict.localeModel.locale.countryISO3Code} (${pdict.localeModel.locale.language})
+        </button>
+        <div id="countryList" class="dropdown-menu dropdown-country-selector" aria-labelledby="dropdownCountrySelector">
+            <isloop items="${pdict.localeModel.locale.localLinks}" var="localeLink">
+                <a class="dropdown-item" href="${'#'}" data-locale="${localeLink.localID}" data-currencycode="${localeLink.currencyCode}" data-country="${localeLink.countryISO3Code}" role="option">
+                    <i class="flag-icon flag-icon-${localeLink.country.toLowerCase()}"></i>
+                    ${localeLink.displayCountry} - ${localeLink.displayLanguage}
+                </a>
+            </isloop>
+        </div>
+    </li>
+</isif>

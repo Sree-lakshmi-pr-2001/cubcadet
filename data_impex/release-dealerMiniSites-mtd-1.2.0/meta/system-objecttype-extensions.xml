@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Store">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="google_reviews_url">
+                <display-name xml:lang="x-default">Google Reviews URL</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag> 
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="learn_more">
+                <display-name xml:lang="x-default">Learn More</display-name>
+                <type>html</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="news">
+                <display-name xml:lang="x-default">News Content Assets</display-name>
+                <type>set-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="elite_dealer_video_url">
+                <display-name xml:lang="x-default">Dealer Youtube page</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="youtube_url">
+                <display-name xml:lang="x-default">Social Media Youtube Url</display-name>
+                <type>string</type>
+                <localizable-flag>true</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Details">
+                <display-name xml:lang="x-default">Store Details</display-name>
+                <attribute attribute-id="actual-business-hours"/>
+                <attribute attribute-id="holiday_hours"/>
+                <attribute attribute-id="storeHours" system="true"/>
+                <attribute attribute-id="storeEvents" system="true"/>
+                <attribute attribute-id="image" system="true"/>
+                <attribute attribute-id="posEnabled" system="true"/>
+                <attribute attribute-id="entity_number"/>
+                <attribute attribute-id="about_us"/>
+                <attribute attribute-id="dealer_id"/>
+                <attribute attribute-id="instagram_url"/>
+                <attribute attribute-id="erp_ship_to_number"/>
+                <attribute attribute-id="youtube_url"/>
+                <attribute attribute-id="twitter_url"/>
+                <attribute attribute-id="google_place_id"/>
+                <attribute attribute-id="facebook_url"/>
+                <attribute attribute-id="minisite_product_categories"/>
+                <attribute attribute-id="google_reviews_average"/>
+                <attribute attribute-id="google_reviews_url"/>
+                <attribute attribute-id="google_reviews_count"/>
+                <attribute attribute-id="news"/>
+                <attribute attribute-id="learn_more"/>
+                <attribute attribute-id="elite_dealer_video_url"/>
+            </attribute-group>
+            <attribute-group group-id="CubCadet">
+                <display-name xml:lang="x-default">Cub Cadet</display-name>
+                <attribute attribute-id="cubcadet"/>
+                <attribute attribute-id="cubcadetcare"/>
+                <attribute attribute-id="customernumber"/>
+                <attribute attribute-id="product_categories"/>
+                <attribute attribute-id="sells_products"/>
+                <attribute attribute-id="paid-dealer-search-snow"/>
+                <attribute attribute-id="dealer_specific_logo_url"/>
+                <attribute attribute-id="elite_dealer"/>
+                <attribute attribute-id="dealer_minisite_url"/>
+                <attribute attribute-id="elite_badge_url"/>
+                <attribute attribute-id="about_us"/>
+                <attribute attribute-id="dealer_website_url"/>
+                <attribute attribute-id="dealer_picture_url"/>
+                <attribute attribute-id="pageTitle"/>
+                <attribute attribute-id="pageDescription"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+</metadata>

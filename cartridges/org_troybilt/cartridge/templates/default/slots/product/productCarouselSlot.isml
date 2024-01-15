@@ -1,0 +1,38 @@
+<isinclude template="/components/modules" />
+<isscript>
+    var showOOS = require('*/cartridge/scripts/helpers/generalHelpers').showUnavailableTiles();
+</isscript>
+<isif condition="${slotcontent != null && slotcontent.content.length > 0}">
+
+    <div class="product-carousel-slot container">
+
+        <isif condition="${slotcontent != null && slotcontent.getCalloutMsg()}">
+            <div class="carousel-title">
+                <isprint value="${slotcontent.getCalloutMsg()}" encoding="off"/>
+            </div>
+        </isif>
+
+        <div class="product-tile-caro">
+
+            <isloop items="${slotcontent.content}" var="product" status="loopstate">
+
+                <isif condition="${product.availabilityModel.availability !== 0 || showOOS}">
+                    <isobject object="${product}" view="recommendation">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'promos', false, 'swatches', false, 'showQuickView', false, 'isSliderTile', true, 'bvSeo', true)}"/>
+                    </isobject>
+                </isif>
+
+            </isloop>
+        </div>
+
+        <isif condition="${slotcontent.content.length > 1}">
+            <div class="product-tile-slider-controls slider-controls controls-center">
+                <span class="slide-prev"></span>
+                <div class="slide-dots"></div>
+                <span class="slide-next"></span>
+            </div>
+        </isif>
+
+    </div>
+
+</isif>

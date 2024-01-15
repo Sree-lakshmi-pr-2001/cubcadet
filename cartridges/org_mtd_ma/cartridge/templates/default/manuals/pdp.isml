@@ -1,0 +1,47 @@
+<!--- TEMPLATENAME: pdp.isml --->
+<isif condition="${pdict.manualItems.size() > 0}">
+    <div class="manual-table">
+        <div class="row d-none d-md-flex header-row no-gutters">
+            <div class="label-xl col-12 col-md-3"><h6>${Resource.msg('header.column.model', 'manuals', null)}</h6></div>
+            <div class="label-xl col-12 col-md-4"><h6>${Resource.msg('header.column.manual', 'manuals', null)}</h6></div>
+            <div class="label-xl col-12 col-md-3"><h6>${Resource.msg('header.column.formnumber', 'manuals', null)}</h6></div>
+            <div class="label-xl col-12 col-md-2"></div>
+        </div>
+        <div class="row data-row no-gutters">
+            <div class="col-12 col-md-3">
+                <label class="d-md-none">${Resource.msg('header.column.model', 'manuals', null)}:</label>
+                ${pdict.manualItems[0].modelNumber}
+            </div>
+            <div class="col-12 col-md-4 description">
+                <label class="d-md-none">${Resource.msg('header.column.modeldescription', 'manuals', null)}:</label>
+                ${pdict.manualItems[0].modelDescription}
+            </div>
+            <div class="col-12 col-md-3"></div>
+            <div class="col-12 col-md-2"></div>
+        </div>
+        <isloop items="${pdict.manualItems}" var="manualItem">
+            <div class="row data-row no-gutters">
+                <div class="col-md-3">
+                    <label class="d-md-none">&nbsp;</label>
+                </div>
+                <div class="col-md-4 description" tabindex="0">
+                    <label class="d-md-none">${Resource.msg('header.column.manual', 'manuals', null)}:</label>
+                    ${manualItem.itemDescription}
+                </div>
+                <div class="col-md-3" tabindex="0">
+                    <label class="d-md-none">${Resource.msg('header.column.formnumber', 'manuals', null)}:</label>
+                    ${manualItem.itemNumber}
+                </div>
+                <div class="col-md-2 manual-download">
+                    <label class="d-md-none">${Resource.msg('header.column.viewoptions', 'manuals', null)}:</label>
+                    <a href="javascript:void(0)" class="manual-download-link" data-title="${Resource.msg('operator.manuals', 'manuals', null)}" data-toggle="modal" data-target="#manuals-agreement-dialog" data-href="${manualItem.manualPDfURL}">
+                        ${Resource.msg('download.pdf', 'manuals', null)}
+                    </a>
+                </div>
+            </div>
+        </isloop>
+    </div>
+    <isinclude template="manuals/downloadagreement" />
+<iselse>
+    <div>${Resource.msg('search.manuals.notfound', 'manuals', null)}</div>
+</isif>

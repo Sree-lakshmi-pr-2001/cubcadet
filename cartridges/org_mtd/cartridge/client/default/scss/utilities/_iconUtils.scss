@@ -1,0 +1,58 @@
+//////////////////////
+// Icons Mixins
+//////////////////////
+
+// Adds an SVG icon - must have path or SVG listed in variables file.
+// ex:  @include icon($svg-video-black-ol, right, 20px);
+// }
+//---------------------------------------
+
+@mixin icon($icon, $position, $size: 20px, $peudoEl: after) {
+    position: relative;
+
+    @if $peudoEl == after {
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background: #{$icon} no-repeat center;
+            background-size: contain;
+            height: $size;
+            width: $size;
+
+            @include centerElement(vertical, absolute);
+        }
+
+        @if $position == left {
+            &::after {
+                left: 0;
+            }
+        } @else {
+            &::after {
+                right: 0;
+            }
+        }
+    } @else {
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background: #{$icon} no-repeat center;
+            background-size: contain;
+            height: $size;
+            width: $size;
+
+            @include centerElement(vertical, absolute);
+        }
+
+        @if $position == left {
+            &::before {
+                left: 0;
+            }
+        } @else {
+            &::before {
+                right: 0;
+            }
+        }
+    }
+}

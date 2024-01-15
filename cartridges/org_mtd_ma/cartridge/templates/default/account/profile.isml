@@ -1,0 +1,32 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/profile.css');
+        assets.addJs('/js/profile.js');
+    </isscript>
+
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+
+        <div class="account-page-header">
+            <h2 class="pull-left">${Resource.msg('label.profile','account',null)}</h2>
+
+            <a href="${URLUtils.url('Account-Show')}" class="link-primary pull-right">
+                ${Resource.msg('link.profile.backtoaccount','account',null)}
+            </a>
+        </div>
+        <div class="row justify-content-sm-center justify-content-lg-start profile-form-container">
+            <div class="col-sm-12 col-lg-9">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>${Resource.msg('label.profile.edit','account',null)}</h5>
+                    </div>
+                    <div class="card-body">
+                        <isinclude template="account/editProfileForm"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

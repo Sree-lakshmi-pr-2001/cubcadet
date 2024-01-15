@@ -1,0 +1,344 @@
+// Custom disabled states for buttons
+
+button,
+.btn {
+    // bootstrap override for disabled style
+    text-decoration: none;
+    border-radius: $btn-border-radius;
+
+    &:hover,
+    &:active {
+        background: $white;
+        text-decoration: none;
+    }
+
+    &:focus {
+        text-decoration: none;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+
+    .icon {
+        margin-left: $btn-icon-spacing;
+        vertical-align: middle;
+    }
+
+    .icon-video,
+    .icon-video-brand,
+    .icon-video-white,
+    .icon-video-black {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+    }
+
+    .icon-video {
+        @include icon($svg-video-ol, right, 18px);
+
+        &-brand {
+            @include icon($svg-video-brand, right, 18px);
+        }
+
+        &-white {
+            @include icon($svg-video-white, right, 18px);
+        }
+
+        &-black {
+            @include icon($svg-video-black, right, 18px);
+        }
+    }
+
+    &.btn-sm {
+        padding: rem(8px) $btn-padding-x;
+        line-height: rem(20px);
+    }
+}
+
+.btn-primary {
+    color: $white;
+    border-color: $primary;
+    // for white text on dark backgrounds
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:hover,
+    &:active {
+        color: $primary;
+        border-color: $primary;
+    }
+
+    &:focus:hover {
+        color: $primary;
+    }
+
+    &:focus {
+        color: $white;
+        box-shadow: 0 0 0 $input-btn-focus-width $secondary;
+    }
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-secondary {
+    border-color: $secondary;
+    background: $secondary;
+    color: $white;
+
+    &:hover,
+    &:active {
+        color: $secondary;
+        border-color: $secondary;
+    }
+
+    &:focus:hover {
+        color: $secondary;
+    }
+
+    &:focus {
+        color: $white;
+        box-shadow: 0 0 0 $input-btn-focus-width $primary;
+    }
+
+    // bootstrap override for disabled style
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-alt-bg;
+        border-color: $btn-disabled-alt-border-color;
+        color: $btn-disabled-alt-color;
+    }
+}
+
+.btn-outline-primary {
+    color: $secondary;
+    border-color: $secondary;
+    background: $white;
+
+    &:hover,
+    &:active {
+        color: $primary;
+        border-color: $primary;
+        background: $white;
+    }
+
+    &:focus {
+        color: $secondary;
+        border-color: $secondary;
+        box-shadow: 0 0 0 $input-btn-focus-width $secondary;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-outline-secondary {
+    color: $primary;
+    border-color: $primary;
+    background: $white;
+
+    &:hover,
+    &:active {
+        color: $secondary;
+        border-color: $secondary;
+        background: $white;
+    }
+
+    &:focus {
+        color: $secondary;
+        border-color: $secondary;
+        box-shadow: 0 0 0 $input-btn-focus-width $secondary;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-filter {
+    color: $secondary;
+    height: 45px;
+    padding: rem(11px) rem(8px);
+    border-color: $border-color;
+    border-width: 1px;
+    background: $white;
+    font-weight: $font-weight-normal;
+    border-radius: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $secondary;
+        background: $white;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        background: $btn-disabled-main-bg;
+        border-color: $btn-disabled-main-border-color;
+        color: $btn-disabled-main-color;
+    }
+}
+
+.btn-video-black-ol,
+.btn-video-white-ol,
+.btn-video-yellow-ol {
+    padding: 0 rem(25px) 0 0;
+    color: $btn-link-color;
+    background-color: $trans; // override user agent
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+    text-decoration: underline;
+
+    @include icon($svg-video-ol, right, 20px);
+
+    &::after {
+        transition: background 0.15s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+        background-color: $trans;
+        text-decoration: underline;
+
+        @include icon($svg-video-ol, right, 20px);
+    }
+
+    &.icon-left {
+        padding: 0 0 0 rem(25px);
+
+        @include icon($svg-video-ol, left, 20px);
+
+        &:hover,
+        &:focus,
+        &:active {
+            @include icon($svg-video-ol, left, 20px);
+        }
+    }
+}
+
+.btn-text {
+    @include link-primary;
+
+    padding: 0;
+
+    &::after {
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $trans;
+    }
+}
+
+.btn-link {
+    color: $btn-link-color;
+    background-color: $trans; // override user agent
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+    text-decoration: underline;
+    padding: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $trans;
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+.pre-qual {
+    display: flex;
+
+    .btn-text {
+        min-inline-size: fit-content !important;
+    }
+
+    @include media-breakpoint-down(md) {
+        .prequal {
+            font-size: 11px !important;
+            margin-right: 7px !important;
+        }
+
+        .click {
+            font-size: 11px !important;
+        }
+    }
+}
+
+.btn-print {
+    @include icon($svg-print, left);
+
+    display: none;
+    padding: 0 0 0 rem(26px);
+    font-size: $font-size-xs;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
+
+.remove-btn,
+.remove-btn-lg {
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 20px;
+        position: relative;
+        margin: 0 auto;
+        background-image: $svg-close;
+    }
+}
+
+.modal-header {
+    button.close {
+        text-shadow: none;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 20px;
+            width: 20px;
+            position: relative;
+            background-image: $svg-close;
+        }
+    }
+}
+
+// Modal standard buttons
+.modal {
+    .btn,
+    button {
+        padding: rem(11px) rem(25px);
+    }
+}

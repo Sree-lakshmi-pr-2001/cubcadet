@@ -1,0 +1,23 @@
+<isscript>
+    var Site = require('dw/system/Site');
+    var numTilePromos = Site.getCurrent().getCustomPreferenceValue('numTilePromos');
+    var numTilePromosValue = numTilePromos.value - 1;
+</isscript>
+
+<isset name="isProductTile" value="${typeof isProductTile !== 'boolean' ? false : isProductTile}" scope="page" />
+
+<isif condition="${product.promotions}">
+    <isif condition="${isProductTile}">
+        <isloop items="${product.promotions}" var="promotion" end="${numTilePromosValue}">
+            <div class="callout" title="${promotion.details}">
+                ${promotion.calloutMsg}
+            </div>
+        </isloop>
+    <iselse>
+        <isloop items="${product.promotions}" var="promotion">
+            <div class="callout" title="${promotion.details}">
+                ${promotion.calloutMsg}
+            </div>
+        </isloop>
+    </isif>
+</isif>

@@ -1,0 +1,19 @@
+<!--- TEMPLATENAME: renderRecaptcha.isml --->
+<iscomment>Injecting Google Recaptcha</iscomment>
+<isscript>
+    var enableGoogleRecaptcha = dw.system.Site.getCurrent().getCustomPreferenceValue('enableGoogleRecaptcha');
+    var googleRecaptchaSiteKey = dw.system.Site.getCurrent().getCustomPreferenceValue('googleRecaptchaSiteKey');
+</isscript>
+<isif condition="${!empty(enableGoogleRecaptcha) && enableGoogleRecaptcha && !empty(googleRecaptchaSiteKey)}">
+
+<script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
+
+<script>
+    var CaptchaCallback = function() {
+        window.contactUsRecaptcha = grecaptcha.render('contactUsRecaptcha', {'sitekey' : '${googleRecaptchaSiteKey}'});
+        window.testDriveRecaptcha = grecaptcha.render('testDriveRecaptcha', {'sitekey' : '${googleRecaptchaSiteKey}'});
+    };
+</script>
+
+<div class="invalid-feedback">${Resource.msg('captcha.error','forms',null)}</div>
+</isif>

@@ -1,0 +1,241 @@
+label {
+    font-size: $font-size-xs;
+    margin-bottom: rem(2px);
+    text-transform: uppercase;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label,
+.custom-control-input[type="radio"] ~ .custom-control-label,
+.custom-control-input[type="checkbox"] ~ .custom-control-label {
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+}
+
+input[type="radio"] + label,
+.custom-control-input[type="radio"] ~ .custom-control-label {
+    font-weight: $font-weight-bold;
+
+    &::before {
+        border-color: $trans;
+    }
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label,
+.custom-control-input[type="checkbox"] ~ .custom-control-label,
+.custom-control-input[type="radio"] ~ .custom-control-label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+    &::before {
+        border-color: $trans;
+    }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.form-control.has-error {
+    border: 2px solid $danger;
+    background-image: none;
+    outline: none;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.form-control {
+    font-size: $font-size-body;
+    height: auto;
+}
+
+.invalid-feedback {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
+}
+
+.form-description {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+}
+
+// custom selects break base bootstrap error message display
+.form-control-label.text-danger ~ .invalid-feedback {
+    display: block;
+}
+
+select {
+    display: inline-block;
+    width: 100%;
+    line-height: 18px;
+    vertical-align: middle;
+    background: #fff $svg-arrow-down no-repeat right 0.75rem center;
+    background-size: 22px 22px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+select,
+.custom-select {
+    height: 40px;
+    background: #fff $svg-arrow-down no-repeat right 0.75rem center;
+
+    &.form-control:focus {
+        color: $brand-dark;
+    }
+
+    option:disabled {
+        font-style: italic;
+        color: $gray-200;
+    }
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: 40px;
+}
+
+.custom-control-input {
+    ~ .custom-control-label::before {
+        border: $border;
+    }
+
+    &:checked ~ .custom-control-label::before {
+        color: $custom-control-indicator-checked-color;
+        @include gradient-bg($custom-control-indicator-checked-bg);
+        @include box-shadow($custom-control-indicator-checked-box-shadow);
+    }
+
+    &:active ~ .custom-control-label::before {
+        color: $custom-control-indicator-active-color;
+        background-color: $custom-control-indicator-active-bg;
+    }
+}
+
+.custom-control-label {
+    &::before {
+        top: 0;
+        background-color: $trans;
+        border-color: $trans;
+    }
+
+    &::after {
+        top: 0;
+        background-size: 100%;
+    }
+}
+
+.select-wrapper {
+    position: relative;
+    background: $input-bg;
+    z-index: z("select-wrapper");
+
+    select,
+    .custom-select {
+        width: 100%;
+        background: $trans;
+        padding-right: rem(48px);
+        position: relative;
+        z-index: z("select-wrapper", "select");
+        box-shadow: none;
+
+        &:focus,
+        &:active {
+            ~ .selector {
+                border: 1px solid $primary;
+            }
+        }
+    }
+
+    .selector {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: $white $svg-arrow-down no-repeat center center;
+        border: $border;
+        z-index: z("select-wrapper", "selector");
+        transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &--secondary {
+        background-color: $gallery;
+        z-index: z("select-wrapper-secondary");
+
+        select,
+        .custom-select {
+            border-color: $alto;
+            z-index: z("select-wrapper-secondary", "select");
+
+            &:focus,
+            &:active {
+                background-color: $gallery;
+
+                ~ .selector {
+                    border: none;
+                }
+            }
+        }
+
+        .selector {
+            background: $trans $svg-chevron-down no-repeat center center;
+            background-size: 20px;
+            z-index: z("select-wrapper-secondary", "selector");
+            border: none;
+        }
+    }
+}
+
+.custom-checkbox {
+    .custom-control-input ~ .custom-control-label::after {
+        background-image: $svg-checkbox-unselected;
+        background-color: $white;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::after {
+        background-image: $svg-checkbox-selected;
+        background-color: $white;
+        border: black;
+        border-style: solid;
+    }
+}
+
+.custom-radio {
+    .custom-control-input {
+        z-index: 0; // for Edge and IE input selection
+    }
+
+    .custom-control-input ~ .custom-control-label::before {
+        background-color: $trans;
+        height: rem(18px);
+        width: rem(18px);
+    }
+
+    .custom-control-input ~ .custom-control-label::after {
+        height: rem(18px);
+        width: rem(18px);
+        background-image: $svg-radio-unselected;
+        background-color: $white;
+        border-radius: 50%;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::after {
+        height: rem(18px);
+        width: rem(18px);
+        background-image: $svg-radio-selected-ada;
+        background-color: $white;
+    }
+}

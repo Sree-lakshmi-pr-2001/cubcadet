@@ -1,0 +1,102 @@
+<div class="modal fade asset-browser-modal" id="asset-browser-modal" tabindex="-1" role="dialog" aria-labelledby="asset-browser-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="asset-browser-label">${Resource.msg('dashboard.modal.assetheading', 'content_accelerator', null)}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form class="modal-asset-form mb-4" data-action="${URLUtils.https('ContentAccelerator-ValidateAsset')}">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="modify-asset-tab" data-toggle="tab" href="#modify-asset-pane" role="tab" aria-controls="modify-asset-pane" aria-selected="true">
+                                ${Resource.msg('dashboard.button.edit', 'content_accelerator', null)}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="copy-asset-tab" data-toggle="tab" href="#copy-asset-pane" role="tab" aria-controls="copy-asset-pane" aria-selected="false">
+                                ${Resource.msg('dashboard.button.copy', 'content_accelerator', null)}
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="modify-asset-pane" role="tabpanel" aria-labelledby="modify-asset-tab">
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.assetid', 'content_accelerator', null)}</label>
+                                <input type="text" class="form-control modal-asset-id" placeholder="${Resource.msg('dashboard.modal.placeholder.enteranid', 'content_accelerator', null)}" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="mr-2">${Resource.msg('dashboard.label.locale', 'content_accelerator', null)}</label>
+                                <select class="form-control locale-selection" data-locales="${pdict.locales}">
+                                    <isprint value="${pdict.localeOptions}" encoding="off" />
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="invalid-feedback">
+                                    ${Resource.msg('dashboard.modal.invalidid', 'content_accelerator', null)}
+                                </div>
+                            </div>
+
+                            <a class="btn btn-primary modify-asset-button" href="${'#'}" data-edit-href="${URLUtils.https('ContentAccelerator-LoadContentAsset')}">
+                                ${Resource.msg('dashboard.button.edit', 'content_accelerator', null)}
+                            </a>
+                        </div>
+
+                        <div class="tab-pane" id="copy-asset-pane" role="tabpanel" aria-labelledby="copy-asset-tab">
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.originalassetid', 'content_accelerator', null)}</label>
+                                <input type="text" class="form-control modal-asset-id" placeholder="${Resource.msg('dashboard.modal.placeholder.enteranid', 'content_accelerator', null)}" required />
+
+                                <div class="invalid-feedback">
+                                    ${Resource.msg('dashboard.modal.invalidid', 'content_accelerator', null)}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.copyassetid', 'content_accelerator', null)}</label>
+                                <input type="text" class="form-control modal-asset-copy-id" placeholder="${Resource.msg('dashboard.modal.placeholder.enternewid', 'content_accelerator', null)}" />
+
+                                <div class="invalid-feedback">
+                                    ${Resource.msg('dashboard.modal.invalidcopyid', 'content_accelerator', null)}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.copyassetname', 'content_accelerator', null)}</label>
+                                <input type="text" class="form-control modal-asset-copy-name" placeholder="${Resource.msg('dashboard.modal.placeholder.entername', 'content_accelerator', null)}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>${Resource.msg('dashboard.modal.label.copyassetfolder', 'content_accelerator', null)}</label>
+                                <select class="form-control modal-asset-copy-folder">
+                                    <option value="">${Resource.msg('dashboard.modal.placeholder.enterfolder', 'content_accelerator', null)}</option>
+                                    <isloop items="${pdict.folderList}" var="folder">
+                                        <isif condition="${folder.ID == 'content-accelerator-templates'}">
+                                            <iscontinue />
+                                        <iselse>
+                                            <option value="${folder.ID}">${folder.ID}</option>
+                                        </isif>
+                                    </isloop>
+                                </select>
+                            </div>
+
+                            <a class="btn btn-info copy-asset-button" href="${'#'}" data-edit-href="${URLUtils.https('ContentAccelerator-CopyContentAsset')}">
+                                ${Resource.msg('dashboard.button.copy', 'content_accelerator', null)}
+                            </a>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="content-asset-tree">
+                    <isprint value="${pdict.assetBrowser}" encoding="off" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<isinclude template="components/modules" />
+
+<isif condition="${pdict.name === null}">
+    <div class="user hidden-md-down">
+        <a href="${URLUtils.https('Login-Show')}">
+            <span class="user-message">${Resource.msg('link.header.login', 'account', null)}</span>
+            <issvg icon="arrow-right-sm" image="true" altText="" />
+        </a>
+    </div>
+<iselse/>
+    <div class="user hidden-md-down" tabindex="0">
+        <span class="user-message">${pdict.name}</span>
+        <issvg icon="arrow-down-sm" image="true" altText="" />
+        <div class="popover popover-bottom">
+            <a href="${URLUtils.https('Account-Show')}">${Resource.msg('link.header.myaccount', 'account', null)}</a>
+            <a href="${URLUtils.url('Login-Logout')}">${Resource.msg('link.header.logout', 'account', null)}</a>
+        </div>
+    </div>
+</isif>

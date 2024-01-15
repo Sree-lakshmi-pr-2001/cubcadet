@@ -1,0 +1,730 @@
+<section class="shopping-cart dark">
+    <div class="accordion" id="miniCartAccordion">
+        <div class="accordion-item">
+
+            <div id="miniCartAccordionDiv" class="accordion-collapse collapse show"
+                aria-labelledby="miniCartAccordionHeader" data-bs-parent="#miniCartAccordion">
+                <div class="accordion-body">
+                    <div id="cartHeading" class="block-heading">
+                        <p class="miniCartHeader" id="miniCartHeader">Empty</p>
+                        <p class="miniCartStatus" id="miniCartStatus"></p>
+                    </div>
+                    <div class="content" id="mainCartDiv">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="items" id="miniCartItems">
+                                </div>
+                            </div>
+                            <div class="col-3 vstack gap-3">
+                                <isif condition="${!pdict.order}">
+                                    <div class="estimate" id="estimateDetailsDiv">
+                                        <div class="miniCartPostalCodeEstimate-item">
+                                            <span class="text">Postal Code :</span>
+                                            <span id="miniCartPostalCodeEstimate"
+                                                class="miniCartPostalCodeEstimate code">none</span>
+                                        </div>
+                                        <div class="miniCartPostalCodeEstimate-item">
+                                            <span class="text">State / Province :</span>
+                                            <span id="miniCartStateProvinceEstimate"
+                                                class="miniCartStateProvinceEstimate code">none</span>
+                                        </div>
+                                        <div class="miniCartPostalCodeEstimate-item"><span>
+                                                <button type="button" id="estimateButton"
+                                                    class="btn btn-primary btn-lg btn-block">Estimate Shipping /
+                                                    Tax</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <iselse>
+                                        <div class="orderAuditDetails" id="auditDetails">
+                                            <div>
+                                                <div class="orderCreatedByLabel">Order Created By :</div><div id="orderCreatedBy" class="orderCreatedBy"></div>
+                                                <div class="orderCreatedOnLabel">Order Created On :</div><div id="orderCreatedOn" class="orderCreatedOn"></div>
+                                                <div class="orderStatusLabel">Order Status</div><div class="orderStatus" id="orderStatus"></div>
+                                                <div class="orderExportStatusLabel">Export Status</div><div class="orderExportStatus" id="orderExportStatus"></div>
+                                                <br />
+                                                <div id="auditDiv"></div>
+                                            </div>
+                                        </div>
+                                </isif>
+                                <div class="summary">
+                                    <div class="summary-item"><span class="text">Subtotal</span><span
+                                            class="price miniCartProductTotal" id="miniCartProductTotal"></span></div>
+                                    <div class="summary-item"><span class="text">Discount</span><span class="price"
+                                            id="miniCartDiscountTotal"></span></div>
+                                    <div class="summary-item"><span class="text"
+                                            id='miniCartShippingLabel'>Shipping</span><span
+                                            class="price miniCartShippingMethodPrice"
+                                            id="miniCartShippingMethodPrice"></span></div>
+                                    <div class="summary-item"><span class="text" id='miniCartTaxLabel'>Total
+                                            Tax</span><span class="price miniCartTotalTax" id="miniCartTotalTax"></span>
+                                    </div>
+                                    <div class="summary-item"><span class="text"
+                                            id='miniCartTotalLabel'>Total</span><span class="price miniCartTotal"
+                                            id="miniCartTotal"></span></div>
+                                    <iscomment>
+                                        <div class="summary-item"><span class="text">Total</span><span
+                                                class="miniCartTotalQuantity" id="miniCartTotalQuantity"></span></div>
+                                    </iscomment>
+                                    <form id="checkoutForm" action="" method="POST">
+                                        <button type="button" id="miniCartButton"
+                                            class="btn btn-primary btn-lg btn-block">Checkout</button>
+                                        <input type="hidden" id="globalBasketId" name="basketId" value="" />
+                                        <input type="hidden" id="globalCommerceSite" name="globalCommerceSite"
+                                            value="${pdict.commerceStore}" />
+                                        <input type="hidden" id="commerceStore" name="commerceStore"
+                                            value="${pdict.commerceStore}" />
+                                        <input type="hidden" id="globalShippingMethod" name="globalShippingMethod"
+                                            value="" />
+                                    </form>
+                                </div>
+                                <div class="notes">
+                                    <div class="row">
+                                        <div class="input-group input-group-sm mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-sm">Note 1</span>
+                                            </div>
+                                            <input type="text" id="notes1input" class="form-control" aria-label="Small" maxlength="30" placeholder="Input Notes (30 character max)" value="" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group input-group-sm mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-sm">Note 2</span>
+                                            </div>
+                                            <input type="text" id="notes2input" class="form-control"aria-label="Small" maxlength="30" placeholder="Input Notes (30 character max)" aria-label="Small" value="" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <button class="btn btn-lg btn-primary btn-block addNotesButton" type="submit">Add Notes To Order</button>
+                                            <sub class="notesSubtext"></sub>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <iscomment> <div id="noChargeReasonCodeDiv" class="noChargeReasonCodeDiv">
+            <h2>No Charge Discount Code:</h2>
+            <div class="row">
+                <div class="col-5">
+                    <center>
+                        <a id='showModalLink' href="#">View Full List</a>
+                    </center>
+                </div>
+                <div class="col-2">
+                    No Charge Model &num;:
+                </div>
+                <div class="col-2">
+                    <input id='noChargeModelNumber' type="" name="" value="" size="50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    No Charge Reason Code:
+                    <select id="noChargeReasonCode">
+                        <option value="12">12 - Customer Service</option>
+                        <option value="13">13 - Sales</option>
+                        <option value="14">14 - Quality / Recalls</option>
+                        <option value="15">15 - Product Development</option>
+                        <option value="42">42 - Consumer Direct</option>
+                        <option value="60">60 - Warranty</option>
+                        <option value="61">61 - Missing Part or Component</option>
+                        <option value="91">91 - Good Will / Charitable Donation</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    No Charge Serial &num;:
+                </div>
+                <div class="col-2">
+                    <input id='noChargeSerialNumber' type="" name="" value="" size="50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <div class="submitNoChargeDiscountCode">
+                        <button class="btn btn-primary btn-lg btn-block">Submit No Charge Code</button>
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+            <div class="row" id="noChargeStatusDiv" style="display:none">
+                <div class="col-3"></div>
+                <div class="col-6 center" id="noChargeStatusTextDiv">
+                    This is where the status of the no charge process will be
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+        ---- </iscomment>
+    <div id="noChargeReasonCodeDiv" class="noChargeReasonCodeDiv">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>No Charge Discount Code:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group row">
+                    <div class="col-4 col-form-label">
+                        No Charge Reason Code:
+                    </div>
+                    <div class="col-8">
+                        <isinclude template="checkout/include/nocharge_codes_template.isml"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12 center">
+                        <a id='showModalLink' href="#">View Full List</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group row">
+                    <div class="col-4 col-form-label">
+                        No Charge Model &num;:
+                    </div>
+                    <div class="col-8">
+                        <input id='noChargeModelNumber' type="" name="" value="" size="50" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4 col-form-label">
+                        No Charge Serial &num;:
+                    </div>
+                    <div class="col-8">
+                        <input id='noChargeSerialNumber' type="" name="" value="" size="50" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-5"></div>
+            <div class="col-2">
+                <div class="submitNoChargeDiscountCode">
+                    <button class="btn btn-primary btn-lg btn-block">Submit No Charge Code</button>
+                </div>
+            </div>
+            <div class="col-5"></div>
+        </div>
+        <div class="row" id="noChargeStatusDiv" style="display:none">
+            <div class="col-3"></div>
+            <div class="col-6 center" id="noChargeStatusTextDiv">
+                This is where the status of the no charge process will be
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="noChargeReasonCodesModal" tabindex="-1" aria-labelledby="noChargeReasonCodesLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">No Charge Reason Codes</h5>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Code</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Reason</th>
+                                <th scope="col">Requires Model / Serial</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">12</th>
+                                <td>Customer Service</td>
+                                <td>Failure not fully determined or sales and return prevention. (Includes
+                                    parts/products for Training and Education Dept.)</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">13</th>
+                                <td>Sales</td>
+                                <td>Retailer, distribution or marketing promotion or error</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14</th>
+                                <td>Quality / Recalls</td>
+                                <td>Field rework, service kits, service briefs, advisories, failure investigation or
+                                    Standards &amp; Compliance</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15</th>
+                                <td>Product Development</td>
+                                <td>Design, model shop, engineering and plants (includes samples for Purchasing Dept)
+                                    *requires Unit and Nature Code (enter in Customer PO&num; field)</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">42</th>
+                                <td>Consumer Direct</td>
+                                <td>Shipping errors, order errors, or sales promotion</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">60</th>
+                                <td>Warranty</td>
+                                <td>Defined manufacturer defect or assembly</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">61</th>
+                                <td>Missing Part or Component</td>
+                                <td>Missing parts on new product</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">91</th>
+                                <td>Good Will &amp; Charitable Donations</td>
+                                <td>May include services for churches, schools or disaster relief</td>
+                                <td>Y</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="closeButton"><button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="enterPostalCodeModal" tabindex="-1" aria-labelledby="enterPostalCodeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Shipping Estimator</h5>
+                </div>
+                <div class="modal-body">
+                    <iscomment>
+                        <div class="submitEstimate center">
+                            <div class="row">
+                                <div class="col-sm">Country:</div>
+                                <div class="col" id="estimateCountryCode">${pdict.countryCode}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">Zip Code:</div>
+                                <div class="col"><input id="submittedZipCode" value=""></input></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">State / Province:</div>
+                                <div class="col">
+                                    <isinclude template="checkout/include/address_template_state_estimate.isml" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" id="" class="btn btn-primary btn-sm">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </iscomment>
+                    <table class="table center submitEstimate">
+                        <thead>
+                            <tr>
+                                <h3 class='create-user-templateTitle center'>Estimate Shipping / Tax</h3>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Country:</td>
+                                <td id="estimateCountryCode">${pdict.countryCode}</td>
+                            </tr>
+                            <tr>
+                                <td><label class="adjustedLabels">Zip / Postal Code:</label></td>
+                                <td><input id="submittedZipCode" class="form-control" value=""></input></td>
+                            </tr>
+                            <tr>
+                                <td><label class="adjustedLabels">State / Province:</label></td>
+                                <td>
+                                    <isinclude template="checkout/include/address_template_state_estimate.isml" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="closeButton"><button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button></div>
+                    <div class="submitEstimate" id="submitEstimate"><button type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Submit</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input id='canSeeNoChargeButton' value='${pdict.showNoCharge}' style='display: none'></input>
+    <input id='canSeeDiscountButton' value='${pdict.showDiscounts}' style='display: none'></input>
+</section>
+
+<isif condition="${pdict.showNoCharge == true}">
+    <section class="minicart-discounts" id="minicart-discounts">
+        <div class="accordion" id="discountAccordion">
+            <div class="accordion-item">
+                <div id="discountAccordionDiv" class="accordion-collapse collapse show"
+                    aria-labelledby="discountAccordionHeader" data-bs-parent="#discountAccordion">
+                    <div class="accordion-body">
+                        <iscomment>
+                            <div class="minicartDiscountsDiv">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>Discounts</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="promoCodeLabel"></div>
+                                        <div class="waiveShipping" id="waiveShipping">
+                                            <input type="hidden" name="waiveShippingCode" id="waiveShippingCode"
+                                                value="CSR_FREESHIP" />
+                                            <button type="button"
+                                                class="btn btn-primary btn-lg btn-block waiveShippingButton">Waive
+                                                Shipping</button>
+                                        </div>
+                                        <div class="noChargeOrder" id="noChargeOrder">
+                                            <input type="hidden" name="noChargeEntireOrder" id="noChargeEntireOrder"
+                                                value="TEST_DUMMY" />
+                                            <button type="button"
+                                                class="btn btn-dark btn-lg btn-block noChargeOrderButton">No
+                                                Charge Entire Order</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                    <isif condition="${pdict.showDiscounts == true}">
+                                        <div class="col-md-2">
+                                            <div class="promoCodeLabel">Promo/Coupon Codes</div>
+                                            <div class="promoCodes">
+                                                <input type="text" name="couponCode" id="couponCode" value="" />
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg btn-block addCouponButton">Add
+                                                    Promo Code</button>
+                                                <div id="couponStatus" class="couponStatus"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2">
+                                            <div class="promoCodeLabel">Percent or Fixed Discounts</div>
+                                            <div class="promoCodes">
+                                                <select id="adjustmentType" name="adjustmentType">
+                                                    <option value="percentage">percentage</option>
+                                                    <option value="amount">amount</option>
+                                                </select>
+                                                <input type="number" name="discountValue" id="discountValue" value=""
+                                                    maxlength="5" />
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg btn-block addDiscountButton">Add
+                                                    Discount</button>
+                                                <div id="priceAdjustmentStatus" class="priceAdjustmentStatus"></div>
+                                            </div>
+                                        </div>
+                                    </isif>
+                                </div>
+                            </div>
+                        </iscomment>
+
+                        <div class="minicartDiscountsDiv">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Discounts</h3>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="promoCodeLabel">Waive Shipping / No Charge</div>
+                                        <div class="waiveShipping" id="waiveShipping">
+                                            <input type="hidden" name="waiveShippingCode" id="waiveShippingCode"
+                                                value="CSR_FREESHIP" />
+                                            <button type="button"
+                                                class="btn btn-primary btn-lg btn-block waiveShippingButton">Waive
+                                                Shipping</button>
+                                        </div>
+                                        <div class="shippingAlreadyWaived" id="shippingAlreadyWaived">
+                                            <button type="button"
+                                                class="btn btn-lg btn-block btn-secondary" disabled="true">Shipping Waived</button>
+                                        </div>
+                                        <div class="noChargeOrder" id="noChargeOrder">
+                                            <input type="hidden" name="noChargeEntireOrder" id="noChargeEntireOrder"
+                                                value="TEST_DUMMY" />
+                                            <button type="button"
+                                                class="btn btn-dark btn-lg btn-block noChargeOrderButton">No
+                                                Charge Entire Order</button>
+                                            <div id="noChargeStatus" class="noChargeStatus center"></div>
+                                        </div>
+                                        <div class="removeNoChargeOrder" id="removeNoChargeOrder">
+                                            <input type="hidden" name="removeNoChargeEntireOrder" id="removeNoChargeEntireOrder"                                                                                      
+                                            value="TEST_DUMMY" />
+                                            <button type="button" id="removeNoChargeOrderButton"
+                                                class="btn btn-dark btn-lg btn-block removeNoChargeOrderButton">Remove No Charge(s) From Order</button>
+                                            <div id="removeNoChargeStatus" class="removeNoChargeStatus center"></div>
+                                        </div>
+                                    </div>
+                                    <isif condition="${pdict.showDiscounts == true}">
+                                        <div class="col-md-4">
+                                            <div class="promoCodeLabel">Promo/Coupon Codes</div>
+                                            <div class="form-group row">
+                                                <label for="couponCode" class="col-sm-4 col-form-label">Promo
+                                                    Code:</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" name="couponCode" class="form-control"
+                                                        id="couponCode" value="" />
+                                                </div>
+                                            </div>
+                                            <button type="button"
+                                                class="btn btn-primary btn-lg btn-block addCouponButton">Add Promo
+                                                Code</button>
+                                            <div id="couponStatus" class="couponStatus center"></div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="promoCodeLabel">Percent or Fixed Discounts</div>
+                                            <div class="form-group row">
+                                                <label for="discountValue"
+                                                    class="col-sm-3 col-form-label">Discount:</label>
+                                                <div class="col-sm-4">
+                                                    <input type="number" name="discountValue" class="form-control"
+                                                        id="discountValue" value="" />
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <select id="adjustmentType" class="form-control"
+                                                        name="adjustmentType">
+                                                        <option value="percentage">percentage</option>
+                                                        <option value="amount">amount</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button type="button"
+                                                class="btn btn-primary btn-lg btn-block addDiscountButton">Add
+                                                Discount</button>
+                                            <div id="priceAdjustmentStatus" class="priceAdjustmentStatus center"></div>
+                                        </div>
+                                    </isif>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</isif>
+
+
+<script>
+    let commerceStore = '${pdict.commerceStore}';
+    <isif condition="${pdict.basketId != null}">
+        // let basketId = "${pdict.basketId}";
+        document.getElementById('globalBasketId').value = "${pdict.basketId}";
+        console.log("basketId is not null : ${pdict.basketId}");
+    <iselse>
+        // let basketId = null;
+        console.log("basketId is null");
+    </isif>
+    </script>
+
+<template id="minicart-row-template">
+    <div class="product">
+        <div class="row">
+            <div class="col-6 product-name">
+                <div class="product-name miniCartName">
+                </div>
+                <div class="product-sku miniCartItemNumber">
+                </div>
+                <div class="product-details">
+                    <ul class="miniCartItemDetails">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2 quantity">
+                <input id="quantity" type="number" value="1" class="form-control quantity-input miniCartQuantity">
+            </div>
+            <div class="col-2 button">
+                <button id="" class="btn btn-primary btn-lg btn-block updateButton">Update Quantity</button>
+                <button id="" class="btn btn-secondary btn-lg btn-block removeButton">Remove</button>
+                <button id="" class="btn btn-dark btn-lg btn-block noChargeButton">No Charge</button>
+            </div>
+            <div class="col-2 price miniCartPrice">
+                <span>$</span>
+            </div>
+        </div>
+        <isif condition="${pdict.siteId == 'epcotus'}">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-2 right" >Discount : </div>
+                <div class="col-2" >
+                    <input id="itemdiscountValue" type="number" style="width:150px;" value="1" class="form-control itemdiscountValue" />
+                </div>
+                <div class="col-2" style="White-space: nowrap;">            
+                    <select id="itemDiscountType" class="form-control itemDiscountType" name="itemDiscountType">
+                        <option value="percentage">percentage</option>
+                        <option value="amount">amount</option>
+                    </select>
+                </div>
+                <div class="col-2 button" style="padding-top: 5px">
+                    <button id="" class="btn btn-dark btn-lg btn-block calculateItemWiseDiscount">Add Discount</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <p class="itemLevelDiscount" id=""></p>
+                </div>
+            </div>
+        </isif>
+    </div>
+</template>
+
+<template id="minicart-product-details">
+    <li class="minicart-product-details-line"></li>
+</template>
+
+
+<template id="minicart-discount">
+    <div class="discount">
+        <div class="row">
+            <div class="col-6 discountName">
+                <div class="product-name miniCartDiscountName"></div>
+                <div class="discount-description miniCartDiscountDescription"></div>
+                <div class="product-sku miniCartPercentageAmountDiscountType">
+                </div>
+                <div class="miniCartPercentageAmountDiscountPercentage"></div>
+                <div class="miniCartPercentageAmountDiscountAmount"></div>
+                <div class="miniCartFixedAmountDiscountType"></div>
+                <div class="miniCartFixedAmountDiscountAmount"></div>
+            </div>
+            <div class="col-2 button">
+                <button id="" class="btn btn-secondary removeAdjustment">Remove</button>
+            </div>
+            <div class="col-2 price miniCartDiscountPrice"></div>
+        </div>
+    </div>
+</template>
+
+<template id="minicart-discount-percentage-amount">
+    <span class="miniCartPercentageAmount">
+        <button class="btn-primary removeAdjustment" id="">Remove Discount</button>
+        <span class="miniCartPercentageAmountLabel">
+            Discount :
+        </span>
+        <span class="miniCartPercentageAmountReasonCode">
+        </span>
+        <span class="miniCartPercentageAmountDiscountType">
+        </span>
+        <span class="miniCartPercentageAmountDiscountPercentage">
+        </span>
+        <span class="miniCartPercentageAmountDiscountAmount">
+        </span>
+    </span>
+</template>
+
+<template id="minicart-discount-fixed-amount">
+    <span class="miniCartFixedAmount">
+        <button class="btn-primary removeAdjustment" id="">Remove Discount</button>
+        <span class="miniCartFixedAmountLabel">
+            Discount :
+        </span>
+        <span class="miniCartFixedAmountReasonCode">
+        </span>
+        <span class="miniCartFixedAmountDiscountType">
+        </span>
+        <span class="miniCartFixedAmountDiscountAmount">
+        </span>
+    </span>
+</template>
+
+<template id="minicart-shipping">
+    <div class="minicartShippingDiv">
+        <div class="row">
+            <div class="col-12">
+                <div class="minicartShipping">
+                    <div class="miniCartShippingDescription"></div>
+                    <div class="miniCartShippingEstimate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="minicart-addresses">
+    <div class="minicartAddressesDiv">
+        <div class="row">
+            <div class="col-6">
+                <div class="miniCartAddressBillingAddress">
+                    <span class="miniCartAddressHeader">Billing Address</span>
+                    <span class="miniCartAddressBillingAddressName miniCartAddressElement"></span>
+                    <span class="miniCartAddressBillingAddressAddress1 miniCartAddressElement"></span>
+                    <span class="miniCartAddressBillingAddressAddress2 miniCartAddressElement"></span>
+                    <span class="miniCartAddressBillingAddressCity miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressBillingAddressState miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressBillingAddressPostalCode miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressBillingAddressCountryCode miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressBillingAddressPhone miniCartAddressElement"></span>
+                    <span class="miniCartAddressBillingAddressEmail miniCartAddressElement"></span>
+                </div></div>
+            <div class="col-6">
+                <div class="miniCartAddressShippingAddress">
+                    <span class="miniCartAddressHeader">Shipping Address</span>
+                    <span class="miniCartAddressShippingAddressName miniCartAddressElement"></span>
+                    <span class="miniCartAddressShippingAddressAddress1 miniCartAddressElement"></span>
+                    <span class="miniCartAddressShippingAddressAddress2 miniCartAddressElement"></span>
+                    <span class="miniCartAddressShippingAddressCity miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressShippingAddressState miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressShippingAddressPostalCode miniCartAddressElementNoBreak"></span>
+                    <span class="miniCartAddressShippingAddressCountryCode miniCartAddressElementNoBreak"></span>
+                </div></div>
+        </div>
+    </div>
+</template>
+
+<template id="minicart-additionalInformation-noCharge">
+    <div class="additionalOrderInfo">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-4 miniCartAddressHeader">No Charge Reason Code:</div>
+                    <div class="col-4 miniCartAddressHeader">No Charge Model:</div>
+                    <div class="col-4 miniCartAddressHeader">No Charge Serial Number:</div>
+                </div>
+                <div class="row">
+                    <div class="col-4 orderViewNoChargeReason" id="orderViewNoChargeReason">No Charge Reason Code Here</div>
+                    <div style="display: none;"><isinclude template="checkout/include/nocharge_codes_template.isml"/></div>
+                    <div class="col-4 orderViewNoChargeModel" id="orderViewNoChargeModel">No Charge Model Here</div>
+                    <div class="col-4 orderViewNoChargeNumber" id="orderViewNoChargeNumber">No Charge Serial Number Here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="minicart-audit">
+    <div class="miniCartAuditDiv">
+        <div class="row">
+            <div class="col">
+                <button type="button" id="cancelOrder" class="btn btn-warning btn-lg btn-block cancelOrder">Cancel Order</button>
+            </div>
+            <div class="col">
+                <button type="button" id="approveOrder" class="btn btn-primary btn-lg btn-block approveOrder" style="display:none">Approve Order</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="updateOrderStatusDiv"></div>
+            </div>
+        </div>
+    </div>
+</template>

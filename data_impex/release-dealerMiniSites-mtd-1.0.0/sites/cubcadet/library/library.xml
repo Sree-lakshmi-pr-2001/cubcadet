@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+
+    <content content-id="dealer-home-see-promotions">
+        <display-name xml:lang="x-default">Dealer home - See promotions tab</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="see-promotions-container container"&gt;&#13;
+    &lt;h4 class="see-promotions-title"&gt;&#13;
+        Current Promos&#13;
+    &lt;/h4&gt;&#13;
+    &lt;div class="see-promotions-cards-wrapper"&gt;&#13;
+        &lt;div class="see-promotions-cards"&gt;&#13;
+            &lt;!-- Promo Card 1 --&gt;&#13;
+            &lt;div class="see-promotions-card"&gt;&#13;
+                &lt;div class="see-promotions-card-inner"&gt;&#13;
+                    &lt;div class="see-promotions-card-head"&gt;&#13;
+                        &lt;img src="Dealer/Promotions/Promo-FPO1.jpg?$staticlink$" /&gt;&#13;
+                    &lt;/div&gt;&#13;
+                    &lt;div class="see-promotions-card-body"&gt;&#13;
+                        &lt;div class="see-promotions-card-msg"&gt;&#13;
+                            &lt;div class="see-promotions-card-heading"&gt;&#13;
+                                FINANCING AVAILABLE!&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="see-promotions-card-cta"&gt;&#13;
+                            &lt;a class="btn btn-primary btn-sm" href="/"&gt;Apply Now&lt;/a&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;!-- Promo Card 2 --&gt;&#13;
+            &lt;div class="see-promotions-card"&gt;&#13;
+                &lt;div class="see-promotions-card-inner"&gt;&#13;
+                    &lt;div class="see-promotions-card-head"&gt;&#13;
+                        &lt;img src="Dealer/Promotions/Promo-FPO2.jpg?$staticlink$" /&gt;&#13;
+                    &lt;/div&gt;&#13;
+                    &lt;div class="see-promotions-card-body"&gt;&#13;
+                        &lt;div class="see-promotions-card-msg"&gt;&#13;
+                            &lt;div class="see-promotions-card-heading"&gt;&#13;
+                                $100 OFF ZT1 &amp; ZT2&#13;
+                            &lt;/div&gt;&#13;
+                            &lt;div class="see-promotions-card-subheading"&gt;&#13;
+                                THROUGH 5-31-2020&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="see-promotions-card-cta"&gt;&#13;
+                            &lt;a class="btn btn-primary btn-sm" href="/"&gt;Shop Now&lt;/a&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;!-- Promo Card 3 --&gt;&#13;
+            &lt;div class="see-promotions-card"&gt;&#13;
+                &lt;div class="see-promotions-card-inner"&gt;&#13;
+                    &lt;div class="see-promotions-card-head"&gt;&#13;
+                        &lt;img src="Dealer/Promotions/Promo-FPO3.jpg?$staticlink$" /&gt;&#13;
+                    &lt;/div&gt;&#13;
+                    &lt;div class="see-promotions-card-body"&gt;&#13;
+                        &lt;div class="see-promotions-card-msg"&gt;&#13;
+                            &lt;div class="see-promotions-card-heading"&gt;&#13;
+                                FPO PROMO HEADLINE&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="see-promotions-card-cta"&gt;&#13;
+                            &lt;a class="btn btn-primary btn-sm" href="/"&gt;Shop Now&lt;/a&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;!-- Promo Card 4 --&gt;&#13;
+            &lt;div class="see-promotions-card"&gt;&#13;
+                &lt;div class="see-promotions-card-inner"&gt;&#13;
+                    &lt;div class="see-promotions-card-head"&gt;&#13;
+                        &lt;img src="Dealer/Promotions/Promo-FPO4.jpg?$staticlink$" /&gt;&#13;
+                    &lt;/div&gt;&#13;
+                    &lt;div class="see-promotions-card-body"&gt;&#13;
+                        &lt;div class="see-promotions-card-msg"&gt;&#13;
+                            &lt;div class="see-promotions-card-heading"&gt;&#13;
+                                FPO PROMO HEADLINE&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="see-promotions-card-cta"&gt;&#13;
+                            &lt;a class="btn btn-primary btn-sm" href="/"&gt;Shop Now&lt;/a&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+            &lt;!-- Promo Card 5 --&gt;&#13;
+            &lt;div class="see-promotions-card"&gt;&#13;
+                &lt;div class="see-promotions-card-inner"&gt;&#13;
+                    &lt;div class="see-promotions-card-head"&gt;&#13;
+                        &lt;img src="Dealer/Promotions/Promo-FPO1.jpg?$staticlink$" /&gt;&#13;
+                    &lt;/div&gt;&#13;
+                    &lt;div class="see-promotions-card-body"&gt;&#13;
+                        &lt;div class="see-promotions-card-msg"&gt;&#13;
+                            &lt;div class="see-promotions-card-heading"&gt;&#13;
+                                FPO PROMO HEADLINE&#13;
+                            &lt;/div&gt;&#13;
+                        &lt;/div&gt;&#13;
+                        &lt;div class="see-promotions-card-cta"&gt;&#13;
+                            &lt;a class="btn btn-primary btn-sm" href="/"&gt;Shop Now&lt;/a&gt;&#13;
+                        &lt;/div&gt;&#13;
+                    &lt;/div&gt;&#13;
+                &lt;/div&gt;&#13;
+            &lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+        &lt;!-- Carousel Dots --&gt;&#13;
+        &lt;div class="see-promotions-controls"&gt;&#13;
+            &lt;div class="slide-dots slide-dots-md"&gt;&lt;/div&gt;&#13;
+        &lt;/div&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="store-info-contact-us">
+        <display-name xml:lang="x-default">Store info tab - contact us</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3 class="dealer-contactus-title"&gt;&#13;
+    How Can We Help?&#13;
+&lt;/h3&gt;&#13;
+&lt;p class="dealer-contactus-msg"&gt;&#13;
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor soluta, voluptas quod commodi voluptatibus praesentium architecto consequuntur dolorum blanditiis fugiat?&#13;
+&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="store-info-testdrive">
+        <display-name xml:lang="x-default">Store info test drive</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3 class="dealer-testdrive-title"&gt;&#13;
+    Schedule Your Test Drive&#13;
+&lt;/h3&gt;&#13;
+&lt;p class="dealer-testdrive-msg"&gt;&#13;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at risus quam. Maecenas finibus odio risus, in iaculis sapien viverra tempus.&#13;
+&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>

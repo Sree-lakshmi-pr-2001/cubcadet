@@ -1,0 +1,8 @@
+{
+  "username": "mylogin",
+  "password": "mysup3rs3cretp4ss",
+  "hostname": ["dev01-na01-evaluation.demandware.net", "dev02-na01-evaluation.demandware.net"],
+  "activationHostname": ["dev01-na01-evaluation.demandware.net", "dev02-na01-evaluation.demandware.net"],
+  "code-version": "sfra",
+  "dataBundle": "core",
+}

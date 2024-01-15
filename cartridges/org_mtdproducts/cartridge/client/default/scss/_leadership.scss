@@ -1,0 +1,60 @@
+.leadership,
+.bio {
+    .btn {
+        background-color: $button-green;
+        border-color: $button-green;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .btn.btn-primary:active {
+        background-color: $button-green;
+        border-color: $button-green;
+    }
+
+    .content {
+        &.one {
+            padding-top: 50px;
+            width: 80%;
+
+            .leadership-card {
+                .image {
+                    position: relative;
+                    text-align: center;
+
+                    .name {
+                        padding: 5px 40px 5px 15px;
+                        position: absolute;
+                        bottom: 8px;
+                        font-weight: bold;
+                        color: #fff;
+                        background-color: #808285;
+                    }
+                }
+
+                padding-bottom: 25px;
+            }
+
+            .bio-title {
+                padding-bottom: 50px;
+
+                .name {
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+
+                .title {
+                    font-size: 20px;
+                }
+            }
+
+            .bio-img {
+                padding-bottom: 25px;
+            }
+
+            .bio-detail {
+                padding-bottom: 25px;
+            }
+        }
+    }
+}

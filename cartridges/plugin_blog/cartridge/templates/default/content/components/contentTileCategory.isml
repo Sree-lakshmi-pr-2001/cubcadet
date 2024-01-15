@@ -1,0 +1,7 @@
+<isif condition="${asset.classificationFolder}">
+    <div class="content-tile-category body-s font-semibold">
+        <a class="content-tile-category-link" href="${URLUtils.url('Search-ShowContent', 'fdid', asset.classificationFolder.ID)}">
+            <isprint value="${asset.classificationFolder.displayName}"/>
+        </a>
+    </div>
+</isif>

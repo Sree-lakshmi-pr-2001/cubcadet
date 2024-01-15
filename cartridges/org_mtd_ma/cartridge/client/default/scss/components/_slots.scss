@@ -1,0 +1,137 @@
+//////////////////////////////////////////
+// Homepage
+// Global Styles
+//////////////////////////////////////////
+
+[class^="home-slot"] {
+    > div {
+        margin-bottom: rem(25px); // 40px total
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(30px); // 60px
+        }
+
+        &.product-carousel-slot {
+            margin-bottom: rem(40px);
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: rem(60px);
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////
+// Category, Product Line Landing & Product Line Browse
+// Global Styles
+//////////////////////////////////////////
+
+.cat-landing > div {
+    margin-bottom: rem(15px);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: rem(30px);
+    }
+
+    // no padding when breadcrumbs present
+    &.hero,
+    .hero {
+        padding-top: 0;
+    }
+}
+
+.card-group-heading {
+    margin: 0 0 rem(7px); // 15px total
+    text-align: center;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+        width: 60%;
+        margin: 0 auto rem(20px);
+    }
+}
+
+.pl-browse > div {
+    margin-bottom: rem(40px);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: rem(60px);
+    }
+
+    // no padding when breadcrumbs present
+    &.hero,
+    .hero {
+        padding-top: 0;
+    }
+}
+
+.pl-browse {
+    > .container:first-child:not(.product-carousel-slot) {
+        margin-bottom: rem(10px);
+    }
+
+    //custom side margins on these pages only
+    > .container-fluid {
+        @include media-breakpoint-up(lg) {
+            padding-left: rem(30px);
+            padding-right: rem(30px);
+        }
+    }
+}
+
+// above the footer
+.pl-browse-5 > div,
+.cat-landing-4 > div {
+    margin-bottom: rem(60px);
+}
+
+//////////////////////////////////////////
+// productCarouselSlot.isml
+//////////////////////////////////////////
+
+.product-carousel-slot {
+    margin: rem(15px) auto;
+    padding: 0 rem(7px);
+
+    @include media-breakpoint-up(lg) {
+        margin: rem(30px) auto rem(15px);
+    }
+
+    .carousel-title {
+        text-align: center;
+        margin-bottom: rem(15px);
+
+        @include media-breakpoint-up(lg) {
+            margin: rem(30px) 0 rem(15px);
+        }
+    }
+
+    .product-tile-caro {
+        .product-tile {
+            @include media-breakpoint-down(md) {
+                margin: 0 7px;
+            }
+        }
+
+        .image-container {
+            @include media-breakpoint-down(md) {
+                padding: rem(10px);
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////
+// Cart Marketing Banner - full width banner
+// Global Styles
+//////////////////////////////////////////
+
+.dealer-banner {
+    img {
+        max-width: 100%;
+
+        @include media-breakpoint-up(md) {
+            @include centerElement(center);
+        }
+    }
+}

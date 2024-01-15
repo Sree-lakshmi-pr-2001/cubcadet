@@ -1,0 +1,48 @@
+<isset name="isProductTile" value="${true}" scope="page" />
+<isinclude template="/components/modules"/>
+<isinclude url="${URLUtils.url('Monetate-GetProductID', 'pid', product.id)}"/>
+
+<div class="product-tile"
+    data-monetate-pid="${product.id}"
+    data-monetate-producturl="${URLUtils.abs('Product-Show', 'pid', product.id)}">
+    <!-- dwMarker="product" dwContentID="${product.UUID}" -->
+    <isinclude template="product/components/productTileImage" />
+    <div class="tile-body">
+
+        <isinclude template="product/components/productTileName" />
+
+        <isset name="price" value="${product.price}" scope="page" />
+        <isif condition="${product.productType === 'set'}">
+            <isinclude template="product/components/pricing/setPrice" />
+        <iselse>
+            <isinclude template="product/components/pricing/main" />
+        </isif>
+
+        <isinclude template="product/components/promotions" />
+
+        <isif condition="${pdict.display.swatches !== false}">
+            <isinclude template="product/components/productTileSwatch" />
+        </isif>
+
+        <isif condition="${pdict.display.showQuickView !== false}">
+            <div class="mb-2">
+                <isif condition="${pdict.showPartReplacesWidget && product.replacesParts}">
+                    <isset name="replacePartsArray" value="${product.replacesParts.split(/[ ,]+/)}" scope="page" />
+                    <isif condition="${replacePartsArray.indexOf(pdict.searchKeyword) >= 0}">
+                        <span class="part-replaces-text font-weight-bold">
+                            ${Resource.msgf('text.partreplaces', 'product', null, ' ') + (replacePartsArray[replacePartsArray.indexOf(pdict.searchKeyword)])}
+                        </span>
+                    </isif>
+                </isif>
+                <isif condition="${pdict.showAddToCartButton || pdict.showStockMessage}">
+                    <isinclude template="product/productTileAvailability" />
+                </isif>
+            </div>
+        </isif>
+
+        <isif condition="${pdict.display.ratings !== false}">
+            <isinclude template="product/productTileFooter" />
+        </isif>
+    </div>
+    <!-- END_dwmarker -->
+</div>

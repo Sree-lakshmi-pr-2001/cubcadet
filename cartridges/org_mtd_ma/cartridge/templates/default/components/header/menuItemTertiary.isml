@@ -1,0 +1,43 @@
+<ul class="dropdown-menu" role="menu" aria-hidden="true">
+    <isloop items="${menuItem.subCategories}" var="category" status="loopStatus">
+        <isif condition="${category.subCategories}">
+            <li class="dropdown-item dropdown third-level-menu-heading" role="menuitem">
+                <a href="${category.url}" id="${category.id}" class="dropdown-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${category.name}</a>
+                    <isset name="menuItem" value="${category}" scope="page" />
+                    <isset name="menuTile" value="${true}" scope="page" />
+                    <isinclude template="components/header/menuItem" />
+            </li>
+        <iselse/>
+            <isset name="tileDescription" value="${category.menuCardText}" scope="page" />
+            <isset name="tileImage" value="${category.image ? category.image.getURL() : null}" scope="page" />
+
+            <li class="dropdown-item menu-tile third-level-menu-heading-tiles" role="menuitem">
+                <a href="${category.url}" id="${category.id}" role="button" class="dropdown-link">
+                    <span class="tile-title">${category.name}</span>
+                    <isif condition="${tileDescription}">
+                        <span class="tile-description">${tileDescription}</span>
+                    </isif>
+                    <isif condition="${tileImage}">
+                        <img loading="lazy" src="${tileImage}" class="tile-img" alt="${category.name}"/>
+                    <iselse>
+                        <span class="no-img-placeholder"></span>
+                    </isif>
+                    <div class="card-link">
+                        <span class="d-none d-lg-block">${Resource.msg('navigation.shopnow','common',null)}</span>
+                        <span class="d-block d-lg-none">${category.name}</span>
+                    </div>
+                </a>
+            </li>
+            <isif condition="${loopStatus.last}">
+                <isif condition="${categoryPromo}">
+                    <li class="promo-tile">
+                        <iscontentasset aid="${categoryPromo}" />
+                    </li>
+                </isif>
+            </isif>
+        </isif>
+    </isloop>
+    <li class="category-link">
+        <a href="${menuItem.url}" id="${menuItem.id}" role="button" class="dropdown-link">${Resource.msgf('navigation.seeall','common',null, menuItem.name)}</a>
+    </li>
+</ul>

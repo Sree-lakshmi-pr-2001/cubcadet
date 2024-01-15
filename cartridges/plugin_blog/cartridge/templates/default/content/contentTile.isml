@@ -1,0 +1,11 @@
+<iscomment>append the search parameters to the article URL</iscomment>
+<div class="content-tile col-6 col-md-4 mb-4 mb-md-5">
+    <iscomment> Image </iscomment>
+    <isinclude template="content/components/contentTileImage" />
+
+    <iscomment> Category </iscomment>
+    <isinclude template="content/components/contentTileCategory" />
+
+    <iscomment> CTA Title </iscomment>
+    <isinclude template="content/components/contentTileCTATitle" />
+</div>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="marketingcloud.rest.auth-cubcadet">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>42nes5ow0b3bl7eeskwrgir8</user-id>
+        <password encrypted="true" encryption-type="common.export">CYcxFYerOBPKIkPidmlFgjIWkGX6wHQ+6WGjE0UJkiIXie7Y0KpUru9TiHORKdd7HGfaRhdnZ7Z0RAVJM54JaA==</password>
+    </service-credential>
+
+   <service-credential service-credential-id="tdbank.soap.broker">
+        <url>https://pat.finance.consumercreditapp.com/token/services/broker/GetAccessToken</url>
+        <user-id>MR432001ibm</user-id>
+        <password encrypted="true" encryption-type="common.export">XAibDVwXbZbCSe4nM5xe3joRBC3yU9stCcRoG06AfEBlljk6qfL2VwSAhfQJbyLr</password>
+    </service-credential>
+
+    <service-credential service-credential-id="dw.oauth2.bm">
+        <url>https://account.demandware.com/dw/oauth2/access_token</url>
+        <user-id>88678f1f-fae6-4cce-95b4-24d0a0d83173</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.rest.auth-cubcadetca">
+        <url>https://auth.exacttargetapis.com/v1/requestToken</url>
+        <user-id>rnt36hm4x6tgwfcjk5vlvr2v</user-id>
+        <password encrypted="true" encryption-type="common.export">tmA5eM/SV+6Ee57NMogU6LxJExDUW/cbCwg+6+QY/5F5Cw62FRE/CJs81NFGhfdZDJpqTHZ6VLpYnVvU3u1tUw==</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-cubcadet">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10959303</user-id>
+        <password encrypted="true" encryption-type="common.export">mOma+nYU+eqsg1sEVQk9yJhJe9pgMQPo2W+P1LMnOi0IKd1vVJvxOpgJhDjWa6cI</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp-cubcadetca">
+        <url>ftp1.exacttarget.com</url>
+        <user-id>10968355</user-id>
+        <password encrypted="true" encryption-type="common.export">l5EmGDtvpWUbCgTo9VBsPPP3Dzdy/Q/r0UJKzXBF9950eHgO8cWt/Aq+v2WofQJC</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.prd.cubcadet">
+        <url>sftp.bazaarvoice.com</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">v/KZyJlXNREN7PiQCQyINxn2VY8E+69gBJAsSaXdlcs=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.prd.cubcadetca">
+        <url>sftp.bazaarvoice.com</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">FfS/B2t/hQoS+Wn8eZBQkcfESsqjLdwqiYGbCXKlycI=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.stg.cubcadet">
+        <url>sftp-stg.bazaarvoice.com</url>
+        <user-id>cubcadet</user-id>
+        <password encrypted="true" encryption-type="common.export">enZpow2aJwj8AYMNwFx69NQgeSfvAeyORpVnvCh5fc3nmM9BvLov/JHbrB3IU8/u</password>
+    </service-credential>
+
+    <service-credential service-credential-id="bazaarvoice.sftp.stg.cubcadetca">
+        <url>sftp-stg.bazaarvoice.com</url>
+        <user-id>cubcadet</user-id>
+        <password encrypted="true" encryption-type="common.export">X7XxPcxvrAnNHODttmcX1JDcvuQePAN8/tUSuo5+XSJSy00oGmjmRM1V3lYhZwWt</password>
+    </service-credential>
+
+    <service-credential service-credential-id="mtd.rest.dealerservice">
+        <url>https://api-t.mtdproducts.com/dealer/dealerservice/getDealerAvailability</url>
+        <user-id/>
+        <password encrypted="true" encryption-type="common.export">q4FzO+5V9rNALM5zrXKnv1mr6za2CkvwVoPFZn1s9BI=</password>
+    </service-credential>
+
+    <service-credential service-credential-id="Monetate.SFTP.credentials-cubcadet">
+        <url>sftp://download.monetate.net</url>
+        <user-id>ftp90051196</user-id>
+        <password encrypted="true" encryption-type="common.export">96xSZsAor7uGnOpQHIgQjobat7/fdHSKlz27FJ51Kybee2igowDsISPFi3b8wBfC</password>
+    </service-credential>
+
+    <service-credential service-credential-id="Monetate.SFTP.credentials-cubcadetca">
+        <url>sftp://download.monetate.net</url>
+        <user-id>ftp99317000</user-id>
+        <password encrypted="true" encryption-type="common.export">ICB5VrYFJcx1m4uhci+5dDexnNqbKXPXR87Szh0aDmTCwm2skNpsbsVehjvEwLmg</password>
+    </service-credential>
+
+    <service-profile service-profile-id="bazaarvoice.http">
+        <timeout-millis>500</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>3</cb-calls>
+        <cb-millis>2000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="bazaarvoice.http.bot">
+        <timeout-millis>2000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>3</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="tdbank.soap.broker">
+        <timeout-millis>3000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="bazaarvoice.sftp">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>3</cb-calls>
+        <cb-millis>20000</cb-millis>
+    </service-profile>
+
+     <service-profile service-profile-id="dw.oauth2.prof">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="dw.ocapi.prof">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="mtd.rest.dealerservice">
+        <timeout-millis>10000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service service-id="bazaarvoice.http">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_http</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>bazaarvoice.http</profile-id>
+        <credential-id/>
+    </service>
+
+    <service service-id="bazaarvoice.http.bot">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_http</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>bazaarvoice.http.bot</profile-id>
+        <credential-id/>
+    </service>
+
+    <service service-id="bazaarvoice.sftp.export.cubcadet">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_sftp</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>bazaarvoice.sftp</profile-id>
+        <credential-id>bazaarvoice.sftp.stg.cubcadet</credential-id>
+    </service>
+
+    <service service-id="bazaarvoice.sftp.import.cubcadet">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_sftp</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>bazaarvoice.sftp</profile-id>
+        <credential-id>bazaarvoice.sftp.stg.cubcadet</credential-id>
+    </service>
+
+    <service service-id="bazaarvoice.sftp.export.cubcadetca">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_sftp</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>bazaarvoice.sftp</profile-id>
+        <credential-id>bazaarvoice.sftp.stg.cubcadetca</credential-id>
+    </service>
+
+    <service service-id="bazaarvoice.sftp.import.cubcadetca">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>bazaarvoice_sftp</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>bazaarvoice.sftp</profile-id>
+        <credential-id>bazaarvoice.sftp.stg.cubcadetca</credential-id>
+    </service>
+
+    <service service-id="mtd.rest.dealerservice">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>MTDdealerservice</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>mtd.rest.dealerservice</profile-id>
+        <credential-id>mtd.rest.dealerservice</credential-id>
+    </service>
+
+    <service service-id="dw.oauth2">
+        <service-type>HTTPForm</service-type>
+        <enabled>true</enabled>
+        <log-prefix/>
+        <comm-log-enabled>false</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>dw.oauth2.prof</profile-id>
+        <credential-id>dw.oauth2.bm</credential-id>
+    </service>
+
+    <service service-id="dw.ocapi">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix/>
+        <comm-log-enabled>false</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>dw.ocapi.prof</profile-id>
+        <credential-id>dw.ocapi.sandbox</credential-id>
+    </service>
+
+    <service service-id="tdbank.soap.broker">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>TDBankBroker</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>tdbank.soap.broker</profile-id>
+        <credential-id>tdbank.soap.broker</credential-id>
+    </service>
+</services>

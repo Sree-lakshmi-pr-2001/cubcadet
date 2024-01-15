@@ -1,0 +1,33 @@
+<isdecorate template="common/layout/epcot">
+    <script>
+        var pageName = 'startBasket';
+        document.getElementById('pageName').value= 'startBasket';
+    </script>
+    <div class="row">
+        <h3>Choose brand for EPCOT - ${pdict.country}</h3>
+    </div>
+    <div class="row">
+        <isif condition="${pdict.country == 'US'}">
+            <div class="col-md-3 mtd-choose">
+                <a href="${URLUtils.url('EpcotOrderConsumer-StartBasket')}?commerceStore=CubCadetDotCom" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Cub Cadet US</a>
+            </div>
+            <div class="col-md-3 mtd-choose">
+                <a href="${URLUtils.url('EpcotOrderConsumer-StartBasket')}?commerceStore=MTDPartsDotCom" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">MTD Parts US</a>
+            </div>
+            <div class="col-md-3 mtd-choose">
+                <a href="${URLUtils.url('EpcotOrderConsumer-StartBasket')}?commerceStore=TroyBiltDotCom" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Troy-Bilt US</a>
+            </div>
+        <iselse>
+            <div class="col-md-3 mtd-choose">
+                <a href="${URLUtils.url('EpcotOrderConsumer-StartBasket')}?commerceStore=CubCadetDotCA" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Cub Cadet Canada</a>
+            </div>
+            <div class="col-md-3 mtd-choose">
+                <a href="${URLUtils.url('EpcotOrderConsumer-StartBasket')}?commerceStore=MTDPartsDotCA" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">MTD Parts Canada</a>
+            </div>
+            <div class="col-md-3 mtd-choose">
+                <a href="${URLUtils.url('EpcotOrderConsumer-StartBasket')}?commerceStore=TroyBiltDotCA" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Troy-Bilt Canada</a>
+            </div>
+        </isif>
+    </div>
+
+</isdecorate>

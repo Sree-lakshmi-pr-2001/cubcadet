@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <custom-type type-id="MTDServiceOAuthToken">
+        <display-name xml:lang="x-default">MTD Service oAuth Token</display-name>
+        <description xml:lang="x-default">Stores Token that is shared between sites</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>organization</storage-scope>
+        <key-definition attribute-id="authType">
+            <display-name xml:lang="x-default">Authentication Type</display-name>
+            <description xml:lang="x-default">oAuth Token Type: Bearer, etc</description>
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="expiresIn">
+                <display-name xml:lang="x-default">Expires In</display-name>
+                <description xml:lang="x-default">oAuhth expiration in seconds</description>
+                <type>double</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="refreshToken">
+                <display-name xml:lang="x-default">Refresh Token</display-name>
+                <description xml:lang="x-default">oAuth Refresh Token</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="accessToken">
+                <display-name xml:lang="x-default">Access Token</display-name>
+                <description xml:lang="x-default">oAuth Access Token</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="General">
+                <display-name xml:lang="x-default">General</display-name>
+                <attribute attribute-id="authType"/>
+                <attribute attribute-id="accessToken"/>
+                <attribute attribute-id="refreshToken"/>
+                <attribute attribute-id="expiresIn"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+</metadata>

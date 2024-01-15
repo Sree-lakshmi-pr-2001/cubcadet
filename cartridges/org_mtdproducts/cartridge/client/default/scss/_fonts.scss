@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Slab:300,400,700&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: #383839;
+}
+
+header {
+    font-family: 'Lato', sans-serif;
+}
+
+.lt {
+    font-family: 'Lato', sans-serif;
+}
+
+.rb {
+    font-family: 'Roboto Slab', serif;
+}
+
+p {
+    &.rb {
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.88;
+        letter-spacing: normal;
+    }
+}
+
+button,
+.btn {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}

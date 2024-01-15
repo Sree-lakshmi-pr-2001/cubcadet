@@ -1,0 +1,71 @@
+<isinclude template="components/modules" />
+
+<footer>
+    <div class="upper-footer-md container">
+        <div class="row">
+            <div class="footer-controls col-sm-12 col-md-6 col-lg-4 offset-lg-1 order-md-1">
+                <div class="footer-email-signup">
+                    <iscontentasset aid="email-signup-form" />
+                </div>
+                    <div class="footer-btns-group">
+                        <iscontentasset aid="footer-buttons"/>
+                    </div>
+                    <iscontentasset aid="footer-social-email"/>
+            </div>
+            <div class="footer-container col-md-6 col-lg-7 order-md-0">
+                <div class="footer-item ">
+                    <iscontentasset aid="footer-about" />
+                </div>
+                <div class="footer-item ">
+                    <isif condition="${dw.system.Site.getCurrent().getCustomPreferenceValue('enableEWNewSales')}">
+                        <iscontentasset aid="footer-owners-center-EW" />
+                    <iselse/>
+                        <iscontentasset aid="footer-owners-center" />
+                    </isif>
+                </div>
+                <div class="footer-item ">
+                    <iscontentasset aid="footer-dealers-retailers" />
+                </div>
+                <div class="footer-item ">
+                    <iscontentasset aid="footer-customer-service" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info container">
+        <div class="footer-info-links">
+            <div class="footer-logo">
+            </div>
+
+
+            <div class="footer-site-links col-lg-6">
+                <iscontentasset aid="footer-site-links"/>
+            </div>
+
+            <iscomment> Back to Top Button</iscomment>
+            <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}">
+                <issvg icon="icon-back-to-top-arrow" image="true" altText="" />
+                <span class="btt-text">${Resource.msg('global.backtotop', 'common', null)}</span>
+            </button>
+
+
+            <div class="col-md-12 col-lg-6 copyright-notice">
+                <iscontentasset aid="footer-copy" />
+            </div>
+           <isinclude template="monetate/monetatefooter" />
+    </div>
+
+        <div class="disclaimer-text">
+            <iscontentasset aid="footer-disclaimer"/>
+        </div>
+    </div>
+
+    <isinclude url="${URLUtils.url('LiveAgent-Show')}" />
+</footer>
+<isif condition="${!('pageContext' in this) || empty(pageContext)}">
+    <isscript>pageContext = new Object();</isscript>
+</isif>
+<isscript>pageContext.locale = request.locale</isscript>
+<script>pageContext = <isprint value="${JSON.stringify(pageContext)}" encoding="off"/>;</script>
+<isinclude template="monetate/monetateuserinfo" />

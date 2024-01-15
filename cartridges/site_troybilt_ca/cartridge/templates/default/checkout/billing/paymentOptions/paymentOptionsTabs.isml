@@ -1,0 +1,9 @@
+<isscript>var financeUtil = require('int_financing_app/cartridge/scripts/helpers/Util');</isscript>
+<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption" status="loopSate">
+    <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
+        <isinclude template="checkout/billing/paymentOptions/creditCardTab" />
+    </isif>
+    <isif condition="${paymentOption.ID === financeUtil.VALUE.FINANCE_METHOD_ID}">
+        <isinclude template="checkout/billing/paymentOptions/financeCardTab" />
+    </isif>
+</isloop>

@@ -1,0 +1,71 @@
+<isinclude template="components/modules" />
+
+<isif condition="${typeof pdict.querystring.q !== 'undefined' && typeof pdict.querystring.fdid !== 'undefined' && !empty(pdict.querystring.q) && !empty(pdict.querystring.fdid)}">
+    <isset name="resetlink" value="${URLUtils.url('Search-Show', 'q', pdict.querystring.q, 'fdid', pdict.querystring.fdid)}" scope="page" />
+<iselseif condition="${typeof pdict.querystring.q !== 'undefined' && !empty(pdict.querystring.q)}">
+    <isset name="resetlink" value="${URLUtils.url('Search-Show', 'q', pdict.querystring.q)}" scope="page" />
+<iselseif condition="${typeof pdict.querystring.fdid !== 'undefined' && !empty(pdict.querystring.fdid)}">
+    <isset name="resetlink" value="${URLUtils.url('Search-ShowContent', 'fdid', pdict.querystring.fdid)}" scope="page" />
+<iselse/>
+    <isset name="resetlink" value="${URLUtils.url('Search-ShowContent', 'fdid', pdict.blogRootFolderID)}" scope="page" />
+</isif>
+
+<div class="filter-header">
+    <div class="header-bar d-md-none clearfix">
+        <div class="pull-left d-md-none">
+            <h4>${Resource.msg('refinement.filter', 'search', null)}</h4>
+            <!--- Results count --->
+            <div class="result-count">
+                ${Resource.msgf('blog.items', 'blog', null, pdict.contentSearch.contents.length)}
+            </div>
+        </div>
+
+        <div class="pull-right text-right">
+            <!--- Close button --->
+            <button class="svg close">
+                <span class="invisible">${Resource.msg('button.close', 'search', null)}</span>
+                <i class="fa fa-close"></i>
+            </button>
+
+        </div>
+    </div>
+</div>
+<div>
+    <div class="secondary-bar col-12 offset-sm-4 offset-md-0 col-sm-4 col-md-12">
+        <!--- Reset button --->
+        <button class="reset btn btn-block btn-outline-primary" data-href="${resetlink}">
+            ${Resource.msg('link.reset', 'search', null)}
+        </button>
+    </div>
+</div>
+
+<div>
+    <div class="content-refinements">
+        <isloop items="${pdict.contentSearch.refinements}" var="refinement">
+            <div class="card collapsible-sm content-refinement refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
+                <div class="card-header">
+                    ${refinement.displayName}
+                </div>
+                <div class="card-body">
+                    <!--- CATEGORY REFINEMENTS --->
+                    <isif condition="${refinement.isCategoryRefinement}">
+                        <isset name="categories" value="${refinement.values}" scope="page" />
+                        <isinclude template="search/refinements/categories" />
+                    </isif>
+
+                    <!--- ATTRIBUTE REFINEMENTS --->
+                    <isif condition="${refinement.isAttributeRefinement}">
+                        <isinclude template="search/refinements/attributes" />
+                    </isif>
+
+                </div>
+            </div>
+        </isloop>
+    </div>
+</div>
+
+
+
+
+
+

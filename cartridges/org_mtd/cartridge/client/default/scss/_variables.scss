@@ -1,0 +1,575 @@
+@import "utilities/functions";
+@import "bootstrap/scss/functions";
+
+// font-awesome font file locations in relation to target location of the css file.
+$fa-font-path: "../fonts";
+
+// flag icons location in relation to target location of the css file.
+$flag-icon-css-path: "../fonts/flags/";
+
+//--------------------------------
+//  COLORS
+//--------------------------------
+
+// Theme colors documentation: https://getbootstrap.com/docs/4.1/getting-started/theming/#theme-colors
+
+// Color Palette
+
+/* Variable names from http://chir.ag/projects/name-that-color */
+
+$white: #fff !default;
+$black: #000 !default;
+$trans: transparent !default;
+
+// MTD Parts Brand Colors
+$mtd-green: #199422;
+$mtd-dk-green: #085f0d;
+$mtd-gray: #262626;
+$mtd-lt-gray: #7c7a7a;
+
+$ui-green: #167f1d;
+$ui-blue: #31708f;
+$ui-yellow: #ffc914;
+$ui-red: #92110f;
+$ui-orange: #ec4e20;
+$ui-dk-blue: #29335c;
+
+// Gray Colors - Bootstrap overrides
+$gray-100: #f8f9fa !default;
+$gray-200: #d0cfcf !default;
+$gray-300: #d0cfcf !default; //OOTB
+$gray-400: #a8a7a7 !default;
+$gray-500: #a8a7a7 !default; //OOTB
+$gray-600: #7c7a7a !default;
+$gray-700: #7c7a7a !default; //OOTB
+$gray-800: #262626 !default;
+$gray-900: #262626 !default; //OOTB
+
+// Theme Mappings
+$colors: () !default;
+$colors: map-merge(
+    (
+        "mtd-green": $mtd-green,
+        "mtd-dk-green": $mtd-dk-green,
+        "mtd-gray": $mtd-gray,
+        "mtd-lt-gray": $mtd-lt-gray,
+        "ui-green": $ui-green,
+        "ui-blue": $ui-blue,
+        "ui-yellow": $ui-yellow,
+        "ui-red": $ui-red,
+        "ui-orange": $ui-orange,
+        "ui-dk-blue": $ui-dk-blue,
+        "trans": $trans,
+        "white": $white,
+        "black": $black
+    ),
+    $colors
+);
+
+$brand-main: $mtd-green !default;
+$brand-second: $mtd-gray !default;
+$brand-light: $mtd-lt-gray !default;
+$brand-dark: $mtd-dk-green !default;
+
+$primary: $mtd-green !default;
+$secondary: $mtd-gray !default;
+$dark: $mtd-dk-green !default;
+$light: $mtd-lt-gray !default;
+
+$success: $ui-green !default;
+$info: $ui-blue !default;
+$warning: $ui-yellow !default;
+$danger: $ui-red !default;
+
+$accent-1: $ui-orange !default;
+$accent-2: $ui-yellow !default;
+$accent-3: $ui-dk-blue !default;
+$accent-4: $ui-green !default;
+$tertiary: $gray-500 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        "brand-main": $brand-main,
+        "brand-second": $brand-second,
+        "brand-light": $brand-light,
+        "brand-dark": $brand-dark,
+        "primary": $primary,
+        "secondary": $secondary,
+        "dark": $dark,
+        "light": $light,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "accent-1": $accent-1,
+        "accent-2": $accent-2,
+        "accent-3": $accent-3,
+        "accent-4": $accent-4,
+        "tertiary": $tertiary
+    ),
+    $theme-colors
+);
+
+//--------------------------------
+//  OTHER THEME COLORS
+//--------------------------------
+
+$brand-success: $success !default;
+$brand-danger: $danger !default;
+$brand-primary: $primary !default;
+$light-gray: $gray-100 !default;
+$slightly-darker-gray: $gray-300 !default;
+$dark-gray: $gray-400 !default;
+$darker-gray: $gray-800 !default;
+$state-danger-text: $white !default;
+
+//--------------------------------
+//  GRID
+//--------------------------------
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 544px,
+    md: 769px,
+    lg: 992px,
+    xl: 1374px
+) !default;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 940px,
+    xl: 1320px
+) !default;
+
+//--------------------------------
+//  ALERTS
+//--------------------------------
+
+$alert-bg-level: -10 !default; // bootstrap override
+$alert-border-level: -9 !default; // bootstrap override
+$alert-color-level: 0 !default; // bootstrap override
+$alert-padding-y: 1rem !default; //bootstrap override
+$alert-danger-bg: $brand-danger !default;
+$alert-success-bg: $brand-success !default;
+
+//--------------------------------
+//  BACKGROUNDS
+//--------------------------------
+
+// BG utility class documentation: https://getbootstrap.com/docs/4.0/utilities/colors/#background-color
+
+// Gradients
+// Gradients utility class documentation: https://getbootstrap.com/docs/4.0/utilities/colors/#background-gradient
+
+$enable-gradients: false; // bootstrap override -> must be set to true for gradients to be visible on the site
+
+//--------------------------------
+//  BORDERS / DIVIDERS
+//--------------------------------
+
+// TODO - Should we use the border utility classes instead?
+
+// Borders utility class documentation: https://getbootstrap.com/docs/4.0/utilities/borders/
+
+$border-success: 1px solid $success !default;
+$border-warning: 1px solid $warning !default;
+$border-danger: 1px solid $danger !default;
+
+$border-width: 1px !default; // could be bootstrap override
+$border-color: $gray-200 !default; // default color - could be bootstrap override
+$border: 1px solid $border-color !default;
+$border-thick: 4px solid $border-color !default;
+$border2-color: $success !default;
+$border2: 1px solid $border2-color !default;
+$border3-color: $warning !default;
+$border3: 1px solid $border3-color !default;
+$border4-color: $danger !default;
+$border4: 1px solid $border4-color !default;
+$border5-color: $gray-300 !default; //OOTB
+$border5: 1px solid $border5-color !default; //OOTB
+$border6: 1px solid rgba(0, 0, 0, 0.2) !default; //OOTB
+$horizontal-border-grey: $border-color !default;
+$hr-border-color: $border-color !default;
+$horizontal-rule-grey: $border-color !default;
+
+//--------------------------------
+//  BOX SHADOWS
+//--------------------------------
+
+// TODO - Should we update to 4.1 so we can include the shadow utility?
+
+$enable-shadows: true !default; // bootstrap override
+$shadow: 0 8px 14px 0 rgba(224, 229, 238, 0.5) !default;
+$shadow2: 0 8px 14px 0 rgba(0, 20px, 31px, 0.05) !default; //OOTB
+$shadow3: 0 8px 14px 0 rgba(0, 0, 0, 0.16) !default; //OOTB
+
+//--------------------------------
+//  TYPOGRAPHY
+//--------------------------------
+
+$font-family-sans-serif: 'Source Sans Pro', 'Arial', sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: 1rem !default; // 16px - sets base font size applied to html element
+$font-size-sm: $font-size-base * 0.875 !default; // 14px
+$font-size-xs: $font-size-base * 0.75 !default; // 12px
+$body-color: $secondary !default; //bootstrap override
+$font-size-body: $font-size-sm !default; // 14px - font size applied to body element
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
+$line-height-base: 1.425 !default; // Bootstrap Override
+
+// Base Elements
+$paragraph-line-height: 1.25rem !default;
+$paragraph-small-line-height: 1rem !default;
+
+// Displays
+$display1-size: 3.5rem !default; // 56px - bootstrap override
+$display2-size: 3rem !default; // 48px - bootstrap override
+$display1-weight: $font-weight-bold !default; // bootstrap override
+$display2-weight: $font-weight-bold !default; // bootstrap override
+$display1-mobile-size: 3rem !default; // bootstrap override
+$display2-mobile-size: 2.5rem !default; // bootstrap override
+
+// Headings
+$headings-font-family: 'Source Sans Pro', 'Arial', sans-serif !default; // bootstrap override
+$headings-font-weight: $font-weight-bold !default; // bootstrap override
+$h1-font-size: $font-size-base * 2.5 !default; // 40px - bootstrap override
+$h2-font-size: $font-size-base * 2.25 !default; // 36px - bootstrap override
+$h3-font-size: $font-size-base * 1.875 !default; // 30px - bootstrap override
+$h4-font-size: $font-size-base * 1.375 !default; // 22px - bootstrap override
+$h5-font-size: $font-size-base * 1.125 !default; // 18px - bootstrap override
+$h6-font-size: $font-size-xs !default; //bootstrap override
+
+$h1-mobile-font-size: 2.25rem !default; // bootstrap override
+$h2-mobile-font-size: 1.875rem !default; // bootstrap override
+$h3-mobile-font-size: $h3-font-size !default;
+
+// Labels
+$label-xl: $font-size-base !default; // 16px
+$label-sm: $font-size-base * 0.875 !default; // 14px - Base Label Size
+$label-xs: $font-size-base * 0.75 !default; // 12px
+
+//--------------------------------
+//  LINKS
+//--------------------------------
+
+$link-font-size: $font-size-sm !default;
+$link-color: $primary !default; //bootstrap override
+$link-hover-color: $primary !default; //bootstrap override
+$link-decoration: none !default;
+$link-decoration-alt: underline !default;
+
+//--------------------------------
+//  BUTTONS
+//--------------------------------
+
+$btn-icon-size: 12px !default;
+$btn-icon-spacing: 8px !default;
+
+$btn-link-color: $secondary !default; //bootstrap override
+
+$btn-disabled-opacity: 1 !default;
+$btn-disabled-main-color: $gray-600 !default;
+$btn-disabled-main-bg: $gray-200 !default;
+$btn-disabled-main-border-color: $gray-200 !default;
+$btn-disabled-alt-color: $gray-600 !default;
+$btn-disabled-alt-bg: $gray-200 !default;
+$btn-disabled-alt-border-color: $gray-200 !default;
+
+$btn-border-width: 2px !default; //bootstrap override
+$btn-border-radius: 0 !default; //bootstrap override
+$btn-border-radius-lg: $btn-border-radius !default; //bootstrap override
+$btn-border-radius-sm: $btn-border-radius !default; //bootstrap override
+
+$btn-font-size: $font-size-body !default; //bootstrap override
+$btn-font-weight: $font-weight-bold !default; //bootstrap override
+
+$btn-padding-y: 0.625rem !default; //bootstrap override
+$btn-line-height: 1.125 !default; //bootstrap override
+
+$font-size-lg: $font-size-base !default; //bootstrap override
+$btn-padding-y-lg: 0.9375rem !default; //bootstrap override
+
+//--------------------------------
+//  FORMS
+//--------------------------------
+// all bootstrap overrides
+$form-group-margin-bottom: 1.25rem !default;
+$input-line-height: 18px !default;
+$input-border-color: $gray-300 !default;
+$input-color: $body-color !default;
+$input-border-radius: 0 !default;
+$input-box-shadow: none !default;
+$input-bg: $white !default;
+$input-placeholder-color: $gray-400 !default;
+$input-focus-border-color: $gray-800 !default;
+$input-focus-color: $gray-400 !default;
+$custom-select-bg: $white !default;
+$custom-select-line-height: 18px !default;
+$custom-select-border-radius: 0 !default;
+$custom-select-focus-box-shadow: none !default;
+$custom-select-focus-border-color: $gray-800 !default;
+$input-padding-x: 0.75rem !default;
+$input-padding-y: 0.625rem !default;
+$custom-select-padding-y: 0.625rem !default;
+$custom-select-bg-size: 22px 22px !default;
+$custom-checkbox-indicator-border-radius: 0.15rem !default;
+$custom-control-indicator-box-shadow: none !default;
+$custom-control-indicator-bg: $white !default;
+$text-muted: $gray-400 !default;
+
+//--------------------------------
+//  BUTTONS & FORMS
+//--------------------------------
+
+$input-btn-padding-y: 0.75rem !default; //bootstrap override
+$input-btn-padding-x: 1rem !default; //bootstrap override
+$btn-box-shadow: 0 0 0 transparent !default; //bootstrap override
+$btn-active-box-shadow: 0 0 0 transparent !default; //bootstrap override
+
+//--------------------------------
+//  DROPDOWN MENU
+//--------------------------------
+
+$menu-link: $gray-200 !default;
+$close-menu-bg: $gray-200 !default;
+$dropdown-link-hover-bg: $gray-200 !default; //bootstrap override
+$dropdown-link-hover-color: $gray-200 !default; //bootstrap override
+
+//--------------------------------
+// BREADCRUMBS
+//--------------------------------
+
+$breadcrumb-link-font-size: 0.6875rem !default;
+$breadcrumb-bg: $white !default;
+$breadcrumb-before-color: $gray-800 !default;
+$breadcrumb-active-color: $primary !default; //bootstrap override
+$breadcrumb-divider-color: $gray-800 !default; //bootstrap override
+$breadcrumb-divider: "|" !default; //bootstrap override
+$breadcrumb-item-padding: 0.625rem !default; // bootstrap override
+
+//--------------------------------
+// CONTENT SWITCHER
+//--------------------------------
+
+$contentswitcher-active-color: $white !default;
+$contentswitcher-active-bg: $primary !default;
+
+//--------------------------------
+// Product Tile
+//--------------------------------
+
+$product-tile-promo: $primary !default; //TODO Check out later
+$product-number-grey: $gray-800 !default;
+
+//--------------------------------
+//  SPACING
+//--------------------------------
+
+// TODO - Units of 8px are used per styleguide spacing section
+
+$spacer: 1rem !default; // 16px
+$spacers: () !default;
+$spacers: map-merge(
+    (
+        0: 0,
+        1: ($spacer * 0.5), // 8px
+        2: $spacer,
+        // 16px
+        3: ($spacer * 1.5),
+        // 24px
+        4: ($spacer * 2),
+        // 32px
+        5: ($spacer * 2.5),
+        // 40px
+        6: ($spacer * 3),
+        // 48px
+        7: ($spacer * 3.5),
+        // 56px
+        8: ($spacer * 4),
+        // 64px
+        9: ($spacer * 4.5) // 72px
+    ),
+    $spacers
+);
+
+//This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge(
+    (
+        25: 25%,
+        33: 33.3333%,
+        50: 50%,
+        66: 66.6666%,
+        75: 75%,
+        100: 100%
+    ),
+    $sizes
+);
+
+// Grid columns
+
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default; // How do we want to update this to be reflective of the 8px spacing for mobile?
+
+//--------------------------------
+//  CARDS & ACCORDIONS
+//--------------------------------
+
+$accordion-spacer-y: 0.1rem !default;
+$accordion-spacer-x: 1rem !default;
+$accordion-btn-y: 0.5rem !default;
+$accordion-btn-x: 1.5rem !default;
+$accordion-paragraph-margin: 50px !default;
+
+$card-border-radius: 0 !default; //bootstrap override
+$card-border-color: $border-color !default; //bootstrap override
+
+//--------------------------------
+//  MODALS
+//--------------------------------
+
+$modal-border-top: 5px solid $primary !default;
+$modal-header-border-width: 0 !default;
+$modal-header-border-color: transparent !default;
+$modal-header-padding: 48px !default; //bootstrap override
+$modal-inner-padding: 48px !default; //bootstrap override
+
+//--------------------------------
+//  TOOLTIPS
+//--------------------------------
+
+$tooltip-bg: $secondary !default; //bootstrap override
+$tooltip-opacity: 1 !default; //bootstrap override
+$tooltip-max-width: 300px !default; //bootstrap override
+$tooltip-padding-y: 1.25rem !default; //bootstrap override
+$tooltip-padding-x: 1.25rem !default; //bootstrap override
+$tooltip-border-radius: 0.3rem !default; //bootstrap override
+
+$tooltip-arrow-width: 2rem !default; //bootstrap override
+$tooltip-arrow-height: 1rem !default; //bootstrap override
+
+//--------------------------------
+//  TABS
+//--------------------------------
+
+$nav-pills-link-color: $secondary !default;
+$nav-pills-link-active-color: $white !default;
+$nav-pills-link-active-bg: $secondary !default;
+$nav-tabs-link-color: $gray-600 !default;
+$nav-tabs-link-active-color: $primary !default;
+$nav-tabs-link-hover-border-color: $trans !default;
+$nav-link-disabled-color: $gray-400 !default;
+$nav-tabs-border-color: $secondary !default;
+$nav-tabs-border-bottom-width: 2px !default;
+
+//--------------------------------
+//  TABLES
+//--------------------------------
+
+$table-th-font-size: $font-size-base !default;
+$table-th-border-color: $gray-400 !default;
+$table-border-color: $gray-400 !default;
+$table-cell-padding: 0.9375rem !default; //bootstrap override
+$table-cell-padding-sm: 0.9375rem !default; //bootstrap override
+
+//--------------------------------
+//  Loader
+//--------------------------------
+
+$loader-spinner-color: $primary !default;
+
+//--------------------------------
+//  QUICKVIEW COMPONENT
+//--------------------------------
+
+$quickview-font-size1: $font-size-base * 0.625 !default;
+$quickview-font-size2: $font-size-base * 1.5 !default;
+$quickview-font-size3: $font-size-base * 1.6 !default;
+$quickview-font-size4: $font-size-base * 1.875 !default;
+$quickview-font-size5: $font-size-base * 2 !default;
+
+//--------------------------------
+//  ICONOGRAPHY
+//--------------------------------
+
+$logo-svg: url("../images/svg-icons/logo.svg");
+$cart-svg: url("../images/svg-icons/cart.svg");
+$mobile-menu-svg: url("../images/svg-icons/mobile-menu.svg");
+$search-svg: url("../images/svg-icons/search.svg");
+$email-svg: url("../images/svg-icons/email.svg");
+$checkbox-selected-svg: url("../images/svg-icons/checkbox-selected.svg");
+$checkbox-unselected-svg: url("../images/svg-icons/checkbox-unselected.svg");
+$radio-selected-svg: url("../images/svg-icons/radio-selected.svg");
+$radio-unselected-svg: url("../images/svg-icons/radio-unselected.svg");
+$arrow-left-lg-svg: url("../images/svg-icons/arrow-left-lg.svg");
+$arrow-right-lg-svg: url("../images/svg-icons/arrow-right-lg.svg");
+$arrow-down-sm-svg: url("../images/svg-icons/arrow-down-sm.svg");
+$arrow-up-sm-svg: url("../images/svg-icons/arrow-up-sm.svg");
+$arrow-right-sm-svg: url("../images/svg-icons/arrow-right-sm.svg");
+$arrow-left-sm-svg: url("../images/svg-icons/arrow-left-sm.svg");
+$arrow-up-round-svg: url("../images/svg-icons/arrow-up-round.svg");
+$close-dark-svg: url("../images/svg-icons/close-dark.svg");
+$close-white-svg: url("../images/svg-icons/close-white.svg");
+$minus-svg: url("../images/svg-icons/minus.svg");
+$plus-svg: url("../images/svg-icons/plus.svg");
+$minus-white-svg: url("../images/svg-icons/minus-white.svg");
+$plus-white-svg: url("../images/svg-icons/plus-white.svg");
+$facebook-svg: url("../images/svg-icons/facebook.svg");
+$instagram-svg: url("../images/svg-icons/instagram.svg");
+$snapchat-svg: url("../images/svg-icons/snapchat.svg");
+$twitter-svg: url("../images/svg-icons/twitter.svg");
+$youtube-svg: url("../images/svg-icons/youtube.svg");
+$svg-facebook-filled-path: url("../images/svg-icons/icon-facebook-filled.svg");
+$svg-google-filled-path: url("../images/svg-icons/icon-google-filled.svg");
+$icon-not-fit: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 43 43' xml:space='preserve'%3E%3Cpath d='M21.541 43.041c-2.9 0-5.7-.6-8.3-1.7-5.2-2.2-9.4-6.3-11.5-11.5-1.1-2.6-1.7-5.5-1.7-8.3 0-2.9.6-5.7 1.7-8.4 1-2.6 2.6-4.9 4.6-6.9 2-2 4.3-3.5 6.9-4.6 2.6-1.1 5.5-1.7 8.3-1.7 2.9 0 5.7.6 8.4 1.7 5.1 2.2 9.2 6.3 11.4 11.4 1.1 2.6 1.7 5.5 1.7 8.4 0 2.9-.6 5.7-1.7 8.3-1.1 2.6-2.6 4.9-4.6 6.9-2 2-4.3 3.5-6.8 4.6-2.7 1.2-5.6 1.8-8.4 1.8' fill='%23ed2124'/%3E%3Cpath d='M21.441 39.741c4.9.1 9.6-1.8 13-5.3 3.5-3.4 5.4-8.1 5.3-12.9.1-4.9-1.8-9.6-5.3-13-3.4-3.5-8.1-5.4-13-5.3-4.9-.1-9.5 1.8-12.9 5.3-3.5 3.4-5.4 8.1-5.3 13-.1 4.9 1.9 9.5 5.3 12.9 3.4 3.5 8.1 5.4 12.9 5.3' fill='%23f0efef'/%3E%3Cpath fill='none' stroke='%23ed2124' stroke-width='4' d='m14.441 14.541 14 14M28.041 14.541l-13 14'/%3E%3C/svg%3E");
+$svg-radio-selected-path-blk: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' data-name='Component 17 – 2'%3E%3Cg fill='%23c00' data-name='Path 972'%3E%3Cpath d='M13 25.5c-3.339 0-6.478-1.3-8.839-3.661A12.418 12.418 0 0 1 .5 13c0-3.339 1.3-6.478 3.661-8.839A12.422 12.422 0 0 1 13 .5c3.339 0 6.478 1.3 8.839 3.661A12.422 12.422 0 0 1 25.5 13c0 3.339-1.3 6.478-3.661 8.839A12.418 12.418 0 0 1 13 25.5Z'/%3E%3Cpath fill='%233b3b3b' d='M13 1a11.921 11.921 0 0 0-8.485 3.515A11.921 11.921 0 0 0 1 13c0 3.205 1.248 6.219 3.515 8.485A11.921 11.921 0 0 0 13 25c3.205 0 6.219-1.248 8.485-3.515A11.921 11.921 0 0 0 25 13c0-3.205-1.248-6.219-3.515-8.485A11.921 11.921 0 0 0 13 1m0-1c7.18 0 13 5.82 13 13s-5.82 13-13 13S0 20.18 0 13 5.82 0 13 0Z'/%3E%3C/g%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' d='m8.175 13.842 3.9 3.282 2.233-3.592 3.517-5.658' data-name='Path 973'/%3E%3C/svg%3E%0A");
+$icon-backorder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.1 49.1' xml:space='preserve'%3E%3Cpath d='M4.1 5.3H38c1.7 0 3.1 1.4 3.1 3.1v34.5c0 1.7-1.4 3.1-3.1 3.1H4.1C2.4 46 1 44.6 1 42.9V8.4c0-1.7 1.4-3.1 3.1-3.1z' fill='%2394b3de'/%3E%3Cpath d='M18.3 46H3.5c-.9 0-1.8-.4-2.5-1.1-.6-.6-1-1.5-1-2.4V8.2c0-.9.3-1.8.9-2.5.6-.6 1.1-1 1.6-1h11.9c.7-3.2 3.8-5.2 7-4.6.9.2 1.8.6 2.5 1.2 1.1.8 1.8 2 2 3.4h11.9c.9 0 1.8.4 2.5 1.1.7.6 1.1 1.5 1.1 2.5v11.9h-3.5v-12h-6.2v7.6H9.8V8.2H3.5v34.2h14.8V46zm2.9-38c1.3 0 2.3-1 2.4-2.3v-.1c0-1.3-1.1-2.4-2.4-2.4-1.3 0-2.4 1.1-2.4 2.4 0 1.3 1 2.4 2.4 2.4-.1 0-.1 0 0 0z'/%3E%3Ccircle cx='34' cy='36' r='13' fill='%2394b3de'/%3E%3Cpath d='M34.1 49.1c3.5.1 6.8-1.3 9.2-3.8 2.5-2.4 3.9-5.8 3.8-9.2.1-3.5-1.3-6.8-3.8-9.2-2.4-2.5-5.8-3.9-9.2-3.8-2.1 0-4.2.4-6.1 1.4-1.8 1-3.3 2.3-4.5 3.8V23H21v10.3h10.3v-2.4h-6.8c1-1.6 2.4-2.9 4-4 1.7-1 3.6-1.5 5.6-1.5 5.8 0 10.5 4.6 10.6 10.4v.2c0 5.8-4.6 10.5-10.4 10.6h-.2c-2.2 0-4.4-.7-6.2-1.9-1.8-1.2-3.2-3-3.9-5.1h-2.5c.7 2.8 2.4 5.2 4.7 6.9 2.2 1.7 5 2.6 7.9 2.6z'/%3E%3C/svg%3E%0A");
+$icon-in-stock: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 46 46"> <path fill="%23199422" d="M4.1 46C2.4 46 1 44.6 1 42.9V8.4c0-1.7 1.4-3.1 3.1-3.1l13.1-.5c0-1.9.9-2.9 2.8-2.9 1.8 0 4.8 1.1 4.9 3l13.4.1c1.7 0 3.1 1.4 3.1 3.1v34.5c0 1.7-1.4 3.1-3.1 3.1L4.1 46z"/> <path d="M18.3 46H3.5c-.9 0-1.8-.4-2.5-1.1-.6-.6-1-1.5-1-2.4V8.2c0-.9.3-1.8.9-2.5.6-.6 1.1-1 1.6-1h11.9c.7-3.2 3.8-5.2 7-4.6.9.2 1.8.6 2.5 1.2 1.1.8 1.8 2 2 3.4h11.9c.9 0 1.8.4 2.5 1.1.7.6 1.1 1.5 1.1 2.5v11.9h-3.5v-12h-6.2v7.6H9.8V8.2H3.5v34.2h14.8V46zm11.1-1.5L20 35.1l2.5-2.5 6.9 6.9 14.1-14.1 2.5 2.5-16.6 16.6zM20.3 7.1c1.3 0 2.3-1 2.4-2.3v-.1c0-1.3-1.1-2.4-2.4-2.4s-2.4 1.1-2.4 2.4 1 2.4 2.4 2.4c-.1 0-.1 0 0 0z"/></svg>');
+$icon-will-fit: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 26 26"> <path fill="%23199422" d="M13 25.5c-3.3 0-6.5-1.3-8.8-3.7C1.8 19.4.5 16.3.5 13s1.3-6.5 3.7-8.8C6.5 1.8 9.7.5 13 .5s6.5 1.3 8.8 3.7c2.4 2.4 3.7 5.5 3.7 8.8s-1.3 6.5-3.7 8.8c-2.3 2.4-5.5 3.7-8.8 3.7z"/> <path d="M13 1C9.8 1 6.8 2.2 4.5 4.5S1 9.8 1 13s1.2 6.2 3.5 8.5S9.8 25 13 25s6.2-1.2 8.5-3.5S25 16.2 25 13s-1.2-6.2-3.5-8.5S16.2 1 13 1m0-1c7.2 0 13 5.8 13 13s-5.8 13-13 13S0 20.2 0 13 5.8 0 13 0z"/> <path fill="none" stroke="%23000" stroke-width="2" d="m8.2 13.8 3.9 3.3 2.2-3.6 3.5-5.7"/></svg>');
+
+// TODO - Is this how we want to do SVGs (it's the bootstrap way)? Or some other approach...
+
+$svg-facebook-filled: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='20' viewBox='0 0 11 20'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M6.996 20v-9.11h3.188l.477-3.566H6.996V5.053c0-1.03.297-1.732 1.83-1.732l1.943-.001V.14A27.125 27.125 0 0 0 7.922 0C5.105 0 3.176 1.657 3.176 4.7v2.624H0v3.566h3.176V20h3.82'/%3E%3C/svg%3E");
+
+$svg-google-filled: url("data:image/svg+xml,%3Csvg width='46px' height='46px' viewBox='0 0 46 46' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns'%3E%3C!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Ebtn_google_light_normal_ios%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cfilter x='-50%25' y='-50%25' width='200%25' height='200%25' filterUnits='objectBoundingBox' id='filter-1'%3E%3CfeOffset dx='0' dy='1' in='SourceAlpha' result='shadowOffsetOuter1'%3E%3C/feOffset%3E%3CfeGaussianBlur stdDeviation='0.5' in='shadowOffsetOuter1' result='shadowBlurOuter1'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.168 0' in='shadowBlurOuter1' type='matrix' result='shadowMatrixOuter1'%3E%3C/feColorMatrix%3E%3CfeOffset dx='0' dy='0' in='SourceAlpha' result='shadowOffsetOuter2'%3E%3C/feOffset%3E%3CfeGaussianBlur stdDeviation='0.5' in='shadowOffsetOuter2' result='shadowBlurOuter2'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.084 0' in='shadowBlurOuter2' type='matrix' result='shadowMatrixOuter2'%3E%3C/feColorMatrix%3E%3CfeMerge%3E%3CfeMergeNode in='shadowMatrixOuter1'%3E%3C/feMergeNode%3E%3CfeMergeNode in='shadowMatrixOuter2'%3E%3C/feMergeNode%3E%3CfeMergeNode in='SourceGraphic'%3E%3C/feMergeNode%3E%3C/feMerge%3E%3C/filter%3E%3Crect id='path-2' x='0' y='0' width='40' height='40' rx='2'%3E%3C/rect%3E%3C/defs%3E%3Cg id='Google-Button' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' sketch:type='MSPage'%3E%3Cg id='9-PATCH' sketch:type='MSArtboardGroup' transform='translate(-608.000000, -160.000000)'%3E%3C/g%3E%3Cg id='btn_google_light_normal' sketch:type='MSArtboardGroup' transform='translate(-1.000000, -1.000000)'%3E%3Cg id='logo_googleg_48dp' sketch:type='MSLayerGroup' transform='translate(15.000000, 15.000000)'%3E%3Cpath d='M17.64,9.20454545 C17.64,8.56636364 17.5827273,7.95272727 17.4763636,7.36363636 L9,7.36363636 L9,10.845 L13.8436364,10.845 C13.635,11.97 13.0009091,12.9231818 12.0477273,13.5613636 L12.0477273,15.8195455 L14.9563636,15.8195455 C16.6581818,14.2527273 17.64,11.9454545 17.64,9.20454545 L17.64,9.20454545 Z' id='Shape' fill='%234285F4' sketch:type='MSShapeGroup'%3E%3C/path%3E%3Cpath d='M9,18 C11.43,18 13.4672727,17.1940909 14.9563636,15.8195455 L12.0477273,13.5613636 C11.2418182,14.1013636 10.2109091,14.4204545 9,14.4204545 C6.65590909,14.4204545 4.67181818,12.8372727 3.96409091,10.71 L0.957272727,10.71 L0.957272727,13.0418182 C2.43818182,15.9831818 5.48181818,18 9,18 L9,18 Z' id='Shape' fill='%2334A853' sketch:type='MSShapeGroup'%3E%3C/path%3E%3Cpath d='M3.96409091,10.71 C3.78409091,10.17 3.68181818,9.59318182 3.68181818,9 C3.68181818,8.40681818 3.78409091,7.83 3.96409091,7.29 L3.96409091,4.95818182 L0.957272727,4.95818182 C0.347727273,6.17318182 0,7.54772727 0,9 C0,10.4522727 0.347727273,11.8268182 0.957272727,13.0418182 L3.96409091,10.71 L3.96409091,10.71 Z' id='Shape' fill='%23FBBC05' sketch:type='MSShapeGroup'%3E%3C/path%3E%3Cpath d='M9,3.57954545 C10.3213636,3.57954545 11.5077273,4.03363636 12.4404545,4.92545455 L15.0218182,2.34409091 C13.4631818,0.891818182 11.4259091,0 9,0 C5.48181818,0 2.43818182,2.01681818 0.957272727,4.95818182 L3.96409091,7.29 C4.67181818,5.16272727 6.65590909,3.57954545 9,3.57954545 L9,3.57954545 Z' id='Shape' fill='%23EA4335' sketch:type='MSShapeGroup'%3E%3C/path%3E%3Cpath d='M0,0 L18,0 L18,18 L0,18 L0,0 Z' id='Shape' sketch:type='MSShapeGroup'%3E%3C/path%3E%3C/g%3E%3Cg id='handles_square' sketch:type='MSLayerGroup'%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+$custom-select-indicator: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDIwIDE4Ij4gICAgPHBhdGggZmlsbD0iIzRBNEE0QSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNC42MDUgNkw0IDYuNTUgMTAgMTJsNi01LjQ1LS42MDUtLjU1LTUuMzk4IDQuOTA1eiIvPjwvc3ZnPg==);
+$svg-arrow-right: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4gICAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNOCAxNS4zOTVsNC45MDUtNS4zOTJMOCA0LjYwNSA4LjU1IDQgMTQgMTBsLTUuNDUgNnoiLz48L3N2Zz4=);
+$svg-check: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23ff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+
+//--------------------------------
+//  SLICK CAROUSEL
+//--------------------------------
+
+$slick-arrow-bg-color: transparent;
+$slick-arrow-bg-color-hover: transparent;
+
+//--------------------------------
+//  MOTION
+//--------------------------------
+
+$ease-in-cubic-bezier: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-cubic-bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
+$card-hover-scale: scale(1.25);
+$button-hover-scaley: scaleY(1.5);
+
+@keyframes easeInCubicMotion {
+    to {
+        transform: translate(150px);
+    }
+}
+
+@keyframes easeOutCubicMotion {
+    to {
+        transform: translate(150px);
+    }
+}
+
+$ease-in-cubic: easeInCubicMotion 200ms $ease-in-cubic-bezier;
+$ease-out-cubic: easeOutCubicMotion 200ms $ease-out-cubic-bezier;

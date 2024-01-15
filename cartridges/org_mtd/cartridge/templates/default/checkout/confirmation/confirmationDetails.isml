@@ -1,0 +1,82 @@
+<div class="card confirm-details">
+    <div class="card-header">
+        <h4>${Resource.msg('title.receipt', 'confirmation', null)}</h4>
+    </div>
+
+    <div class="card-body">
+        <p>
+            <span class="summary-section-label order-number-label">${Resource.msg('label.order.number', 'confirmation', null)}</span>
+            <span class="summary-details order-number">${pdict.order.orderNumber}</span>
+            <br/>
+            <span class="summary-section-label order-date-label">${Resource.msg('label.order.date', 'confirmation', null)}</span>
+            <span class="summary-details order-date"><isprint value="${pdict.order.creationDate}" style="DATE_SHORT"/></span>
+            <isif condition="${!pdict.isConfirmation}">
+                <br/>
+                <span class="summary-section-label order-number-label">${Resource.msg('label.orderhistory.orderstatus','account',null)}</span>
+                <span class="summary-details order-number"> ${pdict.order.orderStatus}</span>
+                <br/>
+                <span class="summary-section-label order-number-label">${Resource.msg('label.orderhistory.shippingstatus','account',null)}</span>
+                <span class="summary-details order-number">${pdict.order.shippingStatus}</span>
+            </isif>
+        </p>
+
+        <isinclude template="checkout/shipping/shippingSummary" />
+        <isinclude template="checkout/billing/billingSummary" />
+
+        <iscomment>Prop65  Acknowledged Date if exists</iscomment>
+        <isif condition="${pdict.order.prop65Ackowledged}">
+            <span class="summary-section-label">${Resource.msg('label.order.prop65Acknowledged', 'confirmation', null)}:</span>
+            <div>
+                <isprint value="${pdict.order.prop65Ackowledged}" style="DATE_LONG"/>
+                <isprint value="${pdict.order.prop65Ackowledged}" style="DATE_TIME"/>
+            </div>
+        </isif>
+
+        <iscomment>Order Notes </iscomment>
+        <isif condition="${pdict.order.isEpcotOrder === true }">
+            <isif condition="${pdict.order.trackingDetails !== null && pdict.order.trackingDetails.length > 0}">
+                <isloop items="${pdict.order.trackingDetails}" var="tracking">
+                    <span class="summary-details tracking-notes">
+                        <p>
+                            <isif condition="${tracking.shippedDate}">
+                                <strong>${Resource.msg('package.shipped.on', 'confirmation', null)} ${tracking.shippedDate}</strong>
+                                <br/>
+                            </isif>
+                            <isif condition="${tracking.carrierType === 'LTL'}">
+                                
+                                    ${Resource.msg('ltl.pro.text', 'confirmation', null)} ${tracking.trackingNumber}
+                                    <br/>
+                                    <isif condition="${tracking.url}">
+                                        <a href="${tracking.url}" target="_blank">${tracking.carrierName}</a>
+                                    </isif>
+                                    <br/>
+                            
+                                <iselse>
+                                    ${tracking.trackingNumber} - <a href="${tracking.url}${tracking.trackingNumber}" target="_blank">${Resource.msg('track.your.package', 'confirmation', null)}</a>
+                            </isif>
+                        </p>
+                    </span>
+                </isloop>
+                
+            </isif>
+        <iselse>
+            <isif condition="${pdict.order.notes.size() > 0}">
+                <span class="summary-section-label order-notes">${Resource.msg('label.order.notes', 'confirmation', null)}</span>
+                <isloop items="${pdict.order.notes}" var="note">
+                    <isif condition="${note.subject === 'storefront'}">
+                        <span class="summary-details tracking-notes"><isprint value="${note.text}" encoding="off" /></span>
+                        <br/>
+                    </isif>
+                </isloop>
+            </isif>
+        </isif>
+    </div>
+</div>
+
+<isinclude template="checkout/orderProductSummary" />
+
+<div class="card checkout-order-total-summary">
+    <div class="card-body order-total-summary">
+        <isinclude template="checkout/orderTotalSummary" />
+    </div>
+</div>

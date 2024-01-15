@@ -1,0 +1,47 @@
+@import "./utilities/simple-hero";
+@import "./utilities/functions";
+
+.content-page-image {
+    @include simple-hero;
+}
+
+// Custom Manuals Pages
+.manuals-search-form,
+.dont-know-model,
+.manuals-search-result {
+    margin-top: rem(20px);
+}
+
+.manuals-search-result {
+    .search-result-criteria,
+    .manuals-tooltip {
+        display: none;
+    }
+
+    .row {
+        // override boostrap negative margins
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: $border;
+
+        &:nth-child(1) {
+            div {
+                padding-top: rem(20px);
+            }
+        }
+
+        div {
+            padding: rem(15px) rem(15px) 0 0;
+
+            @include media-breakpoint-up(md) {
+                padding: rem(15px) rem(15px) rem(15px) 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                &:nth-child(5) {
+                    padding-bottom: rem(20px);
+                }
+            }
+        }
+    }
+}

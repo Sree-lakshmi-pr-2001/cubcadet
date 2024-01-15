@@ -1,0 +1,12 @@
+.table {
+    thead th {
+        padding: rem(20px) rem(15px) rem(20px) 0;
+        font-size: $table-th-font-size;
+        border-top: none;
+        border-bottom: $table-border-width solid $table-th-border-color;
+    }
+
+    td {
+        padding-left: 0;
+    }
+}

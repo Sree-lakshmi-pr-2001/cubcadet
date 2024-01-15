@@ -1,0 +1,38 @@
+<div class="col-7 col-md-10 col-lg-10 col-xl-10 row warranty-cart">
+    <div class="col-5 col-md-2 col-lg-2 col-xl-2 warranty-image pr-0">
+        <img src="${dw.web.URLUtils.httpsStatic('/images/Extended_Warranty.png')}" />
+        <a href="${URLUtils.url('Page-Show', 'cid', 'EW-Info-Intermediate-Page')}" class="btn btn-sm btn-primary text-nowrap">
+            <span style="font-size:smaller;">${Resource.msg('button.warranty.learn.more', 'form', null)}</span>
+        </a>
+    </div>
+    <div class="col-5 pr-0 additional-warranty">
+        <h6>Extended Warranty</h6>
+        <div class="row no-gutters coverage-text"><isprint value="${lineItem.extendedWarranty.shortDescription}" encoding="off"></div>
+        <div class="coverage-wrapp mb-1 text-uppercase"> <span class="done-mark ${lineItem.extendedWarranty.displayAddWarranty ? '' : 'd-none'}"></span> 
+            <isprint value="${lineItem.extendedWarranty.coverage}" encoding="off">
+        </div>
+    </div>
+    <div class="col-5 d-flex align-items-end justify-content-between warranty-price">
+        <div class="col-auto d-flex align-items-end pb-3">
+            <p class="line-item-price-info mb-0">${Resource.msg('label.total.total','cart',null)}</p>
+            ${lineItem.extendedWarranty.formattedPrice}
+        </div>
+
+        <isif condition="${lineItem.extendedWarranty.displayAddWarranty}" />
+            <isinclude template="cart/cartRemoveWarrantyCardLink" />
+        <iselse>
+            <button class="add-to-cart-warranty btn btn-secondary"
+                data-pid="${lineItem.extendedWarranty.id}"
+                data-add-to-cart-url="${pdict.addToCartUrl}"
+                data-quantity="${lineItem.quantity.toFixed()}"
+                data-parent-pid="${lineItem.id}"
+                data-redirect-url="${URLUtils.url('Cart-Show')}"
+                data-parent-product-name="${lineItem.productName}"
+                need-location-reload
+                ${!lineItem.extendedWarranty.readyToOrder || !lineItem.extendedWarranty.available || !lineItem.extendedWarranty.priceAvailability ? "disabled" : ""}>
+                    ${Resource.msg('button.warranty.addtocart', 'form', null)}
+            </button>
+        </isif>
+    </div>
+</div>
+

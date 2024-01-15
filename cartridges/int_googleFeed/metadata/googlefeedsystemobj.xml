@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <type-extension type-id="Category">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="googleFeedCategory">
+                <display-name xml:lang="x-default">Google Feed Category Name</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Google">
+                <display-name xml:lang="x-default">Google</display-name>
+                <attribute attribute-id="googleFeedCategory"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="glExcludedProduct">
+                <display-name xml:lang="x-default">Exclude from Google Feed</display-name>
+                <type>boolean</type>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleProductFeedCategory">
+                <display-name xml:lang="x-default">Google Product Category</display-name>
+                <description xml:lang="x-default">Google category value for the product</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleProductFeedCondition">
+                <display-name xml:lang="x-default">Google Condition</display-name>
+                <description xml:lang="x-default">Google condition value for the product</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+                <unit xml:lang="x-default">new</unit>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleProductFeedDescription">
+                <display-name xml:lang="x-default">Google Product Feed Description</display-name>
+                <description xml:lang="x-default">Google description for the product</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleProductFeedName">
+                <display-name xml:lang="x-default">Google Product Feed Name</display-name>
+                <description xml:lang="x-default">Google name for the product</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleProductFeedPromoID">
+                <display-name xml:lang="x-default">Google Product Feed Promo ID</display-name>
+                <description xml:lang="x-default">Google promotion ID for the product</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleProductFeedType">
+                <display-name xml:lang="x-default">Google Product Type</display-name>
+                <description xml:lang="x-default">Google type value for the product</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="GoogleFeed">
+                <display-name xml:lang="x-default">Google Feed</display-name>
+                <attribute attribute-id="glExcludedProduct"/>
+                <attribute attribute-id="googleProductFeedName"/>
+                <attribute attribute-id="googleProductFeedPromoID"/>
+                <attribute attribute-id="googleProductFeedDescription"/>
+                <attribute attribute-id="googleProductFeedCategory"/>
+                <attribute attribute-id="googleProductFeedCondition"/>
+                <attribute attribute-id="googleProductFeedType"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="googleMerchantArchiveDays">
+                <display-name xml:lang="x-default">Days to Archive</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantBrandName">
+                <display-name xml:lang="x-default">Brand Name</display-name>
+                <description xml:lang="x-default">Default brand name to use if not assigned to product.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantFileName">
+                <display-name xml:lang="x-default">File Name</display-name>
+                <description xml:lang="x-default">Include extension (i.e. googleFeed.csv)</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantFilePath">
+                <display-name xml:lang="x-default">File Path</display-name>
+                <description xml:lang="x-default">Path relative to IMPEX (i.e. src/feeds/google)</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantFeedPath">
+                <display-name xml:lang="x-default">Remote File Path</display-name>
+                <description xml:lang="x-default">Path on remote server</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantHostName">
+                <display-name xml:lang="x-default">Google Merchant Host Name</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+             <attribute-definition attribute-id="googleMerchantPort">
+                <display-name xml:lang="x-default">Google Merchant Host Port</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantHostPassword">
+                <display-name xml:lang="x-default">Google Merchant Host Password</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantHostUserName">
+                <display-name xml:lang="x-default">Google Merchant Host Username</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantPriceBook">
+                <display-name xml:lang="x-default">Price Book</display-name>
+                <description xml:lang="x-default">Price book ID for calculating prices.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantSalePriceBook">
+                <display-name xml:lang="x-default">Sale Price Book</display-name>
+                <description xml:lang="x-default">Sale Price book ID for calculating prices.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="googleMerchantIsSFTP">
+                <display-name xml:lang="x-default">SFTP</display-name>
+                <description xml:lang="x-default">If true, SFTP will be used. Otherwise FTP</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="GoogleFeed">
+                <display-name xml:lang="x-default">GoogleFeed</display-name>
+                <attribute attribute-id="googleMerchantSalePriceBook"/>
+                <attribute attribute-id="googleMerchantPriceBook"/>
+                <attribute attribute-id="googleMerchantArchiveDays"/>
+                <attribute attribute-id="googleMerchantHostUserName"/>
+                <attribute attribute-id="googleMerchantFileName"/>
+                <attribute attribute-id="googleMerchantBrandName"/>
+                <attribute attribute-id="googleMerchantFilePath"/>
+                <attribute attribute-id="googleMerchantHostPassword"/>
+                <attribute attribute-id="googleMerchantHostName"/>
+                <attribute attribute-id="googleMerchantFeedPath"/>
+                <attribute attribute-id="googleMerchantPort"/>
+                <attribute attribute-id="googleMerchantIsSFTP"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+</metadata>

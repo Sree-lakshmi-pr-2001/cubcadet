@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="SiteCatalog">cubcadet-sales-catalog</preference>
+            <preference preference-id="SiteCurrencies">USD</preference>
+            <preference preference-id="SiteCustomerList">cubcadet</preference>
+            <preference preference-id="SiteInventoryList">inventory_cubcadet_US</preference>
+            <preference preference-id="SiteLibrary">cubcadet</preference>
+            <preference preference-id="SitePriceBooks">cubcadet-usd-list-prices:cubcadet-usd-sale-prices</preference>
+            <preference preference-id="SiteTimezone">Etc/UTC</preference>
+        </all-instances>
+        <development>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </development>
+        <staging>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </staging>
+        <production>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </production>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="bvAdminEmail_C2013">avolosogar@lyonscg.com</preference>
+            <preference preference-id="bvCloudSEOKey_C2013">cubcadet-12ce0062347ed7f40b4bd4e86eca342c</preference>
+            <preference preference-id="bvCustomerName_C2013">cubcadet</preference>
+            <preference preference-id="bvDeploymentZone_C2013">copy_for_staging</preference>
+            <preference preference-id="bvEnableAA_C2013">false</preference>
+            <preference preference-id="bvEnableBVPixel_C2013">true</preference>
+            <preference preference-id="bvEnableCloudSEO_C2013">true</preference>
+            <preference preference-id="bvEnableInlineRatings_C2013">hosted</preference>
+            <preference preference-id="bvEnableRR_C2013">true</preference>
+            <preference preference-id="bvEnvironment_C2013">Staging</preference>
+            <preference preference-id="bvLocaleMapping_C2013">
+                <value>en_US:en_US</value>
+                <value>default:en_US</value>
+            </preference>
+            <preference preference-id="bvQuickViewRatingsType_C2013">inlineratings</preference>
+            <preference preference-id="mtdAddressValidationEnabled">true</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="ariAppKey">ytHYzLwru2CXhs07AcWD</preference>
+            <preference preference-id="ariBrandCode">CUT</preference>
+            <preference preference-id="chaseMerchantId">010233</preference>
+            <preference preference-id="enablePromoCalloutMessagesProductTile">true</preference>
+            <preference preference-id="mcMID">10959303</preference>
+            <preference preference-id="googleTagManagerId">GTM-T9P4SN</preference>
+            <preference preference-id="mtdManualsBrandCode">01</preference>
+            <preference preference-id="numTilePromos">4</preference>
+            <preference preference-id="pageContextMap">{
+    "Product-Show": {
+        "ns": "product",
+        "type": "product",
+        "title": "Product Detail"
+    },
+    "Home-Show": {
+        "ns": "storefront",
+        "type": "storefront",
+        "title": "Storefront"
+    },
+    "Cart-Show": {
+        "ns": "cart",
+        "type": "Cart",
+        "title": "Cart"
+    },
+    "Search-Show": {
+        "ns": "search",
+        "type": "search",
+        "title": "Search"
+    },
+    "Order-Confirm": {
+        "ns": "orderconfirmation",
+        "type": "orderconfirmation",
+        "title": "Order Confirmation"
+    },
+    "Checkout-Begin": {
+        "ns": "checkout",
+        "type": "checkout",
+        "title": "Checkout"
+    }
+}</preference>
+        </development>
+        <staging>
+            <preference preference-id="bvCloudSEOKey_C2013">cubcadet-12ce0062347ed7f40b4bd4e86eca342c</preference>
+            <preference preference-id="bvCustomerName_C2013">cubcadet</preference>
+            <preference preference-id="bvDeploymentZone_C2013">copy_for_staging</preference>
+            <preference preference-id="bvEnableAA_C2013">false</preference>
+            <preference preference-id="bvEnableBVPixel_C2013">true</preference>
+            <preference preference-id="bvEnableCloudSEO_C2013">true</preference>
+            <preference preference-id="bvEnableInlineRatings_C2013">hosted</preference>
+            <preference preference-id="bvEnableRR_C2013">true</preference>
+            <preference preference-id="bvEnvironment_C2013">Staging</preference>
+            <preference preference-id="bvLocaleMapping_C2013">
+                <value>en_US:en_US</value>
+                <value>default:en_US</value>
+            </preference>
+            <preference preference-id="bvQuickViewRatingsType_C2013">inlineratings</preference>
+            <preference preference-id="enableStorePickUp">false</preference>
+            <preference preference-id="googleMerchantFileName">googleFeed</preference>
+            <preference preference-id="googleMerchantFilePath">src/feeds/google</preference>
+            <preference preference-id="mapAPI">AIzaSyDPVcBVePe3uOtYSbu-i9UaU1ET-wveUps</preference>
+            <preference preference-id="ariAppKey">ytHYzLwru2CXhs07AcWD</preference>
+            <preference preference-id="ariBrandCode">CUT</preference>
+            <preference preference-id="chaseMerchantId">010233</preference>
+            <preference preference-id="enablePromoCalloutMessagesProductTile">true</preference>
+            <preference preference-id="mcMID">10959303</preference>
+            <preference preference-id="googleTagManagerId">GTM-T9P4SN</preference>
+            <preference preference-id="mtdManualsBrandCode">01</preference>
+            <preference preference-id="numTilePromos">4</preference>
+            <preference preference-id="pageContextMap">{
+    "Product-Show": {
+        "ns": "product",
+        "type": "product",
+        "title": "Product Detail"
+    },
+    "Home-Show": {
+        "ns": "storefront",
+        "type": "storefront",
+        "title": "Storefront"
+    },
+    "Cart-Show": {
+        "ns": "cart",
+        "type": "Cart",
+        "title": "Cart"
+    },
+    "Search-Show": {
+        "ns": "search",
+        "type": "search",
+        "title": "Search"
+    },
+    "Order-Confirm": {
+        "ns": "orderconfirmation",
+        "type": "orderconfirmation",
+        "title": "Order Confirmation"
+    },
+    "Checkout-Begin": {
+        "ns": "checkout",
+        "type": "checkout",
+        "title": "Checkout"
+    }
+}</preference>
+        </staging>
+        <production/>
+    </custom-preferences>
+</preferences>
+

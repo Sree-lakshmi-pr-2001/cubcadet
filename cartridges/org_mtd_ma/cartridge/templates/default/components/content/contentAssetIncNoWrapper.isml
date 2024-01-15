@@ -1,0 +1,5 @@
+<isif condition="${pdict.content.body !== null}">
+    <isprint value="${pdict.content.body}" encoding="off"/>
+<iselse/>
+    ${Resource.msg('global.nocontent','common',null)}
+</isif>

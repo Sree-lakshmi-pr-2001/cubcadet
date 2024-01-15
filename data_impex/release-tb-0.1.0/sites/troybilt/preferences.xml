@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="AccountNumberRetentionDays">30</preference>
+            <preference preference-id="AddProductToBasketBehavior">IncrementQuantities</preference>
+            <preference preference-id="CouponGeneratorIncludeDashes">true</preference>
+            <preference preference-id="CouponGeneratorIncludeVowels">true</preference>
+            <preference preference-id="IntegrationOrderCenterIncludeSite">true</preference>
+            <preference preference-id="SiteCatalog">troybilt-sales-catalog</preference>
+            <preference preference-id="SiteCurrencies">USD</preference>
+            <preference preference-id="SiteCustomerList">troybilt</preference>
+            <preference preference-id="SiteDefaultLocale">en_US</preference>
+            <preference preference-id="SiteInventoryList">inventory_troybilt_US</preference>
+            <preference preference-id="SiteLibrary">troybilt</preference>
+            <preference preference-id="SiteLocales">en_US</preference>
+            <preference preference-id="SitePriceBooks">troybilt-usd-list-prices:troybilt-usd-sale-prices</preference>
+            <preference preference-id="SiteTimezone">Etc/UTC</preference>
+            <preference preference-id="StorefrontOrderFiltering">true</preference>
+            <preference preference-id="StorefrontURLsEnabled">true</preference>
+        </all-instances>
+        <development>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </development>
+        <staging>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </staging>
+        <production>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </production>
+    </standard-preferences>
+      <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="monetateJSUrl">https://se.monetate.net/js/2/a-7a982b2a/p/troybilt.com/entry.js</preference>
+            <preference preference-id="ariAppKey">sUn7XAYl5drWQm0PRjNT</preference>
+            <preference preference-id="ariBrandCode">TRB</preference>
+            <preference preference-id="googleTagManagerId">GTM-PQG24T</preference>
+            <preference preference-id="chaseMerchantId">010234</preference>
+            <preference preference-id="mcMID">10959299</preference>
+            <preference preference-id="mtdManualsBrandCode">02</preference>
+            <preference preference-id="numTilePromos">4</preference>
+            <preference preference-id="pageContextMap">{
+    "Product-Show": {
+        "ns": "product",
+        "type": "product",
+        "title": "Product Detail"
+    },
+    "Home-Show": {
+        "ns": "storefront",
+        "type": "storefront",
+        "title": "Storefront"
+    },
+    "Cart-Show": {
+        "ns": "cart",
+        "type": "Cart",
+        "title": "Cart"
+    },
+    "Search-Show": {
+        "ns": "search",
+        "type": "search",
+        "title": "Search"
+    },
+    "Order-Confirm": {
+        "ns": "orderconfirmation",
+        "type": "orderconfirmation",
+        "title": "Order Confirmation"
+    },
+    "Checkout-Begin": {
+        "ns": "checkout",
+        "type": "checkout",
+        "title": "Checkout"
+    }
+}</preference>
+        </development>
+        <staging>
+          <preference preference-id="monetateJSUrl">https://se.monetate.net/js/2/a-7a982b2a/p/troybilt.com/entry.js</preference>
+          <preference preference-id="mapAPI">AIzaSyAUwIVI2E99dKYw0FnlUdACp3jwbJJPnbk</preference>
+          <preference preference-id="ariAppKey">sUn7XAYl5drWQm0PRjNT</preference>
+          <preference preference-id="ariBrandCode">TRB</preference>
+          <preference preference-id="googleTagManagerId">GTM-PQG24T</preference>
+          <preference preference-id="chaseMerchantId">010234</preference>
+          <preference preference-id="mcMID">10959299</preference>
+          <preference preference-id="numTilePromos">4</preference>
+          <preference preference-id="pageContextMap">{
+  "Product-Show": {
+      "ns": "product",
+      "type": "product",
+      "title": "Product Detail"
+  },
+  "Home-Show": {
+      "ns": "storefront",
+      "type": "storefront",
+      "title": "Storefront"
+  },
+  "Cart-Show": {
+      "ns": "cart",
+      "type": "Cart",
+      "title": "Cart"
+  },
+  "Search-Show": {
+      "ns": "search",
+      "type": "search",
+      "title": "Search"
+  },
+  "Order-Confirm": {
+      "ns": "orderconfirmation",
+      "type": "orderconfirmation",
+      "title": "Order Confirmation"
+  },
+  "Checkout-Begin": {
+      "ns": "checkout",
+      "type": "checkout",
+      "title": "Checkout"
+  }
+}</preference>
+        </staging>
+        <production>
+            <preference preference-id="googleTagManagerId">GTM-PQG24T</preference>
+            <preference preference-id="OrderVelocityEngineEmail">CommerceSupport@mtdproducts.com</preference>
+            <preference preference-id="OrderVelocityEngineJSON">{
+  "brandedDomain": false,
+  "splitByProcessor": false,
+  "default": {
+    "default": {
+      "0": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "1": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "2": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "3": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "4": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "5": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "6": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "7": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "8": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "9": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "10": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "11": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "12": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "13": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "14": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "15": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "16": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "17": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "18": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "19": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "20": {
+        "timeToCheck": "60",
+        "ordersToFault": "1"
+      },
+      "21": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "22": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      },
+      "23": {
+        "timeToCheck": "60",
+        "ordersToFault": "0"
+      }
+    }
+  }
+}</preference>
+            <preference preference-id="OrderVelocityEngineSendingEmail">production-jobs@cubcadet.com</preference>
+            <preference preference-id="pageContextMap">{
+    "Product-Show": {
+        "ns": "product",
+        "type": "product",
+        "title": "Product Detail"
+    },
+    "Home-Show": {
+        "ns": "storefront",
+        "type": "storefront",
+        "title": "Storefront"
+    },
+    "Cart-Show": {
+        "ns": "cart",
+        "type": "Cart",
+        "title": "Cart"
+    },
+    "Search-Show": {
+        "ns": "search",
+        "type": "search",
+        "title": "Search"
+    },
+    "Order-Confirm": {
+        "ns": "orderconfirmation",
+        "type": "orderconfirmation",
+        "title": "Order Confirmation"
+    },
+    "Checkout-Begin": {
+        "ns": "checkout",
+        "type": "checkout",
+        "title": "Checkout"
+    }
+  }</preference>
+        </production>
+    </custom-preferences>
+</preferences>

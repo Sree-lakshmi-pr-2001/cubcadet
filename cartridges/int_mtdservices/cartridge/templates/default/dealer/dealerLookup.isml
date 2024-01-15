@@ -1,0 +1,62 @@
+<!--- TEMPLATENAME: dealerLookup.isml --->
+<isset name="dealerDeliveryMethodId" value="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.deliveryMethodId : ''}" scope="page"/>
+<isset name="dealerPickupMethodId" value="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.pickupMethodId : ''}" scope="page"/>
+<isif condition="${pdict.needToShowDealerLookup}">
+    <div class="dealer-shipping-block"
+        data-hide-shipping-item="${pdict.needToHideShippingItem}"
+        data-carb-enabled="${pdict.carbEnabled}"
+        data-carb-compliance="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.carbCompliance : ''}"
+        data-delivery-method="${dealerDeliveryMethodId}"
+        data-pickup-method="${dealerPickupMethodId}"
+        data-able-to-deliver="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.ableToDeliver : ''}"
+        data-factory-shipping="${'dealerFulfillmentData' in pdict ? pdict.dealerFulfillmentData.factoryShipping : ''}"
+        data-select-shipping-method-url="${URLUtils.https('CheckoutShippingServices-SelectShippingMethod')}"
+        data-current-shipping-address="${JSON.stringify(pdict.currentShippingAddress)}"
+        data-delivery-pickup-firstName="${Resource.msg('dealer.pickup.firstname', 'dealer', null)}"
+        data-delivery-pickup-lastName="${Resource.msg('dealer.pickup.lastname', 'dealer', null)}"
+        data-dealer-lookup-url="${URLUtils.https('Checkout-DealerLookup')}">
+    <fieldset>
+	    <legend><h6>${Resource.msg('heading.dealer.lookup', 'dealer', null)}</h6></legend>
+	
+	        <iscomment> Helper Dealer Zip Form asset message</iscomment>
+	        <div class="row">
+	            <div class="col">
+	                <isprint value="${pdict.dealerHelperZipFormMsg}" encoding="off" />
+	            </div>
+	        </div>
+	
+	        <iscomment>Zip Input Field and Button</iscomment>
+	        <isset name="shippingForm" value="${pdict.forms.shippingForm.shippingAddress}" scope="page"/>
+	        <div class="row">
+	            <div class="col dealer-zip-code-input">
+	                <div class="form-group
+	                    ${shippingForm.dealerZipCode.htmlName}">
+	                    <label class="form-control-label" for="dealerZipCode"  >
+	                        ${Resource.msg('checkout.dealer.zipCode','forms',null)}
+	                    </label>
+	                    <input autofocus autocomplete="postal-code" type="text" class="form-control dealerZipCode" id="dealerZipCode"
+	                        value="${shippingForm.dealerZipCode.value || ''}" <isprint value="${shippingForm.dealerZipCode.attributes}" encoding="off"/>
+	                         data-missing-error="${Resource.msg('error.message.required', 'login', null)}"
+	                         />
+	                    <div class="invalid-feedback"></div>
+	                    <iscomment>Zip Error Hidden Message</iscomment>
+	                    <div class="dealer-zip-code-error hidden">
+	                        <isprint value="${pdict.dealerWrongZipCodeMsg}" encoding="off" />
+	                    </div>
+	                    <span>${Resource.msg('example.postalcode','forms',null)}</span>
+	                </div>
+	
+	                 <button class="btn btn-outline-secondary btn-sm btn-block submit-dealer-lookup" type="button" name="dealerLookup" value="submit-dealer-lookup">
+	                    ${Resource.msg('button.dealer.go', 'dealer', null)}
+	                 </button>
+	            </div>
+	        </div>
+	
+	
+	        <iscomment>Delivery Options: Dealer Delivery or/and Dealer Pickup</iscomment>
+	        <isif condition="${'dealerFulfillmentData' in pdict}">
+	            <isinclude template="dealer/deliveryOptions" />
+	        </isif>
+	    </fieldset>
+    </div>
+</isif>

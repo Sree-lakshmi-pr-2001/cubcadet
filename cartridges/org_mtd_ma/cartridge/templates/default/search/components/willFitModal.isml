@@ -1,0 +1,19 @@
+<div class="modal fade model-num-modal" id="modal-will-fit" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered text-left">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h4 class="modal-title text-left">${Resource.msg('fits.on.model.find.number', 'partFitment', null)}</h4>
+                    <p class="text-lg-left mt-1">${Resource.msg('fits.on.model.find.disclaimer', 'partFitment', null)}</p>
+                </div>
+                <button aria-label="${Resource.msg('link.quickview.close', 'product', null)}" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <iscontentasset aid="model-number-modal" />
+            </div>
+        </div>
+    </div>
+</div>

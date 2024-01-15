@@ -1,0 +1,5 @@
+<isif condition="${pdict.content && pdict.content !== ''}">
+    <div class="td-estimation">
+        <isprint value="${pdict.content}" encoding="off" />
+    </div>
+</isif>

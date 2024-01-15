@@ -1,0 +1,87 @@
+<isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+    <isinclude template="reporting/reportingUrls" />
+</isif>
+<isinclude template="components/modules" />
+
+<div class="container search-results">
+    <div class="d-md-none">
+        <isinclude url="${URLUtils.url('Dealer-ShowSelectedDealer', 'region', 'PLP')}" />
+    </div>
+    <div class="row">
+        <div class="tab-content col-12">
+            <div class="tab-pane container active" id="product-search-results" role="tabpanel" aria-expanded="true">
+                <div class="row result-header">
+                    <isset name="hasBtn" value="${pdict.CurrentHttpParameterMap.ispartfinder.submitted && pdict.CurrentHttpParameterMap.ispartfinder.booleanValue === true}" scope="page" />
+                    <div class="result-count col-12 <isif condition="${hasBtn}">col-lg-8</isif>">
+                        <isinclude template="search/resultsCount" />
+                    </div>
+                    <isif condition="${hasBtn}">
+                        <div class="col-12 col-lg-4 text-right">
+                            <a href="${URLUtils.url('Page-Show', 'cid', 'ari-partstream', 'arimn', pdict.CurrentHttpParameterMap.q.value)}" class="btn btn-outline-secondary btn-ari">
+                                ${Resource.msg('view.parts.in.diagram', 'search', null)}
+                            </a>
+                        </div>
+                    </isif>
+                </div>
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <div class="row grid-header">
+                        <div class="col-6 col-lg-8">
+                            <button type="button" class="btn btn-filter filter-results col-12 d-md-none">
+                                ${Resource.msg('refinement.filterby', 'search', null)}
+                                <i><issvg icon="icon-filter" image="true" altText="" /></i>
+                            </button>
+
+                            <!--- Selected filters bar --->
+                            <div class="filter-bar d-none d-md-inline-block">
+                                <isinclude template="search/filterBar" />
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-lg-4 text-right">
+                            <span class="item-count">
+                                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                                    ${Resource.msgf('label.items', 'search', null, pdict.productSearch.count, pdict.productSearch.count > 1 ? 's' : '')}
+                                </isif>
+                            </span>
+                            <isinclude template="search/sortOrderMenu" />
+                        </div>
+
+                        <!--- Selected filters bar --->
+                        <div class="filter-bar mobile d-md-none col-12">
+                            <isinclude template="search/filterBar" />
+                        </div>
+                    </div>
+                </isif>
+
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <!--- Refinement bar --->
+                    <div class="row">
+                        <div class="refinement-bar col-md-3">
+                            <isinclude url="${pdict.refineurl}"/>
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <div class="container">
+                                 <isset name="monetateObject" value="${require('*/cartridge/scripts/monetate/libMonetate')}" scope="page"/>
+                                 <isif condition="${monetateObject.getMonetateEnabled()}">
+                                     <iscomment>Monetate JS code</iscomment>
+                                     <script type="text/javascript">
+                                        monetateData.addProducts = [];
+                                     </script>
+                                 </isif>
+                                <!--- Product Grid --->
+                                <div class="row product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+                                    <isinclude template="search/productGrid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </isif>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<ismonetatetrackpage pagename="index" />
+<ismonetatetrackpage pagename="category" />

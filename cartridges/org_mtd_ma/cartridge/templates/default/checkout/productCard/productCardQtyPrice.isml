@@ -1,0 +1,45 @@
+
+<isset name="colClasses" value="${miniCart ? 'col-6' : 'col-12'}" scope="page"/>
+<div class="product-line-item-results row">
+    <isif condition="${!miniCart}">
+        <!---item price--->
+        <div class="col-12 line-item-price-${lineItem.UUID}">
+            <div class="row no-gutters">
+                <p class="line-item-price-info  <isif condition="${confirmation || pdict.currentStage === 'placeOrder'}">col-3<iselse>col-5</isif>">${Resource.msg('label.price', 'cart', null)}:</p>
+                <isset name="price" value="${lineItem.price}" scope="page" />
+                <div class="col-7">
+                    <isinclude template="/product/components/pricing/main" />
+                </div>
+            </div>
+        </div>
+    </isif>
+    <!--- quantity --->
+    <div class="line-item-quantity ${colClasses}">
+        <isif condition="${miniCart}">
+            <isinclude template="checkout/productCard/productCardQuantitySelector" />
+        <iselse>
+            <isinclude template="checkout/productCard/productCardQuantityDisplay" />
+        </isif>
+    </div>
+    <!--- line item total price --->
+    <div class="line-item-total-price justify-content-end ${colClasses}">
+        <isif condition="${!miniCart}">
+            <div class="row no-gutters">
+        </isif>
+                <p class="line-item-pricing-info <isif condition="${confirmation || pdict.currentStage === 'placeOrder'}">col-3 <iselseif condition="${!miniCart}">col-5</isif>">
+                    <span class="line-item-total-text line-item-total-price-label <isif condition=${miniCart}> d-none</isif>">
+                        ${Resource.msg('label.total.price', 'cart', null)}:
+                    </span>
+                </p>
+                <div class="item-total-${lineItem.UUID} price <isif condition="${!miniCart}">col-7</isif>">
+                    <isif condition="${miniCart}">
+                        <isprint value="${lineItem.miniCartRenderedPrice}" encoding="off"/>
+                    <iselse>
+                            <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+                    </isif>
+                </div>
+        <isif condition="${!miniCart}">
+            </div>  <!-- / .row -->
+        </isif>
+    </div>
+</div>

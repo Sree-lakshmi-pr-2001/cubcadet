@@ -1,0 +1,22 @@
+<header>
+    <div class="header util container-fluid">
+        <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light stroke">
+        <button class="navbar-toggler" type="button" onclick="headerNav.openNav()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <i class="mobile search fa fa-search fa-2x"></i>
+        !-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a href="javascript:void(0)" class="closebtn" onclick="headerNav.closeNav()">&times;</a>
+
+            <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu', 'cgid', pdict.CurrentHttpParameterMap.cgid, 'pid', pdict.CurrentHttpParameterMap.pid)}"/>
+
+            <iscontentasset aid="mtdproducts-header-mobile-util" />
+        </div>
+    </nav>
+</header>

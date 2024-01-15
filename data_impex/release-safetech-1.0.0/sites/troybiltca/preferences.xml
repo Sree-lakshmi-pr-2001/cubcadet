@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="safetechCollectorHost">Sandbox</preference>
+            <preference preference-id="safetechEnabled">true</preference>
+            <preference preference-id="safetechMerchantID">300155</preference>
+            <preference preference-id="safetechWebsiteShortName">troybiltca</preference>
+        </development>
+        <staging>
+            <preference preference-id="safetechCollectorHost">Production</preference>
+            <preference preference-id="safetechEnabled">true</preference>
+            <preference preference-id="safetechMerchantID">300155</preference>
+            <preference preference-id="safetechWebsiteShortName">troybiltca</preference>
+        </staging>
+        <production>
+            <preference preference-id="safetechCollectorHost">Production</preference>
+            <preference preference-id="safetechEnabled">true</preference>
+            <preference preference-id="safetechMerchantID">300155</preference>
+            <preference preference-id="safetechWebsiteShortName">troybiltca</preference>
+        </production>
+    </custom-preferences>
+</preferences>
+

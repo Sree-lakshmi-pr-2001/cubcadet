@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stores xmlns="http://www.demandware.com/xml/impex/store/2007-04-30">
+
+    <store store-id="test1">
+        <name>THE HOME DEPOT</name>
+        <address1>5660 E WOODMEN ROAD</address1>
+        <city>COLORADO SPRINGS</city>
+        <postal-code>80920</postal-code>
+        <state-code>CO</state-code>
+        <country-code>US</country-code>
+        <phone>(719) 266-5165</phone>
+        <store-hours xml:lang="x-default">&lt;p&gt;&lt;img alt="" src="images/stores/1_80.png?$staticlink$" title="" /&gt;&lt;/p&gt;
+</store-hours>
+        <latitude>38.943586</latitude>
+        <longitude>-104.723519</longitude>
+        <store-locator-enabled-flag>true</store-locator-enabled-flag>
+        <demandware-pos-enabled-flag>false</demandware-pos-enabled-flag>
+        <pos-enabled-flag>false</pos-enabled-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="about_us" xml:lang="x-default">&lt;!-- About Us Content for the Store HTML attribute START --&gt;
+&lt;div class="dealer-aboutus-head"&gt;
+    &lt;h2 class="dealer-aboutus-heading"&gt;About Us&lt;/h2&gt;
+    &lt;picture&gt;
+        &lt;source srcset="https://via.placeholder.com/1000x250" media="(min-width: 768px)"&gt;
+        &lt;img srcset="https://via.placeholder.com/340x160" alt="About the dealer"&gt;
+    &lt;/picture&gt;
+&lt;/div&gt;
+&lt;div class="dealer-aboutus-body"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-7 col-lg-8"&gt;
+            &lt;div class="dealer-aboutus-body-main"&gt;
+                &lt;h5 class="dealer-aboutus-subheading"&gt;
+                    Subhead Here
+                &lt;/h5&gt;
+                &lt;p class="dealer-aboutus-paragraph"&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi corporis deserunt doloremque ducimus error, esse, libero necessitatibus obcaecati, odit quasi repellat saepe. Aliquid architecto aspernatur assumenda blanditiis cumque cupiditate deserunt dicta distinctio dolor dolorem doloremque eum exercitationem, explicabo fuga fugit harum illo illum impedit ipsa itaque iure, magnam magni maxime minus molestiae necessitatibus nesciunt nobis, numquam obcaecati perspiciatis praesentium quam quisquam reiciendis reprehenderit sint tenetur voluptates. Dolorem enim eum exercitationem explicabo fugiat laudantium quod, quos, reiciendis veniam vero vitae voluptates! Consequatur, eaque eveniet hic placeat possimus sequi? Beatae dolorum, eaque excepturi natus officia quae quasi reprehenderit repudiandae rerum unde.
+                &lt;/p&gt;
+                &lt;p class="dealer-aboutus-paragraph"&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut corporis cumque delectus deserunt, doloremque error explicabo inventore maiores necessitatibus nihil nisi quaerat quam, quibusdam quidem reprehenderit sunt ut voluptates! Animi atque, exercitationem explicabo illo laborum nemo nulla obcaecati possimus rerum sed sequi ut. Ex explicabo id mollitia perferendis totam. Ab accusamus aliquam aliquid architecto atque cumque delectus dignissimos eos error esse et exercitationem id in labore laborum magni minima modi molestias nam natus nisi nostrum odio officiis optio perferendis quam quidem quis reiciendis repellat repellendus reprehenderit rerum sint, tempore unde veritatis vero vitae. Accusamus beatae cumque cupiditate dolore dolorem eius ex harum ipsum iste laudantium non obcaecati possimus quia quod, repellendus tempora tempore temporibus voluptas! A aperiam atque ex fugit ipsum molestias non nulla pariatur placeat possimus, quia recusandae reiciendis repellat tempora voluptatum. Consequatur distinctio exercitationem incidunt laudantium mollitia, nulla obcaecati perferendis saepe sunt totam? Aliquid aperiam aspernatur deserunt distinctio et excepturi facilis in incidunt ipsam ipsum labore laborum nemo nisi nostrum odio officia perferendis possimus quo sapiente tempore tenetur, totam ut. Ab alias blanditiis consequuntur dicta distinctio dolor dolorem dolorum eligendi, error esse facilis impedit iusto minima nisi nobis odio officia officiis optio quo repellat sequi voluptate, voluptatem!
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4 col-lg-3 ml-auto"&gt;
+            &lt;div class="dealer-aboutus-body-side"&gt;
+
+                &lt;!-- The placeholder for Products List --&gt;
+                &lt;div class="dealer-aboutus-products-list-placeholder"&gt;&lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- The placeholder for social links --&gt;
+    &lt;div class="dealer-aboutus-social-placeholder"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- About Us Content for the Store HTML attribute END --&gt;</custom-attribute>
+            <custom-attribute attribute-id="actual-business-hours">Monday - Friday,7:30am-5:00pm|Saturday,7:30am-Noon</custom-attribute>
+            <custom-attribute attribute-id="cubcadet">true</custom-attribute>
+            <custom-attribute attribute-id="cubcadetcare">false</custom-attribute>
+            <custom-attribute attribute-id="dealer-image">https://via.placeholder.com/600x400</custom-attribute>
+            <custom-attribute attribute-id="dealer_id">123</custom-attribute>
+            <custom-attribute attribute-id="dealer_picture_url" xml:lang="x-default">images/stores/heros/store-hero-default.png</custom-attribute>
+            <custom-attribute attribute-id="dealer_specific_logo_url" xml:lang="x-default">images/stores/logos/store-logo-default.jpg</custom-attribute>
+            <custom-attribute attribute-id="elite_badge_url" xml:lang="x-default">https://via.placeholder.com/550x45</custom-attribute>
+            <custom-attribute attribute-id="elite_dealer">true</custom-attribute>
+            <custom-attribute attribute-id="facebook_url" xml:lang="x-default">https://www.facebook.com/totalbattle/</custom-attribute>
+            <custom-attribute attribute-id="holiday_hours" xml:lang="x-default">Monday - Friday,7:30am-5:00pm|Saturday,7:30am-Noon</custom-attribute>
+            <custom-attribute attribute-id="instagram_url" xml:lang="x-default">https://www.instagram.com/deepspacexx/</custom-attribute>
+            <custom-attribute attribute-id="minisite_product_categories">
+                <value>lawn-and-garden-equipment</value>
+                <value>lawn-and-garden-tractors</value>
+                <value>zero-turn-mowers</value>
+                <value>snow-blowers</value>
+                <value>push-mowers</value>
+                <value>leaf-blowers</value>
+                <value>chipper-shredders</value>
+                <value>edgers-and-trenchers</value>
+                <value>log-splitters</value>
+                <value>trimmers</value>
+                <value>garden-tillers-main</value>
+                <value>pressure-washers</value>
+                <value>commercial-equipment</value>
+                <value>trimmer-accessories</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="paid-dealer-search-snow">false</custom-attribute>
+            <custom-attribute attribute-id="product_categories" xml:lang="x-default">
+                <value>HNC</value>
+                <value>LGT</value>
+                <value>PRO</value>
+                <value>ROB</value>
+                <value>RZT</value>
+                <value>SNO</value>
+                <value>UTV</value>
+                <value>WBM</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="retailer_id">
+                <value>hd</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="sells_products">true</custom-attribute>
+            <custom-attribute attribute-id="services_products">false</custom-attribute>
+            <custom-attribute attribute-id="twitter_url" xml:lang="x-default">https://twitter.com/tjournal</custom-attribute>
+            <custom-attribute attribute-id="website">https://www.google.com</custom-attribute>
+            <custom-attribute attribute-id="youtube_url" xml:lang="x-default">https://www.youtube.com/channel/UChXRU1noMzd2wAeSYojQLVw</custom-attribute>
+        </custom-attributes>
+    </store>
+
+</stores>

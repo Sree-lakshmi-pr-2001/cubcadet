@@ -1,0 +1,194 @@
+@import "variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "components/formFields";
+@import "~org/utilities/layout";
+@import "~org/utilities/nth_of_type";
+@import "components/oAuthLinks";
+@import "/utilities/typeUtils";
+
+.login-page {
+    margin-top: 1em;
+    padding-bottom: rem(59px);
+
+    .card-body {
+        padding-top: rem(10px);
+    }
+
+    .login-card {
+        padding-top: 0;
+        @include media-breakpoint-up(md) {
+            padding-bottom: 0;
+        }
+    }
+
+    .track-order-card,
+    .login-form-nav {
+        button {
+            max-width: 260px;
+            display: block;
+            margin: 0 auto;
+
+            @include media-breakpoint-up(md) {
+                margin: 0;
+            }
+        }
+    }
+
+    .login-form-nav {
+        border-bottom: $border;
+
+        .nav-pills {
+            background: $brand-light;
+
+            a {
+                margin: 0;
+                white-space: nowrap;
+                padding: rem(10px) rem(18px);
+
+                &.nav-link {
+                    &:hover {
+                        background-color: $brand-main;
+                    }
+
+                    &.active:hover {
+                        background-color: $brand-main;
+                    }
+
+                    &:focus {
+                        background-color: $brand-main;
+                    }
+                }
+
+                @include media-breakpoint-up(sm) {
+                    white-space: normal;
+                    padding: rem(10px) rem(20px);
+                }
+            }
+        }
+
+        .tab-content {
+            padding: rem(25px) rem(16px) 0;
+            border-right: $border;
+            border-left: $border;
+            @include media-breakpoint-up(md) {
+                // 55px height of tabs
+                height: calc(100% - 55px);
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            height: 100%;
+        }
+    }
+
+    .login {
+        margin-bottom: rem(20px);
+
+        .error-message-form {
+            padding: 0.625em;
+            background-color: $alert-danger-bg;
+            color: $state-danger-text;
+            border-radius: 0.188em;
+        }
+
+        > .form-group {
+            padding: 0;
+
+            @include media-breakpoint-up(md) {
+                padding-right: 15%;
+            }
+        }
+
+        > .login-form-utilities {
+            @include media-breakpoint-up(md) {
+                padding-right: 15%;
+            }
+        }
+
+        .remember-me {
+            clear: left;
+        }
+
+        .forgot-password {
+            clear: right;
+        }
+    }
+
+    .privacy-policy {
+        margin-top: 1rem;
+    }
+
+    .track-order-card {
+        border: $border;
+        padding: 0 rem(16px);
+    }
+
+    .track-order-header {
+        margin: 0 rem(-16px);
+
+        h6 {
+            padding-left: rem(16px);
+            margin-bottom: 0;
+        }
+    }
+
+    label {
+        width: 100%;
+    }
+}
+
+.login-banner {
+    padding-top: rem(17px);
+
+    h1 {
+        @include type-alt-section-heading();
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(33px);
+        }
+    }
+
+    &.condensed-header-title {
+        padding-left: 0;
+    }
+}
+
+.login-slot-asset {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.equal-height .card {
+    width: 100%;
+}
+
+.form-card {
+    @include media-breakpoint-up(md) {
+        max-width: 550px;
+    }
+}
+
+.registration {
+    padding-bottom: rem(15px);
+
+    .registration-form-row {
+        @include media-breakpoint-up(md) {
+            clear: both;
+        }
+    }
+
+    > .form-group {
+        @include media-breakpoint-up(md) {
+            padding-right: 15%;
+        }
+    }
+}
+
+.trackorder .card-body {
+    > .form-group {
+        @include media-breakpoint-up(md) {
+            padding-right: 15%;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+'use strict';
+
+var processInclude = require('base/util');
+
+$(document).ready(function () {
+    processInclude(require('./dealer/dealerSelectorModal'));
+    processInclude(require('./dealer/dealerModalStoreLocator'));
+});

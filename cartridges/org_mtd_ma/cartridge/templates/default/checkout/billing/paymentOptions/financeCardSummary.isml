@@ -1,0 +1,30 @@
+<div class="finance-card-method">
+    ${payment.paymentName}
+</div>
+<div class="finance-card-terms">
+    <span>${Resource.msg('finance.terms','checkout',null)}: </span>
+    <strong>${payment.termName}<sup>${payment.ss}</sup></strong>
+    <isif condition="${confirmation}">
+        <isset name="disclosureUrl" value="${URLUtils.url('FinancingApplication-Disclosure', 'orderId', pdict.order.orderNumber)}" scope="page"/>
+    <iselse>
+        <isset name="disclosureUrl" value="${URLUtils.url('FinancingApplication-Disclosure')}" scope="page"/>
+    </isif>
+    <!--a href="javascript:void(0)" data-url="${disclosureUrl}" data-title="${Resource.msg('finance.details.title','checkout',null)}" class="td-payment-details">
+        ${Resource.msg('finance.see.details','checkout',null)}
+    </a-->
+</div>
+<div class="finance-card-amount">
+    <span>${Resource.msg('finance.amount.financed','checkout',null)}: </span>
+    ${payment.formattedAmount}
+</div>
+<isif condition="${!pdict.isNotShowingTDAccountNumber}">
+    <div class="finance-card-number">
+        <span>${Resource.msg('finance.account.number','checkout',null)}: </span>
+        ${payment.accountNumber}
+    </div>
+</isif>
+<isif condition="${payment.processFee}">
+    <div class="finance-promofee">
+        <span>${Resource.msgf('finance.plan.placeorder.promofee','checkout', null, payment.processFee)}</span>
+    </div>
+</isif>

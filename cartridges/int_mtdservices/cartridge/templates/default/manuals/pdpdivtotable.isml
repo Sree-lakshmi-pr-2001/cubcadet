@@ -1,0 +1,53 @@
+<!--- TEMPLATENAME: pdpdivtotable.isml --->
+<isif condition="${pdict.manualItems.size() > 0}">
+    <table class="manual-table" role="table" aria-label="${Resource.msg('tab.title.manuals', 'manuals', null)}" aria-describedby="${Resource.msg('tab.title.manuals', 'manuals', null)}_table" aria-rowcount="${(pdict.manualItems.length +1).toFixed()}">
+        <h6 class="attribute-name" id="${Resource.msg('tab.title.manuals', 'manuals', null)}_table">${Resource.msg('tab.title.manuals', 'manuals', null)}</h6>
+        <thead>
+            <tr class="row d-none d-md-flex header-row no-gutters" role="row">
+                <th class="label-xl col-12 col-md-3"><h6>${Resource.msg('header.column.model', 'manuals', null)}</h6></div>
+	            <th class="label-xl col-12 col-md-4"><h6>${Resource.msg('header.column.manual', 'manuals', null)}</h6></div>
+	            <th class="label-xl col-12 col-md-3"><h6>${Resource.msg('header.column.formnumber', 'manuals', null)}</h6></div>
+	            <th class="label-xl col-12 col-md-2"></div>
+            </div>
+        </thead>
+        <tbody>
+            <tr class="row data-row no-gutters">
+            
+	            <td class="col-12 col-md-3">
+	                <label class="d-md-none">${Resource.msg('header.column.model', 'manuals', null)}:</label>
+	                ${pdict.manualItems[0].modelNumber}
+	            </td>
+	            <td class="col-12 col-md-4 description">
+	                <label class="d-md-none">${Resource.msg('header.column.modeldescription', 'manuals', null)}:</label>
+	                ${pdict.manualItems[0].modelDescription}
+	            </td>
+	            <td class="col-12 col-md-3"></td>
+	            <td class="col-12 col-md-2"></td>
+            </tr>
+	        <isloop items="${pdict.manualItems}" var="manualItem" status="row">
+	            <tr class="row data-row no-gutters">
+	                <td class="col-md-3">
+	                    <label class="d-md-none">&nbsp;</label>
+	                </td>
+	                <td class="col-md-4 description">
+	                    <label class="d-md-none">${Resource.msg('header.column.manual', 'manuals', null)}:</label>
+	                    ${manualItem.itemDescription}
+	                </td>
+	                <td class="col-md-3">
+	                    <label class="d-md-none">${Resource.msg('header.column.formnumber', 'manuals', null)}:</label>
+	                    ${manualItem.itemNumber}
+	                </td>
+	                <td class="col-md-2 manual-download">
+	                    <label class="d-md-none">${Resource.msg('header.column.viewoptions', 'manuals', null)}:</label>
+	                    <a href="javascript:void(0)" class="manual-download-link" aria-label="Downlad link for ${Resource.msg('operator.manuals', 'manuals', null)} Form number: ${manualItem.itemNumber}. Manual Name: ${manualItem.itemDescription}" data-title="${Resource.msg('operator.manuals', 'manuals', null)}" data-toggle="modal" data-target="#manuals-agreement-dialog" data-href="${manualItem.manualPDfURL}">
+	                        ${Resource.msg('download.pdf', 'manuals', null)}
+	                    </a>
+	                </td>
+	            </tr>
+	        </isloop>
+        </tbody>
+    </table>
+    <isinclude template="manuals/downloadagreement" />
+<iselse>
+    <div>${Resource.msg('search.manuals.notfound', 'manuals', null)}</div>
+</isif>

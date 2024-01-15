@@ -1,0 +1,360 @@
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/productDetail.js');
+        assets.addCss('/css/product/detail.css');
+        var siteDisableCommerceFunctionality = dw.system.Site.getCurrent().getCustomPreferenceValue('siteDisableCommerceFunctionality');
+        var recProducts = pdict.product.raw.recommendations;
+        var financeUtil = require('int_financing_app/cartridge/scripts/helpers/Util');
+    </isscript>
+
+    <isinclude template="components/modules" />
+
+    <isset name="product" value="${pdict.product}" scope="page" />
+    <isset name="isQuickView" value="${false}" scope="page" />
+    <isset name="isBonusProduct" value="${false}" scope="page" />
+    <isset name="isBundleItem" value="${false}" scope="page" />
+    <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
+    <isset name="relatedContent" value="${pdict.product.relatedContent}" scope="page" />
+    <isset name="hasPartReplace" value="${pdict.product.raw.custom['replaces-parts'] && pdict.product.raw.custom['replaces-parts'].length > 0}" scope="page" />
+    <isset name="hasBadge" value="${product.productBadge.length > 0}" scope="page" />
+    <iscomment> Using this variable to prevent duplicate schema data for BV ratings </iscomment>
+    <isset name="removeBVSchema" value="${false}" scope="page"/>
+    <isif condition="${!pdict.licensedProduct}">
+    <isobject object="${product.raw}" view="detail" />
+    <isinclude template="seo/dataLayerProduct" />
+        <div class="container-fluid product-detail product-wrapper"
+            data-pid="${product.id}">
+            <div class="product-info container no-container-gutters-lg-down">
+                <div class="row">
+                    <div class="col-12">
+                        <!---Breadcrumbs--->
+                        <div class="product-breadcrumb">
+                            <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+                        </div>
+
+                        <!-- Product Name -->
+                        <div class="row">
+                            <div class="d-sm-none col-12 mt-2">
+                                <div class="product-name-block <isif condition="${hasBadge}">has-badge</isif>">
+                                    <h1 class="product-name">${product.productName}</h1>
+                                    <isif condition="${typeof product.extendedName === 'string'}">
+                                        <!-- Product Extended Name -->
+                                        <div class="product-extended-name">
+                                            ${product.extendedName}
+                                        </div>
+                                    </isif>
+                                    <div class="product-number ${product.isWholeGood ? 'invisible d-none' : ''}">
+                                        <isinclude template="product/components/productNumber" />
+                                    </div>
+                                </div>
+
+                                <isinclude template="product/components/productBadge" />
+
+                                <!-- Applicable Promotions -->
+                                <div class="promotions">
+                                    <isinclude template="product/components/promotions" />
+                                </div>
+
+                                <!-- Prices -->
+                                <div class="prices">
+                                    <isset name="price" value="${product.price}" scope="page" />
+                                    <isinclude template="product/components/pricing/mainNoSchema" />
+                                </div>
+
+                                <!-- Fits On Model for Product -->
+                                <isset name="fitsOnModelPDP" value="${pdict.fitsOnModelProduct}" scope="page" />
+                                <isif condition="${pdict.fitsOnModelPDPEnable && fitsOnModelPDP}">
+                                    <isinclude template="search/components/partFitmentPDP" />
+                                </isif>
+
+                            <isif condition="${pdict.product.isWholeGood || pdict.product.isAccessory}">
+                                <!-- Review Rating -->
+                                <isinclude template="product/components/pidRating" />
+                                <iscomment>remove schema from second instance of BV ratings</iscomment>
+                                <isset name="removeBVSchema" value="${true}" scope="page"/>
+                            </isif>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info container no-container-gutters-lg-down mt-4">
+                <div class="row">
+                    <!-- Product Images Carousel -->
+                    <isinclude template="product/components/imageCarousel" />
+
+                    <div class="col-12 col-sm-5 col-lg-5 order-sm-0">
+                        <div class="hidden-xs-down">
+                            <!-- Product Name -->
+                            <div class="h1 product-name">${product.productName}</div>
+                            <isif condition="${product.extendedName !== null}">
+                                <!-- Product Extended Name -->
+                                <div class="product-extended-name">
+                                    ${product.extendedName}
+                                </div>
+                            </isif>
+
+                            <div class="product-number ${product.isWholeGood ? 'invisible d-none' : ''}">
+                                <isinclude template="product/components/productNumber" />
+                            </div>
+
+                            <!-- Applicable Promotions -->
+                            <div class="promotions">
+                                <isinclude template="product/components/promotions" />
+                            </div>
+
+
+                            <isif condition="${pdict.product.isWholeGood || pdict.product.isAccessory}">
+                                <!-- Review Rating -->
+                                <isinclude template="product/components/pidRating" />
+                            </isif>
+                        </div>
+
+                        <hr/>
+
+                        <div class="d-flex col-md-12 pr-0 pl-0">
+                        <isif condition="${financeUtil.financeEnabled()}">
+                            <isif condition="${product.price.type === 'tiered'}">
+                                <isset name="financeTotal" value="${product.price.startingFromPrice.sales.value}" scope="page" />
+                            <iselseif condition="${product.price.type === 'range'}">
+                                <isset name="financeTotal" value="${product.price.min.sales.value}" scope="page" />
+                            <iselse>
+                                <isset name="financeTotal" value="${product.price.sales.value}" scope="page" />
+                            </isif>
+                            <isset name="financePlan" value="${financeUtil.findPlansForEstimation(financeTotal, 'pdp', [product.id])}" scope="page"/>
+                            <isset name="displayPlan" value="${financeUtil.getPdpDisplayPreference(financePlan)}" scope="page"/>
+                                <!-- Prices -->
+                                <div class="prices">
+                                    <isset name="price" value="${product.price}" scope="page" />
+                                    <isinclude template="product/components/pricing/main" />
+                                </div>
+                                <iscomment>Finance Payment Estimation</iscomment>
+                            <isif condition="${displayPlan}">
+                                <div class="finance-estimation-container">
+                                        <div class="divis-or">
+                                            <span class="text-uppercase">${Resource.msg('finance.border.or', 'product', 'null')}</span>
+                                        </div>
+                                    <isinclude url="${URLUtils.url('FinancingApplication-Estimation', 'pageType', 'pdp', 'total', financeTotal, 'productList', [product.id])}"/>
+                                        <a class="td-apply-finance btn btn-secondary w-100 py-1" data-url="${URLUtils.url('FinancingApplication-GetURL')}" href="">${Resource.msg('pdp.financing.apply', 'product', null)}</a>
+                                    <div class="cc-container">
+                                            <img src="${URLUtils.staticURL('images/tb-cc2x.png')}" alt="">
+                                    </div>
+                                </div>
+                            </isif>
+                        </isif>
+                        </div>
+                        <hr class="${!pdict.fitsOnModelPDPEnable ? 'd-none': ''}"/>
+                        <!-- Fits On Model for Product -->
+                        <isset name="fitsOnModelPDP" value="${pdict.fitsOnModelProduct}" scope="page" />
+                        <div>
+                            <isif condition="${pdict.fitsOnModelPDPEnable}">
+                                <isinclude template="search/components/partFitmentPDP" />
+                            </isif>
+                        </div>
+
+                        <hr/>
+
+                        <div class="row justify-content-center">
+
+                            <isinclude template="product/components/description" />
+
+                            <!-- Options and Quantity -->
+                            <div class="col-12">
+                                <isif condition="${product.options && product.options.length > 0}">
+                                    <isinclude template="product/components/options" />
+                                </isif>
+
+                                <isset name="isBundle" value="${false}" scope="page" />
+                                <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                                    <div data-attr="${attr.id}">
+                                        <isinclude template="product/components/variationAttribute" />
+                                    </div>
+                                </isloop>
+
+                                <isif condition="${product.isParts && product.isBuyable === false}">
+                                    <div class="row">
+                                        <div class="col-12 text-left">
+                                            <iscontentasset aid="part-not-available-msg" />
+                                        </div>
+                                    </div>
+                                </isif>
+                                <div class="prices-add-to-cart-actions <isif condition="${pdict.product.isParts}">qty-atc</isif>">
+                                    <div class="row cart-and-ipay atc-product justify-content-center justify-content-sm-start">
+                                        <isset name="locatorProductCategory" value="${'locator-product-category' in product.raw.custom && product.raw.custom['locator-product-category'] ? product.raw.custom['locator-product-category'].value : ''}" scope="page" />
+
+                                        <isif condition="${pdict.product.requestDemo}">
+                                            <div class="col-12">
+                                                <isinclude template="product/components/requestDemo" />
+                                            </div>
+                                        <iselse>
+                                            <isif condition="${!(pdict.product.isParts && product.isBuyable === false)}">
+                                                <isif condition="${product.options.length === 0}">
+                                                    <div class="simple-quantity <isif condition="${pdict.product.isParts}">col-5 col-sm-12 col-md-5 part-atc<iselse>invisible d-none</isif>">
+                                                        <isinclude template="product/components/quantity" />
+                                                    </div>
+                                                </isif>
+                                                <!-- Cart and [Optionally] Apple Pay -->
+
+                                                <isif condition="${(empty(siteDisableCommerceFunctionality) || !siteDisableCommerceFunctionality) && !(locatorProductCategory === 'UTV' || product.isBuyable === false)}" >
+                                                    <div class="<isif condition="${pdict.product.isParts}">col-7 col-sm-12 col-md-7 part-atc<iselse>col-12</isif>">
+                                                        <isinclude template="product/components/addToCartProduct" />
+                                                    </div>
+                                                </isif>
+                                            </isif>
+                                        </isif>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 dealer-direct-msg">
+                                <isif condition="${pdict.product.raw.custom['edealer-eligible']}">
+                                    <iscontentasset aid="mydealerdirect-msg" />
+                                </isif>
+                            </div>
+
+                            <isif condition="${hasPartReplace}" >
+                                <!-- Part Replaces List -->
+                                <div class="col-12 part-replaces mt-1">
+                                    <isinclude template="product/components/partReplaces" />
+                                </div>
+
+                                <div class="col-12">
+                                    <hr/>
+                                </div>
+                            </isif>
+
+                            <div class="col-12 product-links">
+                                <isinclude template="product/components/findDealer" />
+                                <isinclude template="product/components/pdpModals" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <isif condition="${pdict.product.isWholeGood}"> <iscomment> Whole good product </iscomment>
+                <!-- Availability -->
+                <div class="d-none invisible availability product-availability" data-ready-to-order="${product.readyToOrder}" data-price-available="${product.priceAvailability}" data-available="${product.available}" data-buyable="${product.isBuyable}" data-request-demo="${product.requestDemo}">
+                </div>
+
+                <!-- Attachments & Accessories Slider -->
+                <isif condition="${recProducts.size() > 0}">
+                        <isif condition="${pdict.product.raw.custom['recommendation-type-pdp']}">
+                            <div class="recommendations-selected container">
+                                <isproductrec recommendationType="${pdict.product.raw.custom['recommendation-type-pdp'].value}" title="${Resource.msg('recommendation.pdp.title', 'product', null)}" subtitle="${Resource.msg('recommendation.other.subtitle', 'product', null)}" />
+                            </div>
+                        </isif>
+                </isif>
+
+                <!-- PDP Features Card Slider -->
+                <div class="pdp-feature-cards">
+                    <isinclude template="product/components/productFeatureCards" />
+                </div>
+
+                <!-- PDP Content Asset Slider -->
+                <div class="pdp-gallery">
+                    <isif condition="${pdict.product.raw.custom['pdp-content'].length > 0}">
+                        <isinclude template="product/components/productGalleryCarousel" />
+                    </isif>
+                </div>
+
+                <!-- Specifications -->
+                <isinclude template="product/components/descriptionAndDetails" />
+
+                <isif condition="${relatedContent.length > 0}">
+                    <isinclude template="product/components/relatedContentAskTroyCarousel" />
+                </isif>
+
+                <!-- Reviews -->
+                <div class="reviews-section">
+                    <div class="container">
+                        <isif condition="${pdict.bvDisplay.rr.enabled}">
+                            <div class="row reviews <isif condition="${!pdict.bvDisplay.rr.enabled}">hidden-xl-down</isif>">
+                                <h2 class="col-12 text-center">${Resource.msg('label.rr', 'product', null)}</h2>
+                                <isinclude template="bv/display/rr/reviews" />
+                            </div>
+                        </isif>
+                        <isif condition="${pdict.bvDisplay.qa.enabled}">
+                            <hr class="d-sm-none">
+                            <div class="row questions collapsible-xs <isif condition="${!pdict.bvDisplay.qa.enabled}">hidden-xl-down</isif>">
+                                <h2 class="col-12">
+                                <a class="title" href="${'#'}">${Resource.msg('label.qa', 'product', null)}</a>
+                                </h2>
+                                <isinclude template="bv/display/qa/questions" />
+                            </div>
+                        </isif>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <isslot id="product-recommendations-m" description="Recommended products" context="global" context-object="${pdict.product}"/>
+                </div>
+            <iselse/> <iscomment> Non-whole good product </iscomment>
+                <!-- Availability -->
+                <div class="d-none invisible availability product-availability" data-ready-to-order="${product.readyToOrder}" data-price-available="${product.priceAvailability}" data-available="${product.available}" data-buyable="${product.isBuyable}" data-request-demo="${product.requestDemo}">
+                </div>
+
+                <div class="pdp-feature-cards">
+                    <isinclude template="product/components/productFeatureCards" />
+                </div>
+
+                <isinclude template="product/components/descriptionAndDetails" />
+
+                <isif condition="${pdict.product.isAccessory}">
+                    <div class="pdp-gallery">
+                        <isif condition="${pdict.product.raw.custom['pdp-content'].length > 0}">
+                            <isinclude template="product/components/productGalleryCarousel" />
+                        </isif>
+                    </div>
+                </isif>
+
+                <isif condition="${recProducts.size() > 0}">
+                    <div class="recommendations-selected container">
+                        <isproductrec recommendationType="1" title="${Resource.msg('recommendation.crosssell.title', 'product', null)}" subtitle="${Resource.msg('recommendation.crosssell.subtitle', 'product', null)}"/>
+                        <isproductrec recommendationType="3" title="${Resource.msg('recommendation.other.title', 'product', null)}" subtitle="${Resource.msg('recommendation.other.subtitle', 'product', null)}" />
+                    </div>
+                </isif>
+
+                <isif condition="${(pdict.product.isAccessory) && relatedContent.length > 0}">
+                    <isinclude template="product/components/relatedContentAskTroyCarousel" />
+                </isif>
+
+                <isif condition="${pdict.product.isAccessory}">
+                    <div class="reviews-section">
+                        <div class="container">
+                            <isif condition="${pdict.bvDisplay.rr.enabled}">
+                                <div class="row reviews <isif condition="${!pdict.bvDisplay.rr.enabled}">hidden-xl-down</isif>">
+                                    <h2 class="col-12 text-center">${Resource.msg('label.rr', 'product', null)}</h2>
+                                    <isinclude template="bv/display/rr/reviews" />
+                                </div>
+                            </isif>
+                            <isif condition="${pdict.bvDisplay.qa.enabled}">
+                                <hr class="d-sm-none">
+                                <div class="row questions collapsible-xs <isif condition="${!pdict.bvDisplay.qa.enabled}">hidden-xl-down</isif>">
+                                    <h2 class="col-12">
+                                    <a class="title" href="${'#'}">${Resource.msg('label.qa', 'product', null)}</a>
+                                    </h2>
+                                    <isinclude template="bv/display/qa/questions" />
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </isif>
+
+                <div class="recommendations">
+                    <isslot id="product-recommendations-m" description="Recommended products" context="global" context-object="${pdict.product}"/>
+                </div>
+            </isif>
+
+        </div>
+    </isobject>
+    <iselse/>
+        <isset name="isBundle" value="${false}" scope="page" />
+        <isinclude template="product/licensedProducts" sf-toolkit="on" />
+    </isif>
+    <isinclude template="search/components/willFitModal"/>
+    <isinclude url="${URLUtils.url('Monetate-GetProductID', 'pid', pdict.product.id, 'type', 'variant')}"/>
+</isdecorate>

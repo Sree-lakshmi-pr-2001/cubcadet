@@ -1,0 +1,29 @@
+<isscript>
+    var contentOptions = { options: [] };
+</isscript>
+
+
+<div class="row">
+    <iscomment>render the results as two column layout</iscomment>
+    <!-- blog-content-list blog-landing  -->
+    <isloop items="${pdict.contentSearch.contents}" var="asset" status="loopstatus">
+        <isinclude template="content/contentTile"/>
+    </isloop>
+</div>
+
+
+<div class="col-12 content-grid-footer"
+data-sort-options="${JSON.stringify(contentOptions)}" >
+    <!--- More button --->
+    <isif condition="${pdict.contentSearch.moreContentUrl !== null}">
+
+        <div class="content-show-more">
+            <div class="text-center">
+                <button class="btn btn-primary col-12 col-sm-4"
+                        data-url="${pdict.contentSearch.moreContentUrl}" >
+                    ${Resource.msg('button.morearticles', 'search', null)}
+                </button>
+            </div>
+        </div>
+    </isif>
+</div>

@@ -1,0 +1,33 @@
+<isinclude template="/components/modules" />
+
+<isif condition="${'blogRootFolder' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.blogRootFolder!=''}">
+    <isset name="rootBlog" value="${dw.system.Site.current.preferences.custom.blogRootFolder}" scope="page" />
+</isif>
+<div class="container-fluid ask-troy-slot">
+    <div class="ask-troy-header">
+        <issvg icon="ask-troy-red" image="true" />
+        <p class="hero-body text-white">${Resource.msg('global.slot.asktroytext', 'common', null)}</p>
+    </div>
+    <div class="kc-article row blog-tile-caro">
+        <isloop items="${relatedContent}" var="assetObj" status="loopstate">
+            <isset name="asset" value="${assetObj.raw}" scope="page" />
+            <isinclude template="content/components/blogPostTile" />
+        </isloop>
+    </div>
+
+    <isif condition="${relatedContent.length > 1}">
+        <div class="blog-posts-slider-controls slider-controls controls-center controls-light">
+            <span class="slide-prev"></span>
+            <div class="slide-dots"></div>
+            <span class="slide-next"></span>
+        </div>
+    </isif>
+
+    <div class="col-12">
+        <div class="text-center">
+            <a class="btn btn-primary" href="${URLUtils.url('Search-ShowContent', 'fdid', rootBlog, 'showMore', 'true')}">
+                ${Resource.msg('blog.postpage.checkoutmoreblogposts', 'blog', null)}
+            </a>
+        </div>
+    </div>
+</div>

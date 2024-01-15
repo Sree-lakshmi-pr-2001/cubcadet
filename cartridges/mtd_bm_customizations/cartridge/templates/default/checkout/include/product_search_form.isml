@@ -1,0 +1,225 @@
+<div class="row prod-search-row">
+    <div class="col-8">
+        <h4>Search for a product</h4>
+
+        <div class="input-group mb-3">
+            <input type="text" name="searchTerm" id="searchTerm" class="searchTerm form-control"
+                <isif condition="${pdict.searchTerm != null}">
+                    value="${pdict.searchTerm}" 
+                </isif>
+            />
+            <div class="input-group-append">
+                <button class="btn productSearch btn-primary" type="button" id="productSearch">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var productMap = new Map();
+
+    function productSearch(){
+        console.log("in line product search");
+
+        let spinner = '<div class="spinner-border" role="status"> <span class="sr-only">Loading...</span></div>';
+
+        document.getElementById('productResults').innerHTML = spinner;
+        console.log(spinner);
+        let searchTerm = document.getElementById('searchTerm').value;
+
+        console.log(searchTerm);
+
+        jQuery.ajax({
+            type: "POST",
+            url: "${URLUtils.url('EpcotOrderConsumer-AjaxProductSearch')}",
+            data: {
+                searchTerm : searchTerm
+            },
+            success: function (searchJSON) {
+                console.log(searchJSON);
+
+                let html = "";
+                let commerceSite = searchJSON.commerceSite;
+                console.log('commerceSite : ' + commerceSite);
+                if (searchJSON.hits && searchJSON.hits.length > 0 ){
+                    console.log(searchJSON.hits);
+                    html +="hits : " + searchJSON.hits.length;
+                    productMap = new Map();
+
+                    searchJSON.hits.forEach(product=>{
+                        var id = product.id;
+                        html += '<form id="' + id + '"><div class="row border border-dark prod-row" ><div class="col-8">';
+                        html+='<input type="hidden" name="itemNumber" value="'+id+'"/>';
+                        html+='<input type="hidden" name="productJSON" value="'+JSON.stringify(product)+'"/>';
+
+                        html += getProductName(product);
+                        let sku = null;
+
+                        if (product && product.manufacturer_sku){
+                            sku=product.manufacturer_sku;
+
+                        }
+                        html+= getProductSku(product);
+
+                        html+= getLongDescription(product);
+
+                        html+=getPrice(product, sku,commerceSite);
+                        productMap.set(sku,product);
+
+                        let inStockQuantity = 0;
+                        if (product.actualMTDInventory){
+                            inStockQuantity = product.actualMTDInventory;
+                        }
+
+                        if (inStockQuantity > 0){
+                            html+="<br/>In stock => " + inStockQuantity;
+                        } else {
+                            if (product.ats && parseInt(product.ats) > 0){
+                                html+="<br/>Back ordered => " + inStockQuantity;
+                            } else {
+                                html+="<br/>Out of stock => " + inStockQuantity;
+                            }
+                        }
+
+                        html += '</div>'
+                        html+= getImage(product);
+                        html+='</div></form>';
+
+                    });
+                } else {
+                    console.log("no hits");
+                    html = "No products found";
+                }
+
+                document.getElementById('productResults').innerHTML = html;
+            },
+            error: function (req, status, error) {
+                alert(req + " " + status + " " + error);
+            }
+        });
+    }
+
+    function getProductName(product){
+        var html = '<h4 class="mt-0 font-weight-bold mb-2">';
+
+        if (product && product.name && product.name.default){
+            html+=product.name.default;
+        }
+
+        html+='</h4>';
+
+        return html;
+    }
+
+    function getProductSku(product){
+        var html = '<h5>';
+        if (product && product.manufacturer_sku){
+            html+=product.manufacturer_sku;
+        }
+
+        html+='</h5>';
+
+        return html;
+    }
+
+    function getLongDescription(product){
+        var html = '<p class="font-italic mb-0 small">';
+
+        if (product && product.long_description != null && product.long_description.default != null){
+            html+=product.long_description.default.markup;
+        }
+
+        html+='</p>';
+
+        return html;
+    }
+    function getPrice(product,sku,commerceSite){
+        var html = ' <h6 class="font-weight-bold my-2">';
+
+        if (product && product.price != null && product.in_stock && product.online_flag["default@" + commerceSite] == true){
+            html+="$"+product.price;
+            html+='<button type="button" class="btn btn-primary add-to-cart addToCartbutton">Add Cart</button>';
+        } else {
+            html+="Not Available"
+
+        }
+
+        html+='</h6>';
+
+        return html;
+    }
+
+    function getImage(product){
+        var html = '<div class="col-4">';
+
+        if (product && product.image && product.image.abs_url != null){
+            html+='<img class="ml-lg-5 order-1 order-lg-2 prod-thumb" src="'+product.image.abs_url+'" alt="test"/>';
+        }
+
+        html+='</div>';
+
+        return html;
+    }
+
+    // function addToCart(itemNumber){
+    //     console.log("basketId : " + basketId);
+    //     console.log("itemNumber : " + itemNumber);
+    //     var productJSON = productMap.get(itemNumber);
+    //     console.log(productJSON);
+    //     jQuery.ajax({
+    //         type: "POST",
+    //         url: "${URLUtils.url('EpcotOrderConsumer-AjaxAddToBasket')}",
+    //         data: {
+    //             basketId : basketId,
+    //             productJSONString : JSON.stringify(productJSON),
+    //             commerceStore : commerceStore
+    //         },
+    //         success: function (basketJSON) {
+    //             if (basketJSON && basketJSON.basket_id){
+    //                 basketId = basketJSON.basket_id;
+    //                 var url = new URL(window.location);
+    //                 url.searchParams.set('basketId', basketId);
+    //                 window.history.pushState({}, '', url);
+
+    //             }
+
+    //             console.log("basketId : " + basketId);
+    //             console.log(basketJSON);
+    //             updateMiniCart(basketJSON);
+
+
+    //             // document.getElementById('basketIdSpan').innerHTML =basketJSON.basket_id;
+    //             // document.getElementById('formBasketId').value =basketJSON.basket_id;
+    //             // console.log("assigning basket id from add to cart => " + basketJSON.basket_id);
+    //             // console.log("form id => " + document.getElementById('formBasketId').value);
+    //             // document.getElementById('basketId').value = basketId;
+    //             // if (basketJSON && basketJSON["product_items"]){
+    //             //     let tableHTML = '<table border="1"><tr><td>quantity</td><td>product</td><td>price</td></tr>';
+
+    //             //     basketJSON["product_items"].forEach(product=>{
+    //             //         let productID = product.product_id;
+    //             //         let name = product.product_name;
+    //             //         let quantity = product.quantity;
+    //             //         let price = product.price;
+    //             //         if (productID == '31AH5DVA710'){
+    //             //             document.getElementById('triggerDF').value = 'true';
+    //             //         }
+    //             //         tableHTML+="<tr><td>"+ quantity+"</td><td>" + name + "<br/>item number: "+ productID +"</td><td>$"+ price +"</td></tr>";
+    //             //     });
+
+    //             //     tableHTML+="</table>";
+
+    //             //     document.getElementById('basketDiv').innerHTML = tableHTML;
+    //             //}
+    //         },
+    //         error: function (req, status, error) {
+    //             alert(req + " " + status + " " + error);
+    //         }
+    //     });
+    // }
+
+
+   
+</script>
+

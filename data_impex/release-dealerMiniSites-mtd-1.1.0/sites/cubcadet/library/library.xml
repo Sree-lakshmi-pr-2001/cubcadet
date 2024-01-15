@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+
+    <content content-id="pdp-financing-apply-now">
+        <display-name xml:lang="x-default">PDP financing apply now</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;img src="Financing/cc-financing-card.png?$staticlink$" /&gt;&#13;
+&lt;a class="td-apply-finance" data-url="$url('FinancingApplication-GetURL')$" href=""&gt;APPLY NOW&lt;/a&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="checkout-delivery-estimate-dropship">
+        <display-name xml:lang="x-default">
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p class=&quot;message&quot;&gt;Please note: This item ships directly from our factory and will arrive to you in a wood crate.&lt;/p&gt;&#13;&lt;a class=&quot;link&quot; href=&quot;/&quot;&gt;Learn More&amp;nbsp;&gt;&lt;/a&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="checkout-delivery-estimate-pickup">
+        <display-name xml:lang="x-default">
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p class=&quot;message&quot;&gt;Please note: This dealer will contact you when your machine is tested and ready for pick up.&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="checkout-delivery-estimate-dealerdelivery">
+        <display-name xml:lang="x-default">
+        </display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;p class=&quot;message&quot;&gt;&#13;    Please note: This dealer will contact you to set up a delivery time.&#13;    Details will be provided once the order has been placed.&#13; &lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home_delivery-estimate">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">8-10 days</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="home_delivery-cost">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">$99</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="dealer-delivery_direct-estimate">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">2-3 days</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="dealer-delivery_dropship-estimate">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">8-10 days</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="dealer-pickup_direct-estimate">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">1-2 days</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="dealer-pickup_dropship-estimate">
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">6-8 days</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="td-estimated-payment-cart-apr">
+        <display-name xml:lang="x-default">Cub Cadet TD Estimated Payment PDP APR</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;td-details&quot;&gt;&#13;&lt;h3&gt;Work Now, Pay Later
+&lt;/h3&gt;&#13;&lt;div class=&quot;td-info&quot;&gt;&#13;
+Your Order is eligible for Cub Cadet Financing.&#13;
+&lt;/div&gt;&#13;&lt;div class=&quot;td-info-detail&quot;&gt;&#13;
+&lt;strong&gt;${monthlypayment} Per Month, &lt;/strong&gt;&lt;strong&gt;{termlength} months&lt;/strong&gt; &lt;strong&gt;{apr}% APR&lt;sup&gt;{superscriptnumber}&lt;/sup&gt; &lt;/strong&gt;financing with &lt;strong&gt;${processfee} Promo Fee&lt;/strong&gt;. Total: ${totalpayment}&#13;&lt;/div&gt;&#13;&lt;/div&gt;&#13;
+&lt;div class=&quot;td-buttons&quot;&gt;&#13;&lt;div class=&quot;td-apply-button&quot;&gt;&#13;
+&lt;a href=&quot;/&quot; data-url=&quot;$url('FinancingApplication-GetURL')$&quot; class=&quot;td-apply-finance btn btn-outline-secondary&quot;&gt;Apply Now&lt;/a&gt;&#13;&lt;/div&gt;&#13;&lt;div class=&quot;td-payment&quot;&gt;&#13;
+&lt;a href=&quot;/&quot; data-url=&quot;$url('FinancingApplication-Disclosure')$&quot; data-title=&quot;Details &amp; Disclosures&quot; class=&quot;td-payment-details&quot;&gt;See Details&lt;/a&gt;&#13;&lt;/div&gt;&#13;&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="contact-dealer-form-modal">
+        <display-name xml:lang="x-default">Contact Dealer - form in modal</display-name>
+        <online-flag>true</online-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h3 class=&quot;title&quot;&gt;&#13;    Need More Information?&#13;&lt;/h3&gt;&#13;&lt;p class=&quot;msg&quot;&gt;&#13;    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at risus quam. Maecenas finibus odio risus, in iaculis sapien viverra tempus.&#13;&lt;/p&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="store-change-modal-description">
+        <display-name xml:lang="x-default">Store Change Shop Modal Description</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">Some Text To Be Shown.</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="store-change-modal-title">
+        <display-name xml:lang="x-default">Store Change Dealer Modal Title</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+        <custom-attribute attribute-id="body" xml:lang="x-default">Changing the shop may change your cart</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="zipcode-change-modal-title">
+        <display-name xml:lang="x-default">Zip Copde Change Modal Title</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Change Delivery Zipcode</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="zipcode-change-modal-description">
+        <display-name xml:lang="x-default">Zip Copde Change Modal Description</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">The zip code you entered may change the shipping method.</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="zipcode-field-range-error-message">
+        <display-name xml:lang="x-default">Zip Code Field Error Range Message On The Shipping Page</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;    Delivery zip code is not in range of dealer delivery. You can change delivery zip code on Cart page.&#13;&lt;/div&gt;&#13;&lt;div&gt;&#13;    &lt;a href=&quot;$httpsURL('Cart-Show')$&quot; title=&quot;Go to Cart&quot;&gt;Go to Cart&lt;/a&gt;&#13;&lt;div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+    <content content-id="zipcode-range-error-air-message">
+        <display-name xml:lang="x-default">Zip Code Error Range Air Message On The Shipping Page</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">Delivery zip code is not in range of dealer delivery. Please change it on the cart page and continue checkout.</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>

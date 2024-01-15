@@ -1,0 +1,722 @@
+//////////////////////
+// Type Utils - to allow typography includes
+//////////////////////
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+            font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+            font-size: $max-font-size;
+        }
+    }
+}
+
+@mixin label-1() {
+    font-size: $label-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+@mixin label-2() {
+    font-size: $label-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+@mixin label-3() {
+    font-size: $label-xs;
+    font-weight: $font-weight-bold;
+    color: $accent-1;
+    text-transform: uppercase;
+}
+
+@mixin label-4() {
+    font-size: $label-xs;
+    font-weight: $font-weight-bold;
+    color: $info;
+    text-transform: uppercase;
+}
+
+@mixin main-nav() {
+    font-size: $label-sm;
+    font-weight: $font-weight-bold;
+    color: $link-color;
+    text-decoration: $link-decoration;
+    text-transform: uppercase;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem(13px);
+        color: $white;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: $link-font-size;
+    }
+
+    &::after {
+        @include media-breakpoint-up(lg) {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            display: block;
+            height: 2px;
+            background-color: $trans;
+            border: 0;
+        }
+    }
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus,
+    &.active {
+        @include media-breakpoint-up(lg) {
+            color: $white;
+            text-decoration: $link-decoration;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: $secondary;
+            }
+        }
+    }
+}
+
+@mixin main-nav-submenu() {
+    font-size: $label-sm;
+    font-weight: $font-weight-bold;
+    color: $link-color;
+    text-decoration: $link-decoration;
+    text-transform: uppercase;
+}
+
+@mixin main-nav-back-link() {
+    font-size: rem(18px);
+    font-weight: $font-weight-bold;
+    color: $white;
+    text-decoration: $link-decoration;
+}
+
+@mixin main-nav-tile-title() {
+    font-size: $font-size-body;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin main-nav-tile-body() {
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    color: $body-color;
+    text-decoration: none;
+    text-transform: none;
+
+    &:hover {
+        text-decoration: none;
+        text-transform: none;
+    }
+}
+
+@mixin pdp-section-link() {
+    font-size: $link-font-size-alt;
+    font-weight: $font-weight-bold;
+    color: $accent-1;
+    text-decoration: $link-decoration;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 100%;
+        display: block;
+        height: 2px;
+        background-color: $trans;
+        border: 0;
+    }
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $body-color;
+        text-decoration: $link-decoration;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $secondary;
+        }
+    }
+}
+
+@mixin utility-nav-link() {
+    font-size: $link-font-size-alt;
+    font-weight: $font-weight-bold;
+    color: $white;
+    text-decoration: $link-decoration;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $secondary;
+        text-decoration: $link-decoration;
+    }
+}
+
+@mixin footer-link() {
+    font-size: $link-font-size;
+    font-weight: $font-weight-regular;
+    text-decoration: $link-decoration;
+    color: $accent-2;
+    line-height: rem(26px);
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $accent-2;
+        text-decoration: $link-decoration-alt;
+    }
+}
+
+@mixin footer-label() {
+    font-size: $font-size-base;
+    text-transform: none;
+    font-weight: $font-weight-bold;
+    color: $white;
+}
+
+@mixin disclaimer-text {
+    color: $accent-1;
+    font-size: rem(13px);
+    line-height: rem(18px);
+}
+
+@mixin category-nav-link() {
+    font-size: $link-font-size;
+    font-weight: $font-weight-regular;
+    text-decoration: $link-decoration;
+    color: $body-color;
+    text-transform: none;
+
+    @include media-breakpoint-up(lg) {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        text-decoration: $link-decoration-alt;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration-alt;
+    }
+}
+
+@mixin tab-pills() {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: 1.13;
+    text-decoration: none;
+}
+
+@mixin tab-list() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+    text-decoration: none;
+}
+
+@mixin link-primary() {
+    color: $link-color;
+    font-size: $link-font-size-alt;
+    font-weight: $font-weight-bold;
+    text-decoration: $link-decoration;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 100%;
+        display: block;
+        height: 2px;
+        background-color: $link-color;
+        border: 0;
+    }
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $link-hover-color;
+        }
+    }
+}
+
+@mixin standard-link-bold-sm() {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+    text-transform: uppercase;
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $link-hover-color;
+        }
+    }
+}
+
+@mixin standard-link-bold() {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+    text-transform: uppercase;
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $link-hover-color;
+        }
+    }
+}
+
+@mixin link-chevron() {
+    @include icon($svg-arrow-up, left, 15px);
+
+    font-size: $font-size-body;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+    text-decoration: none;
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
+
+    &::after {
+        width: 13px;
+        left: 100%;
+        transform: rotate(90deg) translateX(-50%);
+        margin-left: rem(2px);
+    }
+}
+
+@mixin article-description() {
+    font-size: $font-size-sm;
+    line-height: rem(20px);
+    color: $body-color;
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-body;
+        line-height: rem(23px);
+    }
+}
+
+@mixin pdp-price() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(24px);
+    }
+}
+
+@mixin pdp-price-sale() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+    text-decoration: line-through;
+    color: $accent-1;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(24px);
+    }
+}
+
+@mixin pdp-product-name {
+    font-size: $h1-mobile-font-size;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+
+    @include media-breakpoint-up(md) {
+        font-size: $h1-font-size;
+    }
+}
+
+@mixin pdp-section-heading {
+    font-size: $h2-mobile-font-size;
+
+    @include media-breakpoint-up(md) {
+        font-size: $h2-font-size;
+    }
+}
+
+@mixin product-tile-price() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+}
+
+@mixin product-tile-price-sale() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+    text-decoration: line-through;
+    color: $accent-1;
+}
+
+@mixin checkout-price() {
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+}
+
+@mixin checkout-price-sale() {
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    text-decoration: line-through;
+    color: $accent-1;
+}
+
+@mixin product-card-price {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    color: $body-color;
+}
+
+@mixin product-card-price-sale {
+    @include product-card-price();
+
+    color: $accent-1;
+    text-decoration: line-through;
+}
+
+@mixin card-name() {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-bold;
+    line-height: rem(22px);
+    color: $body-color;
+}
+
+@mixin accordion-title() {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-bold;
+    line-height: rem(26px);
+    text-decoration: none;
+    color: $body-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        color: $body-color;
+    }
+}
+
+@mixin product-name-1() {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    line-height: rem(18px);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(18px);
+    }
+}
+
+@mixin product-name-2() {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
+    line-height: rem(18px);
+}
+
+@mixin search-refinement-header() {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+}
+
+@mixin search-results-text() {
+    font-size: $h2-mobile-font-size;
+    font-weight: $font-weight-regular;
+    line-height: rem(30px);
+    color: $body-color;
+
+    @include media-breakpoint-up(md) {
+        font-size: $h2-font-size;
+        line-height: rem(48px);
+    }
+}
+
+@mixin summary-section-label() {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-body;
+    }
+}
+
+@mixin brand-warning-text() {
+    font-size: rem(12px);
+    font-weight: $font-weight-regular;
+    line-height: rem(18px);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(16px);
+        line-height: rem(20px);
+    }
+}
+
+@mixin brand-warning-text-sm() {
+    font-size: rem(12px);
+    font-weight: $font-weight-regular;
+    line-height: normal;
+}
+
+@mixin modal-header() {
+    font-size: rem(20px);
+    font-weight: $font-weight-bold;
+}
+
+@mixin header-locale-link {
+    font-size: $label-sm;
+    font-weight: $font-weight-bold;
+    color: $link-color;
+    text-decoration: $link-decoration;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(lg) {
+        font-weight: $font-weight-regular;
+        text-transform: capitalize;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+        text-decoration: $link-decoration-alt;
+    }
+}
+
+@mixin minicart-sub-total {
+    font-size: rem(18px);
+    font-weight: $font-weight-bold;
+}
+
+@mixin atc-product-name() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+}
+
+@mixin type-product-to-remove {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+@mixin type-oauth-links {
+    font-size: rem(12px);
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $link-color;
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    white-space: nowrap;
+}
+
+@mixin type-alt-section-heading {
+    font-size: rem(24px);
+    color: $primary;
+    @include media-breakpoint-up(md) {
+        font-size: rem(36px);
+    }
+}
+
+@mixin search-suggestions-title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+}
+
+@mixin type-account-card-heading {
+    font-size: rem(20px);
+    @include media-breakpoint-up(md) {
+        font-size: rem(24px);
+    }
+}
+
+@mixin comparison-bar-title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+}
+
+@mixin comparison-product-name {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    line-height: rem(18px);
+}
+
+@mixin comparison-product-extended-name {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-regular;
+    line-height: rem(14px);
+}
+
+@mixin comparison-remove-link {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-regular;
+    text-decoration: $link-decoration-alt;
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $link-hover-color;
+        }
+    }
+}
+
+@mixin comparison-clear-link() {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-decoration;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $link-hover-color;
+        }
+    }
+}
+
+@mixin comparison-table-attr-label() {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+}
+
+@mixin type-cart-header {
+    font-size: rem(24px);
+    @include media-breakpoint-up(md) {
+        font-size: rem(38px);
+    }
+}
+
+@mixin type-cart-estimated-total {
+    font-size: rem(18px);
+    font-weight: $font-weight-bold;
+}
+
+@mixin disclaimer-text {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-regular;
+}
+
+@mixin finance-form-label {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+// Custom Hero Type
+
+@mixin hero-body() {
+    font-size: rem(18px);
+    font-weight: $font-weight-regular;
+    line-height: rem(28px);
+}
+
+@mixin display-body() {
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    line-height: rem(24px);
+}
+
+@mixin hero-label() {
+    font-size: calc(0.4rem + 0.5vw); // responsive
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+@mixin herop() {
+    @include fluid-type(320px, 1320px, 14px, 18px);
+
+    line-height: 1.57;
+
+    @include media-breakpoint-up(lg) {
+        line-height: 1.67;
+    }
+}
+
+@mixin heroBullets() {
+    content: "\2022";
+    font-size: rem(22px);
+    position: relative;
+    top: 2px;
+    margin-left: -15px;
+    padding-right: 6px;
+}
+
+.hero-bullet::before {
+    @include heroBullets();
+}

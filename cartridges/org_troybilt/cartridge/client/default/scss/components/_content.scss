@@ -1,0 +1,59 @@
+@import "../variables";
+
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// applying the overlay
+.overlay-sm {
+    @include media-breakpoint-up(sm) {
+        @include overlay();
+    }
+}
+
+.overlay-md {
+    @include media-breakpoint-up(md) {
+        @include overlay();
+    }
+}
+
+.overlay-lg {
+    @include media-breakpoint-up(lg) {
+        @include overlay();
+    }
+}
+
+.overlay-xl {
+    @include media-breakpoint-up(xl) {
+        @include overlay();
+    }
+}
+
+// overriding an overlay
+.overlay-sm-n {
+    @include media-breakpoint-down(sm) {
+        position: relative;
+    }
+}
+
+.overlay-md-n {
+    @include media-breakpoint-down(md) {
+        position: relative;
+    }
+}
+
+.overlay-lg-n {
+    @include media-breakpoint-down(lg) {
+        position: relative;
+    }
+}
+
+.overlay-xl-n {
+    @include media-breakpoint-down(xl) {
+        position: relative;
+    }
+}

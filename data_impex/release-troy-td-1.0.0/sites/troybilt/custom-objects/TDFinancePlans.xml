@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-objects xmlns="http://www.demandware.com/xml/impex/customobject/2006-10-31">
+    <custom-object type-id="TDFinancePlans" object-id="43438">
+        <object-attribute attribute-id="APR">29.99</object-attribute>
+        <object-attribute attribute-id="displayCart">false</object-attribute>
+        <object-attribute attribute-id="displayPDP">false</object-attribute>
+        <object-attribute attribute-id="enabled">true</object-attribute>
+        <object-attribute attribute-id="minimumSpend">0.0</object-attribute>
+        <object-attribute attribute-id="planName" xml:lang="x-default">Standard Revolving Financing</object-attribute>
+        <object-attribute attribute-id="superscriptNumber">4</object-attribute>
+    </custom-object>
+
+    <custom-object type-id="TDFinancePlans" object-id="43439">
+        <object-attribute attribute-id="displayCart">true</object-attribute>
+        <object-attribute attribute-id="displayPDP">true</object-attribute>
+        <object-attribute attribute-id="enabled">true</object-attribute>
+        <object-attribute attribute-id="minimumSpend">300.0</object-attribute>
+        <object-attribute attribute-id="planName" xml:lang="x-default">No Interest if Paid in Full within 6 Months</object-attribute>
+        <object-attribute attribute-id="superscriptNumber">1</object-attribute>
+        <object-attribute attribute-id="termLength">6</object-attribute>
+    </custom-object>
+
+    <custom-object type-id="TDFinancePlans" object-id="43440">
+        <object-attribute attribute-id="displayCart">true</object-attribute>
+        <object-attribute attribute-id="displayPDP">true</object-attribute>
+        <object-attribute attribute-id="enabled">true</object-attribute>
+        <object-attribute attribute-id="minimumSpend">500.0</object-attribute>
+        <object-attribute attribute-id="planName" xml:lang="x-default">No Interest if Paid in Full within 12 Months</object-attribute>
+        <object-attribute attribute-id="superscriptNumber">2</object-attribute>
+        <object-attribute attribute-id="termLength">12</object-attribute>
+    </custom-object>
+
+    <custom-object type-id="TDFinancePlans" object-id="43441">
+        <object-attribute attribute-id="APR">0.0</object-attribute>
+        <object-attribute attribute-id="displayCart">true</object-attribute>
+        <object-attribute attribute-id="displayPDP">true</object-attribute>
+        <object-attribute attribute-id="enabled">true</object-attribute>
+        <object-attribute attribute-id="minimumSpend">1500.0</object-attribute>
+        <object-attribute attribute-id="planName" xml:lang="x-default">0% APR for 24 Months with Equal Payments</object-attribute>
+        <object-attribute attribute-id="processFee">125.0</object-attribute>
+        <object-attribute attribute-id="repaymentFactor">.04167</object-attribute>
+        <object-attribute attribute-id="superscriptNumber">3</object-attribute>
+        <object-attribute attribute-id="termLength">24</object-attribute>
+    </custom-object>
+
+</custom-objects>

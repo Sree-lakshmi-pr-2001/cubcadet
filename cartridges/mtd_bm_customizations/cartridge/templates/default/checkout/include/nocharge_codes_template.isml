@@ -1,0 +1,10 @@
+<select id="noChargeReasonCode" class="form-control">
+    <option value="12">12 - Customer Service</option>
+    <option value="13">13 - Sales</option>
+    <option value="14">14 - Quality / Recalls</option>
+    <option value="15">15 - Product Development</option>
+    <option value="42">42 - Consumer Direct</option>
+    <option value="60">60 - Warranty</option>
+    <option value="61">61 - Missing Part or Component</option>
+    <option value="91">91 - Good Will / Charitable Donation</option>
+</select>

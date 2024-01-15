@@ -1,0 +1,11 @@
+<ul class="navbar-nav ml-auto">
+    <isif condition="${pdict.categories}">
+        <isloop items="${pdict.categories}" var="category">
+            <li class="nav-item">
+            <a class="nav-link" href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}">
+                ${category.name}
+            </a>
+            </li>
+        </isloop>
+    </isif>
+</ul>

@@ -1,0 +1,15 @@
+<isif condition="${pdict.order.items.items.length > 1}">
+    <div class="card-body multi-shipping-checkbox-block d-none" aria-hidden="true">
+        <form action="${URLUtils.url('CheckoutShippingServices-ToggleMultiShip')}" novalidate>
+            <fieldset>
+                <div class="custom-control custom-checkbox">
+                    <input name="usingMultiShipping" class="custom-control-input" id="multiShipCheck" type="hidden"
+                    <isif condition="${pdict.order.usingMultiShipping && pdict.order.shipping.length > 1}">
+                        checked
+                    </isif>
+                    >
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</isif>

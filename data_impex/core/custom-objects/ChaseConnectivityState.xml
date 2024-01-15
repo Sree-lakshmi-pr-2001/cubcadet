@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-objects xmlns="http://www.demandware.com/xml/impex/customobject/2006-10-31">
+    <custom-object type-id="ChaseConnectivityState" object-id="1">
+        <object-attribute attribute-id="isFailed">false</object-attribute>
+        <object-attribute attribute-id="serverURL">https://wsvar1.chasepaymentech.com/PaymentechGateway</object-attribute>
+    </custom-object>
+
+    <custom-object type-id="ChaseConnectivityState" object-id="2">
+        <object-attribute attribute-id="isFailed">false</object-attribute>
+        <object-attribute attribute-id="serverURL">https://wsvar2.chasepaymentech.com/PaymentechGateway</object-attribute>
+    </custom-object>
+
+</custom-objects>

@@ -1,0 +1,5 @@
+<script>
+    var ga4Product = JSON.parse('<isprint encoding="off" value="${pdict.ga4Data}" />');
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(ga4Product);
+</script>

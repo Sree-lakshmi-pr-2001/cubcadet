@@ -1,0 +1,13 @@
+<div class="col-12">
+    <div class="row">
+        <div class=" col-12 col-sm-11">
+            <a class="btn btn-outline-primary ari-redirect" href="${URLUtils.url('Page-Show','cid','ari-redirect', 'arispart', product.id)}">
+                <span class="icon-container">
+                    <issvg icon="parts-icon-green" classes="default" image="true" altText="parts-icon" />
+                    <issvg icon="parts-icon-white" classes="hover" image="true" altText="parts-icon" />
+                </span>
+                ${Resource.msg('button.viewpartsdiagram', 'product', null)}
+            </a>
+        </div>
+    </div>
+</div>

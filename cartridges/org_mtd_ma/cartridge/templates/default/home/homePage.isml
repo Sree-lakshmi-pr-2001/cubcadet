@@ -1,0 +1,39 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/productTile.js');
+        assets.addCss('/css/homePage.css');
+
+        if(pdict.bvScout) {
+            assets.addJs(pdict.bvScout);
+        }
+    </isscript>
+    <isinclude template="/components/modules"/>
+    <div class="home-main homepage">
+        <isslot id="home-main-m" description="Main home hero slot." context="global" />
+    </div>
+
+    <div class="home-slot-1 homepage">
+        <isslot id="home-slot-1" description="First Slot below Home Hero" context="global" />
+    </div>
+
+    <div class="home-slot-2 homepage">
+        <isslot id="home-slot-2" description="Second Slot below Home Hero" context="global" />
+    </div>
+
+    <div class="home-slot-3 homepage">
+        <isslot id="home-slot-3" description="Third Slot below Home Hero" context="global" />
+    </div>
+
+    <div class="home-slot-4 homepage">
+        <isslot id="home-slot-4" description="Fourth Slot below Home Hero" context="global" />
+    </div>
+
+    <div class="home-slot-5 homepage">
+        <isslot id="home-slot-5" description="Fifth Slot below Home Hero" context="global" />
+    </div>
+
+    <ismonetatetrackpage pagename="main" />
+
+    
+</isdecorate>
